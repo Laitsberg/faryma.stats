@@ -82,6 +82,7 @@ function build(raw) {
       user, userKey: user ? userKey(user) : '',
       type:   (r['Тип'] || '').trim(),
       origin: (r['Откуда'] || '').trim(),
+      source: parseSource(r['Что']),
       genres: splitGenres(r['Жанр']),
       tags:   (r['Тэги'] || '').split(/[,\/]/).map(s => s.trim()).filter(Boolean),
       feature:(r['Фича'] || '').trim(),
@@ -188,11 +189,15 @@ function renderSearch() {
   const q  = $('q').value.trim().toLowerCase();
   const fr = $('fRate').value;
   const fu = $('fUser').value;
+  const fo = $('fOrigin').value;
+  const fg = $('fGenre').value;
 
   let rows = cur();
   if (q)  rows = rows.filter(r => r.search.includes(q));
   if (fr) rows = rows.filter(r => r.rate.label === fr);
   if (fu) rows = rows.filter(r => r.userKey === fu);
+  if (fo) rows = rows.filter(r => r.origin === fo);
+  if (fg) rows = rows.filter(r => r.genres.includes(fg));
 
   $('searchCount').textContent = `найдено ${num(rows.length)}` +
     (rows.length > SEARCH_LIMIT ? ` · показаны первые ${SEARCH_LIMIT}` : '');
@@ -204,7 +209,7 @@ function renderSearch() {
     .map(r => ({
       artist: r.artist || '—', title: r.title,
       label: r.rate.label, color: r.rate.color,
-      user: r.user || '—', genre: r.genres.join(' / '),
+      user: r.user || '—', genre: r.genres.join(' / '), source: r.source,
       link: r.link, feature: r.feature,
       when: r.date ? r.date.getTime() : 0,
       stream: r.streamNum, moment: r.moment
@@ -212,6 +217,7 @@ function renderSearch() {
 
   table('tSearch', [
     { k: 'artist', t: 'исполнитель', lead: 1 },
+    { k: 'source', t: 'откуда', f: r => esc(r.source) },
     { k: 'title',  t: 'трек', f: r => r.link
         ? `<a class="tlink" href="${esc(r.link.url)}" target="_blank" rel="noopener noreferrer">${esc(r.title)}</a><span class="plat">${esc(r.link.platform)}</span>`
         : esc(r.title) },
@@ -242,7 +248,18 @@ function initControls() {
     .forEach(([key, rs2]) => us.add(new Option(
       `${USER_NAMES.get(key) || key} (${rs2.length})`, key)));
 
-  ['q', 'fRate', 'fUser'].forEach(id => {
+  const og = $('fOrigin');
+  [...group(ROWS, r => r.origin || null)]
+    .sort((a, b) => b[1].length - a[1].length)
+    .forEach(([o, rs]) => og.add(new Option(`${o} (${rs.length})`, o)));
+
+  const gg = $('fGenre');
+  [...group(ROWS, r => r.genres)]
+    .filter(([, rs]) => rs.length >= 15)
+    .sort((a, b) => b[1].length - a[1].length)
+    .forEach(([g, rs]) => gg.add(new Option(`${g} (${rs.length})`, g)));
+
+  ['q', 'fRate', 'fUser', 'fOrigin', 'fGenre'].forEach(id => {
     $(id).addEventListener('input', renderSearch);
     $(id).addEventListener('change', renderSearch);
   });
