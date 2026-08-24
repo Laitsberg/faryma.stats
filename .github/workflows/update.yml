@@ -77,4 +77,16 @@ jobs:
             process.stdout.write(String(JSON.parse(l[l.length-1]).rated));
           ")
           git commit -m "Обновить архив: $RATED разносов ($(date -u +%Y-%m-%d))"
-          git push
+
+          # Пока шёл прогон (а он длится до часа с лишним), в main могли
+          # запушить руками. Без этого push упёрся бы в несовпадение и
+          # уронил задачу, потеряв всё, что насчитали. Наши коммиты трогают
+          # только data.csv, countries.json и history.jsonl, так что
+          # перенос поверх чужих изменений безопасен.
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin main && git push && exit 0
+            echo "попытка $i не прошла, жду"
+            sleep $((i * 5))
+          done
+          echo "не удалось запушить за 5 попыток"
+          exit 1
