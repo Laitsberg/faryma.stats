@@ -69,7 +69,7 @@ function build(raw) {
   let stream = null;               // текущий стрим, под которым идут треки
 
   parsed.forEach(({ r, w }, i) => {
-    const st = parseStream(r['Что']);
+    const st = parseStream(r['Что'], r['Где']);
     if (st) { stream = st; STREAMS.push(st); return; }
     const rate = parseRate(r['Оценка']);
     if (!rate) return;
@@ -91,7 +91,9 @@ function build(raw) {
       search: (w.full + ' ' + user).toLowerCase(),
       parts: w.artist ? participants(w.artist, soloKeys).map(nameKey) : [],
       streamNum: stream ? stream.num : null,
-      date: stream ? stream.date : null
+      date: stream ? stream.date : null,
+      // ссылка на нужную минуту записи стрима
+      moment: stream ? momentUrl(stream.vod, toSeconds(r['Когда'])) : ''
     });
   });
 
@@ -166,7 +168,7 @@ function renderSearch() {
       user: r.user || '—', genre: r.genres.join(' / '),
       link: r.link, feature: r.feature,
       when: r.date ? r.date.getTime() : 0,
-      stream: r.streamNum
+      stream: r.streamNum, moment: r.moment
     }));
 
   table('tSearch', [
@@ -177,9 +179,15 @@ function renderSearch() {
     { k: 'label',  t: 'оценка', mono: 1, f: r => ratePill(r.label) },
     { k: 'user',   t: 'заказчик', mono: 1 },
     { k: 'genre',  t: 'жанр' },
-    { k: 'when',   t: 'когда', mono: 1, f: r => r.when
-        ? `${new Date(r.when).toLocaleDateString('ru-RU')}<span class="plat">стрим №${r.stream}</span>`
-        : '—' }
+    { k: 'when',   t: 'когда', mono: 1, f: r => {
+        if (!r.when) return '—';
+        const d = new Date(r.when).toLocaleDateString('ru-RU');
+        // номер стрима ведёт прямо на момент разноса в записи
+        const st = r.moment
+          ? `<a class="tlink" href="${esc(r.moment)}" target="_blank" rel="noopener noreferrer">стрим №${r.stream}</a>`
+          : `<span class="plat">стрим №${r.stream}</span>`;
+        return `${d} <span class="plat">·</span> ${st}`;
+      } }
   ], view, 'artist', SEARCH_LIMIT);
 }
 

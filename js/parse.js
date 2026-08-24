@@ -113,9 +113,42 @@ function canonMap(values, keyfn) {
    Форматы: «MM:SS» и «H:MM:SS». Проверено по архиву —
    двухчастные значения всегда минуты:секунды, часов там нет. */
 function toMinutes(v) {
+  const sec = toSeconds(v);
+  return sec == null ? null : Math.floor(sec / 60);
+}
+
+/* Тот же тайм-код, но в секундах — нужен для ссылки на момент в записи.
+   Разбор совпадает с ботом FarymaSearch: две части это минуты:секунды,
+   три — часы:минуты:секунды. */
+function toSeconds(v) {
   const m = String(v || '').trim().match(/^(\d+):(\d{1,2})(?::(\d{1,2}))?$/);
   if (!m) return null;
-  return m[3] ? (+m[1]) * 60 + (+m[2]) : (+m[1]);
+  return m[3] ? (+m[1]) * 3600 + (+m[2]) * 60 + (+m[3])
+              : (+m[1]) * 60 + (+m[2]);
+}
+
+/* Время в том виде, который понимает VK Video: «1h23m45s».
+   Нулевые части опускаются, но что-то остаться должно. */
+function vkTime(sec) {
+  const h = Math.floor(sec / 3600), m = Math.floor(sec % 3600 / 60), s = sec % 60;
+  let out = h ? h + 'h' : '';
+  if (m) out += m + 'm';
+  if (s || !out) out += s + 's';
+  return out;
+}
+
+/* Ссылка на запись стрима лежит в колонке «Где» строки-разделителя.
+   Обычно это чистый адрес, но пара штук записана как «ч.1) https://…»,
+   поэтому вытаскиваем регуляркой, а не проверяем строку целиком. */
+function extractUrl(cell) {
+  const m = String(cell || '').match(/(https?:\/\/\S+)/);
+  return m ? m[1] : '';
+}
+
+/* Ссылка на нужную минуту записи. Без тайм-кода — просто на стрим. */
+function momentUrl(vod, seconds) {
+  if (!vod) return '';
+  return seconds > 0 ? `${vod}?t=${vkTime(seconds)}` : vod;
 }
 
 /* ---------- письменность названия ----------
@@ -178,10 +211,10 @@ function parseLink(raw) {
    унаследовать. 272 стрима, номера идут подряд без пропусков. */
 const STREAM_RE = /^\s*СТРИМ\s*№\s*(\d+)\s*\(([^)]+)\)/i;
 
-function parseStream(what) {
+function parseStream(what, where) {
   const m = String(what || '').match(STREAM_RE);
   if (!m) return null;
-  return { num: +m[1], date: parseDate(m[2].trim()) };
+  return { num: +m[1], date: parseDate(m[2].trim()), vod: extractUrl(where) };
 }
 
 /* «22.08.26» и «7.08.26» → Date. Год двузначный. */
