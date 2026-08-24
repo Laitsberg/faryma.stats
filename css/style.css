@@ -126,8 +126,14 @@ section{margin:44px 0}
 /* ---------- таблицы ---------- */
 table{width:100%;border-collapse:collapse;font-size:13px}
 th{font-family:var(--m);font-size:10px;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--dim);text-align:left;padding:11px 10px;border-bottom:1px solid var(--line);
-  cursor:pointer;user-select:none;white-space:nowrap}
+  color:var(--dim);text-align:left;padding:11px 10px;
+  cursor:pointer;user-select:none;white-space:nowrap;
+  /* Заголовок остаётся на месте, пока список прокручивается внутри
+     своей рамки: иначе к середине уже не понять, где какая колонка.
+     Линия снизу нарисована тенью, а не border: при border-collapse
+     рамка у прилипшей ячейки не едет вместе с ней и пропадает. */
+  position:sticky;top:0;z-index:2;background:var(--panel);
+  box-shadow:inset 0 -1px 0 var(--line)}
 th:hover{color:var(--brand-hi)}
 th.num,td.num{text-align:right}
 td{padding:9px 10px;border-bottom:1px solid #232328;vertical-align:top}
