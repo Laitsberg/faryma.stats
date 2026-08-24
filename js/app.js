@@ -209,7 +209,8 @@ function renderSearch() {
     .map(r => ({
       artist: r.artist || '—', title: r.title,
       label: r.rate.label, color: r.rate.color,
-      user: r.user || '—', genre: r.genres.join(' / '), source: r.source,
+      user: r.user || '—', genre: r.genres.join(' / '),
+      source: r.source, origin: r.origin,
       link: r.link, feature: r.feature,
       when: r.date ? r.date.getTime() : 0,
       stream: r.streamNum, moment: r.moment
@@ -217,7 +218,13 @@ function renderSearch() {
 
   table('tSearch', [
     { k: 'artist', t: 'исполнитель', lead: 1 },
-    { k: 'source', t: 'откуда', f: r => esc(r.source) },
+    // Название источника есть не всегда: пометка «Откуда» стоит у 2864
+    // строк, а название в скобках — у 2820. Там, где названия нет,
+    // показываем сам тип, иначе строка попадает в фильтр «игра», а в
+    // колонке пусто, и выглядит это поломкой.
+    { k: 'source', t: 'откуда',
+      f: r => r.source ? esc(r.source)
+            : (r.origin ? `<span class="plat">${esc(r.origin.toLowerCase())}</span>` : '') },
     { k: 'title',  t: 'трек', f: r => r.link
         ? `<a class="tlink" href="${esc(r.link.url)}" target="_blank" rel="noopener noreferrer">${esc(r.title)}</a><span class="plat">${esc(r.link.platform)}</span>`
         : esc(r.title) },
