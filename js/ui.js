@@ -154,7 +154,6 @@ function table(elId, cols, rows, defaultSort, limit) {
   t.dataset.sort = t.dataset.sort || defaultSort;
 
   const sk = t.dataset.sort;
-  const dir = t.dataset.dir === 'asc' ? 1 : -1;
 
   // Колонка может показывать одно, а сортироваться по другому. Оценка
   // выводится подписью («атлична - -»), но сравнивать её как текст
@@ -163,11 +162,21 @@ function table(elId, cols, rows, defaultSort, limit) {
   const col = cols.find(c => c.k === sk);
   const key = (col && col.sortK) || sk;
 
+  if (!t.dataset.dir) t.dataset.dir = defaultDirFor(rows, key);
+  const dir = t.dataset.dir === 'asc' ? 1 : -1;
+
   // Сортируем ВЕСЬ набор и только потом обрезаем. Если резать раньше,
   // сортировка переставляет лишь первые строки, а таблица при этом
   // уверяет, что показывает весь архив.
+  // Пустые значения всегда внизу, в какую бы сторону ни сортировали:
+  // иначе по возрастанию список открывается прочерками — у четырёх
+  // записей в архиве исполнитель не разбирается, да и жанр с источником
+  // заполнены не везде.
+  const blank = v => v == null || v === '' || v === '—';
+
   const sorted = [...rows].sort((a, b) => {
     const x = a[key], y = b[key];
+    if (blank(x) !== blank(y)) return blank(x) ? 1 : -1;
     if (typeof x === 'number' && typeof y === 'number') return (x - y) * dir;
     return String(x).localeCompare(String(y), 'ru') * dir;
   });
@@ -208,14 +217,30 @@ function table(elId, cols, rows, defaultSort, limit) {
     t.addEventListener('click', e => {
       const th = e.target.closest('th');
       if (!th || !t.contains(th) || !th.dataset.k) return;
-      if (t.dataset.sort === th.dataset.k) t.dataset.dir = t.dataset.dir === 'asc' ? 'desc' : 'asc';
-      else { t.dataset.sort = th.dataset.k; t.dataset.dir = 'desc'; }
+      if (t.dataset.sort === th.dataset.k) {
+        t.dataset.dir = t.dataset.dir === 'asc' ? 'desc' : 'asc';
+      } else {
+        // новая колонка — начинаем с направления, осмысленного для неё
+        const c = cols.find(x => x.k === th.dataset.k);
+        t.dataset.sort = th.dataset.k;
+        t.dataset.dir = defaultDirFor(rows, (c && c.sortK) || th.dataset.k);
+      }
       const a = t._args;
       table(a.elId, a.cols, a.rows, a.defaultSort, a.limit);
     });
   }
 
   buildSortbar(t, cols, elId, rows, defaultSort, limit);
+}
+
+/* Направление сортировки по умолчанию зависит от того, что в колонке.
+   У чисел осмысленно убывание — больше значит выше. У текста наоборот:
+   убывание даёт список с конца алфавита, что выглядит поломкой.
+   Смотрим на само значение, а не на пометку колонки: у «оценки»
+   сравнение идёт по скрытому баллу, и она тоже должна идти по убыванию. */
+function defaultDirFor(rows, key) {
+  const row = rows.find(r => r[key] != null);
+  return row && typeof row[key] === 'number' ? 'desc' : 'asc';
 }
 
 /* Сколько карточек показывать на телефоне до нажатия «показать все» */
@@ -257,8 +282,9 @@ function buildSortbar(t, cols, elId, rows, defaultSort, limit) {
     sel.add(o);
   });
   sel.onchange = () => {
+    const c = cols.find(x => x.k === sel.value);
     t.dataset.sort = sel.value;
-    t.dataset.dir = 'desc';
+    t.dataset.dir = defaultDirFor(rows, (c && c.sortK) || sel.value);
     table(elId, cols, rows, defaultSort, limit);
   };
   holder.appendChild(sel);
