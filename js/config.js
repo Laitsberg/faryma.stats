@@ -15,6 +15,17 @@ const SHEET_CSV_URL = "";
 /* Куда складывает данные воркфлоу */
 const LOCAL_CSV = "data.csv";
 
+/* Ссылка на саму таблицу — она в шапке под словом «Источник».
+   Ведёт на вкладку архива: именно из неё берутся все цифры на
+   странице. Вкладка стримов лежит отдельно, в подвале. */
+const SHEET_URL =
+  "https://docs.google.com/spreadsheets/d/1yEUr29llt9L1zWavC4lxkyhd6UeIwrQuGsPon9fXt4A" +
+  "/edit?gid=1372192852#gid=1372192852";
+
+/* История по датам: одна строка в день, пишет scripts/snapshot.mjs.
+   Из последней строки берётся дата последнего обновления архива. */
+const HISTORY_JSONL = "data/history.jsonl";
+
 /* Страны артистов, собранные скриптом scripts/countries.mjs */
 const COUNTRIES_JSON = "data/countries.json";
 

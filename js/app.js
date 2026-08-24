@@ -16,7 +16,8 @@ const cur = () => FILTER.tier ? ROWS.filter(r => r.rate.tier === FILTER.tier) : 
 /* ---------- загрузка ---------- */
 function load() {
   const url = SHEET_CSV_URL || LOCAL_CSV;
-  $('src').textContent = SHEET_CSV_URL ? 'Гугл-таблица' : 'архив в репозитории';
+  $('src').innerHTML =
+    `<a href="${esc(SHEET_URL)}" target="_blank" rel="noopener noreferrer">таблица разносов</a>`;
 
   // страны — необязательны, без них раздел просто не появится
   // страны приезжают отдельно и могут прийти позже таблицы —
@@ -102,8 +103,21 @@ function build(raw) {
   STREAMS.sort((a, b) => a.num - b.num);
   computeDurations();
 
-  $('upd').textContent = new Date().toLocaleString('ru-RU',
-    { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+  // Дата берётся из истории, а не из часов браузера: показывать здесь
+  // момент открытия страницы бессмысленно — важно, когда воркфлоу
+  // последний раз забирал таблицу.
+  $('upd').textContent = '—';
+  fetch(HISTORY_JSONL)
+    .then(r => r.ok ? r.text() : null)
+    .then(txt => {
+      if (!txt) return;
+      const lines = txt.trim().split('\n').filter(Boolean);
+      const last = JSON.parse(lines[lines.length - 1]);
+      const d = new Date(last.date + 'T00:00:00Z');
+      if (!isNaN(d.getTime())) $('upd').textContent =
+        d.toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' });
+    })
+    .catch(() => {});
   $('total').textContent = num(ROWS.length);
   $('boot').style.display = 'none';
   $('app').style.display = '';
