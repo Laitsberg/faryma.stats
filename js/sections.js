@@ -216,3 +216,22 @@ function renderPlatforms(rows) {
   pairCharts('cPlatN', 'cPlatAvg',
     summarize(rows, r => r.platform || null, MIN_N.platform), 10);
 }
+
+/* ---------- страны исполнителей ----------
+   Берутся из data/countries.json, который наполняет
+   scripts/countries.mjs через MusicBrainz. Пока файл пуст,
+   раздел скрыт — письменность рядом работает всегда. */
+function renderCountries(rows) {
+  const sec = $('secCountry');
+  const known = rows.filter(r => r.country);
+  if (known.length < 50) { sec.style.display = 'none'; return; }
+  sec.style.display = '';
+
+  const items = summarize(known, r => r.country, 10);
+  pairCharts('cCountryN', 'cCountryAvg', items, 14);
+
+  const cov = (known.length / rows.length * 100).toFixed(0);
+  $('countryNote').textContent =
+    `страна известна у ${num(known.length)} из ${num(rows.length)} разносов (${cov}%), ` +
+    `остальных MusicBrainz либо не знает, либо не уверен в совпадении`;
+}

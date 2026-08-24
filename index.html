@@ -103,8 +103,17 @@
    </div>
   </section>
 
+  <section id="secCountry" style="display:none">
+   <div class="shd"><span class="ch">08</span><h2>Страны исполнителей</h2></div>
+   <p class="note">Настоящие страны, а не догадка по алфавиту: каждый исполнитель найден в базе MusicBrainz. <span id="countryNote"></span></p>
+   <div class="grid2">
+    <div class="card"><h3>Сколько приносят</h3><div class="cap">число разносов</div><div class="chartbox"><canvas id="cCountryN"></canvas></div></div>
+    <div class="card"><h3>Средний балл</h3><div class="cap">по десятибалльной шкале</div><div class="chartbox"><canvas id="cCountryAvg"></canvas></div></div>
+   </div>
+  </section>
+
   <section>
-   <div class="shd"><span class="ch">08</span><h2>Как трек попал в очередь</h2></div>
+   <div class="shd"><span class="ch">09</span><h2>Как трек попал в очередь</h2></div>
    <p class="note">Донат, долг, заказ, очередь. Проверка на то, влияет ли способ попадания на итоговую оценку.</p>
    <div class="grid2">
     <div class="card"><h3>Объём</h3><div class="cap">число разносов</div><div class="chartbox"><canvas id="cType"></canvas></div></div>
@@ -113,13 +122,13 @@
   </section>
 
   <section>
-   <div class="shd"><span class="ch">09</span><h2>Время внутри эфира</h2></div>
+   <div class="shd"><span class="ch">10</span><h2>Время внутри эфира</h2></div>
    <p class="note">Тайм-код разноса относительно начала стрима. Проверка на то, добреет он к концу или устаёт. <span id="hourNote"></span></p>
    <div class="card"><div class="chartbox"><canvas id="cHour"></canvas></div></div>
   </section>
 
   <section>
-   <div class="shd"><span class="ch">10</span><h2>Тэги</h2></div>
+   <div class="shd"><span class="ch">11</span><h2>Тэги</h2></div>
    <p class="note">Проставлены редко, поэтому цифры показательны только для крупных тэгов.</p>
    <div class="grid2">
     <div class="card"><h3>Объём</h3><div class="cap">число разносов</div><div class="chartbox"><canvas id="cTagN"></canvas></div></div>
@@ -128,7 +137,7 @@
   </section>
 
   <section>
-   <div class="shd"><span class="ch">11</span><h2>Откуда приносят ссылки</h2></div>
+   <div class="shd"><span class="ch">12</span><h2>Откуда приносят ссылки</h2></div>
    <p class="note">С какой площадки взят трек — по ссылке из колонки «Где».</p>
    <div class="grid2">
     <div class="card"><h3>Объём</h3><div class="cap">число разносов</div><div class="chartbox"><canvas id="cPlatN"></canvas></div></div>
@@ -137,7 +146,7 @@
   </section>
 
   <section>
-   <div class="shd"><span class="ch">12</span><h2>Поиск по архиву</h2></div>
+   <div class="shd"><span class="ch">13</span><h2>Поиск по архиву</h2></div>
    <p class="note">Прежде чем нести трек — проверь, не разносили ли его. Название кликабельно: ведёт туда, откуда трек приносили.</p>
    <div class="search">
     <input id="q" type="search" placeholder="исполнитель, трек или заказчик" autocomplete="off">

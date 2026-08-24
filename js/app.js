@@ -17,9 +17,14 @@ function load() {
   $('src').textContent = SHEET_CSV_URL ? 'Гугл-таблица' : 'архив в репозитории';
 
   // страны — необязательны, без них раздел просто не появится
+  // страны приезжают отдельно и могут прийти позже таблицы —
+  // тогда просто перерисовываем свой раздел
   fetch(COUNTRIES_JSON)
     .then(r => r.ok ? r.json() : null)
-    .then(j => { if (j) COUNTRIES = j.artists || j; })
+    .then(j => {
+      COUNTRIES = (j && j.artists) || {};
+      if (ROWS.length) { applyCountries(); renderCountries(cur()); }
+    })
     .catch(() => {});
 
   Papa.parse(url, {
@@ -75,8 +80,20 @@ function build(raw) {
   $('total').textContent = num(ROWS.length);
   $('boot').style.display = 'none';
   $('app').style.display = '';
+  applyCountries();
   initControls();
   render();
+}
+
+/* Проставляет строкам страну по кэшу MusicBrainz.
+   Низкая уверенность совпадения приравнивается к «не знаем». */
+function applyCountries() {
+  ROWS.forEach(r => {
+    const hit = COUNTRIES[r.artistKey];
+    r.country = (hit && hit.country && (hit.score ?? 0) >= COUNTRY_MIN_SCORE)
+      ? (COUNTRY_NAMES[hit.country] || hit.country)
+      : null;
+  });
 }
 
 /* ---------- отрисовка ---------- */
@@ -95,6 +112,7 @@ function render() {
   renderHour(rows);
   renderTags(rows);
   renderPlatforms(rows);
+  renderCountries(rows);
   renderSearch();
   $('filterState').textContent =
     FILTER.tier ? ('показаны только: ' + FILTER.tier) : 'фильтр не задан';
