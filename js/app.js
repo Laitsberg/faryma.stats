@@ -82,7 +82,7 @@ function build(raw) {
       user, userKey: user ? userKey(user) : '',
       type:   (r['Тип'] || '').trim(),
       origin: (r['Откуда'] || '').trim(),
-      genres: (r['Жанр'] || '').split('/').map(s => s.trim()).filter(Boolean),
+      genres: splitGenres(r['Жанр']),
       tags:   (r['Тэги'] || '').split(/[,\/]/).map(s => s.trim()).filter(Boolean),
       feature:(r['Фича'] || '').trim(),
       min: toMinutes(r['Когда']),

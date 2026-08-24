@@ -39,8 +39,10 @@ header{border-bottom:1px solid var(--line);
   background:linear-gradient(180deg,#131316 0%,var(--bg) 100%);
   border-top:3px solid transparent;
   border-image:linear-gradient(90deg,var(--brand-lo),var(--brand),var(--brand-hi)) 1}
-.head{padding:38px 0 30px}
-@media(max-width:560px){ .head{padding:24px 0 20px} }
+/* Только сверху и снизу: сокращённая запись padding обнуляла бы боковые
+   отступы, унаследованные от .wrap, и текст шапки прилипал к краю экрана. */
+.head{padding-top:38px;padding-bottom:30px}
+@media(max-width:560px){ .head{padding-top:24px;padding-bottom:20px} }
 .eyebrow{font-family:var(--m);font-size:11px;letter-spacing:.22em;
   color:var(--dim);text-transform:uppercase}
 h1{font-family:var(--d);font-weight:800;font-size:clamp(28px,5.4vw,52px);
