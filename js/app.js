@@ -218,27 +218,28 @@ function renderSearch() {
 
   table('tSearch', [
     { k: 'artist', t: 'исполнитель', lead: 1 },
-    // Название источника есть не всегда: пометка «Откуда» стоит у 2864
-    // строк, а название в скобках — у 2820. Там, где названия нет,
-    // показываем сам тип, иначе строка попадает в фильтр «игра», а в
-    // колонке пусто, и выглядит это поломкой.
-    { k: 'source', t: 'откуда',
-      f: r => r.source ? esc(r.source)
-            : (r.origin ? `<span class="plat">${esc(r.origin.toLowerCase())}</span>` : '') },
     { k: 'title',  t: 'трек', f: r => r.link
         ? `<a class="tlink" href="${esc(r.link.url)}" target="_blank" rel="noopener noreferrer">${esc(r.title)}</a><span class="plat">${esc(r.link.platform)}</span>`
         : esc(r.title) },
     { k: 'label',  t: 'оценка', mono: 1, f: r => ratePill(r.label) },
     { k: 'user',   t: 'заказчик', mono: 1 },
     { k: 'genre',  t: 'жанр' },
+    // «Откуда» стоит рядом с жанром, а не между исполнителем и треком:
+    // источник известен у 44% строк, и посередине он рвал бы главную
+    // пару колонок дырой на каждой второй строке.
+    { k: 'source', t: 'откуда',
+      f: r => r.source ? esc(r.source)
+            : (r.origin ? `<span class="plat">${esc(r.origin.toLowerCase())}</span>` : '') },
     { k: 'when',   t: 'когда', mono: 1, f: r => {
         if (!r.when) return '—';
         const d = new Date(r.when).toLocaleDateString('ru-RU');
         // номер стрима ведёт прямо на момент разноса в записи
         const st = r.moment
-          ? `<a class="tlink" href="${esc(r.moment)}" target="_blank" rel="noopener noreferrer">стрим №${r.stream}</a>`
-          : `<span class="plat">стрим №${r.stream}</span>`;
-        return `${d} <span class="plat">·</span> ${st}`;
+          ? `<a class="tlink nowrap" href="${esc(r.moment)}" target="_blank" rel="noopener noreferrer">стрим №${r.stream}</a>`
+          : `<span class="plat nowrap">стрим №${r.stream}</span>`;
+        // без разделителя: в узкой колонке дата и стрим и так встают
+        // друг под другом, а точка посередине повисала отдельной строкой
+        return `<span class="nowrap">${d}</span> ${st}`;
       } }
   ], view, 'artist', SEARCH_LIMIT);
 }

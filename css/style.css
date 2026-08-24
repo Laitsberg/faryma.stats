@@ -141,6 +141,8 @@ td.mono{font-family:var(--m);font-size:12px}
 .tlink{color:var(--brand-hi);text-decoration:none;border-bottom:1px solid rgba(245,155,20,.35)}
 .tlink:hover{border-bottom-color:var(--brand-hi)}
 .plat{font-family:var(--m);font-size:10px;color:var(--dim);margin-left:6px;white-space:nowrap}
+/* «стрим №30» не должен разрываться между словом и номером */
+.nowrap{white-space:nowrap}
 
 /* Сортировка списком — заменяет клик по заголовку там, где
    таблица превратилась в карточки и заголовков не видно. */
