@@ -49,8 +49,12 @@ function parseRate(raw) {
   else if (tail === '') mod = '';
   else return null;   // хвост вроде «как идея» — не оценка
 
+  // Крайние ступени односторонние: плюс к «гениально» и минус к
+  // «кринж-контенту» ничего не значат — оценка уже на краю шкалы.
+  if (!tier.mods.includes(mod)) mod = '';
+
   const m = MODS.find(x => x[0] === mod);
-  const label = tier.key + (mod ? (mod === '- -' ? ' - -' : mod) : '');
+  const label = tier.key + modLabel(mod);
   return {
     label, tier: tier.key, mod,
     score: Math.max(0, Math.min(10, tier.base + m[1])),
