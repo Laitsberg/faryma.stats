@@ -53,8 +53,56 @@ function renderScale() {
     });
 }
 
-/* ---------- 02. тренд по порядку разносов ---------- */
+/* ---------- 02. тренд ----------
+   Раньше по горизонтали шёл порядковый номер разноса: считалось, что
+   дат в таблице нет. Даты есть — стримы отбиты строками
+   «СТРИМ №271 (22.08.26)», и каждый трек наследует дату своего стрима.
+   Теперь ось настоящая, и видно не только «стал ли добрее», но и когда. */
 function renderTrend() {
+  const seq = ROWS.filter(r => r.date).sort((a, b) => a.date - b.date || a.i - b.i);
+  if (seq.length < 200) { renderTrendByOrder(); return; }
+
+  const W = 150, pts = [];
+  for (let i = W; i <= seq.length; i += 10) {
+    const win = seq.slice(i - W, i);
+    pts.push({ x: win[win.length - 1].date.getTime(),
+               y: +avg(win.map(r => r.rate.score)).toFixed(3) });
+  }
+  $('cTrend').parentElement.style.height = '300px';
+  draw('cTrend', {
+    type: 'line',
+    data: { datasets: [{
+      data: pts, borderColor: C.brand, borderWidth: 2, pointRadius: 0,
+      tension: .3, fill: true, backgroundColor: C.amberFill }] },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      parsing: false,
+      scales: {
+        // границы задаём явно: иначе Chart.js округляет их до «красивых»
+        // значений и тянет ось на месяцы дальше последнего стрима
+        x: { ...GRID, type: 'linear',
+             min: pts[0].x, max: pts[pts.length - 1].x,
+             ticks: { maxRotation: 0, autoSkip: true, maxTicksLimit: 5,
+                      callback: v => new Date(v).toLocaleDateString('ru-RU',
+                        { month: 'short', year: '2-digit' }) } },
+        y: { ...GRID, title: { display: true, text: 'средний балл по 150 трекам', color: C.dim } }
+      },
+      plugins: { tooltip: { ...TOOLTIP, callbacks: {
+        title: it => new Date(it[0].parsed.x).toLocaleDateString('ru-RU',
+          { day: 'numeric', month: 'long', year: 'numeric' }),
+        label: it => 'средний балл ' + f2(it.parsed.y)
+      } } }
+    }
+  });
+  const first = seq[0].date, last = seq[seq.length - 1].date;
+  const fmt = d => d.toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' });
+  $('trendNote').textContent =
+    `${fmt(first)} — ${fmt(last)}, ${num(STREAMS.length)} ` +
+    plural(STREAMS.length, 'стрим', 'стрима', 'стримов');
+}
+
+/* Запасной вариант, если дат вдруг не окажется */
+function renderTrendByOrder() {
   const seq = [...ROWS].sort((a, b) => a.i - b.i);
   const W = 150, pts = [], lab = [];
   for (let i = W; i <= seq.length; i += 10) {
@@ -65,29 +113,27 @@ function renderTrend() {
   draw('cTrend', {
     type: 'line',
     data: { labels: lab, datasets: [{
-      data: pts, borderColor: C.amber, borderWidth: 2, pointRadius: 0,
-      tension: .3, fill: true, backgroundColor: 'rgba(240,160,42,.08)' }] },
+      data: pts, borderColor: C.brand, borderWidth: 2, pointRadius: 0,
+      tension: .3, fill: true, backgroundColor: C.amberFill }] },
     options: {
       responsive: true, maintainAspectRatio: false,
       scales: {
         x: { ...GRID, ticks: { maxRotation: 0, autoSkip: true, maxTicksLimit: 7 } },
         y: { ...GRID, title: { display: true, text: 'средний балл по 150 трекам', color: C.dim } }
       },
-      plugins: {
-        tooltip: { ...TOOLTIP, callbacks: {
-          title: it => `разносы ${it[0].label - W + 1}–${it[0].label}`,
-          label: it => 'средний балл ' + f2(it.raw)
-        } }
-      }
+      plugins: { tooltip: TOOLTIP }
     }
   });
 }
 
 /* ---------- 03. исполнители ---------- */
 function renderArtists(rows) {
-  const m = group(rows, r => r.artistKey || null);
+  // группируем по УЧАСТНИКАМ, а не по «главному» имени из строки:
+  // иначе Hatsune Miku, которая почти всегда идёт после feat.,
+  // попадает в статистику 5 раз вместо 59
+  const m = group(rows, r => r.parts.length ? r.parts : (r.artistKey || null));
   const all = [...m].map(([key, rs]) => ({
-    a: ARTIST_NAMES.get(key) || key,
+    a: PART_NAMES.get(key) || ARTIST_NAMES.get(key) || key,
     n: rs.length,
     avg: +avg(rs.map(r => r.rate.score)).toFixed(2),
     top: rs.filter(r => r.rate.tier === 'гениально').length
@@ -119,14 +165,15 @@ function renderUsers(rows) {
     [{ k: 'u', t: 'заказчик', lead: 1 }, { k: 'n', t: 'принёс', num: 1 },
      { k: 'avg', t: 'ср. балл', num: 1, f: r => f2(r.avg) },
      { k: 'genfam', t: 'в гениально', num: 1 }, { k: 'gen', t: 'чистых', num: 1 },
-     { k: 'best', t: 'лучший результат', mono: 1 }],
+     // та же плашка, что в поиске: цвет ступени читается быстрее текста
+     { k: 'best', t: 'лучший результат', mono: 1, f: r => ratePill(r.best) }],
     data.sort((x, y) => y.n - x.n), 'n');
 }
 
 /* Пара графиков «объём / средний балл» — используется много где */
 function pairCharts(idN, idAvg, items, limit) {
   const byN = [...items].sort((a, b) => b.n - a.n).slice(0, limit);
-  hbar(idN, byN.map(x => ({ k: x.k, v: x.n })), C.amber);
+  hbar(idN, byN.map(x => ({ k: x.k, v: x.n })), C.brand);
   const byA = [...byN].sort((a, b) => b.avg - a.avg);
   hbar(idAvg, byA.map(x => ({ k: x.k, v: x.avg })), C.patch, 10);
 }
@@ -182,7 +229,7 @@ function renderHour(rows) {
         { type: 'bar', label: 'разносов', data: keys.map(k => buckets.get(k).length),
           backgroundColor: '#2E2925', yAxisID: 'y1', order: 2 },
         { type: 'line', label: 'средний балл', data: scores,
-          borderColor: C.amber, borderWidth: 2, pointRadius: 2, tension: .3,
+          borderColor: C.brand, borderWidth: 2, pointRadius: 2, tension: .3,
           yAxisID: 'y', order: 1 }
       ]
     },
@@ -192,7 +239,7 @@ function renderHour(rows) {
         x: { ...GRID, ticks: { maxRotation: 0, autoSkip: true, maxTicksLimit: 8 } },
         // не от нуля: иначе вся разница (6,6–6,9) сплющивается в прямую
         y: { ...GRID, position: 'left', min: Math.floor(lo * 5 - 1) / 5, max: Math.ceil(hi * 5 + 1) / 5,
-             title: { display: true, text: 'средний балл', color: C.amber } },
+             title: { display: true, text: 'средний балл', color: C.brand } },
         y1: { ...GRID, position: 'right', beginAtZero: true, grid: { display: false },
               title: { display: true, text: 'разносов', color: C.dim } }
       },

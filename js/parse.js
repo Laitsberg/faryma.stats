@@ -170,3 +170,56 @@ function parseLink(raw) {
   const hit = PLATFORMS.find(([re]) => re.test(host));
   return { url: u.href, host, platform: hit ? hit[1] : 'Другое' };
 }
+
+/* ---------- строка-разделитель стрима ----------
+   В архиве стримы отбиты строками вида «СТРИМ №271 (22.08.26)».
+   Это единственное место, где в таблице есть даты: у самих треков
+   их нет, но каждый трек лежит под своим стримом, и дату можно
+   унаследовать. 272 стрима, номера идут подряд без пропусков. */
+const STREAM_RE = /^\s*СТРИМ\s*№\s*(\d+)\s*\(([^)]+)\)/i;
+
+function parseStream(what) {
+  const m = String(what || '').match(STREAM_RE);
+  if (!m) return null;
+  return { num: +m[1], date: parseDate(m[2].trim()) };
+}
+
+/* «22.08.26» и «7.08.26» → Date. Год двузначный. */
+function parseDate(raw) {
+  const m = String(raw).trim().match(/^(\d{1,2})\.(\d{1,2})\.(\d{2,4})$/);
+  if (!m) return null;
+  let y = +m[3];
+  if (y < 100) y += 2000;
+  const d = new Date(Date.UTC(y, +m[2] - 1, +m[1]));
+  return isNaN(d.getTime()) ? null : d;
+}
+
+/* ---------- участники трека ----------
+   «Utsu-P feat. Hatsune Miku» — это двое, и Мику заслуживает попасть
+   в статистику: основным артистом она значится всего 5 раз, а поёт
+   в 59 треках.
+
+   С feat. просто: так название группы не пишут, режем всегда.
+   С амперсандом опасно: «MYTH & ROID» — одно имя, а «Ado & Hatsune
+   Miku» — двое, и по самой строке их не различить. Поэтому решаем
+   по архиву: делим только если ОБЕ части где-то встречаются как
+   самостоятельные исполнители. «MYTH» и «ROID» по отдельности не
+   попадаются ни разу — значит это группа, не трогаем.
+
+   soloKeys — множество ключей тех, кто хоть раз выступал один;
+   его собирает build() в app.js. */
+function participants(artist, soloKeys) {
+  if (!artist) return [];
+  const out = [];
+  String(artist).split(/\s+(?:feat\.?|ft\.?|featuring)\s+/i).forEach(chunk => {
+    const bits = chunk.split(/\s*&\s*|\s*,\s*/).map(x => x.trim()).filter(Boolean);
+    if (bits.length > 1 && soloKeys && bits.every(b => soloKeys.has(nameKey(b)))) out.push(...bits);
+    else if (chunk.trim()) out.push(chunk.trim());
+  });
+  return [...new Set(out)];
+}
+
+/* Артист без соавторов — по нему собирается soloKeys */
+function isSolo(artist) {
+  return !/\b(feat\.?|ft\.?|featuring)\b|&|,/i.test(String(artist || ''));
+}

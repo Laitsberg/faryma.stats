@@ -6,7 +6,9 @@
 let ROWS = [];                 // все разносы с распознанной оценкой
 let FILTER = { tier: null };   // выбранная ступень шкалы
 let ARTIST_NAMES = new Map();  // ключ → показываемое написание
+let PART_NAMES = new Map();    // то же для участников, включая тех, кто только в feat.
 let USER_NAMES = new Map();
+let STREAMS = [];              // разделители стримов: номер и дата
 let COUNTRIES = {};            // артист → страна, из data/countries.json
 
 const cur = () => FILTER.tier ? ROWS.filter(r => r.rate.tier === FILTER.tier) : ROWS;
@@ -52,8 +54,23 @@ function build(raw) {
   ARTIST_NAMES = canonMap(parsed.map(p => p.w.artist).filter(Boolean), nameKey);
   USER_NAMES   = canonMap(raw.map(r => (r['Кто'] || '').trim()).filter(Boolean), userKey);
 
+  // кто хоть раз выступал один — по этому списку решаем, разбивать ли
+  // «X & Y» на двоих или это цельное название группы
+  const soloKeys = new Set();
+  parsed.forEach(p => { if (p.w.artist && isSolo(p.w.artist)) soloKeys.add(nameKey(p.w.artist)); });
+
+  // имена участников тоже склеиваем по регистру
+  const allParts = [];
+  parsed.forEach(p => { if (p.w.artist) allParts.push(...participants(p.w.artist, soloKeys)); });
+  PART_NAMES = canonMap(allParts, nameKey);
+
   ROWS = [];
+  STREAMS = [];
+  let stream = null;               // текущий стрим, под которым идут треки
+
   parsed.forEach(({ r, w }, i) => {
+    const st = parseStream(r['Что']);
+    if (st) { stream = st; STREAMS.push(st); return; }
     const rate = parseRate(r['Оценка']);
     if (!rate) return;
     const link = parseLink(r['Где']);
@@ -71,9 +88,14 @@ function build(raw) {
       min: toMinutes(r['Когда']),
       platform: link ? link.platform : '',
       script: scriptOf(w.full, w.artist + ' ' + w.title),
-      search: (w.full + ' ' + user).toLowerCase()
+      search: (w.full + ' ' + user).toLowerCase(),
+      parts: w.artist ? participants(w.artist, soloKeys).map(nameKey) : [],
+      streamNum: stream ? stream.num : null,
+      date: stream ? stream.date : null
     });
   });
+
+  STREAMS.sort((a, b) => a.num - b.num);
 
   $('upd').textContent = new Date().toLocaleString('ru-RU',
     { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
@@ -142,7 +164,9 @@ function renderSearch() {
       artist: r.artist || '—', title: r.title,
       label: r.rate.label, color: r.rate.color,
       user: r.user || '—', genre: r.genres.join(' / '),
-      link: r.link, feature: r.feature
+      link: r.link, feature: r.feature,
+      when: r.date ? r.date.getTime() : 0,
+      stream: r.streamNum
     }));
 
   table('tSearch', [
@@ -150,10 +174,12 @@ function renderSearch() {
     { k: 'title',  t: 'трек', f: r => r.link
         ? `<a class="tlink" href="${esc(r.link.url)}" target="_blank" rel="noopener noreferrer">${esc(r.title)}</a><span class="plat">${esc(r.link.platform)}</span>`
         : esc(r.title) },
-    { k: 'label',  t: 'оценка', mono: 1,
-      f: r => `<span class="pill" style="color:${r.color}">${esc(r.label)}</span>` },
+    { k: 'label',  t: 'оценка', mono: 1, f: r => ratePill(r.label) },
     { k: 'user',   t: 'заказчик', mono: 1 },
-    { k: 'genre',  t: 'жанр' }
+    { k: 'genre',  t: 'жанр' },
+    { k: 'when',   t: 'когда', mono: 1, f: r => r.when
+        ? `${new Date(r.when).toLocaleDateString('ru-RU')}<span class="plat">стрим №${r.stream}</span>`
+        : '—' }
   ], view, 'artist', SEARCH_LIMIT);
 }
 

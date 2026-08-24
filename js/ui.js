@@ -4,9 +4,25 @@
    ============================================================ */
 
 const $  = id => document.getElementById(id);
+
+/* Плашка оценки в цвет своей ступени */
+function ratePill(label) {
+  if (!label || label === '—') return '—';
+  const tier = TIERS.find(t => label.startsWith(t.key));
+  return `<span class="pill" style="color:${tier ? tier.c : 'inherit'}">${esc(label)}</span>`;
+}
 const avg = a => a.length ? a.reduce((s, x) => s + x, 0) / a.length : 0;
 const num = n => n.toLocaleString('ru-RU');
 const f2  = n => n.toFixed(2);          // 9 → «9.00», иначе колонка прыгает
+
+/* Склонение: plural(2,'стрим','стрима','стримов') → «стрима» */
+function plural(n, one, few, many) {
+  const a = Math.abs(n) % 100, b = a % 10;
+  if (a > 10 && a < 20) return many;
+  if (b > 1 && b < 5) return few;
+  if (b === 1) return one;
+  return many;
+}
 
 /* Группировка. keyfn может вернуть строку или массив строк
    (жанры и тэги перечислены через слэш и запятую). */
@@ -70,6 +86,33 @@ function fitHeight(id, count, perRow = 22, min = 180) {
   if (box) box.style.height = Math.max(min, count * perRow + 56) + 'px';
 }
 
+/* Подпись значения прямо у столбца.
+   Без неё, чтобы узнать число, надо было попасть пальцем ровно в столбец,
+   а у мелких категорий (Telegram, SoundCloud) он в пару пикселей шириной.
+   Число рисуем за концом столбца, а если там уже нет места — внутри. */
+const valueLabels = {
+  id: 'valueLabels',
+  afterDatasetsDraw(chart, args, opts) {
+    const fmt = opts?.fmt || (v => v);
+    const { ctx } = chart;
+    ctx.save();
+    ctx.font = "11px 'JetBrains Mono', ui-monospace, monospace";
+    ctx.textBaseline = 'middle';
+    chart.getDatasetMeta(0).data.forEach((el, i) => {
+      const v = chart.data.datasets[0].data[i];
+      if (v == null) return;
+      const text = fmt(v);
+      const w = ctx.measureText(text).width;
+      const room = chart.chartArea.right - el.x - 6;
+      const inside = room < w;
+      ctx.fillStyle = inside ? '#0D0D0F' : C.dim;
+      ctx.textAlign = inside ? 'right' : 'left';
+      ctx.fillText(text, inside ? el.x - 6 : el.x + 6, el.y);
+    });
+    ctx.restore();
+  }
+};
+
 function hbar(id, items, color, maxX) {
   fitHeight(id, items.length);
   draw(id, {
@@ -84,13 +127,18 @@ function hbar(id, items, color, maxX) {
     },
     options: {
       indexAxis: 'y', responsive: true, maintainAspectRatio: false,
-      layout: { padding: { right: 8 } },
+      // справа оставляем место под подпись значения
+      layout: { padding: { right: 46 } },
       scales: {
         x: { ...GRID, max: maxX, beginAtZero: true },
         y: { ...GRID, ticks: { autoSkip: false, font: { size: 11 } } }
       },
-      plugins: { tooltip: TOOLTIP }
-    }
+      plugins: {
+        tooltip: TOOLTIP,
+        valueLabels: { fmt: maxX === 10 ? (v => f2(v)) : (v => num(v)) }
+      }
+    },
+    plugins: [valueLabels]
   });
 }
 
@@ -130,6 +178,7 @@ function table(elId, cols, rows, defaultSort, limit) {
   }).join('') + '</tr>').join('') + '</tbody>';
 
   t.innerHTML = head + body;
+  capRows(t, elId, cols, rows, defaultSort, limit);
 
   t.querySelectorAll('th').forEach(th => th.onclick = () => {
     if (t.dataset.sort === th.dataset.k) t.dataset.dir = t.dataset.dir === 'asc' ? 'desc' : 'asc';
@@ -138,6 +187,32 @@ function table(elId, cols, rows, defaultSort, limit) {
   });
 
   buildSortbar(t, cols, elId, rows, defaultSort, limit);
+}
+
+/* Сколько карточек показывать на телефоне до нажатия «показать все» */
+const MOBILE_ROWS = 12;
+
+/* Прячет хвост списка и вешает кнопку. Работает через класс, без
+   перерисовки: нажатие мгновенное и не сбрасывает сортировку. */
+function capRows(t, elId, cols, rows, defaultSort, limit) {
+  const trs = [...t.querySelectorAll('tbody tr')];
+  const extra = trs.length - MOBILE_ROWS;
+  const card = t.closest('.card');
+  if (!card) return;
+  let btn = card.querySelector('.morebtn');
+  if (extra <= 0) { if (btn) btn.classList.remove('on'); return; }
+
+  trs.slice(MOBILE_ROWS).forEach(tr => tr.classList.add('over'));
+  if (!btn) {
+    btn = document.createElement('button');
+    btn.className = 'morebtn';
+    card.appendChild(btn);
+  }
+  const setLabel = () => btn.textContent = t.classList.contains('all')
+    ? 'свернуть' : `показать все — ещё ${num(extra)}`;
+  btn.classList.add('on');
+  btn.onclick = () => { t.classList.toggle('all'); setLabel(); };
+  setLabel();
 }
 
 /* На мобильном заголовков нет, поэтому сортировку даём списком */
