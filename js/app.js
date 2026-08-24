@@ -70,7 +70,7 @@ function build(raw) {
       feature:(r['Фича'] || '').trim(),
       min: toMinutes(r['Когда']),
       platform: link ? link.platform : '',
-      script: scriptOf(w.artist + ' ' + w.title),
+      script: scriptOf(w.full, w.artist + ' ' + w.title),
       search: (w.full + ' ' + user).toLowerCase()
     });
   });
