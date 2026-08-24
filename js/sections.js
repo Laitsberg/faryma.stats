@@ -210,12 +210,6 @@ function renderOrigin(rows) {
     summarize(rows, r => r.origin || null, MIN_N.origin), 10);
 }
 
-/* ---------- 07. письменность ---------- */
-function renderScriptChart(rows) {
-  pairCharts('cLangN', 'cLangAvg',
-    summarize(rows, r => r.script, MIN_N.script), 8);
-}
-
 /* ---------- 08. как попал в очередь ---------- */
 function renderType(rows) {
   pairCharts('cType', 'cTypeAvg',
@@ -301,4 +295,81 @@ function renderCountries(rows) {
   $('countryNote').textContent =
     `страна известна у ${num(known.length)} из ${num(rows.length)} разносов (${cov}%), ` +
     `остальных MusicBrainz либо не знает, либо не уверен в совпадении`;
+}
+
+/* ---------- 11. сколько длится один разнос ----------
+   Ведро — одна минута; всё длиннее DUR_CAP_MIN сводится в последнее. */
+function renderDuration(rows) {
+  const withDur = rows.filter(r => r.dur != null);
+  if (withDur.length < 200) { $('durNote').textContent = ''; return; }
+
+  const buckets = new Map();
+  withDur.forEach(r => {
+    const m = Math.min(DUR_CAP_MIN, Math.floor(r.dur / 60));
+    if (!buckets.has(m)) buckets.set(m, []);
+    buckets.get(m).push(r.rate.score);
+  });
+  const keys = [...buckets.keys()].sort((a, b) => a - b)
+    .filter(k => buckets.get(k).length >= MIN_N.durBucket);
+  const label = k => k >= DUR_CAP_MIN ? `${DUR_CAP_MIN}+ мин` : `${k}–${k + 1} мин`;
+
+  hbar('cDurN', keys.map(k => ({ k: label(k), v: buckets.get(k).length })), C.brand);
+  hbar('cDurAvg', keys.map(k => ({ k: label(k), v: +avg(buckets.get(k)).toFixed(2) })),
+       C.patch, 10);
+
+  const all = withDur.map(r => r.dur).sort((a, b) => a - b);
+  const med = all[Math.floor(all.length / 2)] / 60;
+  $('durNote').textContent =
+    `Медиана — ${med.toFixed(0)} мин. Промежутки короче полутора минут и длиннее ` +
+    `${DUR_MAX_SEC / 60} минут отброшены: это паузы и перерывы, а не разбор.`;
+}
+
+/* ---------- 12. ритм стримов ----------
+   Считается по всем стримам, а не по отфильтрованным строкам: это
+   характеристика эфиров, а не оценок, и фильтр по ступени её не меняет. */
+function renderStreams() {
+  const counts = new Map();
+  ROWS.forEach(r => {
+    if (r.streamNum == null) return;
+    counts.set(r.streamNum, (counts.get(r.streamNum) || 0) + 1);
+  });
+  const pts = STREAMS.filter(s => counts.has(s.num) && s.date)
+    .map(s => ({ x: s.date.getTime(), y: counts.get(s.num), n: s.num }))
+    .sort((a, b) => a.x - b.x);
+
+  $('cPerStream').parentElement.style.height = '300px';
+  draw('cPerStream', {
+    type: 'line',
+    data: { datasets: [{ data: pts, borderColor: C.brand, borderWidth: 1.5,
+      pointRadius: 2, pointBackgroundColor: C.brand, tension: .25,
+      fill: true, backgroundColor: C.amberFill }] },
+    options: {
+      responsive: true, maintainAspectRatio: false, parsing: false,
+      scales: {
+        x: { ...GRID, type: 'linear', min: pts[0].x, max: pts[pts.length - 1].x,
+             ticks: { maxRotation: 0, autoSkip: true, maxTicksLimit: 5,
+               callback: v => new Date(v).toLocaleDateString('ru-RU',
+                 { month: 'short', year: '2-digit' }) } },
+        y: { ...GRID, beginAtZero: true, title: { display: true, text: 'треков за эфир', color: C.dim } }
+      },
+      plugins: { tooltip: { ...TOOLTIP, callbacks: {
+        title: it => `стрим №${it[0].raw.n}`,
+        label: it => `${it.raw.y} ` + plural(it.raw.y, 'трек', 'трека', 'треков') +
+          ' · ' + new Date(it.raw.x).toLocaleDateString('ru-RU')
+      } } }
+    }
+  });
+
+  const D = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
+  const ORDER = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+  const wd = new Map(ORDER.map(d => [d, 0]));
+  STREAMS.forEach(s => { if (s.date) wd.set(D[s.date.getUTCDay()], wd.get(D[s.date.getUTCDay()]) + 1); });
+  hbar('cWeekday', ORDER.map(d => ({ k: d, v: wd.get(d) })), C.brand);
+
+  const total = [...counts.values()];
+  const med = [...total].sort((a, b) => a - b)[Math.floor(total.length / 2)];
+  $('streamNote').textContent =
+    `Всего ${num(STREAMS.length)} ` + plural(STREAMS.length, 'эфир', 'эфира', 'эфиров') +
+    `, в среднем ${med} ` + plural(med, 'трек', 'трека', 'треков') +
+    ` за раз, рекорд — ${Math.max(...total)}.`;
 }

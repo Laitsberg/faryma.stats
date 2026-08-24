@@ -47,19 +47,31 @@
   <div class="kpis" id="kpis"></div>
 
   <section>
-   <div class="shd"><span class="ch">01</span><h2>Как распределяются оценки</h2></div>
+   <div class="shd"><span class="ch">01</span><h2>Поиск по архиву</h2></div>
+   <p class="note">Прежде чем нести трек — проверь, не разносили ли его. Название ведёт туда, откуда трек приносили, а номер стрима — на нужную минуту записи.</p>
+   <div class="search">
+    <input id="q" type="search" placeholder="исполнитель, трек или заказчик" autocomplete="off">
+    <select id="fRate"><option value="">любая оценка</option></select>
+    <select id="fUser"><option value="">любой заказчик</option></select>
+   </div>
+   <div class="card">
+    <div class="sortbar"></div>
+    <div class="scroll"><table id="tSearch"></table></div>
+    <div class="cap" id="searchCount" style="margin:10px 0 0"></div>
+   </div>
+  </section>
+  <section>
+   <div class="shd"><span class="ch">02</span><h2>Как распределяются оценки</h2></div>
    <p class="note">Вся шкала целиком — от кринж-контента до гениально, вместе с плюсами и минусами. Видно, что «атлична» он ставит чаще всего, а до чистого «гениально» дотягиваются единицы.</p>
    <div class="card"><div class="chartbox"><canvas id="cScale"></canvas></div></div>
   </section>
-
   <section>
-   <div class="shd"><span class="ch">02</span><h2>Строже ли он стал</h2></div>
+   <div class="shd"><span class="ch">03</span><h2>Строже ли он стал</h2></div>
    <p class="note">Меняются ли оценки со временем. Линия — среднее по последним 150 трекам на каждый момент: так видно общее направление, а не скачки от трека к треку. <span id="trendNote"></span></p>
    <div class="card"><div class="chartbox"><canvas id="cTrend"></canvas></div></div>
   </section>
-
   <section>
-   <div class="shd"><span class="ch">03</span><h2>Исполнители</h2></div>
+   <div class="shd"><span class="ch">04</span><h2>Исполнители</h2></div>
    <p class="note">Кого приносят чаще всех и к кому он добрее. Соавторы учитываются наравне с основными: если артист указан после «feat.», трек засчитывается и ему тоже. Разное написание одного имени склеено.</p>
    <div class="grid2">
     <div class="card">
@@ -76,43 +88,30 @@
     </div>
    </div>
   </section>
-
   <section>
-   <div class="shd"><span class="ch">04</span><h2>Заказчики</h2></div>
+   <div class="shd"><span class="ch">05</span><h2>Заказчики</h2></div>
    <p class="note">У кого лучше получается угадывать со вкусом композитора. «В гениально» — сколько треков попало в верхнюю ступень с любым плюсом или минусом, «чистых» — сколько получили ровно «гениально», без модификаторов. Показаны те, кто принёс хотя бы 5 треков.</p>
    <div class="card">
     <div class="sortbar"></div>
     <div class="scroll"><table id="tUsers"></table></div>
    </div>
   </section>
-
   <section>
-   <div class="shd"><span class="ch">05</span><h2>Жанры</h2></div>
+   <div class="shd"><span class="ch">06</span><h2>Жанры</h2></div>
    <p class="note">Что приносят чаще и что заходит лучше. Это почти не связанные вещи: попа больше всего, но выше всех он оценивает джаз. Жанры реже 15 раз не показаны — на таких числах средний балл ничего не значит.</p>
    <div class="grid2">
     <div class="card"><h3>Объём</h3><div class="cap">число разносов</div><div class="chartbox"><canvas id="cGenreN"></canvas></div></div>
     <div class="card"><h3>Средний балл</h3><div class="cap">по десятибалльной шкале</div><div class="chartbox"><canvas id="cGenreAvg"></canvas></div></div>
    </div>
   </section>
-
   <section>
-   <div class="shd"><span class="ch">06</span><h2>Откуда трек</h2></div>
+   <div class="shd"><span class="ch">07</span><h2>Откуда трек</h2></div>
    <p class="note">Треки из аниме, игр и фильмов. Пометка стоит не у всех, поэтому здесь только те, где она есть — доли считать нельзя, а сравнивать между собой можно.</p>
    <div class="grid2">
     <div class="card"><h3>Источник</h3><div class="cap">аниме, игра, фильм</div><div class="chartbox"><canvas id="cOrigin"></canvas></div></div>
     <div class="card"><h3>Средний балл</h3><div class="cap">меняется ли отношение</div><div class="chartbox"><canvas id="cOriginAvg"></canvas></div></div>
    </div>
   </section>
-
-  <section>
-   <div class="shd"><span class="ch">07</span><h2>Письменность</h2></div>
-   <p class="note">Грубая прикидка по алфавиту названия: иероглифы — японское, хангыль — корейское, кириллица — русскоязычное. Латиница сваливается в одну кучу, поэтому раздел приблизительный — настоящие страны в следующем разделе.</p>
-   <div class="grid2">
-    <div class="card"><h3>Сколько приносят</h3><div class="cap">по письменности названия</div><div class="chartbox"><canvas id="cLangN"></canvas></div></div>
-    <div class="card"><h3>Средний балл</h3><div class="cap">по письменности названия</div><div class="chartbox"><canvas id="cLangAvg"></canvas></div></div>
-   </div>
-  </section>
-
   <section id="secCountry" style="display:none">
    <div class="shd"><span class="ch">08</span><h2>Страны исполнителей</h2></div>
    <p class="note">Откуда исполнители на самом деле — каждый найден в музыкальной базе MusicBrainz. <span id="countryNote"></span></p>
@@ -121,7 +120,6 @@
     <div class="card"><h3>Средний балл</h3><div class="cap">по десятибалльной шкале</div><div class="chartbox"><canvas id="cCountryAvg"></canvas></div></div>
    </div>
   </section>
-
   <section>
    <div class="shd"><span class="ch">09</span><h2>Как трек попал в очередь</h2></div>
    <p class="note">Как трек оказался в очереди: за донат, по долгу, заказом или просто дождался. Проверка на то, покупается ли хорошая оценка: донат идёт ровно в середине списка, а выше всех — повторы, то есть треки, которые принесли ещё раз.</p>
@@ -130,46 +128,45 @@
     <div class="card"><h3>Средний балл</h3><div class="cap">по десятибалльной шкале</div><div class="chartbox"><canvas id="cTypeAvg"></canvas></div></div>
    </div>
   </section>
-
   <section>
    <div class="shd"><span class="ch">10</span><h2>Время внутри эфира</h2></div>
    <p class="note">Устаёт ли он к концу эфира. Столбцы — сколько треков разбирают в это время, линия — какие оценки при этом ставит. <span id="hourNote"></span></p>
    <div class="card"><div class="chartbox"><canvas id="cHour"></canvas></div></div>
   </section>
+  <section>
+   <div class="shd"><span class="ch">11</span><h2>Сколько длится один разнос</h2></div>
+   <p class="note">Длительности трека в таблице нет, но есть тайм-код: разница до следующего трека показывает, сколько времени ушло на разбор. Слева — сколько разносов такой длины, справа — какие при этом оценки: пик приходится на 7–9 минут, дальше идёт вниз. На хвосте числа мелкие, поэтому там уже шум. <span id="durNote"></span></p>
+   <div class="grid2">
+    <div class="card"><h3>Сколько разносов такой длины</h3><div class="cap">по минутам</div><div class="chartbox"><canvas id="cDurN"></canvas></div></div>
+    <div class="card"><h3>Средний балл</h3><div class="cap">выше всего на 7–9 минутах</div><div class="chartbox"><canvas id="cDurAvg"></canvas></div></div>
+   </div>
+  </section>
 
   <section>
-   <div class="shd"><span class="ch">11</span><h2>Тэги</h2></div>
+   <div class="shd"><span class="ch">12</span><h2>Ритм стримов</h2></div>
+   <p class="note">Сколько треков успевают разобрать за эфир и по каким дням вообще собираются. <span id="streamNote"></span></p>
+   <div class="grid2">
+    <div class="card"><h3>Разносов за стрим</h3><div class="cap">каждая точка — один эфир</div><div class="chartbox"><canvas id="cPerStream"></canvas></div></div>
+    <div class="card"><h3>По дням недели</h3><div class="cap">сколько было стримов</div><div class="chartbox"><canvas id="cWeekday"></canvas></div></div>
+   </div>
+  </section>
+
+  <section>
+   <div class="shd"><span class="ch">13</span><h2>Тэги</h2></div>
    <p class="note">Пометки вроде «cover», «live», «meme» — что это за трек по формату. Проставлены далеко не везде, поэтому смотреть стоит только на крупные.</p>
    <div class="grid2">
     <div class="card"><h3>Объём</h3><div class="cap">число разносов</div><div class="chartbox"><canvas id="cTagN"></canvas></div></div>
     <div class="card"><h3>Средний балл</h3><div class="cap">по десятибалльной шкале</div><div class="chartbox"><canvas id="cTagAvg"></canvas></div></div>
    </div>
   </section>
-
   <section>
-   <div class="shd"><span class="ch">12</span><h2>Откуда приносят ссылки</h2></div>
+   <div class="shd"><span class="ch">14</span><h2>Откуда приносят ссылки</h2></div>
    <p class="note">Откуда берут ссылки, когда несут трек. У крупных площадок оценки почти совпадают, а вот присланное файлом или ссылкой из Telegram заметно ниже — правда, таких всего по полтора десятка, так что вывод шаткий.</p>
    <div class="grid2">
     <div class="card"><h3>Объём</h3><div class="cap">число разносов</div><div class="chartbox"><canvas id="cPlatN"></canvas></div></div>
     <div class="card"><h3>Средний балл</h3><div class="cap">по десятибалльной шкале</div><div class="chartbox"><canvas id="cPlatAvg"></canvas></div></div>
    </div>
   </section>
-
-  <section>
-   <div class="shd"><span class="ch">13</span><h2>Поиск по архиву</h2></div>
-   <p class="note">Прежде чем нести трек — проверь, не разносили ли его. Название ведёт туда, откуда трек приносили, а номер стрима — на нужную минуту записи.</p>
-   <div class="search">
-    <input id="q" type="search" placeholder="исполнитель, трек или заказчик" autocomplete="off">
-    <select id="fRate"><option value="">любая оценка</option></select>
-    <select id="fUser"><option value="">любой заказчик</option></select>
-   </div>
-   <div class="card">
-    <div class="sortbar"></div>
-    <div class="scroll"><table id="tSearch"></table></div>
-    <div class="cap" id="searchCount" style="margin:10px 0 0"></div>
-   </div>
-  </section>
-
  </div>
 </div>
 

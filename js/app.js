@@ -86,8 +86,9 @@ function build(raw) {
       tags:   (r['Тэги'] || '').split(/[,\/]/).map(s => s.trim()).filter(Boolean),
       feature:(r['Фича'] || '').trim(),
       min: toMinutes(r['Когда']),
+      sec: toSeconds(r['Когда']),
+      dur: null,
       platform: link ? link.platform : '',
-      script: scriptOf(w.full, w.artist + ' ' + w.title),
       search: (w.full + ' ' + user).toLowerCase(),
       parts: w.artist ? participants(w.artist, soloKeys).map(nameKey) : [],
       streamNum: stream ? stream.num : null,
@@ -98,6 +99,7 @@ function build(raw) {
   });
 
   STREAMS.sort((a, b) => a.num - b.num);
+  computeDurations();
 
   $('upd').textContent = new Date().toLocaleString('ru-RU',
     { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
@@ -107,6 +109,26 @@ function build(raw) {
   applyCountries();
   initControls();
   render();
+}
+
+/* Сколько времени заняло обсуждение трека.
+   Длительности в таблице нет, но есть тайм-код начала: расстояние до
+   следующего трека того же стрима и есть длина разноса. У последнего
+   трека стрима следующего нет — он остаётся без длительности. */
+function computeDurations() {
+  const byStream = new Map();
+  ROWS.forEach(r => {
+    if (r.streamNum == null || r.sec == null) return;
+    if (!byStream.has(r.streamNum)) byStream.set(r.streamNum, []);
+    byStream.get(r.streamNum).push(r);
+  });
+  byStream.forEach(list => {
+    list.sort((a, b) => a.sec - b.sec);
+    for (let i = 0; i < list.length - 1; i++) {
+      const d = list[i + 1].sec - list[i].sec;
+      if (d >= DUR_MIN_SEC && d <= DUR_MAX_SEC) list[i].dur = d;
+    }
+  });
 }
 
 /* Проставляет строкам страну по кэшу MusicBrainz.
@@ -132,11 +154,12 @@ function render() {
   renderUsers(rows);
   renderGenres(rows);
   renderOrigin(rows);
-  renderScriptChart(rows);
   renderType(rows);
   renderHour(rows);
   renderTags(rows);
   renderPlatforms(rows);
+  renderDuration(rows);
+  renderStreams();
   renderCountries(rows);
   renderSearch();
   $('filterState').textContent =
