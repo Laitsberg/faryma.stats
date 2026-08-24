@@ -124,6 +124,7 @@ function applyCountries() {
 function render() {
   const rows = cur();
   renderLadder();
+  renderDock();
   renderKpis(rows);
   renderScale();
   renderTrend();
@@ -140,6 +141,21 @@ function render() {
   renderSearch();
   $('filterState').textContent =
     FILTER.tier ? ('показаны только: ' + FILTER.tier) : 'фильтр не задан';
+}
+
+/* Дубль фильтра появляется, когда пульт ушёл вверх, и прячется,
+   когда он снова виден. IntersectionObserver вместо слушателя
+   прокрутки: браузер сам решает, когда проверять, и не дёргает
+   пересчёт на каждый пиксель. */
+function initDock() {
+  const desk = document.querySelector('.desk');
+  const dock = $('dock');
+  if (!desk || !dock || !('IntersectionObserver' in window)) return;
+  dock.hidden = false;
+  new IntersectionObserver(([e]) => {
+    // прячем, пока пульт виден, и пока страница ещё выше него
+    dock.classList.toggle('show', !e.isIntersecting && e.boundingClientRect.top < 0);
+  }, { rootMargin: '-8px 0px 0px 0px', threshold: 0 }).observe(desk);
 }
 
 /* ---------- поиск ---------- */
@@ -208,6 +224,8 @@ function initControls() {
     $(id).addEventListener('change', renderSearch);
   });
   $('reset').onclick = () => { FILTER.tier = null; render(); };
+  $('dockReset').onclick = () => { FILTER.tier = null; render(); };
+  initDock();
 }
 
 load();

@@ -202,3 +202,60 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 50px;
 .err{color:var(--peak);max-width:60ch;margin:0 auto;text-align:left;line-height:1.6}
 
 @media (prefers-reduced-motion:reduce){ *{transition:none!important;animation:none!important} }
+
+/* ============================================================
+   ПЛАВАЮЩИЙ ФИЛЬТР
+   Ступень шкалы перекрашивает всю страницу, но сам пульт стоит
+   наверху — долистав до середины, пришлось бы возвращаться.
+   Поэтому, когда пульт уходит из виду, появляется его компактный
+   дубль. Широкий экран: содержимое занимает 1180px по центру, по
+   бокам остаётся пустое поле — туда и уезжает. Узкий: полоса сверху.
+   ============================================================ */
+.dock{position:fixed;z-index:40;left:0;right:0;top:0;
+  background:rgba(13,13,15,.93);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  transform:translateY(-100%);transition:transform .18s ease}
+.dock.show{transform:none}
+.dock[hidden]{display:none}
+.dock-in{max-width:1180px;margin:0 auto;padding:7px 14px;
+  display:flex;align-items:center;gap:9px;overflow-x:auto;
+  scrollbar-width:none}
+.dock-in::-webkit-scrollbar{display:none}
+.dock-t{font-family:var(--m);font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--dim);flex:none}
+.dock-chips{display:flex;gap:6px;flex:none}
+.chip{display:flex;align-items:center;gap:6px;flex:none;
+  background:var(--panel);border:1px solid var(--line);border-radius:2px;
+  color:var(--dim);font-family:var(--m);font-size:11px;
+  padding:0 9px;min-height:34px;cursor:pointer;white-space:nowrap;
+  transition:border-color .12s,color .12s}
+.chip:hover{color:var(--ink);border-color:var(--brand)}
+.chip.on{color:var(--ink);border-color:var(--brand);background:var(--panel2)}
+.chip i{width:8px;height:8px;border-radius:1px;flex:none;
+  background:currentColor;font-style:normal}
+.chip b{font-weight:400;color:var(--dim);font-size:10px}
+.chip.on b{color:var(--brand-hi)}
+.dock-reset{flex:none;background:none;border:1px solid var(--line);
+  color:var(--dim);font-family:var(--m);font-size:11px;padding:0 11px;
+  min-height:34px;border-radius:2px;cursor:pointer}
+.dock-reset:hover{color:var(--brand-hi);border-color:var(--brand)}
+
+/* Широкий экран: уезжает в левое поле рядом с содержимым.
+   1180 контента + по 200 на панель и зазор с каждой стороны. */
+@media(min-width:1580px){
+  .dock{left:calc(50% - 590px - 208px);right:auto;top:24px;width:196px;
+    background:none;backdrop-filter:none;border:0;
+    transform:translateX(-14px);opacity:0;
+    transition:opacity .18s ease,transform .18s ease}
+  .dock.show{transform:none;opacity:1}
+  .dock-in{display:block;padding:0;overflow:visible;
+    background:var(--panel);border:1px solid var(--line);border-radius:3px}
+  .dock-t{display:block;padding:10px 12px 8px;
+    border-bottom:1px solid var(--line);background:var(--panel2)}
+  .dock-chips{display:block;padding:6px}
+  .chip{width:100%;justify-content:flex-start;margin:1px 0;
+    border-color:transparent;background:none;min-height:32px}
+  .chip.on{background:var(--panel2)}
+  .chip b{margin-left:auto}
+  .dock-reset{width:calc(100% - 12px);margin:0 6px 8px}
+}

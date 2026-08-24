@@ -23,6 +23,26 @@ function renderLadder() {
   });
 }
 
+/* ---------- плавающий дубль фильтра ----------
+   Те же ступени, что в пульте, но компактно. Показывается только
+   когда сам пульт уехал за верхнюю границу экрана — им занимается
+   наблюдатель в initDock(). */
+function renderDock() {
+  const m = group(ROWS, r => r.rate.tier);
+  $('dockChips').innerHTML = TIERS.map(t => {
+    const n = (m.get(t.key) || []).length;
+    const on = FILTER.tier === t.key;
+    return `<button class="chip${on ? ' on' : ''}" data-t="${esc(t.key)}"
+      aria-pressed="${on}" title="${esc(t.key)}: ${num(n)}">
+      <i style="color:${t.c}"></i>${esc(t.key)}<b>${num(n)}</b></button>`;
+  }).join('');
+  $('dockChips').querySelectorAll('.chip').forEach(b => b.onclick = () => {
+    FILTER.tier = FILTER.tier === b.dataset.t ? null : b.dataset.t;
+    render();
+  });
+  $('dockReset').hidden = !FILTER.tier;
+}
+
 /* ---------- метрики ---------- */
 function renderKpis(rows) {
   const arts  = new Set(rows.map(r => r.artistKey).filter(Boolean));

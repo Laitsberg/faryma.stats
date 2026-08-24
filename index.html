@@ -34,6 +34,16 @@
    </div>
   </div>
 
+  <!-- Компактный дубль фильтра. Появляется, когда «Шкала» уходит вверх:
+       на широком экране уезжает в левое поле, на узком липнет к верху. -->
+  <div id="dock" class="dock" hidden>
+   <div class="dock-in">
+    <span class="dock-t">шкала</span>
+    <div class="dock-chips" id="dockChips"></div>
+    <button id="dockReset" class="dock-reset" hidden>сбросить</button>
+   </div>
+  </div>
+
   <div class="kpis" id="kpis"></div>
 
   <section>
