@@ -28,7 +28,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 100
 
     steps:
       - uses: actions/checkout@v4
@@ -57,7 +57,10 @@ jobs:
           if [ "${{ github.event.inputs.retry_missing }}" = "true" ]; then
             EXTRA="--retry-missing"
           fi
-          node scripts/countries.mjs --limit "$LIMIT" $EXTRA
+          # --max-minutes держит шаг в рамках: скрипт останавливается сам,
+          # и накопленное успевает закоммититься. Кэш пишется по ходу,
+          # так что следующий запуск продолжит с того же места.
+          node scripts/countries.mjs --limit "$LIMIT" --max-minutes 80 $EXTRA
 
       - name: Закоммитить, если что-то изменилось
         run: |

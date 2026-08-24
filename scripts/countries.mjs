@@ -14,6 +14,7 @@
      node scripts/countries.mjs --limit 50       только 50 штук
      node scripts/countries.mjs --retry-missing  переспросить ненайденных
      node scripts/countries.mjs --min-tracks 2   пропустить одноразовых
+     node scripts/countries.mjs --max-minutes 50 остановиться по времени
 
    ============================================================ */
 
@@ -36,6 +37,10 @@ const OUT_PATH  = argVal('--out', path.join(ROOT, 'data', 'countries.json'));
 const LIMIT     = +argVal('--limit', Infinity);
 const MIN_TRACKS = +argVal('--min-tracks', 1);
 const RETRY_MISSING = hasFlag('--retry-missing');
+/* Ограничение по времени. Нужно, чтобы скрипт успел завершиться сам и
+   вызывающий воркфлоу успел закоммитить накопленное, а не был убит
+   по таймауту с потерей несохранённого. */
+const MAX_MS = +argVal('--max-minutes', Infinity) * 60000;
 const API_ROOT  = process.env.MB_API || 'https://musicbrainz.org/ws/2';
 
 /* MusicBrainz требует внятный User-Agent с контактом — иначе банит */
@@ -164,8 +169,14 @@ if (!todo.length) { console.log('нечего докачивать'); process.ex
 const eta = Math.round(todo.length * DELAY_MS / 60000);
 console.log(`примерно ${eta} мин при одном запросе в секунду\n`);
 
-let done = 0, found = 0, failed = 0;
+const startedAt = Date.now();
+let done = 0, found = 0, failed = 0, ranOut = false;
 for (const a of todo) {
+  if (Date.now() - startedAt > MAX_MS) {
+    ranOut = true;
+    console.log(`\nвремя вышло (${Math.round(MAX_MS / 60000)} мин), останавливаюсь на ${done}/${todo.length}`);
+    break;
+  }
   try {
     const r = await fetchArtist(queryName(a.name));
     cache.artists[a.key] = { name: a.name, tracks: a.n, ...r };
@@ -187,3 +198,5 @@ saveCache(cache);
 const withCountry = Object.values(cache.artists).filter(x => x.country).length;
 console.log(`\nготово: спрошено ${done}, страна нашлась у ${found}`);
 console.log(`всего в кэше ${Object.keys(cache.artists).length}, из них со страной ${withCountry}`);
+const left = artists.length - Object.keys(cache.artists).length;
+if (ranOut || left > 0) console.log(`осталось спросить ${left} — следующий запуск продолжит`);
