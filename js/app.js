@@ -217,20 +217,20 @@ function renderSearch() {
     }));
 
   table('tSearch', [
-    { k: 'artist', t: 'исполнитель', lead: 1 },
-    { k: 'title',  t: 'трек', f: r => r.link
+    { k: 'artist', t: 'исполнитель', lead: 1, w: '16%' },
+    { k: 'title',  t: 'трек', w: '24%', f: r => r.link
         ? `<a class="tlink" href="${esc(r.link.url)}" target="_blank" rel="noopener noreferrer">${esc(r.title)}</a><span class="plat">${esc(r.link.platform)}</span>`
         : esc(r.title) },
-    { k: 'label',  t: 'оценка', mono: 1, sortK: 'score', f: r => ratePill(r.label) },
-    { k: 'user',   t: 'заказчик', mono: 1 },
-    { k: 'genre',  t: 'жанр' },
+    { k: 'label',  t: 'оценка', mono: 1, sortK: 'score', w: '11%', f: r => ratePill(r.label) },
+    { k: 'user',   t: 'заказчик', mono: 1, w: '12%' },
+    { k: 'genre',  t: 'жанр', w: '12%' },
     // «Откуда» стоит рядом с жанром, а не между исполнителем и треком:
     // источник известен у 44% строк, и посередине он рвал бы главную
     // пару колонок дырой на каждой второй строке.
-    { k: 'source', t: 'откуда',
+    { k: 'source', t: 'откуда', w: '15%',
       f: r => r.source ? esc(r.source)
             : (r.origin ? `<span class="plat">${esc(r.origin.toLowerCase())}</span>` : '') },
-    { k: 'when',   t: 'когда', mono: 1, f: r => {
+    { k: 'when',   t: 'когда', mono: 1, w: '10%', f: r => {
         if (!r.when) return '—';
         const d = new Date(r.when).toLocaleDateString('ru-RU');
         // номер стрима ведёт прямо на момент разноса в записи

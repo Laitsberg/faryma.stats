@@ -173,7 +173,17 @@ function table(elId, cols, rows, defaultSort, limit) {
   });
   const shown = limit ? sorted.slice(0, limit) : sorted;
 
-  const head = '<thead><tr>' + cols.map(c =>
+  // Ширины колонок задаются долями, а таблица переводится в режим
+  // фиксированной раскладки. Без этого браузер раздаёт ширину по
+  // содержимому: одно длинное название трека растягивает свою колонку,
+  // таблица вылезает за рамку и внизу появляется горизонтальная
+  // прокрутка, а правые колонки уезжают за край.
+  const widths = cols.every(c => c.w)
+    ? '<colgroup>' + cols.map(c => `<col style="width:${c.w}">`).join('') + '</colgroup>'
+    : '';
+  t.classList.toggle('fixed', !!widths);
+
+  const head = widths + '<thead><tr>' + cols.map(c =>
     `<th data-k="${esc(c.k)}" class="${c.num ? 'num' : ''}">${esc(c.t)}${
       sk === c.k ? (dir > 0 ? ' ↑' : ' ↓') : ''}</th>`).join('') + '</tr></thead>';
 

@@ -125,6 +125,10 @@ section{margin:44px 0}
 
 /* ---------- таблицы ---------- */
 table{width:100%;border-collapse:collapse;font-size:13px}
+table.fixed{table-layout:fixed}
+/* Длинное название без пробелов (ссылка, склеенное слово) иначе
+   распирает ячейку изнутри даже при фиксированной ширине */
+td{overflow-wrap:anywhere}
 th{font-family:var(--m);font-size:10px;letter-spacing:.12em;text-transform:uppercase;
   color:var(--dim);text-align:left;padding:11px 10px;
   cursor:pointer;user-select:none;white-space:nowrap;

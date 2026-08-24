@@ -92,9 +92,19 @@ function parseWhat(s) {
 function parseSource(what) {
   const m = String(what || '').match(/\[([^\]]+)\]/);
   if (!m) return '';
-  return m[1]
-    .replace(/^\s*OST\s*[;:]\s*/i, '')
-    .replace(/^\s*\d+(?:\/\d+)?\s+(?:Opening|Ending|OP|ED|Insert(?:\s+Song)?|Theme)\s+/i, '')
+  let t = m[1];
+
+  // Перед названием стоят пометки о типе трека, иногда несколько подряд:
+  // «OST; Final Fantasy», «ep 9; OST; Love Live!», «VN; Umineko».
+  // Срезаем их по одной, пока начало не окажется собственно названием.
+  const MARKER = /^\s*(?:OST|VN|UTA\s+OST|Character\s+Song|Main\s+Theme|Insert(?:\s+Song)?|Theme|ep\.?\s*\d+|\d+(?:\/\d+)?\s+(?:Opening|Ending|OP|ED))\s*[;:]\s*/i;
+  let guard = 6;
+  while (guard-- && MARKER.test(t)) t = t.replace(MARKER, '');
+
+  // Форма без точки с запятой: «1 Opening Durarara!!»
+  t = t.replace(/^\s*\d+(?:\/\d+)?\s+(?:Opening|Ending|OP|ED|Insert(?:\s+Song)?|Theme)\s+/i, '');
+
+  return t
     .split('/')[0]
     // хвостовое «OST» в колонке «откуда» ничего не добавляет, зато
     // разводит «Genshin Impact» и «Genshin Impact OST» по разным строкам
