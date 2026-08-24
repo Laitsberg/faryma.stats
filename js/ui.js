@@ -156,11 +156,18 @@ function table(elId, cols, rows, defaultSort, limit) {
   const sk = t.dataset.sort;
   const dir = t.dataset.dir === 'asc' ? 1 : -1;
 
+  // Колонка может показывать одно, а сортироваться по другому. Оценка
+  // выводится подписью («атлична - -»), но сравнивать её как текст
+  // нельзя: по алфавиту «атлична» встаёт выше «хорошечно», хотя это
+  // разные концы шкалы. У таких колонок есть sortK с числом.
+  const col = cols.find(c => c.k === sk);
+  const key = (col && col.sortK) || sk;
+
   // Сортируем ВЕСЬ набор и только потом обрезаем. Если резать раньше,
   // сортировка переставляет лишь первые строки, а таблица при этом
   // уверяет, что показывает весь архив.
   const sorted = [...rows].sort((a, b) => {
-    const x = a[sk], y = b[sk];
+    const x = a[key], y = b[key];
     if (typeof x === 'number' && typeof y === 'number') return (x - y) * dir;
     return String(x).localeCompare(String(y), 'ru') * dir;
   });
@@ -180,11 +187,23 @@ function table(elId, cols, rows, defaultSort, limit) {
   t.innerHTML = head + body;
   capRows(t, elId, cols, rows, defaultSort, limit);
 
-  t.querySelectorAll('th').forEach(th => th.onclick = () => {
-    if (t.dataset.sort === th.dataset.k) t.dataset.dir = t.dataset.dir === 'asc' ? 'desc' : 'asc';
-    else { t.dataset.sort = th.dataset.k; t.dataset.dir = 'desc'; }
-    table(elId, cols, rows, defaultSort, limit);
-  });
+  // Обработчик висит на самой таблице, а не на каждом заголовке.
+  // table() заменяет innerHTML целиком, и если между нажатием и
+  // отпусканием кнопки успевает пройти перерисовка, старый <th>
+  // исчезает вместе со своим onclick и клик пропадает. Таблица же
+  // переживает перерисовку, поэтому до неё событие доходит всегда.
+  t._args = { elId, cols, rows, defaultSort, limit };
+  if (!t.dataset.bound) {
+    t.dataset.bound = '1';
+    t.addEventListener('click', e => {
+      const th = e.target.closest('th');
+      if (!th || !t.contains(th) || !th.dataset.k) return;
+      if (t.dataset.sort === th.dataset.k) t.dataset.dir = t.dataset.dir === 'asc' ? 'desc' : 'asc';
+      else { t.dataset.sort = th.dataset.k; t.dataset.dir = 'desc'; }
+      const a = t._args;
+      table(a.elId, a.cols, a.rows, a.defaultSort, a.limit);
+    });
+  }
 
   buildSortbar(t, cols, elId, rows, defaultSort, limit);
 }

@@ -179,14 +179,17 @@ function renderUsers(rows) {
     avg: +avg(rs.map(r => r.rate.score)).toFixed(2),
     gen: rs.filter(r => r.rate.label === 'гениально').length,
     genfam: rs.filter(r => r.rate.tier === 'гениально').length,
-    best: SCALE_ORDER[Math.min(...rs.map(r => SCALE_ORDER.indexOf(r.rate.label)))] || '—'
+    best: SCALE_ORDER[Math.min(...rs.map(r => SCALE_ORDER.indexOf(r.rate.label)))] || '—',
+    // балл лучшего результата — по нему и сортируем, подпись только показываем
+    bestScore: Math.max(...rs.map(r => r.rate.score))
   })).filter(x => x.n >= MIN_N.user);
   table('tUsers',
     [{ k: 'u', t: 'заказчик', lead: 1 }, { k: 'n', t: 'принёс', num: 1 },
      { k: 'avg', t: 'ср. балл', num: 1, f: r => f2(r.avg) },
      { k: 'genfam', t: 'в гениально', num: 1 }, { k: 'gen', t: 'чистых', num: 1 },
      // та же плашка, что в поиске: цвет ступени читается быстрее текста
-     { k: 'best', t: 'лучший результат', mono: 1, f: r => ratePill(r.best) }],
+     { k: 'best', t: 'лучший результат', mono: 1, sortK: 'bestScore',
+       f: r => ratePill(r.best) }],
     data.sort((x, y) => y.n - x.n), 'n');
 }
 

@@ -208,7 +208,7 @@ function renderSearch() {
   const view = rows
     .map(r => ({
       artist: r.artist || '—', title: r.title,
-      label: r.rate.label, color: r.rate.color,
+      label: r.rate.label, color: r.rate.color, score: r.rate.score,
       user: r.user || '—', genre: r.genres.join(' / '),
       source: r.source, origin: r.origin,
       link: r.link, feature: r.feature,
@@ -221,7 +221,7 @@ function renderSearch() {
     { k: 'title',  t: 'трек', f: r => r.link
         ? `<a class="tlink" href="${esc(r.link.url)}" target="_blank" rel="noopener noreferrer">${esc(r.title)}</a><span class="plat">${esc(r.link.platform)}</span>`
         : esc(r.title) },
-    { k: 'label',  t: 'оценка', mono: 1, f: r => ratePill(r.label) },
+    { k: 'label',  t: 'оценка', mono: 1, sortK: 'score', f: r => ratePill(r.label) },
     { k: 'user',   t: 'заказчик', mono: 1 },
     { k: 'genre',  t: 'жанр' },
     // «Откуда» стоит рядом с жанром, а не между исполнителем и треком:
@@ -267,10 +267,12 @@ function initControls() {
     .sort((a, b) => b[1].length - a[1].length)
     .forEach(([g, rs]) => gg.add(new Option(`${g} (${rs.length})`, g)));
 
-  ['q', 'fRate', 'fUser', 'fOrigin', 'fGenre'].forEach(id => {
-    $(id).addEventListener('input', renderSearch);
-    $(id).addEventListener('change', renderSearch);
-  });
+  // Только 'input'. У текстового поля 'change' срабатывает при потере
+  // фокуса — то есть ровно в тот момент, когда пользователь кликает
+  // куда-то ещё, например по заголовку таблицы. Лишняя перерисовка
+  // съедала этот клик. Списки 'input' тоже отправляют.
+  ['q', 'fRate', 'fUser', 'fOrigin', 'fGenre'].forEach(id =>
+    $(id).addEventListener('input', renderSearch));
   $('reset').onclick = () => { FILTER.tier = null; render(); };
   $('dockReset').onclick = () => { FILTER.tier = null; render(); };
   initDock();
