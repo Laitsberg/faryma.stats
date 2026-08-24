@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Композитор разносит — статистика</title>
+<meta name="description" content="Статистика по архиву стрима «композитор разносит»: оценки, исполнители, заказчики, жанры.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Golos+Text:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+ <div class="wrap head">
+  <div class="eyebrow">Архив стрима</div>
+  <h1>Композитор <em>разносит</em></h1>
+  <p class="sub">Что происходило с треками, которые приносили на разбор. Всё, что ниже, посчитано по таблице разносов и обновляется вместе с ней.</p>
+  <div class="stamp">Источник: <b id="src">—</b> · разносов в архиве: <b id="total">—</b> · собрано <b id="upd">—</b></div>
+ </div>
+</header>
+
+<div class="wrap">
+ <div id="boot" class="loading">Читаю таблицу…</div>
+ <div id="app" style="display:none">
+
+  <div class="desk">
+   <div class="desk-hd"><h2>Шкала</h2><span>нажми на ступень — отфильтруется вся страница</span></div>
+   <div class="ladder" id="ladder"></div>
+   <div class="deskfoot">
+     <span id="filterState">фильтр не задан</span>
+     <button id="reset">сбросить</button>
+   </div>
+  </div>
+
+  <div class="kpis" id="kpis"></div>
+
+  <section>
+   <div class="shd"><span class="ch">01</span><h2>Как распределяются оценки</h2></div>
+   <p class="note">Полная шкала, от кринж-контента до гениально. Модификаторы «+» и «−» учтены отдельно.</p>
+   <div class="card"><div class="chartbox"><canvas id="cScale"></canvas></div></div>
+  </section>
+
+  <section>
+   <div class="shd"><span class="ch">02</span><h2>Строже ли он стал</h2></div>
+   <p class="note">В таблице нет дат, поэтому по горизонтали — порядок разносов от первого к последнему. Линия — скользящее среднее по 150 трекам.</p>
+   <div class="card"><div class="chartbox"><canvas id="cTrend"></canvas></div></div>
+  </section>
+
+  <section>
+   <div class="shd"><span class="ch">03</span><h2>Исполнители</h2></div>
+   <p class="note">Написание склеено: «HOYO-MiX» и «HOYO-MIX» считаются одним исполнителем.</p>
+   <div class="grid2">
+    <div class="card">
+     <h3>Кого приносят чаще всего</h3>
+     <div class="cap">по числу разносов</div>
+     <div class="sortbar"></div>
+     <div class="scroll"><table id="tArtCount"></table></div>
+    </div>
+    <div class="card">
+     <h3>Кого он оценивает выше всего</h3>
+     <div class="cap">средний балл, минимум 4 разноса</div>
+     <div class="sortbar"></div>
+     <div class="scroll"><table id="tArtAvg"></table></div>
+    </div>
+   </div>
+  </section>
+
+  <section>
+   <div class="shd"><span class="ch">04</span><h2>Заказчики</h2></div>
+   <p class="note">Кто сколько принёс и насколько хорошо у него получается попадать. Минимум 5 треков.</p>
+   <div class="card">
+    <div class="sortbar"></div>
+    <div class="scroll"><table id="tUsers"></table></div>
+   </div>
+  </section>
+
+  <section>
+   <div class="shd"><span class="ch">05</span><h2>Жанры</h2></div>
+   <p class="note">Слева — сколько раз приносили, справа — какой средний балл получается. Жанры, встречающиеся реже 15 раз, отброшены.</p>
+   <div class="grid2">
+    <div class="card"><h3>Объём</h3><div class="cap">число разносов</div><div class="chartbox"><canvas id="cGenreN"></canvas></div></div>
+    <div class="card"><h3>Средний балл</h3><div class="cap">по десятибалльной шкале</div><div class="chartbox"><canvas id="cGenreAvg"></canvas></div></div>
+   </div>
+  </section>
+
+  <section>
+   <div class="shd"><span class="ch">06</span><h2>Откуда трек</h2></div>
+   <p class="note">Колонка «Откуда» заполнена не везде — здесь только те строки, где она есть.</p>
+   <div class="grid2">
+    <div class="card"><h3>Источник</h3><div class="cap">аниме, игра, фильм</div><div class="chartbox"><canvas id="cOrigin"></canvas></div></div>
+    <div class="card"><h3>Средний балл</h3><div class="cap">меняется ли отношение</div><div class="chartbox"><canvas id="cOriginAvg"></canvas></div></div>
+   </div>
+  </section>
+
+  <section>
+   <div class="shd"><span class="ch">07</span><h2>Письменность</h2></div>
+   <p class="note">Определяется по названию: кана и иероглифы — японское, хангыль — корейское, кириллица — русскоязычное. Латиница остаётся общей кучей, так что это приближение. Настоящие страны исполнителей приедут отдельным разделом, когда отработает скрипт по MusicBrainz.</p>
+   <div class="grid2">
+    <div class="card"><h3>Сколько приносят</h3><div class="cap">по письменности названия</div><div class="chartbox"><canvas id="cLangN"></canvas></div></div>
+    <div class="card"><h3>Средний балл</h3><div class="cap">по письменности названия</div><div class="chartbox"><canvas id="cLangAvg"></canvas></div></div>
+   </div>
+  </section>
+
+  <section>
+   <div class="shd"><span class="ch">08</span><h2>Как трек попал в очередь</h2></div>
+   <p class="note">Донат, долг, заказ, очередь. Проверка на то, влияет ли способ попадания на итоговую оценку.</p>
+   <div class="grid2">
+    <div class="card"><h3>Объём</h3><div class="cap">число разносов</div><div class="chartbox"><canvas id="cType"></canvas></div></div>
+    <div class="card"><h3>Средний балл</h3><div class="cap">по десятибалльной шкале</div><div class="chartbox"><canvas id="cTypeAvg"></canvas></div></div>
+   </div>
+  </section>
+
+  <section>
+   <div class="shd"><span class="ch">09</span><h2>Время внутри эфира</h2></div>
+   <p class="note">Тайм-код разноса относительно начала стрима. Проверка на то, добреет он к концу или устаёт. <span id="hourNote"></span></p>
+   <div class="card"><div class="chartbox"><canvas id="cHour"></canvas></div></div>
+  </section>
+
+  <section>
+   <div class="shd"><span class="ch">10</span><h2>Тэги</h2></div>
+   <p class="note">Проставлены редко, поэтому цифры показательны только для крупных тэгов.</p>
+   <div class="grid2">
+    <div class="card"><h3>Объём</h3><div class="cap">число разносов</div><div class="chartbox"><canvas id="cTagN"></canvas></div></div>
+    <div class="card"><h3>Средний балл</h3><div class="cap">по десятибалльной шкале</div><div class="chartbox"><canvas id="cTagAvg"></canvas></div></div>
+   </div>
+  </section>
+
+  <section>
+   <div class="shd"><span class="ch">11</span><h2>Откуда приносят ссылки</h2></div>
+   <p class="note">С какой площадки взят трек — по ссылке из колонки «Где».</p>
+   <div class="grid2">
+    <div class="card"><h3>Объём</h3><div class="cap">число разносов</div><div class="chartbox"><canvas id="cPlatN"></canvas></div></div>
+    <div class="card"><h3>Средний балл</h3><div class="cap">по десятибалльной шкале</div><div class="chartbox"><canvas id="cPlatAvg"></canvas></div></div>
+   </div>
+  </section>
+
+  <section>
+   <div class="shd"><span class="ch">12</span><h2>Поиск по архиву</h2></div>
+   <p class="note">Прежде чем нести трек — проверь, не разносили ли его. Название кликабельно: ведёт туда, откуда трек приносили.</p>
+   <div class="search">
+    <input id="q" type="search" placeholder="исполнитель, трек или заказчик" autocomplete="off">
+    <select id="fRate"><option value="">любая оценка</option></select>
+    <select id="fUser"><option value="">любой заказчик</option></select>
+   </div>
+   <div class="card">
+    <div class="sortbar"></div>
+    <div class="scroll"><table id="tSearch"></table></div>
+    <div class="cap" id="searchCount" style="margin:10px 0 0"></div>
+   </div>
+  </section>
+
+ </div>
+</div>
+
+<footer><div class="wrap">
+ Данные — таблица разносов «композитор разносит». Считает браузер, ничего никуда не отправляется.
+</div></footer>
+
+<script src="vendor/papaparse.min.js"></script>
+<script src="vendor/chart.umd.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/parse.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/sections.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

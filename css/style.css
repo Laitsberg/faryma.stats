@@ -1,0 +1,179 @@
+/* ============================================================
+   Композитор разносит — статистика
+   Порядок: переменные → каркас → шапка → пульт → метрики
+            → секции → графики → таблицы → поиск → подвал
+   ============================================================ */
+
+:root{
+  --bg:#12100E; --panel:#1A1714; --panel2:#221E1A; --line:#2E2925;
+  --amber:#F0A02A; --peak:#E5484D; --patch:#4CC3C9; --dim:#8C837A;
+  --ink:#EDE7E0;
+  --d:'Unbounded',system-ui,-apple-system,sans-serif;
+  --b:'Golos Text',system-ui,-apple-system,sans-serif;
+  --m:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --tap:44px;               /* минимальная цель для пальца */
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg); color:var(--ink); font-family:var(--b);
+  font-size:15px; line-height:1.55; -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;         /* страница не ездит вбок ни при каких условиях */
+}
+a{color:var(--amber)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+@media(max-width:560px){ .wrap{padding:0 14px} }
+
+/* ---------- шапка ---------- */
+header{border-bottom:1px solid var(--line);
+  background:linear-gradient(180deg,#171410 0%,var(--bg) 100%)}
+.head{padding:38px 0 30px}
+@media(max-width:560px){ .head{padding:24px 0 20px} }
+.eyebrow{font-family:var(--m);font-size:11px;letter-spacing:.22em;
+  color:var(--dim);text-transform:uppercase}
+h1{font-family:var(--d);font-weight:800;font-size:clamp(28px,5.4vw,52px);
+  line-height:1.02;margin:12px 0 6px;letter-spacing:-.02em}
+h1 em{font-style:normal;color:var(--amber)}
+.sub{color:var(--dim);max-width:56ch;margin:0}
+.stamp{font-family:var(--m);font-size:11px;color:var(--dim);margin-top:14px}
+.stamp b{color:var(--amber);font-weight:600}
+
+/* ---------- пульт (шкала-фильтр) ---------- */
+.desk{margin:26px 0 6px;border:1px solid var(--line);border-radius:3px;
+  background:var(--panel);overflow:hidden}
+.desk-hd{display:flex;justify-content:space-between;align-items:baseline;
+  gap:16px;flex-wrap:wrap;                     /* ← без gap заголовок слипался с подсказкой */
+  padding:12px 16px;border-bottom:1px solid var(--line);background:var(--panel2)}
+.desk-hd h2{font-family:var(--d);font-size:13px;font-weight:600;margin:0;letter-spacing:.04em}
+.desk-hd span{font-family:var(--m);font-size:11px;color:var(--dim)}
+@media(max-width:560px){
+  .desk-hd{gap:4px}
+  .desk-hd span{flex-basis:100%}               /* подсказка уходит на свою строку */
+}
+
+.ladder{padding:8px 0}
+.rung{display:grid;grid-template-columns:132px 1fr 62px;align-items:center;
+  gap:12px;padding:0 16px;min-height:var(--tap);cursor:pointer;border:0;
+  background:none;width:100%;text-align:left;color:inherit;font:inherit;
+  transition:background .12s}
+@media(max-width:560px){ .rung{grid-template-columns:110px 1fr 48px;gap:8px;padding:0 12px} }
+.rung:hover{background:#241F1A}
+.rung.on{background:#2A231B}
+.rung .nm{font-family:var(--m);font-size:12px;color:var(--dim);letter-spacing:.02em}
+@media(max-width:560px){ .rung .nm{font-size:11px} }
+.rung.on .nm{color:var(--ink)}
+.rung .track{height:13px;background:#191512;border:1px solid #262019;
+  position:relative;border-radius:1px}
+.rung .fill{position:absolute;top:1px;bottom:1px;left:1px;border-radius:1px;
+  min-width:3px}                               /* ← иначе «кринж-контент» (55 шт.) исчезал */
+.rung .val{font-family:var(--m);font-size:12px;text-align:right;color:var(--dim)}
+.rung.on .val{color:var(--amber)}
+
+.deskfoot{padding:8px 16px;border-top:1px solid var(--line);font-family:var(--m);
+  font-size:11px;color:var(--dim);display:flex;justify-content:space-between;
+  align-items:center;gap:12px;flex-wrap:wrap;min-height:var(--tap)}
+.deskfoot button{background:none;border:1px solid var(--line);color:var(--dim);
+  font:inherit;padding:8px 14px;border-radius:2px;cursor:pointer;min-height:var(--tap)}
+.deskfoot button:hover{color:var(--amber);border-color:var(--amber)}
+
+/* ---------- метрики ---------- */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:1px;background:var(--line);border:1px solid var(--line);margin:26px 0}
+@media(max-width:560px){ .kpis{grid-template-columns:1fr 1fr} }
+.kpi{background:var(--panel);padding:16px 18px}
+@media(max-width:560px){ .kpi{padding:13px 14px} }
+.kpi .n{font-family:var(--d);font-size:clamp(22px,5vw,30px);font-weight:800;
+  line-height:1;letter-spacing:-.02em}
+.kpi .l{font-family:var(--m);font-size:10px;letter-spacing:.14em;color:var(--dim);
+  text-transform:uppercase;margin-top:7px}
+
+/* ---------- секции ---------- */
+section{margin:44px 0}
+@media(max-width:560px){ section{margin:32px 0} }
+.shd{display:flex;align-items:baseline;gap:12px;margin-bottom:4px;
+  border-bottom:1px solid var(--line);padding-bottom:9px}
+.shd h2{font-family:var(--d);font-size:16px;font-weight:600;margin:0;letter-spacing:-.01em}
+.shd .ch{font-family:var(--m);font-size:11px;color:var(--amber);letter-spacing:.1em}
+.note{color:var(--dim);font-size:13px;margin:10px 0 16px;max-width:70ch}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:820px){ .grid2{grid-template-columns:1fr} }
+.card{background:var(--panel);border:1px solid var(--line);border-radius:3px;
+  padding:14px 16px 18px}
+@media(max-width:560px){ .card{padding:12px 12px 14px} }
+.card h3{font-family:var(--b);font-size:13px;font-weight:600;margin:0 0 2px;color:var(--ink)}
+.card .cap{font-family:var(--m);font-size:11px;color:var(--dim);margin-bottom:12px}
+
+/* ---------- графики ----------
+   Высота задаётся из скрипта под число делений: у шкалы их 26,
+   в фиксированные 420px Chart.js прятал каждую вторую подпись. */
+.chartbox{position:relative;height:290px}
+.chartbox.tall{height:420px}
+
+/* ---------- таблицы ---------- */
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{font-family:var(--m);font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--dim);text-align:left;padding:11px 10px;border-bottom:1px solid var(--line);
+  cursor:pointer;user-select:none;white-space:nowrap}
+th:hover{color:var(--amber)}
+th.num,td.num{text-align:right}
+td{padding:9px 10px;border-bottom:1px solid #201C18;vertical-align:top}
+tr:hover td{background:#1F1B17}
+td.mono{font-family:var(--m);font-size:12px}
+.scroll{max-height:460px;overflow-y:auto;overflow-x:auto}
+.scroll::-webkit-scrollbar{width:9px}
+.scroll::-webkit-scrollbar-thumb{background:#2E2925;border-radius:5px}
+.pill{display:inline-block;font-family:var(--m);font-size:10px;padding:2px 7px;
+  border-radius:2px;border:1px solid currentColor;white-space:nowrap}
+.tlink{color:var(--amber);text-decoration:none;border-bottom:1px solid rgba(240,160,42,.3)}
+.tlink:hover{border-bottom-color:var(--amber)}
+.plat{font-family:var(--m);font-size:10px;color:var(--dim);margin-left:6px;white-space:nowrap}
+
+/* Сортировка списком — заменяет клик по заголовку там, где
+   таблица превратилась в карточки и заголовков не видно. */
+.sortbar{display:none;gap:8px;align-items:center;margin-bottom:10px;
+  font-family:var(--m);font-size:11px;color:var(--dim)}
+.sortbar select{flex:1;min-height:var(--tap);background:var(--panel2);
+  border:1px solid var(--line);color:var(--ink);font-family:var(--b);
+  font-size:16px;padding:8px 10px;border-radius:2px}
+
+/* Таблицы на узком экране становятся карточками.
+   Раньше они просто уезжали за край: таблица поиска была
+   994px шириной в контейнере на 316px. */
+@media(max-width:820px){
+  table.cards, table.cards tbody, table.cards tr, table.cards td{display:block;width:100%}
+  table.cards thead{display:none}
+  table.cards tr{border-bottom:1px solid var(--line);padding:11px 2px}
+  table.cards tr:last-child{border-bottom:0}
+  table.cards tr:hover td{background:none}
+  table.cards td{border:0;padding:2px 0;text-align:left}
+  table.cards td.num{text-align:left}
+  table.cards td[data-label]::before{
+    content:attr(data-label) " ";
+    font-family:var(--m);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--dim);margin-right:7px}
+  table.cards td.lead{font-size:15px;font-weight:600;padding-bottom:5px}
+  table.cards td.lead::before{display:none}
+  table.cards td.empty{display:none}          /* без значения — без подписи */
+  /* сортировка кликом по заголовку недоступна — заголовков нет,
+     поэтому на мобильном её заменяет отдельный выпадающий список */
+  .sortbar{display:flex}
+}
+
+/* ---------- поиск ---------- */
+.search{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.search input,.search select{
+  background:var(--panel2);border:1px solid var(--line);color:var(--ink);
+  font-family:var(--b);font-size:16px;         /* 16px — иначе iOS зумит страницу при фокусе */
+  padding:10px 11px;border-radius:2px;min-height:var(--tap)}
+.search input{flex:1;min-width:200px}
+.search input:focus,.search select:focus{outline:2px solid var(--amber);outline-offset:-1px}
+@media(max-width:560px){ .search{flex-direction:column;gap:8px} }
+
+footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 50px;
+  color:var(--dim);font-size:12px;font-family:var(--m)}
+.loading{padding:70px 0;text-align:center;color:var(--dim);
+  font-family:var(--m);font-size:13px}
+.err{color:var(--peak);max-width:60ch;margin:0 auto;text-align:left;line-height:1.6}
+
+@media (prefers-reduced-motion:reduce){ *{transition:none!important;animation:none!important} }
