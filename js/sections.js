@@ -286,6 +286,101 @@ function pairCharts(idN, idAvg, items, limit) {
   hbar(idAvg, byA.map(x => ({ k: x.k, v: x.avg })), C.patch, 10);
 }
 
+/* ---------- менял ли он мнение ----------
+   Повтор помечен прямо в названии: «(ПОВТОР: СТРИМ №113; 1 трек от
+   Hantrik)». По номеру стрима и номеру трека находим исходный разнос
+   и сравниваем оценки. Совпало 27 пар из 35 помеченных: у остальных
+   ссылка ведёт в стрим, которого в архиве нет. */
+function repeatPairs() {
+  const RE = /ПОВТОР:\s*СТРИМ\s*№\s*(\d+)\s*;\s*(\d+)\s*трек/i;
+  const out = [];
+  ROWS.forEach(r => {
+    const m = (r.full || '').match(RE);
+    if (!m) return;
+    const src = ROWS.find(x => x.streamNum === +m[1] && x.pos === +m[2]);
+    if (!src || src === r) return;
+    out.push({ src, again: r, d: r.rate.score - src.rate.score,
+               days: src.date && r.date ? Math.round((r.date - src.date) / 864e5) : null });
+  });
+  return out;
+}
+
+/* В названии повтора болтается служебная пометка — в таблице она лишняя */
+const dropRepeatMark = t =>
+  String(t || '').replace(/\s*\(ПОВТОР:[^)]*\)\s*/i, ' ').trim();
+
+function renderRepeats() {
+  const pairs = repeatPairs();
+  if (pairs.length < 5) { $('secRepeat').style.display = 'none'; return; }
+  $('secRepeat').style.display = '';
+
+  const up = pairs.filter(x => x.d > 0).length;
+  const down = pairs.filter(x => x.d < 0).length;
+  const same = pairs.length - up - down;
+  const avg = pairs.reduce((a, x) => a + x.d, 0) / pairs.length;
+
+  $('repNote').textContent =
+    `${num(pairs.length)} ` + plural(pairs.length, 'трек', 'трека', 'треков') +
+    ` приносили дважды. Выше — ${up}, ниже — ${down}, ровно так же — ${same}; ` +
+    `в среднем на повторе ${avg >= 0 ? '+' : ''}${f2(avg)} балла.`;
+
+  table('tRepeat',
+    [{ k: 'name', t: 'трек', lead: 1, w: '34%',
+       f: r => artistNames(r.artist) + ' — ' + esc(r.title) },
+     { k: 'was', t: 'было', mono: 1, w: '15%', sortK: 'wasScore', f: r => ratePill(r.was) },
+     { k: 'now', t: 'стало', mono: 1, w: '15%', sortK: 'nowScore', f: r => ratePill(r.now) },
+     { k: 'd', t: 'разница', num: 1, w: '12%',
+       f: r => `<b style="color:${r.d > 0 ? C.patch : r.d < 0 ? C.peak : 'inherit'}">` +
+               `${r.d > 0 ? '+' : ''}${f2(r.d)}</b>` },
+     { k: 'when', t: 'между', mono: 1, w: '24%',
+       f: r => `<a class="pf-link nowrap" href="#stream=${r.s1}" data-stream="${r.s1}">№${r.s1}</a>` +
+               ` <span class="sep">→</span> ` +
+               `<a class="pf-link nowrap" href="#stream=${r.s2}" data-stream="${r.s2}">№${r.s2}</a>` +
+               (r.days != null ? ` <span class="plat">${num(r.days)} дн.</span>` : '') }],
+    pairs.map(x => ({
+      artist: x.again.artist, title: dropRepeatMark(x.again.title),
+      name: x.again.artist + ' — ' + dropRepeatMark(x.again.title),
+      was: x.src.rate.label, now: x.again.rate.label,
+      wasScore: x.src.rate.score, nowScore: x.again.rate.score,
+      d: +x.d.toFixed(1), s1: x.src.streamNum, s2: x.again.streamNum, days: x.days
+    })).sort((a, b) => Math.abs(b.d) - Math.abs(a.d)), 'd');
+}
+
+/* ---------- откуда трек родом ----------
+   В квадратных скобках названия лежит источник: игра, аниме, фильм.
+   Раздел «Откуда трек» говорит только тип, а здесь — конкретные
+   вселенные: Genshin Impact, Chainsaw Man, Смешарики. */
+function renderUniverses(rows) {
+  pairCharts('cSrcN', 'cSrcAvg',
+    summarize(rows, r => r.source || null, MIN_N.source), 16);
+}
+
+/* ---------- оценки вне шкалы ----------
+   Раз в сто разносов композитор выдаёт что-то своё вместо ступени.
+   В статистику это не пустить, но и терять жалко. */
+function renderOffscale() {
+  if (!OFFSCALE.length) { $('secOff').style.display = 'none'; return; }
+  $('secOff').style.display = '';
+  $('offNote').textContent =
+    `${num(OFFSCALE.length)} ` + plural(OFFSCALE.length, 'раз', 'раза', 'раз') +
+    ` за всю историю архива. В графики они не идут: ступени у них нет.`;
+
+  $('offList').innerHTML = [...OFFSCALE].reverse().map(o => {
+    const name = (o.artist ? artistNames(o.artist) + ' — ' : '') + esc(o.title);
+    const link = o.moment
+      ? ` <a class="mom" href="${esc(o.moment)}" target="_blank" rel="noopener noreferrer">▶ разнос</a>`
+      : '';
+    const when = o.date ? o.date.toLocaleDateString('ru-RU') : '';
+    return `<div class="off-row">
+      <div class="off-r">${esc(o.raw)}</div>
+      <div class="off-t">${name}</div>
+      <div class="off-d">${esc(when)}` +
+      (o.streamNum ? ` <a class="pf-link nowrap" href="#stream=${o.streamNum}" data-stream="${o.streamNum}">стрим №${o.streamNum}</a>` : '') +
+      `${link}</div>
+    </div>`;
+  }).join('');
+}
+
 /* ---------- 05. жанры ---------- */
 function renderGenres(rows) {
   pairCharts('cGenreN', 'cGenreAvg',

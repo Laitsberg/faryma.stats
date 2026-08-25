@@ -12,6 +12,7 @@ let STREAMS = [];              // разделители стримов: ном�
 let COUNTRIES = {};            // артист → страна, из data/countries.json
 let SOLO_KEYS = new Set();     // кто хоть раз выступал один — нужен при разбиении имён
 let NAME_ALIAS = new Map();    // «Sawano Hiroyuki» → «Hiroyuki Sawano»
+let OFFSCALE = [];             // оценки, которых нет на шкале — «ГЕ-НЯ-АЛЬНО» и прочее
 
 /* Ключ имени с учётом склейки перестановок */
 const canonKey = k => NAME_ALIAS.get(k) || k;
@@ -79,14 +80,27 @@ function build(raw) {
 
   ROWS = [];
   STREAMS = [];
+  OFFSCALE = [];
   let stream = null;               // текущий стрим, под которым идут треки
 
   parsed.forEach(({ r, w }, i) => {
     const st = parseStream(r['Что'], r['Где']);
     if (st) { stream = st; STREAMS.push(st); return; }
     const rate = parseRate(r['Оценка']);
-    if (!rate) return;
     const link = parseLink(r['Где']);
+    if (!rate) {
+      // Оценка есть, но она не со шкалы: «ГЕ-НЯ-АЛЬНО», «БДСМ ШЕДЕВР»,
+      // «стал подводной лодкой / 10». В статистику их не пустить —
+      // ступени у них нет, — но и терять жалко: это живая речь эфира.
+      const raw = (r['Оценка'] || '').trim();
+      if (raw && /[а-яёa-z]/i.test(raw) && (r['Тип'] || '').trim()) OFFSCALE.push({
+        raw, artist: w.artist, title: w.title, link,
+        streamNum: stream ? stream.num : null,
+        date: stream ? stream.date : null,
+        moment: stream ? momentUrl(stream.vod, toSeconds(r['Когда'])) : ''
+      });
+      return;
+    }
     const user = (r['Кто'] || '').trim();
     ROWS.push({
       i, rate, link,
@@ -220,11 +234,13 @@ function render() {
   renderKpis(rows);
   renderScale();
   renderTrend();
+  renderRepeats();
   renderArtists(rows);
   renderUsers(rows);
   renderFans();
   renderGenres(rows);
   renderOrigin(rows);
+  renderUniverses(rows);
   renderType(rows);
   renderHour(rows);
   renderTags(rows);
@@ -232,6 +248,7 @@ function render() {
   renderDuration(rows);
   renderStreams();
   renderCountries(rows);
+  renderOffscale();
   renderSearch();
   $('filterState').textContent =
     FILTER.tier ? ('показаны только: ' + FILTER.tier) : 'фильтр не задан';

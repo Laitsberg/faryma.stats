@@ -432,6 +432,17 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 50px;
 .g-anyway{background:none;border:0;padding:0;font:inherit;font-size:11px;
   color:var(--brand-hi);cursor:pointer;text-decoration:underline}
 
+/* ---------- оценки вне шкалы ---------- */
+.off{display:flex;flex-direction:column}
+.off-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:3px 14px;
+  padding:10px 0;border-bottom:1px solid #232328}
+.off-row:last-child{border-bottom:0}
+.off-r{grid-column:1 / -1;font-family:var(--d);font-size:15px;font-weight:600;
+  color:var(--brand-hi);overflow-wrap:anywhere;line-height:1.25}
+.off-t{font-size:13px;color:var(--ink);overflow-wrap:anywhere}
+.off-d{grid-column:1 / -1;font-family:var(--m);font-size:11px;color:var(--dim);
+  display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+
 /* ---------- навигация по разделам ----------
    Правый нижний угол: сверху уже занято плавающим фильтром, а внизу
    справа кнопка достаётся большим пальцем, не перекрывая текст. */

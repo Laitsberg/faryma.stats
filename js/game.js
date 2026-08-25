@@ -50,7 +50,7 @@ function saveScore(s) {
 function initGame() {
   $('gNext').onclick = nextTrack;
   gameSrc = loadSources();
-  renderSources();
+  renderGameSources();
   renderScore();
   nextTrack();
 }
@@ -58,7 +58,7 @@ function initGame() {
 /* Галочки площадок. Рядом с каждой — сколько там треков, чтобы было
    видно, во что превратится игра: у ютуба их пять тысяч, у остальных
    вместе меньше двухсот. */
-function renderSources() {
+function renderGameSources() {
   $('gSrc').innerHTML =
     `<div class="g-src-h">Откуда брать треки</div>` +
     SOURCES.map(src => {
