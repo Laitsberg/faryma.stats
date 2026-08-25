@@ -200,21 +200,23 @@ function showPoster(t) {
 function playHere(t) {
   const box = $('gPlayer');
   const title = `${esc(t.artist)} — ${esc(t.title)}`;
-  let src, compact = false, where = '';
+  // Виджеты Spotify и Яндекса — не видео, а карточки, и высота у них
+  // своя: 152px против 180px. Одна общая коробка оставляла бы под
+  // спотифаем пустую полосу.
+  let src, kind = '', where = '';
 
   if (t.ytId) {
     src = `https://www.youtube.com/embed/${esc(t.ytId)}?autoplay=1`;
     where = 'на ютубе';
   } else if (t.spId) {
-    // Виджет Spotify не 16:9, а невысокая карточка
     src = `https://open.spotify.com/embed/track/${esc(t.spId)}`;
-    compact = true; where = 'в Spotify';
+    kind = ' sp'; where = 'в Spotify';
   } else {
     src = `https://music.yandex.ru/iframe/track/${esc(t.yaId)}`;
-    compact = true; where = 'в Яндекс.Музыке';
+    kind = ' ya'; where = 'в Яндекс.Музыке';
   }
 
-  box.className = 'g-player' + (compact ? ' compact' : '');
+  box.className = 'g-player' + kind;
   box.innerHTML =
     `<iframe src="${src}" title="${title}"
        allow="autoplay; encrypted-media; picture-in-picture"

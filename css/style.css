@@ -351,8 +351,10 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 50px;
 
 .g-player{position:relative;width:100%;aspect-ratio:16/9;
   background:#000;border:1px solid var(--line);border-radius:2px;overflow:hidden}
-/* Виджеты Spotify и Яндекса — не видео, а невысокая карточка */
-.g-player.compact{aspect-ratio:auto;height:180px;background:var(--panel2)}
+/* Виджеты Spotify и Яндекса — не видео, а карточка со своей высотой */
+.g-player.sp,.g-player.ya{aspect-ratio:auto;background:var(--panel2);border:0}
+.g-player.sp{height:152px}
+.g-player.ya{height:180px}
 
 /* ---------- выбор площадок ---------- */
 .g-src-h{font-family:var(--m);font-size:10px;letter-spacing:.14em;
