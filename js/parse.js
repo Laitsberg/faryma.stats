@@ -201,6 +201,28 @@ function youtubeId(url) {
   return /^[\w-]{11}$/.test(id) ? id : '';
 }
 
+/* Id трека в Spotify. Ссылки на альбом не годятся: играть надо
+   конкретный трек, а какой именно — из ссылки не узнать. */
+function spotifyId(url) {
+  let u;
+  try { u = new URL(url); } catch { return ''; }
+  if (!/(^|\.)spotify\.com$/.test(u.hostname)) return '';
+  const m = u.pathname.match(/\/track\/([A-Za-z0-9]{22})/);
+  return m ? m[1] : '';
+}
+
+/* Трек в Яндекс.Музыке. Плееру достаточно номера трека, но с номером
+   альбома он открывается на нужной записи, поэтому берём оба, когда есть. */
+function yandexTrack(url) {
+  let u;
+  try { u = new URL(url); } catch { return ''; }
+  if (!/(^|\.)music\.yandex\.(ru|com|by|kz|uz)$/.test(u.hostname)) return '';
+  const both = u.pathname.match(/\/album\/(\d+)\/track\/(\d+)/);
+  if (both) return both[2] + '/' + both[1];
+  const one = u.pathname.match(/\/track\/(\d+)/);
+  return one ? one[1] : '';
+}
+
 /* Ссылка на нужную минуту записи. Без тайм-кода — просто на стрим. */
 function momentUrl(vod, seconds) {
   if (!vod) return '';

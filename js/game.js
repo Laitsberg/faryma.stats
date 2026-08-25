@@ -10,6 +10,31 @@ let gameAnswered = false;
 
 /* Счёт живёт в браузере игрока и никуда не отправляется. */
 const SCORE_KEY = 'faryma-guess';
+const SRC_KEY   = 'faryma-guess-src';
+
+/* Откуда брать треки. У первых трёх площадок есть встроенный плеер,
+   у остальных — только ссылка, поэтому они собраны в одну группу.
+   Ютуб стоит первым и включён по умолчанию: он единственный
+   открывается у большинства зрителей без ВПН. */
+const SOURCES = [
+  { k: 'yt',    name: 'YouTube',        has: r => !!r.ytId },
+  { k: 'sp',    name: 'Spotify',        has: r => !!r.spId },
+  { k: 'ya',    name: 'Яндекс.Музыка',  has: r => !!r.yaId },
+  { k: 'other', name: 'остальное',      has: r => !!r.link && !r.ytId && !r.spId && !r.yaId }
+];
+
+function loadSources() {
+  try {
+    const v = JSON.parse(localStorage.getItem(SRC_KEY));
+    if (Array.isArray(v) && v.length && v.every(k => SOURCES.some(s => s.k === k))) return v;
+  } catch { /* приватный режим */ }
+  return ['yt'];
+}
+function saveSources(v) {
+  try { localStorage.setItem(SRC_KEY, JSON.stringify(v)); } catch { /* не беда */ }
+}
+
+let gameSrc = ['yt'];
 
 function loadScore() {
   try {
@@ -24,15 +49,57 @@ function saveScore(s) {
 
 function initGame() {
   $('gNext').onclick = nextTrack;
+  gameSrc = loadSources();
+  renderSources();
   renderScore();
   nextTrack();
 }
 
+/* Галочки площадок. Рядом с каждой — сколько там треков, чтобы было
+   видно, во что превратится игра: у ютуба их пять тысяч, у остальных
+   вместе меньше двухсот. */
+function renderSources() {
+  $('gSrc').innerHTML =
+    `<div class="g-src-h">Откуда брать треки</div>` +
+    SOURCES.map(src => {
+      const n = ROWS.filter(r => r.artist && src.has(r)).length;
+      const on = gameSrc.includes(src.k);
+      return `<label class="g-src${n ? '' : ' off'}">
+        <input type="checkbox" data-s="${src.k}"${on ? ' checked' : ''}${n ? '' : ' disabled'}>
+        <span>${esc(src.name)}</span><b>${num(n)}</b></label>`;
+    }).join('') +
+    `<div class="g-src-n" id="gSrcNote"></div>`;
+
+  $('gSrc').querySelectorAll('input[data-s]').forEach(b => b.onchange = () => {
+    const picked = [...$('gSrc').querySelectorAll('input[data-s]:checked')].map(x => x.dataset.s);
+    // Совсем без источников играть не во что — последнюю галочку
+    // не даём снять, вместо этого возвращаем её на место.
+    if (!picked.length) { b.checked = true; return; }
+    gameSrc = picked;
+    saveSources(gameSrc);
+    renderSourceNote();
+    nextTrack();
+  });
+  renderSourceNote();
+}
+
+function renderSourceNote() {
+  const noPlayer = gameSrc.length === 1 && gameSrc[0] === 'other';
+  $('gSrcNote').textContent = noPlayer
+    ? 'У этих площадок плеера нет — будет только ссылка.'
+    : (gameSrc.includes('sp')
+        ? 'Spotify без ВПН и входа в аккаунт может не заиграть.'
+        : '');
+}
+
+/* Все треки выбранных площадок */
+function gamePool() {
+  const picked = SOURCES.filter(s => gameSrc.includes(s.k));
+  return ROWS.filter(r => r.artist && picked.some(s => s.has(r)));
+}
+
 function nextTrack() {
-  // Только YouTube: у Spotify без ВПН и входа в аккаунт не работает
-  // вообще ничего, а ютуб хотя бы открывается у большинства. У кого
-  // не открывается — см. showPoster(): игра там всё равно работает.
-  const pool = ROWS.filter(r => r.ytId && r.artist);
+  const pool = gamePool();
   if (!pool.length) return;
   gameTrack = pool[Math.floor(Math.random() * pool.length)];
   gameAnswered = false;
@@ -69,6 +136,23 @@ function nextTrack() {
    выглядеть не должен. */
 function showPoster(t) {
   const box = $('gPlayer');
+  box.className = 'g-player';
+
+  // Обложка есть только у ютуба. У Spotify и Яндекса плеер вставляем
+  // сразу: их виджеты сами показывают карточку и ничего не играют,
+  // пока не нажмут. У остальных площадок плеера нет вовсе.
+  if (!t.ytId) {
+    if (t.spId || t.yaId) { playHere(t); return; }
+    box.innerHTML =
+      `<div class="g-off">
+         <b>${esc(t.link ? t.link.platform : 'Без ссылки')}</b>
+         <span>Плеера у этой площадки нет — только ссылка.</span>
+         ${t.link ? `<span class="g-off-act"><a href="${esc(t.link.url)}"
+             target="_blank" rel="noopener noreferrer">открыть трек</a></span>` : ''}
+       </div>`;
+    return;
+  }
+
   const url = 'https://youtu.be/' + t.ytId;
   box.innerHTML =
     `<img class="g-poster" alt="" src="https://i.ytimg.com/vi/${esc(t.ytId)}/hqdefault.jpg">
@@ -114,15 +198,33 @@ function showPoster(t) {
    вставляется только по нажатию, так что куки всё равно получает лишь
    тот, кто сам решил послушать. */
 function playHere(t) {
-  $('gPlayer').innerHTML =
-    `<iframe src="https://www.youtube.com/embed/${esc(t.ytId)}?autoplay=1"
-       title="${esc(t.artist)} — ${esc(t.title)}"
+  const box = $('gPlayer');
+  const title = `${esc(t.artist)} — ${esc(t.title)}`;
+  let src, compact = false, where = '';
+
+  if (t.ytId) {
+    src = `https://www.youtube.com/embed/${esc(t.ytId)}?autoplay=1`;
+    where = 'на ютубе';
+  } else if (t.spId) {
+    // Виджет Spotify не 16:9, а невысокая карточка
+    src = `https://open.spotify.com/embed/track/${esc(t.spId)}`;
+    compact = true; where = 'в Spotify';
+  } else {
+    src = `https://music.yandex.ru/iframe/track/${esc(t.yaId)}`;
+    compact = true; where = 'в Яндекс.Музыке';
+  }
+
+  box.className = 'g-player' + (compact ? ' compact' : '');
+  box.innerHTML =
+    `<iframe src="${src}" title="${title}"
        allow="autoplay; encrypted-media; picture-in-picture"
        allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+
   // Понять из скрипта, что ролик внутри не открылся, нельзя — рамка
   // чужая. Поэтому просто держим рядом запасной выход.
-  $('gEscape').innerHTML =
-    `не играет? <a href="https://youtu.be/${esc(t.ytId)}" target="_blank" rel="noopener noreferrer">открыть на ютубе</a>`;
+  $('gEscape').innerHTML = t.link
+    ? `не играет? <a href="${esc(t.link.url)}" target="_blank" rel="noopener noreferrer">открыть ${where}</a>`
+    : '';
 }
 
 function renderTiers() {

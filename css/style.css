@@ -342,11 +342,44 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 50px;
 
 /* Плеер в угадайке. Соотношение 16:9 держим через aspect-ratio,
    иначе на узком экране iframe схлопывается в полоску. */
-.g-player{position:relative;width:100%;max-width:520px;aspect-ratio:16/9;
+/* Плеер и выбор площадок стоят рядом: справа от плеера, ограниченного
+   520px, всё равно оставалось пустое место. Ниже 700px — друг под другом. */
+.g-top{display:flex;gap:20px;align-items:flex-start}
+.g-left{flex:0 1 520px;min-width:0}
+.g-srcbox{flex:1 1 200px;min-width:0;max-width:330px}
+@media(max-width:700px){ .g-top{flex-direction:column;gap:14px} .g-left{flex:none;width:100%} }
+
+.g-player{position:relative;width:100%;aspect-ratio:16/9;
   background:#000;border:1px solid var(--line);border-radius:2px;overflow:hidden}
-/* На широком экране плеер во всю карточку занимал бы 640px высоты и
-   выдавливал кнопки за пределы вида. На телефоне ограничение снимаем. */
-@media(max-width:700px){ .g-player{max-width:none} }
+/* Виджеты Spotify и Яндекса — не видео, а невысокая карточка */
+.g-player.compact{aspect-ratio:auto;height:180px;background:var(--panel2)}
+
+/* ---------- выбор площадок ---------- */
+.g-src-h{font-family:var(--m);font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--dim);margin-bottom:9px}
+.g-src{display:flex;align-items:center;gap:9px;min-height:var(--tap);
+  cursor:pointer;font-family:var(--m);font-size:12px;color:var(--dim)}
+.g-src:hover{color:var(--ink)}
+.g-src.off{opacity:.4;cursor:default}
+.g-src input{accent-color:var(--brand);width:16px;height:16px;flex:none}
+.g-src span{flex:1;min-width:0;overflow-wrap:anywhere}
+.g-src b{color:var(--brand-hi);font-weight:600}
+.g-src-n{font-family:var(--m);font-size:11px;color:var(--dim);
+  line-height:1.5;margin-top:6px}
+.g-src-n:empty{display:none}
+
+/* На телефоне четыре строки в столбик отодвигали ступени и кнопку
+   за нижний край. Тот же список, но компактными переключателями. */
+@media(max-width:700px){
+  .g-srcbox{max-width:none}
+  .g-src-h{margin-bottom:7px}
+  .g-srcbox{display:flex;flex-wrap:wrap;gap:7px}
+  .g-src-h,.g-src-n{flex-basis:100%}
+  .g-src{min-height:40px;gap:7px;padding:0 11px;border:1px solid var(--line);
+    border-radius:2px;background:var(--panel2)}
+  .g-src span{flex:none}
+  .g-src input{width:15px;height:15px}
+}
 .g-player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 /* обложка вместо плеера, пока не нажали */
 .g-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
