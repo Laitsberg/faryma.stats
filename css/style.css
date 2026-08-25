@@ -357,6 +357,9 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 50px;
   display:flex;align-items:center;justify-content:center;
   padding-left:3px;transition:background .15s}
 .g-play:hover{background:var(--brand-lo)}
+/* запасной выход под плеером: рамка чужая, сбой внутри не виден */
+.g-escape{font-family:var(--m);font-size:11px;color:var(--dim);margin-top:7px}
+.g-escape:empty{display:none}
 /* ютуб не открывается — объясняем, а не показываем битое окно */
 .g-off{position:absolute;inset:0;display:flex;flex-direction:column;
   align-items:center;justify-content:center;gap:7px;text-align:center;

@@ -45,6 +45,7 @@ function nextTrack() {
     `<a href="${esc(gameTrack.link.url)}" target="_blank" rel="noopener noreferrer">${esc(gameTrack.title)}</a>`;
 
   showPoster(gameTrack);
+  $('gEscape').innerHTML = '';
 
   const bits = [];
   if (gameTrack.genres.length) bits.push(gameTrack.genres.join(' / '));
@@ -105,14 +106,23 @@ function showPoster(t) {
   if (img.complete && !img.naturalWidth) off();
 }
 
-/* Вставить настоящий плеер. youtube-nocookie отдаёт тот же ролик,
-   но не ставит рекламные куки тем, кто ничего не запускал. */
+/* Вставить настоящий плеер.
+   Домен именно youtube.com, а не youtube-nocookie.com. Второй красивее
+   по части куков, но у части зрителей он оказался наглухо закрыт, хотя
+   обычный ютуб при этом открывался: обходы блокировок и списки
+   провайдеров знают youtube.com и не знают nocookie-зеркало. Плеер
+   вставляется только по нажатию, так что куки всё равно получает лишь
+   тот, кто сам решил послушать. */
 function playHere(t) {
   $('gPlayer').innerHTML =
-    `<iframe src="https://www.youtube-nocookie.com/embed/${esc(t.ytId)}?autoplay=1"
+    `<iframe src="https://www.youtube.com/embed/${esc(t.ytId)}?autoplay=1"
        title="${esc(t.artist)} — ${esc(t.title)}"
        allow="autoplay; encrypted-media; picture-in-picture"
        allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+  // Понять из скрипта, что ролик внутри не открылся, нельзя — рамка
+  // чужая. Поэтому просто держим рядом запасной выход.
+  $('gEscape').innerHTML =
+    `не играет? <a href="https://youtu.be/${esc(t.ytId)}" target="_blank" rel="noopener noreferrer">открыть на ютубе</a>`;
 }
 
 function renderTiers() {
