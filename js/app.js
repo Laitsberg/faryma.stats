@@ -189,11 +189,19 @@ function computeDurations() {
 /* Проставляет строкам страну по кэшу MusicBrainz.
    Низкая уверенность совпадения приравнивается к «не знаем». */
 function applyCountries() {
+  const look = k => {
+    const hit = COUNTRIES[k];
+    return (hit && hit.country && (hit.score ?? 0) >= COUNTRY_MIN_SCORE)
+      ? (COUNTRY_NAMES[hit.country] || hit.country) : null;
+  };
   ROWS.forEach(r => {
-    const hit = COUNTRIES[r.artistKey];
-    r.country = (hit && hit.country && (hit.score ?? 0) >= COUNTRY_MIN_SCORE)
-      ? (COUNTRY_NAMES[hit.country] || hit.country)
-      : null;
+    // Ищем по участникам, а не по строке целиком: страну спрашивают
+    // на «Hiroyuki Sawano» и «Aimer» по отдельности, а ключ
+    // «hiroyuki sawano feat. aimer» в кэше отсутствует. Берём первого
+    // участника, чья страна известна, — он же и главный в строке.
+    r.country = null;
+    for (const k of r.parts) { const c = look(k); if (c) { r.country = c; break; } }
+    if (!r.country) r.country = look(r.artistKey);
   });
 }
 
