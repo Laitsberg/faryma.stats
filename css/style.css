@@ -370,11 +370,16 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 50px;
 .pf-x:hover{color:var(--brand-hi);border-color:var(--brand)}
 .pf-body{overflow-y:auto;padding:16px 18px 22px;-webkit-overflow-scrolling:touch}
 
-.pf-kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+/* Ровно четыре метрики, поэтому колонки задаём числом, а не auto-fit:
+   на телефоне auto-fit укладывал три в ряд и оставлял две пустые клетки. */
+.pf-kpi{display:grid;grid-template-columns:repeat(4,1fr);
   gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:16px}
+@media(max-width:700px){ .pf-kpi{grid-template-columns:1fr 1fr} }
 .pf-kpi>div{background:var(--panel);padding:11px 13px;display:flex;flex-direction:column;gap:4px}
 .pf-kpi b{font-family:var(--d);font-size:19px;font-weight:800;letter-spacing:-.02em;
   overflow-wrap:anywhere}
+/* значения-слова: мельче и не рвутся посреди слова */
+.pf-kpi b.w{font-size:15px;line-height:1.25;overflow-wrap:normal;word-break:normal}
 .pf-kpi span{font-family:var(--m);font-size:9px;letter-spacing:.12em;
   text-transform:uppercase;color:var(--dim)}
 

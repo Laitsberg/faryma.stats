@@ -54,6 +54,16 @@ function openProfile(title, sub, html) {
   document.body.style.overflow = 'hidden';   // фон не должен ездить под окном
 }
 
+/* Четыре метрики в шапке профиля.
+   Третий элемент пары помечает значения-слова («гениально-», «нормас++»):
+   их набираем мельче и не рвём посреди слова, иначе на телефоне
+   получается «гениал / ьно-». */
+function kpiBlock(kpi) {
+  return `<div class="pf-kpi">` + kpi.map(([v, l, word]) =>
+    `<div><b${word ? ' class="w"' : ''}>${esc(v)}</b><span>${esc(l)}</span></div>`
+  ).join('') + `</div>`;
+}
+
 /* Полоски распределения по ступеням — общий кусок для обоих профилей */
 function tierBars(rows) {
   const m = group(rows, r => r.rate.tier);
@@ -113,13 +123,12 @@ function showArtist(name) {
   const kpi = [
     [num(rows.length), plural(rows.length, 'разнос', 'разноса', 'разносов')],
     [f2(a), 'средний балл'],
-    [best.rate.label, 'лучшая оценка'],
-    [worst.rate.label, 'худшая']
+    [best.rate.label, 'лучшая оценка', 1],
+    [worst.rate.label, 'худшая', 1]
   ];
 
   openProfile(shown, span,
-    `<div class="pf-kpi">` + kpi.map(([v, l]) =>
-      `<div><b>${esc(v)}</b><span>${esc(l)}</span></div>`).join('') + `</div>` +
+    kpiBlock(kpi) +
     tierBars(rows) +
     `<h3 class="pf-h">Все разносы</h3>` +
     trackList([...rows].sort((x, y) => (y.date || 0) - (x.date || 0)), { showStream: true }));
@@ -142,7 +151,7 @@ function showUser(name) {
   const kpi = [
     [num(rows.length), plural(rows.length, 'трек', 'трека', 'треков')],
     [f2(a), 'средний балл'],
-    [best.rate.label, 'лучший результат'],
+    [best.rate.label, 'лучший результат', 1],
     [num(rows.filter(r => r.rate.tier === 'гениально').length), 'в «гениально»']
   ];
 
@@ -158,8 +167,7 @@ function showUser(name) {
     : '';
 
   openProfile(shown, span,
-    `<div class="pf-kpi">` + kpi.map(([v, l]) =>
-      `<div><b>${esc(v)}</b><span>${esc(l)}</span></div>`).join('') + `</div>` +
+    kpiBlock(kpi) +
     tierBars(rows) + favHtml +
     `<h3 class="pf-h">Всё, что принёс</h3>` +
     trackList([...rows].sort((x, y) => (y.date || 0) - (x.date || 0)),
@@ -190,8 +198,7 @@ function showStream(numId) {
     : '';
 
   openProfile('Стрим №' + numId, date,
-    `<div class="pf-kpi">` + kpi.map(([v, l]) =>
-      `<div><b>${esc(v)}</b><span>${esc(l)}</span></div>`).join('') + `</div>` +
+    kpiBlock(kpi) +
     vod + tierBars(rows) +
     `<h3 class="pf-h">Все треки по порядку</h3>` +
     trackList(rows, { showArtist: true, showUser: true }));
