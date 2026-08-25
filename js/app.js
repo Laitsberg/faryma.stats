@@ -124,6 +124,7 @@ function build(raw) {
   applyCountries();
   initControls();
   render();
+  initGame();
 }
 
 /* Сколько времени заняло обсуждение трека.
@@ -162,6 +163,7 @@ function render() {
   const rows = cur();
   renderLadder();
   renderDock();
+  renderRecords();
   renderKpis(rows);
   renderScale();
   renderTrend();

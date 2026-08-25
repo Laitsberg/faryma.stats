@@ -376,3 +376,86 @@ function renderStreams() {
     `, в среднем ${med} ` + plural(med, 'трек', 'трека', 'треков') +
     ` за раз, рекорд — ${Math.max(...total)}.`;
 }
+
+/* ---------- 03. рекорды ----------
+   Считаются по всему архиву, а не по отфильтрованным строкам: рекорд
+   на то и рекорд, что он один на всю историю. */
+function renderRecords() {
+  const fmtDate = d => d
+    ? d.toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' })
+    : '';
+  const mins = sec => Math.round(sec / 60);
+  const link = (r, text) => r.moment
+    ? `<a href="${esc(r.moment)}" target="_blank" rel="noopener noreferrer">${esc(text)}</a>`
+    : esc(text);
+  const track = r => `${link(r, r.artist + ' — ' + r.title)}`;
+
+  const out = [];
+  const push = (rv, rl, rw, rn) => out.push({ rv, rl, rw, rn });
+
+  /* самый долгий и самый короткий разбор */
+  const dur = ROWS.filter(r => r.dur != null).sort((a, b) => b.dur - a.dur);
+  if (dur.length) {
+    const a = dur[0], b = dur[dur.length - 1];
+    push(mins(a.dur) + ' мин', 'самый долгий разнос', track(a),
+      `${a.rate.label} · стрим №${a.streamNum}`);
+    push(mins(b.dur) + ' мин', 'самый короткий', track(b),
+      `${b.rate.label} · стрим №${b.streamNum}`);
+  }
+
+  /* стримы: считаем средний балл и длину */
+  const byStream = new Map();
+  ROWS.forEach(r => {
+    if (r.streamNum == null) return;
+    if (!byStream.has(r.streamNum)) byStream.set(r.streamNum, []);
+    byStream.get(r.streamNum).push(r);
+  });
+  const st = [...byStream].map(([n, l]) => ({
+    n, cnt: l.length, date: l[0].date,
+    avg: avg(l.map(r => r.rate.score)),
+    len: Math.max(...l.map(r => r.sec ?? 0))
+  })).filter(x => x.cnt >= MIN_N.recordStream);
+
+  if (st.length) {
+    const byAvg = [...st].sort((a, b) => b.avg - a.avg);
+    const top = byAvg[0], low = byAvg[byAvg.length - 1];
+    push(f2(top.avg), 'лучший эфир', `Стрим №${top.n}`,
+      `${fmtDate(top.date)} · ${top.cnt} ` + plural(top.cnt, 'трек', 'трека', 'треков'));
+    push(f2(low.avg), 'худший эфир', `Стрим №${low.n}`,
+      `${fmtDate(low.date)} · ${low.cnt} ` + plural(low.cnt, 'трек', 'трека', 'треков'));
+
+    const byLen = [...st].sort((a, b) => b.len - a.len)[0];
+    push((byLen.len / 3600).toFixed(1) + ' ч', 'самый длинный эфир', `Стрим №${byLen.n}`,
+      `${fmtDate(byLen.date)} · ${byLen.cnt} ` + plural(byLen.cnt, 'трек', 'трека', 'треков'));
+
+    const byCnt = [...st].sort((a, b) => b.cnt - a.cnt)[0];
+    push(num(byCnt.cnt), 'треков за один эфир', `Стрим №${byCnt.n}`,
+      `${fmtDate(byCnt.date)} · ${(byCnt.len / 3600).toFixed(1)} ч`);
+  }
+
+  /* серии по хронологии */
+  const chron = ROWS.filter(r => r.date)
+    .sort((a, b) => a.date - b.date || a.streamNum - b.streamNum || (a.sec ?? 0) - (b.sec ?? 0));
+
+  let run = 0, runTier = null, bestRun = 0, bestTier = null, bestAt = null;
+  let dry = 0, bestDry = 0, dryAt = null;
+  chron.forEach(r => {
+    if (r.rate.tier === runTier) run++; else { runTier = r.rate.tier; run = 1; }
+    if (run > bestRun) { bestRun = run; bestTier = runTier; bestAt = r; }
+
+    if (r.rate.tier === 'гениально') dry = 0;
+    else { dry++; if (dry > bestDry) { bestDry = dry; dryAt = r; } }
+  });
+
+  if (bestRun > 1) push(num(bestRun) + ' подряд', 'одна ступень без перерыва',
+    `«${bestTier}»`, bestAt ? `закончилось на стриме №${bestAt.streamNum}` : '');
+  if (bestDry > 1) push(num(bestDry), 'разносов без «гениально»',
+    'самая долгая засуха', dryAt ? `до стрима №${dryAt.streamNum}` : '');
+
+  $('recs').innerHTML = out.map(r => `<div class="rec">
+    <div class="rv">${r.rv}</div>
+    <div class="rl">${esc(r.rl)}</div>
+    <div class="rw">${r.rw}</div>
+    ${r.rn ? `<div class="rn">${esc(r.rn)}</div>` : ''}
+  </div>`).join('');
+}
