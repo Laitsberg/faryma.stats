@@ -324,10 +324,26 @@ function participants(artist, soloKeys) {
   const out = [];
   String(artist).split(/\s+(?:feat\.?|ft\.?|featuring)\s+/i).forEach(chunk => {
     const bits = chunk.split(/\s*&\s*|\s*,\s*/).map(x => x.trim()).filter(Boolean);
-    if (bits.length > 1 && soloKeys && bits.every(b => soloKeys.has(nameKey(b)))) out.push(...bits);
+    if (splitsApart(bits, soloKeys)) out.push(...bits);
     else if (chunk.trim()) out.push(chunk.trim());
   });
   return [...new Set(out)];
+}
+
+/* Делить ли кусок с амперсандами и запятыми на отдельных людей.
+   Требовать самостоятельности от ВСЕХ частей было слишком строго:
+   «Toby Fox, Tensei, Clark Powell & Malcolm Brown» оставался одним
+   «исполнителем», хотя двое из четырёх в архиве выступают сами.
+   Хватает половины — при условии, что таких хотя бы двое.
+
+   Проверено на названиях групп, которые нельзя разрывать: у «Earth,
+   Wind & Fire», «Emerson, Lake & Palmer», «Tyler, The Creator»,
+   «MYTH & ROID» и «Fear, and Loathing in Las Vegas» сольных частей
+   ноль, так что все они остаются целыми и при мягком правиле. */
+function splitsApart(bits, soloKeys) {
+  if (bits.length < 2 || !soloKeys) return false;
+  const solo = bits.filter(b => soloKeys.has(nameKey(b))).length;
+  return solo >= 2 && solo * 2 >= bits.length;
 }
 
 /* То же разбиение, но с сохранением разделителей — чтобы показать
@@ -346,7 +362,7 @@ function artistTokens(artist, soloKeys) {
     if (!piece.trim()) return;
 
     const bits = piece.split(/\s*&\s*|\s*,\s*/).map(x => x.trim()).filter(Boolean);
-    if (bits.length > 1 && soloKeys && bits.every(b => soloKeys.has(nameKey(b)))) {
+    if (splitsApart(bits, soloKeys)) {
       piece.split(/(\s*&\s*|\s*,\s*)/).forEach(x => {
         if (!x) return;
         if (AMP.test(x)) out.push({ sep: x });
