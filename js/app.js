@@ -144,6 +144,7 @@ function build(raw) {
   render();
   initGame();
   initProfile();
+  initNav();
 }
 
 /* Японские имена пишут в обоих порядках: «Hiroyuki Sawano» и
@@ -249,6 +250,78 @@ function initDock() {
     // прячем, пока пульт виден, и пока страница ещё выше него
     dock.classList.toggle('show', !e.isIntersecting && e.boundingClientRect.top < 0);
   }, { rootMargin: '-8px 0px 0px 0px', threshold: 0 }).observe(desk);
+}
+
+/* ---------- навигация по разделам ----------
+   Страница выросла до семнадцати разделов, и листать её насквозь стало
+   долго. Кнопка живёт в правом нижнем углу: сверху уже стоит плавающий
+   фильтр, а внизу справа до неё дотягивается большой палец.
+
+   Адрес при переходе не меняется: хэш занят карточками (#artist=…,
+   #user=…, #stream=…), и подмешивать туда якоря разделов значило бы
+   ломать кнопку «назад». */
+function initNav() {
+  const nav = $('nav'), btn = $('nvBtn'), panel = $('nvPanel');
+  const heads = [...document.querySelectorAll('section .shd')];
+  if (!nav || !heads.length) return;
+
+  const items = heads.map((h, i) => ({
+    el: h.closest('section'),
+    num: h.querySelector('.ch')?.textContent.trim() || String(i + 1).padStart(2, '0'),
+    title: h.querySelector('h2')?.textContent.trim() || ''
+  })).filter(x => x.el);
+
+  panel.innerHTML =
+    `<button class="nv-item nv-top" data-i="-1"><b>↑</b><span>В начало</span></button>` +
+    items.map((x, i) =>
+      `<button class="nv-item" data-i="${i}"><b>${esc(x.num)}</b><span>${esc(x.title)}</span></button>`
+    ).join('');
+
+  const open = v => {
+    panel.hidden = !v;
+    nav.classList.toggle('on', v);
+    btn.setAttribute('aria-expanded', v ? 'true' : 'false');
+  };
+  btn.onclick = () => open(panel.hidden);
+
+  panel.onclick = e => {
+    const b = e.target.closest('.nv-item');
+    if (!b) return;
+    const i = +b.dataset.i;
+    open(false);
+    if (i < 0) scrollTo({ top: 0, behavior: 'smooth' });
+    else items[i].el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  // клик мимо и Escape закрывают
+  document.addEventListener('click', e => {
+    if (!panel.hidden && !nav.contains(e.target)) open(false);
+  });
+  addEventListener('keydown', e => { if (e.key === 'Escape' && !panel.hidden) open(false); });
+
+  if (!('IntersectionObserver' in window)) { nav.hidden = false; return; }
+
+  /* Какой раздел сейчас на экране — подписываем кнопку и подсвечиваем
+     строку в списке, чтобы было видно, где ты находишься. */
+  const visible = new Set();
+  const mark = () => {
+    const i = items.findIndex(x => visible.has(x.el));
+    $('nvNow').textContent = i < 0 ? 'разделы' : items[i].title;
+    panel.querySelectorAll('.nv-item').forEach(b =>
+      b.classList.toggle('on', +b.dataset.i === i));
+  };
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => e.isIntersecting ? visible.add(e.target) : visible.delete(e.target));
+    mark();
+  }, { rootMargin: '-45% 0px -45% 0px' });
+  items.forEach(x => io.observe(x.el));
+
+  // кнопка появляется, только когда шапка уехала вверх
+  const head = document.querySelector('header');
+  new IntersectionObserver(([e]) => {
+    nav.hidden = e.isIntersecting;
+    if (e.isIntersecting) open(false);
+  }, { threshold: 0 }).observe(head);
 }
 
 /* ---------- поиск ---------- */
