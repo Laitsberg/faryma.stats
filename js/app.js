@@ -356,17 +356,19 @@ function renderSearch() {
     }));
 
   table('tSearch', [
-    { k: 'artist', t: 'исполнитель', lead: 1, w: '16%', f: r => artistNames(r.artist) },
-    { k: 'title',  t: 'трек', w: '24%', f: r => r.link
+    { k: 'artist', t: 'исполнитель', lead: 1, w: '15%', f: r => artistNames(r.artist) },
+    { k: 'title',  t: 'трек', w: '22%', f: r => r.link
         ? `<a class="tlink" href="${esc(r.link.url)}" target="_blank" rel="noopener noreferrer">${esc(r.title)}</a><span class="plat">${esc(r.link.platform)}</span>`
         : esc(r.title) },
-    { k: 'label',  t: 'оценка', mono: 1, sortK: 'score', w: '11%', f: r => ratePill(r.label) },
+    // 15%, а не 11%: «кринж-контент++» — самая широкая плашка, и в узкую
+    // колонку она вылезала поверх ника заказчика
+    { k: 'label',  t: 'оценка', mono: 1, sortK: 'score', w: '15%', f: r => ratePill(r.label) },
     { k: 'user',   t: 'заказчик', mono: 1, w: '12%', f: r => userNames(r.user) },
     { k: 'genre',  t: 'жанр', w: '12%' },
     // «Откуда» стоит рядом с жанром, а не между исполнителем и треком:
     // источник известен у 44% строк, и посередине он рвал бы главную
     // пару колонок дырой на каждой второй строке.
-    { k: 'source', t: 'откуда', w: '15%',
+    { k: 'source', t: 'откуда', w: '14%',
       f: r => r.source ? esc(r.source)
             : (r.origin ? `<span class="plat">${esc(r.origin.toLowerCase())}</span>` : '') },
     { k: 'when',   t: 'когда', mono: 1, w: '10%', f: r => {

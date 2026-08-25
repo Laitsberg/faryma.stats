@@ -236,6 +236,14 @@ td.mono{font-family:var(--m);font-size:12px}
 .search input:focus,.search select:focus{outline:2px solid var(--brand);outline-offset:-1px}
 /* Пять фильтров столбиком заняли бы весь экран до первого результата,
    поэтому на телефоне поле поиска во всю ширину, а списки — сеткой 2×2. */
+/* На узком столе колонка «оценка» едва вмещает самую широкую плашку —
+   «кринж-контент++». Поджимаем отступы именно в таблице поиска, чтобы
+   плашка не вылезала поверх ника заказчика. */
+@media(max-width:1000px){
+  #tSearch th, #tSearch td{padding-left:6px;padding-right:6px}
+  #tSearch .pill{padding-left:5px;padding-right:5px}
+}
+
 @media(max-width:700px){
   .search{display:grid;grid-template-columns:1fr 1fr;gap:8px}
   .search input{grid-column:1 / -1;min-width:0}
