@@ -161,34 +161,6 @@ function build(raw) {
   initNav();
 }
 
-/* Японские имена пишут в обоих порядках: «Hiroyuki Sawano» и
-   «Sawano Hiroyuki» — один человек, но для скрипта это две разные
-   строки, и его разносы делятся на две карточки. Склеиваем пары,
-   которые отличаются только порядком слов, и оставляем то написание,
-   что встречается чаще.
-
-   Только имена ровно из двух слов: у трёх и больше совпадение по
-   составу уже может оказаться случайным, а цена ошибки — двое разных
-   исполнителей, слитых в одного. В нынешнем архиве правило находит
-   16 пар, и все шестнадцать — японские имена вроде «Kana Hanazawa /
-   Hanazawa Kana». */
-function buildNameAliases(counts) {
-  const bySig = new Map();
-  counts.forEach((n, k) => {
-    const w = k.split(' ').filter(Boolean);
-    if (w.length !== 2) return;
-    const sig = [...w].sort().join(' ');
-    if (!bySig.has(sig)) bySig.set(sig, []);
-    bySig.get(sig).push(k);
-  });
-  const alias = new Map();
-  bySig.forEach(keys => {
-    if (keys.length < 2) return;
-    const main = keys.reduce((a, b) => (counts.get(b) > counts.get(a) ? b : a));
-    keys.forEach(k => { if (k !== main) alias.set(k, main); });
-  });
-  return alias;
-}
 
 /* Сколько времени заняло обсуждение трека.
    Длительности в таблице нет, но есть тайм-код начала: расстояние до

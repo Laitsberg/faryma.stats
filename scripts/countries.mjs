@@ -155,19 +155,43 @@ function collectArtists(ctx) {
   const rows = Papa.parse(fs.readFileSync(CSV_PATH, 'utf8'),
     { header: true, skipEmptyLines: 'greedy' }).data;
 
-  const counts = new Map();   // ключ → сколько раз встретился
-  const names = [];
+  /* Ключи должны совпадать с теми, по которым сайт ищет страну, иначе
+     половину исполнителей никто никогда не спросит. Сайт считает по
+     УЧАСТНИКАМ: «Hiroyuki Sawano feat. Aimer» — это Савано и Аймер по
+     отдельности. Раньше здесь бралась строка целиком, и в кэш ложился
+     бесполезный ключ «hiroyuki sawano feat. aimer», а сама Аймер
+     оставалась неспрошенной. Поэтому повторяем ту же цепочку, что и
+     build() в app.js. */
+  const artists = [];
   rows.forEach(r => {
     if (!ctx.parseRate(r['Оценка'])) return;      // только разнесённые
     const { artist } = ctx.parseWhat(r['Что']);
-    if (!artist) return;
-    names.push(artist);
-    const k = ctx.nameKey(artist);
+    if (artist) artists.push(artist);
+  });
+
+  // кто хоть раз выступал один — по этому списку решаем, делить ли «X & Y»
+  const soloKeys = new Set();
+  artists.forEach(a => { if (ctx.isSolo(a)) soloKeys.add(ctx.nameKey(a)); });
+
+  const allParts = artists.flatMap(a => ctx.participants(a, soloKeys));
+
+  // «Sawano Hiroyuki» и «Hiroyuki Sawano» — один человек
+  const rawCounts = new Map();
+  allParts.forEach(v => {
+    const k = ctx.nameKey(v);
+    rawCounts.set(k, (rawCounts.get(k) || 0) + 1);
+  });
+  const alias = ctx.buildNameAliases(rawCounts);
+  const canon = ctx.canonMap(allParts, ctx.nameKey);
+
+  const counts = new Map();
+  allParts.forEach(v => {
+    const k = alias.get(ctx.nameKey(v)) || ctx.nameKey(v);
     counts.set(k, (counts.get(k) || 0) + 1);
   });
-  const canon = ctx.canonMap(names, ctx.nameKey);
+
   return [...counts]
-    .map(([key, n]) => ({ key, name: canon.get(key), n }))
+    .map(([key, n]) => ({ key, name: canon.get(key) || key, n }))
     .filter(a => a.n >= MIN_TRACKS)
     .sort((a, b) => b.n - a.n);                   // частых спрашиваем первыми
 }
