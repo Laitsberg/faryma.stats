@@ -5,12 +5,23 @@
 
 const $  = id => document.getElementById(id);
 
-/* Имя исполнителя как ссылка в его профиль */
+/* Имя исполнителя как ссылка в его профиль.
+   Строку с соавторами разбираем на участников: ссылкой становится
+   каждый по отдельности, а «feat.» и «&» остаются простым текстом.
+   Иначе клик по «Sawano Hiroyuki feat. Aimer» открывал карточку именно
+   этой пары — с одним треком, — вместо карточки Савано или Аймер. */
+function artistNames(name, cls) {
+  if (!name || name === '—') return esc(name || '—');
+  const c = cls || 'pf-link';
+  return artistTokens(name, SOLO_KEYS).map(t => t.sep
+    ? `<span class="sep">${esc(t.sep)}</span>`
+    : `<a class="${c}" href="#artist=${encodeURIComponent(t.name)}" data-artist="${esc(t.name)}">${esc(t.name)}</a>`
+  ).join('') || esc(name);
+}
+
+/* Обёртка для таблиц: имя лежит либо в a (сводные), либо в artist */
 function artistLink(r) {
-  const n = r.a || r.artist || '';
-  return n && n !== '—'
-    ? `<a class="pf-link" href="#artist=${encodeURIComponent(n)}" data-artist="${esc(n)}">${esc(n)}</a>`
-    : esc(n || '—');
+  return artistNames(r.a || r.artist || '');
 }
 
 /* Имя заказчика как ссылка в его профиль */

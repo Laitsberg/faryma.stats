@@ -309,6 +309,33 @@ function participants(artist, soloKeys) {
   return [...new Set(out)];
 }
 
+/* То же разбиение, но с сохранением разделителей — чтобы показать
+   строку как есть, сделав ссылкой каждого участника по отдельности,
+   а «feat.» и «&» оставив простым текстом. Возвращает список кусочков:
+   {name} — участник, {sep} — то, что между ними. */
+function artistTokens(artist, soloKeys) {
+  if (!artist) return [];
+  const out = [];
+  const FEAT = /^\s+(?:feat\.?|ft\.?|featuring)\s+$/i;
+  const AMP  = /^\s*[&,]\s*$/;
+
+  String(artist).split(/(\s+(?:feat\.?|ft\.?|featuring)\s+)/i).forEach(piece => {
+    if (!piece) return;
+    if (FEAT.test(piece)) { out.push({ sep: piece }); return; }
+    if (!piece.trim()) return;
+
+    const bits = piece.split(/\s*&\s*|\s*,\s*/).map(x => x.trim()).filter(Boolean);
+    if (bits.length > 1 && soloKeys && bits.every(b => soloKeys.has(nameKey(b)))) {
+      piece.split(/(\s*&\s*|\s*,\s*)/).forEach(x => {
+        if (!x) return;
+        if (AMP.test(x)) out.push({ sep: x });
+        else if (x.trim()) out.push({ name: x.trim() });
+      });
+    } else out.push({ name: piece.trim() });
+  });
+  return out;
+}
+
 /* Артист без соавторов — по нему собирается soloKeys */
 function isSolo(artist) {
   return !/\b(feat\.?|ft\.?|featuring)\b|&|,/i.test(String(artist || ''));

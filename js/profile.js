@@ -88,9 +88,7 @@ function trackList(rows, opts = {}) {
     const title = r.link
       ? `<a class="tlink" href="${esc(r.link.url)}" target="_blank" rel="noopener noreferrer">${esc(r.title)}</a>`
       : esc(r.title);
-    const who = opts.showArtist
-      ? `<a class="pf-who" href="#artist=${encodeURIComponent(r.artist)}" data-artist="${esc(r.artist)}">${esc(r.artist)}</a> — `
-      : '';
+    const who = opts.showArtist ? artistNames(r.artist, 'pf-who') + ' — ' : '';
     const from = opts.showUser && r.user
       ? ` <a class="tlink nowrap" href="#user=${encodeURIComponent(r.user)}" data-user="${esc(r.user)}">принёс ${esc(r.user)}</a>`
       : '';
@@ -107,7 +105,7 @@ function trackList(rows, opts = {}) {
 
 /* ---------- профиль артиста ---------- */
 function showArtist(name) {
-  const key = nameKey(name);
+  const key = canonKey(nameKey(name));
   const rows = ROWS.filter(r => r.parts.includes(key) || r.artistKey === key);
   if (!rows.length) { hideProfile(); return; }
 

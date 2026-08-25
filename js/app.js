@@ -10,6 +10,11 @@ let PART_NAMES = new Map();    // то же для участников, вкл�
 let USER_NAMES = new Map();
 let STREAMS = [];              // разделители стримов: номер и дата
 let COUNTRIES = {};            // артист → страна, из data/countries.json
+let SOLO_KEYS = new Set();     // кто хоть раз выступал один — нужен при разбиении имён
+let NAME_ALIAS = new Map();    // «Sawano Hiroyuki» → «Hiroyuki Sawano»
+
+/* Ключ имени с учётом склейки перестановок */
+const canonKey = k => NAME_ALIAS.get(k) || k;
 
 const cur = () => FILTER.tier ? ROWS.filter(r => r.rate.tier === FILTER.tier) : ROWS;
 
@@ -59,11 +64,16 @@ function build(raw) {
   // «X & Y» на двоих или это цельное название группы
   const soloKeys = new Set();
   parsed.forEach(p => { if (p.w.artist && isSolo(p.w.artist)) soloKeys.add(nameKey(p.w.artist)); });
+  SOLO_KEYS = soloKeys;   // тем же набором разбиваем имена при отрисовке
 
   // имена участников тоже склеиваем по регистру
   const allParts = [];
   parsed.forEach(p => { if (p.w.artist) allParts.push(...participants(p.w.artist, soloKeys)); });
   PART_NAMES = canonMap(allParts, nameKey);
+
+  const partCounts = new Map();
+  allParts.forEach(v => { const k = nameKey(v); partCounts.set(k, (partCounts.get(k) || 0) + 1); });
+  NAME_ALIAS = buildNameAliases(partCounts);
 
   ROWS = [];
   STREAMS = [];
@@ -79,7 +89,7 @@ function build(raw) {
     ROWS.push({
       i, rate, link,
       artist: w.artist, title: w.title, full: w.full,
-      artistKey: w.artist ? nameKey(w.artist) : '',
+      artistKey: w.artist ? canonKey(nameKey(w.artist)) : '',
       user, userKey: user ? userKey(user) : '',
       type:   (r['Тип'] || '').trim(),
       origin: (r['Откуда'] || '').trim(),
@@ -96,7 +106,7 @@ function build(raw) {
       spId:    link ? spotifyId(link.url)   : '',
       yaId:    link ? yandexTrack(link.url) : '',
       search: (w.full + ' ' + user).toLowerCase(),
-      parts: w.artist ? participants(w.artist, soloKeys).map(nameKey) : [],
+      parts: w.artist ? participants(w.artist, soloKeys).map(x => canonKey(nameKey(x))) : [],
       streamNum: stream ? stream.num : null,
       date: stream ? stream.date : null,
       // ссылка на нужную минуту записи стрима
@@ -130,6 +140,35 @@ function build(raw) {
   render();
   initGame();
   initProfile();
+}
+
+/* Японские имена пишут в обоих порядках: «Hiroyuki Sawano» и
+   «Sawano Hiroyuki» — один человек, но для скрипта это две разные
+   строки, и его разносы делятся на две карточки. Склеиваем пары,
+   которые отличаются только порядком слов, и оставляем то написание,
+   что встречается чаще.
+
+   Только имена ровно из двух слов: у трёх и больше совпадение по
+   составу уже может оказаться случайным, а цена ошибки — двое разных
+   исполнителей, слитых в одного. В нынешнем архиве правило находит
+   16 пар, и все шестнадцать — японские имена вроде «Kana Hanazawa /
+   Hanazawa Kana». */
+function buildNameAliases(counts) {
+  const bySig = new Map();
+  counts.forEach((n, k) => {
+    const w = k.split(' ').filter(Boolean);
+    if (w.length !== 2) return;
+    const sig = [...w].sort().join(' ');
+    if (!bySig.has(sig)) bySig.set(sig, []);
+    bySig.get(sig).push(k);
+  });
+  const alias = new Map();
+  bySig.forEach(keys => {
+    if (keys.length < 2) return;
+    const main = keys.reduce((a, b) => (counts.get(b) > counts.get(a) ? b : a));
+    keys.forEach(k => { if (k !== main) alias.set(k, main); });
+  });
+  return alias;
 }
 
 /* Сколько времени заняло обсуждение трека.
@@ -242,9 +281,7 @@ function renderSearch() {
     }));
 
   table('tSearch', [
-    { k: 'artist', t: 'исполнитель', lead: 1, w: '16%',
-      f: r => r.artist === '—' ? '—'
-            : `<a class="pf-link" href="#artist=${encodeURIComponent(r.artist)}" data-artist="${esc(r.artist)}">${esc(r.artist)}</a>` },
+    { k: 'artist', t: 'исполнитель', lead: 1, w: '16%', f: r => artistNames(r.artist) },
     { k: 'title',  t: 'трек', w: '24%', f: r => r.link
         ? `<a class="tlink" href="${esc(r.link.url)}" target="_blank" rel="noopener noreferrer">${esc(r.title)}</a><span class="plat">${esc(r.link.platform)}</span>`
         : esc(r.title) },

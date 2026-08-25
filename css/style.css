@@ -457,6 +457,8 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 50px;
 .pf-r{text-align:right}
 .pf-d{grid-column:1 / -1;font-family:var(--m);font-size:11px;color:var(--dim);
   display:flex;gap:9px;flex-wrap:wrap}
+/* «feat.», «&» и запятые между участниками — не ссылки */
+.sep{color:var(--dim);text-decoration:none}
 .pf-who{color:var(--dim);text-decoration:none}
 .pf-who:hover{color:var(--brand-hi)}
 .pf-vod{margin:0 0 14px;font-size:14px}

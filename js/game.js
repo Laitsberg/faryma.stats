@@ -268,8 +268,7 @@ function answer(tier) {
   a.hidden = false;
 
   // теперь можно и в карточку исполнителя
-  $('gArtist').innerHTML =
-    `<a class="pf-link" href="#artist=${encodeURIComponent(gameTrack.artist)}" data-artist="${esc(gameTrack.artist)}">${esc(gameTrack.artist)}</a>`;
+  $('gArtist').innerHTML = artistNames(gameTrack.artist);
 
   const s = loadScore();
   s.total++;
