@@ -29,18 +29,28 @@ function initGame() {
 }
 
 function nextTrack() {
-  // берём только треки со ссылкой: без неё нельзя послушать,
-  // а угадывать вслепую неинтересно
-  const pool = ROWS.filter(r => r.link && r.artist);
+  // Только YouTube: он открывается без ВПН и без входа в аккаунт, а
+  // Spotify у большей части зрителей просто не заработает. Заодно
+  // ролик показывается прямо на странице, а не в новой вкладке.
+  const pool = ROWS.filter(r => r.ytId && r.artist);
   if (!pool.length) return;
   gameTrack = pool[Math.floor(Math.random() * pool.length)];
   gameAnswered = false;
 
-  $('gArtist').textContent = gameTrack.artist;
+  $('gArtist').innerHTML =
+    `<a class="pf-link" href="#artist=${encodeURIComponent(gameTrack.artist)}" data-artist="${esc(gameTrack.artist)}">${esc(gameTrack.artist)}</a>`;
   $('gTitle').innerHTML =
     `<a href="${esc(gameTrack.link.url)}" target="_blank" rel="noopener noreferrer">${esc(gameTrack.title)}</a>`;
 
-  const bits = [gameTrack.link.platform];
+  // youtube-nocookie отдаёт тот же плеер, но не ставит рекламные куки
+  // тем, кто просто открыл страницу и ничего не запускал
+  $('gPlayer').innerHTML =
+    `<iframe src="https://www.youtube-nocookie.com/embed/${esc(gameTrack.ytId)}"
+       title="${esc(gameTrack.artist)} — ${esc(gameTrack.title)}"
+       loading="lazy" allow="encrypted-media; picture-in-picture"
+       allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+
+  const bits = [];
   if (gameTrack.genres.length) bits.push(gameTrack.genres.join(' / '));
   if (gameTrack.source) bits.push(gameTrack.source);
   $('gMeta').textContent = bits.join(' · ');
@@ -86,7 +96,7 @@ function answer(tier) {
   a.className = 'g-answer ' + (hit ? 'hit' : 'miss');
   a.innerHTML = (hit ? 'Точно. ' : `Мимо на ${off} ` + plural(off, 'ступень', 'ступени', 'ступеней') + '. ') +
     `Он поставил ${ratePill(gameTrack.rate.label)}` +
-    (when ? ` <span class="g-meta">${esc(when)}, стрим №${gameTrack.streamNum}</span>` : '') + link;
+    (when ? ` <span class="g-meta">${esc(when)}, <a class="pf-link" href="#stream=${gameTrack.streamNum}" data-stream="${gameTrack.streamNum}">стрим №${gameTrack.streamNum}</a></span>` : '') + link;
   a.hidden = false;
 
   const s = loadScore();

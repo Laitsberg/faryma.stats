@@ -110,11 +110,14 @@ section{margin:44px 0}
 .shd .ch{font-family:var(--m);font-size:11px;color:var(--brand);letter-spacing:.1em}
 .note{color:var(--dim);font-size:13px;margin:10px 0 16px;max-width:70ch}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+/* без min-width:0 колонка растягивается под самое длинное слово внутри */
+.grid2>*{min-width:0}
 @media(max-width:820px){ .grid2{grid-template-columns:1fr} }
 .card{background:var(--panel);border:1px solid var(--line);border-radius:3px;
   padding:14px 16px 18px}
 @media(max-width:560px){ .card{padding:12px 12px 14px} }
-.card h3{font-family:var(--b);font-size:13px;font-weight:600;margin:0 0 2px;color:var(--ink)}
+.card h3{font-family:var(--b);font-size:13px;font-weight:600;margin:0 0 2px;color:var(--ink);
+  overflow-wrap:anywhere}
 .card .cap{font-family:var(--m);font-size:11px;color:var(--dim);margin-bottom:12px}
 
 /* ---------- графики ----------
@@ -336,3 +339,67 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 50px;
 .rec .rw a{color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(245,155,20,.35)}
 .rec .rw a:hover{color:var(--brand-hi);border-bottom-color:var(--brand)}
 .rec .rn{font-size:12px;color:var(--dim);line-height:1.45}
+
+/* Плеер в угадайке. Соотношение 16:9 держим через aspect-ratio,
+   иначе на узком экране iframe схлопывается в полоску. */
+.g-player{position:relative;width:100%;max-width:520px;aspect-ratio:16/9;
+  background:#000;border:1px solid var(--line);border-radius:2px;overflow:hidden}
+/* На широком экране плеер во всю карточку занимал бы 640px высоты и
+   выдавливал кнопки за пределы вида. На телефоне ограничение снимаем. */
+@media(max-width:700px){ .g-player{max-width:none} }
+.g-player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* ---------- профили артиста и стрима ---------- */
+.pf{position:fixed;inset:0;z-index:60;display:flex;align-items:flex-end;justify-content:center}
+.pf[hidden]{display:none}
+.pf-back{position:absolute;inset:0;background:rgba(6,6,8,.72);backdrop-filter:blur(3px)}
+.pf-win{position:relative;width:100%;max-width:860px;max-height:92vh;
+  display:flex;flex-direction:column;background:var(--panel);
+  border:1px solid var(--line);border-bottom:0;border-radius:4px 4px 0 0}
+@media(min-width:760px){
+  .pf{align-items:center}
+  .pf-win{max-height:86vh;border-bottom:1px solid var(--line);border-radius:4px}
+}
+.pf-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;
+  padding:16px 18px 14px;border-bottom:1px solid var(--line);background:var(--panel2)}
+.pf-head h2{font-family:var(--d);font-size:clamp(17px,3vw,23px);font-weight:600;
+  margin:0;letter-spacing:-.01em;overflow-wrap:anywhere}
+.pf-sub{font-family:var(--m);font-size:11px;color:var(--dim);margin-top:5px}
+.pf-x{flex:none;background:none;border:1px solid var(--line);color:var(--dim);
+  font-size:20px;line-height:1;width:38px;height:38px;border-radius:2px;cursor:pointer}
+.pf-x:hover{color:var(--brand-hi);border-color:var(--brand)}
+.pf-body{overflow-y:auto;padding:16px 18px 22px;-webkit-overflow-scrolling:touch}
+
+.pf-kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:16px}
+.pf-kpi>div{background:var(--panel);padding:11px 13px;display:flex;flex-direction:column;gap:4px}
+.pf-kpi b{font-family:var(--d);font-size:19px;font-weight:800;letter-spacing:-.02em;
+  overflow-wrap:anywhere}
+.pf-kpi span{font-family:var(--m);font-size:9px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--dim)}
+
+.pf-bars{display:flex;flex-direction:column;gap:5px;margin-bottom:6px}
+.pf-bar{display:grid;grid-template-columns:104px 1fr 44px;align-items:center;gap:9px}
+.pf-bn{font-family:var(--m);font-size:11px;color:var(--dim)}
+.pf-bt{height:11px;background:#0F0F12;border:1px solid #262029;border-radius:1px;position:relative}
+.pf-bt span{position:absolute;top:1px;bottom:1px;left:1px;border-radius:1px;min-width:3px}
+.pf-bv{font-family:var(--m);font-size:11px;text-align:right;color:var(--dim)}
+
+.pf-h{font-family:var(--m);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--dim);font-weight:400;margin:20px 0 9px}
+.pf-list{display:flex;flex-direction:column}
+.pf-row{display:grid;grid-template-columns:1fr auto;gap:4px 12px;
+  padding:9px 0;border-bottom:1px solid #232328}
+.pf-row:last-child{border-bottom:0}
+.pf-t{font-size:14px;line-height:1.4;overflow-wrap:anywhere}
+.pf-r{text-align:right}
+.pf-d{grid-column:1 / -1;font-family:var(--m);font-size:11px;color:var(--dim);
+  display:flex;gap:9px;flex-wrap:wrap}
+.pf-who{color:var(--dim);text-decoration:none}
+.pf-who:hover{color:var(--brand-hi)}
+.pf-vod{margin:0 0 14px;font-size:14px}
+
+/* имена и номера, по которым открывается профиль */
+[data-artist],[data-stream]{cursor:pointer}
+.pf-link{color:inherit;text-decoration:none;border-bottom:1px dotted rgba(160,160,168,.5)}
+.pf-link:hover{color:var(--brand-hi);border-bottom-color:var(--brand)}

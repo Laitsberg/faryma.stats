@@ -87,10 +87,12 @@ function build(raw) {
       genres: splitGenres(r['Жанр']),
       tags:   (r['Тэги'] || '').split(/[,\/]/).map(s => s.trim()).filter(Boolean),
       feature:(r['Фича'] || '').trim(),
+      pos: w.pos,
       min: toMinutes(r['Когда']),
       sec: toSeconds(r['Когда']),
       dur: null,
       platform: link ? link.platform : '',
+      ytId: link ? youtubeId(link.url) : '',
       search: (w.full + ' ' + user).toLowerCase(),
       parts: w.artist ? participants(w.artist, soloKeys).map(nameKey) : [],
       streamNum: stream ? stream.num : null,
@@ -125,6 +127,7 @@ function build(raw) {
   initControls();
   render();
   initGame();
+  initProfile();
 }
 
 /* Сколько времени заняло обсуждение трека.
@@ -139,9 +142,13 @@ function computeDurations() {
     byStream.get(r.streamNum).push(r);
   });
   byStream.forEach(list => {
-    list.sort((a, b) => a.sec - b.sec);
+    // по номеру, а не по тайм-коду: номер — это порядок, в котором
+    // треки шли на самом деле, а тайм-коды местами разъезжаются
+    list.sort((a, b) => (a.pos ?? 1e9) - (b.pos ?? 1e9));
     for (let i = 0; i < list.length - 1; i++) {
       const d = list[i + 1].sec - list[i].sec;
+      // отрицательная разница значит, что тайм-коды в таблице
+      // разошлись с порядком — такую пару просто пропускаем
       if (d >= DUR_MIN_SEC && d <= DUR_MAX_SEC) list[i].dur = d;
     }
   });
@@ -233,7 +240,9 @@ function renderSearch() {
     }));
 
   table('tSearch', [
-    { k: 'artist', t: 'исполнитель', lead: 1, w: '16%' },
+    { k: 'artist', t: 'исполнитель', lead: 1, w: '16%',
+      f: r => r.artist === '—' ? '—'
+            : `<a class="pf-link" href="#artist=${encodeURIComponent(r.artist)}" data-artist="${esc(r.artist)}">${esc(r.artist)}</a>` },
     { k: 'title',  t: 'трек', w: '24%', f: r => r.link
         ? `<a class="tlink" href="${esc(r.link.url)}" target="_blank" rel="noopener noreferrer">${esc(r.title)}</a><span class="plat">${esc(r.link.platform)}</span>`
         : esc(r.title) },
@@ -250,9 +259,9 @@ function renderSearch() {
         if (!r.when) return '—';
         const d = new Date(r.when).toLocaleDateString('ru-RU');
         // номер стрима ведёт прямо на момент разноса в записи
-        const st = r.moment
-          ? `<a class="tlink nowrap" href="${esc(r.moment)}" target="_blank" rel="noopener noreferrer">стрим №${r.stream}</a>`
-          : `<span class="plat nowrap">стрим №${r.stream}</span>`;
+        // номер ведёт в профиль стрима, а отдельная ссылка — на запись
+        const st = `<a class="pf-link nowrap" href="#stream=${r.stream}" data-stream="${r.stream}">стрим №${r.stream}</a>` +
+          (r.moment ? ` <a class="tlink nowrap" href="${esc(r.moment)}" target="_blank" rel="noopener noreferrer">▸</a>` : '');
         // без разделителя: в узкой колонке дата и стрим и так встают
         // друг под другом, а точка посередине повисала отдельной строкой
         return `<span class="nowrap">${d}</span> ${st}`;

@@ -159,12 +159,12 @@ function renderArtists(rows) {
     top: rs.filter(r => r.rate.tier === 'гениально').length
   }));
   table('tArtCount',
-    [{ k: 'a', t: 'исполнитель', lead: 1 }, { k: 'n', t: 'разносов', num: 1 },
+    [{ k: 'a', t: 'исполнитель', lead: 1, f: artistLink }, { k: 'n', t: 'разносов', num: 1 },
      { k: 'avg', t: 'ср. балл', num: 1, f: r => f2(r.avg) },
      { k: 'top', t: 'гениально', num: 1 }],
     all.sort((x, y) => y.n - x.n).slice(0, 60), 'n');
   table('tArtAvg',
-    [{ k: 'a', t: 'исполнитель', lead: 1 },
+    [{ k: 'a', t: 'исполнитель', lead: 1, f: artistLink },
      { k: 'avg', t: 'ср. балл', num: 1, f: r => f2(r.avg) },
      { k: 'n', t: 'разносов', num: 1 }],
     all.filter(x => x.n >= MIN_N.artistAvg).sort((x, y) => y.avg - x.avg).slice(0, 60), 'avg');
@@ -389,6 +389,7 @@ function renderRecords() {
     ? `<a href="${esc(r.moment)}" target="_blank" rel="noopener noreferrer">${esc(text)}</a>`
     : esc(text);
   const track = r => `${link(r, r.artist + ' — ' + r.title)}`;
+  const strm = n => `<a class="pf-link" href="#stream=${n}" data-stream="${n}">Стрим №${n}</a>`;
 
   const out = [];
   const push = (rv, rl, rw, rn) => out.push({ rv, rl, rw, rn });
@@ -419,23 +420,25 @@ function renderRecords() {
   if (st.length) {
     const byAvg = [...st].sort((a, b) => b.avg - a.avg);
     const top = byAvg[0], low = byAvg[byAvg.length - 1];
-    push(f2(top.avg), 'лучший эфир', `Стрим №${top.n}`,
+    push(f2(top.avg), 'лучший эфир', strm(top.n),
       `${fmtDate(top.date)} · ${top.cnt} ` + plural(top.cnt, 'трек', 'трека', 'треков'));
-    push(f2(low.avg), 'худший эфир', `Стрим №${low.n}`,
+    push(f2(low.avg), 'худший эфир', strm(low.n),
       `${fmtDate(low.date)} · ${low.cnt} ` + plural(low.cnt, 'трек', 'трека', 'треков'));
 
     const byLen = [...st].sort((a, b) => b.len - a.len)[0];
-    push((byLen.len / 3600).toFixed(1) + ' ч', 'самый длинный эфир', `Стрим №${byLen.n}`,
+    push((byLen.len / 3600).toFixed(1) + ' ч', 'самый длинный эфир', strm(byLen.n),
       `${fmtDate(byLen.date)} · ${byLen.cnt} ` + plural(byLen.cnt, 'трек', 'трека', 'треков'));
 
     const byCnt = [...st].sort((a, b) => b.cnt - a.cnt)[0];
-    push(num(byCnt.cnt), 'треков за один эфир', `Стрим №${byCnt.n}`,
+    push(num(byCnt.cnt), plural(byCnt.cnt, 'трек', 'трека', 'треков') + ' за один эфир', strm(byCnt.n),
       `${fmtDate(byCnt.date)} · ${(byCnt.len / 3600).toFixed(1)} ч`);
   }
 
   /* серии по хронологии */
+  // внутри эфира порядок задаёт номер трека, а не тайм-код: в таблице
+  // тайм-коды местами разъезжаются, а нумерация идёт подряд
   const chron = ROWS.filter(r => r.date)
-    .sort((a, b) => a.date - b.date || a.streamNum - b.streamNum || (a.sec ?? 0) - (b.sec ?? 0));
+    .sort((a, b) => a.date - b.date || a.streamNum - b.streamNum || (a.pos ?? 0) - (b.pos ?? 0));
 
   let run = 0, runTier = null, bestRun = 0, bestTier = null, bestAt = null;
   let dry = 0, bestDry = 0, dryAt = null;

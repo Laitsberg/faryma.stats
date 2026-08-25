@@ -67,7 +67,15 @@ function parseRate(raw) {
    встречается, а вот дефис трогать нельзя: он живёт внутри
    названий («Hi-Fi», «HOYO-MiX»). */
 function parseWhat(s) {
-  let t = String(s || '').replace(/^\s*\d+[).]\s*/, '').trim();
+  const raw = String(s || '');
+  // Номер трека внутри стрима. Это и есть настоящий порядок разносов:
+  // тайм-коды кое-где расходятся с ним (в стриме №19 у второго трека
+  // стоит 00:00, хотя первый идёт с 13:40), и сортировка по времени
+  // ставила треки не в том порядке.
+  const pm = raw.match(/^\s*(\d+)[).]/);
+  const pos = pm ? +pm[1] : null;
+
+  let t = raw.replace(/^\s*\d+[).]\s*/, '').trim();
 
   // иногда пробел вокруг тире забыт: «JAWS— VORTEX»
   const parts = t.split(/\s*[—–]\s+|\s+[—–]\s*/);
@@ -76,9 +84,9 @@ function parseWhat(s) {
     const artist = parts[0].trim();
     let title = parts.slice(1).join(' — ').trim();
     title = title.replace(/\s*[\{\[].*$/, '').trim();   // альт. название и источник
-    return { artist, title, full: t };
+    return { artist, title, full: t, pos };
   }
-  return { artist: '', title: t, full: t };
+  return { artist: '', title: t, full: t, pos };
 }
 
 /* ---------- источник трека ----------
@@ -178,6 +186,19 @@ function vkTime(sec) {
 function extractUrl(cell) {
   const m = String(cell || '').match(/(https?:\/\/\S+)/);
   return m ? m[1] : '';
+}
+
+/* Идентификатор ролика на YouTube — нужен для встроенного плеера.
+   Адреса в архиве встречаются во всех видах: youtu.be/ID,
+   youtube.com/watch?v=ID, m. и music.youtube.com. */
+function youtubeId(url) {
+  let u;
+  try { u = new URL(url); } catch { return ''; }
+  const host = u.hostname.replace(/^www\.|^m\./, '');
+  let id = '';
+  if (host === 'youtu.be') id = u.pathname.slice(1);
+  else if (/(^|\.)youtube\.com$/.test(host)) id = u.searchParams.get('v') || '';
+  return /^[\w-]{11}$/.test(id) ? id : '';
 }
 
 /* Ссылка на нужную минуту записи. Без тайм-кода — просто на стрим. */

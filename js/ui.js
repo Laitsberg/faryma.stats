@@ -5,6 +5,14 @@
 
 const $  = id => document.getElementById(id);
 
+/* Имя исполнителя как ссылка в его профиль */
+function artistLink(r) {
+  const n = r.a || r.artist || '';
+  return n && n !== '—'
+    ? `<a class="pf-link" href="#artist=${encodeURIComponent(n)}" data-artist="${esc(n)}">${esc(n)}</a>`
+    : esc(n || '—');
+}
+
 /* Плашка оценки в цвет своей ступени */
 function ratePill(label) {
   if (!label || label === '—') return '—';
