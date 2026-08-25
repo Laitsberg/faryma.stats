@@ -302,10 +302,11 @@ function renderSearch() {
     { k: 'when',   t: 'когда', mono: 1, w: '10%', f: r => {
         if (!r.when) return '—';
         const d = new Date(r.when).toLocaleDateString('ru-RU');
-        // номер стрима ведёт прямо на момент разноса в записи
-        // номер ведёт в профиль стрима, а отдельная ссылка — на запись
+        // номер ведёт в профиль стрима, а отдельная ссылка — на запись.
+        // Подписываем её словом: одинокий треугольник был почти не виден
+        // и в него было трудно попасть пальцем.
         const st = `<a class="pf-link nowrap" href="#stream=${r.stream}" data-stream="${r.stream}">стрим №${r.stream}</a>` +
-          (r.moment ? ` <a class="tlink nowrap" href="${esc(r.moment)}" target="_blank" rel="noopener noreferrer">▸</a>` : '');
+          (r.moment ? ` <a class="mom" href="${esc(r.moment)}" target="_blank" rel="noopener noreferrer">▶ разнос</a>` : '');
         // без разделителя: в узкой колонке дата и стрим и так встают
         // друг под другом, а точка посередине повисала отдельной строкой
         return `<span class="nowrap">${d}</span> ${st}`;

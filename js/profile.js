@@ -93,7 +93,7 @@ function trackList(rows, opts = {}) {
       ? ` <a class="tlink nowrap" href="#user=${encodeURIComponent(r.user)}" data-user="${esc(r.user)}">принёс ${esc(r.user)}</a>`
       : '';
     const moment = r.moment
-      ? ` <a class="tlink nowrap" href="${esc(r.moment)}" target="_blank" rel="noopener noreferrer">разнос</a>`
+      ? ` <a class="mom" href="${esc(r.moment)}" target="_blank" rel="noopener noreferrer">▶ разнос</a>`
       : '';
     return `<div class="pf-row">
       <div class="pf-t">${who}${title}</div>
