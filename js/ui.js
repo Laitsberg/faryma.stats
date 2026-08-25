@@ -13,6 +13,14 @@ function artistLink(r) {
     : esc(n || '—');
 }
 
+/* Имя заказчика как ссылка в его профиль */
+function userLink(r) {
+  const n = r.u || r.user || '';
+  return n && n !== '—'
+    ? `<a class="pf-link" href="#user=${encodeURIComponent(n)}" data-user="${esc(n)}">${esc(n)}</a>`
+    : esc(n || '—');
+}
+
 /* Плашка оценки в цвет своей ступени */
 function ratePill(label) {
   if (!label || label === '—') return '—';

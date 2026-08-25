@@ -1,18 +1,22 @@
 /* ============================================================
-   ПРОФИЛИ АРТИСТА И СТРИМА
+   ПРОФИЛИ ИСПОЛНИТЕЛЯ, ЗАКАЗЧИКА И СТРИМА
    Открываются поверх страницы по клику на имя или номер стрима.
-   Адрес меняется на #artist=… или #stream=…, поэтому на конкретный
-   профиль можно дать ссылку, а «назад» в браузере его закрывает.
+   Адрес меняется на #artist=…, #user=… или #stream=…, поэтому на
+   конкретный профиль можно дать ссылку, а «назад» в браузере его
+   закрывает.
    ============================================================ */
 
 function initProfile() {
   $('pfClose').onclick = closeProfile;
   $('pfBack').onclick = closeProfile;
 
-  // клик по любому элементу с data-artist / data-stream, где бы он ни был
+  // клик по любому элементу с data-artist / data-user / data-stream,
+  // где бы он ни был
   document.addEventListener('click', e => {
     const a = e.target.closest('[data-artist]');
     if (a) { e.preventDefault(); location.hash = 'artist=' + encodeURIComponent(a.dataset.artist); return; }
+    const u = e.target.closest('[data-user]');
+    if (u) { e.preventDefault(); location.hash = 'user=' + encodeURIComponent(u.dataset.user); return; }
     const s = e.target.closest('[data-stream]');
     if (s) { e.preventDefault(); location.hash = 'stream=' + s.dataset.stream; }
   });
@@ -23,10 +27,11 @@ function initProfile() {
 }
 
 function routeProfile() {
-  const m = location.hash.match(/^#(artist|stream)=(.*)$/);
+  const m = location.hash.match(/^#(artist|user|stream)=(.*)$/);
   if (!m) { hideProfile(); return; }
-  if (m[1] === 'artist') showArtist(decodeURIComponent(m[2]));
-  else showStream(+m[2]);
+  if (m[1] === 'artist')      showArtist(decodeURIComponent(m[2]));
+  else if (m[1] === 'user')   showUser(decodeURIComponent(m[2]));
+  else                        showStream(+m[2]);
 }
 
 function closeProfile() {
@@ -76,13 +81,16 @@ function trackList(rows, opts = {}) {
     const who = opts.showArtist
       ? `<a class="pf-who" href="#artist=${encodeURIComponent(r.artist)}" data-artist="${esc(r.artist)}">${esc(r.artist)}</a> — `
       : '';
+    const from = opts.showUser && r.user
+      ? ` <a class="tlink nowrap" href="#user=${encodeURIComponent(r.user)}" data-user="${esc(r.user)}">принёс ${esc(r.user)}</a>`
+      : '';
     const moment = r.moment
       ? ` <a class="tlink nowrap" href="${esc(r.moment)}" target="_blank" rel="noopener noreferrer">разнос</a>`
       : '';
     return `<div class="pf-row">
       <div class="pf-t">${who}${title}</div>
       <div class="pf-r">${ratePill(r.rate.label)}</div>
-      <div class="pf-d">${esc(when)} ${right}${moment}</div>
+      <div class="pf-d">${esc(when)} ${right}${from}${moment}</div>
     </div>`;
   }).join('') + '</div>';
 }
@@ -117,6 +125,47 @@ function showArtist(name) {
     trackList([...rows].sort((x, y) => (y.date || 0) - (x.date || 0)), { showStream: true }));
 }
 
+/* ---------- профиль заказчика ---------- */
+function showUser(name) {
+  const key = userKey(name);
+  const rows = ROWS.filter(r => r.userKey === key);
+  if (!rows.length) { hideProfile(); return; }
+
+  const shown = USER_NAMES.get(key) || name;
+  const a = avg(rows.map(r => r.rate.score));
+  const best = [...rows].sort((x, y) => y.rate.score - x.rate.score)[0];
+  const byDate = [...rows].filter(r => r.date).sort((x, y) => x.date - y.date);
+  const span = byDate.length
+    ? `${byDate[0].date.toLocaleDateString('ru-RU')} — ${byDate[byDate.length - 1].date.toLocaleDateString('ru-RU')}`
+    : '';
+
+  const kpi = [
+    [num(rows.length), plural(rows.length, 'трек', 'трека', 'треков')],
+    [f2(a), 'средний балл'],
+    [best.rate.label, 'лучший результат'],
+    [num(rows.filter(r => r.rate.tier === 'гениально').length), 'в «гениально»']
+  ];
+
+  // Чем именно человек кормит композитора — то, чего нет в профиле
+  // исполнителя: у заказчика есть свой вкус, и он тут виден.
+  const fav = [...group(rows, r => r.genres)]
+    .map(([k, rs]) => ({ k, n: rs.length }))
+    .sort((x, y) => y.n - x.n).slice(0, 5);
+  const favHtml = fav.length
+    ? `<h3 class="pf-h">Чаще всего приносит</h3><div class="pf-tags">` +
+      fav.map(g => `<span class="pf-tag">${esc(g.k)} <b>${num(g.n)}</b></span>`).join('') +
+      `</div>`
+    : '';
+
+  openProfile(shown, span,
+    `<div class="pf-kpi">` + kpi.map(([v, l]) =>
+      `<div><b>${esc(v)}</b><span>${esc(l)}</span></div>`).join('') + `</div>` +
+    tierBars(rows) + favHtml +
+    `<h3 class="pf-h">Всё, что принёс</h3>` +
+    trackList([...rows].sort((x, y) => (y.date || 0) - (x.date || 0)),
+      { showArtist: true, showStream: true }));
+}
+
 /* ---------- профиль стрима ---------- */
 function showStream(numId) {
   const rows = ROWS.filter(r => r.streamNum === numId)
@@ -145,5 +194,5 @@ function showStream(numId) {
       `<div><b>${esc(v)}</b><span>${esc(l)}</span></div>`).join('') + `</div>` +
     vod + tierBars(rows) +
     `<h3 class="pf-h">Все треки по порядку</h3>` +
-    trackList(rows, { showArtist: true }));
+    trackList(rows, { showArtist: true, showUser: true }));
 }

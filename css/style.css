@@ -398,6 +398,11 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 50px;
 .pf-who{color:var(--dim);text-decoration:none}
 .pf-who:hover{color:var(--brand-hi)}
 .pf-vod{margin:0 0 14px;font-size:14px}
+/* любимые жанры заказчика — компактным рядом плашек */
+.pf-tags{display:flex;flex-wrap:wrap;gap:6px}
+.pf-tag{font-family:var(--m);font-size:11px;color:var(--dim);background:var(--panel);
+  border:1px solid var(--line);border-radius:2px;padding:5px 9px}
+.pf-tag b{color:var(--brand-hi);font-weight:600;margin-left:5px}
 
 /* имена и номера, по которым открывается профиль */
 [data-artist],[data-stream]{cursor:pointer}

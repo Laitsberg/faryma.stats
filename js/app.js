@@ -247,7 +247,7 @@ function renderSearch() {
         ? `<a class="tlink" href="${esc(r.link.url)}" target="_blank" rel="noopener noreferrer">${esc(r.title)}</a><span class="plat">${esc(r.link.platform)}</span>`
         : esc(r.title) },
     { k: 'label',  t: 'оценка', mono: 1, sortK: 'score', w: '11%', f: r => ratePill(r.label) },
-    { k: 'user',   t: 'заказчик', mono: 1, w: '12%' },
+    { k: 'user',   t: 'заказчик', mono: 1, w: '12%', f: userLink },
     { k: 'genre',  t: 'жанр', w: '12%' },
     // «Откуда» стоит рядом с жанром, а не между исполнителем и треком:
     // источник известен у 44% строк, и посередине он рвал бы главную

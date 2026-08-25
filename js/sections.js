@@ -184,7 +184,7 @@ function renderUsers(rows) {
     bestScore: Math.max(...rs.map(r => r.rate.score))
   })).filter(x => x.n >= MIN_N.user);
   table('tUsers',
-    [{ k: 'u', t: 'заказчик', lead: 1 }, { k: 'n', t: 'принёс', num: 1 },
+    [{ k: 'u', t: 'заказчик', lead: 1, f: userLink }, { k: 'n', t: 'принёс', num: 1 },
      { k: 'avg', t: 'ср. балл', num: 1, f: r => f2(r.avg) },
      { k: 'genfam', t: 'в гениально', num: 1 }, { k: 'gen', t: 'чистых', num: 1 },
      // та же плашка, что в поиске: цвет ступени читается быстрее текста
