@@ -37,8 +37,10 @@ function nextTrack() {
   gameTrack = pool[Math.floor(Math.random() * pool.length)];
   gameAnswered = false;
 
-  $('gArtist').innerHTML =
-    `<a class="pf-link" href="#artist=${encodeURIComponent(gameTrack.artist)}" data-artist="${esc(gameTrack.artist)}">${esc(gameTrack.artist)}</a>`;
+  // Имя пока просто текст: в карточке исполнителя видны оценки всех его
+  // треков, включая загаданный, — ссылка тут была бы подсказкой.
+  // Она появится в ответе, когда спойлерить уже нечего.
+  $('gArtist').textContent = gameTrack.artist;
   $('gTitle').innerHTML =
     `<a href="${esc(gameTrack.link.url)}" target="_blank" rel="noopener noreferrer">${esc(gameTrack.title)}</a>`;
 
@@ -57,6 +59,7 @@ function nextTrack() {
 
   $('gAnswer').hidden = true;
   $('gAnswer').className = 'g-answer';
+  $('gAnswer').innerHTML = '';    // чтобы от прошлого трека ничего не осталось
   $('gNext').textContent = 'пропустить';
   renderTiers();
 }
@@ -98,6 +101,10 @@ function answer(tier) {
     `Он поставил ${ratePill(gameTrack.rate.label)}` +
     (when ? ` <span class="g-meta">${esc(when)}, <a class="pf-link" href="#stream=${gameTrack.streamNum}" data-stream="${gameTrack.streamNum}">стрим №${gameTrack.streamNum}</a></span>` : '') + link;
   a.hidden = false;
+
+  // теперь можно и в карточку исполнителя
+  $('gArtist').innerHTML =
+    `<a class="pf-link" href="#artist=${encodeURIComponent(gameTrack.artist)}" data-artist="${esc(gameTrack.artist)}">${esc(gameTrack.artist)}</a>`;
 
   const s = loadScore();
   s.total++;
