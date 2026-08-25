@@ -29,9 +29,9 @@ function initGame() {
 }
 
 function nextTrack() {
-  // Только YouTube: он открывается без ВПН и без входа в аккаунт, а
-  // Spotify у большей части зрителей просто не заработает. Заодно
-  // ролик показывается прямо на странице, а не в новой вкладке.
+  // Только YouTube: у Spotify без ВПН и входа в аккаунт не работает
+  // вообще ничего, а ютуб хотя бы открывается у большинства. У кого
+  // не открывается — см. showPoster(): игра там всё равно работает.
   const pool = ROWS.filter(r => r.ytId && r.artist);
   if (!pool.length) return;
   gameTrack = pool[Math.floor(Math.random() * pool.length)];
@@ -44,13 +44,7 @@ function nextTrack() {
   $('gTitle').innerHTML =
     `<a href="${esc(gameTrack.link.url)}" target="_blank" rel="noopener noreferrer">${esc(gameTrack.title)}</a>`;
 
-  // youtube-nocookie отдаёт тот же плеер, но не ставит рекламные куки
-  // тем, кто просто открыл страницу и ничего не запускал
-  $('gPlayer').innerHTML =
-    `<iframe src="https://www.youtube-nocookie.com/embed/${esc(gameTrack.ytId)}"
-       title="${esc(gameTrack.artist)} — ${esc(gameTrack.title)}"
-       loading="lazy" allow="encrypted-media; picture-in-picture"
-       allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+  showPoster(gameTrack);
 
   const bits = [];
   if (gameTrack.genres.length) bits.push(gameTrack.genres.join(' / '));
@@ -62,6 +56,63 @@ function nextTrack() {
   $('gAnswer').innerHTML = '';    // чтобы от прошлого трека ничего не осталось
   $('gNext').textContent = 'пропустить';
   renderTiers();
+}
+
+/* ---------- плеер ----------
+   Ролик не вставляется сразу: сначала показываем обложку с кнопкой.
+   Так страница не тянет плеер на каждый трек, а главное — если ютуб
+   у человека не открывается (провайдер режет, или он под ВПН и ютуб
+   требует войти в аккаунт), вместо серого битого окна он видит
+   понятное объяснение и ссылку. Починить это со своей стороны
+   нельзя — это между зрителем и гуглом, — но сломанным сайт
+   выглядеть не должен. */
+function showPoster(t) {
+  const box = $('gPlayer');
+  const url = 'https://youtu.be/' + t.ytId;
+  box.innerHTML =
+    `<img class="g-poster" alt="" src="https://i.ytimg.com/vi/${esc(t.ytId)}/hqdefault.jpg">
+     <button class="g-play" type="button" aria-label="Слушать">▶</button>`;
+
+  box.querySelector('.g-play').onclick = () => playHere(t);
+
+  // Обложка лежит на другом домене ютуба: не загрузилась — значит
+  // ютуб отсюда недоступен целиком, и плеер тоже не откроется.
+  const off = () => {
+    if (gameTrack !== t) return;              // трек уже сменился
+    clearTimeout(wait);
+    box.innerHTML =
+      `<div class="g-off">
+         <b>Ютуб отсюда не открывается</b>
+         <span>Провайдер режет, либо ютуб просит войти в аккаунт из-под ВПН.
+               Угадывать можно и без прослушивания.</span>
+         <span class="g-off-act">
+           <a href="${esc(url)}" target="_blank" rel="noopener noreferrer">открыть в новой вкладке</a>
+           <button type="button" class="g-anyway">всё равно попробовать</button>
+         </span>
+       </div>`;
+    // проверка по обложке — только догадка, поэтому оставляем выход
+    box.querySelector('.g-anyway').onclick = () => playHere(t);
+  };
+
+  const img = box.querySelector('.g-poster');
+  img.onerror = off;
+  // Соединение может не оборваться, а просто висеть — именно так ютуб
+  // ведёт себя при замедлении. Ждать вечно нельзя: пять секунд, и
+  // показываем то же объяснение, что и при явной ошибке.
+  const wait = setTimeout(() => { if (!img.naturalWidth) off(); }, 5000);
+  img.onload = () => clearTimeout(wait);
+  // картинка могла отвалиться ещё до того, как мы повесили обработчик
+  if (img.complete && !img.naturalWidth) off();
+}
+
+/* Вставить настоящий плеер. youtube-nocookie отдаёт тот же ролик,
+   но не ставит рекламные куки тем, кто ничего не запускал. */
+function playHere(t) {
+  $('gPlayer').innerHTML =
+    `<iframe src="https://www.youtube-nocookie.com/embed/${esc(t.ytId)}?autoplay=1"
+       title="${esc(t.artist)} — ${esc(t.title)}"
+       allow="autoplay; encrypted-media; picture-in-picture"
+       allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
 }
 
 function renderTiers() {

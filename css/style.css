@@ -348,6 +348,25 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 50px;
    выдавливал кнопки за пределы вида. На телефоне ограничение снимаем. */
 @media(max-width:700px){ .g-player{max-width:none} }
 .g-player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+/* обложка вместо плеера, пока не нажали */
+.g-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  border:0;display:block}
+.g-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:62px;height:44px;border:0;border-radius:10px;cursor:pointer;
+  background:rgba(12,12,14,.72);color:#fff;font-size:19px;line-height:1;
+  display:flex;align-items:center;justify-content:center;
+  padding-left:3px;transition:background .15s}
+.g-play:hover{background:var(--brand-lo)}
+/* ютуб не открывается — объясняем, а не показываем битое окно */
+.g-off{position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:7px;text-align:center;
+  padding:16px;background:var(--panel2)}
+.g-off b{font-family:var(--b);font-size:14px}
+.g-off span{font-family:var(--m);font-size:11px;color:var(--dim);max-width:44ch;
+  line-height:1.5}
+.g-off-act{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:3px}
+.g-anyway{background:none;border:0;padding:0;font:inherit;font-size:11px;
+  color:var(--brand-hi);cursor:pointer;text-decoration:underline}
 
 /* ---------- профили артиста и стрима ---------- */
 .pf{position:fixed;inset:0;z-index:60;display:flex;align-items:flex-end;justify-content:center}
