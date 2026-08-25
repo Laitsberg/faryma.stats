@@ -394,13 +394,14 @@ function renderRecords() {
   const out = [];
   const push = (rv, rl, rw, rn) => out.push({ rv, rl, rw, rn });
 
-  /* самый долгий и самый короткий разбор */
-  const dur = ROWS.filter(r => r.dur != null).sort((a, b) => b.dur - a.dur);
+  /* Самый короткий разбор. Самого долгого здесь нет намеренно:
+     тайм-коды не отличают долгий разнос от разноса, после которого
+     композитор ушёл на перерыв, так что «рекорд» всегда упирался
+     в верхнюю отсечку и означал не разнос, а паузу. */
+  const dur = ROWS.filter(r => r.dur != null).sort((a, b) => a.dur - b.dur);
   if (dur.length) {
-    const a = dur[0], b = dur[dur.length - 1];
-    push(mins(a.dur) + ' мин', 'самый долгий разнос', track(a),
-      `${a.rate.label} · стрим №${a.streamNum}`);
-    push(mins(b.dur) + ' мин', 'самый короткий', track(b),
+    const b = dur[0];
+    push(mins(b.dur) + ' мин', 'самый короткий разнос', track(b),
       `${b.rate.label} · стрим №${b.streamNum}`);
   }
 
@@ -432,6 +433,15 @@ function renderRecords() {
     const byCnt = [...st].sort((a, b) => b.cnt - a.cnt)[0];
     push(num(byCnt.cnt), plural(byCnt.cnt, 'трек', 'трека', 'треков') + ' за один эфир', strm(byCnt.n),
       `${fmtDate(byCnt.date)} · ${(byCnt.len / 3600).toFixed(1)} ч`);
+
+    // Темп эфира: в отличие от длины одного разноса он измерим —
+    // перерывы входят в общее время у всех стримов одинаково.
+    const темп = st.filter(x => x.len >= 3600)
+      .map(x => ({ ...x, ph: x.cnt / (x.len / 3600) }))
+      .sort((a, b) => b.ph - a.ph)[0];
+    if (темп) push(f2(темп.ph), 'трека в час — самый быстрый эфир', strm(темп.n),
+      `${fmtDate(темп.date)} · ${темп.cnt} ` +
+      plural(темп.cnt, 'трек', 'трека', 'треков') + ` за ${(темп.len / 3600).toFixed(1)} ч`);
   }
 
   /* серии по хронологии */
