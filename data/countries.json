@@ -1,6 +1,16 @@
 {
- "generated": "2026-08-25T12:06:02.557Z",
+ "generated": "2026-08-25T16:51:28.984Z",
  "artists": {
+  "7": {
+   "name": "7",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "91f9c96b-1f06-4c44-8360-eaababab072a",
+   "mbName": "Tom 7"
+  },
   "22": {
    "name": "22",
    "tracks": 1,
@@ -34093,6 +34103,7280 @@
    "score": 100,
    "mbid": "d5c16174-c228-478b-a12a-eafa758ff0d6",
    "mbName": "Кассиопея"
+  },
+  "kasane teto": {
+   "name": "Kasane Teto",
+   "tracks": 12,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "0f02d07f-4aef-452e-b5af-0eeee9d87ed8",
+   "mbName": "kasane teto"
+  },
+  "jean-noël godard": {
+   "name": "Jean-Noël Godard",
+   "tracks": 9,
+   "country": "FR",
+   "area": "France",
+   "areaId": "08310658-51eb-3801-80de-5a0739207115",
+   "score": 100,
+   "mbid": "b9401f15-d469-404f-94fd-a66bb87ac0fd",
+   "mbName": "Jean-Noël Godard"
+  },
+  "the chalkeaters": {
+   "name": "The Chalkeaters",
+   "tracks": 6,
+   "country": "RU",
+   "area": "Sankt-Peterburg",
+   "areaId": "808e1ef8-5390-4300-a615-c4df977cc349",
+   "score": 100,
+   "mbid": "c5b429ae-aae3-4b71-9ecb-2d918c4bb98b",
+   "mbName": "The Chalkeaters",
+   "viaArea": true
+  },
+  "aiobahn": {
+   "name": "Aiobahn",
+   "tracks": 6,
+   "country": "KR",
+   "area": "South Korea",
+   "areaId": "b9f7d640-46e8-313e-b158-ded6d18593b3",
+   "score": 100,
+   "mbid": "85188b12-0c2a-4879-a98d-fa0f6efb4e89",
+   "mbName": "Aiobahn"
+  },
+  "deco*27": {
+   "name": "DECO*27",
+   "tracks": 6,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "bd247ab3-c22d-4b5d-a6fd-437771cacbbe",
+   "mbName": "DECO*27"
+  },
+  "nei kino": {
+   "name": "Nei Kino",
+   "tracks": 6,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "2308efce-58db-4aa8-b95a-3e826ad1c115",
+   "mbName": "木野寧"
+  },
+  "ashley barrett": {
+   "name": "Ashley Barrett",
+   "tracks": 6,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "31301a95-5773-43f0-b12d-a6994998e4ab",
+   "mbName": "Ashley Barrett"
+  },
+  "aiobahn +81": {
+   "name": "Aiobahn +81",
+   "tracks": 5,
+   "country": "KR",
+   "area": "South Korea",
+   "areaId": "b9f7d640-46e8-313e-b158-ded6d18593b3",
+   "score": 100,
+   "mbid": "a39cf062-a860-4e22-ac59-1a8ebc65a8ff",
+   "mbName": "Aiobahn +81"
+  },
+  "naoki hashimoto": {
+   "name": "Naoki Hashimoto",
+   "tracks": 5,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "80d5f30a-3010-4435-a5cb-ea4490f0a47f",
+   "mbName": "橋本直樹"
+  },
+  "kikuo": {
+   "name": "Kikuo",
+   "tracks": 5,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "2feabd45-4cb0-4dd2-a647-24b37f9f3988",
+   "mbName": "Kikuo"
+  },
+  "kagamine rin": {
+   "name": "Kagamine Rin",
+   "tracks": 4,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "e1aa2807-9cdf-412b-a390-2103cfc725ef",
+   "mbName": "鏡音リン"
+  },
+  "flower": {
+   "name": "flower",
+   "tracks": 4,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "cefc541b-89bb-47ee-a895-5c962dada086",
+   "mbName": "FLOWER FLOWER"
+  },
+  "jason hayes": {
+   "name": "Jason Hayes",
+   "tracks": 4,
+   "country": "US",
+   "area": "New Orleans",
+   "areaId": "3c5a0506-d852-4e96-8d1e-d8126328f3be",
+   "score": 100,
+   "mbid": "7fd43bc8-b5ff-45ed-8ce5-1b0c17114a9e",
+   "mbName": "Jason Hayes",
+   "viaArea": true
+  },
+  "laco": {
+   "name": "Laco",
+   "tracks": 4,
+   "country": "SK",
+   "area": "Slovakia",
+   "areaId": "eb52ca74-dd11-37a1-a3fa-154430bf2df2",
+   "score": 100,
+   "mbid": "4eb8f224-fe01-407f-84f1-d1e31275d276",
+   "mbName": "Laco Lučenič"
+  },
+  "hatsune miku & kasane teto": {
+   "name": "Hatsune Miku & Kasane Teto",
+   "tracks": 4,
+   "country": null,
+   "score": 0
+  },
+  "kaai yuki": {
+   "name": "Kaai Yuki",
+   "tracks": 4,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "e257f5bd-33ee-450a-973a-ad06eb25eeeb",
+   "mbName": "歌愛ユキ"
+  },
+  "satapan p": {
+   "name": "Satapan P",
+   "tracks": 4,
+   "country": null,
+   "score": 0
+  },
+  "azari": {
+   "name": "Azari",
+   "tracks": 3,
+   "country": "CA",
+   "area": "Canada",
+   "areaId": "71bbafaa-e825-3e15-8ca9-017dcad1748b",
+   "score": 100,
+   "mbid": "4b238c9c-c5eb-4900-92ef-1af425356f5a",
+   "mbName": "Azari & III"
+  },
+  "ashnikko": {
+   "name": "Ashnikko",
+   "tracks": 3,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "6dee6b6f-aa72-424c-9c8c-0d31ba5ff673",
+   "mbName": "Ashnikko"
+  },
+  "ryo (supercell)": {
+   "name": "Ryo (supercell)",
+   "tracks": 3,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "aabc3d78-218b-4e98-95b7-fe6388adef2d",
+   "mbName": "ryo"
+  },
+  "shihori": {
+   "name": "Shihori",
+   "tracks": 3,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "017e63ad-2239-4696-a099-f99ccc86fca4",
+   "mbName": "しほり"
+  },
+  "giga": {
+   "name": "Giga",
+   "tracks": 3,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "fc7a99ac-32f0-4e2a-a2eb-03670470003d",
+   "mbName": "Giga"
+  },
+  "yuyoyuppe": {
+   "name": "Yuyoyuppe",
+   "tracks": 3,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "fc65606d-5ec2-4492-8c48-e914a787f9da",
+   "mbName": "ゆよゆっぺ"
+  },
+  "natsuki karin": {
+   "name": "Natsuki Karin",
+   "tracks": 3,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "1552a7e2-0e45-4e98-a360-3cbe006b57b4",
+   "mbName": "夏色花梨"
+  },
+  "soooo": {
+   "name": "SOOOO",
+   "tracks": 3,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "f9c9bddc-8629-477a-a141-eef1b109d08d",
+   "mbName": "SOOOO"
+  },
+  "inabakumori": {
+   "name": "Inabakumori",
+   "tracks": 3,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "46196b9c-affa-4616-b53b-e967c8bd70e0",
+   "mbName": "稲葉曇"
+  },
+  "артур беркут": {
+   "name": "Артур Беркут",
+   "tracks": 3,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "c54bb100-d5fe-4c03-8596-557930811015",
+   "mbName": "Артур Беркут"
+  },
+  "victor crews": {
+   "name": "Victor Crews",
+   "tracks": 3,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "84d62743-453d-4c0b-970a-52b70c8b47ea",
+   "mbName": "Victor Crews"
+  },
+  "lotus juice": {
+   "name": "Lotus Juice",
+   "tracks": 3,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "c731e592-2620-4f4c-859d-39e294b06b35",
+   "mbName": "Lotus Juice"
+  },
+  "kagamine rin & len": {
+   "name": "Kagamine Rin & Len",
+   "tracks": 2,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "c30801d9-32bc-4628-a61c-ac1ee31be1dd",
+   "mbName": "Kagamines"
+  },
+  "kafu": {
+   "name": "KAFU",
+   "tracks": 2,
+   "country": "IT",
+   "area": "Roma",
+   "areaId": "dccd77b2-bd3d-49eb-a98f-fd58e87f481e",
+   "score": 100,
+   "mbid": "04d5ee24-4bb2-4be8-9d21-8364bcfba447",
+   "mbName": "Kafu",
+   "viaArea": true
+  },
+  "ho-kago tea time": {
+   "name": "Ho-kago Tea Time",
+   "tracks": 2,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "9ac83e0c-6a90-41cf-b06f-527ed0a79ffe",
+   "mbName": "放課後ティータイム"
+  },
+  "cassie wei": {
+   "name": "Cassie Wei",
+   "tracks": 2,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "44fff26f-8536-4604-9750-fe2cc3326207",
+   "mbName": "Cassie Wei"
+  },
+  "hololive english": {
+   "name": "hololive English",
+   "tracks": 2,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "e8c99382-c5c7-4d79-92e8-6cac89fe13a5",
+   "mbName": "hololive English -Council-"
+  },
+  "takanashi kiara": {
+   "name": "Takanashi Kiara",
+   "tracks": 2,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "9eb5b19e-ec49-464c-90ba-d75ca3a5368c",
+   "mbName": "Takanashi Kiara"
+  },
+  "irys": {
+   "name": "IRyS",
+   "tracks": 2,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "89d96ea2-ab91-4b1c-89e7-d255690ba34d",
+   "mbName": "IRyS"
+  },
+  "ouro kronii": {
+   "name": "Ouro Kronii",
+   "tracks": 2,
+   "country": "CA",
+   "area": "Canada",
+   "areaId": "71bbafaa-e825-3e15-8ca9-017dcad1748b",
+   "score": 100,
+   "mbid": "061b13ae-be1d-490d-b363-1418e9d5c6ea",
+   "mbName": "Ouro Kronii"
+  },
+  "raora panthera": {
+   "name": "Raora Panthera",
+   "tracks": 2,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "073cead6-f94f-4ed9-b804-545848c92f98",
+   "mbName": "Raora Panthera"
+  },
+  "cecilia immergreen": {
+   "name": "Cecilia Immergreen",
+   "tracks": 2,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "fc64d6b5-f467-4f9c-b049-ea7ddefb6883",
+   "mbName": "Cecilia Immergreen"
+  },
+  "gigi murin": {
+   "name": "Gigi Murin",
+   "tracks": 2,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "3a46809a-701b-4ebd-ad6d-dfa720daa71e",
+   "mbName": "Gigi Murin"
+  },
+  "zorn": {
+   "name": "ZORN",
+   "tracks": 2,
+   "country": "DE",
+   "area": "Germany",
+   "areaId": "85752fda-13c4-31a3-bee5-0e5cb1f51dad",
+   "score": 100,
+   "mbid": "998a008e-f345-44ac-9a4d-d97f5d1c4794",
+   "mbName": "Zorn"
+  },
+  "rosalía": {
+   "name": "ROSALÍA",
+   "tracks": 2,
+   "country": "ES",
+   "area": "Spain",
+   "areaId": "471c46a7-afc5-31c4-923c-d0444f5053a4",
+   "score": 100,
+   "mbid": "25f3abd9-63b5-471a-bd25-feb9672dfa11",
+   "mbName": "ROSALÍA"
+  },
+  "tsumikusa": {
+   "name": "Tsumikusa",
+   "tracks": 2,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "ddd3e7d7-a445-4748-bfc2-ac186adf7136",
+   "mbName": "罪草"
+  },
+  "trap chick": {
+   "name": "TRAP CHICK",
+   "tracks": 2,
+   "country": "KR",
+   "area": "South Korea",
+   "areaId": "b9f7d640-46e8-313e-b158-ded6d18593b3",
+   "score": 100,
+   "mbid": "94d1ab07-572f-4679-a035-8bb25cd41e8b",
+   "mbName": "트랩칙"
+  },
+  "shinra-bansho": {
+   "name": "Shinra-Bansho",
+   "tracks": 2,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "9181b712-bff2-4d89-8537-d75ebc63fd01",
+   "mbName": "森羅万象"
+  },
+  "captainsparklez": {
+   "name": "CaptainSparklez",
+   "tracks": 2,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "1720435c-2575-419d-8e0c-cfa8ff4225de",
+   "mbName": "Jordan Maron"
+  },
+  "tryhardninja": {
+   "name": "TryHardNinja",
+   "tracks": 2,
+   "country": "US",
+   "area": "Nevada",
+   "areaId": "ab47b3b2-838d-463c-9907-30dcd3438d65",
+   "score": 100,
+   "mbid": "ab2910b1-8b43-481d-81c1-47646069874f",
+   "mbName": "TryHardNinja",
+   "viaArea": true
+  },
+  "megurine luka": {
+   "name": "Megurine Luka",
+   "tracks": 2,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "846fc434-3c94-4992-98c6-14dd1cee1a2a",
+   "mbName": "巡音ルカ"
+  },
+  "грязный рубль": {
+   "name": "Грязный рубль",
+   "tracks": 2,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "af6d1121-d906-4b52-be4e-a0da9e5445bd",
+   "mbName": "Грязный рубль"
+  },
+  "airi suzuki": {
+   "name": "Airi Suzuki",
+   "tracks": 2,
+   "country": "DE",
+   "area": "Germany",
+   "areaId": "85752fda-13c4-31a3-bee5-0e5cb1f51dad",
+   "score": 100,
+   "mbid": "2ed93835-f824-42d0-8725-eb92d44b8c82",
+   "mbName": "Airi Suzuki"
+  },
+  "ludacris": {
+   "name": "Ludacris",
+   "tracks": 2,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "0638ba22-040f-438d-83a5-9b670c4adaf5",
+   "mbName": "Ludacris"
+  },
+  "mako": {
+   "name": "Mako",
+   "tracks": 2,
+   "country": "GB",
+   "area": "Coventry",
+   "areaId": "aab979a4-b106-4baa-a4a3-fc45f775cff9",
+   "score": 100,
+   "mbid": "983fbe15-9eb6-4212-92a0-3d92e6489a7e",
+   "mbName": "MakO",
+   "viaArea": true
+  },
+  "leo/need": {
+   "name": "Leo/need",
+   "tracks": 2,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "6765dfdf-40a1-4bdb-a595-4a0abcc32681",
+   "mbName": "Leo/need"
+  },
+  "casey lee williams": {
+   "name": "Casey Lee Williams",
+   "tracks": 2,
+   "country": "US",
+   "area": "Boston",
+   "areaId": "e331bfdf-b908-429c-a79b-710cf9c06abb",
+   "score": 100,
+   "mbid": "ad14ba63-6622-4d2a-8666-141391cebbdc",
+   "mbName": "Casey Lee Williams",
+   "viaArea": true
+  },
+  "ai mori": {
+   "name": "Ai Mori",
+   "tracks": 2,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "2a83c9ea-c98c-423f-a490-546062b9e6fc",
+   "mbName": "Ai Mori"
+  },
+  "astra yao": {
+   "name": "Astra Yao",
+   "tracks": 2,
+   "country": "CN",
+   "area": "Shanghai",
+   "areaId": "dec4979e-c0a3-469c-a052-cee5f1e71de9",
+   "score": 100,
+   "mbid": "25b47387-4c2a-4b04-b39d-cc6d7baaf51c",
+   "mbName": "Astra Yao",
+   "viaArea": true
+  },
+  "jorge rivera-herrans": {
+   "name": "Jorge Rivera-Herrans",
+   "tracks": 2,
+   "country": "PR",
+   "area": "Puerto Rico",
+   "areaId": "3906cf32-00a7-32df-93cc-4710c5f5a542",
+   "score": 100,
+   "mbid": "7c12b436-0fa3-473a-b908-6b7c1c9a5f24",
+   "mbName": "Jorge Rivera-Herrans"
+  },
+  "livetune": {
+   "name": "livetune",
+   "tracks": 2,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "00b812dc-dcb7-41bf-833f-feba6e9eeea1",
+   "mbName": "livetune"
+  },
+  "q-tip": {
+   "name": "Q-Tip",
+   "tracks": 2,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "b3c94036-6166-41d2-91a2-dc3a0b5fa188",
+   "mbName": "Q‐Tip"
+  },
+  "omoi": {
+   "name": "Omoi",
+   "tracks": 2,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "c932914d-88b6-4eea-b937-43c834fe0077",
+   "mbName": "Omoi"
+  },
+  "junky": {
+   "name": "Junky",
+   "tracks": 2,
+   "country": null,
+   "area": "Brisbane",
+   "areaId": "782d4fa5-dfbf-4558-87bf-c41043f5a2a1",
+   "score": 100,
+   "mbid": "9a0df2d7-f540-4fb5-bebf-e38be71580a7",
+   "mbName": "Feeble's Junky"
+  },
+  "gunship": {
+   "name": "GUNSHIP",
+   "tracks": 2,
+   "country": "GB",
+   "area": "London",
+   "areaId": "f03d09b3-39dc-4083-afd6-159e3f0d462f",
+   "score": 100,
+   "mbid": "df1356d3-3c66-48bc-ac79-475c6cf76266",
+   "mbName": "GUNSHIP",
+   "viaArea": true
+  },
+  "hyde": {
+   "name": "HYDE",
+   "tracks": 2,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "be702739-f872-413a-89fb-0a5afee100a9",
+   "mbName": "HYDE"
+  },
+  "masa works design": {
+   "name": "MASA WORKS DESIGN",
+   "tracks": 2,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "1258f0d5-1710-4def-bbb2-967b7e944d68",
+   "mbName": "MASA Works DESIGN"
+  },
+  "em": {
+   "name": "EM",
+   "tracks": 2,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "7575e3b8-ba04-4acc-a895-9cc528f86525",
+   "mbName": "Em Beihold"
+  },
+  "k/da": {
+   "name": "K/DA",
+   "tracks": 2,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "35f3e736-e27b-4a26-892c-c00179d163d5",
+   "mbName": "K/DA"
+  },
+  "jon-yakitory": {
+   "name": "jon-YAKITORY",
+   "tracks": 2,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "af1b35f6-7cfa-4f2f-a57b-364b7406de89",
+   "mbName": "jon-YAKITORY"
+  },
+  "various artists": {
+   "name": "Various Artists",
+   "tracks": 2,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "89ad4ac3-39f7-470e-963a-56509c546377",
+   "mbName": "Various Artists"
+  },
+  "josh whelchel": {
+   "name": "Josh Whelchel",
+   "tracks": 2,
+   "country": "US",
+   "area": "Cincinnati",
+   "areaId": "b2cf490f-a8a7-4875-a1b7-addede3b327f",
+   "score": 100,
+   "mbid": "7acb4bf4-1198-4bdb-88b5-499e16a18fdb",
+   "mbName": "Josh Whelchel",
+   "viaArea": true
+  },
+  "mika kobayashi": {
+   "name": "Mika Kobayashi",
+   "tracks": 2,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "9bc8edaf-c8c3-48cc-b10d-7e89b0abc8d7",
+   "mbName": "小林未郁"
+  },
+  "tielle & gemie": {
+   "name": "Tielle & Gemie",
+   "tracks": 2,
+   "country": null,
+   "score": 0
+  },
+  "ryo": {
+   "name": "ryo",
+   "tracks": 2,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "aabc3d78-218b-4e98-95b7-fe6388adef2d",
+   "mbName": "ryo"
+  },
+  "obkatiekat": {
+   "name": "OBKATIEKAT",
+   "tracks": 2,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "dc054cd7-4a7e-4883-b3ba-fbff979d2e38",
+   "mbName": "OBKATIEKAT"
+  },
+  "ziyu che": {
+   "name": "Ziyu Che",
+   "tracks": 2,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "18d73497-768d-455e-85ef-92f157d9e643",
+   "mbName": "车子玉"
+  },
+  "kali uchis": {
+   "name": "Kali Uchis",
+   "tracks": 2,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "d0c7656d-8169-4f77-9dbe-b8f24e40105d",
+   "mbName": "Kali Uchis"
+  },
+  "seo ja yeong": {
+   "name": "Seo Ja Yeong",
+   "tracks": 2,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "ba6bba1f-f73b-458a-baff-62bbe5fad985",
+   "mbName": "Seo Ja Yeong"
+  },
+  "sa dingding": {
+   "name": "Sa Dingding",
+   "tracks": 2,
+   "country": "CN",
+   "area": "China",
+   "areaId": "7c81bb69-a99b-3487-b6d4-0f76d7a29ca0",
+   "score": 100,
+   "mbid": "9e25b36f-47fa-44ee-ac80-0d4f5168128e",
+   "mbName": "萨顶顶"
+  },
+  "biz & zera": {
+   "name": "Biz & ZERA",
+   "tracks": 2,
+   "country": null,
+   "score": 0
+  },
+  "loluet": {
+   "name": "LOLUET",
+   "tracks": 2,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "619a0684-7cdc-4c2f-bdac-376410087232",
+   "mbName": "LOLUET"
+  },
+  "anamanaguchi": {
+   "name": "Anamanaguchi",
+   "tracks": 2,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "e4d7cfe5-0bed-46cf-acad-ab9a4dcb7aa6",
+   "mbName": "Anamanaguchi"
+  },
+  "mark ronson": {
+   "name": "Mark Ronson",
+   "tracks": 2,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "c3c82bdc-d9e7-4836-9746-c24ead47ca19",
+   "mbName": "Mark Ronson"
+  },
+  "takeshi saito": {
+   "name": "Takeshi Saito",
+   "tracks": 2,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "9b9e37da-ec29-4594-8142-50a69f16b4e7",
+   "mbName": "斎藤洸"
+  },
+  "such": {
+   "name": "Such",
+   "tracks": 2,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "9c33ac0d-bda7-4991-9ce5-4706bcfc64b8",
+   "mbName": "Such"
+  },
+  "wowaka": {
+   "name": "wowaka",
+   "tracks": 2,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "85642e3c-8e39-437c-8b4f-ae4a16d19d21",
+   "mbName": "wowaka"
+  },
+  "iyowa": {
+   "name": "Iyowa",
+   "tracks": 2,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "44449473-2e78-42ba-b510-7124c1bc796c",
+   "mbName": "いよわ"
+  },
+  "gooseworx": {
+   "name": "Gooseworx",
+   "tracks": 2,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "b5b625e6-19cc-42e3-8a2a-7617750a9f9a",
+   "mbName": "Gooseworx"
+  },
+  "evan alderete": {
+   "name": "Evan Alderete",
+   "tracks": 2,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "5cdfebe2-4f47-48ec-b82d-53b6620162c9",
+   "mbName": "Evan Alderete"
+  },
+  "jin": {
+   "name": "JIN",
+   "tracks": 2,
+   "country": "KR",
+   "area": "South Korea",
+   "areaId": "b9f7d640-46e8-313e-b158-ded6d18593b3",
+   "score": 100,
+   "mbid": "09720eec-3871-49d5-932d-eb7542768cd3",
+   "mbName": "Jin"
+  },
+  "amanda achen": {
+   "name": "Amanda Achen",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "10d145d2-9286-4667-8dd9-6a0171c57d43",
+   "mbName": "Amanda Achen"
+  },
+  "mothy": {
+   "name": "mothy",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "302195b2-300a-4429-9fee-0ce52fc37517",
+   "mbName": "mothy_悪ノP"
+  },
+  "rish": {
+   "name": "Rish",
+   "tracks": 1,
+   "country": "IN",
+   "area": "India",
+   "areaId": "d31a9a15-537f-3669-ad53-25753ddd2772",
+   "score": 100,
+   "mbid": "89f059c7-660c-4547-b3df-19528d93e610",
+   "mbName": "Rish"
+  },
+  "choko": {
+   "name": "Choko",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "2bf87813-969d-40ce-9df7-5a4e76e03606",
+   "mbName": "ちょこ"
+  },
+  "kanye west & travis barker": {
+   "name": "Kanye West & Travis Barker",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "hercules & love affair": {
+   "name": "Hercules & Love Affair",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "b62ecfe7-b2e6-4d40-b7d2-8f12d3f51ed6",
+   "mbName": "Hercules & Love Affair"
+  },
+  "aerea negrot": {
+   "name": "Aerea Negrot",
+   "tracks": 1,
+   "country": "DE",
+   "area": "Germany",
+   "areaId": "85752fda-13c4-31a3-bee5-0e5cb1f51dad",
+   "score": 100,
+   "mbid": "7417fc45-8d1b-4def-b6d2-92769a1b93f8",
+   "mbName": "Aérea Negrot"
+  },
+  "jesus-p": {
+   "name": "Jesus-P",
+   "tracks": 1,
+   "country": "ES",
+   "area": "Spain",
+   "areaId": "471c46a7-afc5-31c4-923c-d0444f5053a4",
+   "score": 100,
+   "mbid": "7589c918-8818-4a13-bb1f-5b08fc47631c",
+   "mbName": "Jesús P. Vallejo"
+  },
+  "kagamine rin & kagamine len": {
+   "name": "Kagamine Rin & Kagamine Len",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "calogero": {
+   "name": "Calogero",
+   "tracks": 1,
+   "country": "FR",
+   "area": "France",
+   "areaId": "08310658-51eb-3801-80de-5a0739207115",
+   "score": 100,
+   "mbid": "7e26f094-2ab2-4810-be12-f8fd8953d99d",
+   "mbName": "Calogero"
+  },
+  "passi": {
+   "name": "Passi",
+   "tracks": 1,
+   "country": "FR",
+   "area": "France",
+   "areaId": "08310658-51eb-3801-80de-5a0739207115",
+   "score": 100,
+   "mbid": "d26817d3-9b70-432f-ab90-6b3928028048",
+   "mbName": "Passi"
+  },
+  "sana natori": {
+   "name": "Sana Natori",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "28393ed8-4858-42e0-a8cc-60c49b038b73",
+   "mbName": "名取さな"
+  },
+  "ityo": {
+   "name": "ityo",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "552e0406-ddb5-4fe0-8e9c-0de69dd94983",
+   "mbName": "イチョウ"
+  },
+  "neru": {
+   "name": "Neru",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "5873cd12-ac72-407b-a79c-1f9f9682e239",
+   "mbName": "Neru"
+  },
+  "kareki kashiwagi": {
+   "name": "Kareki Kashiwagi",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "22bd5dbf-924a-4c39-a761-d9d414580269",
+   "mbName": "柏木カレキ"
+  },
+  "kasane teto & chis-a": {
+   "name": "Kasane Teto & Chis-A",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "maynard james keenan": {
+   "name": "Maynard James Keenan",
+   "tracks": 1,
+   "country": "US",
+   "area": "Milford",
+   "areaId": "22e6542c-82ea-4df8-ab99-10319b8877d1",
+   "score": 100,
+   "mbid": "4041015e-18c0-4de0-bfbe-121fffe1a170",
+   "mbName": "3 Degrees: A Tribute to Maynard James Keenan",
+   "viaArea": true
+  },
+  "digital descendant": {
+   "name": "DIGITAL DESCENDANT",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "b654b05e-d2f4-4195-b3c1-3eb3fa16125c",
+   "mbName": "DIGITAL DESCENDANT"
+  },
+  "hongmika": {
+   "name": "hongmika",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "fefd1be6-c4d2-45b3-b487-673a68f35afe",
+   "mbName": "mika"
+  },
+  "kyle wright": {
+   "name": "Kyle Wright",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "f7efd8a9-1ad0-4204-8aef-3628d8c41b7b",
+   "mbName": "Kyle Wright"
+  },
+  "aki toyosaki, yoko hikasa, satomi satou, minako kotobuki & ayana taketatsu": {
+   "name": "Aki Toyosaki, Yoko Hikasa, Satomi Satou, Minako Kotobuki & Ayana Taketatsu",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "e1and": {
+   "name": "E1and",
+   "tracks": 1,
+   "country": "TW",
+   "area": "Taiwan",
+   "areaId": "41637cec-9a4f-389c-86d2-fc6abf3357b5",
+   "score": 100,
+   "mbid": "b13d515d-3319-4a82-8c70-a0cad1c27f9c",
+   "mbName": "E1and"
+  },
+  "rikako aida": {
+   "name": "Rikako Aida",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "mili & yamato kasai": {
+   "name": "Mili & Yamato Kasai",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "zoe lewis": {
+   "name": "Zoe Lewis",
+   "tracks": 1,
+   "country": "US",
+   "area": "Massachusetts",
+   "areaId": "05f68b4c-10f3-49b5-b28c-260a1b707043",
+   "score": 100,
+   "mbid": "4ce5c27e-07b1-4062-8d6a-0ba3d70dcd71",
+   "mbName": "Zoë Lewis",
+   "viaArea": true
+  },
+  "tanaka rie & ishii takayuki": {
+   "name": "Tanaka Rie & Ishii Takayuki",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "watson amelia": {
+   "name": "Watson Amelia",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "9287db7d-dc0d-49e3-9148-80130c072704",
+   "mbName": "Amelia Watson"
+  },
+  "ceres fauna": {
+   "name": "Ceres Fauna",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "e303270e-136d-4529-9f29-b338ef54e8f2",
+   "mbName": "Ceres Fauna"
+  },
+  "nanashi mumei": {
+   "name": "Nanashi Mumei",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "f8e20888-edfe-4c47-be0c-2a475b5de707",
+   "mbName": "Nanashi Mumei"
+  },
+  "laufey": {
+   "name": "Laufey",
+   "tracks": 1,
+   "country": "IS",
+   "area": "Iceland",
+   "areaId": "48802a32-075a-3805-a183-277c66047693",
+   "score": 100,
+   "mbid": "21a89505-10a9-4ac0-8388-833bc07b9f86",
+   "mbName": "Laufey"
+  },
+  "sérgio mendes": {
+   "name": "Sérgio Mendes",
+   "tracks": 1,
+   "country": "BR",
+   "area": "Brazil",
+   "areaId": "f45b47f8-5796-386e-b172-6c31b009a5d8",
+   "score": 100,
+   "mbid": "6bf591c4-b050-478e-9d9f-167394d66c90",
+   "mbName": "Sérgio Mendes"
+  },
+  "brasil '66": {
+   "name": "Brasil '66",
+   "tracks": 1,
+   "country": "BR",
+   "area": "Brazil",
+   "areaId": "f45b47f8-5796-386e-b172-6c31b009a5d8",
+   "score": 100,
+   "mbid": "491d8124-42e9-43f0-a828-e4a40c59e5ba",
+   "mbName": "Sérgio Mendes & Brasil ’66"
+  },
+  "chi-chi & alex walker smith": {
+   "name": "Chi-Chi & Alex Walker Smith",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "björk & the heritage orchestra": {
+   "name": "Björk & The Heritage Orchestra",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "morgan phalen": {
+   "name": "Morgan Phalen",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "189107b1-b649-4441-a5e1-21764ee66f14",
+   "mbName": "Morgan Phalen"
+  },
+  "allen7shen": {
+   "name": "allen7shen",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "suis from yorushika": {
+   "name": "suis from Yorushika",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "björk & yves tumor": {
+   "name": "Björk & Yves Tumor",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "original cast of a killer party": {
+   "name": "Original Cast of A Killer Party",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "drew gehling & jeremy jordan": {
+   "name": "Drew Gehling & Jeremy Jordan",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "kasane teto & otomachi una": {
+   "name": "Kasane Teto & Otomachi Una",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "atlantida project": {
+   "name": "Atlantida Project",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "d3b0634c-8be2-4857-a74c-eeeb052a026f",
+   "mbName": "Atlantida Project"
+  },
+  "tokyo manaka": {
+   "name": "Tokyo Manaka",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "43f59b24-b355-4c59-ad34-b0044289bf27",
+   "mbName": "東京真中"
+  },
+  "honoka takahashi": {
+   "name": "Honoka Takahashi",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "c2e0dfab-0d0d-430e-9dc1-928efde09eff",
+   "mbName": "たかはしほのか"
+  },
+  "komodo": {
+   "name": "Komodo",
+   "tracks": 1,
+   "country": "NL",
+   "area": "Netherlands",
+   "areaId": "ef1b7cc0-cd26-36f4-8ea0-04d9623786c7",
+   "score": 100,
+   "mbid": "bac89a95-4b0a-4436-957d-6f2738a6ef6a",
+   "mbName": "Komodo"
+  },
+  "michael shynes": {
+   "name": "Michael Shynes",
+   "tracks": 1,
+   "country": "US",
+   "area": "Minnesota",
+   "areaId": "f5ffcc03-ebf2-466a-bb11-b38c6c0c84f5",
+   "score": 100,
+   "mbid": "1d069855-c77c-4172-bb57-06fc5d1b2472",
+   "mbName": "Michael Shynes",
+   "viaArea": true
+  },
+  "bakar": {
+   "name": "Bakar",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "49ab0e3b-97ad-40c0-a664-5f40ce8129c7",
+   "mbName": "Bakar"
+  },
+  "ladymonsters.": {
+   "name": "LadyMonsters.",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "b5e8053b-dd86-49e2-bf34-0316ac25c048",
+   "mbName": "LadyMonsters."
+  },
+  "maron": {
+   "name": "MARON",
+   "tracks": 1,
+   "country": "AT",
+   "area": "Austria",
+   "areaId": "caac77d1-a5c8-3e6e-8e27-90b44dcc1446",
+   "score": 100,
+   "mbid": "ddba7745-3e0a-4b56-af55-2a12e1acf6c5",
+   "mbName": "Sigi Maron"
+  },
+  "nonep": {
+   "name": "NONEP",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "kasane teto sv": {
+   "name": "Kasane Teto SV",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "98f7cec1-3be2-4ccf-97a9-3dbb001700b4",
+   "mbName": "重音テト"
+  },
+  "ayumi nakamura": {
+   "name": "Ayumi Nakamura",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "75ec7527-9ddf-46b4-a3ae-c60a4f335aa9",
+   "mbName": "中村あゆみ"
+  },
+  "koichi yamadera": {
+   "name": "Koichi Yamadera",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "fdfe2b1c-d8cc-4d0d-94e8-4f72a41c79d8",
+   "mbName": "山寺宏一"
+  },
+  "tensei": {
+   "name": "Tensei",
+   "tracks": 1,
+   "country": "US",
+   "area": "Chicago",
+   "areaId": "29a709d8-0320-493e-8d0c-f2c386662b7f",
+   "score": 100,
+   "mbid": "8f8ffb42-da51-4b72-aa63-c0195badac1c",
+   "mbName": "Tensei",
+   "viaArea": true
+  },
+  "malcolm brown": {
+   "name": "Malcolm Brown",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "48ecf8fb-773d-4935-b5f2-349e932af6ff",
+   "mbName": "Malcolm Brown"
+  },
+  "seraphine noir & alexandra rotmann": {
+   "name": "SERAPHINE NOIR & Alexandra Rotmann",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "mauricesax & .akshay": {
+   "name": "Mauricesax & .akshay",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "alon oleartchik": {
+   "name": "Alon Oleartchik",
+   "tracks": 1,
+   "country": "IL",
+   "area": "Israel",
+   "areaId": "03691455-bb46-37e3-91d2-cb064a35ffcc",
+   "score": 100,
+   "mbid": "7978ffbd-02ec-41c1-8fc4-204a39a171bc",
+   "mbName": "אלון אולארצ׳יק"
+  },
+  "niru kajitsu": {
+   "name": "Niru Kajitsu",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "de18cbae-1f60-4318-9687-357005bffc47",
+   "mbName": "煮ル果実"
+  },
+  "knocked loose": {
+   "name": "Knocked Loose",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "9ca10859-49e2-44e3-b3d6-04c535207bc2",
+   "mbName": "Knocked Loose"
+  },
+  "denzel curry": {
+   "name": "Denzel Curry",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "5f95440d-7737-4a36-9bcf-c05337f7129b",
+   "mbName": "Denzel Curry"
+  },
+  "maladoy prince": {
+   "name": "Maladoy Prince",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "d61a9847-2728-4b88-99ef-165a1f5ae561",
+   "mbName": "Maladoy Prince"
+  },
+  "luvdakash": {
+   "name": "luvdakash",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "b906b04b-20df-4bc8-a823-97a4dae1d3d2",
+   "mbName": "luvdakash"
+  },
+  "mirai kodai gakudan": {
+   "name": "Mirai Kodai Gakudan",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "bouquet": {
+   "name": "Bouquet",
+   "tracks": 1,
+   "country": "FR",
+   "area": "France",
+   "areaId": "08310658-51eb-3801-80de-5a0739207115",
+   "score": 100,
+   "mbid": "54eab505-ae5a-4c71-9c41-ff42d6c547ed",
+   "mbName": "Michel Bouquet"
+  },
+  "omar souleyman & yasiin bey": {
+   "name": "Omar Souleyman & Yasiin Bey",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "guchiry": {
+   "name": "Guchiry",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "234c98d4-2f1a-4283-b66e-62a7950bdaa5",
+   "mbName": "ぐちり"
+  },
+  "nte10am": {
+   "name": "NTE10AM",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "1abb6673-0a6a-4ac1-a6b9-c2c5f6674a32",
+   "mbName": "NTE10AM"
+  },
+  "li tian zi": {
+   "name": "Li Tian Zi",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "chan mari": {
+   "name": "Chan Mari",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "44dd201d-50c2-473c-9d67-7bb11e00161c",
+   "mbName": "ちゃんMARI"
+  },
+  "the original cast of ‘paddington the musical’ & tom fletcher": {
+   "name": "The Original Cast of ‘Paddington The Musical’ & Tom Fletcher",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "victoria hamilton-barritt": {
+   "name": "Victoria Hamilton-Barritt",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "4b8298c9-114c-428b-821c-8ca224644ae2",
+   "mbName": "Victoria Hamilton‐Barritt"
+  },
+  "mr. mo & relaye": {
+   "name": "Mr. Mo & Relaye",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "yung lean": {
+   "name": "Yung Lean",
+   "tracks": 1,
+   "country": "SE",
+   "area": "Sweden",
+   "areaId": "23d10872-f5ae-3f0c-bf55-332788a16ecb",
+   "score": 100,
+   "mbid": "757ed661-fbad-4e45-b1cd-a6b09f06f54a",
+   "mbName": "Yung Lean"
+  },
+  "bladee": {
+   "name": "Bladee",
+   "tracks": 1,
+   "country": "SE",
+   "area": "Sweden",
+   "areaId": "23d10872-f5ae-3f0c-bf55-332788a16ecb",
+   "score": 100,
+   "mbid": "cd689e77-dfdd-4f81-b50c-5e5a3f5e38a4",
+   "mbName": "Bladee"
+  },
+  "molli & camellia": {
+   "name": "Molli & Camellia",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "crywolf & kahoca": {
+   "name": "Crywolf & kahoca",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "apangrypiggy": {
+   "name": "APAngryPiggy",
+   "tracks": 1,
+   "country": "NZ",
+   "area": "New Zealand",
+   "areaId": "8524c7d9-f472-3890-a458-f28d5081d9c4",
+   "score": 100,
+   "mbid": "2317a7b2-599c-429c-82d4-f08953253c61",
+   "mbName": "APAngryPiggy"
+  },
+  "dawko": {
+   "name": "Dawko",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "9ea4be18-6590-40a7-b0b5-f9214dfd2546",
+   "mbName": "Dawko"
+  },
+  "nayutalien": {
+   "name": "NayutalieN",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "dacc1893-3dc2-4620-b588-40c5e69373bc",
+   "mbName": "ナユタン星人"
+  },
+  "arianne schreiber": {
+   "name": "Arianne Schreiber",
+   "tracks": 1,
+   "country": "AU",
+   "area": "Australia",
+   "areaId": "106e0bec-b638-3b37-b731-f53d507dc00e",
+   "score": 100,
+   "mbid": "bd3dedd7-8b24-40c6-8043-c3d676b658d5",
+   "mbName": "Arianne Schreiber"
+  },
+  "ayaponzu*": {
+   "name": "Ayaponzu*",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "d3e3fc5f-4bed-47e7-b0d3-c34cb002dfa1",
+   "mbName": "あやぽんず＊"
+  },
+  "black kappa": {
+   "name": "Black Kappa",
+   "tracks": 1,
+   "country": "DE",
+   "area": "Germany",
+   "areaId": "85752fda-13c4-31a3-bee5-0e5cb1f51dad",
+   "score": 100,
+   "mbid": "36568de2-8f5d-49c9-8287-b06e15b1e779",
+   "mbName": "Black Kappa"
+  },
+  "nitroplus": {
+   "name": "NitroPlus",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "e23c2153-ed1f-4bb4-908c-b73d16c710cf",
+   "mbName": "ニトロプラス"
+  },
+  "ayumi": {
+   "name": "ayumi",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "2b615bcf-baa0-4657-b9a5-1a5f34c386c4",
+   "mbName": "浜崎あゆみ"
+  },
+  "uyama hiroto": {
+   "name": "Uyama Hiroto",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "ff139930-ec21-4c01-8737-4e4c05bdd472",
+   "mbName": "宇山寛人"
+  },
+  "shing02": {
+   "name": "Shing02",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "e3a263df-90e5-48e2-bcdf-23ae5fecbd5f",
+   "mbName": "Shing02"
+  },
+  "zakuro motoki": {
+   "name": "Zakuro Motoki",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "crywolf & cxssidy": {
+   "name": "Crywolf & Cxssidy",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "powapowa-p": {
+   "name": "Powapowa-P",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "lost ark": {
+   "name": "Lost Ark",
+   "tracks": 1,
+   "country": "KR",
+   "area": "South Korea",
+   "areaId": "b9f7d640-46e8-313e-b158-ded6d18593b3",
+   "score": 100,
+   "mbid": "c00b8021-15ae-4b82-a1e2-bce6f265ab65",
+   "mbName": "LOST ARK"
+  },
+  "kim seonduk": {
+   "name": "Kim Seonduk",
+   "tracks": 1,
+   "country": "KR",
+   "area": "South Korea",
+   "areaId": "b9f7d640-46e8-313e-b158-ded6d18593b3",
+   "score": 100,
+   "mbid": "1737d656-7a17-4789-91b0-2de0874a6b49",
+   "mbName": "김선덕"
+  },
+  "otomania": {
+   "name": "Otomania",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "a0bbe858-f041-4e2a-9e2a-93e8a8a8c932",
+   "mbName": "Otomania"
+  },
+  "emiri kato": {
+   "name": "Emiri Kato",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "486e8819-0244-467a-b040-77076fdbf103",
+   "mbName": "柊かがみ"
+  },
+  "aya endo": {
+   "name": "Aya Endo",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "8cf1f986-a5c3-47f9-bcc5-411b24e99ad5",
+   "mbName": "遠藤綾"
+  },
+  "alka yagnik": {
+   "name": "Alka Yagnik",
+   "tracks": 1,
+   "country": "IN",
+   "area": "India",
+   "areaId": "d31a9a15-537f-3669-ad53-25753ddd2772",
+   "score": 100,
+   "mbid": "52cf0679-e1cf-42ca-b9b5-86e018b36d91",
+   "mbName": "Alka Yagnik"
+  },
+  "hema sardesai": {
+   "name": "Hema Sardesai",
+   "tracks": 1,
+   "country": "IN",
+   "area": "India",
+   "areaId": "d31a9a15-537f-3669-ad53-25753ddd2772",
+   "score": 100,
+   "mbid": "8e6e6340-2c9e-4fa2-b6f9-0cc2ade362fd",
+   "mbName": "Hema Sardesai"
+  },
+  "erv3rd": {
+   "name": "ERV3RD",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "иуда": {
+   "name": "ИУДА",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "b-lion": {
+   "name": "B-Lion",
+   "tracks": 1,
+   "country": null,
+   "area": "Dnipro",
+   "areaId": "e3ce85a5-ddf3-4be2-b713-cb1d84610709",
+   "score": 100,
+   "mbid": "1d994ff9-7c02-4832-9a2e-6c3f9ed743d8",
+   "mbName": "B-Lion"
+  },
+  "asha puthli, bobby womack, trugoy the dove, jalen ngonda & black thought": {
+   "name": "Asha Puthli, Bobby Womack, Trugoy the Dove, Jalen Ngonda & Black Thought",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "kiichi": {
+   "name": "kiichi",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "8af99213-f76a-4e05-b3c2-ccfffd9819cc",
+   "mbName": "kiichi"
+  },
+  "le sserafim": {
+   "name": "LE SSERAFIM",
+   "tracks": 1,
+   "country": "KR",
+   "area": "South Korea",
+   "areaId": "b9f7d640-46e8-313e-b158-ded6d18593b3",
+   "score": 100,
+   "mbid": "1ee37742-1e3d-4e61-84d2-bc85f4c1459a",
+   "mbName": "LE SSERAFIM"
+  },
+  "j-hope of bts": {
+   "name": "J-Hope of BTS",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "aisha & naoki hashimoto": {
+   "name": "Aisha & Naoki Hashimoto",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "лжедмитрий iv": {
+   "name": "Лжедмитрий IV",
+   "tracks": 1,
+   "country": null,
+   "area": "Irkutsk",
+   "areaId": "aa7e0699-d3fd-44a1-9e54-8088abfd5ed1",
+   "score": 100,
+   "mbid": "f1bfb8ea-0b0a-4d9c-85b0-3d02b6b36b6f",
+   "mbName": "Лжедмитрий IV"
+  },
+  "kurogane tama": {
+   "name": "Kurogane Tama",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "75996c99-c6dd-4728-9734-e514f26611a5",
+   "mbName": "黒鉄たま"
+  },
+  "снифф & снафф": {
+   "name": "Снифф & Снафф",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "4740039a-ba68-41a3-b612-2b642a166e29",
+   "mbName": "Снифф & Снафф"
+  },
+  "isekaijoucho": {
+   "name": "Isekaijoucho",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "0e51b3c5-28c3-4608-aea1-ce01eca91dd2",
+   "mbName": "ヰ世界情緒"
+  },
+  "nobuyoshi sano": {
+   "name": "Nobuyoshi Sano",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "43b586a3-3c8e-4194-aad9-26e66a8f1c0b",
+   "mbName": "佐野信義"
+  },
+  "eriko hatsune": {
+   "name": "Eriko Hatsune",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Tokyo",
+   "areaId": "8dc97297-ac95-4d33-82bc-e07fab26fb5f",
+   "score": 100,
+   "mbid": "72ebe72d-9f7b-4d48-832f-49512cdc3373",
+   "mbName": "初音映莉子",
+   "viaArea": true
+  },
+  "jkinss, zho davis, aderemi adesoji adeniyi, vision sound": {
+   "name": "jkinss, Zho Davis, Aderemi Adesoji Adeniyi, VISION SOUND",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "sophia nicole": {
+   "name": "Sophia Nicole",
+   "tracks": 1,
+   "country": null,
+   "area": "Santa Barbara",
+   "areaId": "f12f47f9-daf9-4eec-a30e-e8a9e9bd4124",
+   "score": 100,
+   "mbid": "72396906-3beb-4290-a50a-a24637dd4b88",
+   "mbName": "Nicole Sophia"
+  },
+  "justin hawkes": {
+   "name": "Justin Hawkes",
+   "tracks": 1,
+   "country": "US",
+   "area": "Austin",
+   "areaId": "58d2816b-daf9-4fc5-962c-06967f14a5e5",
+   "score": 100,
+   "mbid": "7f70094a-2f55-4e9b-a57d-125a1a3b26d8",
+   "mbName": "Justin Hawkes",
+   "viaArea": true
+  },
+  "andrew hellier": {
+   "name": "Andrew Hellier",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "11cbba23-41da-4b68-9b66-265d1b69be6d",
+   "mbName": "Andrew Hellier"
+  },
+  "матушка": {
+   "name": "Матушка",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "de278153-52c2-4d44-bc29-cfc808ff99c1",
+   "mbName": "Матушка"
+  },
+  "ostermine, nerkin, mtyssa14, фывфыв, zakviel, jacklooney & 5opka": {
+   "name": "OsterMine, Nerkin, MTyssa14, ФЫВФЫВ, Zakviel, JackLooney & 5opka",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "tsutchie": {
+   "name": "Tsutchie",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "77ee0adb-afab-4c1a-ab1b-9e273fc6c601",
+   "mbName": "TSUTCHIE"
+  },
+  "azuma riki": {
+   "name": "AZUMA RIKI",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "4f35312c-7c61-4df0-bfc2-e0a2ae83c934",
+   "mbName": "東里起"
+  },
+  "shigeru matsuzaki & tophamhat-kyo": {
+   "name": "Shigeru Matsuzaki & TOPHAMHAT-KYO",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "jean-ken johnny & takuma": {
+   "name": "Jean-Ken Johnny & TAKUMA",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "tom waits": {
+   "name": "Tom Waits",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "c3aeb863-7b26-4388-94e8-5a240f2be21b",
+   "mbName": "Tom Waits"
+  },
+  "богдан титомир": {
+   "name": "Богдан Титомир",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "6ab93247-2dc4-4a75-9014-4f95d2f862da",
+   "mbName": "Богдан Титомир"
+  },
+  "тимати, джиган": {
+   "name": "Тимати, Джиган",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "a-one": {
+   "name": "A-One",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "853075e2-d1e7-4f5f-a671-ebd1d9620294",
+   "mbName": "A One"
+  },
+  "sleep1st": {
+   "name": "Sleep1st",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "614040ae-adad-4d1e-a74a-ec2fe6ac338a",
+   "mbName": "Sleep1st"
+  },
+  "fergie": {
+   "name": "Fergie",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "1c46e82f-4764-4d82-a33b-5d5aee5e2881",
+   "mbName": "Fergie"
+  },
+  "asa": {
+   "name": "Asa",
+   "tracks": 1,
+   "country": "NG",
+   "area": "Nigeria",
+   "areaId": "1e23d84b-202e-3fc8-8c49-debc71e9eb16",
+   "score": 100,
+   "mbid": "710fbcbb-5fea-4cee-978f-68d8a9b76149",
+   "mbName": "Aṣa"
+  },
+  "sorrow": {
+   "name": "Sorrow",
+   "tracks": 1,
+   "country": null,
+   "area": "Uppsala",
+   "areaId": "4955495c-004d-4c7f-ba17-d9df26388cd0",
+   "score": 100,
+   "mbid": "683634ba-bf04-404d-b243-3c8dece10926",
+   "mbName": "Sorrow"
+  },
+  "fururi": {
+   "name": "Fururi",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "flavor foley": {
+   "name": "FLAVOR FOLEY",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "580ba484-525b-408c-8aff-e63dbfea86a2",
+   "mbName": "FLAVOR FOLEY"
+  },
+  "yi xi": {
+   "name": "Yi Xi",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "6b0ef567-9411-4689-9605-37e4912383bd",
+   "mbName": "奕夕"
+  },
+  "fun.": {
+   "name": "fun.",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "136c4166-85b3-4994-aa04-59857c434199",
+   "mbName": "Fun"
+  },
+  "janelle monáe": {
+   "name": "Janelle Monáe",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "ee190f6b-7d98-43ec-b924-da5f8018eca0",
+   "mbName": "Janelle Monáe"
+  },
+  "stringstorm": {
+   "name": "StringStorm",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "bc24b642-e568-4908-ab68-5841ba8540e6",
+   "mbName": "StringStorm"
+  },
+  "craig cairns": {
+   "name": "Craig Cairns",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "865512dc-3b09-4b14-9e5f-bbb5e1466b45",
+   "mbName": "Craig Cairns"
+  },
+  "nico bellisario": {
+   "name": "Nico Bellisario",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "68de43a1-02b8-4a7c-a119-710459df8a2f",
+   "mbName": "Nico Bellisario"
+  },
+  "dan salvato": {
+   "name": "Dan Salvato",
+   "tracks": 1,
+   "country": "US",
+   "area": "Boise",
+   "areaId": "0975b71a-995a-4f7b-a1c3-41e302ba4dc6",
+   "score": 100,
+   "mbid": "ab9bdd13-4550-4976-ab1d-e7fd39102f8d",
+   "mbName": "Dan Salvato",
+   "viaArea": true
+  },
+  "jillian ashcraft": {
+   "name": "Jillian Ashcraft",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "okame-p": {
+   "name": "Okame-P",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "shigeru umebayashi": {
+   "name": "Shigeru Umebayashi",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "3678bc88-5564-4682-a264-2075eaaaaab3",
+   "mbName": "梅林茂"
+  },
+  "bi xiaodi & shuai wang": {
+   "name": "Bi Xiaodi & Shuai Wang",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "chelly (egoist)": {
+   "name": "chelly (EGOIST)",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "true damage": {
+   "name": "True Damage",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "cfc1d4a2-d084-49c3-b17d-881d145e0226",
+   "mbName": "True Damage"
+  },
+  "becky g, keke palmer, soyeon, duckwrth, thutmose": {
+   "name": "Becky G, Keke Palmer, SOYEON, DUCKWRTH, Thutmose",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "heartsteel": {
+   "name": "HEARTSTEEL",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "b71dd1b0-1d2b-4e38-b78f-c8073cb627dc",
+   "mbName": "HEARTSTEEL"
+  },
+  "baekhyun, tobi lou, øzi & cal scruby": {
+   "name": "BAEKHYUN, tobi lou, ØZI & Cal Scruby",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "aiobahn +81 & explorers of the internet": {
+   "name": "Aiobahn +81 & Explorers of the Internet",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "corpse": {
+   "name": "CORPSE",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "d8e99eeb-94c6-4de4-b23c-39e90faa73a3",
+   "mbName": "CORPSE"
+  },
+  "night lovell": {
+   "name": "Night Lovell",
+   "tracks": 1,
+   "country": "CA",
+   "area": "Ottawa",
+   "areaId": "bbc88d72-1f32-4936-8dc6-b62b3318e1c4",
+   "score": 100,
+   "mbid": "c25963ac-b289-4d99-a8dc-06c0ce757f0c",
+   "mbName": "Night Lovell",
+   "viaArea": true
+  },
+  "ashley": {
+   "name": "Ashley",
+   "tracks": 1,
+   "country": "CA",
+   "area": "Canada",
+   "areaId": "71bbafaa-e825-3e15-8ca9-017dcad1748b",
+   "score": 100,
+   "mbid": "ec2764e4-8cc1-4c40-b7c0-466a3763cd37",
+   "mbName": "Ashley MacIsaac"
+  },
+  "disiniblud, rachika nayar & nina keith": {
+   "name": "Disiniblud, Rachika Nayar & Nina Keith",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "willy siegel, katie dey & julianna barwick": {
+   "name": "Willy Siegel, Katie Dey & Julianna Barwick",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "альбина сексова": {
+   "name": "Альбина Сексова",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "2b00caa1-4af4-4c72-b22e-328f21774bb0",
+   "mbName": "Альбина Сексова"
+  },
+  "слава кпсс & валентин дядька": {
+   "name": "Слава КПСС & Валентин Дядька",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "michael yu": {
+   "name": "Michael Yu",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "alina lesnik": {
+   "name": "Alina Lesnik",
+   "tracks": 1,
+   "country": "DE",
+   "area": "Germany",
+   "areaId": "85752fda-13c4-31a3-bee5-0e5cb1f51dad",
+   "score": 100,
+   "mbid": "b18a8a73-5fa9-4910-b2be-10555c8b2f41",
+   "mbName": "Alina Lesnik"
+  },
+  "хор ветеранов им. ф. м. козлова": {
+   "name": "Хор ветеранов им. Ф. М. Козлова",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "mondo grosso": {
+   "name": "MONDO GROSSO",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "cb3e092f-5eae-4bc1-9ffe-bbdc13dcd823",
+   "mbName": "MONDO GROSSO"
+  },
+  "asuka saito": {
+   "name": "Asuka Saito",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "yurie igoma, megumi han, rumi okubo": {
+   "name": "Yurie Igoma, Megumi Han, Rumi Okubo",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "jean-ken johnny": {
+   "name": "Jean-Ken Johnny",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "49f3dae9-3c97-4d6c-8031-63b4b168cca9",
+   "mbName": "Jean-Ken Johnny"
+  },
+  "mpi, gemie & yosh morita": {
+   "name": "mpi, Gemie & Yosh Morita",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "1999 broadway cast of annie get your gun": {
+   "name": "1999 Broadway Cast of Annie Get Your Gun",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "bernadette peters & tom wopat": {
+   "name": "Bernadette Peters & Tom Wopat",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "giga & kira": {
+   "name": "Giga & KIRA",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "original cast of hadestown": {
+   "name": "Original Cast of Hadestown",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "chris sullivan, nabiyah be, damon daunno, patrick page & amber gray": {
+   "name": "Chris Sullivan, Nabiyah Be, Damon Daunno, Patrick Page & Amber Gray",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "makuri": {
+   "name": "Makuri",
+   "tracks": 1,
+   "country": "CN",
+   "area": "China",
+   "areaId": "7c81bb69-a99b-3487-b6d4-0f76d7a29ca0",
+   "score": 100,
+   "mbid": "6773bf87-fcde-4e4e-b598-ee75b5d93940",
+   "mbName": "真栗"
+  },
+  "бонд с кнопкой": {
+   "name": "Бонд с кнопкой",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "731874bc-2a7d-4a38-a4cd-aef727012ecd",
+   "mbName": "Бонд с кнопкой"
+  },
+  "детский хор выксы": {
+   "name": "Детский хор Выксы",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "ashley alisha": {
+   "name": "Ashley Alisha",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "74cc387e-e793-4011-9183-02e7e3186563",
+   "mbName": "Ashley Alisha"
+  },
+  "sabi-tyan": {
+   "name": "Sabi-tyan",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "eb5f0230-11a1-453a-bda2-0d17f9bd9a50",
+   "mbName": "Sabi-tyan"
+  },
+  "troy baker": {
+   "name": "Troy Baker",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "33b51ac1-91e8-4479-93aa-afaa25a3a543",
+   "mbName": "Troy Baker Sound"
+  },
+  "chansung(2pm) & ak-69": {
+   "name": "CHANSUNG(2PM) & AK-69",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "changmin lee": {
+   "name": "Changmin Lee",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "tom morello": {
+   "name": "Tom Morello",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "4b87ac1e-ed88-4951-9c52-6f3f7713f67d",
+   "mbName": "Tom Morello: The Nightwatchman"
+  },
+  "ichika hoshino & hatsune miku": {
+   "name": "Ichika Hoshino & Hatsune Miku",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "yui makino": {
+   "name": "Yui Makino",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "1a83b2c2-a848-496a-8220-3f22d0fb47db",
+   "mbName": "牧野由依"
+  },
+  "terry zhong": {
+   "name": "Terry Zhong",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "c5157aed-9610-4829-ab8e-90823169615c",
+   "mbName": "Terry Zhong"
+  },
+  "eileen marine": {
+   "name": "Eileen Marine",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "uru": {
+   "name": "Uru",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "6eb863a5-477d-4be1-9e10-b5d56446ed16",
+   "mbName": "Uru"
+  },
+  "hagali": {
+   "name": "Hagali",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "2b2b41a7-f95c-459e-96f2-0ba0686494e4",
+   "mbName": "Hagali"
+  },
+  "machi*α": {
+   "name": "Machi*α",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "38381fc3-4c51-4b48-b47a-202fdd17bca7",
+   "mbName": "Machi*α"
+  },
+  "grabbitz": {
+   "name": "Grabbitz",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "69754799-6872-4156-a88c-2f7caf5e7a6d",
+   "mbName": "Grabbitz"
+  },
+  "tkdz2b, the 49ers, tribeca & natalie oliveri": {
+   "name": "TKDz2b, The 49ers, Tribeca & Natalie Oliveri",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "clammbon": {
+   "name": "Clammbon",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "c4819d25-14d2-4ac0-a226-1a9aec263af3",
+   "mbName": "clammbon"
+  },
+  "masato of coldrain": {
+   "name": "Masato of Coldrain",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "snap!": {
+   "name": "Snap!",
+   "tracks": 1,
+   "country": "DE",
+   "area": "Germany",
+   "areaId": "85752fda-13c4-31a3-bee5-0e5cb1f51dad",
+   "score": 100,
+   "mbid": "cd23732d-ffd2-444e-8884-53475d7ac7d9",
+   "mbName": "Snap!"
+  },
+  "turbo b": {
+   "name": "Turbo B",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "fe244e6d-1c11-4d34-b6c5-51f36f2fbac0",
+   "mbName": "Turbo B."
+  },
+  "yuuhei satellite": {
+   "name": "Yuuhei Satellite",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "40b99d58-7f4a-419a-86c7-af63a63063bc",
+   "mbName": "幽閉サテライト"
+  },
+  "senya": {
+   "name": "senya",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "1c4ddcd7-6028-428c-b596-59e3af2f4baf",
+   "mbName": "senya"
+  },
+  "hudson lee": {
+   "name": "Hudson Lee",
+   "tracks": 1,
+   "country": "CA",
+   "area": "Canada",
+   "areaId": "71bbafaa-e825-3e15-8ca9-017dcad1748b",
+   "score": 100,
+   "mbid": "b931fd75-774d-4761-a498-5dd8b2fc0abc",
+   "mbName": "Hudson Lee"
+  },
+  "frequent & alexander panos": {
+   "name": "Frequent & Alexander Panos",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "sophus alf": {
+   "name": "Sophus Alf",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "e5c29ad5-fde6-43cf-9212-dd4d76f555e1",
+   "mbName": "Sophus Alf Agerbæk-Larsen"
+  },
+  "troels rohde jørgensen": {
+   "name": "Troels Rohde Jørgensen",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "e093a534-e470-45f7-99e2-f5bfe074ecd4",
+   "mbName": "Troels Rohde Jørgensen"
+  },
+  "shiding su": {
+   "name": "Shiding Su",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "therr maitz": {
+   "name": "Therr Maitz",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "b758a558-3413-4006-8ca3-9de731296fb0",
+   "mbName": "Therr Maitz"
+  },
+  "valentin mussou": {
+   "name": "Valentin Mussou",
+   "tracks": 1,
+   "country": "FR",
+   "area": "France",
+   "areaId": "08310658-51eb-3801-80de-5a0739207115",
+   "score": 100,
+   "mbid": "1b930d26-64f1-4304-a36f-8b597fd17a44",
+   "mbName": "Valentin Mussou"
+  },
+  "rubén j. carbajal": {
+   "name": "Rubén J. Carbajal",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "e8bc153b-1a67-4507-8d88-7358770f7008",
+   "mbName": "Rubén J. Carbajal"
+  },
+  "john cardoza, mili diaz, cailen fu & eric peters": {
+   "name": "John Cardoza, Mili Diaz, Cailen Fu & Eric Peters",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "nanahira & pmarusama": {
+   "name": "Nanahira & PMarusama",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "f rabbeat": {
+   "name": "F Rabbeat",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "551c9e44-2b04-4b43-8497-517dd07b3975",
+   "mbName": "F Rabbeat"
+  },
+  "mustard": {
+   "name": "mustard",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "0612bcce-e351-40be-b3d7-2bb5e1c23479",
+   "mbName": "Mustard"
+  },
+  "dj taka": {
+   "name": "dj TAKA",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "e434d298-fe00-4fc7-bfba-7fac8da9d6fe",
+   "mbName": "dj TAKA"
+  },
+  "aimee": {
+   "name": "AiMEE",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "db3c0a20-bf05-4b30-ac22-f294aea24172",
+   "mbName": "Aimee Mann"
+  },
+  "thquib": {
+   "name": "thquib",
+   "tracks": 1,
+   "country": "US",
+   "area": "Saint Paul",
+   "areaId": "96713a37-1ebb-419e-b052-ffc93ceabcb2",
+   "score": 100,
+   "mbid": "0c0ecc5b-0818-4c74-9226-d895b29a1afa",
+   "mbName": "thquib",
+   "viaArea": true
+  },
+  "fukase": {
+   "name": "Fukase",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "020acfd6-1091-47f9-8602-ae08445a425e",
+   "mbName": "Fukase"
+  },
+  "pinkii": {
+   "name": "PiNKII",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "a9964fed-619e-459d-8212-072ee5149d63",
+   "mbName": "PiNKII"
+  },
+  "mizuki & tielle": {
+   "name": "mizuki & Tielle",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "nanahoshi kangen gakudan": {
+   "name": "Nanahoshi Kangen Gakudan",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "james brown": {
+   "name": "James Brown",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "20ff3303-4fe2-4a47-a1b6-291e26aa3438",
+   "mbName": "James Brown"
+  },
+  "fred wesley & the j.b.'s": {
+   "name": "Fred Wesley & The J.B.'s",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "cb6a2948-7b9b-4a15-8c71-2b79cc76408e",
+   "mbName": "The J.B.’s"
+  },
+  "sawtowne": {
+   "name": "SAWTOWNE",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "31b60257-e0ab-42c6-97ee-3458b741c81e",
+   "mbName": "SAWTOWNE"
+  },
+  "anna lea & cast of epic: the musical": {
+   "name": "Anna Lea & Cast of EPIC: The Musical",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "yue": {
+   "name": "Yue",
+   "tracks": 1,
+   "country": "KR",
+   "area": "South Korea",
+   "areaId": "b9f7d640-46e8-313e-b158-ded6d18593b3",
+   "score": 100,
+   "mbid": "5df89da9-5cdb-4219-9d6b-ba2d5cd14208",
+   "mbName": "YUE"
+  },
+  "faruco & dj myosuke": {
+   "name": "FARUCO & DJ Myosuke",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "mustard & beatmario": {
+   "name": "Mustard & beatMARIO",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "armin van buuren": {
+   "name": "Armin van Buuren",
+   "tracks": 1,
+   "country": "NL",
+   "area": "Netherlands",
+   "areaId": "ef1b7cc0-cd26-36f4-8ea0-04d9623786c7",
+   "score": 100,
+   "mbid": "477b8c0c-c5fc-4ad2-b5b2-191f0bf2a9df",
+   "mbName": "Armin van Buuren"
+  },
+  "sharon den adel": {
+   "name": "Sharon den Adel",
+   "tracks": 1,
+   "country": "NL",
+   "area": "Netherlands",
+   "areaId": "ef1b7cc0-cd26-36f4-8ea0-04d9623786c7",
+   "score": 100,
+   "mbid": "7f4195a2-c1ce-4dae-bbbc-3f5967f077ec",
+   "mbName": "Sharon den Adel"
+  },
+  "ikumi hasegawa": {
+   "name": "Ikumi Hasegawa",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "4abe415d-c8b8-484d-a689-509815f992f2",
+   "mbName": "長谷川育美"
+  },
+  "hei dou ado": {
+   "name": "Hei Dou Ado",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "wang shu shu": {
+   "name": "Wang Shu Shu",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "sajou no hana": {
+   "name": "sajou no hana",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "2bfda430-af83-4e6d-aa36-432f94bd1c70",
+   "mbName": "sajou no hana"
+  },
+  "daisy×daisy": {
+   "name": "Daisy×Daisy",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "bd435747-4a5e-4b61-a94a-27b7ee190159",
+   "mbName": "Daisy×Daisy"
+  },
+  "another infinity": {
+   "name": "Another Infinity",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "c78775c8-fe3c-439f-a8a6-52ad773c206a",
+   "mbName": "Another Infinity"
+  },
+  "void (mournfinale)": {
+   "name": "void (Mournfinale)",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "c8a0cb7a-99c8-4bcd-82d5-bcef201e13d1",
+   "mbName": "void"
+  },
+  "hoshikuma minami": {
+   "name": "Hoshikuma Minami",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "6f9c03a4-6573-455c-8631-28a2f5a22029",
+   "mbName": "星熊南巫"
+  },
+  "sān-z & taiga": {
+   "name": "Sān-Z & Taiga",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "jamie paige & ok glass": {
+   "name": "Jamie Paige & OK Glass",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "choi han": {
+   "name": "Choi Han",
+   "tracks": 1,
+   "country": "KR",
+   "area": "South Korea",
+   "areaId": "b9f7d640-46e8-313e-b158-ded6d18593b3",
+   "score": 100,
+   "mbid": "7eacc07f-d4b8-4214-8614-987ebb45e415",
+   "mbName": "Hanbit"
+  },
+  "jim johnston": {
+   "name": "Jim Johnston",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "0b885ee9-889a-484d-ac11-3ce578e457f6",
+   "mbName": "Jim Johnston"
+  },
+  "shaman's harvest": {
+   "name": "Shaman's Harvest",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "8ac5a921-50d5-48b5-a784-eddd422070df",
+   "mbName": "Shaman’s Harvest"
+  },
+  "yida": {
+   "name": "Yida",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "5f5709bc-2e9e-4e5f-a2dd-50d6977c5f86",
+   "mbName": "Yida"
+  },
+  "yang xue": {
+   "name": "Yang Xue",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "adam sandler": {
+   "name": "Adam Sandler",
+   "tracks": 1,
+   "country": "AR",
+   "area": "Argentina",
+   "areaId": "0df04709-c7d8-3b55-a6ea-f3e5069a947b",
+   "score": 100,
+   "mbid": "cbdccf5a-d970-4c82-8c9d-1fb872a6cbe8",
+   "mbName": "Adam Sandler Club"
+  },
+  "eight crazy nights cast": {
+   "name": "Eight Crazy Nights Cast",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "xzibit": {
+   "name": "XZIBIT",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "9e839dc3-55f3-4492-ad0e-a1a2e84275e2",
+   "mbName": "Xzibit"
+  },
+  "vanessa kim": {
+   "name": "Vanessa Kim",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "alexia evellyn": {
+   "name": "Alexia Evellyn",
+   "tracks": 1,
+   "country": "BR",
+   "area": "Brazil",
+   "areaId": "f45b47f8-5796-386e-b172-6c31b009a5d8",
+   "score": 100,
+   "mbid": "b7482cc5-c8fa-45bc-9d0f-b981c575ea6c",
+   "mbName": "Alexia Evellyn"
+  },
+  "everly frey": {
+   "name": "Everly Frey",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "sixteeninmono": {
+   "name": "SixteenInMono",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "8c5055c5-23ba-48c7-879c-a001c323805c",
+   "mbName": "SixteenInMono"
+  },
+  "aylin abbasova": {
+   "name": "Aylin Abbasova",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "b08524c6-f559-49fe-9754-c4ff990d27b4",
+   "mbName": "Aylin Abbasova"
+  },
+  "jenny plant": {
+   "name": "Jenny Plant",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "e48103ce-1759-487f-ab73-2a76b086ba3a",
+   "mbName": "Jenny Plant"
+  },
+  "honeyworks": {
+   "name": "HoneyWorks",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "1dc670f7-1a43-4a71-973a-2ad181f4edd4",
+   "mbName": "HoneyWorks"
+  },
+  "saori hayami": {
+   "name": "Saori Hayami",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "7c287fc8-8a14-49fc-8eca-84598834eb1d",
+   "mbName": "早見沙織"
+  },
+  "bill hemstapat": {
+   "name": "Bill Hemstapat",
+   "tracks": 1,
+   "country": "TH",
+   "area": "Bangkok",
+   "areaId": "768367d2-ac8c-4daf-ba70-94710ad4870a",
+   "score": 100,
+   "mbid": "3507acc3-1ffd-4329-b644-26b87e2dd8fd",
+   "mbName": "Bill Hemstapat",
+   "viaArea": true
+  },
+  "layth sidiq": {
+   "name": "Layth Sidiq",
+   "tracks": 1,
+   "country": "US",
+   "area": "Boston",
+   "areaId": "e331bfdf-b908-429c-a79b-710cf9c06abb",
+   "score": 100,
+   "mbid": "f7dc88a9-e238-494e-afe2-585a64466c01",
+   "mbName": "Layth Sidiq",
+   "viaArea": true
+  },
+  "unkle": {
+   "name": "UNKLE",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "6648391e-7890-4f6c-b939-976f215195d3",
+   "mbName": "UNKLE"
+  },
+  "josh homme": {
+   "name": "Josh Homme",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "dbecd515-aac9-4e7b-808e-bca22809c316",
+   "mbName": "Josh Homme"
+  },
+  "tokyo ska paradise orchestra": {
+   "name": "Tokyo Ska Paradise Orchestra",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "d77f4539-0661-4741-9307-60ebbd72f5ee",
+   "mbName": "東京スカパラダイスオーケストラ"
+  },
+  "kosuke saito": {
+   "name": "Kosuke Saito",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "a6ff20e2-3545-4595-9f85-eb4cdf50047b",
+   "mbName": "Kosuke Saito"
+  },
+  "neil patrick harris": {
+   "name": "Neil Patrick Harris",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "587fbf06-1cc0-4ae6-91ef-afe832385b13",
+   "mbName": "Neil Patrick Harris"
+  },
+  "felicia day": {
+   "name": "Felicia Day",
+   "tracks": 1,
+   "country": "US",
+   "area": "Los Angeles",
+   "areaId": "1f40c6e1-47ba-4e35-996f-fe6ee5840e62",
+   "score": 100,
+   "mbid": "fc1faea4-9ce7-435b-8494-2bc4412a473c",
+   "mbName": "Felicia Day",
+   "viaArea": true
+  },
+  "erin yvette, ashley barrett & judy alice lee": {
+   "name": "Erin Yvette, Ashley Barrett & Judy Alice Lee",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "mochiutsune": {
+   "name": "Mochiutsune",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "a1ef1c7b-aa47-4421-8f4d-8bea236c853e",
+   "mbName": "もちうつね"
+  },
+  "lindsey stirling": {
+   "name": "Lindsey Stirling",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "53e40f93-f4af-4f8c-819c-7bbe4b6f0a1c",
+   "mbName": "Lindsey Stirling"
+  },
+  "boogey voxx": {
+   "name": "BOOGEY VOXX",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "09a13a6b-96ab-4459-9c46-c1665dd751eb",
+   "mbName": "BOOGEY VOXX"
+  },
+  "ovrog": {
+   "name": "ovROG",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "48c851e0-063e-4138-8e3a-3f7a7349e1f7",
+   "mbName": "ovROG"
+  },
+  "fendiglock": {
+   "name": "FENDIGLOCK",
+   "tracks": 1,
+   "country": "DE",
+   "area": "Düsseldorf",
+   "areaId": "03e75281-c3a3-454a-8d78-c85a5415c49e",
+   "score": 100,
+   "mbid": "2c0958a6-243d-4c82-a59e-36664f20c1bb",
+   "mbName": "FENDIGLOCK",
+   "viaArea": true
+  },
+  "og buda": {
+   "name": "OG Buda",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "93d62249-3825-405d-af4b-08d4b3b89f61",
+   "mbName": "OG Buda"
+  },
+  "kairiki bear": {
+   "name": "Kairiki Bear",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "f79208d6-8176-4f52-9983-1c7c12843845",
+   "mbName": "かいりきベア"
+  },
+  "scott bradlee’s postmodern jukebox": {
+   "name": "Scott Bradlee’s Postmodern Jukebox",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "5f5d68dd-285a-4f06-9099-84eb3f85c65f",
+   "mbName": "Postmodern Jukebox"
+  },
+  "haley reinhart": {
+   "name": "Haley Reinhart",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "d774c8ff-2b2b-423d-94ba-a827b3554785",
+   "mbName": "Haley Reinhart"
+  },
+  "melanie c": {
+   "name": "Melanie C",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "25b509ef-48ad-461b-a0bc-94cdddb8c919",
+   "mbName": "Melanie C"
+  },
+  "lisa 'left eye' lopes": {
+   "name": "Lisa 'Left Eye' Lopes",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "42645d41-cb2b-43d9-8996-8ee4b637e7d1",
+   "mbName": "Lisa “Left Eye” Lopes"
+  },
+  "ashley barrett & judy alice lee": {
+   "name": "Ashley Barrett & Judy Alice Lee",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "enrique iglesias": {
+   "name": "Enrique Iglesias",
+   "tracks": 1,
+   "country": "ES",
+   "area": "Spain",
+   "areaId": "471c46a7-afc5-31c4-923c-d0444f5053a4",
+   "score": 100,
+   "mbid": "35f866dc-c061-48ba-8157-cf2e0eac4857",
+   "mbName": "Enrique Iglesias"
+  },
+  "sean paul, descemer bueno & gente de zona": {
+   "name": "Sean Paul, Descemer Bueno & Gente De Zona",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "louis cole": {
+   "name": "Louis Cole",
+   "tracks": 1,
+   "country": "BR",
+   "area": "Brazil",
+   "areaId": "f45b47f8-5796-386e-b172-6c31b009a5d8",
+   "score": 100,
+   "mbid": "00b019e9-5705-4ccb-82eb-ec75a180bbdf",
+   "mbName": "Louis Cole e Sua Orquestra"
+  },
+  "feduk & friendly thug 52 ngg": {
+   "name": "FEDUK & FRIENDLY THUG 52 NGG",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "girls dead monster": {
+   "name": "Girls Dead Monster",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "122cce39-8303-4801-989e-cefa438bd98d",
+   "mbName": "Girls Dead Monster"
+  },
+  "mai yamane": {
+   "name": "Mai Yamane",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "60c2af61-346e-4697-9926-f95d195ee02e",
+   "mbName": "山根麻以"
+  },
+  "soweto gospel choir": {
+   "name": "Soweto Gospel Choir",
+   "tracks": 1,
+   "country": "ZA",
+   "area": "South Africa",
+   "areaId": "50cc7852-862e-30ae-aa82-385fe7135b7f",
+   "score": 100,
+   "mbid": "49dca4c0-4554-42cd-9b93-ef85b1aaf118",
+   "mbName": "Soweto Gospel Choir"
+  },
+  "chilichill": {
+   "name": "ChiliChill",
+   "tracks": 1,
+   "country": "CN",
+   "area": "China",
+   "areaId": "7c81bb69-a99b-3487-b6d4-0f76d7a29ca0",
+   "score": 100,
+   "mbid": "3360de99-2f4b-45d0-9c5c-b6cfb43e5edf",
+   "mbName": "ChiliChill"
+  },
+  "colin ryan & ashley barrett": {
+   "name": "Colin Ryan & Ashley Barrett",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "tim cappello & indiana": {
+   "name": "Tim Cappello & Indiana",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "mitchie m": {
+   "name": "Mitchie M",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Saitama",
+   "areaId": "afe629de-3e65-4523-aaa9-c07af18648ee",
+   "score": 100,
+   "mbid": "e447a971-e4e2-4ea7-9330-472deb070e90",
+   "mbName": "Mitchie M",
+   "viaArea": true
+  },
+  "kusanagi nene, nenerobo, mikudayo, kagamine len & kaito": {
+   "name": "Kusanagi Nene, NeneRobo, Mikudayo, Kagamine Len & KAITO",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "yoshiki": {
+   "name": "YOSHIKI",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "c64da7fc-a073-49fc-a26e-494217afbc6a",
+   "mbName": "YOSHIKI"
+  },
+  "adam gubman, george sanger & james hayden": {
+   "name": "Adam Gubman, George Sanger & James Hayden",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "pentakill": {
+   "name": "Pentakill",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "293e99bd-b55a-404f-bc9e-9b950852b064",
+   "mbName": "Pentakill"
+  },
+  "jorn lande": {
+   "name": "JORN Lande",
+   "tracks": 1,
+   "country": "NO",
+   "area": "Norway",
+   "areaId": "6743d351-6f37-3049-9724-5041161fff4d",
+   "score": 100,
+   "mbid": "91022966-c8de-4f0c-863c-10d026f6c843",
+   "mbName": "Jorn"
+  },
+  "ayo": {
+   "name": "Ayo",
+   "tracks": 1,
+   "country": "DE",
+   "area": "Germany",
+   "areaId": "85752fda-13c4-31a3-bee5-0e5cb1f51dad",
+   "score": 100,
+   "mbid": "633c13a3-335a-466f-8e01-535837faeff5",
+   "mbName": "Ayọ"
+  },
+  "clara sorace": {
+   "name": "Clara Sorace",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "83ebd52d-b12e-4c51-b135-01cdc94bfc7d",
+   "mbName": "Clara Sorace"
+  },
+  "kazuo": {
+   "name": "Kazuo",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "1ab92239-9c50-46e7-a39b-d1726456eaed",
+   "mbName": "KAZUO"
+  },
+  "mikitop": {
+   "name": "MikitoP",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "b839783f-03b2-46a2-a799-7f2299a5c215",
+   "mbName": "みきとP"
+  },
+  "yanagi nagi": {
+   "name": "Yanagi Nagi",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "eeacda09-891d-4367-b9cc-c6371c96d4d9",
+   "mbName": "やなぎなぎ"
+  },
+  "pusha t": {
+   "name": "Pusha T",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "14ecd19f-7121-4192-8549-e5056241a42f",
+   "mbName": "Pusha T"
+  },
+  "ben del maestro": {
+   "name": "Ben Del Maestro",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "918b673a-58bf-4c2f-9431-3d094d6d782b",
+   "mbName": "Ben Del Maestro"
+  },
+  "kellin quinn": {
+   "name": "Kellin Quinn",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "08b24fae-6114-4af4-a10f-054e09ffc5b9",
+   "mbName": "Kellin Quinn"
+  },
+  "montserrat caballé": {
+   "name": "Montserrat Caballé",
+   "tracks": 1,
+   "country": "ES",
+   "area": "Spain",
+   "areaId": "471c46a7-afc5-31c4-923c-d0444f5053a4",
+   "score": 100,
+   "mbid": "a96e61bc-1da0-45d0-816d-ebd00b70ff9d",
+   "mbName": "Montserrat Caballé"
+  },
+  "andrew lloyd webber": {
+   "name": "Andrew Lloyd Webber",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "980ee2d8-2ee9-407b-b48e-48360fbc7437",
+   "mbName": "Andrew Lloyd Webber"
+  },
+  "steve balsamo": {
+   "name": "Steve Balsamo",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "e6baa88d-d290-4bd6-919a-c832f4931be9",
+   "mbName": "Steve Balsamo"
+  },
+  "david byrne": {
+   "name": "David Byrne",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "d4659efb-b8eb-4f03-95e9-f69ce35967a9",
+   "mbName": "David Byrne"
+  },
+  "au/ra & tomine harket": {
+   "name": "Au/Ra & Tomine Harket",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "madison beer & kim petras": {
+   "name": "Madison Beer & Kim Petras",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "minato": {
+   "name": "minato",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "56b98371-7f7b-4587-a354-213b0103e36d",
+   "mbName": "minato"
+  },
+  "hatsune miku & megurine luka": {
+   "name": "Hatsune Miku & Megurine Luka",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "yuriko kaida": {
+   "name": "Yuriko Kaida",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "3f2ba34d-747d-4b29-8f00-bda5fba1cc01",
+   "mbName": "貝田由里子"
+  },
+  "brushy one string": {
+   "name": "Brushy One String",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "e4035fbe-b5a1-4d11-b28f-9610ef15e5a3",
+   "mbName": "Brushy One String"
+  },
+  "cuppa tea": {
+   "name": "Cuppa Tea",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "ceelo green": {
+   "name": "CeeLo Green",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "2c69465c-0f76-45ce-90a2-1ed0fdacc997",
+   "mbName": "CeeLo Green"
+  },
+  "melanie fiona": {
+   "name": "Melanie Fiona",
+   "tracks": 1,
+   "country": "CA",
+   "area": "Canada",
+   "areaId": "71bbafaa-e825-3e15-8ca9-017dcad1748b",
+   "score": 100,
+   "mbid": "209e47f9-df65-47bd-9a40-4fb4c5c9c349",
+   "mbName": "Melanie Fiona"
+  },
+  "симфонические твари": {
+   "name": "Симфонические Твари",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "j.am ft, len": {
+   "name": "j.am ft, Len",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "kenji ohtsuki": {
+   "name": "Kenji Ohtsuki",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "41a4167b-2627-4df1-a590-5358e3145be8",
+   "mbName": "大槻ケンヂ"
+  },
+  "fumihiko kitsutaka": {
+   "name": "Fumihiko Kitsutaka",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "31f18caa-288c-4c58-9062-3a8cd51ca6fb",
+   "mbName": "橘高文彦"
+  },
+  "rei": {
+   "name": "Rei",
+   "tracks": 1,
+   "country": "IT",
+   "area": "Italy",
+   "areaId": "c6500277-9a3d-349b-bf30-41afdbf42add",
+   "score": 100,
+   "mbid": "2ec117a1-3d13-4eec-bcb4-de65bc248670",
+   "mbName": "Sagi-Rei"
+  },
+  "r-shitei": {
+   "name": "R-Shitei",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "a09229e1-b307-4a18-aa05-6bd7b1b4fd68",
+   "mbName": "R指定"
+  },
+  "daniel barenboim": {
+   "name": "Daniel Barenboim",
+   "tracks": 1,
+   "country": "AR",
+   "area": "Argentina",
+   "areaId": "0df04709-c7d8-3b55-a6ea-f3e5069a947b",
+   "score": 100,
+   "mbid": "fac566b2-7a0e-4977-ad92-533f43420975",
+   "mbName": "Daniel Barenboim"
+  },
+  "berliner philharmoniker": {
+   "name": "Berliner Philharmoniker",
+   "tracks": 1,
+   "country": "DE",
+   "area": "Berlin",
+   "areaId": "c9ac1239-e832-41bc-9930-e252a1fd1105",
+   "score": 100,
+   "mbid": "dea28aa9-1086-4ffa-8739-0ccc759de1ce",
+   "mbName": "Berliner Philharmoniker",
+   "viaArea": true
+  },
+  "reigan": {
+   "name": "Reigan",
+   "tracks": 1,
+   "country": "AU",
+   "area": "Australia",
+   "areaId": "106e0bec-b638-3b37-b731-f53d507dc00e",
+   "score": 100,
+   "mbid": "443adc7c-5345-484c-a4c4-04ed540ffb16",
+   "mbName": "Reigan"
+  },
+  "yutaka minobe": {
+   "name": "Yutaka Minobe",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "764e4dbd-ecd9-4e3d-bd27-5ce0a0dca331",
+   "mbName": "蓑部雄崇"
+  },
+  "kaori kondo": {
+   "name": "Kaori Kondo",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "doriko": {
+   "name": "doriko",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "3a033514-42c3-4e65-adc6-16ce96b5769e",
+   "mbName": "doriko"
+  },
+  "tom kenny, neil patrick harris, kevin michael richardson, john dimaggio, jeff bennett, james arnold taylor, grey delisle, dee bradley baker & diedrich bader": {
+   "name": "Tom Kenny, Neil Patrick Harris, Kevin Michael Richardson, John DiMaggio, Jeff Bennett, James Arnold Taylor, Grey DeLisle, Dee Bradley Baker & Diedrich Bader",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "toki asako": {
+   "name": "Toki Asako",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "0412cd16-5507-4474-86e2-3c94dd1428f2",
+   "mbName": "土岐麻子"
+  },
+  "l'impératrice": {
+   "name": "L'Impératrice",
+   "tracks": 1,
+   "country": "FR",
+   "area": "France",
+   "areaId": "08310658-51eb-3801-80de-5a0739207115",
+   "score": 100,
+   "mbid": "abc31be8-02b2-4bb1-867d-604d50b7be78",
+   "mbName": "L’Impératrice"
+  },
+  "erick the architect": {
+   "name": "Erick the Architect",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "dbfff37c-146d-4415-b765-9a76d48c749c",
+   "mbName": "Erick the Architect"
+  },
+  "ali love": {
+   "name": "Ali Love",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "6326499b-c7be-4f85-a56a-867c8328ab00",
+   "mbName": "Ali Love"
+  },
+  "toiki": {
+   "name": "Toiki",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "d9604145-c9da-4ef6-948c-8aab6c043a0d",
+   "mbName": "吐息"
+  },
+  "stephen coleman & hollywood studio symphony": {
+   "name": "Stephen Coleman & Hollywood Studio Symphony",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "rachel denlinger & rich brilli": {
+   "name": "Rachel Denlinger & Rich Brilli",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "rich brilli": {
+   "name": "Rich Brilli",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "d0dd9ff5-001d-450f-a21d-5454cd6d3534",
+   "mbName": "Rich Brilli"
+  },
+  "suou patra": {
+   "name": "Suou Patra",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Tokyo",
+   "areaId": "8dc97297-ac95-4d33-82bc-e07fab26fb5f",
+   "score": 100,
+   "mbid": "85aa8bc7-edc8-4ec9-bc04-834976329ff0",
+   "mbName": "周防パトラ",
+   "viaArea": true
+  },
+  "aviya dor-kolan": {
+   "name": "Aviya Dor-Kolan",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "3edd3a8d-0f71-4478-9bd7-9c01731b1574",
+   "mbName": "Aviya Dor‐Kolan"
+  },
+  "riot music team, justin tranter, alex seaver": {
+   "name": "Riot Music Team, Justin Tranter, Alex Seaver",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "the glitch mob, mako & the word alive": {
+   "name": "The Glitch Mob, Mako & The Word Alive",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "jt music": {
+   "name": "JT Music",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "835d26ab-15e3-4db2-8422-20602d72c65e",
+   "mbName": "JT Music"
+  },
+  "andrea storm kaden": {
+   "name": "Andrea Storm Kaden",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "a954e05e-9155-4ca3-98e3-45643e92715c",
+   "mbName": "Andrea Storm Kaden"
+  },
+  "neil patrick harris, kevin michael richardson, john dimaggio, james arnold taylor, grey delisle & dee bradley baker": {
+   "name": "Neil Patrick Harris, Kevin Michael Richardson, John DiMaggio, James Arnold Taylor, Grey DeLisle & Dee Bradley Baker",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "atsushi kitajoh": {
+   "name": "Atsushi Kitajoh",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "2aaa4d3d-5100-4c03-b464-7ab6af8854e6",
+   "mbName": "喜多條敦志"
+  },
+  "lotus juice & azumi takahashi": {
+   "name": "Lotus Juice & Azumi Takahashi",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "jason walsh & alex seaver": {
+   "name": "Jason Walsh & Alex Seaver",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "pvris": {
+   "name": "PVRIS",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "de210c9e-fbf6-4827-987f-dd8885f5d890",
+   "mbName": "PVRIS"
+  },
+  "sidewalks and skeletons": {
+   "name": "Sidewalks and Skeletons",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "edc4f886-8d54-4908-b013-260bfcb50481",
+   "mbName": "Sidewalks and Skeletons"
+  },
+  "goo munday": {
+   "name": "Goo Munday",
+   "tracks": 1,
+   "country": "AU",
+   "area": "Australia",
+   "areaId": "106e0bec-b638-3b37-b731-f53d507dc00e",
+   "score": 100,
+   "mbid": "0013805f-6d60-4894-82a7-818e80894d99",
+   "mbName": "Goo Munday"
+  },
+  "sassy 009": {
+   "name": "SASSY 009",
+   "tracks": 1,
+   "country": "NO",
+   "area": "Oslo",
+   "areaId": "f80d529e-f242-46ef-a090-d193ed23075f",
+   "score": 100,
+   "mbid": "00d394c8-09be-41b5-bc52-f37f0fa7cfb7",
+   "mbName": "Sassy 009",
+   "viaArea": true
+  },
+  "clairo": {
+   "name": "Clairo",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "d786f59b-1836-4ddb-8393-ab753edbe984",
+   "mbName": "Clairo"
+  },
+  "yumi kawamura": {
+   "name": "Yumi Kawamura",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "e6b64735-7916-4c77-a86e-cf612ee05be5",
+   "mbName": "川村ゆみ"
+  },
+  "eilemonty & orko": {
+   "name": "EileMonty & Orko",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "​mpi & mika kobayashi": {
+   "name": "​mpi & Mika Kobayashi",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "turilli/lione rhapsody": {
+   "name": "Turilli/Lione Rhapsody",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "mark basile": {
+   "name": "Mark Basile",
+   "tracks": 1,
+   "country": "IT",
+   "area": "Italy",
+   "areaId": "c6500277-9a3d-349b-bf30-41afdbf42add",
+   "score": 100,
+   "mbid": "2da683d6-d36f-44ca-8c05-0d17ff4040fe",
+   "mbName": "Mark Basile"
+  },
+  "amala": {
+   "name": "Amala",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Fukuoka",
+   "areaId": "ac0f32ec-8342-409a-b97f-6ace1f21b438",
+   "score": 100,
+   "mbid": "74b4d464-7b7c-48c4-b96d-c5adf7f8e1c9",
+   "mbName": "雨良",
+   "viaArea": true
+  },
+  "akihito okano": {
+   "name": "Akihito Okano",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "0f51ab24-c89a-438e-b3af-2d974fa0654a",
+   "mbName": "岡野昭仁"
+  },
+  "ichika nito": {
+   "name": "Ichika Nito",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "d148a0ee-8cb8-4392-9465-e0078f211fe7",
+   "mbName": "Ichika Nito"
+  },
+  "feryquitous": {
+   "name": "Feryquitous",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "7c2cc610-f998-43ef-a08f-dae3344b8973",
+   "mbName": "Feryquitous"
+  },
+  "роман фарыма": {
+   "name": "Роман Фарыма",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "post malone & ty dolla $ign": {
+   "name": "Post Malone & Ty Dolla $ign",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "harumaki gohan": {
+   "name": "Harumaki Gohan",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "73c1558a-4c3c-4c9d-baca-8d26546c09e7",
+   "mbName": "はるまきごはん"
+  },
+  "golos kaa": {
+   "name": "Golos KAA",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "aigul gilyazeva": {
+   "name": "Aigul Gilyazeva",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "paul williams": {
+   "name": "Paul Williams",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "27bab2e2-4d10-4207-ac5f-8b8c7a96c5e0",
+   "mbName": "Paul Williams"
+  },
+  "hachi": {
+   "name": "HACHI",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "60cc2a61-471a-4190-9024-2dc65263f436",
+   "mbName": "HACHI"
+  },
+  "ak-47": {
+   "name": "AK-47",
+   "tracks": 1,
+   "country": "CA",
+   "area": "British Columbia",
+   "areaId": "e10dada7-934d-4a38-a20f-44cc6fa4672d",
+   "score": 100,
+   "mbid": "0801bfd1-3a76-494e-ab34-d82e8f3a2771",
+   "mbName": "AK-47",
+   "viaArea": true
+  },
+  "guf & ноггано": {
+   "name": "Guf & Ноггано",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "елена корикова": {
+   "name": "Елена Корикова",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "5cc53f0c-e06e-489d-b41a-215adf128b24",
+   "mbName": "Елена Корикова"
+  },
+  "lapfox trax": {
+   "name": "Lapfox Trax",
+   "tracks": 1,
+   "country": "US",
+   "area": "New Hampshire",
+   "areaId": "4ca644d9-18a6-4605-9d71-3eae8b3ab2ee",
+   "score": 100,
+   "mbid": "bf9f8fb1-3745-4e35-a1cf-1a535a19a2ed",
+   "mbName": "LapFox Trax Remix Sound Team",
+   "viaArea": true
+  },
+  "guilhox": {
+   "name": "Guilhox",
+   "tracks": 1,
+   "country": "BR",
+   "area": "Brazil",
+   "areaId": "f45b47f8-5796-386e-b172-6c31b009a5d8",
+   "score": 100,
+   "mbid": "7c06206f-d812-4fb3-9184-589aeb25cecf",
+   "mbName": "guilhox"
+  },
+  "otetsu": {
+   "name": "otetsu",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "551c0d10-8346-405d-a632-84240b490a2a",
+   "mbName": "otetsu"
+  },
+  "suzie ungerleider": {
+   "name": "Suzie Ungerleider",
+   "tracks": 1,
+   "country": "CA",
+   "area": "Toronto",
+   "areaId": "74b24e62-d2fe-42d2-9d96-31f2da756c77",
+   "score": 100,
+   "mbid": "37e5cace-5d7c-4aa7-9c9e-263555219a08",
+   "mbName": "Suzie Ungerleider",
+   "viaArea": true
+  },
+  "van dyke parks": {
+   "name": "Van Dyke Parks",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "74be7080-080f-49d0-b8c5-1166eed1bb8e",
+   "mbName": "Van Dyke Parks"
+  },
+  "hanser": {
+   "name": "Hanser",
+   "tracks": 1,
+   "country": "DE",
+   "area": "Germany",
+   "areaId": "85752fda-13c4-31a3-bee5-0e5cb1f51dad",
+   "score": 100,
+   "mbid": "bab3c6b1-7ace-4739-be5d-154f5265563d",
+   "mbName": "Wilhelm Hanser"
+  },
+  "jinli & zhao lu": {
+   "name": "Jinli & Zhao Lu",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "wlvs": {
+   "name": "WLVS",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "8b64f641-ba16-4464-97e7-3b2689db7a4d",
+   "mbName": "WLVS"
+  },
+  "4ᔭ": {
+   "name": "4ᔭ",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "4fe314c7-4b42-465e-934c-8ebf263d150a",
+   "mbName": "4ᔭ"
+  },
+  "palina": {
+   "name": "Palina",
+   "tracks": 1,
+   "country": null,
+   "area": "Minsk",
+   "areaId": "47323b71-af21-42f7-ae02-380b31ee1b94",
+   "score": 100,
+   "mbid": "78d96d62-4555-47cd-81da-a81d4a190042",
+   "mbName": "Palina"
+  },
+  "ketevan": {
+   "name": "Ketevan",
+   "tracks": 1,
+   "country": "NL",
+   "area": "Amsterdam",
+   "areaId": "e8e317a1-268c-4e46-9db1-f10af959ffca",
+   "score": 100,
+   "mbid": "d2bd4d37-1cd2-45fd-b13e-a024c09d32e4",
+   "mbName": "Ketevan Roinishvili",
+   "viaArea": true
+  },
+  "heartless abyss": {
+   "name": "Heartless Abyss",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "rachel denlinger": {
+   "name": "Rachel Denlinger",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "effa0413-b679-4df2-ad49-a1036f4e0606",
+   "mbName": "Rachel Denlinger"
+  },
+  "arnór dan": {
+   "name": "Arnór Dan",
+   "tracks": 1,
+   "country": "IS",
+   "area": "Iceland",
+   "areaId": "48802a32-075a-3805-a183-277c66047693",
+   "score": 100,
+   "mbid": "02d6d00b-1f27-4781-bc51-cbd3e7b45a58",
+   "mbName": "Arnór Dan"
+  },
+  "familyjules7x": {
+   "name": "FamilyJules7x",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "4cb7f5d9-aedc-4b2d-b506-a81e3c931045",
+   "mbName": "FamilyJules7x"
+  },
+  "ko.yo": {
+   "name": "ko.yo",
+   "tracks": 1,
+   "country": "KR",
+   "area": "South Korea",
+   "areaId": "b9f7d640-46e8-313e-b158-ded6d18593b3",
+   "score": 100,
+   "mbid": "d2874aaf-b856-429c-acbb-9a566241a4c0",
+   "mbName": "ko.yo"
+  },
+  "ellin": {
+   "name": "Ellin",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "38db1dd7-6bd6-4f58-bb25-f61469ec7694",
+   "mbName": "Stanley Ellin"
+  },
+  "the cast of journey to bethlehem": {
+   "name": "The Cast Of Journey To Bethlehem",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "antonio banderas & joel smallbone": {
+   "name": "Antonio Banderas & Joel Smallbone",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "ika": {
+   "name": "ika",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "e77f04d6-7a65-4c51-9933-338dba5861d5",
+   "mbName": "ika"
+  },
+  "pinocchiop": {
+   "name": "PinocchioP",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "a59934a9-7be9-4f80-82c0-bd1e88d68b89",
+   "mbName": "ピノキオピー"
+  },
+  "giga & teddyloid": {
+   "name": "Giga & TeddyLoid",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "power glove": {
+   "name": "Power Glove",
+   "tracks": 1,
+   "country": "AU",
+   "area": "Australia",
+   "areaId": "106e0bec-b638-3b37-b731-f53d507dc00e",
+   "score": 100,
+   "mbid": "e342f708-9b62-42b9-a59a-9afff7620da0",
+   "mbName": "Power Glove"
+  },
+  "santana": {
+   "name": "Santana",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "9a3bf45c-347d-4630-894d-7cf3e8e0b632",
+   "mbName": "Santana"
+  },
+  "rob thomas": {
+   "name": "Rob Thomas",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "e42680f7-e439-4666-9c2c-536c2b3c6db3",
+   "mbName": "Rob Thomas"
+  },
+  "david whitaker & mika kobayashi": {
+   "name": "David Whitaker & Mika Kobayashi",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "haz studio": {
+   "name": "Haz Studio",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "灵椒, edy, liby & mr. respect": {
+   "name": "灵椒, EDY, Liby & Mr. Respect",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "yoshida yasei": {
+   "name": "Yoshida Yasei",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "25428ac3-d4be-49e4-98fe-6a131218c153",
+   "mbName": "吉田夜世"
+  },
+  "rerulili": {
+   "name": "rerulili",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "0d5a32d3-4b6e-4222-bef9-4d0a39b7f745",
+   "mbName": "れるりり"
+  },
+  "m.a.k.e.vortex": {
+   "name": "M.A.K.E.vortex",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "gims & orelsan": {
+   "name": "GIMS & OrelSan",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "grover washington jr.": {
+   "name": "Grover Washington Jr.",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "c60e178f-36f1-4169-9c03-84addbdbf104",
+   "mbName": "Grover Washington, Jr."
+  },
+  "bill withers": {
+   "name": "Bill Withers",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "fd1a2d9d-9bb6-44de-83a3-41560658aba9",
+   "mbName": "Bill Withers"
+  },
+  "christian linke": {
+   "name": "Christian Linke",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "0ed9a07c-f0ec-4466-a584-5ce6b6f74b86",
+   "mbName": "Christian Linke"
+  },
+  "akugetsu": {
+   "name": "AKUGETSU",
+   "tracks": 1,
+   "country": "KR",
+   "area": "South Korea",
+   "areaId": "b9f7d640-46e8-313e-b158-ded6d18593b3",
+   "score": 100,
+   "mbid": "bc13d027-12ae-4f29-98a0-b3ba614fa4c9",
+   "mbName": "AKUGETSU"
+  },
+  "till": {
+   "name": "Till",
+   "tracks": 1,
+   "country": "DE",
+   "area": "Germany",
+   "areaId": "85752fda-13c4-31a3-bee5-0e5cb1f51dad",
+   "score": 100,
+   "mbid": "f6705e91-319c-4ef2-879b-4f4e670e38ee",
+   "mbName": "Till Brönner"
+  },
+  "apashe": {
+   "name": "Apashe",
+   "tracks": 1,
+   "country": "CA",
+   "area": "Montréal",
+   "areaId": "c3cc624e-b963-49cf-ad0b-e318cb341963",
+   "score": 100,
+   "mbid": "ce0724ab-2d63-415b-bbb1-839f97bb771a",
+   "mbName": "Apashe",
+   "viaArea": true
+  },
+  "panther": {
+   "name": "Panther",
+   "tracks": 1,
+   "country": "BE",
+   "area": "Belgium",
+   "areaId": "5b8a5ee5-0bb3-34cf-9a75-c27c44e341fc",
+   "score": 100,
+   "mbid": "0302f9c1-af32-4cef-8ec7-2bd75b18a8f5",
+   "mbName": "P.A.N.T.H.E.R."
+  },
+  "cosmograph": {
+   "name": "Cosmograph",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "2d03fd97-af30-42ea-8ac5-4801e5c1d70e",
+   "mbName": "Cosmograph"
+  },
+  "aka": {
+   "name": "AKA",
+   "tracks": 1,
+   "country": "ID",
+   "area": "Indonesia",
+   "areaId": "d3a68bd0-7419-3f99-a5bd-204d6e057089",
+   "score": 100,
+   "mbid": "d991e1c6-2d93-4652-953d-568e0d85c08c",
+   "mbName": "AKA"
+  },
+  "void_chords": {
+   "name": "Void_Chords",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "0ae62357-fe57-4b78-b629-649d38dcea27",
+   "mbName": "Void_Chords"
+  },
+  "l": {
+   "name": "L",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "07bd5e28-8cb7-4efd-b811-a48dd2bb7dab",
+   "mbName": "Jonny L"
+  },
+  "yosh": {
+   "name": "Yosh",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "f35ba810-77e8-4955-a2a3-d4e8ee4965a9",
+   "mbName": "Yosh Morita"
+  },
+  "eri itoh": {
+   "name": "Eri Itoh",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "кипелов & артур беркут": {
+   "name": "Кипелов & Артур Беркут",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "r-906": {
+   "name": "r-906",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "3d00a629-1faa-44b2-9d52-eabc45ff8395",
+   "mbName": "r-906"
+  },
+  "alison gold": {
+   "name": "Alison Gold",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "9eadb5d4-f336-45f5-ad56-95fb0ff1952b",
+   "mbName": "Alison Gold"
+  },
+  "patrice wilson": {
+   "name": "Patrice Wilson",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "9e65f09b-5946-4898-b45d-fbd29b47c3a3",
+   "mbName": "Patrice Wilson"
+  },
+  "tech n9ne & alex terrible": {
+   "name": "Tech N9ne & Alex Terrible",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "justin bieber": {
+   "name": "Justin Bieber",
+   "tracks": 1,
+   "country": "CA",
+   "area": "Canada",
+   "areaId": "71bbafaa-e825-3e15-8ca9-017dcad1748b",
+   "score": 100,
+   "mbid": "e0140a67-e4d1-4f13-8a01-364355bee46e",
+   "mbName": "Justin Bieber"
+  },
+  "starlight glimmer": {
+   "name": "Starlight Glimmer",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "5e85d604-ea50-4d96-953a-59c51b1fb531",
+   "mbName": "Starlight Glimmer"
+  },
+  "kelly sheridan": {
+   "name": "Kelly Sheridan",
+   "tracks": 1,
+   "country": "CA",
+   "area": "Vancouver",
+   "areaId": "6ccc62d1-bdd8-4f08-8fae-bfaa5310e5ef",
+   "score": 100,
+   "mbid": "ff773fde-cb78-49c2-8535-36725f191682",
+   "mbName": "Kelly Sheridan",
+   "viaArea": true
+  },
+  "akkogorilla": {
+   "name": "AKKOGORILLA",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "e2a8c464-d7e1-44b3-8490-b40b2ee91c09",
+   "mbName": "あっこゴリラ"
+  },
+  "alan aztec": {
+   "name": "Alan Aztec",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "fb51c88f-1f42-4fa0-a9af-e62497c86eb2",
+   "mbName": "Alan Aztec"
+  },
+  "belkv": {
+   "name": "Belkv",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "be259efb-a80a-43f0-8ee2-ba3eb976860d",
+   "mbName": "Belkv"
+  },
+  "stephen richards": {
+   "name": "Stephen Richards",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "b16aa5fe-e00b-41af-bb81-c254aab6059c",
+   "mbName": "Stephen Richards"
+  },
+  "jamie xx": {
+   "name": "Jamie xx",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "d1515727-4a93-4c0d-88cb-d7a9fce01879",
+   "mbName": "Jamie xx"
+  },
+  "kelsey lu, john glacier, panda bear": {
+   "name": "Kelsey Lu, John Glacier, Panda Bear",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "chantal claret": {
+   "name": "Chantal Claret",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "43273fa3-d554-4d34-b29f-d35efe2ba7eb",
+   "mbName": "Chantal Claret"
+  },
+  "tyler, the creator & bootsy collins": {
+   "name": "Tyler, The Creator & Bootsy Collins",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "luqus": {
+   "name": "LuQus",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "4c85219d-ab51-49c0-80b8-0814b7a10d0f",
+   "mbName": "LuQus"
+  },
+  "alina baraz": {
+   "name": "Alina Baraz",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "7fedfdaf-4146-4996-9e2a-a7e39080c329",
+   "mbName": "Alina Baraz"
+  },
+  "missy elliott": {
+   "name": "Missy Elliott",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "a0b8cb9e-7532-45fe-a74c-30e7c4009a39",
+   "mbName": "Missy Elliott"
+  },
+  "nicolas samuel lietzau": {
+   "name": "Nicolas Samuel Lietzau",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "aram zero": {
+   "name": "Aram Zero",
+   "tracks": 1,
+   "country": "IT",
+   "area": "Trieste",
+   "areaId": "1db5404d-8819-418e-a801-82ef2ad42529",
+   "score": 100,
+   "mbid": "97c8a641-9730-4026-90dc-53025f285e1d",
+   "mbName": "Aram Zero",
+   "viaArea": true
+  },
+  "a$ap rocky": {
+   "name": "A$AP Rocky",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "25b7b584-d952-4662-a8b9-dd8cdfbfeb64",
+   "mbName": "A$AP Rocky"
+  },
+  "snoop dogg": {
+   "name": "Snoop Dogg",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "f90e8b26-9e52-4669-a5c9-e28529c47894",
+   "mbName": "Snoop Dogg"
+  },
+  "the doors": {
+   "name": "The Doors",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "9efff43b-3b29-4082-824e-bc82f646f93d",
+   "mbName": "The Doors"
+  },
+  "flower & kaai yuki": {
+   "name": "flower & Kaai Yuki",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "20syl & christophe panzani": {
+   "name": "20syl & Christophe Panzani",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "la chica": {
+   "name": "La Chica",
+   "tracks": 1,
+   "country": "AR",
+   "area": "Argentina",
+   "areaId": "0df04709-c7d8-3b55-a6ea-f3e5069a947b",
+   "score": 100,
+   "mbid": "e220b0af-e245-4dfb-8508-0e86bc67e598",
+   "mbName": "La Chica del Cumpleaños"
+  },
+  "laure shang": {
+   "name": "Laure Shang",
+   "tracks": 1,
+   "country": "CN",
+   "area": "China",
+   "areaId": "7c81bb69-a99b-3487-b6d4-0f76d7a29ca0",
+   "score": 100,
+   "mbid": "58a67559-4895-4b8f-b011-d9009e823357",
+   "mbName": "尚雯婕"
+  },
+  "frank ocean & steve lacy": {
+   "name": "Frank Ocean & Steve Lacy",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "sebon": {
+   "name": "Sebon",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "91539a83-c722-4115-b6cf-bcfa9785058a",
+   "mbName": "Jan Sebon"
+  },
+  "kento sugisaki": {
+   "name": "Kento Sugisaki",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "409bab06-c435-42cc-92bf-0e5cb6daef64",
+   "mbName": "Kento Sugisaki"
+  },
+  "milgram mikoto": {
+   "name": "MILGRAM MIKOTO",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "natsuki hanae": {
+   "name": "Natsuki Hanae",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "744ab993-07cb-4cca-9c52-b3d32b7c7343",
+   "mbName": "花江夏樹"
+  },
+  "shoohey": {
+   "name": "Shoohey",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "9fce4c53-56d8-447e-a990-aa01ef71c11c",
+   "mbName": "周平"
+  },
+  "тимати": {
+   "name": "Тимати",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "2dedd382-2b14-4b88-a767-dd2220b4b509",
+   "mbName": "Тимати"
+  },
+  "ратмир": {
+   "name": "Ратмир",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "01055032-1627-41ff-83bf-191a90f441c8",
+   "mbName": "Ратмир Ибрагимов"
+  },
+  "hilary summers": {
+   "name": "Hilary Summers",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "284f06fe-291b-4723-95b9-27c989da4c8f",
+   "mbName": "Hilary Summers"
+  },
+  "kemi ominiyi & the r'svp voices": {
+   "name": "Kemi Ominiyi & The R'SVP Voices",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "24kgoldn": {
+   "name": "24kGoldn",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "0fe5df51-ba65-4784-ba85-7d024a107a8a",
+   "mbName": "24kGoldn"
+  },
+  "iann dior": {
+   "name": "iann dior",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "dd3b6e5b-de67-4d4d-aef2-3ad425444c80",
+   "mbName": "iann dior"
+  },
+  "jakusansei": {
+   "name": "Jakusansei",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "sasuke haraguchi": {
+   "name": "Sasuke Haraguchi",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "d8eefa62-4f62-4e44-8546-074b6067acac",
+   "mbName": "原口沙輔"
+  },
+  "casey edwards": {
+   "name": "Casey Edwards",
+   "tracks": 1,
+   "country": "US",
+   "area": "Los Angeles",
+   "areaId": "1f40c6e1-47ba-4e35-996f-fe6ee5840e62",
+   "score": 100,
+   "mbid": "dd6aeb09-60b7-400d-b9e7-b1e5800bb84a",
+   "mbName": "Casey Edwards",
+   "viaArea": true
+  },
+  "cliff lloret & ali edwards": {
+   "name": "Cliff Lloret & Ali Edwards",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "keiro keer": {
+   "name": "Keiro Keer",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "keiro ai v140": {
+   "name": "KEIRO AI v140",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "daniel caesar": {
+   "name": "Daniel Caesar",
+   "tracks": 1,
+   "country": "CA",
+   "area": "Canada",
+   "areaId": "71bbafaa-e825-3e15-8ca9-017dcad1748b",
+   "score": 100,
+   "mbid": "b46e298d-d3a5-4695-a03e-63e8c523b23e",
+   "mbName": "Daniel Caesar"
+  },
+  "madison beer, (g)i-dle, jaira burns": {
+   "name": "Madison Beer, (G)I-DLE, Jaira Burns",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "samurai pizza cats": {
+   "name": "Samurai Pizza Cats",
+   "tracks": 1,
+   "country": "DE",
+   "area": "Germany",
+   "areaId": "85752fda-13c4-31a3-bee5-0e5cb1f51dad",
+   "score": 100,
+   "mbid": "b869b57a-f6d7-4fa4-abf7-f61c465db8b0",
+   "mbName": "Samurai Pizza Cats"
+  },
+  "nico sallach of electric callboy": {
+   "name": "Nico Sallach of Electric Callboy",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "the rock orchestra": {
+   "name": "The Rock Orchestra",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "ff22ceb1-cf39-4e3f-8be0-fbcf09221bf4",
+   "mbName": "The Rock Orchestra"
+  },
+  "erin fox": {
+   "name": "Erin Fox",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "9e63dd6f-d185-48b6-84cf-e094ed33364f",
+   "mbName": "Erin Fox"
+  },
+  "bbc symphony chorus, bbc symphony orchestra & bryn terfel": {
+   "name": "BBC Symphony Chorus, BBC Symphony Orchestra & Bryn Terfel",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "lola young": {
+   "name": "Lola Young",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "43b896c5-5652-4b04-bde1-2e4224bc99b3",
+   "mbName": "Lola Young"
+  },
+  "​jon-yakitory": {
+   "name": "​jon-YAKITORY",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "af1b35f6-7cfa-4f2f-a57b-364b7406de89",
+   "mbName": "jon-YAKITORY"
+  },
+  "gérard presgurvic": {
+   "name": "Gérard Presgurvic",
+   "tracks": 1,
+   "country": "FR",
+   "area": "France",
+   "areaId": "08310658-51eb-3801-80de-5a0739207115",
+   "score": 100,
+   "mbid": "4c2e2ffc-81b0-4178-9202-f8c06779d797",
+   "mbName": "Gérard Presgurvic"
+  },
+  "grégori baquet, philippe d’avilla & damien sargue": {
+   "name": "Grégori Baquet, Philippe d’Avilla & Damien Sargue",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "the parakit": {
+   "name": "The Parakit",
+   "tracks": 1,
+   "country": "FR",
+   "area": "France",
+   "areaId": "08310658-51eb-3801-80de-5a0739207115",
+   "score": 100,
+   "mbid": "5eb6f2eb-a95f-4054-8f38-7fad639b1cc6",
+   "mbName": "The Parakit"
+  },
+  "alden jacob": {
+   "name": "Alden Jacob",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "986df8dc-05e1-4476-a42e-8f2bbe8b010d",
+   "mbName": "Alden Jacob"
+  },
+  "curta'n wall": {
+   "name": "Curta'n Wall",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "141d7ce5-0f0d-47b1-bca3-103ab178df6b",
+   "mbName": "Curta'n Wall"
+  },
+  "elvya": {
+   "name": "Elvya",
+   "tracks": 1,
+   "country": "BE",
+   "area": "Belgium",
+   "areaId": "5b8a5ee5-0bb3-34cf-9a75-c27c44e341fc",
+   "score": 100,
+   "mbid": "ec92dc5e-be30-472c-954c-7b63ef608ab3",
+   "mbName": "Elvya Dulcimer"
+  },
+  "burak yeter": {
+   "name": "Burak Yeter",
+   "tracks": 1,
+   "country": "NL",
+   "area": "Netherlands",
+   "areaId": "ef1b7cc0-cd26-36f4-8ea0-04d9623786c7",
+   "score": 100,
+   "mbid": "639aa0d6-1782-4c13-aae1-2b55fb623723",
+   "mbName": "Burak Yeter"
+  },
+  "danelle sandoval": {
+   "name": "Danelle Sandoval",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "6cb5da5b-68f4-4f6a-b5cb-27de3194363b",
+   "mbName": "Danelle Sandoval"
+  },
+  "benjamin & mpi": {
+   "name": "Benjamin & mpi",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "mikokichi": {
+   "name": "Mikokichi",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "82fc5a37-7919-46e8-a606-3a466c597847",
+   "mbName": "ミコ吉"
+  },
+  "hosomichi okuno": {
+   "name": "Hosomichi Okuno",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "961781a6-348d-477a-afc4-d36cf138e963",
+   "mbName": "おくのほそみち"
+  },
+  "kentaro": {
+   "name": "Kentaro",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "e5e9a7c1-9967-4385-b167-ff65a67779df",
+   "mbName": "DJ Kentaro"
+  },
+  "yuna": {
+   "name": "Yuna",
+   "tracks": 1,
+   "country": "MY",
+   "area": "Malaysia",
+   "areaId": "305d19c7-c040-349c-8d5f-6ac75d2d2a09",
+   "score": 100,
+   "mbid": "c58c7817-420d-4268-bccf-f3d90565e2e6",
+   "mbName": "Yuna"
+  },
+  "broken by the scream": {
+   "name": "Broken By The Scream",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "bf4dbf84-20fd-4438-a28c-a2e97aa94082",
+   "mbName": "Broken By The Scream"
+  },
+  "sunshine ikezaki": {
+   "name": "Sunshine Ikezaki",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "d88ca221-38cd-4fc6-ac43-78bb9db407a3",
+   "mbName": "サンシャイン池崎"
+  },
+  "ic3peak": {
+   "name": "IC3PEAK",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "89aa4821-8505-4df0-aa24-6dab82b06474",
+   "mbName": "IC3PEAK"
+  },
+  "ghostemane": {
+   "name": "Ghostemane",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "1989dd59-7f11-4c90-9450-4d728ed07fb0",
+   "mbName": "Ghostemane"
+  },
+  "шоколадный торт": {
+   "name": "Шоколадный торт",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "0fc76a2f-7119-4037-a784-35c4254cc179",
+   "mbName": "Шоколадный Торт"
+  },
+  "toli wild": {
+   "name": "Toli Wild",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Sankt-Peterburg",
+   "areaId": "808e1ef8-5390-4300-a615-c4df977cc349",
+   "score": 100,
+   "mbid": "608289d3-99db-41eb-b872-c19c040a497f",
+   "mbName": "Toli Wild",
+   "viaArea": true
+  },
+  "felix of stray kids": {
+   "name": "Felix of Stray Kids",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "55x55": {
+   "name": "55x55",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "a61fb787-9896-4234-a67e-6130a84d4f0c",
+   "mbName": "55x55"
+  },
+  "snailkick": {
+   "name": "Snailkick",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "namewee": {
+   "name": "Namewee",
+   "tracks": 1,
+   "country": "MY",
+   "area": "Malaysia",
+   "areaId": "305d19c7-c040-349c-8d5f-6ac75d2d2a09",
+   "score": 100,
+   "mbid": "86532fa5-2736-42a6-b861-d84a2bb519cd",
+   "mbName": "黄明志"
+  },
+  "meu ninomiya": {
+   "name": "Meu Ninomiya",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "598c02d1-c734-47cd-bbf1-f8249db1ad2c",
+   "mbName": "二宮芽生"
+  },
+  "мальбэк": {
+   "name": "Мальбэк",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "a154e566-57d4-4238-8061-1a73a8f47d95",
+   "mbName": "Мальбэк"
+  },
+  "сюзанна": {
+   "name": "Сюзанна",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "a427ebdf-5ad9-4e6d-af70-4779ce627ce1",
+   "mbName": "Сюзанна"
+  },
+  "stuts": {
+   "name": "STUTS",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "24d981dd-836e-4eff-9e19-16b8e77166d8",
+   "mbName": "STUTS"
+  },
+  "taeko onuki & ayatake ezaki": {
+   "name": "Taeko Onuki & Ayatake Ezaki",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "david guetta & sam martin": {
+   "name": "David Guetta & Sam Martin",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "reaper": {
+   "name": "REAPER",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "f7ec5e27-6709-416b-8992-ae7ecc180739",
+   "mbName": "Grim Reaper"
+  },
+  "bella renee": {
+   "name": "Bella Renee",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "640345a1-b122-4b9a-933b-30cdec4925dd",
+   "mbName": "Bella Renee"
+  },
+  "bob sinclar & cutee b": {
+   "name": "Bob Sinclar & Cutee B",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "big ali, dollarman & makedah": {
+   "name": "Big Ali, Dollarman & Makedah",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "hannya": {
+   "name": "Hannya",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "04e8a758-7ebe-4492-8b04-20ff210cb6e6",
+   "mbName": "Hannya"
+  },
+  "duncan laurence": {
+   "name": "Duncan Laurence",
+   "tracks": 1,
+   "country": "NL",
+   "area": "Netherlands",
+   "areaId": "ef1b7cc0-cd26-36f4-8ea0-04d9623786c7",
+   "score": 100,
+   "mbid": "20faff08-d3b7-45ca-a8aa-a85f6bb9eb78",
+   "mbName": "Duncan Laurence"
+  },
+  "fletcher": {
+   "name": "FLETCHER",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "a66091aa-e093-46bb-916a-387aba16e15c",
+   "mbName": "FLETCHER"
+  },
+  "panzer flower": {
+   "name": "Panzer Flower",
+   "tracks": 1,
+   "country": "FR",
+   "area": "Montpellier",
+   "areaId": "c7ee402c-0137-4931-a72e-a262796c0d16",
+   "score": 100,
+   "mbid": "b7d24de4-2aa7-44f6-92de-aa205486e549",
+   "mbName": "Panzer Flower",
+   "viaArea": true
+  },
+  "hubert tubbs": {
+   "name": "Hubert Tubbs",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "01ceb7bc-d36a-45e9-8011-ce26bc586c3a",
+   "mbName": "Hubert Tubbs"
+  },
+  "enako": {
+   "name": "Enako",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "22a6c85e-80de-4229-9e52-11ba4ad6d7f4",
+   "mbName": "えなこ"
+  },
+  "pmarusama": {
+   "name": "PMarusama",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "3f2b7a4c-5176-49a6-8ea9-818f7487e4a9",
+   "mbName": "P丸様。"
+  },
+  "mpi & laco & benjamin anderson": {
+   "name": "mpi & Laco & Benjamin Anderson",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "tim henson": {
+   "name": "Tim Henson",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "584af60d-ffba-45d1-a4c4-24fa989cfb82",
+   "mbName": "Tim Henson"
+  },
+  "sheryfa luna": {
+   "name": "Sheryfa Luna",
+   "tracks": 1,
+   "country": "FR",
+   "area": "France",
+   "areaId": "08310658-51eb-3801-80de-5a0739207115",
+   "score": 100,
+   "mbid": "3250792b-e2e4-4058-adcb-e6b25d6523ad",
+   "mbName": "Sheryfa Luna"
+  },
+  "schoolboy q & santigold": {
+   "name": "ScHoolboy Q & Santigold",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "machita chima": {
+   "name": "Machita Chima",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "2b1950c6-0053-4932-a6bc-56999f38162c",
+   "mbName": "町田ちま"
+  },
+  "millennium parade": {
+   "name": "MILLENNIUM PARADE",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "ae120209-21b3-42a9-ac08-4c7de22607eb",
+   "mbName": "MILLENNIUM PARADE"
+  },
+  "belle": {
+   "name": "Belle",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "e5c7b94f-e264-473c-bb0f-37c85d4d5c70",
+   "mbName": "Belle and Sebastian"
+  },
+  "hallo cel": {
+   "name": "Hallo Cel",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "0ca7a71f-f6ca-4436-b7a0-459972b4d2d7",
+   "mbName": "はろける"
+  },
+  "glorilla, sexyy red & lil wayne": {
+   "name": "GloRilla, Sexyy Red & Lil Wayne",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "david guetta": {
+   "name": "David Guetta",
+   "tracks": 1,
+   "country": "FR",
+   "area": "France",
+   "areaId": "08310658-51eb-3801-80de-5a0739207115",
+   "score": 100,
+   "mbid": "302bd7b9-d012-4360-897a-93b00c855680",
+   "mbName": "David Guetta"
+  },
+  "utatap": {
+   "name": "UtataP",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "1844d492-68ac-43a5-93dc-9adcdab246c0",
+   "mbName": "うたたP"
+  },
+  "mayu": {
+   "name": "MAYU",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "b2cdbfa9-158b-415b-b5bd-a53ab29e5a15",
+   "mbName": "MAYU"
+  },
+  "hiiragi magnetite": {
+   "name": "Hiiragi Magnetite",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "4593be8b-7cf6-4a5e-bc01-c36a1d3bea69",
+   "mbName": "柊マグネタイト"
+  },
+  "dr. dre": {
+   "name": "Dr. Dre",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "5f6ab597-f57a-40da-be9e-adad48708203",
+   "mbName": "Dr. Dre"
+  },
+  "eminem & skylar grey": {
+   "name": "Eminem & Skylar Grey",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "thundercat": {
+   "name": "Thundercat",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "044fd265-79dd-43eb-afc4-8b20becf7e17",
+   "mbName": "Thundercat"
+  },
+  "circusp": {
+   "name": "CircusP",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "1d3322f1-543c-4f19-9c6b-ca0e5eba4541",
+   "mbName": "CircusP"
+  },
+  "kitto, zutto, bocchi.": {
+   "name": "Kitto, Zutto, Bocchi.",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "21965697-2fe2-4848-b9ac-e5cc461fb396",
+   "mbName": "きっと、ずっと、ぼっち。"
+  },
+  "mummy-d": {
+   "name": "Mummy-D",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "a451e3cf-c277-4ee7-8919-dd03503f25c4",
+   "mbName": "Mummy‐D"
+  },
+  "михаил нахимович": {
+   "name": "Михаил Нахимович",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "392c00d2-b36d-4fed-9c03-405838567ec2",
+   "mbName": "Михаил Нахимович"
+  },
+  "арктида & юлиана савченко": {
+   "name": "АрктидА & Юлиана Савченко",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "filatov & karas": {
+   "name": "Filatov & Karas",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Moscow",
+   "areaId": "f310740c-ad62-48c0-839b-e86581b9f464",
+   "score": 100,
+   "mbid": "bdd5ac73-5de6-4ae8-bb04-d37459f74ba0",
+   "mbName": "Filatov & Karas",
+   "viaArea": true
+  },
+  "deepest blue": {
+   "name": "Deepest Blue",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "79c531fa-0495-46bc-99e6-cecd9de04374",
+   "mbName": "Deepest Blue"
+  },
+  "william beckett": {
+   "name": "William Beckett",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "45c8a49c-ed16-45f1-a751-ee99796dbeb5",
+   "mbName": "William Beckett"
+  },
+  "gary sun & 三无marblue": {
+   "name": "Gary Sun & 三无MarBlue",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "hiiragi kirai": {
+   "name": "Hiiragi Kirai",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "f395edbc-5225-4d1b-af1c-3277681793b9",
+   "mbName": "柊キライ"
+  },
+  "naughty boy": {
+   "name": "Naughty Boy",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "1e4460c9-4d4a-4eb7-b2a6-3718e6e1020b",
+   "mbName": "Naughty Boy"
+  },
+  "sam smith": {
+   "name": "Sam Smith",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "5a85c140-dcf9-4dd2-b2c8-aff0471549f3",
+   "mbName": "Sam Smith"
+  },
+  "вахтанг": {
+   "name": "Вахтанг",
+   "tracks": 1,
+   "country": "SU",
+   "area": "Soviet Union",
+   "areaId": "32f90933-b4b4-3248-b98c-e573d5329f57",
+   "score": 100,
+   "mbid": "28c22ef6-2200-4cff-a552-1d2ace71117d",
+   "mbName": "Вахтанг Кикабидзе"
+  },
+  "biz": {
+   "name": "biz",
+   "tracks": 1,
+   "country": "IT",
+   "area": "Italy",
+   "areaId": "c6500277-9a3d-349b-bf30-41afdbf42add",
+   "score": 100,
+   "mbid": "2bdaac0f-acae-434a-b86a-d41239cf76be",
+   "mbName": "The Biz"
+  },
+  "gaku & mafumafu": {
+   "name": "GAKU & Mafumafu",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "chrissy costanza": {
+   "name": "Chrissy Costanza",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "5345656f-8514-4510-8caa-8e1172a9be50",
+   "mbName": "Chrissy Costanza"
+  },
+  "игорь куликов‬": {
+   "name": "Игорь Куликов‬",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "56e7f39c-8b46-414d-bc21-68af61599a44",
+   "mbName": "Игорь Куликов"
+  },
+  "‪roroai‬": {
+   "name": "‪RoroAi‬",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "cbcb7310-0909-4683-b10c-7507bb4e3fd8",
+   "mbName": "Roro Ai"
+  },
+  "world's end girlfriend": {
+   "name": "World's End Girlfriend",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "f8f653b9-11d6-4f6b-adc1-4bfd146e7b7d",
+   "mbName": "world’s end girlfriend"
+  },
+  "nightcord at 25:00": {
+   "name": "Nightcord at 25:00",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "2d5bd5f2-d0fa-4dd8-ba72-c1fea94a0ae0",
+   "mbName": "25時、ナイトコードで。"
+  },
+  "sekai": {
+   "name": "SEKAI",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "d9dbfe6a-8346-4337-8614-fe96aab63927",
+   "mbName": "SEKAI NO OWARI"
+  },
+  "nice peter, epiclloyd, destorm & zach sherwin": {
+   "name": "Nice Peter, EpicLLOYD, DeStorm & Zach Sherwin",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "andrius klimka": {
+   "name": "Andrius Klimka",
+   "tracks": 1,
+   "country": null,
+   "area": "Minsk",
+   "areaId": "47323b71-af21-42f7-ae02-380b31ee1b94",
+   "score": 100,
+   "mbid": "8f5fde58-1603-42b4-a8aa-1bb13a031b4c",
+   "mbName": "Andrius Klimka"
+  },
+  "andrey kulik": {
+   "name": "Andrey Kulik",
+   "tracks": 1,
+   "country": null,
+   "area": "Minsk",
+   "areaId": "47323b71-af21-42f7-ae02-380b31ee1b94",
+   "score": 100,
+   "mbid": "c9d865d0-9297-4731-a46e-65c0cfb6c3db",
+   "mbName": "Andrey Kulik"
+  },
+  "black gryph0n, dheusta, or3o, the stupendium & matpat": {
+   "name": "Black Gryph0n, DHeusta, OR3O, The Stupendium & MatPat",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "alex c.": {
+   "name": "Alex C.",
+   "tracks": 1,
+   "country": "DE",
+   "area": "Germany",
+   "areaId": "85752fda-13c4-31a3-bee5-0e5cb1f51dad",
+   "score": 100,
+   "mbid": "6bfb7f3e-b5cc-46da-8b59-7dc22c10ca6b",
+   "mbName": "Alex C."
+  },
+  "yasmin k.": {
+   "name": "Yasmin K.",
+   "tracks": 1,
+   "country": "DE",
+   "area": "Germany",
+   "areaId": "85752fda-13c4-31a3-bee5-0e5cb1f51dad",
+   "score": 100,
+   "mbid": "1a2e99eb-ad7b-4ae1-986a-dd56472156ea",
+   "mbName": "Yasmin K."
+  },
+  "massive attack": {
+   "name": "Massive Attack",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "10adbe5e-a2c0-4bf3-8249-2b4cbf6e6ca8",
+   "mbName": "Massive Attack"
+  },
+  "hope sandoval": {
+   "name": "Hope Sandoval",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "23f527e1-74ae-4f7c-94f3-4a5d5f379c51",
+   "mbName": "Hope Sandoval & the Warm Inventions"
+  },
+  "bassnectar": {
+   "name": "Bassnectar",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "5d7c4cfc-29e7-4c83-8893-ae02679fc9f4",
+   "mbName": "Bassnectar"
+  },
+  "mimi page": {
+   "name": "Mimi Page",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "a87a6d42-4cd1-48ed-b3a1-9d5d4d03e306",
+   "mbName": "Mimi Page"
+  },
+  "hatsune miku & kagamine rin & len & megurine luka & nekomura iroha & yuzuki yukari": {
+   "name": "Hatsune Miku & Kagamine Rin & Len & Megurine Luka & Nekomura Iroha & Yuzuki Yukari",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "jimin": {
+   "name": "Jimin",
+   "tracks": 1,
+   "country": "KR",
+   "area": "South Korea",
+   "areaId": "b9f7d640-46e8-313e-b158-ded6d18593b3",
+   "score": 100,
+   "mbid": "d2582c77-6b0f-4b2f-802f-8f3cad1a5fec",
+   "mbName": "Jimin"
+  },
+  "jvke, kodak black, muni long & nle choppa": {
+   "name": "JVKE, Kodak Black, Muni Long & NLE Choppa",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "ирина аллегрова": {
+   "name": "Ирина Аллегрова",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "24b79f21-8628-4ab6-ada7-ec27f9a90fb3",
+   "mbName": "Ирина Аллегрова"
+  },
+  "sophie gent, louis creac'h, fanny paccoud, antoine touche, thomas de pierrefeu, evolène kiener": {
+   "name": "Sophie Gent, Louis Creac'h, Fanny Paccoud, Antoine Touche, Thomas de Pierrefeu, Evolène Kiener",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "sugizo": {
+   "name": "SUGIZO",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "45e71083-f657-4d51-8f70-d2aa50ce6669",
+   "mbName": "SUGIZO"
+  },
+  "daniwellp": {
+   "name": "daniwellP",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Tokyo",
+   "areaId": "8dc97297-ac95-4d33-82bc-e07fab26fb5f",
+   "score": 100,
+   "mbid": "e89da84c-0d65-4425-a907-61a04f02916b",
+   "mbName": "daniwellP",
+   "viaArea": true
+  },
+  "toaka": {
+   "name": "Toaka",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "ddd49f88-6367-4f58-9dd9-a767e976b0b7",
+   "mbName": "十明"
+  },
+  "vaudeville smash": {
+   "name": "Vaudeville Smash",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "2a04995c-23ff-422d-8aaf-269761e3cc38",
+   "mbName": "Vaudeville Smash"
+  },
+  "les murray": {
+   "name": "Les Murray",
+   "tracks": 1,
+   "country": "AU",
+   "area": "Australia",
+   "areaId": "106e0bec-b638-3b37-b731-f53d507dc00e",
+   "score": 100,
+   "mbid": "809080e2-9ccc-474e-b260-8a02ea8afeef",
+   "mbName": "Les Murray"
+  },
+  "nunununununununununununununununu": {
+   "name": "Nunununununununununununununununu",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "the gregory brothers": {
+   "name": "The Gregory Brothers",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "38ce1980-7bc1-4757-aedc-466f281652b7",
+   "mbName": "The Gregory Brothers"
+  },
+  "takeo ischi": {
+   "name": "Takeo Ischi",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "611aaa3e-3a54-401f-a256-34661017d971",
+   "mbName": "Takeo Ischi"
+  },
+  "paradisio": {
+   "name": "Paradisio",
+   "tracks": 1,
+   "country": "BE",
+   "area": "Belgium",
+   "areaId": "5b8a5ee5-0bb3-34cf-9a75-c27c44e341fc",
+   "score": 100,
+   "mbid": "aff43c9d-19a1-42c9-ae20-8047cdfebdf5",
+   "mbName": "Paradisio"
+  },
+  "maria garcia & dj patrick samoy": {
+   "name": "Maria Garcia & Dj Patrick Samoy",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "cv: hina kino, cv: rika nagae & cv: konomi kohara": {
+   "name": "CV: Hina Kino, CV: Rika Nagae & CV: Konomi Kohara",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "kskn & ikepy": {
+   "name": "KSKN & Ikepy",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "kato rihona": {
+   "name": "kato Rihona",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "25b9d10d-44d0-4bce-8bb4-0684e5719fb4",
+   "mbName": "加藤里保菜"
+  },
+  "ymir": {
+   "name": "YMIR",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "338278ae-df5a-4b64-a5dd-9a222944424f",
+   "mbName": "YMIR"
+  },
+  "kirin j callinan": {
+   "name": "Kirin J Callinan",
+   "tracks": 1,
+   "country": "AU",
+   "area": "Australia",
+   "areaId": "106e0bec-b638-3b37-b731-f53d507dc00e",
+   "score": 100,
+   "mbid": "a3614a52-01f3-4f9d-999d-4bc650e2f2b1",
+   "mbName": "Kirin J Callinan"
+  },
+  "alex cameron, molly lewis, jimmy barnes": {
+   "name": "Alex Cameron, Molly Lewis, Jimmy Barnes",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "tuzera": {
+   "name": "Tuzera",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "6c40d68d-66a9-4c6c-89a3-6e6f6e5b4544",
+   "mbName": "Tuzera"
+  },
+  "logic": {
+   "name": "Logic",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "221dc0db-7bc1-4451-a01a-9496e02d601f",
+   "mbName": "Logic"
+  },
+  "wale & john lindahl": {
+   "name": "Wale & John Lindahl",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "v.w.p": {
+   "name": "V.W.P",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "85d70dbb-0664-4788-a68a-1d0b93353546",
+   "mbName": "V.W.P"
+  },
+  "kaf, rim, harusaruhi, isekaijoucho & koko": {
+   "name": "KAF, RIM, Harusaruhi, Isekaijoucho & KOKO",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "inaba koshi": {
+   "name": "Inaba Koshi",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "d05f99dc-7fe5-44a6-93b8-8947ef90d09b",
+   "mbName": "稲葉浩志"
+  },
+  "liza": {
+   "name": "Liza",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "34cdf83c-0ba8-4411-814f-c3ef44588521",
+   "mbName": "Liza Minnelli"
+  },
+  "электроклуб": {
+   "name": "Электроклуб",
+   "tracks": 1,
+   "country": "SU",
+   "area": "Soviet Union",
+   "areaId": "32f90933-b4b4-3248-b98c-e573d5329f57",
+   "score": 100,
+   "mbid": "89263236-b331-4718-9e1e-60c144a2e5d9",
+   "mbName": "Электроклуб"
+  },
+  "виктор салтыков": {
+   "name": "Виктор Салтыков",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "0b9f731e-a903-45c5-9aaa-147de363af14",
+   "mbName": "Виктор Салтыков"
+  },
+  "icy": {
+   "name": "Icy",
+   "tracks": 1,
+   "country": "ID",
+   "area": "Indonesia",
+   "areaId": "d3a68bd0-7419-3f99-a5bd-204d6e057089",
+   "score": 100,
+   "mbid": "7308f4a9-5436-4b20-9a66-6c76a615c2d4",
+   "mbName": "Icy Artzy"
+  },
+  "kirkiimad": {
+   "name": "Kirkiimad",
+   "tracks": 1,
+   "country": "BY",
+   "area": "Belarus",
+   "areaId": "660e3c48-b301-3c8c-9708-0f71d5d094d6",
+   "score": 100,
+   "mbid": "a2a5e920-7e06-43fe-8a2b-a1b94c81036e",
+   "mbName": "kirkiimad"
+  },
+  "nowkie": {
+   "name": "nowkie",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "534ea859-e5db-45f8-81e3-66f064dc0555",
+   "mbName": "nowkie"
+  },
+  "undead corporation": {
+   "name": "UNDEAD CORPORATION",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "49ea914d-11df-4515-9d08-7f72a9bf0219",
+   "mbName": "UNDEAD CORPORATION"
+  },
+  "sawacy & mie <get in the ring>": {
+   "name": "Sawacy & Mie <GET IN THE RING>",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "apparat": {
+   "name": "Apparat",
+   "tracks": 1,
+   "country": "DE",
+   "area": "Germany",
+   "areaId": "85752fda-13c4-31a3-bee5-0e5cb1f51dad",
+   "score": 100,
+   "mbid": "dc3dbfc1-f1f1-49c6-9d7c-425fabf3ae12",
+   "mbName": "Apparat"
+  },
+  "soap&skin": {
+   "name": "Soap&Skin",
+   "tracks": 1,
+   "country": "AT",
+   "area": "Austria",
+   "areaId": "caac77d1-a5c8-3e6e-8e27-90b44dcc1446",
+   "score": 100,
+   "mbid": "93cf754c-6bdc-4b05-96b5-f210a7936af6",
+   "mbName": "Soap&Skin"
+  },
+  "mark mancina": {
+   "name": "Mark Mancina",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "628abc89-3e26-4e2c-b33f-67544ccbb72c",
+   "mbName": "Mark Mancina"
+  },
+  "elin carlson": {
+   "name": "Elin Carlson",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "ec92c2d1-45fc-4135-b964-2f546f1ee95d",
+   "mbName": "Elin Carlson"
+  },
+  "two feathers": {
+   "name": "Two Feathers",
+   "tracks": 1,
+   "country": "SE",
+   "area": "Stockholm",
+   "areaId": "1127ddc2-eab3-4662-8718-6adbdeea3b10",
+   "score": 100,
+   "mbid": "21b821a7-3a0a-43d3-abdd-737b2d8ad15e",
+   "mbName": "Two Feathers",
+   "viaArea": true
+  },
+  "alissa white-gluz": {
+   "name": "Alissa White-Gluz",
+   "tracks": 1,
+   "country": "CA",
+   "area": "Canada",
+   "areaId": "71bbafaa-e825-3e15-8ca9-017dcad1748b",
+   "score": 100,
+   "mbid": "d6228c97-5b2e-47d1-8d99-06bf7484be54",
+   "mbName": "Alissa White‐Gluz"
+  },
+  "austin mahone": {
+   "name": "Austin Mahone",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "b69b9854-f568-4a50-b076-309c459946a8",
+   "mbName": "Austin Mahone"
+  },
+  "pitbull": {
+   "name": "Pitbull",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "d262ea27-3ffe-40f7-b922-85c42d625e67",
+   "mbName": "Pitbull"
+  },
+  "hxvrmxn": {
+   "name": "HXVRMXN",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "fba11211-51e4-4f41-9bce-88aa8e3148af",
+   "mbName": "HXVRMXN"
+  },
+  "keelse": {
+   "name": "keelse",
+   "tracks": 1,
+   "country": "BY",
+   "area": "Belarus",
+   "areaId": "660e3c48-b301-3c8c-9708-0f71d5d094d6",
+   "score": 100,
+   "mbid": "6caa2ef4-a0df-43f3-9ea1-98b7c19dc0ab",
+   "mbName": "keelse"
+  },
+  "j.none": {
+   "name": "J.None",
+   "tracks": 1,
+   "country": "US",
+   "area": "Orlando",
+   "areaId": "ec1e55f4-03df-4ba1-a314-1ab959aa3fd6",
+   "score": 100,
+   "mbid": "b541fe6f-f537-433b-96d4-8a9cfbac6308",
+   "mbName": "J.None",
+   "viaArea": true
+  },
+  "ray chen": {
+   "name": "Ray Chen",
+   "tracks": 1,
+   "country": "AU",
+   "area": "Australia",
+   "areaId": "106e0bec-b638-3b37-b731-f53d507dc00e",
+   "score": 100,
+   "mbid": "e036050b-9973-4c91-b532-4136df15a26b",
+   "mbName": "Ray Chen"
+  },
+  "rqcb-r1": {
+   "name": "RQCB-R1",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "fatality": {
+   "name": "FATALITY",
+   "tracks": 1,
+   "country": "CA",
+   "area": "Toronto",
+   "areaId": "74b24e62-d2fe-42d2-9d96-31f2da756c77",
+   "score": 100,
+   "mbid": "56b14db8-d3a4-44dc-a8c5-7c72ce5310f1",
+   "mbName": "Fatality",
+   "viaArea": true
+  },
+  "leona lewis": {
+   "name": "Leona Lewis",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "8d552dfc-648f-401f-90de-e925013ca537",
+   "mbName": "Leona Lewis"
+  },
+  "melinamusic": {
+   "name": "Melinamusic",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "nqrse": {
+   "name": "nqrse",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "d6402d9b-652f-4f93-9e04-1c0d43bfd707",
+   "mbName": "nqrse"
+  },
+  "asmi": {
+   "name": "asmi",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "5837fcae-b639-41db-ae1d-87fa9141509c",
+   "mbName": "asmi"
+  },
+  "jakusansei & yoshino": {
+   "name": "Jakusansei & Yoshino",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "miku hatsune, teto kasane, zundamon": {
+   "name": "Miku Hatsune, Teto Kasane, Zundamon",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "nile rodgers & pharrell williams": {
+   "name": "Nile Rodgers & Pharrell Williams",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "del the funky homosapien": {
+   "name": "Del the Funky Homosapien",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "a31a5e0c-d37a-41a8-90d5-9e256a47d83b",
+   "mbName": "Del the Funky Homosapien"
+  },
+  "scott bradlee's postmodern jukebox": {
+   "name": "Scott Bradlee's Postmodern Jukebox",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "5f5d68dd-285a-4f06-9099-84eb3f85c65f",
+   "mbName": "Postmodern Jukebox"
+  },
+  "morgan james": {
+   "name": "Morgan James",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "04831760-598c-48f8-9c21-243b2d4aaa52",
+   "mbName": "Morgan James"
+  },
+  "metalolom": {
+   "name": "metaLOLom",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "1583071d-10bd-4e1e-a074-ca3ef9464ed3",
+   "mbName": "MetalOlom"
+  },
+  "badcomedian": {
+   "name": "BadComedian",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "autodidactic studios": {
+   "name": "Autodidactic Studios",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "446892e2-0c44-4006-8aef-34a35613de4d",
+   "mbName": "Autodidactic Studios"
+  },
+  "waterflame, teminite & boom kitty": {
+   "name": "Waterflame, Teminite & Boom Kitty",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "diana boncheva": {
+   "name": "Diana Boncheva",
+   "tracks": 1,
+   "country": "KR",
+   "area": "Seoul",
+   "areaId": "aa03e165-4c73-4959-91c0-a99f9fa8ecab",
+   "score": 100,
+   "mbid": "e645ea10-c691-4d59-bdf8-cd03095d68fd",
+   "mbName": "Diana Boncheva",
+   "viaArea": true
+  },
+  "banya": {
+   "name": "BanYa",
+   "tracks": 1,
+   "country": "KR",
+   "area": "South Korea",
+   "areaId": "b9f7d640-46e8-313e-b158-ded6d18593b3",
+   "score": 100,
+   "mbid": "c228fb11-be7e-4378-ba4d-52547b3a8b6d",
+   "mbName": "반야"
+  },
+  "aaron smith": {
+   "name": "Aaron Smith",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "9d3dc369-2eb2-4f38-9dc8-ee12bf46cd54",
+   "mbName": "The Aaron Smith Experience"
+  },
+  "luvli": {
+   "name": "Luvli",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "942b16c2-bb4a-42ea-a07a-6287aaae6a74",
+   "mbName": "Luvli"
+  },
+  "g0blin & ganz": {
+   "name": "g0blin & Ganz",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "black gryph0n & rustage": {
+   "name": "Black Gryph0n & Rustage",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "fort minor": {
+   "name": "Fort Minor",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "e1564e98-978b-4947-8698-f6fd6f8b0181",
+   "mbName": "Fort Minor"
+  },
+  "eric bobo & styles of beyond": {
+   "name": "Eric Bobo & Styles of Beyond",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "black gryph0n": {
+   "name": "Black Gryph0n",
+   "tracks": 1,
+   "country": "US",
+   "area": "Arizona",
+   "areaId": "bf9353d8-da52-4fd9-8645-52b2349b4914",
+   "score": 100,
+   "mbid": "d2d72e55-758f-46cd-b523-1667a4272c91",
+   "mbName": "Black Gryph0n",
+   "viaArea": true
+  },
+  "dua lipa": {
+   "name": "Dua Lipa",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "6f1a58bf-9b1b-49cf-a44a-6cefad7ae04f",
+   "mbName": "Dua Lipa"
+  },
+  "joan jett": {
+   "name": "Joan Jett",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "46e63d3b-d91b-4791-bb73-e9f638a45ea0",
+   "mbName": "Joan Jett & The Blackhearts"
+  },
+  "mason olshavksy": {
+   "name": "Mason Olshavksy",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "alex gaudino": {
+   "name": "Alex Gaudino",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "e1d4233c-9652-4b95-9c7f-9b1107ab1173",
+   "mbName": "Alex Gaudino & Jerma"
+  },
+  "crystal waters": {
+   "name": "Crystal Waters",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "b6e616cc-88db-48cc-977b-17a967236c60",
+   "mbName": "Crystal Waters Band"
+  },
+  "hiiragi yuka & sana": {
+   "name": "Hiiragi Yuka & Sana",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "kronos quartet and mogwai": {
+   "name": "Kronos Quartet and Mogwai",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "lil peep": {
+   "name": "Lil Peep",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "92da4329-77a4-425c-8e92-4280110cace9",
+   "mbName": "Lil Peep"
+  },
+  "wicca phase springs eternal": {
+   "name": "Wicca Phase Springs Eternal",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "4c4345e1-7a2e-4fd0-b35c-30600d247a5b",
+   "mbName": "Wicca Phase Springs Eternal"
+  },
+  "adachi rei": {
+   "name": "Adachi Rei",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "3c052ab0-a4d5-4a06-832e-dce532965de3",
+   "mbName": "足立レイ"
+  },
+  "ice nine kills": {
+   "name": "Ice Nine Kills",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "d8f0f6ac-a0a7-47bd-9786-f9106d7bdd11",
+   "mbName": "Ice Nine Kills"
+  },
+  "shavo": {
+   "name": "SHAVO",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "e68f2984-b0e9-42d7-b132-9570b7c75e29",
+   "mbName": "Shavo Odadjian"
+  },
+  "gaijin games": {
+   "name": "Gaijin Games",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "round table": {
+   "name": "ROUND TABLE",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "c66b8b18-5ce8-4f60-ae56-3aa810761cc0",
+   "mbName": "ROUND TABLE featuring Nino"
+  },
+  "nino": {
+   "name": "Nino",
+   "tracks": 1,
+   "country": "IT",
+   "area": "Italy",
+   "areaId": "c6500277-9a3d-349b-bf30-41afdbf42add",
+   "score": 100,
+   "mbid": "d52ac009-4ed5-4d01-97d5-8280bb7dd460",
+   "mbName": "Nino Rota"
+  },
+  "ayahi takagaki": {
+   "name": "Ayahi Takagaki",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "81c20364-ce13-404a-8a26-2e997a3bf3a6",
+   "mbName": "高垣彩陽"
+  },
+  "yoshino nanjo": {
+   "name": "Yoshino Nanjo",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "b890b1bc-e024-409a-bbeb-a57aa23baa7d",
+   "mbName": "南條愛乃"
+  },
+  "ai kayano": {
+   "name": "Ai Kayano",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "f74f5468-91f9-443b-aedc-c969a75d1678",
+   "mbName": "茅野愛衣"
+  },
+  "yuto iizuka": {
+   "name": "Yuto Iizuka",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Sumida",
+   "areaId": "7bec2afb-fca3-4c17-a7c8-013beabaa33e",
+   "score": 100,
+   "mbid": "a063454d-0ecf-485c-80eb-e995f84fc0f5",
+   "mbName": "Yuto Iizuka",
+   "viaArea": true
+  },
+  "bocchi boromaru": {
+   "name": "Bocchi Boromaru",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "mossa": {
+   "name": "Mossa",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "36810c44-6914-44ef-8629-8b4042378cef",
+   "mbName": "Mossa"
+  },
+  "okamep": {
+   "name": "OkameP",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "7a17991c-4b2b-47bc-9bbd-fb27d249aa07",
+   "mbName": "オカメP"
+  },
+  "skrillex": {
+   "name": "SKRILLEX",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "ae002c5d-aac6-490b-a39a-30aa9e2edf2b",
+   "mbName": "Skrillex"
+  },
+  "sirah": {
+   "name": "Sirah",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "e451c0ae-5dbe-42d2-9830-9bc96efa3ea9",
+   "mbName": "Sirah"
+  },
+  "k/da, madison beer & (g)i-dle": {
+   "name": "K/DA, Madison Beer & (G)I-DLE",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "lexie liu, jaira burns, seraphine": {
+   "name": "Lexie Liu, Jaira Burns, Seraphine",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "the hu": {
+   "name": "The HU",
+   "tracks": 1,
+   "country": "MN",
+   "area": "Mongolia",
+   "areaId": "84360c54-1763-3146-ae38-a439c72fd4ea",
+   "score": 100,
+   "mbid": "8601a656-4830-457c-a3f1-f25b105d1629",
+   "mbName": "The HU"
+  },
+  "jacoby shaddix of papa roach": {
+   "name": "Jacoby Shaddix of Papa Roach",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "gotye": {
+   "name": "Gotye",
+   "tracks": 1,
+   "country": "AU",
+   "area": "Australia",
+   "areaId": "106e0bec-b638-3b37-b731-f53d507dc00e",
+   "score": 100,
+   "mbid": "6f6fd596-76e0-4b82-aa37-f558ac2d337b",
+   "mbName": "Gotye"
+  },
+  "kimbra": {
+   "name": "Kimbra",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "fad2875e-ba81-4637-b859-4684622dcb1c",
+   "mbName": "Kimbra"
+  },
+  "ryo kinoshita": {
+   "name": "Ryo Kinoshita",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "fc3e7d8d-f3fd-4d07-98a1-177736bdd094",
+   "mbName": "Ryo Kinoshita"
+  },
+  "audrey callahan": {
+   "name": "Audrey Callahan",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "d010559c-3aa1-4903-b9c3-a81c80bef534",
+   "mbName": "Audrey Callahan"
+  },
+  "mexican girl": {
+   "name": "Mexican Girl",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "e9d2c0db-4845-4885-8c66-82e65b605cab",
+   "mbName": "Mexican Girl"
+  },
+  "sarah barthel": {
+   "name": "Sarah Barthel",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "34bfcfaa-44ad-4386-af65-05cf5e052879",
+   "mbName": "Sarah Barthel"
+  },
+  "takuro sugawara": {
+   "name": "Takuro Sugawara",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "90714536-ff48-46f5-8861-0d9796b3e9a1",
+   "mbName": "菅原卓郎"
+  },
+  "tone rion": {
+   "name": "Tone Rion",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "22f3305a-f34b-43b5-a18c-1fa1ce5e7458",
+   "mbName": "兎眠りおん"
+  },
+  "laura vall": {
+   "name": "Laura Vall",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "3326669a-3315-4e05-af96-30ed9257c2d5",
+   "mbName": "Laura Vall"
+  },
+  "takuma": {
+   "name": "TAKUMA",
+   "tracks": 1,
+   "country": null,
+   "area": "Kyoto",
+   "areaId": "8ff1831b-3350-489f-ac91-1975ab38331e",
+   "score": 100,
+   "mbid": "175b738e-f117-4d8c-a44d-ae06ae53cdf8",
+   "mbName": "TAKUMA"
+  },
+  "ryo from crystal lake": {
+   "name": "Ryo from Crystal Lake",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "anyar": {
+   "name": "Anyar",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "229efba5-e799-4cc1-a8bc-7c524334ff56",
+   "mbName": "Anyar暗鸦"
+  },
+  "alohaii": {
+   "name": "Alohaii",
+   "tracks": 1,
+   "country": "US",
+   "area": "North Carolina",
+   "areaId": "d4ab49e7-1d25-45e2-8659-b147e0ea3684",
+   "score": 100,
+   "mbid": "a611433b-c2bb-4ba2-be28-775a079e93c6",
+   "mbName": "Alohaii",
+   "viaArea": true
+  },
+  "kyoresu": {
+   "name": "kyOresu",
+   "tracks": 1,
+   "country": "ES",
+   "area": "Spain",
+   "areaId": "471c46a7-afc5-31c4-923c-d0444f5053a4",
+   "score": 100,
+   "mbid": "a76bf1cf-55cc-4dcf-b9ec-b0e9f4c52cd2",
+   "mbName": "kyOresu"
+  },
+  "hazel fernandes": {
+   "name": "Hazel Fernandes",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "95169dc9-0837-4034-a3cd-4fd88293fe19",
+   "mbName": "Hazel Fernandes"
+  },
+  "kihow from myth & roid": {
+   "name": "KIHOW from MYTH & ROID",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "guriri": {
+   "name": "Guriri",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "ef92c315-a9d1-4cf3-97a5-2c2c04e84679",
+   "mbName": "グリリ"
+  },
+  "sleazybxxch拜仁": {
+   "name": "Sleazybxxch拜仁",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "zp大王 & lambda": {
+   "name": "ZP大王 & Lambda",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "steve vai": {
+   "name": "Steve Vai",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "5e7ccd92-6277-451a-aab9-1efd587c50f3",
+   "mbName": "Steve Vai"
+  },
+  "chalili, hanser & tetracalyx": {
+   "name": "Chalili, Hanser & TetraCalyx",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "steve aoki": {
+   "name": "Steve Aoki",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "a39acc4a-985e-4173-a9ed-f325f2d3bc1c",
+   "mbName": "Steve Aoki"
+  },
+  "runn": {
+   "name": "RUNN",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "98f6b420-c524-4f16-a8a8-2585263b8f52",
+   "mbName": "RUNN"
+  },
+  "ai ninomiya": {
+   "name": "Ai Ninomiya",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "ddf8822f-182d-4e4c-bbd5-f68e21b3f822",
+   "mbName": "Ai Ninomiya"
+  },
+  "otomachi una & hatsune miku": {
+   "name": "OTOMACHI UNA & Hatsune Miku",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "namii": {
+   "name": "Namii",
+   "tracks": 1,
+   "country": "US",
+   "area": "Oregon",
+   "areaId": "376ea713-8f27-4ab1-818b-9cca72023382",
+   "score": 100,
+   "mbid": "a9536923-ad34-4fdf-a915-348321996067",
+   "mbName": "Namii",
+   "viaArea": true
+  },
+  "tarantula": {
+   "name": "Tarantula",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "24647c84-a246-4d7b-8dca-be16ec3bab7e",
+   "mbName": "Tarantula"
+  },
+  "kasahara yuri": {
+   "name": "Kasahara Yuri",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "aklo": {
+   "name": "AKLO",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "44eea325-7cac-4e76-b805-3cd8c11446c7",
+   "mbName": "AKLO"
+  },
+  "yukopi": {
+   "name": "Yukopi",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "7a441b3c-c2ca-4e16-b1e3-dbfc0be78472",
+   "mbName": "ゆこぴ"
+  },
+  "satsuki": {
+   "name": "Satsuki",
+   "tracks": 1,
+   "country": "ID",
+   "area": "Indonesia",
+   "areaId": "d3a68bd0-7419-3f99-a5bd-204d6e057089",
+   "score": 100,
+   "mbid": "328b7db4-bf44-4ca3-bad8-31e2ecf4f3b6",
+   "mbName": "Paraguna Satsuki"
+  },
+  "eipu": {
+   "name": "Eipu",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "f998e008-97d9-4dec-a5f3-961f0124b956",
+   "mbName": "えいぷ"
+  },
+  "minmi": {
+   "name": "MINMI",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "0a2d8d95-9cb1-48da-927c-613b4e12ae72",
+   "mbName": "MINMI"
+  },
+  "original broadway cast of hamilton": {
+   "name": "Original Broadway Cast of Hamilton",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "renée elise goldsberry": {
+   "name": "Renée Elise Goldsberry",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "323ea2bd-a27e-414a-ba40-2727bf3a37e1",
+   "mbName": "Renée Elise Goldsberry"
+  },
+  "dani filth": {
+   "name": "Dani Filth",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "aca7a1ca-c19b-42f3-857f-52939c1bbb65",
+   "mbName": "Dani Filth"
+  },
+  "falconshield.": {
+   "name": "Falconshield.",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "f6deec58-8473-42b2-a0ed-f862f0fb778a",
+   "mbName": "Falconshield"
+  },
+  "coky ricciolino": {
+   "name": "Coky RICCIOLINO",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "psyqui": {
+   "name": "PSYQUI",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "17844424-052f-4557-bdda-9fafc2fd5b66",
+   "mbName": "PSYQUI"
+  },
+  "tomorrow x together": {
+   "name": "TOMORROW X TOGETHER",
+   "tracks": 1,
+   "country": "KR",
+   "area": "South Korea",
+   "areaId": "b9f7d640-46e8-313e-b158-ded6d18593b3",
+   "score": 100,
+   "mbid": "9d027d72-790e-40ec-bbb7-61aa613457de",
+   "mbName": "TOMORROW X TOGETHER"
+  },
+  "masato from coldrain": {
+   "name": "Masato from coldrain",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "suu": {
+   "name": "Suu",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "0778bf77-4917-4217-ab63-3ff40518abf7",
+   "mbName": "森下suu"
+  },
+  "takayuki hattori & gundam the origin": {
+   "name": "Takayuki Hattori & GUNDAM THE ORIGIN",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "yu-yu": {
+   "name": "yu-yu",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "a3f71599-fec4-4816-999c-dfe3e1b3fea7",
+   "mbName": "yu-yu"
+  },
+  "syu": {
+   "name": "SYU",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "67a89dd9-38ea-41cc-a315-b5db28d899cd",
+   "mbName": "Syu"
+  },
+  "tenge fuyuki": {
+   "name": "Tenge Fuyuki",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "371f8f6a-9405-4f9c-b01e-f3c9707b9395",
+   "mbName": "天外冬黄"
+  },
+  "liv tyler": {
+   "name": "Liv Tyler",
+   "tracks": 1,
+   "country": "US",
+   "area": "Manhattan",
+   "areaId": "261962ea-d8c2-4eaf-a80c-f14376ffadb0",
+   "score": 100,
+   "mbid": "b8143dd3-975f-4128-9cfe-3c14aacfc894",
+   "mbName": "Liv Tyler",
+   "viaArea": true
+  },
+  "christopher lee": {
+   "name": "Christopher Lee",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "090b6efc-0821-4e4e-aa95-ca0beb05b005",
+   "mbName": "Christopher Lee Getman"
+  },
+  "adam gontier": {
+   "name": "Adam Gontier",
+   "tracks": 1,
+   "country": "CA",
+   "area": "Canada",
+   "areaId": "71bbafaa-e825-3e15-8ca9-017dcad1748b",
+   "score": 100,
+   "mbid": "90a85f32-9e63-42f0-9134-013ed8c399b0",
+   "mbName": "Adam Gontier"
+  },
+  "aeralie brighton": {
+   "name": "Aeralie Brighton",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "da90e46d-2d0f-4f71-a647-9c3a502cd3a0",
+   "mbName": "Aeralie Brighton"
+  },
+  "виа гра": {
+   "name": "ВИА Гра",
+   "tracks": 1,
+   "country": "UA",
+   "area": "Ukraine",
+   "areaId": "904768d0-61ca-3c40-93ac-93adc36fef4b",
+   "score": 100,
+   "mbid": "09b19ddf-bbe1-4f9a-a0e0-eb5bd929847f",
+   "mbName": "ВИА Гра"
+  },
+  "hideyoshi": {
+   "name": "Hideyoshi",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "623e3085-2d3c-4318-bd80-073a5603c95c",
+   "mbName": "Mr. Hideyoshi"
+  },
+  "makito from victim of deception": {
+   "name": "MAKITO from VICTIM OF DECEPTION",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "toko miura": {
+   "name": "Toko Miura",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "65a04ced-4167-46f7-9da1-1e297bdc5a27",
+   "mbName": "三浦透子"
+  },
+  "rikka ihara": {
+   "name": "Rikka Ihara",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "paolo buonvino": {
+   "name": "Paolo Buonvino",
+   "tracks": 1,
+   "country": "IT",
+   "area": "Italy",
+   "areaId": "c6500277-9a3d-349b-bf30-41afdbf42add",
+   "score": 100,
+   "mbid": "51431f95-eb92-4b2c-a09f-ee4f73d094fb",
+   "mbName": "Paolo Buonvino"
+  },
+  "nami nakagawa": {
+   "name": "Nami Nakagawa",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "da282635-cb31-40c2-92e5-2c97419acffe",
+   "mbName": "中川奈美"
+  },
+  "dimension": {
+   "name": "Dimension",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "8314efe8-43e4-432e-a84d-f71450eb55ba",
+   "mbName": "DIMENSION"
+  },
+  "poppy baskcomb": {
+   "name": "Poppy Baskcomb",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "ea0bacf3-e42d-45d3-8dc7-2e3ded62adf1",
+   "mbName": "Poppy Baskcomb"
+  },
+  "taishi": {
+   "name": "Taishi",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Mitaka",
+   "areaId": "ec2f31c1-5493-473a-a368-b1a4de1ca4db",
+   "score": 100,
+   "mbid": "9590e1a1-50a8-4766-8e4e-2c8bf567dd5e",
+   "mbName": "Taishi",
+   "viaArea": true
+  },
+  "mitose noriko": {
+   "name": "Mitose Noriko",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "b3ae4278-2daa-4e83-9383-7c2c3bfd327c",
+   "mbName": "みとせのりこ"
+  },
+  "lapix": {
+   "name": "Lapix",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "790514fd-422b-4d8e-b85e-ba1fb56e6c5b",
+   "mbName": "lapix"
+  },
+  "kanae asaba": {
+   "name": "Kanae Asaba",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "91fd442c-879d-436b-90f1-e743937690f9",
+   "mbName": "Kanae Asaba"
+  },
+  "matsuyama kouta": {
+   "name": "Matsuyama Kouta",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "point break candy": {
+   "name": "Point Break Candy",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "b5f5ed3b-f382-4a1b-8436-e16b6bf6d412",
+   "mbName": "Point Break Candy"
+  },
+  "raney shockne & cos & conway": {
+   "name": "Raney Shockne & COS & CONWAY",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "valorant music": {
+   "name": "VALORANT Music",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "cory wong": {
+   "name": "Cory Wong",
+   "tracks": 1,
+   "country": "US",
+   "area": "Minneapolis",
+   "areaId": "3e80aaa7-9b71-450f-8147-0ecf101d8f1a",
+   "score": 100,
+   "mbid": "ead26d19-20b3-49ac-92e9-3d8a25ca9462",
+   "mbName": "Cory Wong",
+   "viaArea": true
+  },
+  "hitomi takahashi": {
+   "name": "Hitomi Takahashi",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "ebb18bc9-9441-45e0-83ea-dac80040d4f1",
+   "mbName": "高橋瞳"
+  },
+  "beat crusaders": {
+   "name": "Beat Crusaders",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "e8575463-1ef4-4fc7-8d63-b8b12fe3c13b",
+   "mbName": "BEAT CRUSADERS"
+  },
+  "jeff williams": {
+   "name": "Jeff Williams",
+   "tracks": 1,
+   "country": null,
+   "area": "Dracut",
+   "areaId": "33d0b304-4018-4575-ba64-d4e2fc763fad",
+   "score": 100,
+   "mbid": "373981b7-b102-4782-831d-c2108e4b7340",
+   "mbName": "Jeff Williams"
+  },
+  "matthew porretta & david harewood": {
+   "name": "Matthew Porretta & David Harewood",
+   "tracks": 1,
+   "country": null,
+   "score": 0
   }
  },
  "source": "MusicBrainz",
@@ -34294,6 +41578,42 @@
   "51c17b5f-e106-4da6-b67a-ec7c371c0f9e": "FR",
   "2b30f961-ed7c-40d2-a9c5-6a905b35439a": null,
   "94ac34d2-aa01-49d9-b697-bbf738544bd4": "ES",
-  "9ddf829c-48ee-4457-a80d-f7370f24f2ec": "ES"
+  "9ddf829c-48ee-4457-a80d-f7370f24f2ec": "ES",
+  "fc68ecf5-507e-4012-b60b-d93747a3cfa7": "US",
+  "3c5a0506-d852-4e96-8d1e-d8126328f3be": "US",
+  "c6500277-9a3d-349b-bf30-41afdbf42add": "IT",
+  "eb9db460-9767-4cf5-a506-ba783e9ea8db": "IT",
+  "184969d8-461e-43be-8728-288358ebe487": "IT",
+  "dccd77b2-bd3d-49eb-a98f-fd58e87f481e": "IT",
+  "07607044-8140-47ba-bb24-7129babe586b": "GB",
+  "aab979a4-b106-4baa-a4a3-fc45f775cff9": "GB",
+  "dec4979e-c0a3-469c-a052-cee5f1e71de9": "CN",
+  "782d4fa5-dfbf-4558-87bf-c41043f5a2a1": null,
+  "12efb6a6-17b4-4616-bf2f-a342a09cbd7e": "US",
+  "22e6542c-82ea-4df8-ab99-10319b8877d1": "US",
+  "e3ce85a5-ddf3-4be2-b713-cb1d84610709": null,
+  "aa7e0699-d3fd-44a1-9e54-8088abfd5ed1": null,
+  "f12f47f9-daf9-4eec-a30e-e8a9e9bd4124": null,
+  "bbc88d72-1f32-4936-8dc6-b62b3318e1c4": "CA",
+  "ce209e56-cda5-358e-96db-830e3405b675": "TH",
+  "768367d2-ac8c-4daf-ba70-94710ad4870a": "TH",
+  "6743d351-6f37-3049-9724-5041161fff4d": "NO",
+  "f80d529e-f242-46ef-a090-d193ed23075f": "NO",
+  "13927ab7-c09b-4661-91ab-1692baf7ea1d": "JP",
+  "ac0f32ec-8342-409a-b97f-6ace1f21b438": "JP",
+  "ef1b7cc0-cd26-36f4-8ea0-04d9623786c7": "NL",
+  "61d4a9f2-68f1-4cec-a25f-e8f953954459": "NL",
+  "e8e317a1-268c-4e46-9db1-f10af959ffca": "NL",
+  "3fdd79f3-689d-46d0-941c-bd9e39476176": "IT",
+  "1db5404d-8819-418e-a801-82ef2ad42529": "IT",
+  "9d29944a-a151-499b-9d65-20ee501fd8e8": "US",
+  "ec1e55f4-03df-4ba1-a314-1ab959aa3fd6": "US",
+  "bf9353d8-da52-4fd9-8645-52b2349b4914": "US",
+  "7bec2afb-fca3-4c17-a7c8-013beabaa33e": "JP",
+  "d4ab49e7-1d25-45e2-8659-b147e0ea3684": "US",
+  "261962ea-d8c2-4eaf-a80c-f14376ffadb0": "US",
+  "ec2f31c1-5493-473a-a368-b1a4de1ca4db": "JP",
+  "e2dbccef-b210-4a6d-bba6-70c65889bfee": "US",
+  "3e80aaa7-9b71-450f-8147-0ecf101d8f1a": "US"
  }
 }
