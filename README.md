@@ -22,6 +22,8 @@
     js/profile.js       карточки по клику: исполнитель, заказчик, стрим
                         (#artist=…, #user=…, #stream=…)
     js/app.js           загрузка данных и сборка
+    icons/              значок вкладки: svg плюс png для старых браузеров и iOS
+    site.webmanifest    имя и иконки, если сайт вынесут на домашний экран
     vendor/             PapaParse и Chart.js
     data.csv            выгрузка архива, обновляет воркфлоу
     data/countries.json страны исполнителей из MusicBrainz
