@@ -24,12 +24,18 @@ function artistLink(r) {
   return artistNames(r.a || r.artist || '');
 }
 
-/* Имя заказчика как ссылка в его профиль */
+/* Имя заказчика как ссылка в его профиль. Совместный заказ
+   («kumashisan; Svd_bb») разбираем на двоих: каждый со своей ссылкой. */
+function userNames(name) {
+  if (!name || name === '—') return esc(name || '—');
+  return userTokens(name).map(t => t.sep
+    ? `<span class="sep">${esc(t.sep)}</span>`
+    : `<a class="pf-link" href="#user=${encodeURIComponent(t.name)}" data-user="${esc(t.name)}">${esc(t.name)}</a>`
+  ).join('') || esc(name);
+}
+
 function userLink(r) {
-  const n = r.u || r.user || '';
-  return n && n !== '—'
-    ? `<a class="pf-link" href="#user=${encodeURIComponent(n)}" data-user="${esc(n)}">${esc(n)}</a>`
-    : esc(n || '—');
+  return userNames(r.u || r.user || '');
 }
 
 /* Плашка оценки в цвет своей ступени */

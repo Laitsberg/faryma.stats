@@ -135,7 +135,7 @@ function showArtist(name) {
 /* ---------- профиль заказчика ---------- */
 function showUser(name) {
   const key = userKey(name);
-  const rows = ROWS.filter(r => r.userKey === key);
+  const rows = ROWS.filter(r => r.userParts.includes(key));
   if (!rows.length) { hideProfile(); return; }
 
   const shown = USER_NAMES.get(key) || name;

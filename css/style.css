@@ -120,6 +120,24 @@ section{margin:44px 0}
   overflow-wrap:anywhere}
 .card .cap{font-family:var(--m);font-size:11px;color:var(--dim);margin-bottom:12px}
 
+/* ---------- номинации заказчиков ---------- */
+.fans{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.fans>*{min-width:0}
+.card.fan{padding:13px 15px 14px}
+.fan-row{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  padding:7px 0;border-bottom:1px solid #232328;font-size:13px}
+.fan-row:last-child{border-bottom:0}
+.fan-n{min-width:0;overflow-wrap:anywhere}
+.fan-v{font-family:var(--m);font-size:11px;color:var(--dim);text-align:right;
+  white-space:nowrap;flex:none}
+.fan-v b{color:var(--brand-hi);font-weight:600}
+.fan-v i{font-style:normal;opacity:.75}
+@media(max-width:560px){
+  .fans{grid-template-columns:1fr}
+  .fan-row{flex-wrap:wrap;gap:2px}
+  .fan-v{text-align:left;white-space:normal}
+}
+
 /* ---------- графики ----------
    Высота задаётся из скрипта под число делений: у шкалы их 26,
    в фиксированные 420px Chart.js прятал каждую вторую подпись. */

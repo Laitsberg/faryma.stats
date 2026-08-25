@@ -46,7 +46,7 @@ function renderDock() {
 /* ---------- метрики ---------- */
 function renderKpis(rows) {
   const arts  = new Set(rows.map(r => r.artistKey).filter(Boolean));
-  const users = new Set(rows.map(r => r.userKey).filter(Boolean));
+  const users = new Set(rows.flatMap(r => r.userParts));
   const a = avg(rows.map(r => r.rate.score));
   const gen = rows.filter(r => r.rate.label === 'гениально').length;
   const k = [
@@ -172,7 +172,9 @@ function renderArtists(rows) {
 
 /* ---------- 04. заказчики ---------- */
 function renderUsers(rows) {
-  const m = group(rows, r => r.userKey || null);
+  // по участникам заказа, а не по строке целиком: совместный заказ
+  // должен засчитаться обоим
+  const m = group(rows, r => r.userParts.length ? r.userParts : null);
   const data = [...m].map(([key, rs]) => ({
     u: USER_NAMES.get(key) || key,
     n: rs.length,
@@ -191,6 +193,89 @@ function renderUsers(rows) {
      { k: 'best', t: 'лучший результат', mono: 1, sortK: 'bestScore',
        f: r => ratePill(r.best) }],
     data.sort((x, y) => y.n - x.n), 'n');
+}
+
+/* ---------- 05. какие бывают заказчики ----------
+   Идея подсмотрена в «Итогах 2025», которые собрал один из зрителей:
+   таблица «кто сколько принёс» говорит только про объём, а самое
+   интересное в заказчиках — их вкус. Считается по всем разносам, а не
+   по отфильтрованным: это характеристика человека, а не оценки. */
+function renderFans() {
+  const g = group(ROWS, r => r.userParts.length ? r.userParts : null);
+  const users = [...g].map(([k, rs]) => ({ k, name: USER_NAMES.get(k) || k, rs, n: rs.length }))
+                      .filter(u => u.n >= MIN_N.fan);
+
+  const link = u => `<a class="pf-link" href="#user=${encodeURIComponent(u.name)}" data-user="${esc(u.name)}">${esc(u.name)}</a>`;
+
+  /* Доля самого частого значения: кто носит одно и то же */
+  const loyal = (pick, minTot) => users.map(u => {
+    const m = new Map(); let tot = 0;
+    u.rs.forEach(r => { const v = pick(r); if (!v) return; tot++; m.set(v, (m.get(v) || 0) + 1); });
+    if (tot < minTot) return null;
+    const [top, c] = [...m].sort((a, b) => b[1] - a[1])[0];
+    return { u, top, c, tot, pct: c / tot * 100 };
+  }).filter(Boolean).sort((a, b) => b.pct - a.pct || b.c - a.c);
+
+  /* Сколько разного принёс */
+  const wide = pick => users.map(u => ({
+    u, uniq: new Set(u.rs.flatMap(r => { const v = pick(r); return v ? (Array.isArray(v) ? v : [v]) : []; })).size
+  })).sort((a, b) => b.uniq - a.uniq || b.u.n - a.u.n);
+
+  /* Доля треков из аниме / игр / кино */
+  const from = origin => users.map(u => {
+    const c = u.rs.filter(r => r.origin === origin).length;
+    return { u, c, pct: c / u.n * 100 };
+  }).filter(x => x.c >= MIN_N.fan).sort((a, b) => b.pct - a.pct || b.c - a.c);
+
+  const rows5 = (list, val) => list.slice(0, 5).map(x =>
+    `<div class="fan-row"><span class="fan-n">${link(x.u)}</span>
+      <span class="fan-v">${val(x)}</span></div>`).join('');
+
+  const card = (title, cap, body) => body
+    ? `<div class="card fan"><h3>${esc(title)}</h3><div class="cap">${esc(cap)}</div>${body}</div>`
+    : '';
+
+  const pctVal = x => `${esc(x.top)} <b>${x.pct.toFixed(0)}%</b> <i>${x.c} из ${x.tot}</i>`;
+
+  const cards = [
+    card('Верен одной стране', 'какая доля треков из одной страны',
+         rows5(loyal(r => r.country, MIN_N.fan), pctVal)),
+    card('Верен одному жанру', 'какая доля треков одного жанра',
+         rows5(loyal(r => r.genres[0], MIN_N.fan), pctVal)),
+    card('Верен одному исполнителю', 'какая доля треков одного артиста',
+         rows5(loyal(r => r.artistKey, MIN_N.fan),
+               x => `${esc(ARTIST_NAMES.get(x.top) || x.top)} <b>${x.pct.toFixed(0)}%</b> <i>${x.c} из ${x.tot}</i>`)),
+    card('Больше всего разных стран', 'кто возит со всего света',
+         rows5(wide(r => r.country), x => `<b>${num(x.uniq)}</b> <i>из ${x.u.n} треков</i>`)),
+    card('Больше всего разных жанров', 'кого не отнести к одному вкусу',
+         rows5(wide(r => r.genres), x => `<b>${num(x.uniq)}</b> <i>из ${x.u.n} треков</i>`)),
+    card('Аниме', 'доля треков из аниме',
+         rows5(from('Аниме'), x => `<b>${x.pct.toFixed(0)}%</b> <i>${x.c} из ${x.u.n}</i>`)),
+    card('Игры', 'доля треков из игр',
+         rows5(from('Игра'), x => `<b>${x.pct.toFixed(0)}%</b> <i>${x.c} из ${x.u.n}</i>`)),
+    card('Кино', 'доля треков из фильмов',
+         rows5(from('Фильм'), x => `<b>${x.pct.toFixed(0)}%</b> <i>${x.c} из ${x.u.n}</i>`))
+  ];
+
+  /* Альянсы: кто носит треки вдвоём */
+  const пары = new Map();
+  ROWS.forEach(r => {
+    if (r.userParts.length < 2) return;
+    const k = [...r.userParts].sort().join('\u0000');
+    пары.set(k, (пары.get(k) || 0) + 1);
+  });
+  const alli = [...пары].filter(([, n]) => n >= MIN_N.ally)
+    .sort((a, b) => b[1] - a[1]).slice(0, 5)
+    .map(([k, n]) => {
+      const names = k.split('\u0000').map(x => USER_NAMES.get(x) || x);
+      return `<div class="fan-row"><span class="fan-n">` +
+        names.map(x => `<a class="pf-link" href="#user=${encodeURIComponent(x)}" data-user="${esc(x)}">${esc(x)}</a>`).join('<span class="sep"> + </span>') +
+        `</span>
+        <span class="fan-v"><b>${num(n)}</b> <i>${plural(n, 'трек', 'трека', 'треков')} вместе</i></span></div>`;
+    }).join('');
+
+  $('fans').innerHTML = cards.join('') +
+    card('Альянсы', 'кто приносит треки вдвоём', alli);
 }
 
 /* Пара графиков «объём / средний балл» — используется много где */

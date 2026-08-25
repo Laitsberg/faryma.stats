@@ -133,6 +133,27 @@ function userKey(s) {
   return nameKey(s).replace(/^@/, '');
 }
 
+/* ---------- соавторы заказа ----------
+   Трек, принесённый вдвоём, записан через точку с запятой:
+   «kumashisan; Svd_bb». Таких заказов 171, и без разбиения пара
+   считается отдельным «человеком»: Ivan_Vitalyevich терял 32 разноса,
+   kumashisan — 26. Возвращает всех участников заказа. */
+function userParts(user) {
+  return String(user || '').split(';').map(x => x.trim()).filter(Boolean);
+}
+
+/* Те же кусочки, но с разделителями — чтобы каждое имя стало ссылкой,
+   а «;» осталось простым текстом. */
+function userTokens(user) {
+  const out = [];
+  String(user || '').split(/(\s*;\s*)/).forEach(x => {
+    if (!x) return;
+    if (/^\s*;\s*$/.test(x)) out.push({ sep: x });
+    else if (x.trim()) out.push({ name: x.trim() });
+  });
+  return out;
+}
+
 /* Строит карту ключ → самое частое написание */
 function canonMap(values, keyfn) {
   const counts = new Map();

@@ -31,7 +31,8 @@ function load() {
     .then(r => r.ok ? r.json() : null)
     .then(j => {
       COUNTRIES = (j && j.artists) || {};
-      if (ROWS.length) { applyCountries(); renderCountries(cur()); }
+      // страны нужны не только своему разделу, но и номинациям заказчиков
+      if (ROWS.length) { applyCountries(); renderCountries(cur()); renderFans(); }
     })
     .catch(() => {});
 
@@ -58,7 +59,8 @@ function build(raw) {
   // «HOYO-MIX» считались одним исполнителем
   const parsed = raw.map(r => ({ r, w: parseWhat(r['Что']) }));
   ARTIST_NAMES = canonMap(parsed.map(p => p.w.artist).filter(Boolean), nameKey);
-  USER_NAMES   = canonMap(raw.map(r => (r['Кто'] || '').trim()).filter(Boolean), userKey);
+  USER_NAMES   = canonMap(
+    raw.flatMap(r => userParts(r['Кто'])).filter(Boolean), userKey);
 
   // кто хоть раз выступал один — по этому списку решаем, разбивать ли
   // «X & Y» на двоих или это цельное название группы
@@ -91,6 +93,8 @@ function build(raw) {
       artist: w.artist, title: w.title, full: w.full,
       artistKey: w.artist ? canonKey(nameKey(w.artist)) : '',
       user, userKey: user ? userKey(user) : '',
+      // соавторы заказа: «kumashisan; Svd_bb» — это двое
+      userParts: userParts(user).map(userKey),
       type:   (r['Тип'] || '').trim(),
       origin: (r['Откуда'] || '').trim(),
       source: parseSource(r['Что']),
@@ -217,6 +221,7 @@ function render() {
   renderTrend();
   renderArtists(rows);
   renderUsers(rows);
+  renderFans();
   renderGenres(rows);
   renderOrigin(rows);
   renderType(rows);
@@ -259,7 +264,7 @@ function renderSearch() {
   let rows = cur();
   if (q)  rows = rows.filter(r => r.search.includes(q));
   if (fr) rows = rows.filter(r => r.rate.label === fr);
-  if (fu) rows = rows.filter(r => r.userKey === fu);
+  if (fu) rows = rows.filter(r => r.userParts.includes(fu));
   if (fo) rows = rows.filter(r => r.origin === fo);
   if (fg) rows = rows.filter(r => r.genres.includes(fg));
 
@@ -286,7 +291,7 @@ function renderSearch() {
         ? `<a class="tlink" href="${esc(r.link.url)}" target="_blank" rel="noopener noreferrer">${esc(r.title)}</a><span class="plat">${esc(r.link.platform)}</span>`
         : esc(r.title) },
     { k: 'label',  t: 'оценка', mono: 1, sortK: 'score', w: '11%', f: r => ratePill(r.label) },
-    { k: 'user',   t: 'заказчик', mono: 1, w: '12%', f: userLink },
+    { k: 'user',   t: 'заказчик', mono: 1, w: '12%', f: r => userNames(r.user) },
     { k: 'genre',  t: 'жанр', w: '12%' },
     // «Откуда» стоит рядом с жанром, а не между исполнителем и треком:
     // источник известен у 44% строк, и посередине он рвал бы главную
@@ -315,7 +320,7 @@ function initControls() {
     .forEach(l => rs.add(new Option(l, l)));
 
   const us = $('fUser');
-  [...group(ROWS, r => r.userKey || null)]
+  [...group(ROWS, r => r.userParts.length ? r.userParts : null)]
     .sort((a, b) => b[1].length - a[1].length).slice(0, 60)
     .forEach(([key, rs2]) => us.add(new Option(
       `${USER_NAMES.get(key) || key} (${rs2.length})`, key)));
