@@ -164,7 +164,16 @@ function hbar(id, items, color, maxX) {
       layout: { padding: { right: 46 } },
       scales: {
         x: { ...GRID, max: maxX, beginAtZero: true },
-        y: { ...GRID, ticks: { autoSkip: false, font: { size: 11 } } }
+        /* Длинные подписи Chart.js обрезает слева, и от «Rift of the
+           NecroDancer» на телефоне оставалось «ift of the NecroDancer».
+           Режем сами и с многоточием, а полное название остаётся
+           в подсказке при наведении. */
+        y: { ...GRID, ticks: { autoSkip: false, font: { size: 11 },
+          callback(v) {
+            const t = String(this.getLabelForValue(v));
+            const max = (this.chart.width || 400) < 520 ? 19 : 32;
+            return t.length > max ? t.slice(0, max - 1).trimEnd() + '…' : t;
+          } } }
       },
       plugins: {
         tooltip: TOOLTIP,
