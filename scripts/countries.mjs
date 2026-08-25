@@ -15,6 +15,8 @@
      node scripts/countries.mjs --retry-missing  переспросить ненайденных
      node scripts/countries.mjs --min-tracks 2   пропустить одноразовых
      node scripts/countries.mjs --max-minutes 50 остановиться по времени
+     node scripts/countries.mjs --recheck        переспросить ненайденных
+                                                 после починки запроса
 
    ============================================================ */
 
@@ -37,6 +39,9 @@ const OUT_PATH  = argVal('--out', path.join(ROOT, 'data', 'countries.json'));
 const LIMIT     = +argVal('--limit', Infinity);
 const MIN_TRACKS = +argVal('--min-tracks', 1);
 const RETRY_MISSING = hasFlag('--retry-missing');
+/* Переспросить тех, кого прошлый — более слабый — запрос не нашёл
+   вовсе (0 баллов) или нашёл, но без страны. */
+const RECHECK = hasFlag('--recheck');
 /* Ограничение по времени. Нужно, чтобы скрипт успел завершиться сам и
    вызывающий воркфлоу успел закоммитить накопленное, а не был убит
    по таймауту с потерей несохранённого. */
@@ -72,8 +77,18 @@ function queryName(name) {
     .trim();
 }
 
+/* Запрос ищет и по псевдонимам, а не только по основному имени.
+   У японских исполнителей основное имя записано иероглифами
+   («澤野弘之»), а латиница лежит в псевдонимах, и точный поиск по
+   artist: не находил ни Hiroyuki Sawano, ни Kenshi Yonezu, ни
+   ZUTOMAYO — притом что все они в базе есть. */
+function queryString(name) {
+  const q = name.replace(/["\\]/g, ' ').trim();
+  return `artist:"${q}" OR alias:"${q}" OR sortname:"${q}"`;
+}
+
 async function fetchArtist(name, attempt = 0) {
-  const url = `${API_ROOT}/artist/?query=${encodeURIComponent('artist:"' + name + '"')}&fmt=json&limit=1`;
+  const url = `${API_ROOT}/artist/?query=${encodeURIComponent(queryString(name))}&fmt=json&limit=1`;
   let res;
   try {
     res = await fetch(url, { headers: { 'User-Agent': UA, 'Accept': 'application/json' } });
@@ -91,12 +106,47 @@ async function fetchArtist(name, attempt = 0) {
   const a = j.artists?.[0];
   if (!a) return { country: null, score: 0 };
   return {
-    country: a.country || a.area?.['iso-3166-1-codes']?.[0] || null,
-    area: a.area?.name || null,
+    country: a.country || a.area?.['iso-3166-1-codes']?.[0]
+             || a['begin-area']?.['iso-3166-1-codes']?.[0] || null,
+    area: a.area?.name || a['begin-area']?.name || null,
+    areaId: a.area?.id || a['begin-area']?.id || null,
     score: a.score ?? 0,
     mbid: a.id || null,
     mbName: a.name || null
   };
+}
+
+/* ---------- город → страна ----------
+   У четверти найденных исполнителей MusicBrainz знает не страну, а
+   город или регион: «Ufa», «Boston», «Tokyo», «England». Поднимаемся
+   по дереву областей до той, у которой есть код страны. Ответы
+   складываем в отдельный кэш: городов куда меньше, чем исполнителей,
+   и один и тот же встречается десятки раз. */
+async function areaCountry(areaId, areaCache, depth = 0) {
+  if (!areaId || depth > 4) return null;
+  if (areaCache[areaId] !== undefined) return areaCache[areaId];
+
+  const url = `${API_ROOT}/area/${areaId}?inc=area-rels&fmt=json`;
+  let res;
+  try {
+    res = await fetch(url, { headers: { 'User-Agent': UA, 'Accept': 'application/json' } });
+  } catch { return null; }
+  if (res.status === 503 || res.status === 429) { await sleep(3000); return null; }
+  if (!res.ok) { areaCache[areaId] = null; return null; }
+  const j = await res.json();
+
+  const own = j['iso-3166-1-codes']?.[0] || null;
+  if (own) { areaCache[areaId] = own; return own; }
+
+  // «part of» в обратную сторону — это и есть объемлющая область
+  const up = (j.relations || []).find(x =>
+    x.type === 'part of' && x.direction === 'backward' && x.area?.id);
+  if (!up) { areaCache[areaId] = null; return null; }
+
+  await sleep(DELAY_MS);
+  const parent = await areaCountry(up.area.id, areaCache, depth + 1);
+  areaCache[areaId] = parent;
+  return parent;
 }
 
 /* ---------- сбор исполнителей из архива ---------- */
@@ -158,6 +208,9 @@ const todo = artists.filter(a => {
   const hit = cache.artists[a.key];
   if (!hit) return true;
   if (RETRY_MISSING && !hit.country) return true;
+  // после починки запроса имеет смысл переспросить тех, кого старый
+  // не нашёл; те, у кого страна уже есть, не трогаются
+  if (RECHECK && !hit.country && (!hit.score || hit.areaId || hit.area)) return true;
   return false;
 }).slice(0, LIMIT);
 
@@ -170,6 +223,7 @@ const eta = Math.round(todo.length * DELAY_MS / 60000);
 console.log(`примерно ${eta} мин при одном запросе в секунду\n`);
 
 const startedAt = Date.now();
+const areaCache = cache.areas || (cache.areas = {});
 let done = 0, found = 0, failed = 0, ranOut = false;
 for (const a of todo) {
   if (Date.now() - startedAt > MAX_MS) {
@@ -179,6 +233,12 @@ for (const a of todo) {
   }
   try {
     const r = await fetchArtist(queryName(a.name));
+    // страны нет, но известен город — поднимаемся до страны
+    if (!r.country && r.areaId) {
+      await sleep(DELAY_MS);
+      const c = await areaCountry(r.areaId, areaCache);
+      if (c) { r.country = c; r.viaArea = true; }
+    }
     cache.artists[a.key] = { name: a.name, tracks: a.n, ...r };
     if (r.country) found++;
   } catch (e) {

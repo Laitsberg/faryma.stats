@@ -16,6 +16,11 @@ on:
         type: boolean
         required: false
         default: false
+      recheck:
+        description: 'Переспросить ненайденных после починки запроса (ищем и по псевдонимам)'
+        type: boolean
+        required: false
+        default: false
 
 # Нужно, чтобы Actions мог коммитить в репозиторий
 permissions:
@@ -56,6 +61,9 @@ jobs:
           EXTRA=""
           if [ "${{ github.event.inputs.retry_missing }}" = "true" ]; then
             EXTRA="--retry-missing"
+          fi
+          if [ "${{ github.event.inputs.recheck }}" = "true" ]; then
+            EXTRA="$EXTRA --recheck"
           fi
           # --max-minutes держит шаг в рамках: скрипт останавливается сам,
           # и накопленное успевает закоммититься. Кэш пишется по ходу,
