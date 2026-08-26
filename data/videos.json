@@ -1,7 +1,13 @@
 {
- "generated": "2026-08-26T12:44:46.270Z",
+ "generated": "2026-08-26T14:47:34.858Z",
  "note": "ролики с каналов композитора; собирает scripts/videos.mjs",
  "videos": [
+  {
+   "id": "NqLhd2ob2zw",
+   "title": "Композитор РАЗНОСИТ опенинги ONE PIECE || МУЗЫКАЛЬНЫЙ ТИР-ЛИСТ",
+   "sec": 2255,
+   "views": 36
+  },
   {
    "id": "mxTzOfOgEDg",
    "title": "Композитор РАЗНОСИТ опенинги ONE PIECE (часть 2) || МУЗЫКАЛЬНЫЙ ТИР-ЛИСТ",
@@ -288,25 +294,25 @@
    "id": "dt1Laj5BZ3c",
    "title": "Композитор РАЗНОСИТ музыку из GUILTY GEAR STRIVE (финал!!!) || LIVE",
    "sec": 5675,
-   "views": null
+   "views": 6
   },
   {
    "id": "1ibtXUCQD_U",
    "title": "Композитор РАЗНОСИТ темы персонажей GUILTY GEAR STRIVE (часть 4) || LIVE",
    "sec": 7400,
-   "views": null
+   "views": 11
   },
   {
    "id": "VA8yCKxcPs8",
    "title": "Композитор РАЗНОСИТ темы персонажей GUILTY GEAR STRIVE (часть 3) || LIVE",
    "sec": 5645,
-   "views": null
+   "views": 10
   },
   {
    "id": "nxz9wrZzJxs",
    "title": "Композитор РАЗНОСИТ темы персонажей GUILTY GEAR STRIVE (часть 2) || LIVE",
    "sec": 5782,
-   "views": null
+   "views": 10
   },
   {
    "id": "iZmKgRZk9Lk",
@@ -318,19 +324,19 @@
    "id": "ZrIES1UKEEU",
    "title": "Композитор РАЗНОСИТ темы персонажей GUILTY GEAR STRIVE || LIVE",
    "sec": 6834,
-   "views": null
+   "views": 18
   },
   {
    "id": "O3oSdE4gufY",
    "title": "КОМПОЗИТОР слушает ВЕСЬ саундтрек HOLLOW KNIGHT SILKSONG || LIVE",
    "sec": 14585,
-   "views": null
+   "views": 21
   },
   {
    "id": "uEHDZYqnX2I",
    "title": "КОМПОЗЕР ИГРАЕТ В МАЙНКРАФТ (1 серия: НАХОДКИ И ПОТЕРИ)",
    "sec": 2363,
-   "views": 456
+   "views": 457
   }
  ]
 }
