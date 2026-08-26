@@ -64,6 +64,13 @@ function renderKpis(rows) {
 /* ---------- 01. распределение по шкале ---------- */
 function renderScale() {
   const m = group(ROWS, r => r.rate.label);
+
+  // «Чистое гениально» — без плюсов и минусов. Число живое: цифра в
+  // тексте не должна разойтись с цифрой в шапке.
+  const чистых = (m.get('гениально') || []).length;
+  $('pureNote').textContent =
+    num(чистых) + ' ' + plural(чистых, 'раз', 'раза', 'раз') + ' за всю историю';
+
   const labels = SCALE_ORDER.filter(l => m.has(l));
   hbar('cScale',
     labels.map(l => ({ k: l, v: m.get(l).length })),
@@ -117,8 +124,8 @@ function renderTrend() {
   const first = seq[0].date, last = seq[seq.length - 1].date;
   const fmt = d => d.toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' });
   $('trendNote').textContent =
-    `${fmt(first)} — ${fmt(last)}, ${num(STREAMS.length)} ` +
-    plural(STREAMS.length, 'стрим', 'стрима', 'стримов');
+    `Охвачен путь от ${fmt(first)} до ${fmt(last)} — ${num(STREAMS.length)} ` +
+    plural(STREAMS.length, 'эфир', 'эфира', 'эфиров') + '.';
 }
 
 /* Запасной вариант, если дат вдруг не окажется */
@@ -440,7 +447,7 @@ function renderHour(rows) {
     }
   });
   $('hourNote').textContent =
-    `показаны получасовые отрезки, где набралось хотя бы ${MIN_N.hourBucket} разносов`;
+    `Показаны получасовые отрезки, где набралось хотя бы ${MIN_N.hourBucket} разносов.`;
 }
 
 /* ---------- 10. тэги ----------
@@ -472,8 +479,8 @@ function renderCountries(rows) {
 
   const cov = (known.length / rows.length * 100).toFixed(0);
   $('countryNote').textContent =
-    `страна известна у ${num(known.length)} из ${num(rows.length)} разносов (${cov}%), ` +
-    `остальных MusicBrainz либо не знает, либо не уверен в совпадении`;
+    `Страна известна у ${num(known.length)} из ${num(rows.length)} разносов (${cov}%); ` +
+    `остальных MusicBrainz либо не знает, либо не уверен в совпадении.`;
 }
 
 /* ---------- 11. сколько длится один разнос ----------
