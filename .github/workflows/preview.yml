@@ -1,0 +1,38 @@
+name: Картинка для превью ссылки
+
+# Запускается руками. Из песочницы разработки шрифты Google недоступны,
+# а без них карточка выглядит не так, как сайт, — поэтому снимок делаем
+# отсюда. Цифры берутся из таблицы тем же кодом, что и на сайте.
+on:
+  workflow_dispatch:
+
+jobs:
+  shot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Поставить браузер
+        run: npm i -D playwright@1.49.1 && npx playwright install --with-deps chromium
+
+      - name: Снять карточку
+        run: node scripts/preview.mjs
+
+      - name: Закоммитить картинку
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add icons/og.png
+          if git diff --staged --quiet; then echo "изменений нет"; exit 0; fi
+          git commit -m "Картинка для превью ссылки"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin main && git push && exit 0
+            sleep $((i * 5))
+          done
+          exit 1

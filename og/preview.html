@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Карточка ссылки</title>
+<!-- Картинка для превью ссылки: 1200×630. Рисуется этим же шаблоном,
+     снимок делает .github/workflows/preview.yml — из песочницы
+     разработки шрифты Google не грузятся, а без них вид не тот.
+     Цифры приходят в адресе: ?tracks=6673&artists=3960&… -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Golos+Text:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0D0D0F; --panel:#17171A; --line:#2C2C31;
+    --ink:#F2F2F4; --dim:#A0A0A8;
+    --brand:#F2660F; --brand-hi:#F59B14; --brand-lo:#D8400F;
+    --d:'Unbounded',system-ui,sans-serif;
+    --b:'Golos Text',system-ui,sans-serif;
+    --m:'JetBrains Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{width:1200px;height:630px;background:var(--bg);color:var(--ink);
+    font-family:var(--b);overflow:hidden;position:relative;
+    border-top:6px solid transparent;
+    border-image:linear-gradient(90deg,var(--brand-lo),var(--brand),var(--brand-hi)) 1}
+  .in{padding:56px 64px;height:100%;display:flex;flex-direction:column}
+  .eyebrow{font-family:var(--m);font-size:16px;letter-spacing:.22em;
+    color:var(--dim);text-transform:uppercase}
+  h1{font-family:var(--d);font-weight:800;font-size:78px;line-height:1;
+    letter-spacing:-.02em;margin:20px 0 14px}
+  h1 em{font-style:normal;color:var(--brand)}
+  .sub{color:var(--dim);font-size:23px;line-height:1.45;max-width:44ch}
+  .lad{display:flex;gap:7px;margin-top:auto}
+  .lad i{height:12px;border-radius:2px;display:block}
+  .nums{display:flex;gap:52px;margin-top:26px;align-items:flex-end}
+  .n b{display:block;font-family:var(--d);font-weight:800;font-size:46px;line-height:1}
+  .n span{font-family:var(--m);font-size:14px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--dim);display:block;margin-top:8px}
+  .dom{margin-left:auto;font-family:var(--m);font-size:22px;color:var(--brand-hi)}
+</style>
+</head>
+<body>
+<div class="in">
+  <div class="eyebrow">Статистика стримов faryma.composer</div>
+  <h1>Композитор <em>разносит</em></h1>
+  <p class="sub">Каждый трек, который принесли композитору на разбор,
+     и что он о нём сказал</p>
+
+  <div class="lad">
+    <i style="flex:517;background:#E4585F"></i>
+    <i style="flex:2718;background:#F2A93B"></i>
+    <i style="flex:2483;background:#DCC79A"></i>
+    <i style="flex:696;background:#7FA9A0"></i>
+    <i style="flex:202;background:#6E7C86"></i>
+    <i style="flex:57;background:#9B87B5"></i>
+  </div>
+
+  <div class="nums">
+    <div class="n"><b id="tracks">6 673</b><span>разноса</span></div>
+    <div class="n"><b id="artists">3 960</b><span>исполнителя</span></div>
+    <div class="n"><b id="users">984</b><span>заказчика</span></div>
+    <div class="n"><b id="streams">273</b><span>стрима</span></div>
+    <div class="dom">farymastats.info</div>
+  </div>
+</div>
+<script>
+  const q = new URLSearchParams(location.search);
+  const nice = n => Number(n).toLocaleString('ru-RU').replace(/ /g, ' ');
+  ['tracks', 'artists', 'users', 'streams'].forEach(k => {
+    if (q.get(k)) document.getElementById(k).textContent = nice(q.get(k));
+  });
+  // ступени шкалы задают ширину полосок — их тоже можно передать
+  if (q.get('tiers')) {
+    const v = q.get('tiers').split(',').map(Number);
+    document.querySelectorAll('.lad i').forEach((el, i) => { if (v[i]) el.style.flex = v[i]; });
+  }
+</script>
+</body>
+</html>
