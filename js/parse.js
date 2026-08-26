@@ -132,6 +132,9 @@ function parseSource(what) {
     'ep\\.?\\s*\\d+(?:\\s*(?:[-–/]|and)\\s*\\d+)?',
     '\\d+\\s+(?:OST|OP|ED)',
     '(?:OP|ED)\\s+Theme',
+    // «Track 10; Naruto», «OVA 5; OST; Hellsing», «5 & 6 Ending Hunter x Hunter»
+    'Track\\s*\\d+', 'OVA\\s*\\d*', 'Disc\\s*\\d+',
+    '\\d+\\s*(?:&|and)\\s*\\d+\\s+(?:Opening|Ending|OP|ED)',
     // «OP 1, Vinland Saga» — номер стоит и до пометки, и после неё
     '(?:Opening|Ending|OP|ED)\\s*\\d+(?:\\/\\d+)?',
     '\\d+(?:\\/\\d+)?\\s+(?:Opening|Ending|OP|ED)',
@@ -140,10 +143,14 @@ function parseSource(what) {
   // Перед пометкой иногда стоит вид носителя: «Game Opening; …»,
   // «Movie Kaguya-sama …», «OST; webcomic Homestuck».
   const MEDIA = /^\s*(?:Game|Movie|Anime|Film|Series|TV|web\s*comic|webcomic)\s*(?:[-–]\s*)?(?=[^\s])/i;
+  // как записано, а не откуда: «Piano, Howl's Moving Castle»,
+  // «Concert Live, OST, Evangelion 3.0»
+  const FORMAT = /^\s*(?:Piano|Concert(?:\s+Live)?|Live|Orchestra|Orchestral|Acoustic|Vocal|Instrumental|Remix|Cover|Medley|Arrange|Arrangement)\s*[,;]\s*/i;
 
   let guard = 8;
   while (guard--) {
     if (MARKER.test(t)) { t = t.replace(MARKER, ''); continue; }
+    if (FORMAT.test(t)) { t = t.replace(FORMAT, ''); continue; }
     // «Game» срезаем только как вид носителя: «Game of Thrones» —
     // это название, а не игра
     if (MEDIA.test(t) && !/^\s*Game\s+of\b/i.test(t) &&
@@ -156,7 +163,7 @@ function parseSource(what) {
 
   // Форма без разделителя вовсе: «1 Opening Durarara!!», «Ending Re:Zero»,
   // «OST Hannibal», «UTA from One Piece Film: Red»
-  t = t.replace(/^\s*(?:\d+(?:\/\d+)?\s+)?(?:Opening|Ending|OP|ED|Insert(?:\s+Song)?|Theme)\s+/i, '');
+  t = t.replace(/^\s*(?:\d+(?:\s*(?:&|and|\/|[-–])\s*\d+)?\s+)?(?:Opening|Ending|OP|ED|Insert(?:\s+Song)?|Theme)\s+/i, '');
   t = t.replace(/^\s*UTA\s+from\s+/i, '');
   // «Theme from Dark, A Netflix Original Series» — но «From Dusk Till
   // Dawn» это название, поэтому голое «from» в начале не трогаем
