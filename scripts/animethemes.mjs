@@ -240,14 +240,24 @@ function pack(a) {
 /* ---------- главное ---------- */
 if (has('--probe')) {
   const q = val('--q', 'Your Lie in April');
+  console.log('=== ШИКИМОРИ: поиск «' + q + '»');
+  try {
+    const r = await fetch('https://shikimori.one/api/animes?limit=5&search=' + encodeURIComponent(q),
+      { headers: { 'User-Agent': UA, Accept: 'application/json' } });
+    console.log('статус', r.status);
+    const j = await r.json();
+    console.log(JSON.stringify(j, null, 1).slice(0, 1800));
+  } catch (e) { console.log('не вышло:', e.message); }
+
+  console.log('\n=== ANIMETHEMES: тайтл по номеру MAL');
   for (const p of [
-    `/animesynonym?filter[text]=${encodeURIComponent(q)}&include=anime`,
-    `/anime?filter[name]=${encodeURIComponent(q)}&include=animesynonyms&page[size]=2`,
-    `/search?q=${encodeURIComponent(q)}&fields[search]=anime&include[anime]=animesynonyms`
+    '/resource?filter[site]=MyAnimeList&filter[external_id]=21&include=anime',
+    '/anime?filter[has]=resources&filter[site]=MyAnimeList&filter[external_id]=21&page[size]=2',
+    '/anime?filter[name]=One%20Piece&include=resources&page[size]=1'
   ]) {
-    console.log('\n=== ' + p);
+    console.log('\n--- ' + p);
     const j = await get(p);
-    console.log(JSON.stringify(j, null, 1).slice(0, 2500));
+    console.log(JSON.stringify(j, null, 1).slice(0, 1600));
     await sleep(DELAY);
   }
   process.exit(0);
