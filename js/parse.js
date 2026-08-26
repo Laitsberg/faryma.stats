@@ -122,14 +122,49 @@ function parseSource(what) {
   // «OST, Hunter x Hunter», «ep 15, OST; Re:Zero». Запятая встречается
   // чаще точки с запятой — из-за неё 150 источников оставались с
   // хвостом «OST, …» и уезжали в отдельные карточки.
-  const MARKER = /^\s*(?:OST(?:\s+[^;:,\]]{1,24})?|VN|UTA(?:\s+OST)?|Character\s+Song|Main\s+Theme|Insert(?:\s+Song)?|Theme|ep\.?\s*\d+(?:\s*(?:[-–]|and)\s*\d+)?|\d+\s+(?:OST|OP|ED)|(?:OP|ED)\s+Theme|Opening|Ending|OP|ED|\d+(?:\/\d+)?\s+(?:Opening|Ending|OP|ED))\s*[;:,]\s*/i;
-  let guard = 6;
-  while (guard-- && MARKER.test(t)) t = t.replace(MARKER, '');
+  const MARKER = new RegExp('^\\s*(?:' + [
+    'OST(?:\\s+[^;:,\\]]{1,24})?',
+    'VN', 'UTA(?:\\s+OST)?',
+    // «Theme Song, Library of Ruina», «2 Insert Song; Hazbin Hotel»
+    '\\d*\\s*(?:Character|Main|Theme|Insert|Opening|Ending)\\s+Song',
+    'Main\\s+Theme', 'Insert(?:\\s+Song)?', 'Theme',
+    // «ep 19», «ep 11/24», «ep.3-4»
+    'ep\\.?\\s*\\d+(?:\\s*(?:[-–/]|and)\\s*\\d+)?',
+    '\\d+\\s+(?:OST|OP|ED)',
+    '(?:OP|ED)\\s+Theme',
+    // «OP 1, Vinland Saga» — номер стоит и до пометки, и после неё
+    '(?:Opening|Ending|OP|ED)\\s*\\d+(?:\\/\\d+)?',
+    '\\d+(?:\\/\\d+)?\\s+(?:Opening|Ending|OP|ED)',
+    'Opening', 'Ending', 'OP', 'ED'
+  ].join('|') + ')\\s*[;:,]\\s*', 'i');
+  // Перед пометкой иногда стоит вид носителя: «Game Opening; …»,
+  // «Movie Kaguya-sama …», «OST; webcomic Homestuck».
+  const MEDIA = /^\s*(?:Game|Movie|Anime|Film|Series|TV|web\s*comic|webcomic)\s*(?:[-–]\s*)?(?=[^\s])/i;
+
+  let guard = 8;
+  while (guard--) {
+    if (MARKER.test(t)) { t = t.replace(MARKER, ''); continue; }
+    // «Game» срезаем только как вид носителя: «Game of Thrones» —
+    // это название, а не игра
+    if (MEDIA.test(t) && !/^\s*Game\s+of\b/i.test(t) &&
+        !/^\s*(?:Movie|Film|Series)\s+(?:of|the)\b/i.test(t)) {
+      const cut = t.replace(MEDIA, '');
+      if (cut && cut !== t) { t = cut; continue; }
+    }
+    break;
+  }
 
   // Форма без разделителя вовсе: «1 Opening Durarara!!», «Ending Re:Zero»,
   // «OST Hannibal», «UTA from One Piece Film: Red»
   t = t.replace(/^\s*(?:\d+(?:\/\d+)?\s+)?(?:Opening|Ending|OP|ED|Insert(?:\s+Song)?|Theme)\s+/i, '');
   t = t.replace(/^\s*UTA\s+from\s+/i, '');
+  // «Theme from Dark, A Netflix Original Series» — но «From Dusk Till
+  // Dawn» это название, поэтому голое «from» в начале не трогаем
+  t = t.replace(/^\s*(?:Theme|Song|Music)\s+from\s+(?:the\s+series\s+)?/i, '');
+  t = t.replace(/^\s*from\s+the\s+series\s+/i, '');
+  t = t.replace(/^\s*from\s+(?=["«])/i, '');   // «From "Wicked"»
+  // «19 OST of Asuna, Sword Art Online» — сначала о ком, потом откуда
+  t = t.replace(/^\s*(?:\d+\s+)?(?:OST|Theme)\s+of\s+[^,;]{1,40}[,;]\s*/i, '');
   t = t.replace(/^\s*(?:OST|VN)\s+(?=[A-ZА-Я0-9])/, '');
   t = t.replace(/^\s*ep\.?\s*\d+(?:\s*(?:[-–]|and)\s*\d+)?\s+(?=[A-ZА-Я0-9])/i, '');
   // номер трека перед пометкой: «3 OST Bleach», «26 OP One Piece»
@@ -139,7 +174,11 @@ function parseSource(what) {
     .split('/')[0]
     // хвостовое «OST» в колонке «откуда» ничего не добавляет, зато
     // разводит «Genshin Impact» и «Genshin Impact OST» по разным строкам
-    .replace(/\s+OST\s*$/i, '')
+    .replace(/\s+(?:OST|OP|ED)\s*$/i, '')
+    // «Song, Film "Gintama THE FINAL"» — кавычки вокруг всего названия
+    // лишние; одиночную кавычку внутри трогать нельзя
+    .replace(/^\s*"(.+)"\s*$/, '$1')
+    .replace(/^\s*«(.+)»\s*$/, '$1')
     .trim();
 }
 
