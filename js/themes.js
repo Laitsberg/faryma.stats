@@ -90,6 +90,8 @@ function rowsOfSlug(slug) {
       if (!BY_SLUG.has(h.slug)) BY_SLUG.set(h.slug, []);
       BY_SLUG.get(h.slug).push(r);
     });
+    // самый первый разнос темы, а не кавер, принесённый позже
+    BY_SLUG.forEach(list => list.sort((a, b) => (a.date || 0) - (b.date || 0)));
   }
   return BY_SLUG.get(slug) || [];
 }
