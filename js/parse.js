@@ -199,6 +199,15 @@ function sourceKind(what) {
   return '';
 }
 
+/* Аниме ли это. Западные мультсериалы вроде Arcane в каталоге японской
+   анимации искать бессмысленно — списка тем у них там нет. */
+function isAnimeSource(source) {
+  if (!source) return false;
+  const base = nameKey(sourceParts(source).base);
+  const whole = nameKey(source);
+  return !NOT_ANIME.some(x => { const k = nameKey(x); return k === base || k === whole; });
+}
+
 /* Сезон или часть внутри франшизы.
    «Boku no Hero Academia 3rd Season» → база «Boku no Hero Academia»,
    часть «3rd Season». Римские цифры тоже считаются частью: у игр

@@ -260,6 +260,25 @@ function showSource(name) {
     if (d) return +d[0];
     return ROMAN[t.toUpperCase()] ?? 99;
   };
+
+  /* Номер части в архиве пишут как придётся: «2nd Season», «Season 2»,
+     «II», «Part 2». Рядом с ними «Первый сезон» по-русски смотрелся
+     чужеродно, поэтому приводим все заголовки к одному виду.
+     У аниме это сезоны, у игр — части: «Final Fantasy XVI» не сезон. */
+  const NUM = ['Первый','Второй','Третий','Четвёртый','Пятый','Шестой',
+               'Седьмой','Восьмой','Девятый','Десятый','Одиннадцатый','Двенадцатый',
+               'Тринадцатый','Четырнадцатый','Пятнадцатый','Шестнадцатый'];
+  const аниме = rows.filter(r => r.origin === 'Аниме').length * 2 >= rows.length;
+  const слово = аниме ? 'сезон' : 'часть';
+  const partTitle = t => {
+    const n = partNo(t);
+    const p = /^(?:Part|Часть)/i.test(t) ? 'часть' : слово;
+    const имя = NUM[n - 1];
+    if (!имя) return t || (аниме ? 'Первый сезон' : 'Первая часть');
+    return p === 'часть'
+      ? имя.replace(/ый$|ой$|ий$/, m => ({ 'ый':'ая', 'ой':'ая', 'ий':'ья' }[m])) + ' часть'
+      : имя + ' сезон';
+  };
   const parts = [...new Set(rows.map(r => sourceParts(r.source).part))]
     .sort((a, b) => partNo(a) - partNo(b));
 
@@ -294,7 +313,7 @@ function showSource(name) {
   const body = parts.length > 1
     ? parts.map(pt => {
         const rs = rows.filter(r => sourceParts(r.source).part === pt);
-        return `<h3 class="pf-h pf-season">${esc(pt || 'Первый сезон')} ` +
+        return `<h3 class="pf-h pf-season">${esc(partTitle(pt))} ` +
           `<span>${num(rs.length)} ` + plural(rs.length, 'трек', 'трека', 'треков') + `</span></h3>` +
           block(rs) + themeBlock(rs, seen);
       }).join('')
@@ -302,7 +321,9 @@ function showSource(name) {
 
   openProfile(base,
     parts.length > 1
-      ? `${num(parts.length)} ` + plural(parts.length, 'часть', 'части', 'частей') + ' во вселенной'
+      ? `${num(parts.length)} ` + plural(parts.length,
+          аниме ? 'сезон' : 'часть', аниме ? 'сезона' : 'части', аниме ? 'сезонов' : 'частей') +
+        ' во вселенной'
       : '',
     kpiBlock(kpi) + kindRow + body);
 }

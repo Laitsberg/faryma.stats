@@ -54,6 +54,7 @@ const THEME_ORDER = { OP: 0, ED: 1, IN: 2, OST: 3 };
    бывает неточным, поэтому ниже честно пишем, что именно нашлось. */
 function themeEntry(names) {
   for (const n of names) {
+    if (!isAnimeSource(n)) return null;
     const h = THEMES[n];
     if (h && h.slug && h.themes && h.themes.length) return h;
   }

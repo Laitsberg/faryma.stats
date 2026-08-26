@@ -30,6 +30,17 @@ const HISTORY_JSONL = "data/history.jsonl";
 const COUNTRIES_JSON = "data/countries.json";
 const THEMES_JSON = "data/themes.json";
 
+/* Что не аниме, хотя и попало в аниме-разделы таблицы.
+   Каталог опенингов и эндингов берётся из animethemes — базы японской
+   анимации, и западным мультсериалам там взяться неоткуда: искать их
+   бесполезно, а показывать «чего ещё не разносили» — неправда.
+   Сравниваем по названию франшизы, без учёта регистра. */
+const NOT_ANIME = [
+  "Arcane",
+  "Arcane: League of Legends",
+  "Arcane League of Legends"
+];
+
 /* ---------- шкала оценок ----------
    base — балл ступени, c — цвет на графиках.
 

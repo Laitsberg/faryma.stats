@@ -115,8 +115,9 @@ function collectSources(ctx) {
     if (!src) return;
     src = canon.get(ctx.nameKey(src)) || src;
     const kind = ctx.sourceKind(r['Что']);
-    const аниме = kind === 'опенинг' || kind === 'эндинг' ||
-                  (r['Откуда'] || '').trim() === 'Аниме';
+    const аниме = (kind === 'опенинг' || kind === 'эндинг' ||
+                   (r['Откуда'] || '').trim() === 'Аниме') &&
+                  ctx.isAnimeSource(src);
     if (!аниме) return;
     counts.set(src, (counts.get(src) || 0) + 1);
   });
@@ -406,6 +407,7 @@ const todo = sources.filter(s => {
 const alive = new Set(sources.map(s => s.name));
 let dropped = 0;
 for (const k of Object.keys(cache)) if (!alive.has(k)) { delete cache[k]; dropped++; }
+// сюда же попадают источники, которые оказались не аниме
 if (dropped) console.log(`выкинул устаревших ключей:  ${dropped}`);
 
 console.log(`аниме-источников в архиве: ${sources.length}`);
