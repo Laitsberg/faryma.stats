@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-26T09:13:28.390Z",
+ "generated": "2026-08-26T09:17:39.184Z",
  "source": "animethemes.moe",
  "note": "how — как нашёлся тайтл: точно / поиском / похожее",
  "sources": {
@@ -34,37 +34,6 @@
      "seq": 2,
      "title": "Hands Up to the Sky",
      "artists": []
-    }
-   ]
-  },
-  "Fate": {
-   "tracks": 24,
-   "v": 5,
-   "how": "похоже",
-   "score": 0.67,
-   "mal": null,
-   "slug": "fatezero",
-   "name": "Fate/Zero",
-   "year": 2011,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "oath sign",
-     "artists": [
-      "LiSA"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "MEMORIA",
-     "artists": [
-      "Eir Aoi"
-     ]
     }
    ]
   },
@@ -6438,55 +6407,6 @@
      "seq": 2,
      "title": "Long Hope Philia <TV Limited.>",
      "artists": []
-    }
-   ]
-  },
-  ".hack": {
-   "tracks": 2,
-   "v": 5,
-   "how": "похоже",
-   "score": 0.67,
-   "mal": null,
-   "slug": "hackliminality",
-   "name": ".hack//Liminality",
-   "year": 2002,
-   "season": "Spring",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": 1,
-     "title": "Edge",
-     "artists": [
-      "See-Saw"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "Senyaichiya",
-     "artists": [
-      "See-Saw"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP3",
-     "seq": 3,
-     "title": "Kimi ga Ita Monogatari",
-     "artists": [
-      "See-Saw"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP4",
-     "seq": 4,
-     "title": "Kioku",
-     "artists": [
-      "See-Saw"
-     ]
     }
    ]
   },
@@ -14660,13 +14580,6 @@
      "artists": []
     }
    ]
-  },
-  "Jujutsu Kaisen: Hidden Inventory": {
-   "tracks": 1,
-   "v": 5,
-   "slug": null,
-   "near": "Jujutsu Kaisen",
-   "score": 0.5
   },
   "GiriGiri Love": {
    "tracks": 1,
@@ -31670,13 +31583,6 @@
     }
    ]
   },
-  "2 Fate": {
-   "tracks": 1,
-   "v": 3,
-   "slug": null,
-   "near": "Fate/Zero",
-   "score": 0.38
-  },
   "Xam'd: Lost Memories": {
    "tracks": 1,
    "v": 3,
@@ -33291,6 +33197,504 @@
      "artists": [
       "STARMARIE"
      ]
+    }
+   ]
+  },
+  "Fate/stay night: Unlimited Blade Works": {
+   "tracks": 5,
+   "v": 5,
+   "how": "точно",
+   "score": 1,
+   "mal": null,
+   "slug": "fatestay_night_unlimited_blade_works_tv",
+   "name": "Fate/stay night: Unlimited Blade Works (TV)",
+   "year": 2014,
+   "season": "Fall",
+   "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": null,
+     "title": "ideal white",
+     "artists": [
+      "Mashiro Ayano"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": 1,
+     "title": "believe",
+     "artists": [
+      "Kalafina"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED2",
+     "seq": 2,
+     "title": "THIS ILLUSION",
+     "artists": [
+      "LiSA"
+     ]
+    }
+   ]
+  },
+  "Fate/strange Fake": {
+   "tracks": 3,
+   "v": 5,
+   "how": "точно",
+   "score": 1,
+   "mal": null,
+   "slug": "fatestrange_fake",
+   "name": "Fate/strange Fake",
+   "year": 2026,
+   "season": "Winter",
+   "themes": [
+    {
+     "t": "ED",
+     "s": "ED1-AdvPrem",
+     "seq": null,
+     "title": "FAKEit",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": null,
+     "title": "PROVANT",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": null,
+     "title": "Senzaiteki na Ai",
+     "artists": []
+    }
+   ]
+  },
+  "Fate/Apocrypha": {
+   "tracks": 3,
+   "v": 5,
+   "how": "точно",
+   "score": 1,
+   "mal": null,
+   "slug": "fateapocrypha",
+   "name": "Fate/Apocrypha",
+   "year": 2017,
+   "season": "Summer",
+   "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": 1,
+     "title": "Eiyuu Unmei no Uta",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP2",
+     "seq": 2,
+     "title": "ASH",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": 1,
+     "title": "Désir",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED2",
+     "seq": 2,
+     "title": "KOE",
+     "artists": []
+    }
+   ]
+  },
+  "Fate/stay night": {
+   "tracks": 2,
+   "v": 5,
+   "how": "точно",
+   "score": 1,
+   "mal": null,
+   "slug": "fatestay_night",
+   "name": "Fate/stay night",
+   "year": 2006,
+   "season": "Winter",
+   "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": 1,
+     "title": "disillusion",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP2",
+     "seq": 2,
+     "title": "Kirameku Namida wa Hoshi ni",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": 1,
+     "title": "Anata ga Ita Mori",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED2",
+     "seq": 2,
+     "title": "Hikari",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED3",
+     "seq": 3,
+     "title": "Kimi to no Ashita",
+     "artists": []
+    }
+   ]
+  },
+  "Fate/Zero": {
+   "tracks": 2,
+   "v": 5,
+   "how": "точно",
+   "score": 1,
+   "mal": null,
+   "slug": "fatezero",
+   "name": "Fate/Zero",
+   "year": 2011,
+   "season": "Fall",
+   "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": null,
+     "title": "oath sign",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": null,
+     "title": "MEMORIA",
+     "artists": []
+    }
+   ]
+  },
+  "Fate/Grand Order: Zettai Majuu Sensen Babylonia": {
+   "tracks": 2,
+   "v": 5,
+   "how": "точно",
+   "score": 1,
+   "mal": null,
+   "slug": "fategrand_order_zettai_majuu_sensen_babylonia",
+   "name": "Fate/Grand Order: Zettai Majuu Sensen Babylonia",
+   "year": 2019,
+   "season": "Fall",
+   "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": null,
+     "title": "Phantom Joke",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": 1,
+     "title": "Hoshi ga Furu Yume",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED2",
+     "seq": 2,
+     "title": "Prover",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED3",
+     "seq": 3,
+     "title": "Tell me",
+     "artists": []
+    }
+   ]
+  },
+  "Fate/Extra: Last Encore": {
+   "tracks": 2,
+   "v": 5,
+   "how": "точно",
+   "score": 1,
+   "mal": null,
+   "slug": "fateextra_last_encore",
+   "name": "Fate/Extra Last Encore",
+   "year": 2018,
+   "season": "Winter",
+   "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": null,
+     "title": "Bright Burning Shout",
+     "artists": [
+      "Takanori Nishikawa"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": null,
+     "title": "Tsuki to Hanataba",
+     "artists": [
+      "Sayuri"
+     ]
+    }
+   ]
+  },
+  ".hack//Sign": {
+   "tracks": 1,
+   "v": 5,
+   "how": "точно",
+   "score": 1,
+   "mal": null,
+   "slug": "hacksign",
+   "name": ".hack//Sign",
+   "year": 2002,
+   "season": "Spring",
+   "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": null,
+     "title": "Obsession",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": null,
+     "title": "Yasashii Yoake",
+     "artists": []
+    }
+   ]
+  },
+  "Jujutsu Kaisen: Hidden Inventory/Premature Death, The Shibuya Incident": {
+   "tracks": 1,
+   "v": 5,
+   "slug": null,
+   "near": "Jujutsu Kaisen",
+   "score": 0.25
+  },
+  "Fate/Grand Order: Shinsei Entaku Ryouiki Camelot 2 - Paladin; Agateram": {
+   "tracks": 1,
+   "v": 5,
+   "how": "похоже",
+   "score": 0.72,
+   "mal": null,
+   "slug": "fategrand_order_shinsei_entaku_ryouiki_camelot_1_wandering_agateram",
+   "name": "Fate/Grand Order: Shinsei Entaku Ryouiki Camelot 1 - Wandering; Agateram",
+   "year": 2020,
+   "season": "Fall",
+   "themes": [
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": null,
+     "title": "Dokuhaku",
+     "artists": [
+      "Maaya Sakamoto"
+     ]
+    }
+   ]
+  },
+  ".hack//Roots": {
+   "tracks": 1,
+   "v": 5,
+   "how": "точно",
+   "score": 1,
+   "mal": null,
+   "slug": "hackroots",
+   "name": ".hack//roots",
+   "year": 2006,
+   "season": "Spring",
+   "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": null,
+     "title": "Silly-go-Round",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": 1,
+     "title": "Boukoku Kakusei - Catharsis",
+     "artists": []
+    }
+   ]
+  },
+  "Fate/stay night: Heaven's Feel - I. Presage Flower": {
+   "tracks": 1,
+   "v": 5,
+   "how": "точно",
+   "score": 1,
+   "mal": null,
+   "slug": "fatestay_night_movie_heavens_feel_i_presage_flower",
+   "name": "Fate/stay night Movie: Heaven's Feel - I. Presage Flower",
+   "year": 2017,
+   "season": "Fall",
+   "themes": [
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": null,
+     "title": "Hana no Uta",
+     "artists": [
+      "Aimer"
+     ]
+    }
+   ]
+  },
+  "Fate/hollow ataraxia": {
+   "tracks": 1,
+   "v": 5,
+   "slug": null,
+   "near": "Fate/Zero",
+   "score": 0.27
+  },
+  "Evangelion 3.0": {
+   "tracks": 1,
+   "v": 5,
+   "how": "похоже",
+   "score": 0.6,
+   "mal": null,
+   "slug": "evangelion_30_you_can_not_redo",
+   "name": "Evangelion: 3.0 You Can (Not) Redo",
+   "year": 2012,
+   "season": "Fall",
+   "themes": [
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": null,
+     "title": "Sakura Nagashi",
+     "artists": [
+      "Hikaru Utada"
+     ]
+    }
+   ]
+  },
+  "Fate/strange Fake: Whispers of Dawn": {
+   "tracks": 1,
+   "v": 5,
+   "how": "точно",
+   "score": 1,
+   "mal": null,
+   "slug": "fatestrange_fake_whispers_of_dawn",
+   "name": "Fate/strange Fake: Whispers of Dawn",
+   "year": 2023,
+   "season": "Summer",
+   "themes": [
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": null,
+     "title": "FAKEit",
+     "artists": []
+    }
+   ]
+  },
+  "Fate/stay night: Unlimited Blade Works 2nd Season": {
+   "tracks": 1,
+   "v": 5,
+   "how": "точно",
+   "score": 1,
+   "mal": null,
+   "slug": "fatestay_night_unlimited_blade_works_2nd_season",
+   "name": "Fate/stay night: Unlimited Blade Works 2nd Season",
+   "year": 2015,
+   "season": "Spring",
+   "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": null,
+     "title": "Brave Shine",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": 1,
+     "title": "ring your bell",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED2",
+     "seq": 2,
+     "title": "ring your bell (in the silence)",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED3",
+     "seq": 3,
+     "title": "Deep Slumber (UBW Version)",
+     "artists": []
+    }
+   ]
+  },
+  "Fate/Zero 2nd Season": {
+   "tracks": 1,
+   "v": 5,
+   "how": "точно",
+   "score": 1,
+   "mal": null,
+   "slug": "fatezero_2nd_season",
+   "name": "Fate/Zero 2nd Season",
+   "year": 2012,
+   "season": "Spring",
+   "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": null,
+     "title": "to the beginning",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": 1,
+     "title": "Sora wa Takaku Kaze wa Utau",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED2",
+     "seq": 2,
+     "title": "Manten",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED3",
+     "seq": 3,
+     "title": "to the beginning",
+     "artists": []
     }
    ]
   }
