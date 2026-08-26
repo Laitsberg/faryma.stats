@@ -1,11 +1,11 @@
 {
- "generated": "2026-08-26T07:01:28.734Z",
+ "generated": "2026-08-26T08:07:43.305Z",
  "source": "animethemes.moe",
  "note": "how — как нашёлся тайтл: точно / поиском / похожее",
  "sources": {
   "86": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -39,7 +39,7 @@
   },
   "Fate": {
    "tracks": 24,
-   "v": 3,
+   "v": 4,
    "how": "похоже",
    "score": 0.67,
    "mal": null,
@@ -70,7 +70,7 @@
   },
   "One Piece": {
    "tracks": 17,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -594,7 +594,7 @@
   },
   "Death Note": {
    "tracks": 11,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -642,7 +642,7 @@
   },
   "Chainsaw Man": {
    "tracks": 12,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -746,7 +746,7 @@
   },
   "Re:Zero - Starting Life in Another World": {
    "tracks": 10,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -829,7 +829,7 @@
   },
   "Tokyo Ghoul": {
    "tracks": 10,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -856,7 +856,7 @@
   },
   "Naruto: Shippuuden": {
    "tracks": 12,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -1289,7 +1289,7 @@
   },
   "Love Live! Sunshine!!": {
    "tracks": 8,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -1393,7 +1393,7 @@
   },
   "Black Clover": {
    "tracks": 9,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -1627,7 +1627,7 @@
   },
   "Bleach": {
    "tracks": 14,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -1955,14 +1955,14 @@
   },
   "One Piece Film: Red": {
    "tracks": 11,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "One Piece",
    "score": 0.5
   },
   "Fairy Tail": {
    "tracks": 10,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -2171,7 +2171,7 @@
   },
   "Gintama": {
    "tracks": 8,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -2408,7 +2408,7 @@
   },
   "Darling in the FranXX": {
    "tracks": 7,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -2477,7 +2477,7 @@
   },
   "Soul Eater": {
    "tracks": 6,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -2560,7 +2560,7 @@
   },
   "Link Click Season 2": {
    "tracks": 6,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -2592,7 +2592,7 @@
   },
   "Jujutsu Kaisen 2nd Season": {
    "tracks": 7,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -2633,7 +2633,7 @@
   },
   "Love Live! Nijigasaki High School Idol Club": {
    "tracks": 5,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -2664,7 +2664,7 @@
   },
   "Aldnoah.Zero": {
    "tracks": 5,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -2698,7 +2698,7 @@
   },
   "Neon Genesis Evangelion": {
    "tracks": 5,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -2816,7 +2816,7 @@
   },
   "Digimon Adventure": {
    "tracks": 5,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -2857,7 +2857,7 @@
   },
   "Shingeki no Kyojin: The Final Season": {
    "tracks": 5,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -2884,7 +2884,7 @@
   },
   "Dragon Ball Super": {
    "tracks": 5,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -2988,7 +2988,7 @@
   },
   "Re:Zero - Starting Life in Another World 2nd Season": {
    "tracks": 5,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -3019,7 +3019,7 @@
   },
   "Bishoujo Senshi Sailor Moon R": {
    "tracks": 4,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -3046,7 +3046,7 @@
   },
   "Your Lie in April": {
    "tracks": 4,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -3104,7 +3104,7 @@
   },
   "Spice and Wolf": {
    "tracks": 4,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -3135,7 +3135,7 @@
   },
   "Re:Zero - Starting Life in Another World 4th Season": {
    "tracks": 4,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -3177,7 +3177,7 @@
   },
   "Digimon Adventure 02": {
    "tracks": 4,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -3218,7 +3218,7 @@
   },
   "JoJo's Bizarre Adventure": {
    "tracks": 5,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -3258,7 +3258,7 @@
   },
   "Clannad: After Story": {
    "tracks": 4,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -3292,7 +3292,7 @@
   },
   "Vinland Saga": {
    "tracks": 5,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -3333,7 +3333,7 @@
   },
   "Fairy Tail: Final Series": {
    "tracks": 4,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -3402,7 +3402,7 @@
   },
   "Solo Leveling Season 2: Arise from the Shadow": {
    "tracks": 4,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -3444,7 +3444,7 @@
   },
   "Angel Beats!": {
    "tracks": 4,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -3492,7 +3492,7 @@
   },
   "Ranking of Kings": {
    "tracks": 4,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -3541,7 +3541,7 @@
   },
   "Code Geass: Lelouch of the Rebellion R2": {
    "tracks": 5,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -3590,7 +3590,7 @@
   },
   "Boruto: Naruto Next Generations": {
    "tracks": 5,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -3848,7 +3848,7 @@
   },
   "Made in Abyss Season 2": {
    "tracks": 6,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -3888,7 +3888,7 @@
   },
   "Bleach: Thousand-Year Blood War": {
    "tracks": 7,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -3937,7 +3937,7 @@
   },
   "Shingeki no Kyojin": {
    "tracks": 4,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -3978,7 +3978,7 @@
   },
   "Naruto": {
    "tracks": 4,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -4166,7 +4166,7 @@
   },
   "Psycho-Pass": {
    "tracks": 5,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -4215,14 +4215,14 @@
   },
   "Domekano": {
    "tracks": 4,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "",
    "score": 0
   },
   "Mahoutsukai no Yome": {
    "tracks": 4,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -4270,7 +4270,7 @@
   },
   "Sailor Moon": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -4311,7 +4311,7 @@
   },
   "Lucky Star": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -4559,7 +4559,7 @@
   },
   "K-On!": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -4593,7 +4593,7 @@
   },
   "Dr. Stone": {
    "tracks": 4,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -4634,7 +4634,7 @@
   },
   "Umineko: When They Cry": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -4663,7 +4663,7 @@
   },
   "Macross Delta": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -4776,7 +4776,7 @@
   },
   "Hunter x Hunter": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -4824,7 +4824,7 @@
   },
   "'Oshi no Ko' 3nd Season": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -4864,7 +4864,7 @@
   },
   "Steins;Gate": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -4912,7 +4912,7 @@
   },
   "Jujutsu Kaisen": {
    "tracks": 4,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -4953,7 +4953,7 @@
   },
   "The Rising of the Shield Hero": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -5011,7 +5011,7 @@
   },
   "Initial D": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -5058,7 +5058,7 @@
   },
   "To Be Hero X": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -5110,7 +5110,7 @@
   },
   "Akame ga Kill!": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -5151,7 +5151,7 @@
   },
   "Bakemonogatari": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -5206,7 +5206,7 @@
   },
   "Call of the Night Season 2": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -5237,7 +5237,7 @@
   },
   "BanG Dream! Ave Mujica": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -5271,7 +5271,7 @@
   },
   "Vivy: Fluorite Eye's Song": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -5340,7 +5340,7 @@
   },
   "Shangri-La Frontier Season 2": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -5389,7 +5389,7 @@
   },
   "The Day I Became a God": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -5429,7 +5429,7 @@
   },
   "Link Click": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -5478,7 +5478,7 @@
   },
   "Kill la Kill": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -5519,7 +5519,7 @@
   },
   "Mahou Shoujo Madoka★Magica": {
    "tracks": 4,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -5560,7 +5560,7 @@
   },
   "'Oshi no Ko'": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -5591,7 +5591,7 @@
   },
   "Bleach: Thousand-Year Blood War - The Conflict": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -5622,7 +5622,7 @@
   },
   "Re:Zero - Starting Life in Another World 3rd Season": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -5680,7 +5680,7 @@
   },
   "Fullmetal Alchemist: Brotherhood": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -5763,7 +5763,7 @@
   },
   "Shangri-La Frontier": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -5813,7 +5813,7 @@
   },
   "Clannad": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -5840,7 +5840,7 @@
   },
   "Jujutsu Kaisen 0 Movie": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -5882,7 +5882,7 @@
   },
   "Sousou no Frieren": {
    "tracks": 5,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -5923,7 +5923,7 @@
   },
   "Blue Lock": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -5964,7 +5964,7 @@
   },
   "Durarara!!": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -6005,7 +6005,7 @@
   },
   "Demon Slayer: Kimetsu no Yaiba Swordsmith Village Arc": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -6038,7 +6038,7 @@
   },
   "Tokyo Ghoul √A": {
    "tracks": 4,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -6065,7 +6065,7 @@
   },
   "Shadows House": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -6099,7 +6099,7 @@
   },
   "Digimon Tamers": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -6140,7 +6140,7 @@
   },
   "K-On!! 2nd Season": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -6189,7 +6189,7 @@
   },
   "Turn A Gundam": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -6237,7 +6237,7 @@
   },
   "Saga of Tanya the Evil": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -6277,7 +6277,7 @@
   },
   "JoJo's Bizarre Adventure: Stardust Crusaders": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -6304,7 +6304,7 @@
   },
   "Welcome to the Ballroom": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -6353,7 +6353,7 @@
   },
   "Made in Abyss: Dawn of the Deep Soul": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -6382,7 +6382,7 @@
   },
   "Евангелион нового поколения: Конец Евангелиона": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "по номеру MAL",
    "score": 1,
    "mal": 32,
@@ -6402,7 +6402,7 @@
   },
   "Boku no Hero Academia 3rd Season": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -6443,7 +6443,7 @@
   },
   ".hack": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "похоже",
    "score": 0.67,
    "mal": null,
@@ -6492,7 +6492,7 @@
   },
   "Bocchi the Rock!": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -6540,14 +6540,14 @@
   },
   "Rekishi Hiwa Historia": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Rekishi ni Nokoru Akujo ni Naru zo",
    "score": 0.19
   },
   "Arknights: Perish in Frost": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -6587,7 +6587,7 @@
   },
   "Sword Art Online: Alicization": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -6635,7 +6635,7 @@
   },
   "Jujutsu Kaisen: The Culling Game Part 1": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -6666,7 +6666,7 @@
   },
   "Puella Magi Madoka Magica the Movie 3: Rebellion": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "похоже",
    "score": 0.76,
    "mal": null,
@@ -6697,7 +6697,7 @@
   },
   "A Wild Last Boss Appeared!": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -6728,7 +6728,7 @@
   },
   "Orb: On the Movements of the Earth": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -6768,7 +6768,7 @@
   },
   "Dandadan 2nd Season": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -6795,7 +6795,7 @@
   },
   "Devil May Cry": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -6822,7 +6822,7 @@
   },
   "Komi Can't Communicate": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -6862,7 +6862,7 @@
   },
   "Shouwa Genroku Rakugo Shinjuu": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -6889,7 +6889,7 @@
   },
   "Nisemonogatari": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -6930,7 +6930,7 @@
   },
   "Hikaru no Go": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -7006,7 +7006,7 @@
   },
   "High School DxD": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -7033,7 +7033,7 @@
   },
   "Chainsaw Man – The Movie: Reze Arc": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -7065,7 +7065,7 @@
   },
   "Fairy Tail (2014)": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -7199,14 +7199,14 @@
   },
   "Wonderful Everyday": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Nichijou",
    "score": 0.5
   },
   "Legend of the Galactic Heroes: Die Neue These": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -7238,7 +7238,7 @@
   },
   "Evangelion: 3.0 You Can (Not) Redo": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -7258,7 +7258,7 @@
   },
   "Undead Unluck": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -7299,7 +7299,7 @@
   },
   "Link Click: Bridon Arc": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -7330,7 +7330,7 @@
   },
   "Detective Conan": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -7896,7 +7896,7 @@
   },
   "Cardcaptor Sakura": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -7958,7 +7958,7 @@
   },
   "Onimai: I'm Now Your Sister!": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -7990,7 +7990,7 @@
   },
   "Fist of the North Star": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -8031,7 +8031,7 @@
   },
   "Berserk: The Golden Age Arc I - The Egg of the King": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -8060,7 +8060,7 @@
   },
   "Tokyo Revengers": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -8094,7 +8094,7 @@
   },
   "Birdie Wing: Golf Girls' Story": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -8121,7 +8121,7 @@
   },
   "Chainsaw Man the Movie: Reze Arc": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -8153,7 +8153,7 @@
   },
   "The Melancholy of Haruhi Suzumiya": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -8195,7 +8195,7 @@
   },
   "The Eminence in Shadow": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -8287,7 +8287,7 @@
   },
   "Made in Abyss: The Golden City of the Scorching Sun": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -8327,7 +8327,7 @@
   },
   "Tengen Toppa Gurren Lagann": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -8368,7 +8368,7 @@
   },
   "Gachiakuta": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -8409,7 +8409,7 @@
   },
   "The Promised Neverland": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -8449,7 +8449,7 @@
   },
   "The Summer Hikaru Died": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -8480,7 +8480,7 @@
   },
   "Gosick": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -8514,7 +8514,7 @@
   },
   "Cowboy Bebop": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -8555,14 +8555,14 @@
   },
   "Kirarin Revolution": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Slayers Revolution",
    "score": 0.38
   },
   "Blue Exorcist": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -8607,7 +8607,7 @@
   },
   "Code Geass: Lelouch of the Rebellion": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -8665,7 +8665,7 @@
   },
   "Rurouni Kenshin: Meiji Kenkaku Romantan 2023 г.": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "похоже",
    "score": 0.86,
    "mal": null,
@@ -8716,7 +8716,7 @@
   },
   "Neon Genesis Evangelion: Death & Rebirth": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -8743,7 +8743,7 @@
   },
   "NANA": {
    "tracks": 4,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -8805,7 +8805,7 @@
   },
   "Engaged to the Unidentified": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -8843,7 +8843,7 @@
   },
   "Guilty Crown": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -8891,7 +8891,7 @@
   },
   "The Seven Deadly Sins: Dragon’s Judgement": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -8939,7 +8939,7 @@
   },
   "Mashle 2nd Season": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -8966,7 +8966,7 @@
   },
   "Demon Slayer: Kimetsu no Yaiba - The Movie: Mugen Train": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -8988,7 +8988,7 @@
   },
   "Sword Art Online: Alicization - War of Underworld 2nd Season": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -9015,7 +9015,7 @@
   },
   "Steins;Gate 0": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -9077,7 +9077,7 @@
   },
   "Kusuriya no Hitorigoto": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -9118,7 +9118,7 @@
   },
   "Mahou Shoujo Magical Destroyers": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -9145,7 +9145,7 @@
   },
   "Vinland Saga Season 2": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -9186,7 +9186,7 @@
   },
   "Chi.: Chikyuu no Undou ni Tsuite": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -9220,7 +9220,7 @@
   },
   "Blend S": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -9254,7 +9254,7 @@
   },
   "No Game No Life": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -9286,16 +9286,9 @@
     }
    ]
   },
-  "Arcane: League of Legends 2nd season": {
-   "tracks": 6,
-   "v": 3,
-   "slug": null,
-   "near": "Pokemon",
-   "score": 0.19
-  },
   "Re:Creators": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -9343,7 +9336,7 @@
   },
   "Train to the End of the World": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -9374,7 +9367,7 @@
   },
   "Spy x Family Season 2": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -9401,7 +9394,7 @@
   },
   "Boku no Hero Academia 2nd Season": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -9442,7 +9435,7 @@
   },
   "'Oshi no Ko' 2nd Season": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -9473,7 +9466,7 @@
   },
   "Dr. Stone: Science Future": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -9500,7 +9493,7 @@
   },
   "Edens Zero": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -9541,7 +9534,7 @@
   },
   "Initial D First Stage": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -9582,7 +9575,7 @@
   },
   "Violet Evergarden": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -9616,28 +9609,21 @@
   },
   "DanMachi 4th Season and 5th Season": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Major S4",
    "score": 0
   },
-  "Arcane: League of Legends": {
-   "tracks": 4,
-   "v": 3,
-   "slug": null,
-   "near": "Pokemon",
-   "score": 0.27
-  },
   "Evangelion: 3.0+1.0 Thrice Upon a Time": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Evangelion: 1.0 You Are (Not) Alone",
    "score": 0.31
   },
   "Sword Art Online Alternative: Gun Gale Online": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -9664,7 +9650,7 @@
   },
   "Death Parade": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -9691,7 +9677,7 @@
   },
   "Mirai Nikki": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -9732,7 +9718,7 @@
   },
   "Overlord IV": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -9759,7 +9745,7 @@
   },
   "Evangelion: 1.0 You Are (Not) Alone": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -9779,7 +9765,7 @@
   },
   "Yarichin Bitch Club": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -9801,7 +9787,7 @@
   },
   "Golden Kamuy 4th Season": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -9828,7 +9814,7 @@
   },
   "Kuroko no Basket 2nd Season": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -9869,7 +9855,7 @@
   },
   "Golden Kamuy 2nd Season": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -9896,7 +9882,7 @@
   },
   "Mobile Suit Gundam Unicorn": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -9958,14 +9944,14 @@
   },
   "SAO Alicization 2nd Season": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "slug": null,
-   "near": "Sword Art Online",
-   "score": 0.35
+   "near": "Sword Art Online: Alicization - War of Underworld",
+   "score": 0.25
   },
   "91 Days": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -9992,7 +9978,7 @@
   },
   "Heavenly Delusion": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -10032,7 +10018,7 @@
   },
   "Hunter x Hunter (2011)": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -10096,7 +10082,7 @@
   },
   "Spy x Family": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -10123,7 +10109,7 @@
   },
   "Boku no Hero Academia 7th Season": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -10164,7 +10150,7 @@
   },
   "Sword Art Online": {
    "tracks": 9,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -10205,7 +10191,7 @@
   },
   "Great Teacher Onizuka": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -10253,90 +10239,14 @@
   },
   "ReZero 3rd Season": {
    "tracks": 2,
-   "v": 3,
-   "how": "похоже",
-   "score": 0.7,
-   "mal": null,
-   "slug": "rezero_kara_hajimeru_isekai_seikatsu",
-   "name": "Re:Zero kara Hajimeru Isekai Seikatsu",
-   "year": 2016,
-   "season": "Spring",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": 1,
-     "title": "Redo",
-     "artists": [
-      "Konomi Suzuki"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "Paradisus-Paradoxum",
-     "artists": [
-      "MYTH & ROID"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "STYX HELIX",
-     "artists": [
-      "MYTH & ROID"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "STRAIGHT BET",
-     "artists": [
-      "MYTH & ROID"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED3",
-     "seq": 3,
-     "title": "Stay Alive",
-     "artists": [
-      "Rie Takahashi"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED4",
-     "seq": 4,
-     "title": "theater D",
-     "artists": [
-      "MYTH & ROID"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED5",
-     "seq": 5,
-     "title": "Chinmoku no Requiem",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED6",
-     "seq": 6,
-     "title": "Wishing",
-     "artists": [
-      "Inori Minase"
-     ]
-    }
-   ]
+   "v": 4,
+   "slug": null,
+   "near": "Re:Zero kara Hajimeru Isekai Seikatsu",
+   "score": 0.45
   },
   "Shingeki no Kyojin: The Final Season Part 2": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -10363,7 +10273,7 @@
   },
   "One Punch Man": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -10397,7 +10307,7 @@
   },
   "Tokyo Ghoul:re": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -10424,7 +10334,7 @@
   },
   "Houseki no Kuni": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -10465,7 +10375,7 @@
   },
   "Fire Force": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -10514,7 +10424,7 @@
   },
   "Overlord": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -10541,7 +10451,7 @@
   },
   "Bucchigiri?!": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -10568,7 +10478,7 @@
   },
   "Aware! Meisaku-kun": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -10644,7 +10554,7 @@
   },
   "Bubuki Buranki": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -10671,7 +10581,7 @@
   },
   "Smoking Behind the Supermarket with You": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -10720,7 +10630,7 @@
   },
   "Mobile Suit Gundam 00": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -10761,7 +10671,7 @@
   },
   "Saga of Tanya the Evil II": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -10792,7 +10702,7 @@
   },
   "El Cazador de la Bruja": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -10812,7 +10722,7 @@
   },
   "Darker than Black: Kuro no Keiyakusha": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -10853,7 +10763,7 @@
   },
   "The Seven Deadly Sins: Imperial Wrath of the Gods": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -10900,7 +10810,7 @@
   },
   "Pretty Soldier Sailor Moon: Sailor Stars": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -10934,7 +10844,7 @@
   },
   "Koukaku Kidoutai": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -10961,7 +10871,7 @@
   },
   "Tokyo Revengers: Christmas Showdown": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -10992,14 +10902,14 @@
   },
   "Mermaid Melody: Pichi Pichi Pitch": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Mermaid Forest",
    "score": 0.21
   },
   "Sailor Moon R: The Movie - The Promise of the Rose": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -11028,7 +10938,7 @@
   },
   "Magical Sempai": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -11059,7 +10969,7 @@
   },
   "Tomorrow's Joe 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -11100,7 +11010,7 @@
   },
   "The Great Jahy Will Not Be Defeated!": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -11147,14 +11057,14 @@
   },
   "Dragon Raja II: The Mourner's Eyes": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Dragon Ball",
    "score": 0.15
   },
   "ChaoS;Child": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -11181,7 +11091,7 @@
   },
   "Baki the Grappler": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -11212,7 +11122,7 @@
   },
   "Though I Am an Inept Villainess": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -11243,7 +11153,7 @@
   },
   "Carnival Phantasm": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -11277,7 +11187,7 @@
   },
   "Bishoujo Senshi Sailor Moon S": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -11311,7 +11221,7 @@
   },
   "Chainsmoker Cat": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -11342,7 +11252,7 @@
   },
   "Berserk 2016": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -11385,7 +11295,7 @@
   },
   "The Case Study of Vanitas": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -11416,7 +11326,7 @@
   },
   "Highschool of the Dead": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -11520,7 +11430,7 @@
   },
   "Eren the Southpaw": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -11552,7 +11462,7 @@
   },
   "Darker than Black: Gemini of the Meteor": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -11583,7 +11493,7 @@
   },
   "Witch Hat Atelier": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -11633,7 +11543,7 @@
   },
   "Is the Order a Rabbit?": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -11683,7 +11593,7 @@
   },
   "Dorohedoro Season 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -11710,7 +11620,7 @@
   },
   "I've Been Killing Slimes for 300 Years and Maxed Out My Level": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -11741,7 +11651,7 @@
   },
   "Irina: The Vampire Cosmonaut": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -11775,28 +11685,28 @@
   },
   "Scissor Seven: Xuanwu Kingdom Chapter": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Cike Wu Liuqi",
    "score": 0.4
   },
   "Open Your Mind": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Kimi no Na wa.",
    "score": 0.27
   },
   "Baki-dou: The Invincible Samurai": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Baki",
    "score": 0.25
   },
   "The Warrior Princess and the Barbaric King": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -11827,7 +11737,7 @@
   },
   "Un-Go": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -11854,7 +11764,7 @@
   },
   "Spy Classroom Season 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -11921,7 +11831,7 @@
   },
   "Haikyuu!! Second Season": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -11962,7 +11872,7 @@
   },
   "Working'!!": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -11989,7 +11899,7 @@
   },
   "Battle Doll Angelic Layer": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -12023,7 +11933,7 @@
   },
   "Ghost in the Shell: Stand Alone Complex - Solid State Society": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -12050,7 +11960,7 @@
   },
   "Sakamoto Days": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -12084,7 +11994,7 @@
   },
   "Sakamoto desu ga?": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -12111,14 +12021,14 @@
   },
   "The Garden of Sinners Chapter 2: A Study in Murder - Part 1": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Kara no Kyoukai 2: Satsujin Kousatsu (Zen)",
-   "score": 0.4
+   "score": 0.3
   },
   "The Vision of Escaflowne": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -12147,7 +12057,7 @@
   },
   "Zombieland Saga Revenge": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -12239,7 +12149,7 @@
   },
   "Revolutionary Girl Utena": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -12284,7 +12194,7 @@
   },
   "Hyouka": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -12325,7 +12235,7 @@
   },
   "Macross Frontier": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -12475,14 +12385,14 @@
   },
   "Puella Magi Madoka Magica the Movie Part 1: Beginnings": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Mahou Shoujo Madoka★Magica: Hajimari no Monogatari",
-   "score": 0.55
+   "score": 0.41
   },
   "Monochrome Factor": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -12516,7 +12426,7 @@
   },
   "The Helpful Fox Senko-san": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -12548,7 +12458,7 @@
   },
   "Mikagura School Suite": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -12606,7 +12516,7 @@
   },
   "Dorohedoro": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -12668,7 +12578,7 @@
   },
   "Deep Insanity: The Lost Child": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -12695,7 +12605,7 @@
   },
   "Welcome to Demon School! Iruma-kun Season 4": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -12735,7 +12645,7 @@
   },
   "Berserk: The Golden Age Arc": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "похоже",
    "score": 0.8,
    "mal": null,
@@ -12771,7 +12681,7 @@
   },
   "Hell's Paradise Season 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -12803,7 +12713,7 @@
   },
   "Owarimonogatari": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -12851,7 +12761,7 @@
   },
   "Liar Game": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -12892,7 +12802,7 @@
   },
   "I May Be a Guild Receptionist, But I'll Solo Any Boss to Clock Out on Time": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -12923,14 +12833,14 @@
   },
   "My Hero Academia: You're Next": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Boku no Hero Academia",
    "score": 0.5
   },
   "Date A Live II": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -12964,7 +12874,7 @@
   },
   "Snowball Earth": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -12991,7 +12901,7 @@
   },
   "The Heroic Legend of Arslan: Dust Storm Dance": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -13022,7 +12932,7 @@
   },
   "Digimon Universe App Monsters": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -13079,7 +12989,7 @@
   },
   "Helck": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -13120,7 +13030,7 @@
   },
   "Daemons of the Shadow Realm": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -13169,14 +13079,14 @@
   },
   "The Garden of Sinners Chapter 6: Oblivion Recording": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Kara no Kyoukai 1: Fukan Fuukei",
    "score": 0.38
   },
   "Shingeki no Kyojin Season 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -13203,14 +13113,14 @@
   },
   "Cosmic Princess Kaguya!": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Shamanic Princess",
    "score": 0.27
   },
   "Digimon Universe: Appli Monsters": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -13265,14 +13175,14 @@
   },
   "One Piece Movie 08: Episode of Alabasta - The Desert Princess and the Pirates": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "One Piece",
    "score": 0.25
   },
   "Legend of the Galactic Heroes: Die Neue These - Stellar War": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -13305,7 +13215,7 @@
   },
   "Wolf's Rain": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -13339,7 +13249,7 @@
   },
   "Juuni Taisen: Zodiac War": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -13368,21 +13278,21 @@
   },
   "Sky Blue Utility": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Soukyuu no Fafner: Dead Aggressor",
    "score": 0.56
   },
   "Kamen Rider Eins with Girls Remix": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Monster Musume no Iru Nichijou",
    "score": 0.24
   },
   "The World's Finest Assassin Gets Reincarnated in Another World as an Aristocrat": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -13422,7 +13332,7 @@
   },
   "Excel Saga": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -13456,7 +13366,7 @@
   },
   "JoJo's Bizarre Adventure Part 7: Steel Ball Run": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -13476,7 +13386,7 @@
   },
   "Date A Live": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -13524,14 +13434,14 @@
   },
   "Ты единственная, кто любит Великого Меня?!": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "",
    "score": 0
   },
   "Samurai Champloo": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -13586,7 +13496,7 @@
   },
   "Dropkick On My Devil!! X": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -13629,7 +13539,7 @@
   },
   "Baki: The Great Raitai Tournament Saga": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -13658,14 +13568,14 @@
   },
   "The Kubikiri Cycle": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Kubikiri Cycle: Aoiro Savant to Zaregototsukai",
    "score": 0.57
   },
   "Nukitashi the Animation": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -13692,7 +13602,7 @@
   },
   "Servamp": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -13719,7 +13629,7 @@
   },
   "Tojima Tanzaburo Wants to Be a Masked Rider": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "похоже",
    "score": 0.61,
    "mal": null,
@@ -13753,7 +13663,7 @@
   },
   "Beyond the Boundary: I'll Be Here - Future": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -13775,7 +13685,7 @@
   },
   "Claymore": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -13802,21 +13712,21 @@
   },
   "Pokémon Scarlet & Violet": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Pokemon XY",
    "score": 0.27
   },
   "The 3rd Super Robot Wars Alpha: To the End of the Galaxy": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Super Robot Taisen OG: The Inspector",
    "score": 0.36
   },
   "Welcome to Demon School! Iruma-kun Season 3": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -13856,7 +13766,7 @@
   },
   "Devilman: Crybaby": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -13883,7 +13793,7 @@
   },
   "Dekin no Mogura: The Earthbound Mole": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -13915,7 +13825,7 @@
   },
   "Hinomaru Sumo": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -13958,14 +13868,14 @@
   },
   "Hellsing Ultimate": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Hellsing",
    "score": 0.5
   },
   "Arknights: Prelude to Dawn": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -13996,7 +13906,7 @@
   },
   "Read or Die": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -14016,7 +13926,7 @@
   },
   "FLCL": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -14036,7 +13946,7 @@
   },
   "Food for the Soul": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -14067,7 +13977,7 @@
   },
   "Strike the Blood": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -14108,7 +14018,7 @@
   },
   "Welcome to Demon School! Iruma-kun 2nd Season": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -14144,7 +14054,7 @@
   },
   "Date A Live V": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -14171,7 +14081,7 @@
   },
   "Samurai 7": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -14205,14 +14115,14 @@
   },
   "Historical Secret Stories Historia": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Himegoto",
    "score": 0.18
   },
   "Shakugan no Shana III (Final)": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -14267,7 +14177,7 @@
   },
   "The Darwin Incident": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -14298,7 +14208,7 @@
   },
   "Last Exile": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -14325,7 +14235,7 @@
   },
   "Skip and Loafer": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -14356,7 +14266,7 @@
   },
   "Redo of Healer": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -14387,7 +14297,7 @@
   },
   "No Guns Life": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -14414,7 +14324,7 @@
   },
   "Attack on Titan Season 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -14445,7 +14355,7 @@
   },
   "JoJo's Bizarre Adventure: Golden Wind": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -14488,7 +14398,7 @@
   },
   "Made in Abyss": {
    "tracks": 7,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -14536,7 +14446,7 @@
   },
   "Danganronpa 3: The End of Hope's Peak High School - Hope Arc": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "похоже",
    "score": 0.95,
    "mal": null,
@@ -14567,7 +14477,7 @@
   },
   "The Angel Next Door Spoils Me Rotten": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -14616,14 +14526,14 @@
   },
   "Dragon Raja -The Blazing Dawn-": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Strange Dawn",
    "score": 0.21
   },
   "Fafner in the Azure: Dead Aggressor": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -14654,7 +14564,7 @@
   },
   "Re:Monster": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -14681,7 +14591,7 @@
   },
   "In the Clear Moonlit Dusk": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -14712,14 +14622,14 @@
   },
   "Kono Aozora ni Yakusoku o": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "The Big O",
    "score": 0.21
   },
   "Chibi Maruko-chan": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -14753,21 +14663,21 @@
   },
   "Jujutsu Kaisen: Hidden Inventory": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Jujutsu Kaisen",
    "score": 0.5
   },
   "GiriGiri Love": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Love Hina",
    "score": 0.38
   },
   "Danganronpa: The Animation": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -14810,7 +14720,7 @@
   },
   "Mobile Suit Gundam: The Witch from Mercury": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -14837,7 +14747,7 @@
   },
   "Fire Force Season 3 Part 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -14887,7 +14797,7 @@
   },
   "Secrets of the Silent Witch": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -14918,7 +14828,7 @@
   },
   "Golden Kamuy Final Season": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -14950,7 +14860,7 @@
   },
   "Blood Blockade Battlefront & Beyond": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -14982,7 +14892,7 @@
   },
   "My Hero Academia: Vigilantes": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -15013,7 +14923,7 @@
   },
   "The Seven Deadly Sins: Four Knights of the Apocalypse": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -15062,7 +14972,7 @@
   },
   "Frieren: Beyond Journey's End Season 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -15102,7 +15012,7 @@
   },
   "Rurouni Kenshin: Kyoto Disturbance": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -15153,7 +15063,7 @@
   },
   "Tenjho Tenge": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -15180,7 +15090,7 @@
   },
   "Blue Exorcist: Kyoto Saga": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -15209,7 +15119,7 @@
   },
   "Ark IX": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -15229,7 +15139,7 @@
   },
   "Sasaki and Peeps": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -15260,7 +15170,7 @@
   },
   "Love Live! School Idol Project": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -15343,7 +15253,7 @@
   },
   "Lycoris Recoil": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -15370,7 +15280,7 @@
   },
   "Ninja Kamui": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -15418,7 +15328,7 @@
   },
   "Blue Box": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -15467,34 +15377,14 @@
   },
   "Record of Ragnarok III": {
    "tracks": 1,
-   "v": 3,
-   "how": "похоже",
-   "score": 0.7,
-   "mal": null,
-   "slug": "shuumatsu_no_walkure",
-   "name": "Shuumatsu no Walkure",
-   "year": 2021,
-   "season": "Spring",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "KAMIGAMI",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Fukahi",
-     "artists": []
-    }
-   ]
+   "v": 4,
+   "slug": null,
+   "near": "Shuumatsu no Walkure",
+   "score": 0.45
   },
   "The Rising of the Shield Hero Season 4": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -15525,7 +15415,7 @@
   },
   "The Rising of the Shield Hero Season 3": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -15565,7 +15455,7 @@
   },
   "The Rising of the Shield Hero Season 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -15596,14 +15486,14 @@
   },
   "The Beast Tamer Who Got Kicked Out From His Party Meets a Cat Girl From the Superior Race": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Party kara Tsuihou sareta Sono Chiyushi, Jitsu wa Saikyou ni Tsuki",
    "score": 0.21
   },
   "The 100 Girlfriends Who Really, Really, Really, Really, Really Love You": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -15647,7 +15537,7 @@
   },
   "My Senpai Is Annoying": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -15679,7 +15569,7 @@
   },
   "Mob Psycho 100 III": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -15713,14 +15603,14 @@
   },
   "Overlord: The Dark Hero": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Overlord",
    "score": 0.33
   },
   "Love Live! School Idol Project 2nd Season": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -15817,7 +15707,7 @@
   },
   "Digimon Beatbreak": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -15865,14 +15755,14 @@
   },
   "Variable Geo Neo": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Shinzou Ningen Casshern",
    "score": 0.22
   },
   "The Asterisk War": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -15903,7 +15793,7 @@
   },
   "Mob Psycho 100 2nd Season": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -15962,7 +15852,7 @@
   },
   "Destiny of the Shrine Maiden": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -15993,7 +15883,7 @@
   },
   "The Eminence in Shadow Season 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -16078,7 +15968,7 @@
   },
   "Rock Is a Lady's Modesty": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -16109,7 +15999,7 @@
   },
   "Mob Psycho 100": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -16150,7 +16040,7 @@
   },
   "Mobile Suit Gundam: The Witch from Mercury Season 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -16184,7 +16074,7 @@
   },
   "Gnosia": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -16211,7 +16101,7 @@
   },
   "Black Butler: Book of Circus": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -16240,7 +16130,7 @@
   },
   "Golden Time": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -16281,7 +16171,7 @@
   },
   "Laid-Back Camp": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -16312,7 +16202,7 @@
   },
   "Black Butler": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -16352,14 +16242,14 @@
   },
   "Confession Executive Committee ~Love Series~": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Monogatari Series: Second Season",
    "score": 0.17
   },
   "Dragon Ball Z": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -16400,14 +16290,14 @@
   },
   "My Instant Death Ability Is So Overpowered, No One in This Other World Stands a Chance Against Me!": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Sokushi Cheat ga Saikyou sugite, Isekai no Yatsura ga Marude Aite ni Naranai n desu ga.",
    "score": 0.38
   },
   "Yu-Gi-Oh! ARC-V": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -16517,14 +16407,14 @@
   },
   "Shinjuku Seven": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Samurai 7",
    "score": 0.38
   },
   "Dragon Ball": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -16565,7 +16455,7 @@
   },
   "Laid-Back Camp Season 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -16596,7 +16486,7 @@
   },
   "The Heroic Legend of Arslan": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -16645,7 +16535,7 @@
   },
   "Nisekoi: False Love": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -16752,7 +16642,7 @@
   },
   "Ping Pong The Animation": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -16786,7 +16676,7 @@
   },
   "Ninja Vs. Gokudo": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -16826,14 +16716,14 @@
   },
   "Higanbana no Saku Yoru ni": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Yoru no Yatterman",
    "score": 0.27
   },
   "My Gift Lvl 9999 Unlimited Gacha: Backstabbed in a Backwater Dungeon, I'm Out for Revenge!": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -16864,7 +16754,7 @@
   },
   "Beck: Mongolian Chop Squad": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -16909,7 +16799,7 @@
   },
   "Dragon Ball Z: Resurrection 'F'": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "похоже",
    "score": 0.6,
    "mal": null,
@@ -16956,7 +16846,7 @@
   },
   "Texhnolyze": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -16990,7 +16880,7 @@
   },
   "Cat's Eye": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -17031,14 +16921,14 @@
   },
   "xxxHOLiC: Kei": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "xxxHOLiC",
    "score": 0.5
   },
   "Onmyo Kaiten Re:Birth Verse:": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -17069,7 +16959,7 @@
   },
   "Дневник будущего": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "по номеру MAL",
    "score": 1,
    "mal": 10620,
@@ -17118,7 +17008,7 @@
   },
   "Engage Kiss": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -17145,7 +17035,7 @@
   },
   "Attack on Titan Season 3": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -17177,7 +17067,7 @@
   },
   "Your Forma": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -17204,7 +17094,7 @@
   },
   "Rock Is a Lady's Modest": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "похоже",
    "score": 0.72,
    "mal": null,
@@ -17235,7 +17125,7 @@
   },
   "Sleepy Princess in the Demon Castle": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -17266,7 +17156,7 @@
   },
   "Beyond the Boundary": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -17297,7 +17187,7 @@
   },
   "Endo and Kobayashi Live! The Latest on Tsundere Villainess Lieselotte": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -17328,7 +17218,7 @@
   },
   "The Apothecary Diaries Season 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -17377,7 +17267,7 @@
   },
   "If Her Flag Breaks": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -17411,7 +17301,7 @@
   },
   "Mushoku Tensei: Jobless Reincarnation": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -17478,7 +17368,7 @@
   },
   "Hokkaido Gals Are Super Adorable!": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -17509,7 +17399,7 @@
   },
   "May I Ask for One Final Thing?": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -17541,7 +17431,7 @@
   },
   "Nanbaka": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -17568,7 +17458,7 @@
   },
   "Wolf’s Rain": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -17606,7 +17496,7 @@
   },
   "The Millionaire Detective – Balance: UNLIMITED": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -17635,36 +17525,14 @@
   },
   "Hanma Baki: Son of Ogre 2nd Season": {
    "tracks": 1,
-   "v": 3,
-   "how": "похоже",
-   "score": 0.7,
-   "mal": null,
-   "slug": "hanma_baki_son_of_ogre",
-   "name": "Hanma Baki: Son of Ogre",
-   "year": 2021,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Treasure Pleasure",
-     "artists": [
-      "GRANRODEO"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Unchained World",
-     "artists": []
-    }
-   ]
+   "v": 4,
+   "slug": null,
+   "near": "Hanma Baki: Son of Ogre",
+   "score": 0.45
   },
   "Sound of the Sky": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -17695,7 +17563,7 @@
   },
   "Ghost in the Shell: Stand Alone Complex": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -17736,7 +17604,7 @@
   },
   "Even Given the Worthless 'Appraiser' Class, I'm Actually the Strongest": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -17767,7 +17635,7 @@
   },
   "My-Hime": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -17789,7 +17657,7 @@
   },
   "The Junji Ito Collection": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -17818,7 +17686,7 @@
   },
   "Betrothed to My Sister's Ex": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -17849,7 +17717,7 @@
   },
   "Aho Girl": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -17876,7 +17744,7 @@
   },
   "Ascendance of a Bookworm Season 3": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -17907,7 +17775,7 @@
   },
   "Kabaneri of the Iron Fortress": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -17948,7 +17816,7 @@
   },
   "Needless": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -17989,7 +17857,7 @@
   },
   "Call of the Night": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -18020,7 +17888,7 @@
   },
   "High Card Season 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -18047,14 +17915,14 @@
   },
   "Overlord: The Undead King": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Overlord",
    "score": 0.33
   },
   "Kaiju No. 8 Season 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -18085,7 +17953,7 @@
   },
   "Saga of Tanya the Evil: The Movie": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -18125,7 +17993,7 @@
   },
   "Noir": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -18152,7 +18020,7 @@
   },
   "Isekai Cheat Magician": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -18179,7 +18047,7 @@
   },
   "Shoshimin: How to Become Ordinary Season 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -18210,7 +18078,7 @@
   },
   "Reborn as a Vending Machine, I Now Wander the Dungeon Season 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -18241,7 +18109,7 @@
   },
   "My-Otome": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -18277,7 +18145,7 @@
   },
   "Mobile Suit Gundam GQuuuuuuX - Beginning -": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "похоже",
    "score": 0.8,
    "mal": null,
@@ -18326,7 +18194,7 @@
   },
   "Fire Force Season 3": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -18357,7 +18225,7 @@
   },
   "The Daily Life of a Middle-Aged Online Shopper in Another World": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -18388,7 +18256,7 @@
   },
   "Dead Mount Death Play": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -18415,7 +18283,7 @@
   },
   "Ninja Slayer From Animation": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -18610,7 +18478,7 @@
   },
   "Megalo Box": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -18637,14 +18505,14 @@
   },
   "Clevatess: The King of Devil Beasts, The Baby and the Brave of Undead": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Niehime to Kemono no Ou",
    "score": 0.23
   },
   "Welcome to the N.H.K.": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -18691,7 +18559,7 @@
   },
   "Cautious Hero: The Hero Is Overpowered but Overly Cautious": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -18731,7 +18599,7 @@
   },
   "Boku no Hero Academia 6th Season": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -18772,7 +18640,7 @@
   },
   "Detectives These Days Are Crazy!": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -18804,7 +18672,7 @@
   },
   "Dr. Stone: New World Part 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -18831,7 +18699,7 @@
   },
   "Haikyu!! Second Season": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -18880,7 +18748,7 @@
   },
   "Gleipnir": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -18907,7 +18775,7 @@
   },
   "Dragon Ball Super: Broly": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -18927,7 +18795,7 @@
   },
   "Tsukimichi: Moonlit Fantasy Season 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -18996,7 +18864,7 @@
   },
   "Boku no Hero Academia 5th Season": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -19037,7 +18905,7 @@
   },
   "Beastars 2nd Season": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -19064,7 +18932,7 @@
   },
   "Spy x Family Part 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -19091,43 +18959,43 @@
   },
   "Bakuman. 2nd Season": {
    "tracks": 1,
-   "v": 3,
-   "how": "похоже",
-   "score": 0.7,
-   "mal": null,
-   "slug": "bakuman",
-   "name": "Bakuman.",
-   "year": 2010,
+   "v": 4,
+   "how": "по номеру MAL",
+   "score": 1,
+   "mal": 10030,
+   "slug": "bakuman_2",
+   "name": "Bakuman. 2",
+   "year": 2011,
    "season": "Fall",
    "themes": [
     {
      "t": "OP",
      "s": "OP1",
      "seq": null,
-     "title": "Blue Bird",
+     "title": "Dream of Life",
      "artists": []
     },
     {
      "t": "ED",
      "s": "ED1",
      "seq": 1,
-     "title": "BAKUROCK ~Mirai no Rinkakusen~",
-     "artists": []
+     "title": "monochrome rainbow",
+     "artists": [
+      "Tommy heavenly⁶"
+     ]
     },
     {
      "t": "ED",
      "s": "ED2",
      "seq": 2,
-     "title": "Genjitsu to Iu Na no Kaibutsu to Tatakau Mono-tachi",
-     "artists": [
-      "Yu Takahashi"
-     ]
+     "title": "Parallel=",
+     "artists": []
     }
    ]
   },
   "Chivalry of a Failed Knight": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -19156,7 +19024,7 @@
   },
   "Reborn as a Vending Machine, I Now Wander the Dungeon": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -19187,7 +19055,7 @@
   },
   "Yozakura Quartet: Tsuki ni Naku": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -19214,7 +19082,7 @@
   },
   "Anne Shirley": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -19241,7 +19109,7 @@
   },
   "My Hero Academia: Heroes Rising": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -19263,7 +19131,7 @@
   },
   "Trinity Blood": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -19290,7 +19158,7 @@
   },
   "Kiznaiver": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -19317,21 +19185,21 @@
   },
   "Higanbana no Saku Yoru ni: The First Night": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Night Wizard",
    "score": 0.17
   },
   "Tower of God Season 2: Return of the Prince": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Kami no Tou: Ouji no Kikan",
    "score": 0.5
   },
   "Edomae Elf": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -19358,7 +19226,7 @@
   },
   "Nobunaga Concerto": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -19378,7 +19246,7 @@
   },
   "The Seven Deadly Sins": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -19428,7 +19296,7 @@
   },
   "Dragon Crisis!": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -19455,14 +19323,14 @@
   },
   "Rainbow: The Seven from Compound Two": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Rainbow: Nisha Rokubou no Shichinin",
    "score": 0.2
   },
   "Blue Exorcist: The Blue Night Saga": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -19493,7 +19361,7 @@
   },
   "Hunter x Hunter 2011": {
    "tracks": 10,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -19557,7 +19425,7 @@
   },
   "Hellsing": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -19584,7 +19452,7 @@
   },
   "Gurren Lagann": {
    "tracks": 3,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -19633,7 +19501,7 @@
   },
   "Kenpuu Denki Berserk": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -19664,7 +19532,7 @@
   },
   "Boku no Hero Academia": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -19691,56 +19559,14 @@
   },
   "Bleach: Thousand-Year Blood War Part 2": {
    "tracks": 3,
-   "v": 3,
-   "how": "похоже",
-   "score": 0.6,
-   "mal": null,
-   "slug": "bleach_sennen_kessenhen",
-   "name": "BLEACH: Sennen Kessen-hen",
-   "year": 2022,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Scar",
-     "artists": [
-      "Tatsuya Kitani"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Saihate",
-     "artists": [
-      "SennaRin"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Rapport",
-     "artists": [
-      "Tatsuya Kitani"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED3",
-     "seq": 3,
-     "title": "Number One - Bankai",
-     "artists": [
-      "Hazel Fernandes"
-     ]
-    }
-   ]
+   "v": 4,
+   "slug": null,
+   "near": "BLEACH: Sennen Kessen-hen",
+   "score": 0.45
   },
   "Nichijou": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -19865,7 +19691,7 @@
   },
   "Re:Zero. Жизнь с нуля в альтернативном мире": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "по номеру MAL",
    "score": 1,
    "mal": 31240,
@@ -19948,7 +19774,7 @@
   },
   "Shiki": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -19989,7 +19815,7 @@
   },
   "Blood+": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -20058,7 +19884,7 @@
   },
   "Higurashi no naku koro ni": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -20085,7 +19911,7 @@
   },
   "Solo Leveling": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -20127,7 +19953,7 @@
   },
   "The Guyver: Bio-Booster Armor": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -20147,7 +19973,7 @@
   },
   "86 Eighty-Six": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -20198,7 +20024,7 @@
   },
   "Toaru Kagaku no Railgun": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -20246,7 +20072,7 @@
   },
   "Blood Blockade Battlefront": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -20277,7 +20103,7 @@
   },
   "Shingeki no Kyojin Season 3 Part 2": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -20304,7 +20130,7 @@
   },
   "Mekakucity Actors": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -20366,7 +20192,7 @@
   },
   "Higurashi no Naku Koro ni Kai": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -20393,7 +20219,7 @@
   },
   "Anohana: The Flower We Saw That Day": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -20447,7 +20273,7 @@
   },
   "Machine Robo: Revenge of Cronos": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "похоже",
    "score": 0.66,
    "mal": null,
@@ -20481,7 +20307,7 @@
   },
   "Sakura Wars": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -20515,7 +20341,7 @@
   },
   "Psycho-Pass: The Movie": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -20564,7 +20390,7 @@
   },
   "Inu x Boku SS": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -20626,7 +20452,7 @@
   },
   "Doctor Elise: The Royal Lady with the Lamp": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -20657,7 +20483,7 @@
   },
   "Dragon Ball GT": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -20691,14 +20517,14 @@
   },
   "5 & 6 Ending Hunter x Hunter (2011)": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Hunter x Hunter",
    "score": 0.5
   },
   "Erased": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -20729,7 +20555,7 @@
   },
   "Higurashi: When They Cry – Gou": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -20778,7 +20604,7 @@
   },
   "ACCA: 13-Territory Inspection Dept.": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -20814,7 +20640,7 @@
   },
   "Rozen Maiden: Ouvertüre": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -20841,7 +20667,7 @@
   },
   "Blue Exorcist: Shimane Illuminati Saga": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -20872,7 +20698,7 @@
   },
   "KonoSuba: God's Blessing on This Wonderful World! 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -20905,7 +20731,7 @@
   },
   "Psycho-Pass 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -20936,7 +20762,7 @@
   },
   "Lord of Mysteries": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -20958,7 +20784,7 @@
   },
   "Teekyuu 5": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -20978,7 +20804,7 @@
   },
   "Mashle: Magic and Muscles": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -21009,7 +20835,7 @@
   },
   "Что будет делать сильнейший король в своей второй жизни?": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "по номеру MAL",
    "score": 1,
    "mal": 60146,
@@ -21040,28 +20866,28 @@
   },
   "Ron Kamonohashi: Deranged Detective": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Kamonohashi Ron no Kindan Suiri",
    "score": 0.38
   },
   "Весёлый коммивояжёр": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "",
    "score": 0
   },
   "Soreike! Anpanman": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "",
    "score": 0
   },
   "Бейблэйд X": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "по номеру MAL",
    "score": 1,
    "mal": 56566,
@@ -21156,7 +20982,7 @@
   },
   "Oblivion Battery": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -21187,7 +21013,7 @@
   },
   "Tsukimichi: Moonlit Fantasy": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -21235,7 +21061,7 @@
   },
   "LBX: Little Battlers eXperience": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -21276,7 +21102,7 @@
   },
   "Trinity Seven": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -21324,7 +21150,7 @@
   },
   "Digimon Ghost Game": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -21386,7 +21212,7 @@
   },
   "Black Butler: Emerald Witch Arc": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -21418,7 +21244,7 @@
   },
   "Hell Girl": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -21447,7 +21273,7 @@
   },
   "Tokyo Ghoul:re 2nd Season": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -21474,7 +21300,7 @@
   },
   "Umineko no Naku Koro ni Chiru": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "похоже",
    "score": 0.75,
    "mal": null,
@@ -21503,7 +21329,7 @@
   },
   "The Vexations of a Shut-In Vampire Princess": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -21535,7 +21361,7 @@
   },
   "Sword Art Online 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "похоже",
    "score": 0.75,
    "mal": null,
@@ -21584,7 +21410,7 @@
   },
   "Gegege no Kitarou": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -21660,7 +21486,7 @@
   },
   "Джорно Джованны; Невероятное приключение ДжоДжо: Золотой ветер": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "по номеру MAL",
    "score": 0.71,
    "mal": 37991,
@@ -21703,7 +21529,7 @@
   },
   "Odd Taxi": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -21737,7 +21563,7 @@
   },
   "Blue Lock Season 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -21768,7 +21594,7 @@
   },
   "RWBY: Ice Queendom": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -21799,7 +21625,7 @@
   },
   "Seraph of the End: Vampire Reign": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -21832,7 +21658,7 @@
   },
   "Devil May Cry 2025 г.": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "похоже",
    "score": 0.6,
    "mal": null,
@@ -21859,7 +21685,7 @@
   },
   "Suicide Squad Isekai": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -21888,7 +21714,7 @@
   },
   "To LOVE-Ru Darkness": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -21915,14 +21741,14 @@
   },
   "Howl's Moving Castle": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Maoujou de Oyasumi",
    "score": 0.33
   },
   "Psalms of Planets Eureka Seven": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -21995,14 +21821,14 @@
   },
   "OVA 5; OST; Hellsing Ultimate": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Sakura Taisen: New York",
    "score": 0.31
   },
   "Kenka Dokugaku": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -22029,7 +21855,7 @@
   },
   "Raven of the Inner Palace": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -22060,14 +21886,14 @@
   },
   "Detective Conan Movie 28: One-Eyed Flashback": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Detective Conan",
    "score": 0.33
   },
   "Arifureta: From Commonplace to World's Strongest 2nd Season": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -22098,7 +21924,7 @@
   },
   "Kobayashi-san Chi no Maid Dragon S": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -22139,7 +21965,7 @@
   },
   "So I'm a Spider, So What?": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -22188,7 +22014,7 @@
   },
   "Ijiranaide, Nagatoro-san": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -22229,7 +22055,7 @@
   },
   "Goblin Slayer: Goblin’s Crown": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -22251,7 +22077,7 @@
   },
   "To Your Eternity": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -22280,7 +22106,7 @@
   },
   "Mobile Suit Gundam: Iron-Blooded Orphans": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -22328,7 +22154,7 @@
   },
   "Pokémon Horizons: The Series": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -22532,7 +22358,7 @@
   },
   "RahXephon": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -22559,14 +22385,14 @@
   },
   "Le Portrait de Petit Cossette": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Karakuri Circus",
    "score": 0.31
   },
   "Gankutsuou: The Count of Monte Cristo": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -22593,7 +22419,7 @@
   },
   "Amagi Brilliant Park": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -22620,7 +22446,7 @@
   },
   "Dungeon Meshi": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -22661,7 +22487,7 @@
   },
   "Tower of God": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -22710,7 +22536,7 @@
   },
   "Persona: Trinity Soul": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -22751,7 +22577,7 @@
   },
   "Record of Ragnarok": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -22778,7 +22604,7 @@
   },
   "Panty & Stocking with Garterbelt": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -22805,7 +22631,7 @@
   },
   "Zenshuu.": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -22832,14 +22658,14 @@
   },
   "A Mortal's Journey: The Beginning": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Zatsu Tabi: That's Journey",
    "score": 0.38
   },
   "Maria†Holic": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -22866,7 +22692,7 @@
   },
   "Haikyu!! 2nd Season": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -22915,7 +22741,7 @@
   },
   "Uma Musume: Pretty Derby": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -22970,7 +22796,7 @@
   },
   "Re:Zero - Starting Life in Another World 2nd Season Part 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -23028,14 +22854,14 @@
   },
   "Tales of Arise": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Tales of Eternia The Animation",
    "score": 0.38
   },
   "DanMachi 4th Season": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -23066,14 +22892,14 @@
   },
   "Megazone 23": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Dorei-ku The Animation",
    "score": 0.3
   },
   "Shironeko Project: Zero Chronicle": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -23107,14 +22933,14 @@
   },
   "Severance: Season 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Major 2nd 2nd Season",
    "score": 0
   },
   "DanMachi": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -23154,14 +22980,14 @@
   },
   "Gokujou!! Mecha Mote Iinchou": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Yoroshiku Mechadock",
    "score": 0.21
   },
   "Dororo": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -23202,7 +23028,7 @@
   },
   "Dumbbell Nan Kilo Moteru?": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -23236,7 +23062,7 @@
   },
   "DanMachi 2nd Season": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -23265,7 +23091,7 @@
   },
   "Touch": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -23341,7 +23167,7 @@
   },
   "Bastard‼ Heavy Metal, Dark Fantasy": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -23372,14 +23198,14 @@
   },
   "The Demon Hunter 2nd Season": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
-   "near": "Kijin Gentoushou",
-   "score": 0.4
+   "near": "Hikari no Ou 2nd Season",
+   "score": 0.38
   },
   "D.Gray-man": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -23476,14 +23302,14 @@
   },
   "Uma Musume: Pretty Derby - Beginning of a New Era": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Uma Musume: Pretty Derby",
    "score": 0.57
   },
   "Mushoku Tensei: Jobless Reincarnation Season 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -23505,7 +23331,7 @@
   },
   "Tamayura: Hitotose": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -23560,7 +23386,7 @@
   },
   "Girls' Last Tour": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -23603,7 +23429,7 @@
   },
   "Miss Kobayashi's Dragon Maid": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -23634,21 +23460,21 @@
   },
   "Urusei Yatsura Movie 2: Beautiful Dreamer": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Urusei Yatsura",
    "score": 0.4
   },
   "Overlord: The Sacred Kingdom": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Kingdom",
    "score": 0.33
   },
   "Akagi": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -23684,7 +23510,7 @@
   },
   "Basilisk: Kouga Ninpou Chou": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -23718,7 +23544,7 @@
   },
   "Demon Slayer: Kimetsu no Yaiba": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -23759,7 +23585,7 @@
   },
   "Monogatari Series: Second Season": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -23884,7 +23710,7 @@
   },
   "Overlord II": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -23918,7 +23744,7 @@
   },
   "Gantz": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -23945,7 +23771,7 @@
   },
   "Toilet-Bound Hanako-kun": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -23976,7 +23802,7 @@
   },
   "Goblin Slayer 2nd Season": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -24007,7 +23833,7 @@
   },
   "The Fable": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -24048,7 +23874,7 @@
   },
   "Isekai Ojisan": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -24075,7 +23901,7 @@
   },
   "Boogiepop wa Warawanai": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -24109,7 +23935,7 @@
   },
   "Komi Can't Communicate Season 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -24140,7 +23966,7 @@
   },
   "Ajin: Demi-Human": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -24171,7 +23997,7 @@
   },
   "Air Gear": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -24198,7 +24024,7 @@
   },
   "Mobile Suit Gundam: Hathaway": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -24229,7 +24055,7 @@
   },
   "Haiyore! Nyaruko-san 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -24306,14 +24132,14 @@
   },
   "Hunter x Hunter Movie 1: Phantom Rouge": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Hunter x Hunter",
    "score": 0.4
   },
   "Raise wa Tanin ga Ii": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -24340,7 +24166,7 @@
   },
   "Bye Bye, Earth": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -24371,7 +24197,7 @@
   },
   "Kara no Kyoukai Movie 1: Fukan Fuukei": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -24393,7 +24219,7 @@
   },
   "Belle": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -24425,7 +24251,7 @@
   },
   "Vampire Knight": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -24452,7 +24278,7 @@
   },
   "Break Blade Movie 6: Doukoku no Toride": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -24483,14 +24309,14 @@
   },
   "Godzilla vs. Kong": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Venus Versus Virus",
    "score": 0.22
   },
   "Kannazuki no Miko": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -24517,7 +24343,7 @@
   },
   "Shingeki no Kyojin: The Final Season - Kanketsu-hen": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -24537,21 +24363,21 @@
   },
   "Reincarnated as an Aristocrat with an Appraisal Skill Season 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Tensei Kizoku, Kantei Skill de Nariagaru 2nd Season",
    "score": 0.51
   },
   "BEASTARS X JOJO X Cowboy Bebop Openings": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Cowboy Bebop",
    "score": 0.33
   },
   "Arslan Senki TV": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -24600,7 +24426,7 @@
   },
   "Kemonozume": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -24627,14 +24453,14 @@
   },
   "OVA 8, Ending Hellsing Ultimate": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Hellsing",
    "score": 0.2
   },
   "Black Bullet": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -24675,7 +24501,7 @@
   },
   "Kimetsu no Yaiba: Yuukaku-hen": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -24702,7 +24528,7 @@
   },
   "Magic Knight Rayearth": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -24729,7 +24555,7 @@
   },
   "Mobile Suit Gundam Wing": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -24763,7 +24589,7 @@
   },
   "Takt Op. Destiny": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -24790,7 +24616,7 @@
   },
   "Zan Sayonara Zetsubou Sensei": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -24838,7 +24664,7 @@
   },
   "Namiuchigiwa no Muromi-san": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -24865,7 +24691,7 @@
   },
   "Scarlet Nexus": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -24906,7 +24732,7 @@
   },
   "Shingeki no Kyojin Season 3": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -24933,7 +24759,7 @@
   },
   "Akiba Meido Sensou": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "по номеру MAL",
    "score": 1,
    "mal": 52193,
@@ -24982,7 +24808,7 @@
   },
   "Girls Band Cry": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -25044,7 +24870,7 @@
   },
   "Yowamushi Pedal 4th Season": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -25092,7 +24918,7 @@
   },
   "Pumpkin Scissors": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -25119,7 +24945,7 @@
   },
   "Grand Blue": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -25153,7 +24979,7 @@
   },
   "Eureka Seven AO": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -25194,7 +25020,7 @@
   },
   "Dr. Stone: New World": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -25221,7 +25047,7 @@
   },
   "Keep Your Hands Off Eizouken!": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -25248,7 +25074,7 @@
   },
   "Sword Art Online the Movie: Ordinal Scale": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -25270,7 +25096,7 @@
   },
   "Koi to Uso": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -25297,7 +25123,7 @@
   },
   "Full Moon wo Sagashite": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -25352,14 +25178,14 @@
   },
   "Gekijouban Mononoke Karakasa": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Mononoke",
    "score": 0.33
   },
   "Suzume no Tojimari": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -25386,7 +25212,7 @@
   },
   "Sayonara no Asa ni Yakusoku no Hana wo Kazarou": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -25406,7 +25232,7 @@
   },
   "Full Metal Panic! Invisible Victory": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -25461,14 +25287,14 @@
   },
   "A Few Moments of Cheers": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Atri: My Dear Moments",
    "score": 0.19
   },
   "I Parry Everything": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -25499,7 +25325,7 @@
   },
   "Tanaka-kun wa Itsumo Kedaruge": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -25533,14 +25359,14 @@
   },
   "White Cat Project: Zero Chronicle": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Shironeko Project: Zero Chronicle",
    "score": 0.53
   },
   "Asobi Asobase": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -25567,7 +25393,7 @@
   },
   "Given": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -25603,7 +25429,7 @@
   },
   "Under Ninja": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -25630,7 +25456,7 @@
   },
   "The Daily Life of the Immortal King 2nd Season": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -25661,7 +25487,7 @@
   },
   "Yamada-kun to 7-nin no Majo": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -25688,7 +25514,7 @@
   },
   "Tensei shitara Slime Datta Ken 2nd Season": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -25715,14 +25541,14 @@
   },
   "Final Fantasy: The Spirits Within": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Final Fantasy: Unlimited",
    "score": 0.43
   },
   "Bokurano: Ours": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -25762,7 +25588,7 @@
   },
   "Ayaka: A Story of Bonds and Wounds": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -25793,7 +25619,7 @@
   },
   "Loner Life in Another World": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -25824,7 +25650,7 @@
   },
   "Genesis of Aquarion": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -25862,14 +25688,14 @@
   },
   "Spare Me, Great Lord! 2nd Season": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Kimi to Boku. 2",
    "score": 0.21
   },
   "Toaru Majutsu no Index": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -25910,7 +25736,7 @@
   },
   "Kaguya-sama: Love is War 3rd Season": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -25952,7 +25778,7 @@
   },
   "Rebuild of Evangelion: 2.0 You Can (Not)": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "похоже",
    "score": 0.8,
    "mal": null,
@@ -25974,7 +25800,7 @@
   },
   "Bishounen Tanteidan": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -26012,7 +25838,7 @@
   },
   "Jouran: The Princess of Snow and Blood": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -26039,7 +25865,7 @@
   },
   "5 Centimeters per Second": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -26059,7 +25885,7 @@
   },
   "Overlord III": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -26086,7 +25912,7 @@
   },
   "Cyberpunk: Edgerunners": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -26113,7 +25939,7 @@
   },
   "Pet": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -26140,7 +25966,7 @@
   },
   "Charlotte": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -26174,7 +26000,7 @@
   },
   "Black Blood Brothers": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -26201,7 +26027,7 @@
   },
   "Cross Ange: Tenshi to Ryuu no Rondo": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -26242,7 +26068,7 @@
   },
   "Kidou Senshi Gundam SEED": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -26359,7 +26185,7 @@
   },
   "Kaiju No. 8": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -26390,7 +26216,7 @@
   },
   "Zero no Tsukaima": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -26417,7 +26243,7 @@
   },
   "One Piece Fan Letter": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -26437,7 +26263,7 @@
   },
   "Banana Fish": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -26478,7 +26304,7 @@
   },
   "Wotakoi: Love is Hard for Otaku": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -26518,7 +26344,7 @@
   },
   "Aria the Scarlet Ammo AA": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -26550,7 +26376,7 @@
   },
   "Kakegurui 2nd Season": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -26579,7 +26405,7 @@
   },
   "Hibike! Euphonium 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -26620,7 +26446,7 @@
   },
   "Absolute Duo": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -26661,14 +26487,14 @@
   },
   "April Come She Will": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Saishuu Heiki Kanojo",
    "score": 0.18
   },
   "Kizumonogatari II: Nekketsu-hen": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -26688,7 +26514,7 @@
   },
   "Shadows House 2nd Season": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -26715,7 +26541,7 @@
   },
   "Когда плачут цикады": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "по номеру MAL",
    "score": 1,
    "mal": 934,
@@ -26746,7 +26572,7 @@
   },
   "Another": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -26773,7 +26599,7 @@
   },
   "Berserk (2016)": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -26816,7 +26642,7 @@
   },
   "Katanagatari": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -26941,7 +26767,7 @@
   },
   "Metallic Rouge": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -26968,7 +26794,7 @@
   },
   "Promare": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -26995,7 +26821,7 @@
   },
   "Fullmetal Alchemist": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -27064,7 +26890,7 @@
   },
   "Robotics;Notes": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -27105,7 +26931,7 @@
   },
   "Coppelion": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -27139,7 +26965,7 @@
   },
   "Qualidea Code": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -27187,7 +27013,7 @@
   },
   "Yuru Camp△ Season 3": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -27214,14 +27040,14 @@
   },
   "Jujutsu Kaisen: Phantom Parade": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Jujutsu Kaisen",
    "score": 0.5
   },
   "K-Project": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -27268,7 +27094,7 @@
   },
   "Evangelion": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "похоже",
    "score": 0.67,
    "mal": null,
@@ -27406,7 +27232,7 @@
   },
   "Dark Gathering": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -27440,7 +27266,7 @@
   },
   "Symphogear": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -27507,7 +27333,7 @@
   },
   "JoJo's Bizarre Adventure: Stardust Crusaders - Battle in Egypt": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -27548,7 +27374,7 @@
   },
   "Tonikaku Kawaii": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -27575,7 +27401,7 @@
   },
   "Island": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -27616,7 +27442,7 @@
   },
   "xxxHOLiC": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -27650,7 +27476,7 @@
   },
   "Dandadan": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -27677,7 +27503,7 @@
   },
   "Toaru Majutsu no Index II": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -27718,7 +27544,7 @@
   },
   "Caligula": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -27752,7 +27578,7 @@
   },
   "Owari no Seraph": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -27779,7 +27605,7 @@
   },
   "Grimm Notes": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "похоже",
    "score": 0.67,
    "mal": null,
@@ -27819,7 +27645,7 @@
   },
   "Dragon Ball Daima": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -27846,7 +27672,7 @@
   },
   "The Dangers in My Heart": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -27877,7 +27703,7 @@
   },
   "Higurashi no Naku Koro ni Gou": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -27918,7 +27744,7 @@
   },
   "Umineko No Naku Koro Ni": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -27945,7 +27771,7 @@
   },
   "No Game No Life: Zero": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -27965,14 +27791,14 @@
   },
   "Sakura no Uta -Sakura no Mori no Ue o Mau-": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Cardcaptor Sakura",
    "score": 0.15
   },
   "Sonny Boy": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -27999,7 +27825,7 @@
   },
   "Code Geass: Dakkan no Roze": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -28026,7 +27852,7 @@
   },
   "Gunbuster 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -28057,7 +27883,7 @@
   },
   "Dolls' Frontline": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -28084,7 +27910,7 @@
   },
   "The Ice Guy and His Cool Female Colleague": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -28115,14 +27941,14 @@
   },
   "Spare Me, Great Lord!": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Great Mazinger",
    "score": 0.21
   },
   "Symphogear XV": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -28184,7 +28010,7 @@
   },
   "Gintama Season 4": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -28264,14 +28090,14 @@
   },
   "Shikkoku no Sharnoth: What a Beautiful Tomorrow": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Kumo Desu ga, Nani ka?",
    "score": 0.17
   },
   "Elfen Lied": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -28298,14 +28124,14 @@
   },
   "Himawari no Kyoukai to Nagai Natsuyasumi": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Kyoukai no Kanata",
    "score": 0.21
   },
   "Jojo's Bizarre Adventure - Phantom Blood": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "похоже",
    "score": 0.67,
    "mal": null,
@@ -28345,14 +28171,14 @@
   },
   "Isekai de Cheat Skill": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Tondemo Skill de Isekai Hourou Meshi",
    "score": 0.53
   },
   "Kengan Ashura Season 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -28379,7 +28205,7 @@
   },
   "Black Lagoon": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -28406,7 +28232,7 @@
   },
   "Magic Kaito 1412": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -28447,7 +28273,7 @@
   },
   "Kokkoku": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -28474,7 +28300,7 @@
   },
   "Id:Invaded": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -28508,7 +28334,7 @@
   },
   "Make Heroine ga Oosugiru!": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -28556,14 +28382,14 @@
   },
   "Piano, Howl's Moving Castle": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Maoujou de Oyasumi",
    "score": 0.28
   },
   "Toaru Kagaku no Railgun 2": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "похоже",
    "score": 0.75,
    "mal": null,
@@ -28621,14 +28447,14 @@
   },
   "Instant Family": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Minami-ke",
    "score": 0.38
   },
   "Kuroko no Basket": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -28669,7 +28495,7 @@
   },
   "Boku wa Tomodachi ga Sukunai": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -28696,7 +28522,7 @@
   },
   "Toaru Kagaku no Railgun OVA": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -28727,7 +28553,7 @@
   },
   "Haikyu!!": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -28776,7 +28602,7 @@
   },
   "Detroit Metal City": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -28803,21 +28629,21 @@
   },
   "Fairy Planting Manual": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Fairy Tail",
    "score": 0.27
   },
   "Tokyo Revengers 2: Bloody Halloween": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "Tokyo Revengers",
    "score": 0.4
   },
   "Inazuma Eleven": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -28872,7 +28698,7 @@
   },
   "Persona 5 the Animation": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -28920,7 +28746,7 @@
   },
   "Sakamichi no Apollon": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -28947,7 +28773,7 @@
   },
   "Joshiraku": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -28974,7 +28800,7 @@
   },
   "Your Name": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -29019,7 +28845,7 @@
   },
   "Zom 100: Bucket List of the Dead": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -29158,7 +28984,7 @@
   },
   "Pandora Hearts": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -30995,7 +30821,7 @@
   },
   "Seikai no Senki II": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -31353,7 +31179,7 @@
   },
   "Legend of the Galactic Heroes": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -31621,8 +31447,8 @@
    "score": 0.33
   },
   "Katekyou Hitman Reborn!": {
-   "tracks": 1,
-   "v": 3,
+   "tracks": 2,
+   "v": 4,
    "how": "точно",
    "score": 1,
    "mal": null,
@@ -32374,202 +32200,6 @@
     }
    ]
   },
-  "Belphegor OST, Katekyou Hitman Reborn!": {
-   "tracks": 1,
-   "v": 3,
-   "how": "похоже",
-   "score": 0.6,
-   "mal": null,
-   "slug": "katekyo_hitman_reborn",
-   "name": "Katekyo Hitman Reborn!",
-   "year": 2006,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": 1,
-     "title": "Drawing Days",
-     "artists": []
-    },
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "BOYS & GIRLS",
-     "artists": [
-      "LM.C"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP3",
-     "seq": 3,
-     "title": "Dive To World",
-     "artists": []
-    },
-    {
-     "t": "OP",
-     "s": "OP4",
-     "seq": 4,
-     "title": "88",
-     "artists": [
-      "LM.C"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP5",
-     "seq": 5,
-     "title": "last cross",
-     "artists": [
-      "Masami Mitsuoka"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP6",
-     "seq": 6,
-     "title": "EASY GO",
-     "artists": [
-      "Kazuki Katou"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP7",
-     "seq": 7,
-     "title": "Funny Sunny Day",
-     "artists": []
-    },
-    {
-     "t": "OP",
-     "s": "OP8",
-     "seq": 8,
-     "title": "Listen to the Stereo",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Michishirube",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "ONE NIGHT STAR",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED3",
-     "seq": 3,
-     "title": "Echo again",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED4",
-     "seq": 4,
-     "title": "Friend",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED5",
-     "seq": 5,
-     "title": "Sakura Addiction",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED6",
-     "seq": 6,
-     "title": "Friend",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED7",
-     "seq": 7,
-     "title": "STAND UP!",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED8",
-     "seq": 8,
-     "title": "AMEato",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED9",
-     "seq": 9,
-     "title": "CYCLE",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED10",
-     "seq": 10,
-     "title": "Slide",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED11",
-     "seq": 11,
-     "title": "Sakura Rock",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED12",
-     "seq": 12,
-     "title": "Smile",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED13",
-     "seq": 13,
-     "title": "Aoi Yume",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED14",
-     "seq": 14,
-     "title": "Yume no Manual",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED15",
-     "seq": 15,
-     "title": "Gr8 Story",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED16",
-     "seq": 16,
-     "title": "Famiglia",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED17",
-     "seq": 17,
-     "title": "Canvas",
-     "artists": []
-    }
-   ]
-  },
   "Hell's Paradise": {
    "tracks": 1,
    "v": 3,
@@ -33081,7 +32711,7 @@
   },
   "Ginga Eiyuu Densetsu Gaiden": {
    "tracks": 2,
-   "v": 3,
+   "v": 4,
    "how": "похоже",
    "score": 0.8,
    "mal": null,
@@ -33117,17 +32747,10 @@
   },
   "The Legend of Heroes: Trails in the Sky SC": {
    "tracks": 1,
-   "v": 3,
+   "v": 4,
    "slug": null,
    "near": "The Legend of Heroes: Sen no Kiseki - Northern War",
    "score": 0.35
-  },
-  "Arcane League of Legends": {
-   "tracks": 1,
-   "v": 3,
-   "slug": null,
-   "near": "Pokemon",
-   "score": 0.27
   },
   "Attack on Titan S4": {
    "tracks": 1,
