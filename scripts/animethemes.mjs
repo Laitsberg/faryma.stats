@@ -110,75 +110,102 @@ const norm = s => String(s || '').toLowerCase()
 
 const ROMAN = { i:1, ii:2, iii:3, iv:4, v:5, vi:6, vii:7, viii:8, ix:9, x:10 };
 
-/* Номер сезона: «2nd Season», «Season 2», «II», «S2», «2nd Stage».
-   Отсутствие номера считаем первым сезоном. */
-function seasonOf(name) {
-  const t = norm(name);
-  let m = t.match(/(\d+)\s*(?:nd|rd|th|st)?\s+(?:season|stage|shou)\b/) ||
-          t.match(/\b(?:season|stage)\s*(\d+)\b/) ||
-          t.match(/\bs(\d)\b/);
-  if (m) return +m[1];
-  m = t.match(/\b(ii|iii|iv|v|vi|vii|viii|ix|x)\s*$/);
-  if (m) return ROMAN[m[1]];
-  m = t.match(/\s(\d)\s*$/);
-  if (m) return +m[1];
-  return 1;
-}
-function partOf(name) {
-  const m = norm(name).match(/\bpart\s*(\d+)\b/);
-  return m ? +m[1] : 0;
+/* Приводим название к сравнимому виду: номер сезона в любой записи
+   («2nd Season», «Season 2», «II», «S2») становится одним жетоном s2,
+   часть — p2. Без сезона считаем первым. Так номер сезона участвует в
+   сравнении наравне со словами, и «Тетрадь смерти» не притворяется
+   вторым сезоном «Тетради смерти». */
+function canon(name) {
+  let t = ' ' + norm(name) + ' ';
+  t = t.replace(/\b(\d+)\s*(?:nd|rd|th|st)?\s+(?:season|stage)\b/g, ' s$1 ')
+       .replace(/\b(?:season|stage)\s*(\d+)\b/g, ' s$1 ')
+       .replace(/\bs(\d)\b/g, ' s$1 ')
+       .replace(/\bpart\s*(\d+)\b/g, ' p$1 ')
+       .replace(/\s(ii|iii|iv|v|vi|vii|viii|ix|x)\s*$/, (m, r) => ' s' + ROMAN[r] + ' ');
+  t = t.replace(/\s+/g, ' ').trim();
+  if (!/\bs\d\b/.test(t)) t += ' s1';
+  if (!/\bp\d\b/.test(t)) t += ' p0';
+  return t;
 }
 
-/* Слова, которые ничего не различают: они есть у половины тайтлов. */
-const STOP = new Set(['the','a','an','tv','movie','season','part','no','wa','ni','to','of','and','2nd','3rd','4th','5th','1st','hen','shou']);
-const words = s => norm(s).split(' ').filter(w => w && !STOP.has(w));
+/* Слова, которые есть у половины тайтлов и ничего не различают. */
+const STOP = new Set(['the','a','an','tv','movie','of','and','no','wa','ni','to']);
+const words = s => canon(s).split(' ').filter(w => w && !STOP.has(w));
 
-/* Коэффициент Дайса по словам: 1 — одно и то же, 0 — ничего общего. */
+/* Похожесть двух названий: коэффициент Дайса по словам (1 — то же самое,
+   0 — ничего общего), приглушённый долей слов запроса, которых у
+   кандидата нет. Без этого «My Hero Academia: You're Next» уверенно
+   находило просто «My Hero Academia»: четыре слова из шести совпали. */
 function dice(a, b) {
   const A = new Set(words(a)), B = new Set(words(b));
   if (!A.size || !B.size) return 0;
   let common = 0;
   for (const w of A) if (B.has(w)) common++;
-  return 2 * common / (A.size + B.size);
+  const d = 2 * common / (A.size + B.size);
+  return d * (0.5 + 0.5 * common / A.size);
 }
 
-/* Похожесть запроса на кандидата: лучшее из основного имени и синонимов,
-   со штрафом за несовпадение сезона или части. */
+/* Похожесть запроса на кандидата: лучшее из основного имени и синонимов.
+   Английские названия у animethemes лежат именно в синонимах, поэтому
+   «Your Lie in April» и находит «Shigatsu wa Kimi no Uso». */
 function score(query, cand) {
   const names = [cand.name, ...(cand.animesynonyms || []).map(x => x.text)].filter(Boolean);
   let best = 0;
-  for (const n of names) best = Math.max(best, norm(n) === norm(query) ? 1 : dice(query, n));
-  const seasonOk = names.some(n => seasonOf(n) === seasonOf(query));
-  const partOk   = names.some(n => partOf(n)   === partOf(query));
-  if (!seasonOk) best *= 0.45;
-  if (!partOk)   best *= 0.6;
+  for (const n of names) best = Math.max(best, dice(query, n));
   return best;
 }
 
-const MIN_SCORE = +val('--min-score', 0.5);
+const MIN_SCORE = +val('--min-score', 0.6);
+
+async function search(q) {
+  const j = await get(`/search?q=${encodeURIComponent(q)}&fields[search]=anime&include[anime]=animesynonyms`);
+  return (j?.search?.anime || []).slice(0, 8);
+}
+
+/* Из «Re:Zero … 3rd Season» делаем «Re:Zero …»: поиск animethemes
+   спотыкается о хвосты вроде «4th Season and 5th Season», а по голому
+   названию находит всю франшизу, и нужный сезон уже выбираем сами. */
+function baseName(name) {
+  const t = name.replace(/\s+(?:\d+(?:nd|rd|th|st)?\s+(?:Season|Stage)|(?:Season|Stage)\s*\d+|Part\s*\d+|and\s+\d+(?:nd|rd|th|st)?\s+Season)\s*/gi, ' ')
+                .replace(/\s+/g, ' ').trim();
+  return t && t !== name ? t : '';
+}
+
+function best(query, list) {
+  let hit = null, top = -1;
+  for (const c of list) {
+    const s = score(query, c);
+    // при равном счёте берём того, у кого совпало основное имя,
+    // а потом более ранний год: «Fairy Tail» — это оригинал 2009-го
+    const tie = (norm(c.name) === norm(query) ? 0.02 : 0) - (c.year || 3000) / 1e6;
+    if (s + tie > top) { top = s + tie; hit = c; best.score = s; }
+  }
+  return hit ? { hit, s: best.score } : null;
+}
 
 async function findAnime(name) {
   const inc = 'include=animethemes.song.artists';
 
   // 1. точное имя
-  let j = await get(`/anime?filter[name]=${encodeURIComponent(name)}&${inc}&page[size]=1`);
-  let a = j?.anime?.[0];
-  if (a) return { a, how: 'точно', score: 1 };
+  const j = await get(`/anime?filter[name]=${encodeURIComponent(name)}&${inc}&page[size]=1`);
+  if (j?.anime?.[0]) return { a: j.anime[0], how: 'точно', score: 1 };
 
-  // 2. общий поиск — кандидаты приходят вместе с синонимами
+  // 2. общий поиск, при неудаче — по названию без номера сезона
   await sleep(DELAY);
-  j = await get(`/search?q=${encodeURIComponent(name)}&fields[search]=anime&include[anime]=animesynonyms`);
-  const list = (j?.search?.anime || []).slice(0, 6);
-  if (!list.length) return null;
-
-  let hit = null, best = 0;
-  for (const c of list) { const s = score(name, c); if (s > best) { best = s; hit = c; } }
-  if (!hit || best < MIN_SCORE) return { miss: true, best, name: hit?.name || '' };
+  let r = best(name, await search(name));
+  const base = baseName(name);
+  if ((!r || r.s < MIN_SCORE) && base) {
+    await sleep(DELAY);
+    const r2 = best(name, await search(base));
+    if (r2 && (!r || r2.s > r.s)) r = r2;
+  }
+  if (!r) return null;
+  if (r.s < MIN_SCORE) return { miss: true, best: r.s, name: r.hit.name };
 
   await sleep(DELAY);
-  const full = await get(`/anime/${encodeURIComponent(hit.slug)}?${inc}`);
+  const full = await get(`/anime/${encodeURIComponent(r.hit.slug)}?${inc}`);
   if (!full?.anime) return null;
-  return { a: full.anime, how: best >= 0.99 ? 'точно' : 'похоже', score: +best.toFixed(2) };
+  return { a: full.anime, how: r.s >= 0.99 ? 'точно' : 'похоже', score: +r.s.toFixed(2) };
 }
 
 function pack(a) {
@@ -212,10 +239,14 @@ if (has('--probe')) {
 if (has('--try')) {
   for (const name of val('--try', '').split('|')) {
     if (!name.trim()) continue;
-    const j = await get(`/search?q=${encodeURIComponent(name)}&fields[search]=anime&include[anime]=animesynonyms`);
-    const list = (j?.search?.anime || []).slice(0, 6);
-    console.log(`\n${name}  (сезон ${seasonOf(name)})`);
-    list.map(c => [score(name, c), c]).sort((a, b) => b[0] - a[0])
+    let list = await search(name);
+    let src = 'поиск';
+    if ((best(name, list)?.s ?? 0) < MIN_SCORE && baseName(name)) {
+      await sleep(DELAY);
+      list = await search(baseName(name)); src = 'запасной поиск «' + baseName(name) + '»';
+    }
+    console.log(`\n${name}   → ${canon(name)}   [${src}]`);
+    list.map(c => [score(name, c), c]).sort((a, b) => b[0] - a[0]).slice(0, 5)
       .forEach(([s, c]) => console.log(`  ${s.toFixed(2)}  ${c.name}   [${(c.animesynonyms||[]).map(x=>x.text).slice(0,3).join(' | ')}]`));
     await sleep(DELAY);
   }
