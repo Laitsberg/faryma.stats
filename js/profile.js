@@ -106,7 +106,10 @@ function trackList(rows, opts = {}) {
   }).join('') + '</div>';
 }
 
-/* Франшизы, для которых исполнитель что-то писал.
+/* Франшизы, откуда у нас есть треки этого исполнителя или заказчика.
+   Заголовок намеренно без глагола: «писал» не подходит певице, «пел»
+   — композитору, а любая форма прошедшего времени выдаёт род, которого
+   мы не знаем. «Треки из» верно для всех.
    Связь была односторонней: из вселенной можно было уйти в артиста,
    а обратно нет. Сезоны сводим к франшизе, чтобы «Boku no Hero
    Academia» не распадалась на семь строк. */
@@ -150,7 +153,7 @@ function showArtist(name) {
   openProfile(shown, span,
     kpiBlock(kpi) +
     tierBars(rows) +
-    franchiseTags(rows, 'Писал для') +
+    franchiseTags(rows, 'Треки из') +
     `<h3 class="pf-h">Все разносы</h3>` +
     trackList([...rows].sort((x, y) => (y.date || 0) - (x.date || 0)), { showStream: true }));
 }
@@ -190,8 +193,8 @@ function showUser(name) {
   openProfile(shown, span,
     kpiBlock(kpi) +
     tierBars(rows) + favHtml +
-    franchiseTags(rows, 'Приносил из') +
-    `<h3 class="pf-h">Всё, что принёс</h3>` +
+    franchiseTags(rows, 'Треки из') +
+    `<h3 class="pf-h">Все треки</h3>` +
     trackList([...rows].sort((x, y) => (y.date || 0) - (x.date || 0)),
       { showArtist: true, showStream: true }));
 }
