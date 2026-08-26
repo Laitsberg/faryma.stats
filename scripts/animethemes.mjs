@@ -133,9 +133,17 @@ function collectSources(ctx) {
    (английские названия лежат именно там) и считаем похожесть; если
    ни один кандидат не похож, честно записываем «не нашлось». */
 
+/* Всё, что не буква и не цифра, — разделитель. Иначе «Lucky☆Star» и
+   «Kirarin☆Revolution» остаются одним нечитаемым словом и не находятся
+   вовсе: звёздочки в японских названиях не редкость. */
 const norm = s => String(s || '').toLowerCase()
-  .replace(/[\[\]!?.,:;'’‘"“”`~*\-–—_/\\+&#@()]/g, ' ')
-  .replace(/\s+/g, ' ').trim();
+  .replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+
+/* Ромадзи пишут по-разному: «Haikyuu» и «Haikyu», «Ookami» и «Okami»,
+   «Shounen» и «Shonen». Схлопываем удвоенные гласные и «ou» — тогда
+   написания сходятся. Делаем это с обеими сторонами сразу, так что
+   правило не может развести то, что раньше сходилось. */
+const fold = w => w.replace(/ou/g, 'o').replace(/(\p{L})\1+/gu, '$1');
 
 const ROMAN = { i:1, ii:2, iii:3, iv:4, v:5, vi:6, vii:7, viii:8, ix:9, x:10 };
 // «Second Season» пишут и словом, и цифрой — для нас это одно и то же
@@ -164,7 +172,7 @@ function pull(name) {
 
 /* Слова, которые есть у половины тайтлов и ничего не различают. */
 const STOP = new Set(['the','a','an','tv','movie','of','and','no','wa','ni','to','season','part']);
-const words = t => t.split(' ').filter(w => w && !STOP.has(w));
+const words = t => t.split(' ').filter(w => w && !STOP.has(w)).map(fold);
 
 /* Похожесть двух названий: коэффициент Дайса по словам (1 — то же самое,
    0 — ничего общего), приглушённый долей слов запроса, которых у
@@ -179,27 +187,33 @@ function dice(a, b) {
   return d * (0.5 + 0.5 * common / A.size);
 }
 
-/* Счёт одного имени кандидата: слова плюс штраф за чужой сезон. */
-function nameScore(q, name) {
-  const c = pull(name);
-  let d = dice(q.words, c.words);
-  if (c.season !== q.season) d *= 0.45;
-  if (c.part !== q.part) d *= 0.6;
-  return d;
-}
+/* Похожесть запроса на кандидата: лучшее из всех его написаний.
+   Английские названия у animethemes лежат в синонимах, у Шикимори —
+   рядом с русским, поэтому «Your Lie in April» и находит
+   «Shigatsu wa Kimi no Uso».
 
-/* Похожесть запроса на кандидата: лучшее из основного имени и синонимов.
-   Английские названия у animethemes лежат именно в синонимах, поэтому
-   «Your Lie in April» и находит «Shigatsu wa Kimi no Uso». */
+   Сезон считаем по всему набору написаний, а не по каждому отдельно:
+   сиквелы часто названы без номера («K-On!!», «Made in Abyss:
+   Retsujitsu no Ougonkyou»), но номер всплывает в русском имени или в
+   синониме. Достаточно, чтобы нужный сезон нашёлся хоть в одном. */
 function score(query, cand) {
   return scoreNames(query, [cand.name, ...(cand.animesynonyms || []).map(x => x.text)]);
 }
 
 function scoreNames(query, names) {
   const q = pull(query);
-  let best = 0;
-  for (const n of names.filter(Boolean)) best = Math.max(best, nameScore(q, n));
-  return best;
+  const cs = names.filter(Boolean).map(pull);
+  if (!cs.length) return 0;
+
+  let d = 0;
+  for (const c of cs) d = Math.max(d, dice(q.words, c.words));
+
+  if (!cs.some(c => c.season === q.season))
+    // кандидат объявляет сезон старше нужного — почти наверняка мимо;
+    // не объявляет вовсе — может быть и сиквелом без номера
+    d *= cs.some(c => c.season > q.season) ? 0.45 : 0.7;
+  if (!cs.some(c => c.part === q.part)) d *= 0.6;
+  return d;
 }
 
 const MIN_SCORE = +val('--min-score', 0.6);
