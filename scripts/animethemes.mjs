@@ -162,11 +162,23 @@ function pull(name) {
     if (m) { t = t.replace(re, ' '); return +m[i] || ROMAN[m[i]] || ORD[m[i]] || 0; }
     return 0;
   };
-  season = take(/\b(\d+)\s*(?:nd|rd|th|st)?\s+(?:season|stage)\b/) ||
+  // то же, но откатываем, если от названия остаётся меньше двух слов
+  const tail = re => {
+    const было = t, n = take(re);
+    if (n && words(t).length >= 2) return n;
+    t = было;
+    return 0;
+  };
+  season = take(/\b(\d+)\s*(?:nd|rd|th|st)?\s+(?:season|stage|series)\b/) ||
            take(/\b(first|second|third|fourth|fifth|sixth|seventh)\s+(?:season|stage|series)\b/) ||
-           take(/\b(?:season|stage)\s*(\d+)\b/) ||
+           take(/\b(?:season|stage|series)\s*(\d+)\b/) ||
            take(/\bs(\d)\b/) ||
-           take(/\s(ii|iii|iv|v|vi|vii|viii|ix|x)\s*$/);
+           // «Sword Art Online 2», «Overlord IV» — номер в конце без слова
+           // «сезон». Но только если без него ещё остаётся название из
+           // двух слов: «Samurai 7», «Kaiju No. 8», «Teekyuu 5» — это
+           // сами названия, а не седьмой сезон «Самурая».
+           tail(/\s(i|ii|iii|iv|v|vi|vii|viii|ix|x)\s*$/) ||
+           tail(/\s([2-9])\s*$/);
   part = take(/\bpart\s*(\d+)\b/);
   return { words: t.replace(/\s+/g, ' ').trim(), season: season || 1, part };
 }
@@ -221,7 +233,7 @@ function scoreNames(query, names) {
 const MIN_SCORE = +val('--min-score', 0.6);
 /* Версия сопоставлялки. Когда правила сравнения меняются, старым
    записям верить нельзя — при --recheck они спрашиваются заново. */
-const MATCHER_V = 4;
+const MATCHER_V = 5;
 
 async function search(q) {
   const j = await get(`/search?q=${encodeURIComponent(q)}&fields[search]=anime&include[anime]=animesynonyms`);
