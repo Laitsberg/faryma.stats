@@ -91,8 +91,8 @@ function build(raw) {
   // Вселенные пишут в разном регистре: «ULTRAKILL» и «Ultrakill»,
   // «FINAL FANTASY XIV: Endwalker» и «Final Fantasy XIV: Endwalker».
   // Сводим к самому частому написанию — как имена исполнителей.
-  SOURCE_NAMES = canonMap(
-    parsed.map(p => parseSource(p.r['Что'])).filter(Boolean), nameKey);
+  SOURCE_NAMES = dropNumberPrefix(canonMap(
+    parsed.map(p => parseSource(p.r['Что'])).filter(Boolean), nameKey));
 
   const partCounts = new Map();
   allParts.forEach(v => { const k = nameKey(v); partCounts.set(k, (partCounts.get(k) || 0) + 1); });

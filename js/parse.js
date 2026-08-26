@@ -180,10 +180,16 @@ function parseSource(what) {
   t = t.replace(/^\s*\d+\s+(?:OST|OP|ED)\s+(?=[A-ZА-Я0-9])/i, '');
 
   return t
-    .split('/')[0]
+    // За слэшем в пробелах идёт русский перевод: «Fate/Zero / Судьба:
+    // Начало». Слэш без пробелов — часть названия, и резать по нему
+    // нельзя: иначе вся франшиза Fate схлопывается в одно «Fate», а
+    // «.hack//Sign» и «.hack//Roots» — в «.hack».
+    .split(/\s+\/|\/\s+/)[0]
     // хвостовое «OST» в колонке «откуда» ничего не добавляет, зато
     // разводит «Genshin Impact» и «Genshin Impact OST» по разным строкам
-    .replace(/\s+(?:OST|OP|ED)\s*$/i, '')
+    // хвостовые пометки, иногда пачкой: «Fate/hollow ataraxia
+    // Opening/Ending/OST», «Genshin Impact OST»
+    .replace(/\s+(?:OST|OP|ED|Opening|Ending)(?:\s*\/\s*(?:OST|OP|ED|Opening|Ending))*\s*$/i, '')
     // «Song, Film "Gintama THE FINAL"» — кавычки вокруг всего названия
     // лишние; одиночную кавычку внутри трогать нельзя
     .replace(/^\s*"(.+)"\s*$/, '$1')
@@ -282,6 +288,19 @@ function canonMap(values, keyfn) {
     out.set(k, best);
   });
   return out;
+}
+
+/* «Opening 2 Fate/Stay Night» — номер темы прилипает к названию, когда
+   после пометки нет разделителя. По виду его не отличить от настоящего
+   названия: «Ending 5 Centimeters per Second» — это фильм «5 сантиметров
+   в секунду», а не пятая концовка. Зато видно по архиву: если такой же
+   источник без номера уже есть, номер лишний. */
+function dropNumberPrefix(canon) {
+  canon.forEach((display, key) => {
+    const m = key.match(/^\d{1,2}\s+(.+)$/);
+    if (m && canon.has(m[1])) canon.set(key, canon.get(m[1]));
+  });
+  return canon;
 }
 
 /* Японские имена пишут в обоих порядках: «Hiroyuki Sawano» и
