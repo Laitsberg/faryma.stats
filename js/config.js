@@ -28,6 +28,7 @@ const HISTORY_JSONL = "data/history.jsonl";
 
 /* Страны артистов, собранные скриптом scripts/countries.mjs */
 const COUNTRIES_JSON = "data/countries.json";
+const THEMES_JSON = "data/themes.json";
 
 /* ---------- шкала оценок ----------
    base — балл ступени, c — цвет на графиках.

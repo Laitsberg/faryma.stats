@@ -14,6 +14,7 @@ let SOLO_KEYS = new Set();     // кто хоть раз выступал оди
 let NAME_ALIAS = new Map();    // «Sawano Hiroyuki» → «Hiroyuki Sawano»
 let OFFSCALE = [];             // оценки, которых нет на шкале — «ГЕ-НЯ-АЛЬНО» и прочее
 let SOURCE_NAMES = new Map();  // ключ → показываемое написание вселенной
+let THEMES = {};               // вселенная → все её опенинги и эндинги, из data/themes.json
 
 /* Ключ имени с учётом склейки перестановок */
 const canonKey = k => NAME_ALIAS.get(k) || k;
@@ -35,6 +36,17 @@ function load() {
       COUNTRIES = (j && j.artists) || {};
       // страны нужны не только своему разделу, но и номинациям заказчиков
       if (ROWS.length) { applyCountries(); renderCountries(cur()); renderFans(); }
+    })
+    .catch(() => {});
+
+  // каталог опенингов и эндингов — тоже необязателен: без него в
+  // карточке вселенной просто не будет списка «чего ещё не приносили»
+  fetch(THEMES_JSON)
+    .then(r => r.ok ? r.json() : null)
+    .then(j => {
+      THEMES = (j && j.sources) || {};
+      // карточка могла открыться раньше, чем приехал каталог
+      if (ROWS.length && location.hash.startsWith('#source=')) routeProfile();
     })
     .catch(() => {});
 

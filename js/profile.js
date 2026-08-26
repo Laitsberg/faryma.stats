@@ -290,14 +290,15 @@ function showSource(name) {
         { showArtist: true, showStream: true });
   }).join('');
 
+  const seen = new Set();
   const body = parts.length > 1
     ? parts.map(pt => {
         const rs = rows.filter(r => sourceParts(r.source).part === pt);
         return `<h3 class="pf-h pf-season">${esc(pt || 'Первый сезон')} ` +
           `<span>${num(rs.length)} ` + plural(rs.length, 'трек', 'трека', 'треков') + `</span></h3>` +
-          block(rs);
+          block(rs) + themeBlock(rs, seen);
       }).join('')
-    : block(rows);
+    : block(rows) + themeBlock(rows, seen);
 
   openProfile(base,
     parts.length > 1

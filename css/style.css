@@ -572,3 +572,11 @@ a.pf-tag-l:hover{border-color:var(--brand);color:var(--ink)}
 [data-artist],[data-stream]{cursor:pointer}
 .pf-link{color:inherit;text-decoration:none;border-bottom:1px dotted rgba(160,160,168,.5)}
 .pf-link:hover{color:var(--brand-hi);border-bottom-color:var(--brand)}
+
+/* каталог тем: что у тайтла есть кроме принесённого */
+.th-src{font-family:var(--m);font-size:11px;color:var(--dim);margin:0 0 8px}
+.th-warn{color:var(--warn,#c8a24a)}
+.th-s{display:inline-block;min-width:38px;font-family:var(--m);font-size:10px;
+  letter-spacing:.08em;color:var(--brand-hi);margin-right:8px}
+.th-no{font-family:var(--m);font-size:11px;color:var(--dim)}
+.th-list .th-miss .pf-t{color:var(--dim)}
