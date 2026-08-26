@@ -172,15 +172,17 @@ function showArtist(name) {
   const best = [...rows].sort((x, y) => y.rate.score - x.rate.score)[0];
   const worst = [...rows].sort((x, y) => x.rate.score - y.rate.score)[0];
   const byDate = [...rows].filter(r => r.date).sort((x, y) => x.date - y.date);
+  // Голая пара дат в подписи не читается: непонятно, что это за числа.
+  // Предлоги превращают их в период — от первого разноса до последнего.
   const span = byDate.length
-    ? `${byDate[0].date.toLocaleDateString('ru-RU')} — ${byDate[byDate.length - 1].date.toLocaleDateString('ru-RU')}`
+    ? `с ${byDate[0].date.toLocaleDateString('ru-RU')} по ${byDate[byDate.length - 1].date.toLocaleDateString('ru-RU')}`
     : '';
 
   const kpi = [
     [num(rows.length), plural(rows.length, 'разнос', 'разноса', 'разносов')],
     [f2(a), 'средний балл'],
     [best.rate.label, 'лучшая оценка', 1],
-    [worst.rate.label, 'худшая', 1]
+    [worst.rate.label, 'худшая оценка', 1]
   ];
 
   openProfile(shown, span,
@@ -202,7 +204,7 @@ function showUser(name) {
   const best = [...rows].sort((x, y) => y.rate.score - x.rate.score)[0];
   const byDate = [...rows].filter(r => r.date).sort((x, y) => x.date - y.date);
   const span = byDate.length
-    ? `${byDate[0].date.toLocaleDateString('ru-RU')} — ${byDate[byDate.length - 1].date.toLocaleDateString('ru-RU')}`
+    ? `с ${byDate[0].date.toLocaleDateString('ru-RU')} по ${byDate[byDate.length - 1].date.toLocaleDateString('ru-RU')}`
     : '';
 
   const kpi = [
@@ -227,7 +229,7 @@ function showUser(name) {
     kpiBlock(kpi) +
     tierBars(rows) + favHtml +
     franchiseTags(rows, 'Треки из') +
-    `<h3 class="pf-h">Все треки</h3>` +
+    `<h3 class="pf-h">Все разносы</h3>` +
     trackList([...rows].sort((x, y) => (y.date || 0) - (x.date || 0)),
       { showArtist: true, showStream: true }));
 }
@@ -296,7 +298,7 @@ function showSource(name) {
   }).filter(Boolean);
   const kindRow = byKind.length
     ? `<div class="pf-tags">` + byKind.map(x =>
-        `<span class="pf-tag">${esc(KIND_TITLE[x.k])} <b>${num(x.n)}</b> · ${f2(x.avg)}</span>`
+        `<span class="pf-tag">${esc(KIND_TITLE[x.k])} <b>${num(x.n)}</b> · ср. ${f2(x.avg)}</span>`
       ).join('') + `</div>`
     : '';
 
@@ -354,6 +356,6 @@ function showStream(numId) {
   openProfile('Стрим №' + numId, date,
     kpiBlock(kpi) +
     vod + tierBars(rows) +
-    `<h3 class="pf-h">Все треки по порядку</h3>` +
+    `<h3 class="pf-h">Все разносы по порядку</h3>` +
     trackList(rows, { showArtist: true, showUser: true }));
 }

@@ -151,6 +151,7 @@ function themeBlock(rows, seen) {
     `target="_blank" rel="noopener noreferrer">${esc(h.name)}</a>`;
 
   return `<h4 class="pf-k">Все опенинги и эндинги · разнесли ${num(got)} из ${num(list.length)}</h4>
-    <p class="th-src">по каталогу ${link}${h.how === 'похоже' ? ' <span class="th-warn">(совпадение неточное)</span>' : ''}</p>
+    <p class="th-src">по каталогу animethemes.moe: ${link}${
+      h.how === 'похоже' ? ' <span class="th-warn">— совпадение неточное</span>' : ''}</p>
     <div class="pf-list th-list">${rowsHtml}</div>`;
 }
