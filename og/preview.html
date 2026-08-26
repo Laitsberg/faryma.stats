@@ -27,8 +27,8 @@
   .in{padding:56px 64px;height:100%;display:flex;flex-direction:column}
   .eyebrow{font-family:var(--m);font-size:16px;letter-spacing:.22em;
     color:var(--dim);text-transform:uppercase}
-  h1{font-family:var(--d);font-weight:800;font-size:78px;line-height:1;
-    letter-spacing:-.02em;margin:20px 0 14px}
+  h1{font-family:var(--d);font-weight:800;font-size:66px;line-height:1;
+    letter-spacing:-.03em;margin:18px 0 16px;white-space:nowrap}
   h1 em{font-style:normal;color:var(--brand)}
   .sub{color:var(--dim);font-size:23px;line-height:1.45;max-width:44ch}
   .lad{display:flex;gap:7px;margin-top:auto}
@@ -57,18 +57,37 @@
   </div>
 
   <div class="nums">
-    <div class="n"><b id="tracks">6 673</b><span>разноса</span></div>
-    <div class="n"><b id="artists">3 960</b><span>исполнителя</span></div>
-    <div class="n"><b id="users">984</b><span>заказчика</span></div>
-    <div class="n"><b id="streams">273</b><span>стрима</span></div>
+    <div class="n"><b id="tracks">6 673</b><span id="tracksL">разноса</span></div>
+    <div class="n"><b id="artists">3 960</b><span id="artistsL">исполнителей</span></div>
+    <div class="n"><b id="users">984</b><span id="usersL">заказчика</span></div>
+    <div class="n"><b id="streams">273</b><span id="streamsL">стрима</span></div>
     <div class="dom">farymastats.info</div>
   </div>
 </div>
 <script>
   const q = new URLSearchParams(location.search);
   const nice = n => Number(n).toLocaleString('ru-RU').replace(/ /g, ' ');
-  ['tracks', 'artists', 'users', 'streams'].forEach(k => {
-    if (q.get(k)) document.getElementById(k).textContent = nice(q.get(k));
+
+  /* Цифры меняются каждый день, а с ними и окончание: «6 673 разноса»,
+     но «3 960 исполнителей». Склоняем так же, как на сайте. */
+  const plural = (n, one, few, many) => {
+    const a = Math.abs(n) % 100, b = a % 10;
+    if (a > 10 && a < 20) return many;
+    if (b > 1 && b < 5) return few;
+    if (b === 1) return one;
+    return many;
+  };
+  const СЛОВА = {
+    tracks:  ['разнос', 'разноса', 'разносов'],
+    artists: ['исполнитель', 'исполнителя', 'исполнителей'],
+    users:   ['заказчик', 'заказчика', 'заказчиков'],
+    streams: ['стрим', 'стрима', 'стримов']
+  };
+  Object.keys(СЛОВА).forEach(k => {
+    const v = q.get(k);
+    if (!v) return;
+    document.getElementById(k).textContent = nice(v);
+    document.getElementById(k + 'L').textContent = plural(+v, ...СЛОВА[k]);
   });
   // ступени шкалы задают ширину полосок — их тоже можно передать
   if (q.get('tiers')) {
