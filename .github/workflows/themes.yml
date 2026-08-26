@@ -39,8 +39,7 @@ jobs:
         run: |
           EXTRA=""
           if [ "$IN_RETRY" = "true" ]; then EXTRA="--retry-missing"; fi
-          node scripts/animethemes.mjs $IN_ARGS --limit "${IN_LIMIT:-1200}" \
-            --max-minutes 30 $EXTRA
+          eval "node scripts/animethemes.mjs $IN_ARGS --limit ${IN_LIMIT:-1200} --max-minutes 30 $EXTRA"
 
       - name: Закоммитить каталог
         run: |

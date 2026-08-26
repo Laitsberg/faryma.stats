@@ -31,6 +31,7 @@ const CSV_PATH = val('--csv', path.join(ROOT, 'data.csv'));
 const OUT_PATH = val('--out', path.join(ROOT, 'data', 'themes.json'));
 const LIMIT    = +val('--limit', Infinity);
 const RETRY    = has('--retry-missing');
+const RECHECK  = has('--recheck');
 const MAX_MS   = +val('--max-minutes', Infinity) * 60000;
 
 const API   = process.env.AT_API || 'https://api.animethemes.moe';
@@ -95,27 +96,89 @@ function collectSources(ctx) {
 }
 
 /* ---------- поиск тайтла ----------
-   Сначала точное имя, потом общий поиск: в архиве пишут и
-   «Boku no Hero Academia 3rd Season», и просто «Naruto». */
+   В архиве тайтлы пишут по-английски («Your Lie in April»), а у
+   animethemes основное имя — ромадзи («Shigatsu wa Kimi no Uso»).
+   Поэтому точное совпадение по имени срабатывает редко, а общий поиск
+   раньше брал просто первый результат — и «Arcane» превращался в
+   «Kami no Tou». Теперь берём кандидатов вместе с их синонимами
+   (английские названия лежат именно там) и считаем похожесть; если
+   ни один кандидат не похож, честно записываем «не нашлось». */
+
 const norm = s => String(s || '').toLowerCase()
-  .replace(/[!?.,:;''"`~*\-–—_]/g, ' ').replace(/\s+/g, ' ').trim();
+  .replace(/[\[\]!?.,:;''"`~*\-–—_/\\+&#@()]/g, ' ')
+  .replace(/\s+/g, ' ').trim();
+
+const ROMAN = { i:1, ii:2, iii:3, iv:4, v:5, vi:6, vii:7, viii:8, ix:9, x:10 };
+
+/* Номер сезона: «2nd Season», «Season 2», «II», «S2», «2nd Stage».
+   Отсутствие номера считаем первым сезоном. */
+function seasonOf(name) {
+  const t = norm(name);
+  let m = t.match(/(\d+)\s*(?:nd|rd|th|st)?\s+(?:season|stage|shou)\b/) ||
+          t.match(/\b(?:season|stage)\s*(\d+)\b/) ||
+          t.match(/\bs(\d)\b/);
+  if (m) return +m[1];
+  m = t.match(/\b(ii|iii|iv|v|vi|vii|viii|ix|x)\s*$/);
+  if (m) return ROMAN[m[1]];
+  m = t.match(/\s(\d)\s*$/);
+  if (m) return +m[1];
+  return 1;
+}
+function partOf(name) {
+  const m = norm(name).match(/\bpart\s*(\d+)\b/);
+  return m ? +m[1] : 0;
+}
+
+/* Слова, которые ничего не различают: они есть у половины тайтлов. */
+const STOP = new Set(['the','a','an','tv','movie','season','part','no','wa','ni','to','of','and','2nd','3rd','4th','5th','1st','hen','shou']);
+const words = s => norm(s).split(' ').filter(w => w && !STOP.has(w));
+
+/* Коэффициент Дайса по словам: 1 — одно и то же, 0 — ничего общего. */
+function dice(a, b) {
+  const A = new Set(words(a)), B = new Set(words(b));
+  if (!A.size || !B.size) return 0;
+  let common = 0;
+  for (const w of A) if (B.has(w)) common++;
+  return 2 * common / (A.size + B.size);
+}
+
+/* Похожесть запроса на кандидата: лучшее из основного имени и синонимов,
+   со штрафом за несовпадение сезона или части. */
+function score(query, cand) {
+  const names = [cand.name, ...(cand.animesynonyms || []).map(x => x.text)].filter(Boolean);
+  let best = 0;
+  for (const n of names) best = Math.max(best, norm(n) === norm(query) ? 1 : dice(query, n));
+  const seasonOk = names.some(n => seasonOf(n) === seasonOf(query));
+  const partOk   = names.some(n => partOf(n)   === partOf(query));
+  if (!seasonOk) best *= 0.45;
+  if (!partOk)   best *= 0.6;
+  return best;
+}
+
+const MIN_SCORE = +val('--min-score', 0.5);
 
 async function findAnime(name) {
   const inc = 'include=animethemes.song.artists';
+
+  // 1. точное имя
   let j = await get(`/anime?filter[name]=${encodeURIComponent(name)}&${inc}&page[size]=1`);
   let a = j?.anime?.[0];
-  if (a) return { a, how: 'точно' };
+  if (a) return { a, how: 'точно', score: 1 };
 
+  // 2. общий поиск — кандидаты приходят вместе с синонимами
   await sleep(DELAY);
-  j = await get(`/search?q=${encodeURIComponent(name)}&fields[search]=anime`);
-  const list = j?.search?.anime || [];
-  const want = norm(name);
-  const hit = list.find(x => norm(x.name) === want) || list[0];
-  if (!hit) return null;
+  j = await get(`/search?q=${encodeURIComponent(name)}&fields[search]=anime&include[anime]=animesynonyms`);
+  const list = (j?.search?.anime || []).slice(0, 6);
+  if (!list.length) return null;
+
+  let hit = null, best = 0;
+  for (const c of list) { const s = score(name, c); if (s > best) { best = s; hit = c; } }
+  if (!hit || best < MIN_SCORE) return { miss: true, best, name: hit?.name || '' };
 
   await sleep(DELAY);
   const full = await get(`/anime/${encodeURIComponent(hit.slug)}?${inc}`);
-  return full?.anime ? { a: full.anime, how: norm(hit.name) === want ? 'поиском' : 'похожее' } : null;
+  if (!full?.anime) return null;
+  return { a: full.anime, how: best >= 0.99 ? 'точно' : 'похоже', score: +best.toFixed(2) };
 }
 
 function pack(a) {
@@ -145,17 +208,41 @@ if (has('--probe')) {
   process.exit(0);
 }
 
+/* --try «имя,имя,…» — посмотреть, кого и с каким счётом находит поиск */
+if (has('--try')) {
+  for (const name of val('--try', '').split('|')) {
+    if (!name.trim()) continue;
+    const j = await get(`/search?q=${encodeURIComponent(name)}&fields[search]=anime&include[anime]=animesynonyms`);
+    const list = (j?.search?.anime || []).slice(0, 6);
+    console.log(`\n${name}  (сезон ${seasonOf(name)})`);
+    list.map(c => [score(name, c), c]).sort((a, b) => b[0] - a[0])
+      .forEach(([s, c]) => console.log(`  ${s.toFixed(2)}  ${c.name}   [${(c.animesynonyms||[]).map(x=>x.text).slice(0,3).join(' | ')}]`));
+    await sleep(DELAY);
+  }
+  process.exit(0);
+}
+
 const ctx = loadSiteCode();
 const sources = collectSources(ctx);
 let cache = {};
 try { cache = JSON.parse(fs.readFileSync(OUT_PATH, 'utf8')).sources || {}; } catch {}
 
+// Записи без поля score сделаны старым поиском, который брал первый
+// результат подряд. Им доверять нельзя — при --recheck спрашиваем заново.
 const todo = sources.filter(s => {
   const hit = cache[s.name];
   if (!hit) return true;
+  if (RECHECK && hit.score === undefined) return true;
   if (RETRY && !hit.slug) return true;
   return false;
 }).slice(0, LIMIT);
+
+// Названия источников со временем чистятся, и в кэше остаются ключи,
+// которых в архиве больше нет. Выкидываем.
+const alive = new Set(sources.map(s => s.name));
+let dropped = 0;
+for (const k of Object.keys(cache)) if (!alive.has(k)) { delete cache[k]; dropped++; }
+if (dropped) console.log(`выкинул устаревших ключей:  ${dropped}`);
 
 console.log(`аниме-источников в архиве: ${sources.length}`);
 console.log(`уже в кэше:                ${Object.keys(cache).length}`);
@@ -181,8 +268,13 @@ for (const s of todo) {
   }
   try {
     const r = await findAnime(s.name);
-    cache[s.name] = r ? { tracks: s.n, how: r.how, ...pack(r.a) } : { tracks: s.n, slug: null };
-    if (r) { found++; themes += cache[s.name].themes.length; }
+    if (r && r.a) {
+      cache[s.name] = { tracks: s.n, how: r.how, score: r.score, ...pack(r.a) };
+      found++; themes += cache[s.name].themes.length;
+    } else {
+      cache[s.name] = { tracks: s.n, slug: null,
+        near: r?.miss ? r.name : '', score: r?.miss ? +r.best.toFixed(2) : 0 };
+    }
   } catch (e) {
     console.error(`  ! ${s.name}: ${e.message}`);
     if (++fails > 20) { console.error('слишком много ошибок, останавливаюсь'); break; }
