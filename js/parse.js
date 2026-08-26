@@ -105,12 +105,20 @@ function parseSource(what) {
   // Перед названием стоят пометки о типе трека, иногда несколько подряд:
   // «OST; Final Fantasy», «ep 9; OST; Love Live!», «VN; Umineko».
   // Срезаем их по одной, пока начало не окажется собственно названием.
-  const MARKER = /^\s*(?:OST|VN|UTA\s+OST|Character\s+Song|Main\s+Theme|Insert(?:\s+Song)?|Theme|ep\.?\s*\d+|\d+(?:\/\d+)?\s+(?:Opening|Ending|OP|ED))\s*[;:]\s*/i;
+  // Разделитель после пометки бывает любым: «OST; Final Fantasy»,
+  // «OST, Hunter x Hunter», «ep 15, OST; Re:Zero». Запятая встречается
+  // чаще точки с запятой — из-за неё 150 источников оставались с
+  // хвостом «OST, …» и уезжали в отдельные карточки.
+  const MARKER = /^\s*(?:OST(?:\s+[^;:,\]]{1,24})?|VN|UTA(?:\s+OST)?|Character\s+Song|Main\s+Theme|Insert(?:\s+Song)?|Theme|ep\.?\s*\d+(?:\s*(?:[-–]|and)\s*\d+)?|(?:OP|ED)\s+Theme|Opening|Ending|OP|ED|\d+(?:\/\d+)?\s+(?:Opening|Ending|OP|ED))\s*[;:,]\s*/i;
   let guard = 6;
   while (guard-- && MARKER.test(t)) t = t.replace(MARKER, '');
 
-  // Форма без точки с запятой: «1 Opening Durarara!!» и просто «Ending Re:Zero»
+  // Форма без разделителя вовсе: «1 Opening Durarara!!», «Ending Re:Zero»,
+  // «OST Hannibal», «UTA from One Piece Film: Red»
   t = t.replace(/^\s*(?:\d+(?:\/\d+)?\s+)?(?:Opening|Ending|OP|ED|Insert(?:\s+Song)?|Theme)\s+/i, '');
+  t = t.replace(/^\s*UTA\s+from\s+/i, '');
+  t = t.replace(/^\s*(?:OST|VN)\s+(?=[A-ZА-Я0-9])/, '');
+  t = t.replace(/^\s*ep\.?\s*\d+(?:\s*(?:[-–]|and)\s*\d+)?\s+(?=[A-ZА-Я0-9])/i, '');
 
   return t
     .split('/')[0]
