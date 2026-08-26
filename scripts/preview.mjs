@@ -21,7 +21,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 function siteCode() {
   const ctx = vm.createContext({ console, URL });
-  for (const f of ['js/config.js', 'js/parse.js'])
+  for (const f of ['js/config.js', 'js/aliases.js', 'js/parse.js'])
     vm.runInContext(fs.readFileSync(path.join(ROOT, f), 'utf8'), ctx, { filename: f });
   return ctx;
 }

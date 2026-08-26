@@ -60,7 +60,7 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
    чтобы «уникальный исполнитель» здесь и на странице означал одно и то же */
 function loadSiteCode() {
   const ctx = vm.createContext({ console, URL });
-  for (const f of ['js/config.js', 'js/parse.js']) {
+  for (const f of ['js/config.js', 'js/aliases.js', 'js/parse.js']) {
     vm.runInContext(fs.readFileSync(path.join(ROOT, f), 'utf8'), ctx, { filename: f });
   }
   return ctx;

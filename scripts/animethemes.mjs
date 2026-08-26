@@ -87,7 +87,7 @@ async function shikiSearch(q, attempt = 0) {
 /* ---------- разбор берём из кода сайта ---------- */
 function loadSiteCode() {
   const ctx = vm.createContext({ console, URL });
-  for (const f of ['js/config.js', 'js/parse.js'])
+  for (const f of ['js/config.js', 'js/aliases.js', 'js/parse.js'])
     vm.runInContext(fs.readFileSync(path.join(ROOT, f), 'utf8'), ctx, { filename: f });
   return ctx;
 }
@@ -105,8 +105,8 @@ function collectSources(ctx) {
     { header: true, skipEmptyLines: 'greedy' }).data;
   // Регистр сводим так же, как на сайте: «ULTRAKILL» и «Ultrakill» —
   // одна вселенная, и спрашивать её дважды незачем.
-  const canon = ctx.dropNumberPrefix(ctx.canonMap(
-    rows.map(r => ctx.parseSource(r['Что'])).filter(Boolean), ctx.nameKey));
+  const canon = ctx.applySourceAlias(ctx.dropNumberPrefix(ctx.canonMap(
+    rows.map(r => ctx.parseSource(r['Что'])).filter(Boolean), ctx.nameKey)));
 
   const counts = new Map();
   rows.forEach(r => {

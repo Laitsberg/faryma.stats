@@ -138,6 +138,8 @@ function parseSource(what) {
     '(?:OP|ED)\\s+Theme',
     // «Track 10; Naruto», «OVA 5; OST; Hellsing», «5 & 6 Ending Hunter x Hunter»
     'Track\\s*\\d+', 'OVA\\s*\\d*', 'Disc\\s*\\d+',
+    // «2003г.; Сорвиголова» — год стоит перед названием, а не после
+    '\\d{4}\\s*г\\.?',
     '\\d+\\s*(?:&|and)\\s*\\d+\\s+(?:Opening|Ending|OP|ED)',
     // «OP 1, Vinland Saga» — номер стоит и до пометки, и после неё
     '(?:Opening|Ending|OP|ED)\\s*\\d+(?:\\/\\d+)?',
@@ -146,24 +148,27 @@ function parseSource(what) {
   ].join('|') + ')\\s*[;:,]\\s*', 'i');
   // Перед пометкой иногда стоит вид носителя: «Game Opening; …»,
   // «Movie Kaguya-sama …», «OST; webcomic Homestuck».
-  const MEDIA = /^\s*(?:Game|Movie|Anime|Film|Series|TV|web\s*comic|webcomic)\s*(?:[-–]\s*)?(?=[^\s])/i;
+  const MEDIA = /^\s*(?:Game|Movie|Anime|Film|Series|TV|web\s*comic|webcomic|дорама|аниме|фильм|сериал|мюзикл)\s*:?\s*(?:[-–]\s*)?(?=[^\s])/i;
   // как записано, а не откуда: «Piano, Howl's Moving Castle»,
   // «Concert Live, OST, Evangelion 3.0»
   const FORMAT = /^\s*(?:Piano|Concert(?:\s+Live)?|Live|Orchestra|Orchestral|Acoustic|Vocal|Instrumental|Remix|Cover|Medley|Arrange|Arrangement)\s*[,;]\s*/i;
 
-  let guard = 8;
-  while (guard--) {
-    if (MARKER.test(t)) { t = t.replace(MARKER, ''); continue; }
-    if (FORMAT.test(t)) { t = t.replace(FORMAT, ''); continue; }
-    // «Game» срезаем только как вид носителя: «Game of Thrones» —
-    // это название, а не игра
-    if (MEDIA.test(t) && !/^\s*Game\s+of\b/i.test(t) &&
-        !/^\s*(?:Movie|Film|Series)\s+(?:of|the)\b/i.test(t)) {
-      const cut = t.replace(MEDIA, '');
-      if (cut && cut !== t) { t = cut; continue; }
+  const срезатьПометки = () => {
+    let guard = 8;
+    while (guard--) {
+      if (MARKER.test(t)) { t = t.replace(MARKER, ''); continue; }
+      if (FORMAT.test(t)) { t = t.replace(FORMAT, ''); continue; }
+      // «Game» срезаем только как вид носителя: «Game of Thrones» —
+      // это название, а не игра
+      if (MEDIA.test(t) && !/^\s*Game\s+of\b/i.test(t) &&
+          !/^\s*(?:Movie|Film|Series)\s+(?:of|the)\b/i.test(t)) {
+        const cut = t.replace(MEDIA, '');
+        if (cut && cut !== t) { t = cut; continue; }
+      }
+      break;
     }
-    break;
-  }
+  };
+  срезатьПометки();
 
   // Форма без разделителя вовсе: «1 Opening Durarara!!», «Ending Re:Zero»,
   // «OST Hannibal», «UTA from One Piece Film: Red»
@@ -183,6 +188,10 @@ function parseSource(what) {
   // номер трека перед пометкой: «3 OST Bleach», «26 OP One Piece»
   t = t.replace(/^\s*\d+\s+(?:OST|OP|ED)\s+(?=[A-ZА-Я0-9])/i, '');
 
+  // Сняв пометку без разделителя, можно открыть следующую:
+  // «Opening game - SCARLET NEXUS» → «game - SCARLET NEXUS» → «SCARLET NEXUS».
+  срезатьПометки();
+
   return t
     // За слэшем в пробелах идёт русский перевод: «Fate/Zero / Судьба:
     // Начало». Слэш без пробелов — часть названия, и резать по нему
@@ -198,6 +207,10 @@ function parseSource(what) {
     // лишние; одиночную кавычку внутри трогать нельзя
     .replace(/^\s*"(.+)"\s*$/, '$1')
     .replace(/^\s*«(.+)»\s*$/, '$1')
+    // год в конце пишут по-русски: «Doom 2016г.», «Devil May Cry 2025 г.».
+    // Приводим к общему виду, иначе одно и то же название с годом и без
+    // расходится по разным вселенным
+    .replace(/\s*[,;]?\s*(\d{4})\s*г\.?\s*$/, ' ($1)')
     .trim();
 }
 
@@ -304,6 +317,15 @@ function dropNumberPrefix(canon) {
     const m = key.match(/^\d{1,2}\s+(.+)$/);
     if (m && canon.has(m[1])) canon.set(key, canon.get(m[1]));
   });
+  return canon;
+}
+
+/* Свести написания одной вселенной к одному: список в js/aliases.js.
+   Работает поверх той же карты, что и склейка регистра, поэтому
+   действует и на сайте, и в скриптах, которые собирают каталог. */
+function applySourceAlias(canon) {
+  if (typeof SOURCE_ALIAS !== 'object') return canon;
+  for (const [из, во] of Object.entries(SOURCE_ALIAS)) canon.set(nameKey(из), во);
   return canon;
 }
 
