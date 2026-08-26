@@ -45,6 +45,7 @@ function load() {
     .then(r => r.ok ? r.json() : null)
     .then(j => {
       THEMES = (j && j.sources) || {};
+      BY_SLUG = null;
       // карточка могла открыться раньше, чем приехал каталог
       if (ROWS.length && location.hash.startsWith('#source=')) routeProfile();
     })

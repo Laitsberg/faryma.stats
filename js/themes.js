@@ -15,7 +15,12 @@
 const tkey = s => String(s || '').toLowerCase()
   .replace(/\([^)]*\)|\[[^\]]*\]/g, ' ')
   .replace(/\b(?:tv|full|size|ver|version|op|ed|opening|ending)\b/g, ' ')
-  .replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+  .replace(/[^\p{L}\p{N}]+/gu, ' ')
+  // цифра, слипшаяся с буквами, — отдельное слово: «BREAK IN2 THE NITE»
+  // и «Break in 2 the Nite» это одна и та же песня
+  .replace(/(\p{L})(\p{N})/gu, '$1 $2')
+  .replace(/(\p{N})(\p{L})/gu, '$1 $2')
+  .replace(/\s+/g, ' ').trim();
 
 /* Ромадзи пишут по-разному: «Shougeki» и «Shogeki», «Hadaka no Yuusha»
    и «Hadaka no Yusha», «Tabi no Tochuu» и «Tochu». Схлопываем удвоенные
@@ -61,6 +66,25 @@ function themeEntry(names) {
   return null;
 }
 
+/* Все разносы, попавшие в один и тот же тайтл каталога.
+   Одну вселенную в архиве пишут по-разному: «Initial D» и «Initial D
+   First Stage» — это один тайтл, и опенинг, принесённый под одним
+   именем, засчитывается под обоими. Иначе в соседней карточке он
+   числится непринесённым, хотя разнос был. */
+let BY_SLUG = null;
+function rowsOfSlug(slug) {
+  if (!BY_SLUG) {
+    BY_SLUG = new Map();
+    ROWS.forEach(r => {
+      const h = r.source && THEMES[r.source];
+      if (!h || !h.slug) return;
+      if (!BY_SLUG.has(h.slug)) BY_SLUG.set(h.slug, []);
+      BY_SLUG.get(h.slug).push(r);
+    });
+  }
+  return BY_SLUG.get(slug) || [];
+}
+
 /* Блок «что ещё есть у тайтла» для одного сезона.
    rows — разносы этого сезона. */
 function themeBlock(rows, seen) {
@@ -76,6 +100,9 @@ function themeBlock(rows, seen) {
 
   // один разнос закрывает одну тему: если тайтл приносили дважды,
   // вторая строка не должна отметить заодно и соседний опенинг
+  // считаем по всем разносам этого тайтла, а не только по этой карточке
+  rows = rowsOfSlug(h.slug).length ? rowsOfSlug(h.slug) : rows;
+
   const used = new Set();
   const done = list.map(t => {
     const i = rows.findIndex((r, i) => !used.has(i) && sameTitle(r.title, t.title));
