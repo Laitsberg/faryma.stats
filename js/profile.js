@@ -6,38 +6,70 @@
    закрывает.
    ============================================================ */
 
+/* Куда возвращаться. Из карточки исполнителя можно уйти во вселенную,
+   оттуда к другому исполнителю и так сколько угодно — крестик закрывает
+   всю стопку разом, поэтому рядом нужна стрелка на шаг назад. */
+let pfStack = [];
+
 function initProfile() {
   $('pfClose').onclick = closeProfile;
   $('pfBack').onclick = closeProfile;
+  $('pfPrev').onclick = goBack;
 
-  // клик по любому элементу с data-artist / data-user / data-stream,
-  // где бы он ни был
+  // клик по любому элементу с data-artist / data-user / data-source /
+  // data-stream, где бы он ни был
   document.addEventListener('click', e => {
     const a = e.target.closest('[data-artist]');
-    if (a) { e.preventDefault(); location.hash = 'artist=' + encodeURIComponent(a.dataset.artist); return; }
+    if (a) { e.preventDefault(); goCard('artist=' + encodeURIComponent(a.dataset.artist)); return; }
     const u = e.target.closest('[data-user]');
-    if (u) { e.preventDefault(); location.hash = 'user=' + encodeURIComponent(u.dataset.user); return; }
+    if (u) { e.preventDefault(); goCard('user=' + encodeURIComponent(u.dataset.user)); return; }
     const src = e.target.closest('[data-source]');
-    if (src) { e.preventDefault(); location.hash = 'source=' + encodeURIComponent(src.dataset.source); return; }
+    if (src) { e.preventDefault(); goCard('source=' + encodeURIComponent(src.dataset.source)); return; }
     const s = e.target.closest('[data-stream]');
-    if (s) { e.preventDefault(); location.hash = 'stream=' + s.dataset.stream; }
+    if (s) { e.preventDefault(); goCard('stream=' + s.dataset.stream); }
   });
 
   addEventListener('hashchange', routeProfile);
-  addEventListener('keydown', e => { if (e.key === 'Escape' && !$('profile').hidden) closeProfile(); });
+  addEventListener('keydown', e => {
+    if ($('profile').hidden) return;
+    if (e.key === 'Escape') closeProfile();
+    // стрелка влево — тот же шаг назад, если не набирают текст
+    if (e.key === 'ArrowLeft' && pfStack.length && !/^(INPUT|SELECT|TEXTAREA)$/.test(document.activeElement?.tagName)) goBack();
+  });
   routeProfile();
+}
+
+/* Переход на другую карточку: текущую запоминаем, чтобы было куда вернуться */
+function goCard(hash) {
+  const now = location.hash;
+  if (!$('profile').hidden && now && now !== '#' + hash) pfStack.push(now);
+  location.hash = hash;
+}
+
+function goBack() {
+  const prev = pfStack.pop();
+  if (prev) location.hash = prev;
+  else closeProfile();
 }
 
 function routeProfile() {
   const m = location.hash.match(/^#(artist|user|source|stream)=(.*)$/);
-  if (!m) { hideProfile(); return; }
+  if (!m) { pfStack = []; hideProfile(); return; }
+
+  // Назад нажали в браузере, а не у нас: хэш совпал с вершиной стопки,
+  // значит этот шаг уже пройден и запоминать его повторно не надо.
+  if (pfStack[pfStack.length - 1] === location.hash) pfStack.pop();
+
   if (m[1] === 'artist')      showArtist(decodeURIComponent(m[2]));
   else if (m[1] === 'user')   showUser(decodeURIComponent(m[2]));
   else if (m[1] === 'source') showSource(decodeURIComponent(m[2]));
   else                        showStream(+m[2]);
+
+  $('pfPrev').hidden = !pfStack.length;
 }
 
 function closeProfile() {
+  pfStack = [];
   // history.back вернёт на состояние без хэша, если мы сами его ставили
   if (location.hash) history.pushState('', '', location.pathname + location.search);
   hideProfile();
@@ -45,6 +77,7 @@ function closeProfile() {
 
 function hideProfile() {
   $('profile').hidden = true;
+  $('pfPrev').hidden = true;
   document.body.style.overflow = '';
 }
 
