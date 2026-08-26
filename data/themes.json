@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-26T09:38:32.470Z",
+ "generated": "2026-08-26T12:27:21.195Z",
  "source": "animethemes.moe",
  "note": "how — как нашёлся тайтл: точно / поиском / похожее",
  "sources": {
@@ -4601,35 +4601,6 @@
     }
    ]
   },
-  "Umineko: When They Cry": {
-   "tracks": 3,
-   "v": 5,
-   "how": "точно",
-   "score": 1,
-   "mal": null,
-   "slug": "umineko_no_naku_koro_ni",
-   "name": "Umineko no Naku Koro ni",
-   "year": 2009,
-   "season": "Summer",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "One-winged Bird",
-     "artists": [
-      "Akiko Shikata"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "la divina tragedia ~Makyoku~",
-     "artists": []
-    }
-   ]
-  },
   "Macross Delta": {
    "tracks": 3,
    "v": 5,
@@ -6349,26 +6320,6 @@
     }
    ]
   },
-  "Евангелион нового поколения: Конец Евангелиона": {
-   "tracks": 2,
-   "v": 5,
-   "how": "по номеру MAL",
-   "score": 1,
-   "mal": 32,
-   "slug": "neon_genesis_evangelion_the_end_of_evangelion",
-   "name": "Neon Genesis Evangelion: The End of Evangelion",
-   "year": 1997,
-   "season": "Summer",
-   "themes": [
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Thanatos -If I Can't Be Yours-",
-     "artists": []
-    }
-   ]
-  },
   "Boku no Hero Academia 3rd Season": {
    "tracks": 2,
    "v": 5,
@@ -8039,38 +7990,6 @@
     }
    ]
   },
-  "Chainsaw Man the Movie: Reze Arc": {
-   "tracks": 2,
-   "v": 5,
-   "how": "точно",
-   "score": 1,
-   "mal": null,
-   "slug": "chainsaw_man_rezehen",
-   "name": "Chainsaw Man: Reze-hen",
-   "year": 2025,
-   "season": "Summer",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "IRIS OUT",
-     "artists": [
-      "Kenshi Yonezu"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "JANE DOE",
-     "artists": [
-      "Kenshi Yonezu",
-      "Hikaru Utada"
-     ]
-    }
-   ]
-  },
   "The Melancholy of Haruhi Suzumiya": {
    "tracks": 2,
    "v": 5,
@@ -8201,87 +8120,6 @@
      "s": "ED8",
      "seq": 8,
      "title": "Moonlight Sonata",
-     "artists": []
-    }
-   ]
-  },
-  "Made in Abyss: The Golden City of the Scorching Sun": {
-   "tracks": 2,
-   "v": 5,
-   "how": "точно",
-   "score": 1,
-   "mal": null,
-   "slug": "made_in_abyss_retsujitsu_no_ougonkyou",
-   "name": "Made in Abyss: Retsujitsu no Ougonkyou",
-   "year": 2022,
-   "season": "Summer",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "Katachi",
-     "artists": [
-      "Riko Azuna"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Endless Embrace",
-     "artists": [
-      "MYTH & ROID"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": 1,
-     "title": "GRAVITY",
-     "artists": [
-      "Arnór Dan"
-     ]
-    }
-   ]
-  },
-  "Tengen Toppa Gurren Lagann": {
-   "tracks": 2,
-   "v": 5,
-   "how": "точно",
-   "score": 1,
-   "mal": null,
-   "slug": "tengen_toppa_gurren_lagann",
-   "name": "Tengen Toppa Gurren Lagann",
-   "year": 2007,
-   "season": "Spring",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Sorairo Days",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "UNDERGROUND",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "happily ever after",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED3",
-     "seq": 3,
-     "title": "Minna no Peace",
      "artists": []
     }
    ]
@@ -8579,57 +8417,6 @@
      "title": "Mosaic Kakera",
      "artists": [
       "SunSet Swish"
-     ]
-    }
-   ]
-  },
-  "Rurouni Kenshin: Meiji Kenkaku Romantan 2023 г.": {
-   "tracks": 2,
-   "v": 5,
-   "how": "похоже",
-   "score": 0.86,
-   "mal": null,
-   "slug": "rurouni_kenshin_meiji_kenkaku_romantan_2023",
-   "name": "Rurouni Kenshin: Meiji Kenkaku Romantan (2023)",
-   "year": 2023,
-   "season": "Summer",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": 1,
-     "title": "Hiten",
-     "artists": [
-      "Ayase",
-      "R-shitei"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Kissaki",
-     "artists": [
-      "Reol"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "Rurou no Katashiro",
-     "artists": [
-      "Masaki Suda",
-      "TOKYO SKA PARADISE ORCHESTRA"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Sonzai Shoumei",
-     "artists": [
-      "KID PHENOMENON"
      ]
     }
    ]
@@ -9104,40 +8891,6 @@
     }
    ]
   },
-  "Chi.: Chikyuu no Undou ni Tsuite": {
-   "tracks": 2,
-   "v": 5,
-   "how": "точно",
-   "score": 1,
-   "mal": null,
-   "slug": "chi_chikyuu_no_undou_ni_tsuite",
-   "name": "Chi.: Chikyuu no Undou ni Tsuite",
-   "year": 2024,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Kaijuu",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Aporia",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Hebi",
-     "artists": []
-    }
-   ]
-  },
   "Blend S": {
    "tracks": 2,
    "v": 5,
@@ -9448,47 +9201,6 @@
      "s": "ED2",
      "seq": 2,
      "title": "Sekai no Himitsu",
-     "artists": []
-    }
-   ]
-  },
-  "Initial D First Stage": {
-   "tracks": 2,
-   "v": 5,
-   "how": "точно",
-   "score": 1,
-   "mal": null,
-   "slug": "initial_d_first_stage",
-   "name": "Initial D First Stage",
-   "year": 1998,
-   "season": "Spring",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": 1,
-     "title": "Around the World",
-     "artists": []
-    },
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "Break in 2 the Nite",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Rage Your Dream",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Kiseki no Hana (Flower of Miracles)",
      "artists": []
     }
    ]
@@ -9933,70 +9645,6 @@
      "artists": [
       "ASOBI Doumei"
      ]
-    }
-   ]
-  },
-  "Hunter x Hunter (2011)": {
-   "tracks": 4,
-   "v": 5,
-   "how": "точно",
-   "score": 1,
-   "mal": null,
-   "slug": "hunter_x_hunter_2011",
-   "name": "Hunter x Hunter",
-   "year": 2011,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "departure!",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Just Awake",
-     "artists": [
-      "Fear, and Loathing in Las Vegas"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Hunting for Your Dream.",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED3",
-     "seq": 3,
-     "title": "REASON",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED4",
-     "seq": 4,
-     "title": "Nagareboshi Kirari",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED5",
-     "seq": 5,
-     "title": "Hyoriittai",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED6",
-     "seq": 6,
-     "title": "Hyoriittai -second version-",
-     "artists": []
     }
    ]
   },
@@ -11749,47 +11397,6 @@
     }
    ]
   },
-  "Haikyuu!! Second Season": {
-   "tracks": 1,
-   "v": 5,
-   "how": "точно",
-   "score": 1,
-   "mal": null,
-   "slug": "haikyuu_second_season",
-   "name": "Haikyuu!! Second Season",
-   "year": 2015,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": 1,
-     "title": "I'm A Believer",
-     "artists": []
-    },
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "Fly High!!",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Climber",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Hatsunetsu",
-     "artists": []
-    }
-   ]
-  },
   "Working'!!": {
    "tracks": 1,
    "v": 5,
@@ -12847,63 +12454,6 @@
      "artists": [
       "Kalafina"
      ]
-    }
-   ]
-  },
-  "Digimon Universe App Monsters": {
-   "tracks": 1,
-   "v": 5,
-   "how": "точно",
-   "score": 1,
-   "mal": null,
-   "slug": "digimon_universe_appli_monsters",
-   "name": "Digimon Universe: Appli Monsters",
-   "year": 2016,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": 1,
-     "title": "DiVE!!",
-     "artists": []
-    },
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "Gatchen!",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Aoi Honoo no Syndrome",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Ai",
-     "artists": [
-      "Ami Wajima"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED3",
-     "seq": 3,
-     "title": "Little B",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED4",
-     "seq": 4,
-     "title": "Perfect World",
-     "artists": []
     }
    ]
   },
@@ -14239,37 +13789,6 @@
      "seq": null,
      "title": "Game Over",
      "artists": []
-    }
-   ]
-  },
-  "Attack on Titan Season 2": {
-   "tracks": 1,
-   "v": 5,
-   "how": "точно",
-   "score": 1,
-   "mal": null,
-   "slug": "shingeki_no_kyojin_season_2",
-   "name": "Shingeki no Kyojin Season 2",
-   "year": 2017,
-   "season": "Spring",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Shinzou wo Sasageyo!",
-     "artists": [
-      "Linked Horizon"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Yuugure no Tori",
-     "artists": [
-      "Shinsei Kamattechan"
-     ]
     }
    ]
   },
@@ -15763,37 +15282,6 @@
     }
    ]
   },
-  "Destiny of the Shrine Maiden": {
-   "tracks": 1,
-   "v": 5,
-   "how": "точно",
-   "score": 1,
-   "mal": null,
-   "slug": "kannazuki_no_miko",
-   "name": "Kannazuki no Miko",
-   "year": 2004,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Re-sublimity",
-     "artists": [
-      "KOTOKO"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Agony",
-     "artists": [
-      "KOTOKO"
-     ]
-    }
-   ]
-  },
   "The Eminence in Shadow Season 2": {
    "tracks": 1,
    "v": 5,
@@ -16870,55 +16358,6 @@
     }
    ]
   },
-  "Дневник будущего": {
-   "tracks": 1,
-   "v": 5,
-   "how": "по номеру MAL",
-   "score": 1,
-   "mal": 10620,
-   "slug": "mirai_nikki",
-   "name": "Mirai Nikki",
-   "year": 2011,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": 1,
-     "title": "Kuusou Mesorogiwi",
-     "artists": [
-      "Yousei Teikoku"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "Dead END",
-     "artists": [
-      "Faylan"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Blood Teller",
-     "artists": [
-      "Faylan"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "filament",
-     "artists": [
-      "Yousei Teikoku"
-     ]
-    }
-   ]
-  },
   "Engage Kiss": {
    "tracks": 1,
    "v": 5,
@@ -16946,38 +16385,6 @@
     }
    ]
   },
-  "Attack on Titan Season 3": {
-   "tracks": 1,
-   "v": 5,
-   "how": "точно",
-   "score": 1,
-   "mal": null,
-   "slug": "shingeki_no_kyojin_season_3",
-   "name": "Shingeki no Kyojin Season 3",
-   "year": 2018,
-   "season": "Summer",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Red Swan",
-     "artists": [
-      "Yoshiki",
-      "HYDE"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Akatsuki no Chinkonka",
-     "artists": [
-      "Linked Horizon"
-     ]
-    }
-   ]
-  },
   "Your Forma": {
    "tracks": 1,
    "v": 5,
@@ -17002,37 +16409,6 @@
      "seq": null,
      "title": "Neo-Luddite",
      "artists": []
-    }
-   ]
-  },
-  "Rock Is a Lady's Modest": {
-   "tracks": 1,
-   "v": 5,
-   "how": "похоже",
-   "score": 0.72,
-   "mal": null,
-   "slug": "rock_wa_lady_no_tashinami_deshite",
-   "name": "Rock wa Lady no Tashinami deshite",
-   "year": 2025,
-   "season": "Spring",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Ready to Rock",
-     "artists": [
-      "BAND-MAID"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Yume ja Nai nara Nannano sa",
-     "artists": [
-      "Little Glee Monster"
-     ]
     }
    ]
   },
@@ -17366,44 +16742,6 @@
      "seq": null,
      "title": "Nanbaka Datsugoku Riron♪!",
      "artists": []
-    }
-   ]
-  },
-  "Wolf’s Rain": {
-   "tracks": 1,
-   "v": 5,
-   "how": "точно",
-   "score": 1,
-   "mal": null,
-   "slug": "wolfs_rain",
-   "name": "Wolf's Rain",
-   "year": 2003,
-   "season": "Winter",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Stray",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Gravity",
-     "artists": [
-      "Maaya Sakamoto"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Tell Me What the Rain Knows",
-     "artists": [
-      "Maaya Sakamoto"
-     ]
     }
    ]
   },
@@ -18194,201 +17532,6 @@
     }
    ]
   },
-  "Ninja Slayer From Animation": {
-   "tracks": 1,
-   "v": 5,
-   "how": "точно",
-   "score": 1,
-   "mal": null,
-   "slug": "ninja_slayer_from_animation",
-   "name": "Ninja Slayer from Animation",
-   "year": 2015,
-   "season": "Spring",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "BACK IN BLACK",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Kilmister",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Halo Of Sorrow From ANIMATION",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED3",
-     "seq": 3,
-     "title": "Gekijou Shihainin no Theme",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED4",
-     "seq": 4,
-     "title": "SRKEEN",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED5",
-     "seq": 5,
-     "title": "RADIO",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED6",
-     "seq": 6,
-     "title": "Ninja Slayer",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED7",
-     "seq": 7,
-     "title": "Ninja Prayer",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED8",
-     "seq": 8,
-     "title": "Suicidal Bunny",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED9",
-     "seq": 9,
-     "title": "Hide",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED10",
-     "seq": 10,
-     "title": "Jag Jag",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED11",
-     "seq": 11,
-     "title": "Aurashi No Ken",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED12",
-     "seq": 12,
-     "title": "NEO CYBER MADNESS",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED13",
-     "seq": 13,
-     "title": "Purple My Ghost",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED14",
-     "seq": 14,
-     "title": "Mondana (NINJA MIX)",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED15",
-     "seq": 15,
-     "title": "Fantastic Magic",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED16",
-     "seq": 16,
-     "title": "NINJA SOUL",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED17",
-     "seq": 17,
-     "title": "TEAR OF THE PIERROT",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED18",
-     "seq": 18,
-     "title": "Dr.K",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED19",
-     "seq": 19,
-     "title": "Alone",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED20",
-     "seq": 20,
-     "title": "Doro no Ame",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED21",
-     "seq": 21,
-     "title": "Hight Speed",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED22",
-     "seq": 22,
-     "title": "sick hack -ninatsu ver.-",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED23",
-     "seq": 23,
-     "title": "Body",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED24",
-     "seq": 24,
-     "title": "KHAKKHARA",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED25",
-     "seq": 25,
-     "title": "JET REASON",
-     "artists": []
-    }
-   ]
-  },
   "Megalo Box": {
    "tracks": 1,
    "v": 5,
@@ -18607,55 +17750,6 @@
      "seq": null,
      "title": "Suki ni Shina yo",
      "artists": []
-    }
-   ]
-  },
-  "Haikyu!! Second Season": {
-   "tracks": 1,
-   "v": 5,
-   "how": "точно",
-   "score": 1,
-   "mal": null,
-   "slug": "haikyuu_second_season",
-   "name": "Haikyuu!! Second Season",
-   "year": 2015,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": 1,
-     "title": "I'm A Believer",
-     "artists": [
-      "SPYAIR"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "Fly High!!",
-     "artists": [
-      "BURNOUT SYNDROMES"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Climber",
-     "artists": [
-      "Galileo Galilei"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Hatsunetsu",
-     "artists": [
-      "tacica"
-     ]
     }
    ]
   },
@@ -19602,89 +18696,6 @@
     }
    ]
   },
-  "Re:Zero. Жизнь с нуля в альтернативном мире": {
-   "tracks": 2,
-   "v": 5,
-   "how": "по номеру MAL",
-   "score": 1,
-   "mal": 31240,
-   "slug": "rezero_kara_hajimeru_isekai_seikatsu",
-   "name": "Re:Zero kara Hajimeru Isekai Seikatsu",
-   "year": 2016,
-   "season": "Spring",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": 1,
-     "title": "Redo",
-     "artists": [
-      "Konomi Suzuki"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "Paradisus-Paradoxum",
-     "artists": [
-      "MYTH & ROID"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "STYX HELIX",
-     "artists": [
-      "MYTH & ROID"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "STRAIGHT BET",
-     "artists": [
-      "MYTH & ROID"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED3",
-     "seq": 3,
-     "title": "Stay Alive",
-     "artists": [
-      "Rie Takahashi"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED4",
-     "seq": 4,
-     "title": "theater D",
-     "artists": [
-      "MYTH & ROID"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED5",
-     "seq": 5,
-     "title": "Chinmoku no Requiem",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED6",
-     "seq": 6,
-     "title": "Wishing",
-     "artists": [
-      "Inori Minase"
-     ]
-    }
-   ]
-  },
   "Shiki": {
    "tracks": 2,
    "v": 5,
@@ -19881,57 +18892,6 @@
      "seq": null,
      "title": "Bio Boosted Armor Guyver",
      "artists": []
-    }
-   ]
-  },
-  "86 Eighty-Six": {
-   "tracks": 2,
-   "v": 5,
-   "how": "точно",
-   "score": 1,
-   "mal": null,
-   "slug": "86_2nd_season",
-   "name": "86 2nd Season",
-   "year": 2021,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Kyoukaisen",
-     "artists": [
-      "amazarashi"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Alchemilla",
-     "artists": [
-      "Regal Lily"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Avid",
-     "artists": [
-      "SawanoHiroyuki[nZk]",
-      "Mizuki"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED3",
-     "seq": 3,
-     "title": "LilaS",
-     "artists": [
-      "SawanoHiroyuki[nZk]",
-      "Honoka Takahashi"
-     ]
     }
    ]
   },
@@ -20455,55 +19415,6 @@
      "title": "Sore wa Chiisana Hikari no You na",
      "artists": [
       "Sayuri"
-     ]
-    }
-   ]
-  },
-  "Higurashi: When They Cry – Gou": {
-   "tracks": 1,
-   "v": 5,
-   "how": "точно",
-   "score": 1,
-   "mal": null,
-   "slug": "higurashi_no_naku_koro_ni_gou",
-   "name": "Higurashi no Naku Koro ni Gou",
-   "year": 2020,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "I believe what you said",
-     "artists": [
-      "Asaka"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Higurashi no Naku Koro ni",
-     "artists": [
-      "Eiko Shimamiya"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Kamisama no Syndrome",
-     "artists": [
-      "Ayane"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED3",
-     "seq": 3,
-     "title": "Fukisokusei Entropy",
-     "artists": [
-      "Ayane"
      ]
     }
    ]
@@ -21408,49 +20319,6 @@
     }
    ]
   },
-  "Джорно Джованны; Невероятное приключение ДжоДжо: Золотой ветер": {
-   "tracks": 1,
-   "v": 5,
-   "how": "по номеру MAL",
-   "score": 0.71,
-   "mal": 37991,
-   "slug": "jojo_no_kimyou_na_bouken_part_5_ougon_no_kaze",
-   "name": "JoJo no Kimyou na Bouken Part 5: Ougon no Kaze",
-   "year": 2018,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": 1,
-     "title": "Fighting Gold",
-     "artists": []
-    },
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "Uragirimono no Requiem",
-     "artists": [
-      "Daisuke Hasegawa"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Freek'n You",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Modern Crusaders",
-     "artists": []
-    }
-   ]
-  },
   "Odd Taxi": {
    "tracks": 1,
    "v": 5,
@@ -21544,66 +20412,6 @@
      "artists": [
       "Saori Hayami"
      ]
-    }
-   ]
-  },
-  "Seraph of the End: Vampire Reign": {
-   "tracks": 1,
-   "v": 5,
-   "how": "точно",
-   "score": 1,
-   "mal": null,
-   "slug": "owari_no_seraph",
-   "name": "Owari no Seraph",
-   "year": 2015,
-   "season": "Spring",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "X.U.",
-     "artists": [
-      "SawanoHiroyuki[nZk]",
-      "Gemie"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "scaPEGoat",
-     "artists": [
-      "SawanoHiroyuki[nZk]",
-      "Yosh"
-     ]
-    }
-   ]
-  },
-  "Devil May Cry 2025 г.": {
-   "tracks": 1,
-   "v": 5,
-   "how": "похоже",
-   "score": 0.6,
-   "mal": null,
-   "slug": "devil_may_cry",
-   "name": "Devil May Cry",
-   "year": 2007,
-   "season": "Summer",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "d.m.c",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "I'll be your home",
-     "artists": []
     }
    ]
   },
@@ -24337,55 +23145,6 @@
    "near": "Cowboy Bebop",
    "score": 0.33
   },
-  "Arslan Senki TV": {
-   "tracks": 1,
-   "v": 5,
-   "how": "точно",
-   "score": 1,
-   "mal": null,
-   "slug": "arslan_senki_tv",
-   "name": "Arslan Senki (TV)",
-   "year": 2015,
-   "season": "Spring",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": 1,
-     "title": "Boku no Kotoba de wa nai, Kore wa Bokutachi no Kotoba",
-     "artists": [
-      "UVERworld"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "Uzu to Uzu",
-     "artists": [
-      "NICO Touches the Walls"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Lapis Lazuli",
-     "artists": [
-      "Eir Aoi"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "One Light",
-     "artists": [
-      "Kalafina"
-     ]
-    }
-   ]
-  },
   "Kemonozume": {
    "tracks": 1,
    "v": 5,
@@ -25731,28 +24490,6 @@
     }
    ]
   },
-  "Rebuild of Evangelion: 2.0 You Can (Not)": {
-   "tracks": 1,
-   "v": 5,
-   "how": "похоже",
-   "score": 0.8,
-   "mal": null,
-   "slug": "evangelion_20_you_can_not_advance",
-   "name": "Evangelion: 2.0 You Can (Not) Advance",
-   "year": 2009,
-   "season": "Summer",
-   "themes": [
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Beautiful World -PLANiTb Acoustica Mix-",
-     "artists": [
-      "Hikaru Utada"
-     ]
-    }
-   ]
-  },
   "Bishounen Tanteidan": {
    "tracks": 1,
    "v": 5,
@@ -26494,37 +25231,6 @@
     }
    ]
   },
-  "Когда плачут цикады": {
-   "tracks": 1,
-   "v": 5,
-   "how": "по номеру MAL",
-   "score": 1,
-   "mal": 934,
-   "slug": "higurashi_no_naku_koro_ni",
-   "name": "Higurashi no Naku Koro ni",
-   "year": 2006,
-   "season": "Spring",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Higurashi no Naku Koro ni",
-     "artists": [
-      "Eiko Shimamiya"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Why, or why not",
-     "artists": [
-      "Rekka Katakiri"
-     ]
-    }
-   ]
-  },
   "Another": {
    "tracks": 1,
    "v": 5,
@@ -26548,49 +25254,6 @@
      "s": "ED1",
      "seq": null,
      "title": "anamnesis",
-     "artists": []
-    }
-   ]
-  },
-  "Berserk (2016)": {
-   "tracks": 1,
-   "v": 5,
-   "how": "точно",
-   "score": 1,
-   "mal": null,
-   "slug": "berserk_2016",
-   "name": "Berserk",
-   "year": 2016,
-   "season": "Summer",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Inferno",
-     "artists": [
-      "9mm Parabellum Bullet"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Meimoku no Kanata",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Meimoku no Kanata English ver.",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED3",
-     "seq": 3,
-     "title": "Ash Crow",
      "artists": []
     }
    ]
@@ -27043,144 +25706,6 @@
      "title": "To be with U!",
      "artists": [
       "angela"
-     ]
-    }
-   ]
-  },
-  "Evangelion": {
-   "tracks": 1,
-   "v": 5,
-   "how": "похоже",
-   "score": 0.67,
-   "mal": null,
-   "slug": "neon_genesis_evangelion",
-   "name": "Neon Genesis Evangelion",
-   "year": 1995,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Zankoku na Tenshi no Thesis",
-     "artists": [
-      "Youko Takahashi"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Fly Me to the Moon",
-     "artists": [
-      "Claire"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Fly Me to the Moon (Rei #5 Version)",
-     "artists": [
-      "Megumi Hayashibara"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED3",
-     "seq": 3,
-     "title": "Fly Me to the Moon (Rei #6 Version)",
-     "artists": [
-      "Megumi Hayashibara"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED4",
-     "seq": 4,
-     "title": "Fly Me to the Moon -4 Beat Version-",
-     "artists": [
-      "Youko Takahashi"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED5",
-     "seq": 5,
-     "title": "Fly Me to the Moon (Aya Bossa Techno Version)",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED6",
-     "seq": 6,
-     "title": "Fly Me to the Moon (Yoko Takahashi Acid Bossa Version)",
-     "artists": [
-      "Youko Takahashi"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED7",
-     "seq": 7,
-     "title": "Fly Me to the Moon (Yoko Takahashi Version)",
-     "artists": [
-      "Youko Takahashi"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED8",
-     "seq": 8,
-     "title": "Fly Me to the Moon -4 Beat Version (Off-Vocal)-",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED9",
-     "seq": 9,
-     "title": "Fly Me to the Moon (Off-Vocal Version)",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED10",
-     "seq": 10,
-     "title": "Fly Me to the Moon (Aki Jungle Version)",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED11",
-     "seq": 11,
-     "title": "Fly Me to the Moon -B22 (A-Type)-",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED12",
-     "seq": 12,
-     "title": "Fly Me to the Moon (Rei #23 Version)",
-     "artists": [
-      "Megumi Hayashibara"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED13",
-     "seq": 13,
-     "title": "Fly Me to the Moon (Rei #25 Version)",
-     "artists": [
-      "Megumi Hayashibara"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED14",
-     "seq": 14,
-     "title": "Fly Me to the Moon (Rei #26 Version)",
-     "artists": [
-      "Megumi Hayashibara"
      ]
     }
    ]
@@ -28084,46 +26609,6 @@
    "near": "Kyoukai no Kanata",
    "score": 0.21
   },
-  "Jojo's Bizarre Adventure - Phantom Blood": {
-   "tracks": 1,
-   "v": 5,
-   "how": "похоже",
-   "score": 0.67,
-   "mal": null,
-   "slug": "jojo_no_kimyou_na_bouken",
-   "name": "JoJo no Kimyou na Bouken",
-   "year": 2012,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": 1,
-     "title": "JoJo ~Sono Chi no Sadame~",
-     "artists": [
-      "Hiroaki TOMMY Tominaga"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "BLOODY STREAM",
-     "artists": [
-      "Coda"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "ROUNDABOUT",
-     "artists": [
-      "YES"
-     ]
-    }
-   ]
-  },
   "Isekai de Cheat Skill": {
    "tracks": 1,
    "v": 5,
@@ -28901,35 +27386,6 @@
     }
    ]
   },
-  "Higurashi no Naku Koro ni 2nd Series": {
-   "tracks": 1,
-   "v": 5,
-   "how": "точно",
-   "score": 1,
-   "mal": null,
-   "slug": "higurashi_no_naku_koro_ni_kai",
-   "name": "Higurashi no Naku Koro ni Kai",
-   "year": 2007,
-   "season": "Summer",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Naraku no Hana",
-     "artists": [
-      "Eiko Shimamiya"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Taishou.a",
-     "artists": []
-    }
-   ]
-  },
   "Spider-Man: Across the Spider-Verse": {
    "tracks": 1,
    "v": 5,
@@ -29094,55 +27550,6 @@
     }
    ]
   },
-  "My Hero Academia Season 6": {
-   "tracks": 1,
-   "v": 5,
-   "how": "точно",
-   "score": 1,
-   "mal": null,
-   "slug": "boku_no_hero_academia_6th_season",
-   "name": "Boku no Hero Academia 6th Season",
-   "year": 2022,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": 1,
-     "title": "Hitamuki",
-     "artists": [
-      "SUPER BEAVER"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "SKETCH",
-     "artists": [
-      "Kiro Akiyama"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "Bokura no",
-     "artists": [
-      "Eve"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Kitakaze",
-     "artists": [
-      "SIX LOUNGE"
-     ]
-    }
-   ]
-  },
   "Anohana": {
    "tracks": 1,
    "v": 5,
@@ -29208,37 +27615,6 @@
      "seq": 2,
      "title": "Rurou no Zakuro",
      "artists": []
-    }
-   ]
-  },
-  "Дандадан": {
-   "tracks": 1,
-   "v": 5,
-   "how": "по номеру MAL",
-   "score": 1,
-   "mal": 57334,
-   "slug": "dandadan",
-   "name": "Dandadan",
-   "year": 2024,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Otonoke",
-     "artists": [
-      "Creepy Nuts"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "TAIDADA",
-     "artists": [
-      "Zutto Mayonaka de Ii no ni."
-     ]
     }
    ]
   },
@@ -29824,136 +28200,6 @@
     }
    ]
   },
-  "Samurai X": {
-   "tracks": 1,
-   "v": 5,
-   "how": "точно",
-   "score": 1,
-   "mal": null,
-   "slug": "rurouni_kenshin_meiji_kenkaku_romantan",
-   "name": "Rurouni Kenshin: Meiji Kenkaku Romantan",
-   "year": 1996,
-   "season": "Winter",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": 1,
-     "title": "Sobakasu",
-     "artists": [
-      "JUDY AND MARY"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "1/2",
-     "artists": [
-      "Makoto Kawamoto"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP3",
-     "seq": 3,
-     "title": "Kimi ni Fureru Dake de",
-     "artists": [
-      "CURIO"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Tactics",
-     "artists": [
-      "THE YELLOW MONKEY"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Namida wa Shitteiru",
-     "artists": [
-      "Mayo Suzukaze"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED3",
-     "seq": 3,
-     "title": "HEART OF SWORD ~Yoake Mae~",
-     "artists": [
-      "T.M.Revolution"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED4",
-     "seq": 4,
-     "title": "the Fourth Avenue Café",
-     "artists": [
-      "L'Arc~en~Ciel"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED5",
-     "seq": 5,
-     "title": "It's gonna rain!",
-     "artists": [
-      "BONNIE PINK"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED6",
-     "seq": 6,
-     "title": "1/3 no Junjou na Kanjou",
-     "artists": [
-      "SIAM SHADE"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED7",
-     "seq": 7,
-     "title": "Dame!",
-     "artists": [
-      "You Izumi"
-     ]
-    }
-   ]
-  },
-  "Kekkai Sensen": {
-   "tracks": 1,
-   "v": 5,
-   "how": "точно",
-   "score": 1,
-   "mal": null,
-   "slug": "kekkai_sensen",
-   "name": "Kekkai Sensen",
-   "year": 2015,
-   "season": "Spring",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Hello, world!",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Sugar Song to Bitter Step",
-     "artists": []
-    }
-   ]
-  },
   "Ergo Proxy": {
    "tracks": 1,
    "v": 5,
@@ -30038,150 +28284,6 @@
      "s": "ED1",
      "seq": null,
      "title": "Your song*",
-     "artists": []
-    }
-   ]
-  },
-  "Волейбол!!": {
-   "tracks": 1,
-   "v": 5,
-   "how": "по номеру MAL",
-   "score": 1,
-   "mal": 20583,
-   "slug": "haikyuu",
-   "name": "Haikyuu!!",
-   "year": 2014,
-   "season": "Spring",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": 1,
-     "title": "Imagination",
-     "artists": [
-      "SPYAIR"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "Ah Yeah!!",
-     "artists": [
-      "Sukima Switch"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Tenchi Geshi",
-     "artists": [
-      "NICO Touches the Walls"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "LEO",
-     "artists": [
-      "tacica"
-     ]
-    }
-   ]
-  },
-  "Невероятное приключение ДжоДжо: Несокрушимый алмаз": {
-   "tracks": 1,
-   "v": 5,
-   "how": "по номеру MAL",
-   "score": 1,
-   "mal": 31933,
-   "slug": "jojo_no_kimyou_na_bouken_part_4_diamond_wa_kudakenai",
-   "name": "JoJo no Kimyou na Bouken Part 4: Diamond wa Kudakenai",
-   "year": 2016,
-   "season": "Spring",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": 1,
-     "title": "Crazy Noisy Bizarre Town",
-     "artists": []
-    },
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "Crazy Noisy Bizarre Town ~EDM arrange ver.~",
-     "artists": []
-    },
-    {
-     "t": "OP",
-     "s": "OP3",
-     "seq": 3,
-     "title": "chase",
-     "artists": []
-    },
-    {
-     "t": "OP",
-     "s": "OP4",
-     "seq": 4,
-     "title": "Great Days",
-     "artists": [
-      "Daisuke Hasegawa"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "I Want You",
-     "artists": []
-    }
-   ]
-  },
-  "game - SCARLET NEXUS": {
-   "tracks": 1,
-   "v": 5,
-   "how": "похоже",
-   "score": 0.67,
-   "mal": null,
-   "slug": "scarlet_nexus",
-   "name": "Scarlet Nexus",
-   "year": 2021,
-   "season": "Summer",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": 1,
-     "title": "Red Criminal",
-     "artists": [
-      "THE ORAL CIGARETTES"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Fire",
-     "artists": [
-      "Yamato(.S)"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "MACHINEGUN",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Stranger",
      "artists": []
     }
    ]
@@ -30447,236 +28549,12 @@
     }
    ]
   },
-  "Евангелион": {
-   "tracks": 1,
-   "v": 5,
-   "slug": null,
-   "near": "",
-   "score": 0
-  },
   "Shrek": {
    "tracks": 1,
    "v": 5,
    "slug": null,
    "near": "",
    "score": 0
-  },
-  "Gundam: Iron-Blooded Orphans": {
-   "tracks": 1,
-   "v": 5,
-   "how": "похоже",
-   "score": 0.8,
-   "mal": null,
-   "slug": "mobile_suit_gundam_iron_blooded_orphans",
-   "name": "Mobile Suit Gundam: Iron-Blooded Orphans",
-   "year": 2015,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": 1,
-     "title": "Raise your flag",
-     "artists": [
-      "MAN WITH A MISSION"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "Survivor",
-     "artists": [
-      "BLUE ENCOUNT"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Orphans no Namida",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "STEEL -Tekketsu no Kizuna",
-     "artists": [
-      "TRUE"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED3",
-     "seq": 3,
-     "title": "Senka no Tomoshibi",
-     "artists": [
-      "Yuuko Suzuhana"
-     ]
-    }
-   ]
-  },
-  "Школа мертвецов": {
-   "tracks": 1,
-   "v": 5,
-   "how": "по номеру MAL",
-   "score": 1,
-   "mal": 8074,
-   "slug": "highschool_of_the_dead",
-   "name": "Highschool of the Dead",
-   "year": 2010,
-   "season": "Summer",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "HIGHSCHOOL OF THE DEAD",
-     "artists": [
-      "Kishida Kyoudan & The Akeboshi Rockets"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Kimi to Taiyou ga Shinda hi",
-     "artists": [
-      "Maon Kurosaki"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Color Me Dark",
-     "artists": [
-      "Maon Kurosaki"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED3",
-     "seq": 3,
-     "title": "Return to Destiny",
-     "artists": [
-      "Maon Kurosaki"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED4",
-     "seq": 4,
-     "title": "Cold Bullet Blues",
-     "artists": [
-      "Maon Kurosaki"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED5",
-     "seq": 5,
-     "title": "Memories of Days Gone By",
-     "artists": [
-      "Maon Kurosaki"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED6",
-     "seq": 6,
-     "title": "Under The Honey Shine",
-     "artists": [
-      "Maon Kurosaki"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED7",
-     "seq": 7,
-     "title": "fuss fuzz",
-     "artists": [
-      "Maon Kurosaki"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED8",
-     "seq": 8,
-     "title": "The place of hope",
-     "artists": [
-      "Maon Kurosaki"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED9",
-     "seq": 9,
-     "title": "Houseki no Spy",
-     "artists": [
-      "Maon Kurosaki"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED10",
-     "seq": 10,
-     "title": "THE last pain",
-     "artists": [
-      "Maon Kurosaki"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED11",
-     "seq": 11,
-     "title": "Hollow Men",
-     "artists": [
-      "Maon Kurosaki"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED12",
-     "seq": 12,
-     "title": "The Eternal Song",
-     "artists": [
-      "Maon Kurosaki"
-     ]
-    }
-   ]
-  },
-  "MASHLE: MAGIC AND MUSCLES Season 2": {
-   "tracks": 1,
-   "v": 5,
-   "how": "точно",
-   "score": 1,
-   "mal": null,
-   "slug": "mashle_2nd_season",
-   "name": "Mashle 2nd Season",
-   "year": 2024,
-   "season": "Winter",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Bling-Bang-Bang-Born",
-     "artists": [
-      "Creepy Nuts"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Tokyo's Way!",
-     "artists": [
-      "Shiritsu Ebisu Chuugaku"
-     ]
-    }
-   ]
   },
   "Gunslinger Girl": {
    "tracks": 1,
@@ -30908,55 +28786,6 @@
    "near": "Kiseijuu: Sei no Kakuritsu",
    "score": 0
   },
-  "2nd Season Jujutsu Kaisen": {
-   "tracks": 1,
-   "v": 5,
-   "how": "точно",
-   "score": 1,
-   "mal": null,
-   "slug": "jujutsu_kaisen_2nd_season",
-   "name": "Jujutsu Kaisen 2nd Season",
-   "year": 2023,
-   "season": "Summer",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": 1,
-     "title": "Ao no Sumika",
-     "artists": [
-      "Tatsuya Kitani"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Akari",
-     "artists": [
-      "Soushi Sakiyama"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "SPECIALZ",
-     "artists": [
-      "King Gnu"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "more than words",
-     "artists": [
-      "Hitsujibungaku"
-     ]
-    }
-   ]
-  },
   "Isekai Shikkaku": {
    "tracks": 1,
    "v": 5,
@@ -30981,37 +28810,6 @@
      "seq": null,
      "title": "Sayonara, Subarashiki Sekai yo",
      "artists": []
-    }
-   ]
-  },
-  "Oshi no Ko Season 2": {
-   "tracks": 1,
-   "v": 5,
-   "how": "точно",
-   "score": 1,
-   "mal": null,
-   "slug": "oshi_no_ko_2nd_season",
-   "name": "[Oshi no Ko] 2nd Season",
-   "year": 2024,
-   "season": "Summer",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Fatal",
-     "artists": [
-      "GEMN"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Burning",
-     "artists": [
-      "Hitsujibungaku"
-     ]
     }
    ]
   },
@@ -31080,48 +28878,6 @@
      "seq": 2,
      "title": "Shout Baby",
      "artists": []
-    }
-   ]
-  },
-  "Kaguya-sama: Love Is War -Ultra Romantic-": {
-   "tracks": 1,
-   "v": 5,
-   "how": "точно",
-   "score": 1,
-   "mal": null,
-   "slug": "kaguya_sama_wa_kokurasetai_ultra_romantic",
-   "name": "Kaguya-sama wa Kokurasetai: Ultra Romantic",
-   "year": 2022,
-   "season": "Spring",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "GIRI GIRI",
-     "artists": [
-      "Masayuki Suzuki",
-      "Sumire Yoshida"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Heart wa Oteage",
-     "artists": [
-      "Airi Suzuki"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "My Nonfiction",
-     "artists": [
-      "Konomi Kohara",
-      "Makoto Furukawa"
-     ]
     }
    ]
   },
@@ -32259,13 +30015,6 @@
    "near": "Cike Wu Liuqi",
    "score": 0.14
   },
-  "Дорама Queen | Scandal Senmon Bengoshi Queen": {
-   "tracks": 1,
-   "v": 5,
-   "slug": null,
-   "near": "Shin Taketori Monogatari: 1000-nen Joou",
-   "score": 0.17
-  },
   "Kidou Senshi Gundam NT": {
    "tracks": 1,
    "v": 5,
@@ -32326,89 +30075,6 @@
      "seq": 3,
      "title": "Within",
      "artists": []
-    }
-   ]
-  },
-  "Re:Zero - Жизнь с нуля в альтернативном мире": {
-   "tracks": 1,
-   "v": 5,
-   "how": "по номеру MAL",
-   "score": 1,
-   "mal": 31240,
-   "slug": "rezero_kara_hajimeru_isekai_seikatsu",
-   "name": "Re:Zero kara Hajimeru Isekai Seikatsu",
-   "year": 2016,
-   "season": "Spring",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": 1,
-     "title": "Redo",
-     "artists": [
-      "Konomi Suzuki"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "Paradisus-Paradoxum",
-     "artists": [
-      "MYTH & ROID"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "STYX HELIX",
-     "artists": [
-      "MYTH & ROID"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "STRAIGHT BET",
-     "artists": [
-      "MYTH & ROID"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED3",
-     "seq": 3,
-     "title": "Stay Alive",
-     "artists": [
-      "Rie Takahashi"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED4",
-     "seq": 4,
-     "title": "theater D",
-     "artists": [
-      "MYTH & ROID"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED5",
-     "seq": 5,
-     "title": "Chinmoku no Requiem",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED6",
-     "seq": 6,
-     "title": "Wishing",
-     "artists": [
-      "Inori Minase"
-     ]
     }
    ]
   },
@@ -32545,55 +30211,6 @@
     }
    ]
   },
-  "Tengen Toppa Gurren-Lagann": {
-   "tracks": 1,
-   "v": 5,
-   "how": "точно",
-   "score": 1,
-   "mal": null,
-   "slug": "tengen_toppa_gurren_lagann",
-   "name": "Tengen Toppa Gurren Lagann",
-   "year": 2007,
-   "season": "Spring",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Sorairo Days",
-     "artists": [
-      "Shouko Nakagawa"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "UNDERGROUND",
-     "artists": [
-      "HIGH VOLTAGE"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "happily ever after",
-     "artists": [
-      "Shouko Nakagawa"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED3",
-     "seq": 3,
-     "title": "Minna no Peace",
-     "artists": [
-      "Afromania"
-     ]
-    }
-   ]
-  },
   "Tales of Zestiria the Cross": {
    "tracks": 1,
    "v": 5,
@@ -32685,28 +30302,6 @@
    "slug": null,
    "near": "The Legend of Heroes: Sen no Kiseki - Northern War",
    "score": 0.35
-  },
-  "Attack on Titan S4": {
-   "tracks": 1,
-   "v": 5,
-   "how": "точно",
-   "score": 1,
-   "mal": null,
-   "slug": "shingeki_no_kyojin_the_final_season_kanketsu_hen",
-   "name": "Shingeki no Kyojin: The Final Season - Kanketsu-hen",
-   "year": 2023,
-   "season": "Winter",
-   "themes": [
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "UNDER THE TREE",
-     "artists": [
-      "SiM"
-     ]
-    }
-   ]
   },
   "Dr. Stone 2nd Season": {
    "tracks": 1,
@@ -32968,64 +30563,6 @@
      "seq": null,
      "title": "Lie-Lie-Lie",
      "artists": []
-    }
-   ]
-  },
-  "Re:Zero - Starting Life in Another World Season 2 Part 2": {
-   "tracks": 1,
-   "v": 5,
-   "how": "точно",
-   "score": 1,
-   "mal": null,
-   "slug": "rezero_kara_hajimeru_isekai_seikatsu_2nd_season_part_2",
-   "name": "Re:Zero kara Hajimeru Isekai Seikatsu 2nd Season Part 2",
-   "year": 2021,
-   "season": "Winter",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Long shot",
-     "artists": [
-      "Mayu Maeshima"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Memento",
-     "artists": [
-      "nonoc"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Door",
-     "artists": [
-      "Rie Takahashi"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED3",
-     "seq": 3,
-     "title": "Believe in you",
-     "artists": [
-      "nonoc"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED4",
-     "seq": 4,
-     "title": "Anata no Shiranai Koto",
-     "artists": [
-      "Rie Murakawa"
-     ]
     }
    ]
   },
@@ -33557,28 +31094,6 @@
    "near": "Fate/Zero",
    "score": 0.27
   },
-  "Evangelion 3.0": {
-   "tracks": 1,
-   "v": 5,
-   "how": "похоже",
-   "score": 0.6,
-   "mal": null,
-   "slug": "evangelion_30_you_can_not_redo",
-   "name": "Evangelion: 3.0 You Can (Not) Redo",
-   "year": 2012,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Sakura Nagashi",
-     "artists": [
-      "Hikaru Utada"
-     ]
-    }
-   ]
-  },
   "Fate/strange Fake: Whispers of Dawn": {
    "tracks": 1,
    "v": 5,
@@ -33680,6 +31195,171 @@
      "artists": []
     }
    ]
+  },
+  "Neon Genesis Evangelion: The End of Evangelion": {
+   "tracks": 2,
+   "v": 5,
+   "how": "точно",
+   "score": 1,
+   "mal": null,
+   "slug": "neon_genesis_evangelion_the_end_of_evangelion",
+   "name": "Neon Genesis Evangelion: The End of Evangelion",
+   "year": 1997,
+   "season": "Summer",
+   "themes": [
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": null,
+     "title": "Thanatos -If I Can't Be Yours-",
+     "artists": []
+    }
+   ]
+  },
+  "Rurouni Kenshin: Meiji Kenkaku Romantan (2023)": {
+   "tracks": 2,
+   "v": 5,
+   "how": "точно",
+   "score": 1,
+   "mal": null,
+   "slug": "rurouni_kenshin_meiji_kenkaku_romantan_2023",
+   "name": "Rurouni Kenshin: Meiji Kenkaku Romantan (2023)",
+   "year": 2023,
+   "season": "Summer",
+   "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": 1,
+     "title": "Hiten",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": 1,
+     "title": "Kissaki",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP2",
+     "seq": 2,
+     "title": "Rurou no Katashiro",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED2",
+     "seq": 2,
+     "title": "Sonzai Shoumei",
+     "artists": []
+    }
+   ]
+  },
+  "Devil May Cry (2025)": {
+   "tracks": 1,
+   "v": 5,
+   "how": "похоже",
+   "score": 0.75,
+   "mal": null,
+   "slug": "devil_may_cry",
+   "name": "Devil May Cry",
+   "year": 2007,
+   "season": "Summer",
+   "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": null,
+     "title": "d.m.c",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": null,
+     "title": "I'll be your home",
+     "artists": []
+    }
+   ]
+  },
+  "Evangelion: 2.0 You Can (Not) Advance": {
+   "tracks": 1,
+   "v": 5,
+   "how": "точно",
+   "score": 1,
+   "mal": null,
+   "slug": "evangelion_20_you_can_not_advance",
+   "name": "Evangelion: 2.0 You Can (Not) Advance",
+   "year": 2009,
+   "season": "Summer",
+   "themes": [
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": null,
+     "title": "Beautiful World -PLANiTb Acoustica Mix-",
+     "artists": []
+    }
+   ]
+  },
+  "JoJo's Bizarre Adventure: Diamond Is Unbreakable": {
+   "tracks": 1,
+   "v": 5,
+   "how": "точно",
+   "score": 1,
+   "mal": null,
+   "slug": "jojo_no_kimyou_na_bouken_part_4_diamond_wa_kudakenai",
+   "name": "JoJo no Kimyou na Bouken Part 4: Diamond wa Kudakenai",
+   "year": 2016,
+   "season": "Spring",
+   "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": 1,
+     "title": "Crazy Noisy Bizarre Town",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP2",
+     "seq": 2,
+     "title": "Crazy Noisy Bizarre Town ~EDM arrange ver.~",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP3",
+     "seq": 3,
+     "title": "chase",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP4",
+     "seq": 4,
+     "title": "Great Days",
+     "artists": [
+      "Daisuke Hasegawa"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": null,
+     "title": "I Want You",
+     "artists": []
+    }
+   ]
+  },
+  "Queen | Scandal Senmon Bengoshi Queen": {
+   "tracks": 1,
+   "v": 5,
+   "slug": null,
+   "near": "Shin Taketori Monogatari: 1000-nen Joou",
+   "score": 0.21
   }
  }
 }
