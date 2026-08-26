@@ -17,14 +17,34 @@ const tkey = s => String(s || '').toLowerCase()
   .replace(/\b(?:tv|full|size|ver|version|op|ed|opening|ending)\b/g, ' ')
   .replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
 
+/* Ромадзи пишут по-разному: «Shougeki» и «Shogeki», «Hadaka no Yuusha»
+   и «Hadaka no Yusha», «Tabi no Tochuu» и «Tochu». Схлопываем удвоенные
+   гласные и «ou» с обеих сторон — тогда написания сходятся. */
+const foldWord = w => w.replace(/ou/g, 'o').replace(/(\p{L})\1+/gu, '$1');
+const tfold = s => tkey(s).split(' ').map(foldWord).join(' ');
+
 function sameTitle(a, b) {
-  const x = tkey(a), y = tkey(b);
+  const x = tfold(a), y = tfold(b);
   if (!x || !y) return false;
   if (x === y) return true;
   if (x.length > 4 && y.length > 4 && (x.includes(y) || y.includes(x))) return true;
   const A = new Set(x.split(' ')), B = new Set(y.split(' '));
   let n = 0; for (const w of A) if (B.has(w)) n++;
   return 2 * n / (A.size + B.size) >= 0.75;
+}
+
+/* Название темы у нас и у них может не совпасть вовсе: в архиве пишут
+   «My War», а в каталоге «Boku no Sensou» — это перевод, а не опечатка.
+   Тогда спасает исполнитель: если он тот же и тип совпадает (опенинг с
+   опенингом), это почти наверняка та самая тема. Исполнитель известен
+   у трети тем, так что путь запасной. */
+const KIND_OF = { OP: 'опенинг', ED: 'эндинг', IN: 'вставка' };
+
+function sameArtist(row, theme) {
+  if (!theme.artists || !theme.artists.length) return false;
+  if (KIND_OF[theme.t] && row.kind !== KIND_OF[theme.t]) return false;
+  const mine = new Set(row.parts.map(nameKey));
+  return theme.artists.some(a => mine.has(nameKey(a)));
 }
 
 const THEME_KIND = { OP: 'Опенинг', ED: 'Эндинг', IN: 'Вставка', OST: 'OST' };
@@ -61,6 +81,14 @@ function themeBlock(rows, seen) {
     if (i < 0) return null;
     used.add(i);
     return rows[i];
+  });
+  // второй заход — по исполнителю, для переведённых названий
+  list.forEach((t, k) => {
+    if (done[k]) return;
+    const i = rows.findIndex((r, i) => !used.has(i) && sameArtist(r, t));
+    if (i < 0) return;
+    used.add(i);
+    done[k] = rows[i];
   });
   const got = done.filter(Boolean).length;
 
