@@ -112,6 +112,7 @@ function build(raw) {
       type:   (r['Тип'] || '').trim(),
       origin: (r['Откуда'] || '').trim(),
       source: parseSource(r['Что']),
+      kind:   sourceKind(r['Что']),      // опенинг / эндинг / OST / вставка
       genres: splitGenres(r['Жанр']),
       tags:   (r['Тэги'] || '').split(/[,\/]/).map(s => s.trim()).filter(Boolean),
       feature:(r['Фича'] || '').trim(),
@@ -369,7 +370,7 @@ function renderSearch() {
     // источник известен у 44% строк, и посередине он рвал бы главную
     // пару колонок дырой на каждой второй строке.
     { k: 'source', t: 'откуда', w: '14%',
-      f: r => r.source ? esc(r.source)
+      f: r => r.source ? sourceLink(r.source)
             : (r.origin ? `<span class="plat">${esc(r.origin.toLowerCase())}</span>` : '') },
     { k: 'when',   t: 'когда', mono: 1, w: '10%', f: r => {
         if (!r.when) return '—';

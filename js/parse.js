@@ -109,8 +109,8 @@ function parseSource(what) {
   let guard = 6;
   while (guard-- && MARKER.test(t)) t = t.replace(MARKER, '');
 
-  // Форма без точки с запятой: «1 Opening Durarara!!»
-  t = t.replace(/^\s*\d+(?:\/\d+)?\s+(?:Opening|Ending|OP|ED|Insert(?:\s+Song)?|Theme)\s+/i, '');
+  // Форма без точки с запятой: «1 Opening Durarara!!» и просто «Ending Re:Zero»
+  t = t.replace(/^\s*(?:\d+(?:\/\d+)?\s+)?(?:Opening|Ending|OP|ED|Insert(?:\s+Song)?|Theme)\s+/i, '');
 
   return t
     .split('/')[0]
@@ -118,6 +118,37 @@ function parseSource(what) {
     // разводит «Genshin Impact» и «Genshin Impact OST» по разным строкам
     .replace(/\s+OST\s*$/i, '')
     .trim();
+}
+
+/* ---------- что это за трек во вселенной ----------
+   В скобках рядом с источником написано, чем трек был: «1 Opening
+   Durarara!!», «ep 11; Ending Re:Zero», «OST; Final Fantasy XIV».
+   Пометка есть у 97% строк со скобками, так что заставку, концовку
+   и саундтрек можно развести — как в таблице аниме, которую зрители
+   ведут руками. */
+function sourceKind(what) {
+  const m = String(what || '').match(/\[([^\]]+)\]/);
+  if (!m) return '';
+  const t = m[1];
+  if (/\b(?:OP|Opening)\b/i.test(t)) return 'опенинг';
+  if (/\b(?:ED|Ending)\b/i.test(t)) return 'эндинг';
+  if (/\bInsert\b/i.test(t))         return 'вставка';
+  if (/\bOST\b/i.test(t))            return 'OST';
+  return '';
+}
+
+/* Сезон или часть внутри франшизы.
+   «Boku no Hero Academia 3rd Season» → база «Boku no Hero Academia»,
+   часть «3rd Season». Римские цифры тоже считаются частью: у игр
+   «Final Fantasy IX» и «Final Fantasy XVI» — одна вселенная. */
+const PART_RE = /\s+(?:\d+(?:nd|rd|th|st)?\s+(?:Season|Сезон)|(?:Season|Сезон)\s*\d+|(?:Part|Часть)\s*\d+|[IVX]{1,4})\s*$/i;
+
+function sourceParts(source) {
+  const s = String(source || '').trim();
+  const m = s.match(PART_RE);
+  return m
+    ? { base: s.slice(0, m.index).trim(), part: m[0].trim() }
+    : { base: s, part: '' };
 }
 
 /* ---------- склейка имён ----------

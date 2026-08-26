@@ -17,6 +17,8 @@ function initProfile() {
     if (a) { e.preventDefault(); location.hash = 'artist=' + encodeURIComponent(a.dataset.artist); return; }
     const u = e.target.closest('[data-user]');
     if (u) { e.preventDefault(); location.hash = 'user=' + encodeURIComponent(u.dataset.user); return; }
+    const src = e.target.closest('[data-source]');
+    if (src) { e.preventDefault(); location.hash = 'source=' + encodeURIComponent(src.dataset.source); return; }
     const s = e.target.closest('[data-stream]');
     if (s) { e.preventDefault(); location.hash = 'stream=' + s.dataset.stream; }
   });
@@ -27,10 +29,11 @@ function initProfile() {
 }
 
 function routeProfile() {
-  const m = location.hash.match(/^#(artist|user|stream)=(.*)$/);
+  const m = location.hash.match(/^#(artist|user|source|stream)=(.*)$/);
   if (!m) { hideProfile(); return; }
   if (m[1] === 'artist')      showArtist(decodeURIComponent(m[2]));
   else if (m[1] === 'user')   showUser(decodeURIComponent(m[2]));
+  else if (m[1] === 'source') showSource(decodeURIComponent(m[2]));
   else                        showStream(+m[2]);
 }
 
@@ -170,6 +173,80 @@ function showUser(name) {
     `<h3 class="pf-h">Всё, что принёс</h3>` +
     trackList([...rows].sort((x, y) => (y.date || 0) - (x.date || 0)),
       { showArtist: true, showStream: true }));
+}
+
+/* ---------- профиль вселенной ----------
+   Устроен как таблица аниме, которую зрители ведут руками: франшиза
+   делится на сезоны, внутри сезона — заставки, концовки и саундтрек
+   по отдельности. Сезоны в архиве записаны отдельными источниками
+   («Boku no Hero Academia 3rd Season»), поэтому собираем их обратно
+   по общей части названия. */
+const KINDS = ['опенинг', 'эндинг', 'вставка', 'OST'];
+const KIND_TITLE = { 'опенинг': 'Заставки', 'эндинг': 'Концовки',
+                     'вставка': 'Вставки', 'OST': 'Саундтрек', '': 'Остальное' };
+
+function showSource(name) {
+  const { base } = sourceParts(name);
+  // берём всю франшизу, а не только выбранный сезон
+  const rows = ROWS.filter(r => r.source && sourceParts(r.source).base === base);
+  if (!rows.length) { hideProfile(); return; }
+
+  const a = avg(rows.map(r => r.rate.score));
+  const best = [...rows].sort((x, y) => y.rate.score - x.rate.score)[0];
+  // По порядку: сначала первая часть, потом вторая и так далее.
+  // Номер бывает арабский («Season 2», «3rd Season») и римский («IV»).
+  const ROMAN = { I:1, II:2, III:3, IV:4, V:5, VI:6, VII:7, VIII:8, IX:9, X:10,
+                  XI:11, XII:12, XIII:13, XIV:14, XV:15, XVI:16 };
+  const partNo = t => {
+    if (!t) return 0;                                  // база — самая первая
+    const d = t.match(/\d+/);
+    if (d) return +d[0];
+    return ROMAN[t.toUpperCase()] ?? 99;
+  };
+  const parts = [...new Set(rows.map(r => sourceParts(r.source).part))]
+    .sort((a, b) => partNo(a) - partNo(b));
+
+  const kpi = [
+    [num(rows.length), plural(rows.length, 'трек', 'трека', 'треков')],
+    [f2(a), 'средний балл'],
+    [best.rate.label, 'лучшая оценка', 1],
+    [num(rows.filter(r => r.rate.tier === 'гениально').length), 'в «гениально»']
+  ];
+
+  // сколько чего принесли — по типам
+  const byKind = KINDS.map(k => {
+    const rs = rows.filter(r => r.kind === k);
+    return rs.length ? { k, n: rs.length, avg: avg(rs.map(r => r.rate.score)) } : null;
+  }).filter(Boolean);
+  const kindRow = byKind.length
+    ? `<div class="pf-tags">` + byKind.map(x =>
+        `<span class="pf-tag">${esc(KIND_TITLE[x.k])} <b>${num(x.n)}</b> · ${f2(x.avg)}</span>`
+      ).join('') + `</div>`
+    : '';
+
+  /* Внутри сезона — по типам, как в таблице: OP, ED, OST */
+  const block = rs => KINDS.concat(['']).map(k => {
+    const list = rs.filter(r => (r.kind || '') === k);
+    if (!list.length) return '';
+    return `<h4 class="pf-k">${esc(KIND_TITLE[k])}</h4>` +
+      trackList(list.sort((x, y) => (x.date || 0) - (y.date || 0)),
+        { showArtist: true, showStream: true });
+  }).join('');
+
+  const body = parts.length > 1
+    ? parts.map(pt => {
+        const rs = rows.filter(r => sourceParts(r.source).part === pt);
+        return `<h3 class="pf-h pf-season">${esc(pt || 'Первый сезон')} ` +
+          `<span>${num(rs.length)} ` + plural(rs.length, 'трек', 'трека', 'треков') + `</span></h3>` +
+          block(rs);
+      }).join('')
+    : block(rows);
+
+  openProfile(base,
+    parts.length > 1
+      ? `${num(parts.length)} ` + plural(parts.length, 'часть', 'части', 'частей') + ' во вселенной'
+      : '',
+    kpiBlock(kpi) + kindRow + body);
 }
 
 /* ---------- профиль стрима ---------- */

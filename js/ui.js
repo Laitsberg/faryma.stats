@@ -34,6 +34,13 @@ function userNames(name) {
   ).join('') || esc(name);
 }
 
+/* Название вселенной как ссылка в её карточку */
+function sourceLink(name) {
+  return name
+    ? `<a class="pf-link" href="#source=${encodeURIComponent(name)}" data-source="${esc(name)}">${esc(name)}</a>`
+    : '';
+}
+
 function userLink(r) {
   return userNames(r.u || r.user || '');
 }

@@ -546,6 +546,14 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 50px;
 .pf-who{color:var(--dim);text-decoration:none}
 .pf-who:hover{color:var(--brand-hi)}
 .pf-vod{margin:0 0 14px;font-size:14px}
+/* карточка вселенной: сезон — заголовок, внутри типы треков */
+.pf-season{display:flex;align-items:baseline;justify-content:space-between;gap:12px;
+  border-bottom:1px solid var(--line);padding-bottom:7px;margin-top:24px;
+  color:var(--ink);font-family:var(--b);font-size:14px;font-weight:600;
+  letter-spacing:0;text-transform:none}
+.pf-season span{font-family:var(--m);font-size:11px;color:var(--dim);flex:none}
+.pf-k{font-family:var(--m);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--brand-hi);font-weight:400;margin:14px 0 4px}
 /* любимые жанры заказчика — компактным рядом плашек */
 .pf-tags{display:flex;flex-wrap:wrap;gap:6px}
 .pf-tag{font-family:var(--m);font-size:11px;color:var(--dim);background:var(--panel);
