@@ -13,6 +13,10 @@ on:
         description: 'Дополнительные флаги (--probe, --q "…", --recheck)'
         required: false
         default: ''
+      minutes:
+        description: 'Сколько минут спрашивать'
+        required: false
+        default: '60'
       retry_missing:
         description: 'Переспросить ненайденных'
         type: boolean
@@ -22,7 +26,7 @@ on:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 75
     permissions:
       contents: write
     steps:
@@ -36,10 +40,11 @@ jobs:
           IN_ARGS:  ${{ github.event.inputs.args }}
           IN_LIMIT: ${{ github.event.inputs.limit }}
           IN_RETRY: ${{ github.event.inputs.retry_missing }}
+          IN_MINUTES: ${{ github.event.inputs.minutes }}
         run: |
           EXTRA=""
           if [ "$IN_RETRY" = "true" ]; then EXTRA="--retry-missing"; fi
-          eval "node scripts/animethemes.mjs $IN_ARGS --limit ${IN_LIMIT:-1200} --max-minutes 30 $EXTRA"
+          eval "node scripts/animethemes.mjs $IN_ARGS --limit ${IN_LIMIT:-1200} --max-minutes ${IN_MINUTES:-60} $EXTRA"
 
       - name: Закоммитить каталог
         run: |
