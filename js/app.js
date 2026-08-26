@@ -252,6 +252,7 @@ function render() {
   renderCountries(rows);
   renderOffscale();
   renderSearch();
+  markScrollables();
   $('filterState').textContent =
     FILTER.tier ? ('показаны только: ' + FILTER.tier) : 'фильтр не задан';
 }

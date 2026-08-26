@@ -56,6 +56,29 @@ const num = n => n.toLocaleString('ru-RU');
 const f2  = n => n.toFixed(2);          // 9 → «9.00», иначе колонка прыгает
 
 /* Склонение: plural(2,'стрим','стрима','стримов') → «стрима» */
+/* Подсказка о том, что таблица прокручивается.
+   Оборачиваем каждый прокручиваемый блок и красим низ, пока до конца
+   не докрутили. Вызывается после каждой перерисовки: содержимое
+   меняется вместе с фильтром, и высота вместе с ним. */
+function markScrollables() {
+  document.querySelectorAll('.scroll').forEach(el => {
+    let wrap = el.parentElement;
+    if (!wrap.classList.contains('scroll-wrap')) {
+      wrap = document.createElement('div');
+      wrap.className = 'scroll-wrap';
+      el.parentElement.insertBefore(wrap, el);
+      wrap.appendChild(el);
+      el.addEventListener('scroll', () => update(el, wrap), { passive: true });
+    }
+    update(el, wrap);
+  });
+
+  function update(el, wrap) {
+    const ещё = el.scrollHeight - el.clientHeight - el.scrollTop > 8;
+    wrap.classList.toggle('more', ещё);
+  }
+}
+
 function plural(n, one, few, many) {
   const a = Math.abs(n) % 100, b = a % 10;
   if (a > 10 && a < 20) return many;
