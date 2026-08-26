@@ -1,0 +1,50 @@
+name: Каталог тем animethemes
+
+# Запускается только руками. Из песочницы разработки animethemes.moe
+# недоступен, поэтому структуру их API смотрим отсюда — по логам.
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'Сколько тайтлов спросить за прогон'
+        required: false
+        default: '1200'
+      retry_missing:
+        description: 'Переспросить ненайденных'
+        type: boolean
+        required: false
+        default: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Собрать каталог опенингов и эндингов
+        run: |
+          EXTRA=""
+          if [ "${{ github.event.inputs.retry_missing }}" = "true" ]; then
+            EXTRA="--retry-missing"
+          fi
+          node scripts/animethemes.mjs --limit "${{ github.event.inputs.limit || '1200' }}" \
+            --max-minutes 30 $EXTRA
+
+      - name: Закоммитить каталог
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/themes.json
+          if git diff --staged --quiet; then echo "изменений нет"; exit 0; fi
+          git commit -m "Каталог опенингов и эндингов из animethemes"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin main && git push && exit 0
+            sleep $((i * 5))
+          done
+          exit 1

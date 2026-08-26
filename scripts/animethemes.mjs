@@ -6,75 +6,183 @@
    ЕЩЁ НЕ разносили, нужен внешний список: что у тайтла вообще есть.
    animethemes.moe — открытая база сообщества, ключ не нужен.
 
-   Из песочницы разработки их сайт недоступен, поэтому сначала
-   разведка: запускаем в Actions и печатаем, что реально отвечает
-   API. По этому ответу уже пишется разбор.
+   Складывает в data/themes.json по одной записи на источник:
+   какой тайтл нашёлся и какие у него темы (OP1, ED2, …).
 
-     node scripts/animethemes.mjs --probe        разведка
-     node scripts/animethemes.mjs --limit 50     собрать каталог
+     node scripts/animethemes.mjs --probe          посмотреть API
+     node scripts/animethemes.mjs                  докачать новых
+     node scripts/animethemes.mjs --limit 200      только 200 штук
+     node scripts/animethemes.mjs --retry-missing  переспросить ненайденных
+     node scripts/animethemes.mjs --max-minutes 20 остановиться по времени
 
    ============================================================ */
 
+import fs from 'node:fs';
+import path from 'node:path';
+import vm from 'node:vm';
+import { fileURLToPath } from 'node:url';
+
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const ARGS = process.argv.slice(2);
 const has = f => ARGS.includes(f);
-const val = (f, d) => { const i = ARGS.indexOf(f); return i >= 0 && ARGS[i+1] ? ARGS[i+1] : d; };
+const val = (f, d) => { const i = ARGS.indexOf(f); return i >= 0 && ARGS[i + 1] ? ARGS[i + 1] : d; };
 
-const API = process.env.AT_API || 'https://api.animethemes.moe';
-const UA  = 'faryma-stats/1.0 ( https://github.com/Laitsberg/faryma.stats )';
+const CSV_PATH = val('--csv', path.join(ROOT, 'data.csv'));
+const OUT_PATH = val('--out', path.join(ROOT, 'data', 'themes.json'));
+const LIMIT    = +val('--limit', Infinity);
+const RETRY    = has('--retry-missing');
+const MAX_MS   = +val('--max-minutes', Infinity) * 60000;
+
+const API   = process.env.AT_API || 'https://api.animethemes.moe';
+const UA    = 'faryma-stats/1.0 ( https://github.com/Laitsberg/faryma.stats )';
 const DELAY = +(process.env.AT_DELAY || 350);
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
-async function get(path) {
-  const url = API + path;
-  const res = await fetch(url, { headers: { 'User-Agent': UA, Accept: 'application/json' } });
-  const text = await res.text();
-  let json = null;
-  try { json = JSON.parse(text); } catch {}
-  return { status: res.status, ok: res.ok, json, text };
+async function get(p, attempt = 0) {
+  let res;
+  try {
+    res = await fetch(API + p, { headers: { 'User-Agent': UA, Accept: 'application/json' } });
+  } catch (e) {
+    if (attempt < 3) { await sleep(1500 * (attempt + 1)); return get(p, attempt + 1); }
+    throw e;
+  }
+  if (res.status === 429 || res.status === 503) {
+    if (attempt < 5) { await sleep(3000 * (attempt + 1)); return get(p, attempt + 1); }
+    throw new Error('animethemes не отвечает: ' + res.status);
+  }
+  if (!res.ok) return null;
+  return res.json();
 }
 
-/* ---------- разведка ----------
-   Печатаем структуру ответа, а не догадываемся о ней. */
-function skeleton(v, depth = 0, key = '') {
-  const pad = '  '.repeat(depth);
-  if (Array.isArray(v)) {
-    console.log(`${pad}${key}[] — ${v.length} шт.`);
-    if (v.length && depth < 3) skeleton(v[0], depth + 1, '↳ ');
-    return;
-  }
-  if (v && typeof v === 'object') {
-    if (key) console.log(`${pad}${key}{}`);
-    Object.entries(v).slice(0, 14).forEach(([k, x]) => {
-      if (x && typeof x === 'object') skeleton(x, depth + 1, k + ' ');
-      else console.log(`${pad}  ${k}: ${JSON.stringify(x)?.slice(0, 70)}`);
-    });
-    return;
-  }
-  console.log(`${pad}${key}${JSON.stringify(v)?.slice(0, 70)}`);
+/* ---------- разбор берём из кода сайта ---------- */
+function loadSiteCode() {
+  const ctx = vm.createContext({ console, URL });
+  for (const f of ['js/config.js', 'js/parse.js'])
+    vm.runInContext(fs.readFileSync(path.join(ROOT, f), 'utf8'), ctx, { filename: f });
+  return ctx;
+}
+function papa() {
+  const src = fs.readFileSync(path.join(ROOT, 'vendor', 'papaparse.min.js'), 'utf8');
+  const box = { module: { exports: {} }, exports: {}, window: {}, global: {} };
+  vm.createContext(box); vm.runInContext(src, box);
+  return box.module.exports?.parse ? box.module.exports : box.Papa || box.window.Papa;
 }
 
-async function probe() {
-  const пробы = [
-    ['корень API', '/'],
-    ['поиск тайтла', '/anime?filter[name]=Chainsaw%20Man&page[size]=2'],
-    ['тайтл с темами', '/anime?filter[name]=Chainsaw%20Man&include=animethemes.song.artists&page[size]=1'],
-    ['по слагу', '/anime/chainsaw_man?include=animethemes.song.artists'],
-    ['поиск по строке', '/search?q=Chainsaw%20Man&fields[search]=anime']
-  ];
-  for (const [имя, path] of пробы) {
-    console.log('\n' + '='.repeat(60));
-    console.log(имя, '→', path);
-    try {
-      const r = await get(path);
-      console.log('HTTP', r.status);
-      if (r.json) skeleton(r.json);
-      else console.log('не JSON:', r.text.slice(0, 200));
-    } catch (e) {
-      console.log('ошибка запроса:', e.message);
-    }
-    await sleep(DELAY);
-  }
+/* Аниме-источники архива: те, где в скобках стоит опенинг или эндинг,
+   либо колонка «Откуда» говорит «Аниме». */
+function collectSources(ctx) {
+  const rows = papa().parse(fs.readFileSync(CSV_PATH, 'utf8'),
+    { header: true, skipEmptyLines: 'greedy' }).data;
+  const counts = new Map();
+  rows.forEach(r => {
+    if (!ctx.parseRate(r['Оценка'])) return;
+    const src = ctx.parseSource(r['Что']);
+    if (!src) return;
+    const kind = ctx.sourceKind(r['Что']);
+    const аниме = kind === 'опенинг' || kind === 'эндинг' ||
+                  (r['Откуда'] || '').trim() === 'Аниме';
+    if (!аниме) return;
+    counts.set(src, (counts.get(src) || 0) + 1);
+  });
+  return [...counts].map(([name, n]) => ({ name, n }))
+    .sort((a, b) => b.n - a.n);          // частые спрашиваем первыми
 }
 
-if (has('--probe')) { await probe(); process.exit(0); }
-console.log('пока умею только --probe');
+/* ---------- поиск тайтла ----------
+   Сначала точное имя, потом общий поиск: в архиве пишут и
+   «Boku no Hero Academia 3rd Season», и просто «Naruto». */
+const norm = s => String(s || '').toLowerCase()
+  .replace(/[!?.,:;''"`~*\-–—_]/g, ' ').replace(/\s+/g, ' ').trim();
+
+async function findAnime(name) {
+  const inc = 'include=animethemes.song.artists';
+  let j = await get(`/anime?filter[name]=${encodeURIComponent(name)}&${inc}&page[size]=1`);
+  let a = j?.anime?.[0];
+  if (a) return { a, how: 'точно' };
+
+  await sleep(DELAY);
+  j = await get(`/search?q=${encodeURIComponent(name)}&fields[search]=anime`);
+  const list = j?.search?.anime || [];
+  const want = norm(name);
+  const hit = list.find(x => norm(x.name) === want) || list[0];
+  if (!hit) return null;
+
+  await sleep(DELAY);
+  const full = await get(`/anime/${encodeURIComponent(hit.slug)}?${inc}`);
+  return full?.anime ? { a: full.anime, how: norm(hit.name) === want ? 'поиском' : 'похожее' } : null;
+}
+
+function pack(a) {
+  return {
+    slug: a.slug, name: a.name, year: a.year ?? null, season: a.season ?? null,
+    themes: (a.animethemes || []).map(t => ({
+      t: t.type || '', s: t.slug || '', seq: t.sequence ?? null,
+      title: t.song?.title || '',
+      artists: (t.song?.artists || []).map(x => x.name).filter(Boolean)
+    })).filter(t => t.title || t.s)
+  };
+}
+
+/* ---------- главное ---------- */
+if (has('--probe')) {
+  for (const p of ['/anime?filter[name]=Chainsaw%20Man&include=animethemes.song.artists&page[size]=1']) {
+    const j = await get(p);
+    console.log(JSON.stringify(j?.anime?.[0]?.animethemes?.slice(0, 3), null, 1));
+  }
+  process.exit(0);
+}
+
+const ctx = loadSiteCode();
+const sources = collectSources(ctx);
+let cache = {};
+try { cache = JSON.parse(fs.readFileSync(OUT_PATH, 'utf8')).sources || {}; } catch {}
+
+const todo = sources.filter(s => {
+  const hit = cache[s.name];
+  if (!hit) return true;
+  if (RETRY && !hit.slug) return true;
+  return false;
+}).slice(0, LIMIT);
+
+console.log(`аниме-источников в архиве: ${sources.length}`);
+console.log(`уже в кэше:                ${Object.keys(cache).length}`);
+console.log(`спросить:                  ${todo.length}`);
+if (!todo.length) { console.log('нечего докачивать'); process.exit(0); }
+
+const save = () => {
+  fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });
+  fs.writeFileSync(OUT_PATH, JSON.stringify({
+    generated: new Date().toISOString(),
+    source: 'animethemes.moe',
+    note: 'how — как нашёлся тайтл: точно / поиском / похожее',
+    sources: cache
+  }, null, 1) + '\n');
+};
+
+const started = Date.now();
+let done = 0, found = 0, themes = 0, fails = 0;
+for (const s of todo) {
+  if (Date.now() - started > MAX_MS) {
+    console.log(`\nвремя вышло, останавливаюсь на ${done}/${todo.length}`);
+    break;
+  }
+  try {
+    const r = await findAnime(s.name);
+    cache[s.name] = r ? { tracks: s.n, how: r.how, ...pack(r.a) } : { tracks: s.n, slug: null };
+    if (r) { found++; themes += cache[s.name].themes.length; }
+  } catch (e) {
+    console.error(`  ! ${s.name}: ${e.message}`);
+    if (++fails > 20) { console.error('слишком много ошибок, останавливаюсь'); break; }
+  }
+  done++;
+  if (done % 50 === 0) { console.log(`${done}/${todo.length} · нашлось ${found}, тем ${themes}`); save(); }
+  await sleep(DELAY);
+}
+
+save();
+const всего = Object.values(cache);
+console.log(`\nготово: спрошено ${done}, нашлось ${found}`);
+console.log(`в кэше ${всего.length} источников, с тайтлом ${всего.filter(x => x.slug).length}`);
+const how = {};
+всего.forEach(x => { if (x.how) how[x.how] = (how[x.how] || 0) + 1; });
+console.log('как нашлись:', how);
