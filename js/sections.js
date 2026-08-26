@@ -305,17 +305,6 @@ function repeatPairs() {
   return out;
 }
 
-/* В названии повтора болтается служебная пометка — в таблице она лишняя.
-   Пишут её двумя способами: своими скобками «(ПОВТОР: СТРИМ №17; …)»
-   и внутри чужих, после точки с запятой — «(Lone Trail Boss theme;
-   ПОВТОР: СТРИМ №22; …)». Второй случай надо срезать до закрывающей
-   скобки, не трогая саму скобку. */
-const dropRepeatMark = t => String(t || '')
-  .replace(/\s*\(\s*ПОВТОР:[^)]*\)/gi, '')
-  .replace(/\s*[;,]\s*ПОВТОР:[^)]*(?=\))/gi, '')
-  .replace(/\s{2,}/g, ' ')
-  .trim();
-
 function renderRepeats() {
   const pairs = repeatPairs();
   if (pairs.length < 5) { $('secRepeat').style.display = 'none'; return; }
@@ -345,8 +334,8 @@ function renderRepeats() {
                `<a class="pf-link nowrap" href="#stream=${r.s2}" data-stream="${r.s2}">№${r.s2}</a>` +
                (r.days != null ? ` <span class="plat">${num(r.days)} дн.</span>` : '') }],
     pairs.map(x => ({
-      artist: x.again.artist, title: dropRepeatMark(x.again.title),
-      name: x.again.artist + ' — ' + dropRepeatMark(x.again.title),
+      artist: x.again.artist, title: x.again.title,
+      name: x.again.artist + ' — ' + x.again.title,
       was: x.src.rate.label, now: x.again.rate.label,
       wasScore: x.src.rate.score, nowScore: x.again.rate.score,
       d: +x.d.toFixed(1), s1: x.src.streamNum, s2: x.again.streamNum, days: x.days
