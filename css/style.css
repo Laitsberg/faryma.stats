@@ -559,6 +559,9 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 50px;
 .pf-tag{font-family:var(--m);font-size:11px;color:var(--dim);background:var(--panel);
   border:1px solid var(--line);border-radius:2px;padding:5px 9px}
 .pf-tag b{color:var(--brand-hi);font-weight:600;margin-left:5px}
+/* та же плашка, но кликабельная — ведёт в карточку вселенной */
+a.pf-tag-l{text-decoration:none;transition:border-color .12s,color .12s}
+a.pf-tag-l:hover{border-color:var(--brand);color:var(--ink)}
 
 /* имена и номера, по которым открывается профиль */
 [data-artist],[data-stream]{cursor:pointer}

@@ -106,6 +106,25 @@ function trackList(rows, opts = {}) {
   }).join('') + '</div>';
 }
 
+/* Франшизы, для которых исполнитель что-то писал.
+   Связь была односторонней: из вселенной можно было уйти в артиста,
+   а обратно нет. Сезоны сводим к франшизе, чтобы «Boku no Hero
+   Academia» не распадалась на семь строк. */
+function franchiseTags(rows, title) {
+  const m = new Map();
+  rows.forEach(r => {
+    if (!r.source) return;
+    const b = sourceParts(r.source).base;
+    m.set(b, (m.get(b) || 0) + 1);
+  });
+  if (!m.size) return '';
+  const list = [...m].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ru'));
+  return `<h3 class="pf-h">${esc(title)}</h3><div class="pf-tags">` +
+    list.map(([k, n]) =>
+      `<a class="pf-tag pf-tag-l" href="#source=${encodeURIComponent(k)}" data-source="${esc(k)}">` +
+      `${esc(k)} <b>${num(n)}</b></a>`).join('') + `</div>`;
+}
+
 /* ---------- профиль артиста ---------- */
 function showArtist(name) {
   const key = canonKey(nameKey(name));
@@ -131,6 +150,7 @@ function showArtist(name) {
   openProfile(shown, span,
     kpiBlock(kpi) +
     tierBars(rows) +
+    franchiseTags(rows, 'Писал для') +
     `<h3 class="pf-h">Все разносы</h3>` +
     trackList([...rows].sort((x, y) => (y.date || 0) - (x.date || 0)), { showStream: true }));
 }
@@ -170,6 +190,7 @@ function showUser(name) {
   openProfile(shown, span,
     kpiBlock(kpi) +
     tierBars(rows) + favHtml +
+    franchiseTags(rows, 'Приносил из') +
     `<h3 class="pf-h">Всё, что принёс</h3>` +
     trackList([...rows].sort((x, y) => (y.date || 0) - (x.date || 0)),
       { showArtist: true, showStream: true }));

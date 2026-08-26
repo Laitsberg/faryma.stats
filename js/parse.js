@@ -109,7 +109,7 @@ function parseSource(what) {
   // «OST, Hunter x Hunter», «ep 15, OST; Re:Zero». Запятая встречается
   // чаще точки с запятой — из-за неё 150 источников оставались с
   // хвостом «OST, …» и уезжали в отдельные карточки.
-  const MARKER = /^\s*(?:OST(?:\s+[^;:,\]]{1,24})?|VN|UTA(?:\s+OST)?|Character\s+Song|Main\s+Theme|Insert(?:\s+Song)?|Theme|ep\.?\s*\d+(?:\s*(?:[-–]|and)\s*\d+)?|(?:OP|ED)\s+Theme|Opening|Ending|OP|ED|\d+(?:\/\d+)?\s+(?:Opening|Ending|OP|ED))\s*[;:,]\s*/i;
+  const MARKER = /^\s*(?:OST(?:\s+[^;:,\]]{1,24})?|VN|UTA(?:\s+OST)?|Character\s+Song|Main\s+Theme|Insert(?:\s+Song)?|Theme|ep\.?\s*\d+(?:\s*(?:[-–]|and)\s*\d+)?|\d+\s+(?:OST|OP|ED)|(?:OP|ED)\s+Theme|Opening|Ending|OP|ED|\d+(?:\/\d+)?\s+(?:Opening|Ending|OP|ED))\s*[;:,]\s*/i;
   let guard = 6;
   while (guard-- && MARKER.test(t)) t = t.replace(MARKER, '');
 
@@ -119,6 +119,8 @@ function parseSource(what) {
   t = t.replace(/^\s*UTA\s+from\s+/i, '');
   t = t.replace(/^\s*(?:OST|VN)\s+(?=[A-ZА-Я0-9])/, '');
   t = t.replace(/^\s*ep\.?\s*\d+(?:\s*(?:[-–]|and)\s*\d+)?\s+(?=[A-ZА-Я0-9])/i, '');
+  // номер трека перед пометкой: «3 OST Bleach», «26 OP One Piece»
+  t = t.replace(/^\s*\d+\s+(?:OST|OP|ED)\s+(?=[A-ZА-Я0-9])/i, '');
 
   return t
     .split('/')[0]

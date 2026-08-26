@@ -13,6 +13,7 @@ let COUNTRIES = {};            // артист → страна, из data/count
 let SOLO_KEYS = new Set();     // кто хоть раз выступал один — нужен при разбиении имён
 let NAME_ALIAS = new Map();    // «Sawano Hiroyuki» → «Hiroyuki Sawano»
 let OFFSCALE = [];             // оценки, которых нет на шкале — «ГЕ-НЯ-АЛЬНО» и прочее
+let SOURCE_NAMES = new Map();  // ключ → показываемое написание вселенной
 
 /* Ключ имени с учётом склейки перестановок */
 const canonKey = k => NAME_ALIAS.get(k) || k;
@@ -74,6 +75,12 @@ function build(raw) {
   parsed.forEach(p => { if (p.w.artist) allParts.push(...participants(p.w.artist, soloKeys)); });
   PART_NAMES = canonMap(allParts, nameKey);
 
+  // Вселенные пишут в разном регистре: «ULTRAKILL» и «Ultrakill»,
+  // «FINAL FANTASY XIV: Endwalker» и «Final Fantasy XIV: Endwalker».
+  // Сводим к самому частому написанию — как имена исполнителей.
+  SOURCE_NAMES = canonMap(
+    parsed.map(p => parseSource(p.r['Что'])).filter(Boolean), nameKey);
+
   const partCounts = new Map();
   allParts.forEach(v => { const k = nameKey(v); partCounts.set(k, (partCounts.get(k) || 0) + 1); });
   NAME_ALIAS = buildNameAliases(partCounts);
@@ -111,7 +118,8 @@ function build(raw) {
       userParts: userParts(user).map(userKey),
       type:   (r['Тип'] || '').trim(),
       origin: (r['Откуда'] || '').trim(),
-      source: parseSource(r['Что']),
+      source: (() => { const x = parseSource(r['Что']);
+        return x ? (SOURCE_NAMES.get(nameKey(x)) || x) : ''; })(),
       kind:   sourceKind(r['Что']),      // опенинг / эндинг / OST / вставка
       genres: splitGenres(r['Жанр']),
       tags:   (r['Тэги'] || '').split(/[,\/]/).map(s => s.trim()).filter(Boolean),

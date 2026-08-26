@@ -73,11 +73,17 @@ function papa() {
 function collectSources(ctx) {
   const rows = papa().parse(fs.readFileSync(CSV_PATH, 'utf8'),
     { header: true, skipEmptyLines: 'greedy' }).data;
+  // Регистр сводим так же, как на сайте: «ULTRAKILL» и «Ultrakill» —
+  // одна вселенная, и спрашивать её дважды незачем.
+  const canon = ctx.canonMap(
+    rows.map(r => ctx.parseSource(r['Что'])).filter(Boolean), ctx.nameKey);
+
   const counts = new Map();
   rows.forEach(r => {
     if (!ctx.parseRate(r['Оценка'])) return;
-    const src = ctx.parseSource(r['Что']);
+    let src = ctx.parseSource(r['Что']);
     if (!src) return;
+    src = canon.get(ctx.nameKey(src)) || src;
     const kind = ctx.sourceKind(r['Что']);
     const аниме = kind === 'опенинг' || kind === 'эндинг' ||
                   (r['Откуда'] || '').trim() === 'Аниме';
