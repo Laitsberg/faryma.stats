@@ -1,11 +1,12 @@
 {
- "generated": "2026-08-26T04:13:34.777Z",
+ "generated": "2026-08-26T05:04:29.763Z",
  "source": "animethemes.moe",
  "note": "how — как нашёлся тайтл: точно / поиском / похожее",
  "sources": {
   "86": {
    "tracks": 3,
    "how": "точно",
+   "score": 1,
    "slug": "86",
    "name": "86",
    "year": 2021,
@@ -35,45 +36,38 @@
    ]
   },
   "Fate": {
-   "tracks": 22,
-   "how": "похожее",
-   "slug": "fatestay_night_unlimited_blade_works_tv",
-   "name": "Fate/stay night: Unlimited Blade Works (TV)",
-   "year": 2014,
+   "tracks": 24,
+   "how": "похоже",
+   "score": 0.86,
+   "slug": "fatezero",
+   "name": "Fate/Zero",
+   "year": 2011,
    "season": "Fall",
    "themes": [
     {
      "t": "OP",
      "s": "OP1",
      "seq": null,
-     "title": "ideal white",
+     "title": "oath sign",
      "artists": [
-      "Mashiro Ayano"
+      "LiSA"
      ]
     },
     {
      "t": "ED",
      "s": "ED1",
-     "seq": 1,
-     "title": "believe",
+     "seq": null,
+     "title": "MEMORIA",
      "artists": [
-      "Kalafina"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "THIS ILLUSION",
-     "artists": [
-      "LiSA"
+      "Eir Aoi"
      ]
     }
    ]
   },
   "One Piece": {
-   "tracks": 13,
+   "tracks": 16,
    "how": "точно",
+   "score": 1,
    "slug": "one_piece",
    "name": "One Piece",
    "year": 1999,
@@ -595,6 +589,7 @@
   "Death Note": {
    "tracks": 11,
    "how": "точно",
+   "score": 1,
    "slug": "death_note",
    "name": "Death Note",
    "year": 2006,
@@ -640,6 +635,7 @@
   "Chainsaw Man": {
    "tracks": 11,
    "how": "точно",
+   "score": 1,
    "slug": "chainsaw_man",
    "name": "Chainsaw Man",
    "year": 2022,
@@ -740,26 +736,89 @@
   },
   "Re:Zero - Starting Life in Another World": {
    "tracks": 10,
-   "how": "похожее",
-   "slug": "rezero_kara_hajimeru_isekai_seikatsu_hyouketsu_no_kizuna",
-   "name": "Re:Zero kara Hajimeru Isekai Seikatsu - Hyouketsu no Kizuna",
-   "year": 2019,
-   "season": "Fall",
+   "how": "точно",
+   "score": 1,
+   "slug": "rezero_kara_hajimeru_isekai_seikatsu",
+   "name": "Re:Zero kara Hajimeru Isekai Seikatsu",
+   "year": 2016,
+   "season": "Spring",
    "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": 1,
+     "title": "Redo",
+     "artists": [
+      "Konomi Suzuki"
+     ]
+    },
+    {
+     "t": "OP",
+     "s": "OP2",
+     "seq": 2,
+     "title": "Paradisus-Paradoxum",
+     "artists": [
+      "MYTH & ROID"
+     ]
+    },
     {
      "t": "ED",
      "s": "ED1",
-     "seq": null,
-     "title": "Yuki no Hate ni Kimi no Na wo",
+     "seq": 1,
+     "title": "STYX HELIX",
      "artists": [
-      "nonoc"
+      "MYTH & ROID"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED2",
+     "seq": 2,
+     "title": "STRAIGHT BET",
+     "artists": [
+      "MYTH & ROID"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED3",
+     "seq": 3,
+     "title": "Stay Alive",
+     "artists": [
+      "Rie Takahashi"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED4",
+     "seq": 4,
+     "title": "theater D",
+     "artists": [
+      "MYTH & ROID"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED5",
+     "seq": 5,
+     "title": "Chinmoku no Requiem",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED6",
+     "seq": 6,
+     "title": "Wishing",
+     "artists": [
+      "Inori Minase"
      ]
     }
    ]
   },
   "Tokyo Ghoul": {
-   "tracks": 9,
+   "tracks": 10,
    "how": "точно",
+   "score": 1,
    "slug": "tokyo_ghoul",
    "name": "Tokyo Ghoul",
    "year": 2014,
@@ -782,8 +841,9 @@
    ]
   },
   "Naruto: Shippuuden": {
-   "tracks": 9,
+   "tracks": 12,
    "how": "точно",
+   "score": 1,
    "slug": "naruto_shippuuden",
    "name": "Naruto: Shippuuden",
    "year": 2007,
@@ -1214,6 +1274,7 @@
   "Love Live! Sunshine!!": {
    "tracks": 8,
    "how": "точно",
+   "score": 1,
    "slug": "love_live_sunshine",
    "name": "Love Live! Sunshine!!",
    "year": 2016,
@@ -1313,8 +1374,9 @@
    ]
   },
   "Black Clover": {
-   "tracks": 8,
-   "how": "похожее",
+   "tracks": 9,
+   "how": "точно",
+   "score": 1,
    "slug": "black_clover_tv",
    "name": "Black Clover (TV)",
    "year": 2017,
@@ -1544,8 +1606,9 @@
    ]
   },
   "Bleach": {
-   "tracks": 8,
+   "tracks": 14,
    "how": "точно",
+   "score": 1,
    "slug": "bleach",
    "name": "BLEACH",
    "year": 2004,
@@ -1868,79 +1931,568 @@
     }
    ]
   },
-  "OST, Hunter x Hunter 2011": {
-   "tracks": 8,
-   "how": "похожее",
-   "slug": "hunter_x_hunter_2011",
-   "name": "Hunter x Hunter",
-   "year": 2011,
+  "One Piece Film: Red": {
+   "tracks": 11,
+   "how": "похоже",
+   "score": 0.67,
+   "slug": "one_piece",
+   "name": "One Piece",
+   "year": 1999,
    "season": "Fall",
    "themes": [
     {
      "t": "OP",
      "s": "OP1",
-     "seq": null,
-     "title": "departure!",
+     "seq": 1,
+     "title": "We Are!",
+     "artists": [
+      "Hiroshi Kitadani"
+     ]
+    },
+    {
+     "t": "OP",
+     "s": "OP2",
+     "seq": 2,
+     "title": "Believe",
+     "artists": [
+      "Folder5"
+     ]
+    },
+    {
+     "t": "OP",
+     "s": "OP3",
+     "seq": 3,
+     "title": "Hikari E",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP4",
+     "seq": 4,
+     "title": "Bon Voyage!",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP5",
+     "seq": 5,
+     "title": "Kokoro no Chizu",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP6",
+     "seq": 6,
+     "title": "Brand New World",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP7",
+     "seq": 7,
+     "title": "We Are!",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP8",
+     "seq": 8,
+     "title": "Crazy Rainbow",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP9",
+     "seq": 9,
+     "title": "Jungle P",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP10",
+     "seq": 10,
+     "title": "We Are",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP11",
+     "seq": 11,
+     "title": "Share the World",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP12",
+     "seq": 12,
+     "title": "Kaze wo Sagashite",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP13",
+     "seq": 13,
+     "title": "One Day",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP14",
+     "seq": 14,
+     "title": "Fight Together",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP15",
+     "seq": 15,
+     "title": "We go!",
+     "artists": [
+      "Hiroshi Kitadani"
+     ]
+    },
+    {
+     "t": "OP",
+     "s": "OP16",
+     "seq": 16,
+     "title": "Hands Up!",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP17",
+     "seq": 17,
+     "title": "Wake up!",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP18",
+     "seq": 18,
+     "title": "Hard Knock Days",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP19",
+     "seq": 19,
+     "title": "We Can!",
+     "artists": [
+      "Hiroshi Kitadani"
+     ]
+    },
+    {
+     "t": "OP",
+     "s": "OP20",
+     "seq": 20,
+     "title": "Hope",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP21",
+     "seq": 21,
+     "title": "Super Powers",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP22",
+     "seq": 22,
+     "title": "OVER THE TOP",
+     "artists": [
+      "Hiroshi Kitadani"
+     ]
+    },
+    {
+     "t": "OP",
+     "s": "OP23",
+     "seq": 23,
+     "title": "DREAMIN' ON",
      "artists": []
     },
     {
      "t": "ED",
      "s": "ED1",
      "seq": 1,
-     "title": "Just Awake",
+     "title": "memories",
      "artists": [
-      "Fear, and Loathing in Las Vegas"
+      "Maki Ootsuki"
      ]
     },
     {
      "t": "ED",
      "s": "ED2",
      "seq": 2,
-     "title": "Hunting for Your Dream.",
+     "title": "RUN! RUN! RUN!",
      "artists": []
     },
     {
      "t": "ED",
      "s": "ED3",
      "seq": 3,
-     "title": "REASON",
+     "title": "Watashi ga iru Yo",
      "artists": []
     },
     {
      "t": "ED",
      "s": "ED4",
      "seq": 4,
-     "title": "Nagareboshi Kirari",
+     "title": "Souchinosuke",
      "artists": []
     },
     {
      "t": "ED",
      "s": "ED5",
      "seq": 5,
-     "title": "Hyoriittai",
+     "title": "BEFORE DAWN",
      "artists": []
     },
     {
      "t": "ED",
      "s": "ED6",
      "seq": 6,
-     "title": "Hyoriittai -second version-",
+     "title": "fish",
      "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED7",
+     "seq": 7,
+     "title": "GLORY -Kimi ga iru Kara-",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED8",
+     "seq": 8,
+     "title": "Shining ray",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED9",
+     "seq": 9,
+     "title": "Family",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED10",
+     "seq": 10,
+     "title": "Free Will",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED11",
+     "seq": 11,
+     "title": "FAITH",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED12",
+     "seq": 12,
+     "title": "A to Z ~One Piece Edition~",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED13",
+     "seq": 13,
+     "title": "Tsuki to Taiyou",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED14",
+     "seq": 14,
+     "title": "DREAMSHIP",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED15",
+     "seq": 15,
+     "title": "Mirai Koukai",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED16",
+     "seq": 16,
+     "title": "Eternal Pose",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED17",
+     "seq": 17,
+     "title": "Dear friends",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED18",
+     "seq": 18,
+     "title": "Asu wa Kurukara",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED19",
+     "seq": 19,
+     "title": "ADVENTURE WORLD",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED20",
+     "seq": 20,
+     "title": "One Day",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED21",
+     "seq": 21,
+     "title": "We go!",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP1-EN",
+     "seq": 1,
+     "title": "We Are!",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP2-EN",
+     "seq": 2,
+     "title": "Believe",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP3-EN",
+     "seq": 3,
+     "title": "Hikari E",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP4-EN",
+     "seq": 4,
+     "title": "Bon Voyage!",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED1-EN",
+     "seq": 1,
+     "title": "memories",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED2-EN",
+     "seq": 2,
+     "title": "RUN! RUN! RUN!",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED3-EN",
+     "seq": 3,
+     "title": "Watashi ga iru Yo",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED4-EN",
+     "seq": 4,
+     "title": "Souchinosuke",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED5-EN",
+     "seq": 5,
+     "title": "BEFORE DAWN",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED6-EN",
+     "seq": 6,
+     "title": "fish",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED7-EN",
+     "seq": 7,
+     "title": "GLORY -Kimi ga iru Kara-",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED8-EN",
+     "seq": 8,
+     "title": "Shining ray",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED9-EN",
+     "seq": 9,
+     "title": "Free Will",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED10-EN",
+     "seq": 10,
+     "title": "FAITH",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED11-EN",
+     "seq": 11,
+     "title": "A to Z ~One Piece Edition~",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED12-EN",
+     "seq": 12,
+     "title": "Tsuki to Taiyou",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP1-EN4Kids",
+     "seq": 1,
+     "title": "One Piece Theme",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP24",
+     "seq": 24,
+     "title": "PAINT",
+     "artists": [
+      "I Don't Like Mondays."
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED22",
+     "seq": 22,
+     "title": "Raise",
+     "artists": [
+      "Chilli Beans."
+     ]
+    },
+    {
+     "t": "OP",
+     "s": "OP25",
+     "seq": 25,
+     "title": "Saikou Toutatsuten",
+     "artists": [
+      "SEKAI NO OWARI"
+     ]
+    },
+    {
+     "t": "OP",
+     "s": "OP26",
+     "seq": 26,
+     "title": "Assu!",
+     "artists": [
+      "Hiroshi Kitadani"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED23",
+     "seq": 23,
+     "title": "Dear sunrise",
+     "artists": [
+      "Maki Ootsuki"
+     ]
+    },
+    {
+     "t": "OP",
+     "s": "OP27",
+     "seq": 27,
+     "title": "Tenshi to Akuma",
+     "artists": [
+      "GRe4N BOYZ"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED24",
+     "seq": 24,
+     "title": "The 1",
+     "artists": [
+      "muque"
+     ]
+    },
+    {
+     "t": "OP",
+     "s": "OP28",
+     "seq": 28,
+     "title": "Carmine",
+     "artists": [
+      "ELLEGARDEN"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED25",
+     "seq": 25,
+     "title": "PUNKS",
+     "artists": [
+      "CHAMELEON LIME WHOOPIEPIE"
+     ]
+    },
+    {
+     "t": "OP",
+     "s": "OP29",
+     "seq": 29,
+     "title": "Luminous",
+     "artists": [
+      "AiNA THE END"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED26",
+     "seq": 26,
+     "title": "Sono Mirai",
+     "artists": [
+      "36km/h"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED27",
+     "seq": 27,
+     "title": "Sekai wa Hitori ja Nakatta",
+     "artists": [
+      "Maki Ootsuki"
+     ]
     }
    ]
   },
-  "One Piece Film: Red": {
-   "tracks": 7,
-   "how": "похожее",
-   "slug": "one_piece_heroines",
-   "name": "ONE PIECE HEROINES",
-   "year": 2026,
-   "season": "Summer",
-   "themes": []
-  },
   "Fairy Tail": {
-   "tracks": 7,
+   "tracks": 10,
    "how": "точно",
+   "score": 1,
    "slug": "fairy_tail",
    "name": "Fairy Tail",
    "year": 2009,
@@ -2147,6 +2699,7 @@
   "Gintama": {
    "tracks": 7,
    "how": "точно",
+   "score": 1,
    "slug": "gintama",
    "name": "Gintama",
    "year": 2006,
@@ -2381,6 +2934,7 @@
   "Darling in the FranXX": {
    "tracks": 7,
    "how": "точно",
+   "score": 1,
    "slug": "darling_in_the_franxx",
    "name": "Darling in the FranXX",
    "year": 2018,
@@ -2447,6 +3001,7 @@
   "Soul Eater": {
    "tracks": 6,
    "how": "точно",
+   "score": 1,
    "slug": "soul_eater",
    "name": "Soul Eater",
    "year": 2008,
@@ -2526,7 +3081,8 @@
   },
   "Link Click Season 2": {
    "tracks": 6,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "shiguang_dailiren_ii",
    "name": "Shiguang Dailiren II",
    "year": 2023,
@@ -2556,6 +3112,7 @@
   "Jujutsu Kaisen 2nd Season": {
    "tracks": 6,
    "how": "точно",
+   "score": 1,
    "slug": "jujutsu_kaisen_2nd_season",
    "name": "Jujutsu Kaisen 2nd Season",
    "year": 2023,
@@ -2593,26 +3150,27 @@
   },
   "Love Live! Nijigasaki High School Idol Club": {
    "tracks": 5,
-   "how": "похожее",
-   "slug": "love_live_nijigasaki_gakuen_school_idol_doukoukai_2nd_season",
-   "name": "Love Live! Nijigasaki Gakuen School Idol Doukoukai 2nd Season",
-   "year": 2022,
-   "season": "Spring",
+   "how": "точно",
+   "score": 1,
+   "slug": "love_live_nijigasaki_gakuen_school_idol_doukoukai",
+   "name": "Love Live! Nijigasaki Gakuen School Idol Doukoukai",
+   "year": 2020,
+   "season": "Fall",
    "themes": [
     {
-     "t": "ED",
-     "s": "ED1",
+     "t": "OP",
+     "s": "OP1",
      "seq": null,
-     "title": "Yume ga Bokura no Taiyou sa",
+     "title": "Niji-iro Passions!",
      "artists": [
       "Nijigasaki Gakuen School Idol Doukoukai"
      ]
     },
     {
-     "t": "OP",
-     "s": "OP1",
+     "t": "ED",
+     "s": "ED1",
      "seq": null,
-     "title": "Colorful Dreams! Colorful Smiles!",
+     "title": "NEO SKY, NEO MAP!",
      "artists": [
       "Nijigasaki Gakuen School Idol Doukoukai"
      ]
@@ -2622,6 +3180,7 @@
   "Aldnoah.Zero": {
    "tracks": 5,
    "how": "точно",
+   "score": 1,
    "slug": "aldnoahzero",
    "name": "Aldnoah.Zero",
    "year": 2014,
@@ -2653,6 +3212,7 @@
   "Neon Genesis Evangelion": {
    "tracks": 5,
    "how": "точно",
+   "score": 1,
    "slug": "neon_genesis_evangelion",
    "name": "Neon Genesis Evangelion",
    "year": 1995,
@@ -2768,6 +3328,7 @@
   "Digimon Adventure": {
    "tracks": 5,
    "how": "точно",
+   "score": 1,
    "slug": "digimon_adventure",
    "name": "Digimon Adventure",
    "year": 1999,
@@ -2806,6 +3367,7 @@
   "Shingeki no Kyojin: The Final Season": {
    "tracks": 5,
    "how": "точно",
+   "score": 1,
    "slug": "shingeki_no_kyojin_the_final_season",
    "name": "Shingeki no Kyojin: The Final Season",
    "year": 2020,
@@ -2830,6 +3392,7 @@
   "Dragon Ball Super": {
    "tracks": 5,
    "how": "точно",
+   "score": 1,
    "slug": "dragon_ball_super",
    "name": "Dragon Ball Super",
    "year": 2015,
@@ -2930,117 +3493,37 @@
   },
   "Re:Zero - Starting Life in Another World 2nd Season": {
    "tracks": 5,
-   "how": "похожее",
-   "slug": "rezero_kara_hajimeru_isekai_seikatsu_2nd_season_part_2",
-   "name": "Re:Zero kara Hajimeru Isekai Seikatsu 2nd Season Part 2",
-   "year": 2021,
-   "season": "Winter",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Long shot",
-     "artists": [
-      "Mayu Maeshima"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Memento",
-     "artists": [
-      "nonoc"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Door",
-     "artists": [
-      "Rie Takahashi"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED3",
-     "seq": 3,
-     "title": "Believe in you",
-     "artists": [
-      "nonoc"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED4",
-     "seq": 4,
-     "title": "Anata no Shiranai Koto",
-     "artists": [
-      "Rie Murakawa"
-     ]
-    }
-   ]
-  },
-  "OST, Made in Abyss": {
-   "tracks": 5,
-   "how": "похожее",
-   "slug": "made_in_abyss",
-   "name": "Made in Abyss",
-   "year": 2017,
+   "how": "точно",
+   "score": 1,
+   "slug": "rezero_kara_hajimeru_isekai_seikatsu_2nd_season",
+   "name": "Re:Zero kara Hajimeru Isekai Seikatsu 2nd Season",
+   "year": 2020,
    "season": "Summer",
    "themes": [
     {
      "t": "OP",
      "s": "OP1",
-     "seq": 1,
-     "title": "Underground River",
-     "artists": []
-    },
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "Deep in Abyss",
+     "seq": null,
+     "title": "Realize",
      "artists": [
-      "Mariya Ise",
-      "Miyu Tomita"
+      "Konomi Suzuki"
      ]
     },
     {
      "t": "ED",
      "s": "ED1",
-     "seq": 1,
-     "title": "Tabi no Hidarite, Saihate no Migite",
+     "seq": null,
+     "title": "Memento",
      "artists": [
-      "Mariya Ise",
-      "Miyu Tomita"
+      "nonoc"
      ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Tabi no Hidarite, Saihate no Migite",
-     "artists": [
-      "Mariya Ise",
-      "Miyu Tomita",
-      "Shiori Izawa"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED3",
-     "seq": 3,
-     "title": "Tomorrow",
-     "artists": []
     }
    ]
   },
   "Bishoujo Senshi Sailor Moon R": {
    "tracks": 4,
    "how": "точно",
+   "score": 1,
    "slug": "bishoujo_senshi_sailor_moon_r",
    "name": "Bishoujo Senshi Sailor Moon R",
    "year": 1993,
@@ -3064,7 +3547,8 @@
   },
   "Your Lie in April": {
    "tracks": 4,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "shigatsu_wa_kimi_no_uso",
    "name": "Shigatsu wa Kimi no Uso",
    "year": 2014,
@@ -3119,62 +3603,37 @@
   },
   "Spice and Wolf": {
    "tracks": 4,
-   "how": "похожее",
-   "slug": "ookami_to_koushinryou_merchant_meets_the_wise_wolf",
-   "name": "Ookami to Koushinryou: Merchant Meets the Wise Wolf",
-   "year": 2024,
-   "season": "Spring",
+   "how": "точно",
+   "score": 1,
+   "slug": "ookami_to_koushinryou",
+   "name": "Ookami to Koushinryou",
+   "year": 2008,
+   "season": "Winter",
    "themes": [
     {
      "t": "OP",
      "s": "OP1",
-     "seq": 1,
-     "title": "Tabi no Yukue",
+     "seq": null,
+     "title": "Tabi no Tochuu",
      "artists": [
-      "Hana Hope"
+      "Natsumi Kiyoura"
      ]
     },
     {
      "t": "ED",
      "s": "ED1",
-     "seq": 1,
-     "title": "Andante",
+     "seq": null,
+     "title": "Ringo Biyori",
      "artists": [
-      "ClariS"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP1-EN",
-     "seq": 1,
-     "title": "Tabi no Yukue",
-     "artists": [
-      "Hana Hope"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "Sign",
-     "artists": [
-      "Aimer"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Ringo to Kimi",
-     "artists": [
-      "NeRIAme"
+      "Rocky Chack"
      ]
     }
    ]
   },
   "Re:Zero - Starting Life in Another World 4th Season": {
    "tracks": 4,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "rezero_kara_hajimeru_isekai_seikatsu_4th_season",
    "name": "Re:Zero kara Hajimeru Isekai Seikatsu 4th Season",
    "year": 2026,
@@ -3214,6 +3673,7 @@
   "Digimon Adventure 02": {
    "tracks": 4,
    "how": "точно",
+   "score": 1,
    "slug": "digimon_adventure_02",
    "name": "Digimon Adventure 02",
    "year": 2000,
@@ -3251,7 +3711,8 @@
   },
   "JoJo's Bizarre Adventure": {
    "tracks": 4,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "jojo_no_kimyou_na_bouken",
    "name": "JoJo no Kimyou na Bouken",
    "year": 2012,
@@ -3289,6 +3750,7 @@
   "Clannad: After Story": {
    "tracks": 4,
    "how": "точно",
+   "score": 1,
    "slug": "clannad_after_story",
    "name": "Clannad: After Story",
    "year": 2008,
@@ -3320,6 +3782,7 @@
   "Vinland Saga": {
    "tracks": 4,
    "how": "точно",
+   "score": 1,
    "slug": "vinland_saga",
    "name": "Vinland Saga",
    "year": 2019,
@@ -3358,6 +3821,7 @@
   "Fairy Tail: Final Series": {
    "tracks": 4,
    "how": "точно",
+   "score": 1,
    "slug": "fairy_tail_final_series",
    "name": "Fairy Tail: Final Series",
    "year": 2018,
@@ -3423,7 +3887,8 @@
   },
   "Solo Leveling Season 2: Arise from the Shadow": {
    "tracks": 4,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "ore_dake_level_up_na_ken_season_2_arise_from_the_shadow",
    "name": "Ore dake Level Up na Ken Season 2: Arise from the Shadow",
    "year": 2025,
@@ -3463,6 +3928,7 @@
   "Angel Beats!": {
    "tracks": 4,
    "how": "точно",
+   "score": 1,
    "slug": "angel_beats",
    "name": "Angel Beats!",
    "year": 2010,
@@ -3507,7 +3973,8 @@
   },
   "Ranking of Kings": {
    "tracks": 4,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "ousama_ranking",
    "name": "Ousama Ranking",
    "year": 2021,
@@ -3552,8 +4019,9 @@
    ]
   },
   "Code Geass: Lelouch of the Rebellion R2": {
-   "tracks": 4,
-   "how": "похожее",
+   "tracks": 5,
+   "how": "точно",
+   "score": 1,
    "slug": "code_geass_hangyaku_no_lelouch_r2",
    "name": "Code Geass: Hangyaku no Lelouch R2",
    "year": 2008,
@@ -3600,6 +4068,7 @@
   "Boruto: Naruto Next Generations": {
    "tracks": 4,
    "how": "точно",
+   "score": 1,
    "slug": "boruto_naruto_next_generations",
    "name": "Boruto: Naruto Next Generations",
    "year": 2017,
@@ -3853,8 +4322,9 @@
    ]
   },
   "Made in Abyss Season 2": {
-   "tracks": 4,
-   "how": "похожее",
+   "tracks": 6,
+   "how": "точно",
+   "score": 1,
    "slug": "made_in_abyss_retsujitsu_no_ougonkyou",
    "name": "Made in Abyss: Retsujitsu no Ougonkyou",
    "year": 2022,
@@ -3890,8 +4360,9 @@
    ]
   },
   "Bleach: Thousand-Year Blood War": {
-   "tracks": 4,
-   "how": "похожее",
+   "tracks": 7,
+   "how": "точно",
+   "score": 1,
    "slug": "bleach_sennen_kessenhen",
    "name": "BLEACH: Sennen Kessen-hen",
    "year": 2022,
@@ -3938,6 +4409,7 @@
   "Shingeki no Kyojin": {
    "tracks": 4,
    "how": "точно",
+   "score": 1,
    "slug": "shingeki_no_kyojin",
    "name": "Shingeki no Kyojin",
    "year": 2013,
@@ -3976,6 +4448,7 @@
   "Naruto": {
    "tracks": 4,
    "how": "точно",
+   "score": 1,
    "slug": "naruto",
    "name": "Naruto",
    "year": 2002,
@@ -4159,8 +4632,9 @@
    ]
   },
   "Psycho-Pass": {
-   "tracks": 4,
-   "how": "поиском",
+   "tracks": 5,
+   "how": "точно",
+   "score": 1,
    "slug": "psycho_pass",
    "name": "Psycho Pass",
    "year": 2012,
@@ -4204,50 +4678,16 @@
     }
    ]
   },
-  "UTA from One Piece Film: Red": {
-   "tracks": 4,
-   "how": "похожее",
-   "slug": "one_piece_heroines",
-   "name": "ONE PIECE HEROINES",
-   "year": 2026,
-   "season": "Summer",
-   "themes": []
-  },
-  "OST, Arcane: League of Legends 2nd season": {
-   "tracks": 4,
-   "how": "похожее",
-   "slug": "kami_no_tou_ouji_no_kikan",
-   "name": "Kami no Tou: Ouji no Kikan",
-   "year": 2024,
-   "season": "Summer",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "RISE UP",
-     "artists": [
-      "NiziU"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "BELIEVE",
-     "artists": [
-      "NiziU"
-     ]
-    }
-   ]
-  },
   "Domekano": {
    "tracks": 4,
-   "slug": null
+   "slug": null,
+   "near": "",
+   "score": 0
   },
   "Mahoutsukai no Yome": {
-   "tracks": 3,
+   "tracks": 4,
    "how": "точно",
+   "score": 1,
    "slug": "mahoutsukai_no_yome",
    "name": "Mahoutsukai no Yome",
    "year": 2017,
@@ -4292,35 +4732,47 @@
   },
   "Sailor Moon": {
    "tracks": 3,
-   "how": "похожее",
-   "slug": "bishoujo_senshi_sailor_moon_crystal",
-   "name": "Bishoujo Senshi Sailor Moon Crystal",
-   "year": 2014,
-   "season": "Summer",
+   "how": "точно",
+   "score": 1,
+   "slug": "bishoujo_senshi_sailor_moon",
+   "name": "Bishoujo Senshi Sailor Moon",
+   "year": 1992,
+   "season": "Spring",
    "themes": [
     {
      "t": "OP",
      "s": "OP1",
      "seq": null,
-     "title": "MOON PRIDE",
-     "artists": [
-      "Momoiro Clover Z"
-     ]
+     "title": "Moonlight Densetsu",
+     "artists": []
     },
     {
      "t": "ED",
      "s": "ED1",
+     "seq": 1,
+     "title": "Heart Moving",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED2",
+     "seq": 2,
+     "title": "Princess Moon",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP1-EN",
      "seq": null,
-     "title": "Gekkou",
-     "artists": [
-      "Momoiro Clover Z"
-     ]
+     "title": "Sailor Moon Theme",
+     "artists": []
     }
    ]
   },
   "Lucky Star": {
    "tracks": 3,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "luckystar",
    "name": "Lucky☆Star",
    "year": 2007,
@@ -4566,6 +5018,7 @@
   "K-On!": {
    "tracks": 3,
    "how": "точно",
+   "score": 1,
    "slug": "k_on",
    "name": "K-On!",
    "year": 2009,
@@ -4595,8 +5048,9 @@
    ]
   },
   "Dr. Stone": {
-   "tracks": 3,
+   "tracks": 4,
    "how": "точно",
+   "score": 1,
    "slug": "dr_stone",
    "name": "Dr. Stone",
    "year": 2019,
@@ -4634,7 +5088,8 @@
   },
   "Umineko: When They Cry": {
    "tracks": 3,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "umineko_no_naku_koro_ni",
    "name": "Umineko no Naku Koro ni",
    "year": 2009,
@@ -4660,7 +5115,8 @@
   },
   "Macross Delta": {
    "tracks": 3,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "macross_d",
    "name": "Macross Δ",
    "year": 2016,
@@ -4771,6 +5227,7 @@
   "Hunter x Hunter": {
    "tracks": 3,
    "how": "точно",
+   "score": 1,
    "slug": "hunter_x_hunter",
    "name": "Hunter x Hunter",
    "year": 1999,
@@ -4815,28 +5272,38 @@
   },
   "'Oshi no Ko' 3nd Season": {
    "tracks": 3,
-   "how": "похожее",
-   "slug": "oshi_no_ko_2nd_season",
-   "name": "[Oshi no Ko] 2nd Season",
-   "year": 2024,
-   "season": "Summer",
+   "how": "точно",
+   "score": 1,
+   "slug": "oshi_no_ko_3rd_season",
+   "name": "[Oshi no Ko] 3rd Season",
+   "year": 2026,
+   "season": "Winter",
    "themes": [
     {
      "t": "OP",
      "s": "OP1",
-     "seq": null,
-     "title": "Fatal",
+     "seq": 1,
+     "title": "B no Revenge",
      "artists": [
-      "GEMN"
+      "B-Komachi"
+     ]
+    },
+    {
+     "t": "OP",
+     "s": "OP2",
+     "seq": 2,
+     "title": "TEST ME",
+     "artists": [
+      "CHANMINA"
      ]
     },
     {
      "t": "ED",
      "s": "ED1",
      "seq": null,
-     "title": "Burning",
+     "title": "Serenade",
      "artists": [
-      "Hitsujibungaku"
+      "natori"
      ]
     }
    ]
@@ -4844,6 +5311,7 @@
   "Steins;Gate": {
    "tracks": 3,
    "how": "точно",
+   "score": 1,
    "slug": "steinsgate",
    "name": "Steins;Gate",
    "year": 2011,
@@ -4889,6 +5357,7 @@
   "Jujutsu Kaisen": {
    "tracks": 3,
    "how": "точно",
+   "score": 1,
    "slug": "jujutsu_kaisen",
    "name": "Jujutsu Kaisen",
    "year": 2020,
@@ -4926,7 +5395,8 @@
   },
   "The Rising of the Shield Hero": {
    "tracks": 3,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "tate_no_yuusha_no_nariagari",
    "name": "Tate no Yuusha no Nariagari",
    "year": 2019,
@@ -4981,7 +5451,8 @@
   },
   "Initial D": {
    "tracks": 3,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "initial_d_first_stage",
    "name": "Initial D First Stage",
    "year": 1998,
@@ -5025,7 +5496,8 @@
   },
   "To Be Hero X": {
    "tracks": 3,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "tu_bian_yingxiong_x",
    "name": "Tu Bian Yingxiong X",
    "year": 2025,
@@ -5075,6 +5547,7 @@
   "Akame ga Kill!": {
    "tracks": 3,
    "how": "точно",
+   "score": 1,
    "slug": "akame_ga_kill",
    "name": "Akame ga Kill!",
    "year": 2014,
@@ -5113,6 +5586,7 @@
   "Bakemonogatari": {
    "tracks": 3,
    "how": "точно",
+   "score": 1,
    "slug": "bakemonogatari",
    "name": "Bakemonogatari",
    "year": 2009,
@@ -5164,7 +5638,8 @@
   },
   "Call of the Night Season 2": {
    "tracks": 3,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "yofukashi_no_uta_season_2",
    "name": "Yofukashi no Uta Season 2",
    "year": 2025,
@@ -5193,6 +5668,7 @@
   "BanG Dream! Ave Mujica": {
    "tracks": 3,
    "how": "точно",
+   "score": 1,
    "slug": "bang_dream_ave_mujica",
    "name": "BanG Dream! Ave Mujica",
    "year": 2025,
@@ -5224,6 +5700,7 @@
   "Vivy: Fluorite Eye's Song": {
    "tracks": 3,
    "how": "точно",
+   "score": 1,
    "slug": "vivy_fluorite_eyes_song",
    "name": "Vivy: Fluorite Eye's Song",
    "year": 2021,
@@ -5289,7 +5766,8 @@
   },
   "Shangri-La Frontier Season 2": {
    "tracks": 3,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "shangri_la_frontier_kusoge_hunter_kamige_ni_idoman_to_su_2nd_season",
    "name": "Shangri-La Frontier: Kusoge Hunter, Kamige ni Idoman to su 2nd Season",
    "year": 2024,
@@ -5335,7 +5813,8 @@
   },
   "The Day I Became a God": {
    "tracks": 3,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "kamisama_ni_natta_hi",
    "name": "Kamisama ni Natta Hi",
    "year": 2020,
@@ -5372,7 +5851,8 @@
   },
   "Link Click": {
    "tracks": 3,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "shiguang_dailiren",
    "name": "Shiguang Dailiren",
    "year": 2021,
@@ -5419,6 +5899,7 @@
   "Kill la Kill": {
    "tracks": 3,
    "how": "точно",
+   "score": 1,
    "slug": "kill_la_kill",
    "name": "Kill la Kill",
    "year": 2013,
@@ -5455,8 +5936,9 @@
    ]
   },
   "Mahou Shoujo Madoka★Magica": {
-   "tracks": 3,
+   "tracks": 4,
    "how": "точно",
+   "score": 1,
    "slug": "mahou_shoujo_madokamagica",
    "name": "Mahou Shoujo Madoka★Magica",
    "year": 2011,
@@ -5494,7 +5976,8 @@
   },
   "'Oshi no Ko'": {
    "tracks": 3,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "oshi_no_ko",
    "name": "[Oshi no Ko]",
    "year": 2023,
@@ -5522,7 +6005,8 @@
   },
   "Bleach: Thousand-Year Blood War - The Conflict": {
    "tracks": 3,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "bleach_sennen_kessenhen_soukokutan",
    "name": "BLEACH: Sennen Kessen-hen - Soukoku-tan",
    "year": 2024,
@@ -5550,7 +6034,8 @@
   },
   "Re:Zero - Starting Life in Another World 3rd Season": {
    "tracks": 3,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "rezero_kara_hajimeru_isekai_seikatsu_3rd_season",
    "name": "Re:Zero kara Hajimeru Isekai Seikatsu 3rd Season",
    "year": 2024,
@@ -5606,6 +6091,7 @@
   "Fullmetal Alchemist: Brotherhood": {
    "tracks": 3,
    "how": "точно",
+   "score": 1,
    "slug": "fullmetal_alchemist_brotherhood",
    "name": "Fullmetal Alchemist: Brotherhood",
    "year": 2009,
@@ -5685,7 +6171,8 @@
   },
   "Shangri-La Frontier": {
    "tracks": 3,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "shangri_la_frontier_kusoge_hunter_kamige_ni_idoman_to_su",
    "name": "Shangri-La Frontier: Kusoge Hunter, Kamige ni Idoman to su",
    "year": 2023,
@@ -5733,6 +6220,7 @@
   "Clannad": {
    "tracks": 3,
    "how": "точно",
+   "score": 1,
    "slug": "clannad",
    "name": "Clannad",
    "year": 2007,
@@ -5756,7 +6244,8 @@
   },
   "Jujutsu Kaisen 0 Movie": {
    "tracks": 3,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "jujutsu_kaisen_0",
    "name": "Jujutsu Kaisen 0",
    "year": 2021,
@@ -5794,8 +6283,9 @@
    ]
   },
   "Sousou no Frieren": {
-   "tracks": 3,
+   "tracks": 5,
    "how": "точно",
+   "score": 1,
    "slug": "sousou_no_frieren",
    "name": "Sousou no Frieren",
    "year": 2023,
@@ -5834,6 +6324,7 @@
   "Blue Lock": {
    "tracks": 3,
    "how": "точно",
+   "score": 1,
    "slug": "blue_lock",
    "name": "Blue Lock",
    "year": 2022,
@@ -5869,90 +6360,10 @@
     }
    ]
   },
-  "OST, One Piece": {
-   "tracks": 3,
-   "how": "похожее",
-   "slug": "one_piece_heroines",
-   "name": "ONE PIECE HEROINES",
-   "year": 2026,
-   "season": "Summer",
-   "themes": []
-  },
-  "OST, Fairy Tail": {
-   "tracks": 3,
-   "how": "похожее",
-   "slug": "fairy_tail_final_series",
-   "name": "Fairy Tail: Final Series",
-   "year": 2018,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": 1,
-     "title": "power of the dream",
-     "artists": []
-    },
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "DOWN BY LAW",
-     "artists": []
-    },
-    {
-     "t": "OP",
-     "s": "OP3",
-     "seq": 3,
-     "title": "NO-LIMIT",
-     "artists": []
-    },
-    {
-     "t": "OP",
-     "s": "OP4",
-     "seq": 4,
-     "title": "MORE THAN LiKE",
-     "artists": [
-      "BiSH"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Endless Harmony",
-     "artists": [
-      "Beverly"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Pierce",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED3",
-     "seq": 3,
-     "title": "Boku to Kimi no Lullaby",
-     "artists": [
-      "Miyuna"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED4",
-     "seq": 4,
-     "title": "Exceed",
-     "artists": []
-    }
-   ]
-  },
   "Durarara!!": {
-   "tracks": 2,
+   "tracks": 3,
    "how": "точно",
+   "score": 1,
    "slug": "durarara",
    "name": "Durarara!!",
    "year": 2010,
@@ -5990,7 +6401,8 @@
   },
   "Demon Slayer: Kimetsu no Yaiba Swordsmith Village Arc": {
    "tracks": 2,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "kimetsu_no_yaiba_katanakaji_no_sato_hen",
    "name": "Kimetsu no Yaiba: Katanakaji no Sato-hen",
    "year": 2023,
@@ -6019,8 +6431,9 @@
    ]
   },
   "Tokyo Ghoul √A": {
-   "tracks": 2,
+   "tracks": 3,
    "how": "точно",
+   "score": 1,
    "slug": "tokyo_ghoul_a",
    "name": "Tokyo Ghoul √A",
    "year": 2015,
@@ -6045,6 +6458,7 @@
   "Shadows House": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "shadows_house",
    "name": "Shadows House",
    "year": 2021,
@@ -6076,6 +6490,7 @@
   "Digimon Tamers": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "digimon_tamers",
    "name": "Digimon Tamers",
    "year": 2001,
@@ -6113,7 +6528,8 @@
   },
   "K-On!! 2nd Season": {
    "tracks": 2,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "k_on_2010",
    "name": "K-On!!",
    "year": 2010,
@@ -6158,8 +6574,9 @@
    ]
   },
   "Turn A Gundam": {
-   "tracks": 2,
+   "tracks": 3,
    "how": "точно",
+   "score": 1,
    "slug": "turn_a_gundam",
    "name": "Turn A Gundam",
    "year": 1999,
@@ -6203,13 +6620,23 @@
    ]
   },
   "Saga of Tanya the Evil": {
-   "tracks": 2,
-   "how": "похожее",
-   "slug": "youjo_senki_movie",
-   "name": "Youjo Senki Movie",
-   "year": 2019,
+   "tracks": 3,
+   "how": "точно",
+   "score": 1,
+   "slug": "youjo_senki",
+   "name": "Youjo Senki",
+   "year": 2017,
    "season": "Winter",
    "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": null,
+     "title": "JINGO JUNGLE",
+     "artists": [
+      "MYTH & ROID"
+     ]
+    },
     {
      "t": "ED",
      "s": "ED1",
@@ -6223,16 +6650,17 @@
      "t": "ED",
      "s": "ED2",
      "seq": 2,
-     "title": "Remembrance",
+     "title": "Sensen no Realism",
      "artists": [
-      "MYTH & ROID"
+      "Mako Niina"
      ]
     }
    ]
   },
   "JoJo's Bizarre Adventure: Stardust Crusaders": {
-   "tracks": 2,
-   "how": "похожее",
+   "tracks": 3,
+   "how": "точно",
+   "score": 1,
    "slug": "jojo_no_kimyou_na_bouken_part_3_stardust_crusaders",
    "name": "JoJo no Kimyou na Bouken Part 3: Stardust Crusaders",
    "year": 2014,
@@ -6256,7 +6684,8 @@
   },
   "Welcome to the Ballroom": {
    "tracks": 2,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "ballroom_e_youkoso",
    "name": "Ballroom e Youkoso",
    "year": 2017,
@@ -6301,8 +6730,9 @@
    ]
   },
   "Made in Abyss: Dawn of the Deep Soul": {
-   "tracks": 2,
-   "how": "похожее",
+   "tracks": 3,
+   "how": "точно",
+   "score": 1,
    "slug": "made_in_abyss_movie_fukaki_tamashii_no_reimei",
    "name": "Made in Abyss Movie: Fukaki Tamashii no Reimei",
    "year": 2020,
@@ -6328,11 +6758,14 @@
   },
   "Евангелион нового поколения: Конец Евангелиона": {
    "tracks": 2,
-   "slug": null
+   "slug": null,
+   "near": "",
+   "score": 0
   },
   "Boku no Hero Academia 3rd Season": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "boku_no_hero_academia_3rd_season",
    "name": "Boku no Hero Academia 3rd Season",
    "year": 2018,
@@ -6370,35 +6803,55 @@
   },
   ".hack": {
    "tracks": 2,
-   "how": "похожее",
-   "slug": "hackroots",
-   "name": ".hack//roots",
-   "year": 2006,
+   "how": "похоже",
+   "score": 0.86,
+   "slug": "hackliminality",
+   "name": ".hack//Liminality",
+   "year": 2002,
    "season": "Spring",
    "themes": [
     {
      "t": "OP",
      "s": "OP1",
-     "seq": null,
-     "title": "Silly-go-Round",
+     "seq": 1,
+     "title": "Edge",
      "artists": [
-      "Yuuka Nanri"
+      "See-Saw"
      ]
     },
     {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Boukoku Kakusei - Catharsis",
+     "t": "OP",
+     "s": "OP2",
+     "seq": 2,
+     "title": "Senyaichiya",
      "artists": [
-      "ALI PROJECT"
+      "See-Saw"
+     ]
+    },
+    {
+     "t": "OP",
+     "s": "OP3",
+     "seq": 3,
+     "title": "Kimi ga Ita Monogatari",
+     "artists": [
+      "See-Saw"
+     ]
+    },
+    {
+     "t": "OP",
+     "s": "OP4",
+     "seq": 4,
+     "title": "Kioku",
+     "artists": [
+      "See-Saw"
      ]
     }
    ]
   },
   "Bocchi the Rock!": {
-   "tracks": 2,
+   "tracks": 3,
    "how": "точно",
+   "score": 1,
    "slug": "bocchi_the_rock",
    "name": "Bocchi the Rock!",
    "year": 2022,
@@ -6443,35 +6896,14 @@
   },
   "Rekishi Hiwa Historia": {
    "tracks": 2,
-   "how": "похожее",
-   "slug": "tensei_akujo_no_kuro_rekishi",
-   "name": "Tensei Akujo no Kuro Rekishi",
-   "year": 2025,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Black Flame",
-     "artists": [
-      "KID PHENOMENON"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Regene",
-     "artists": [
-      "Zerofrom"
-     ]
-    }
-   ]
+   "slug": null,
+   "near": "Rekishi ni Nokoru Akujo ni Naru zo",
+   "score": 0.44
   },
   "Arknights: Perish in Frost": {
    "tracks": 2,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "arknights_touin_kiro",
    "name": "Arknights: Touin Kiro",
    "year": 2023,
@@ -6509,6 +6941,7 @@
   "Sword Art Online: Alicization": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "sword_art_online_alicization",
    "name": "Sword Art Online: Alicization",
    "year": 2018,
@@ -6553,7 +6986,8 @@
   },
   "Jujutsu Kaisen: The Culling Game Part 1": {
    "tracks": 2,
-   "how": "похожее",
+   "how": "похоже",
+   "score": 0.76,
    "slug": "jujutsu_kaisen_shimetsu_kaiyuu_zenpen",
    "name": "Jujutsu Kaisen: Shimetsu Kaiyuu - Zenpen",
    "year": 2026,
@@ -6581,7 +7015,8 @@
   },
   "Puella Magi Madoka Magica the Movie 3: Rebellion": {
    "tracks": 2,
-   "how": "похожее",
+   "how": "похоже",
+   "score": 0.77,
    "slug": "mahou_shoujo_madokamagica_hangyaku_no_monogatari",
    "name": "Mahou Shoujo Madoka★Magica: Hangyaku no Monogatari",
    "year": 2013,
@@ -6609,7 +7044,8 @@
   },
   "A Wild Last Boss Appeared!": {
    "tracks": 2,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "yasei_no_last_boss_ga_arawareta",
    "name": "Yasei no Last Boss ga Arawareta!",
    "year": 2025,
@@ -6637,7 +7073,8 @@
   },
   "Orb: On the Movements of the Earth": {
    "tracks": 2,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "chi_chikyuu_no_undou_ni_tsuite",
    "name": "Chi.: Chikyuu no Undou ni Tsuite",
    "year": 2024,
@@ -6675,6 +7112,7 @@
   "Dandadan 2nd Season": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "dandadan_2nd_season",
    "name": "Dandadan 2nd Season",
    "year": 2025,
@@ -6699,6 +7137,7 @@
   "Devil May Cry": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "devil_may_cry",
    "name": "Devil May Cry",
    "year": 2007,
@@ -6722,7 +7161,8 @@
   },
   "Komi Can't Communicate": {
    "tracks": 2,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "komi_san_wa_comyushou_desu",
    "name": "Komi-san wa, Comyushou desu.",
    "year": 2021,
@@ -6760,6 +7200,7 @@
   "Shouwa Genroku Rakugo Shinjuu": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "shouwa_genroku_rakugo_shinjuu",
    "name": "Shouwa Genroku Rakugo Shinjuu",
    "year": 2016,
@@ -6784,6 +7225,7 @@
   "Nisemonogatari": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "nisemonogatari",
    "name": "Nisemonogatari",
    "year": 2012,
@@ -6822,6 +7264,7 @@
   "Hikaru no Go": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "hikaru_no_go",
    "name": "Hikaru no Go",
    "year": 2001,
@@ -6895,6 +7338,7 @@
   "High School DxD": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "high_school_dxd",
    "name": "High School DxD",
    "year": 2012,
@@ -6918,7 +7362,8 @@
   },
   "Chainsaw Man – The Movie: Reze Arc": {
    "tracks": 2,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "chainsaw_man_rezehen",
    "name": "Chainsaw Man: Reze-hen",
    "year": 2025,
@@ -6946,8 +7391,9 @@
    ]
   },
   "Fairy Tail (2014)": {
-   "tracks": 2,
-   "how": "похожее",
+   "tracks": 3,
+   "how": "точно",
+   "score": 1,
    "slug": "fairy_tail_2014",
    "name": "Fairy Tail",
    "year": 2014,
@@ -7078,79 +7524,189 @@
   },
   "Wonderful Everyday": {
    "tracks": 2,
-   "how": "похожее",
-   "slug": "wonderful_precure",
-   "name": "Wonderful Precure!",
-   "year": 2024,
-   "season": "Winter",
+   "how": "похоже",
+   "score": 0.75,
+   "slug": "nichijou",
+   "name": "Nichijou",
+   "year": 2011,
+   "season": "Spring",
    "themes": [
     {
      "t": "OP",
      "s": "OP1",
-     "seq": null,
-     "title": "Wonderful Precure! evolution!!",
+     "seq": 1,
+     "title": "Hyadain no Kakakata☆Kataomoi - C",
      "artists": [
-      "Chihaya Yoshitake"
+      "Hyadain"
+     ]
+    },
+    {
+     "t": "OP",
+     "s": "OP2",
+     "seq": 2,
+     "title": "Hyadain no Joujou Yuujou",
+     "artists": [
+      "Hyadain"
      ]
     },
     {
      "t": "ED",
      "s": "ED1",
      "seq": 1,
-     "title": "FUN☆FUN☆Wonderful DAYS!",
+     "title": "Zzz",
      "artists": [
-      "Ami Ishii",
-      "Moeha Nochimoto"
+      "Sayaka Sasaki"
      ]
     },
     {
      "t": "ED",
      "s": "ED2",
      "seq": 2,
-     "title": "Shiawase Evolution ♡ ~Komugi & Iroha Ver.~",
+     "title": "Tsubasa wo Kudasai",
      "artists": [
-      "Ami Ishii",
-      "Moeha Nochimoto"
+      "Sayaka Sasaki"
      ]
     },
     {
      "t": "ED",
      "s": "ED3",
      "seq": 3,
-     "title": "Shiawase Evolution ♡ ~Yuki & Mayu Ver.~",
+     "title": "Kikyuu ni Notte Dokomademo",
      "artists": [
-      "Ami Ishii",
-      "Moeha Nochimoto"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED4-TV",
-     "seq": 4,
-     "title": "Happy≒Future",
-     "artists": [
-      "Chihaya Yoshitake",
-      "Moeha Nochimoto"
+      "Minoru Shiraishi",
+      "Hiromi Konno",
+      "Shizuka Furuya"
      ]
     },
     {
      "t": "ED",
      "s": "ED4",
      "seq": 4,
-     "title": "Wonderful Smile",
+     "title": "My Ballad",
      "artists": [
-      "Ami Ishii"
+      "Sayaka Sasaki"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED5",
+     "seq": 5,
+     "title": "Kaijuu no Ballad",
+     "artists": [
+      "Mariko Honda",
+      "Mai Aizawa",
+      "Misuzu Togashi"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED6",
+     "seq": 6,
+     "title": "Green Green",
+     "artists": [
+      "Sayaka Sasaki"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED7",
+     "seq": 7,
+     "title": "Yasei no Uma",
+     "artists": [
+      "Mami Kosuge",
+      "Tetsu Inada",
+      "Kaoru Mizuhara",
+      "Takahiro Hikami",
+      "Ai Hirosaka",
+      "Kaori Sadohara",
+      "Ryouta Takeuchi"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED8",
+     "seq": 8,
+     "title": "Ano Subarashii Ai o Mou Ichido",
+     "artists": [
+      "Sayaka Sasaki"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED9",
+     "seq": 9,
+     "title": "Sudachi no Uta",
+     "artists": [
+      "Yoshihisa Kawahara",
+      "Chika Horikawa",
+      "Kazutomi Yamamoto",
+      "Youko Tamaoki",
+      "Yumi Higuchi"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED10",
+     "seq": 10,
+     "title": "Aogeba Toutoshi",
+     "artists": [
+      "Sayaka Sasaki"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED11",
+     "seq": 11,
+     "title": "Sora ga Konna ni Aoi to wa",
+     "artists": [
+      "Hiromi Konno",
+      "Misuzu Togashi"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED12",
+     "seq": 12,
+     "title": "Yuuki Hitotsu wo Tomo ni Shite",
+     "artists": [
+      "Sayaka Sasaki"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED13",
+     "seq": 13,
+     "title": "Let's search for Tomorrow",
+     "artists": [
+      "Mariko Honda",
+      "Mai Aizawa",
+      "Misuzu Togashi"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED14",
+     "seq": 14,
+     "title": "Tabidachi no Hi ni",
+     "artists": [
+      "Minoru Shiraishi",
+      "Hiromi Konno",
+      "Shizuka Furuya",
+      "Mariko Honda",
+      "Mai Aizawa",
+      "Misuzu Togashi"
      ]
     }
    ]
   },
   "Legend of the Galactic Heroes: Die Neue These": {
    "tracks": 2,
-   "how": "похожее",
-   "slug": "ginga_eiyuu_densetsu_die_neue_these_seiran",
-   "name": "Ginga Eiyuu Densetsu: Die Neue These - Seiran",
-   "year": 2019,
-   "season": "Fall",
+   "how": "точно",
+   "score": 1,
+   "slug": "ginga_eiyuu_densetsu_die_neue_these_kaikou",
+   "name": "Ginga Eiyuu Densetsu: Die Neue These - Kaikou",
+   "year": 2018,
+   "season": "Spring",
    "themes": [
     {
      "t": "OP",
@@ -7166,10 +7722,9 @@
      "t": "ED",
      "s": "ED1",
      "seq": null,
-     "title": "Tranquility",
+     "title": "WISH",
      "artists": [
-      "SawanoHiroyuki[nZk]",
-      "Anly"
+      "ELISA"
      ]
     }
    ]
@@ -7177,6 +7732,7 @@
   "Evangelion: 3.0 You Can (Not) Redo": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "evangelion_30_you_can_not_redo",
    "name": "Evangelion: 3.0 You Can (Not) Redo",
    "year": 2012,
@@ -7194,6 +7750,7 @@
   "Undead Unluck": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "undead_unluck",
    "name": "Undead Unluck",
    "year": 2023,
@@ -7231,7 +7788,8 @@
   },
   "Link Click: Bridon Arc": {
    "tracks": 2,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "shiguang_dailiren_yingdu_pian",
    "name": "Shiguang Dailiren: Yingdu Pian",
    "year": 2025,
@@ -7260,6 +7818,7 @@
   "Detective Conan": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "detective_conan",
    "name": "Detective Conan",
    "year": 1996,
@@ -7823,6 +8382,7 @@
   "Cardcaptor Sakura": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "cardcaptor_sakura",
    "name": "Cardcaptor Sakura",
    "year": 1998,
@@ -7881,7 +8441,8 @@
   },
   "Onimai: I'm Now Your Sister!": {
    "tracks": 2,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "oniichan_wa_oshimai",
    "name": "Oniichan wa Oshimai!",
    "year": 2023,
@@ -7910,38 +8471,47 @@
   },
   "Fist of the North Star": {
    "tracks": 2,
-   "how": "похожее",
-   "slug": "hokuto_no_ken_2",
-   "name": "Hokuto no Ken 2",
-   "year": 1987,
-   "season": "Spring",
+   "how": "точно",
+   "score": 1,
+   "slug": "hokuto_no_ken",
+   "name": "Hokuto no Ken",
+   "year": 1984,
+   "season": "Fall",
    "themes": [
     {
      "t": "OP",
      "s": "OP1",
-     "seq": null,
-     "title": "Tough Boy",
+     "seq": 1,
+     "title": "Ai wo Torimodose!!",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP2",
+     "seq": 2,
+     "title": "Silent Survivor",
      "artists": []
     },
     {
      "t": "ED",
      "s": "ED1",
      "seq": 1,
-     "title": "Love Song",
+     "title": "Yuria... Eien ni",
      "artists": []
     },
     {
      "t": "ED",
      "s": "ED2",
      "seq": 2,
-     "title": "Yuria... Eien ni",
+     "title": "Dry Your Tears",
      "artists": []
     }
    ]
   },
   "Berserk: The Golden Age Arc I - The Egg of the King": {
    "tracks": 2,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "berserk_ougon_jidai_hen_i_haou_no_tamago",
    "name": "Berserk: Ougon Jidai-hen I - Haou no Tamago",
    "year": 2012,
@@ -7968,6 +8538,7 @@
   "Tokyo Revengers": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "tokyo_revengers",
    "name": "Tokyo Revengers",
    "year": 2021,
@@ -7999,6 +8570,7 @@
   "Birdie Wing: Golf Girls' Story": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "birdie_wing_golf_girls_story",
    "name": "Birdie Wing: Golf Girls' Story",
    "year": 2022,
@@ -8022,7 +8594,8 @@
   },
   "Chainsaw Man the Movie: Reze Arc": {
    "tracks": 2,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "chainsaw_man_rezehen",
    "name": "Chainsaw Man: Reze-hen",
    "year": 2025,
@@ -8051,17 +8624,27 @@
   },
   "The Melancholy of Haruhi Suzumiya": {
    "tracks": 2,
-   "how": "похожее",
-   "slug": "suzumiya_haruhi_no_yuuutsu_2009",
+   "how": "точно",
+   "score": 1,
+   "slug": "suzumiya_haruhi_no_yuuutsu",
    "name": "Suzumiya Haruhi no Yuuutsu",
-   "year": 2009,
+   "year": 2006,
    "season": "Spring",
    "themes": [
     {
      "t": "OP",
      "s": "OP1",
-     "seq": null,
-     "title": "Super Driver",
+     "seq": 1,
+     "title": "Koi no Mikuru Densetsu",
+     "artists": [
+      "Yuuko Gotou"
+     ]
+    },
+    {
+     "t": "OP",
+     "s": "OP2",
+     "seq": 2,
+     "title": "Bouken Desho Desho?",
      "artists": [
       "Aya Hirano"
      ]
@@ -8070,7 +8653,7 @@
      "t": "ED",
      "s": "ED1",
      "seq": null,
-     "title": "Tomare!",
+     "title": "Hare Hare Yukai",
      "artists": [
       "Aya Hirano",
       "Minori Chihara",
@@ -8081,7 +8664,8 @@
   },
   "The Eminence in Shadow": {
    "tracks": 2,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "kage_no_jitsuryokusha_ni_naritakute",
    "name": "Kage no Jitsuryokusha ni Naritakute!",
    "year": 2022,
@@ -8170,7 +8754,8 @@
   },
   "Made in Abyss: The Golden City of the Scorching Sun": {
    "tracks": 2,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "made_in_abyss_retsujitsu_no_ougonkyou",
    "name": "Made in Abyss: Retsujitsu no Ougonkyou",
    "year": 2022,
@@ -8208,6 +8793,7 @@
   "Tengen Toppa Gurren Lagann": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "tengen_toppa_gurren_lagann",
    "name": "Tengen Toppa Gurren Lagann",
    "year": 2007,
@@ -8246,6 +8832,7 @@
   "Gachiakuta": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "gachiakuta",
    "name": "Gachiakuta",
    "year": 2025,
@@ -8283,35 +8870,46 @@
   },
   "The Promised Neverland": {
    "tracks": 2,
-   "how": "похожее",
-   "slug": "yakusoku_no_neverland_2nd_season",
-   "name": "Yakusoku no Neverland 2nd Season",
-   "year": 2021,
+   "how": "точно",
+   "score": 1,
+   "slug": "yakusoku_no_neverland",
+   "name": "Yakusoku no Neverland",
+   "year": 2019,
    "season": "Winter",
    "themes": [
     {
      "t": "OP",
      "s": "OP1",
      "seq": null,
-     "title": "Identity",
+     "title": "Touch Off",
      "artists": [
-      "Kiro Akiyama"
+      "UVERworld"
      ]
     },
     {
      "t": "ED",
      "s": "ED1",
-     "seq": null,
-     "title": "Mahou",
+     "seq": 1,
+     "title": "Zettai Zetsumei",
      "artists": [
-      "Myuk"
+      "Cö shu Nie"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED2",
+     "seq": 2,
+     "title": "Lamp",
+     "artists": [
+      "Cö shu Nie"
      ]
     }
    ]
   },
   "The Summer Hikaru Died": {
    "tracks": 2,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "hikaru_ga_shinda_natsu",
    "name": "Hikaru ga Shinda Natsu",
    "year": 2025,
@@ -8340,6 +8938,7 @@
   "Gosick": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "gosick",
    "name": "Gosick",
    "year": 2011,
@@ -8371,6 +8970,7 @@
   "Cowboy Bebop": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "cowboy_bebop",
    "name": "Cowboy Bebop",
    "year": 1998,
@@ -8408,7 +9008,8 @@
   },
   "Kirarin Revolution": {
    "tracks": 2,
-   "how": "похожее",
+   "how": "похоже",
+   "score": 0.66,
    "slug": "slayers_revolution",
    "name": "Slayers Revolution",
    "year": 2008,
@@ -8435,43 +9036,88 @@
    ]
   },
   "Blue Exorcist": {
-   "tracks": 2,
-   "how": "похожее",
-   "slug": "ao_no_exorcist_kyoto_fujouou_hen",
-   "name": "Ao no Exorcist: Kyoto Fujouou-hen",
-   "year": 2017,
-   "season": "Winter",
+   "tracks": 3,
+   "how": "точно",
+   "score": 1,
+   "slug": "ao_no_exorcist",
+   "name": "Ao no Exorcist",
+   "year": 2011,
+   "season": "Spring",
    "themes": [
     {
      "t": "OP",
      "s": "OP1",
-     "seq": null,
-     "title": "Itteki no Eikyou",
+     "seq": 1,
+     "title": "CORE PRIDE",
      "artists": [
       "UVERworld"
      ]
     },
     {
+     "t": "OP",
+     "s": "OP2",
+     "seq": 2,
+     "title": "IN MY WORLD",
+     "artists": [
+      "ROOKiEZ is PUNK'D"
+     ]
+    },
+    {
      "t": "ED",
      "s": "ED1",
-     "seq": null,
-     "title": "Kono Te de",
+     "seq": 1,
+     "title": "Take off",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED2",
+     "seq": 2,
+     "title": "Wired Life",
      "artists": []
     }
    ]
   },
   "Code Geass: Lelouch of the Rebellion": {
    "tracks": 2,
-   "how": "похожее",
-   "slug": "code_geass_hangyaku_no_lelouch_ii_handou",
-   "name": "Code Geass: Hangyaku no Lelouch II - Handou",
-   "year": 2018,
-   "season": "Winter",
+   "how": "точно",
+   "score": 1,
+   "slug": "code_geass_hangyaku_no_lelouch",
+   "name": "Code Geass: Hangyaku no Lelouch",
+   "year": 2006,
+   "season": "Fall",
    "themes": [
     {
      "t": "OP",
      "s": "OP1",
-     "seq": null,
+     "seq": 1,
+     "title": "COLORS",
+     "artists": [
+      "FLOW"
+     ]
+    },
+    {
+     "t": "OP",
+     "s": "OP2",
+     "seq": 2,
+     "title": "Kaidoku Funou",
+     "artists": [
+      "Jinn"
+     ]
+    },
+    {
+     "t": "OP",
+     "s": "OP3",
+     "seq": 3,
+     "title": "Hitomi no Tsubasa",
+     "artists": [
+      "access"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": 1,
      "title": "Yuukyou Seishunka",
      "artists": [
       "ALI PROJECT"
@@ -8479,16 +9125,19 @@
     },
     {
      "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "The Moon",
-     "artists": []
+     "s": "ED2",
+     "seq": 2,
+     "title": "Mosaic Kakera",
+     "artists": [
+      "SunSet Swish"
+     ]
     }
    ]
   },
   "Rurouni Kenshin: Meiji Kenkaku Romantan 2023 г.": {
    "tracks": 2,
-   "how": "похожее",
+   "how": "похоже",
+   "score": 0.89,
    "slug": "rurouni_kenshin_meiji_kenkaku_romantan_2023",
    "name": "Rurouni Kenshin: Meiji Kenkaku Romantan (2023)",
    "year": 2023,
@@ -8537,6 +9186,7 @@
   "Neon Genesis Evangelion: Death & Rebirth": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "neon_genesis_evangelion_death_rebirth",
    "name": "Neon Genesis Evangelion: Death & Rebirth",
    "year": 1997,
@@ -8559,8 +9209,9 @@
    ]
   },
   "NANA": {
-   "tracks": 2,
+   "tracks": 4,
    "how": "точно",
+   "score": 1,
    "slug": "nana",
    "name": "Nana",
    "year": 2006,
@@ -8619,7 +9270,8 @@
   },
   "Engaged to the Unidentified": {
    "tracks": 2,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "mikakunin_de_shinkoukei",
    "name": "Mikakunin de Shinkoukei",
    "year": 2014,
@@ -8653,8 +9305,9 @@
    ]
   },
   "Guilty Crown": {
-   "tracks": 2,
+   "tracks": 3,
    "how": "точно",
+   "score": 1,
    "slug": "guilty_crown",
    "name": "Guilty Crown",
    "year": 2011,
@@ -8697,68 +9350,10 @@
     }
    ]
   },
-  "Nana": {
-   "tracks": 2,
-   "how": "точно",
-   "slug": "nana",
-   "name": "Nana",
-   "year": 2006,
-   "season": "Spring",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": 1,
-     "title": "Rose",
-     "artists": []
-    },
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "Wish",
-     "artists": []
-    },
-    {
-     "t": "OP",
-     "s": "OP3",
-     "seq": 3,
-     "title": "Lucy",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "A Little Pain",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED3",
-     "seq": 3,
-     "title": "Starless Night",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED4",
-     "seq": 4,
-     "title": "Kuroi Namida",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED6",
-     "seq": 6,
-     "title": "Stand By Me",
-     "artists": []
-    }
-   ]
-  },
   "The Seven Deadly Sins: Dragon’s Judgement": {
    "tracks": 2,
-   "how": "похожее",
+   "how": "похоже",
+   "score": 0.74,
    "slug": "nanatsu_no_taizai_funnu_no_shinpan",
    "name": "Nanatsu no Taizai: Funnu no Shinpan",
    "year": 2021,
@@ -8804,6 +9399,7 @@
   "Mashle 2nd Season": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "mashle_2nd_season",
    "name": "Mashle 2nd Season",
    "year": 2024,
@@ -8827,7 +9423,8 @@
   },
   "Demon Slayer: Kimetsu no Yaiba - The Movie: Mugen Train": {
    "tracks": 2,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "kimetsu_no_yaiba_movie_mugen_ressha_hen",
    "name": "Kimetsu no Yaiba Movie: Mugen Ressha-hen",
    "year": 2020,
@@ -8847,6 +9444,7 @@
   "Sword Art Online: Alicization - War of Underworld 2nd Season": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "sword_art_online_alicization_war_of_underworld_2nd_season",
    "name": "Sword Art Online: Alicization - War of Underworld 2nd Season",
    "year": 2020,
@@ -8871,6 +9469,7 @@
   "Steins;Gate 0": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "steinsgate_0",
    "name": "Steins;Gate 0",
    "year": 2018,
@@ -8930,6 +9529,7 @@
   "Kusuriya no Hitorigoto": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "kusuriya_no_hitorigoto",
    "name": "Kusuriya no Hitorigoto",
    "year": 2023,
@@ -8968,6 +9568,7 @@
   "Mahou Shoujo Magical Destroyers": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "mahou_shoujo_magical_destroyers",
    "name": "Mahou Shoujo Magical Destroyers",
    "year": 2023,
@@ -8992,6 +9593,7 @@
   "Vinland Saga Season 2": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "vinland_saga_season_2",
    "name": "Vinland Saga Season 2",
    "year": 2023,
@@ -9030,6 +9632,7 @@
   "Chi.: Chikyuu no Undou ni Tsuite": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "chi_chikyuu_no_undou_ni_tsuite",
    "name": "Chi.: Chikyuu no Undou ni Tsuite",
    "year": 2024,
@@ -9061,6 +9664,7 @@
   "Blend S": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "blend_s",
    "name": "Blend S",
    "year": 2017,
@@ -9092,6 +9696,7 @@
   "No Game No Life": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "no_game_no_life",
    "name": "No Game No Life",
    "year": 2014,
@@ -9121,36 +9726,15 @@
    ]
   },
   "Arcane: League of Legends 2nd season": {
-   "tracks": 2,
-   "how": "похожее",
-   "slug": "kami_no_tou_ouji_no_kikan",
-   "name": "Kami no Tou: Ouji no Kikan",
-   "year": 2024,
-   "season": "Summer",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "RISE UP",
-     "artists": [
-      "NiziU"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "BELIEVE",
-     "artists": [
-      "NiziU"
-     ]
-    }
-   ]
+   "tracks": 6,
+   "slug": null,
+   "near": "Haikyuu!! Second Season",
+   "score": 0.35
   },
   "Re:Creators": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "recreators",
    "name": "Re:Creators",
    "year": 2017,
@@ -9195,7 +9779,8 @@
   },
   "Train to the End of the World": {
    "tracks": 2,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "shuumatsu_train_doko_e_iku",
    "name": "Shuumatsu Train Doko e Iku?",
    "year": 2024,
@@ -9224,6 +9809,7 @@
   "Spy x Family Season 2": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "spy_x_family_season_2",
    "name": "Spy x Family Season 2",
    "year": 2023,
@@ -9248,6 +9834,7 @@
   "Boku no Hero Academia 2nd Season": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "boku_no_hero_academia_2nd_season",
    "name": "Boku no Hero Academia 2nd Season",
    "year": 2017,
@@ -9285,7 +9872,8 @@
   },
   "'Oshi no Ko' 2nd Season": {
    "tracks": 2,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "oshi_no_ko_2nd_season",
    "name": "[Oshi no Ko] 2nd Season",
    "year": 2024,
@@ -9314,6 +9902,7 @@
   "Dr. Stone: Science Future": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "dr_stone_science_future",
    "name": "Dr. Stone: Science Future",
    "year": 2025,
@@ -9338,6 +9927,7 @@
   "Edens Zero": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "edens_zero",
    "name": "Edens Zero",
    "year": 2021,
@@ -9376,6 +9966,7 @@
   "Initial D First Stage": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "initial_d_first_stage",
    "name": "Initial D First Stage",
    "year": 1998,
@@ -9414,6 +10005,7 @@
   "Violet Evergarden": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "violet_evergarden",
    "name": "Violet Evergarden",
    "year": 2018,
@@ -9444,94 +10036,26 @@
   },
   "DanMachi 4th Season and 5th Season": {
    "tracks": 2,
-   "how": "похожее",
-   "slug": "major_s5",
-   "name": "Major S5",
-   "year": 2009,
-   "season": "Winter",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Hey! Hey! Alright",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Stay With Me",
-     "artists": [
-      "Hitomi Shimatani"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Jibun Color",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED3",
-     "seq": 3,
-     "title": "Kokoro E",
-     "artists": []
-    }
-   ]
+   "slug": null,
+   "near": "Major S4",
+   "score": 0.43
   },
   "Arcane: League of Legends": {
-   "tracks": 2,
-   "how": "похожее",
-   "slug": "gensou_sangokushi_tengen_reishinki",
-   "name": "Gensou Sangokushi: Tengen Reishinki",
-   "year": 2022,
-   "season": "Winter",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "ENISHI",
-     "artists": [
-      "Machico"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Uso",
-     "artists": [
-      "LACCO TOWER"
-     ]
-    }
-   ]
+   "tracks": 4,
+   "slug": null,
+   "near": "Pokemon",
+   "score": 0.53
   },
   "Evangelion: 3.0+1.0 Thrice Upon a Time": {
    "tracks": 2,
-   "how": "похожее",
-   "slug": "evangelion_10_you_are_not_alone",
-   "name": "Evangelion: 1.0 You Are (Not) Alone",
-   "year": 2007,
-   "season": "Summer",
-   "themes": [
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Beautiful World",
-     "artists": [
-      "Hikaru Utada"
-     ]
-    }
-   ]
+   "slug": null,
+   "near": "Evangelion: 1.0 You Are (Not) Alone",
+   "score": 0.43
   },
   "Sword Art Online Alternative: Gun Gale Online": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "sword_art_online_alternative_gun_gale_online",
    "name": "Sword Art Online Alternative: Gun Gale Online",
    "year": 2018,
@@ -9554,8 +10078,9 @@
    ]
   },
   "Death Parade": {
-   "tracks": 2,
+   "tracks": 3,
    "how": "точно",
+   "score": 1,
    "slug": "death_parade",
    "name": "Death Parade",
    "year": 2015,
@@ -9580,6 +10105,7 @@
   "Mirai Nikki": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "mirai_nikki",
    "name": "Mirai Nikki",
    "year": 2011,
@@ -9618,6 +10144,7 @@
   "Overlord IV": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "overlord_iv",
    "name": "Overlord IV",
    "year": 2022,
@@ -9642,6 +10169,7 @@
   "Evangelion: 1.0 You Are (Not) Alone": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "evangelion_10_you_are_not_alone",
    "name": "Evangelion: 1.0 You Are (Not) Alone",
    "year": 2007,
@@ -9658,26 +10186,14 @@
   },
   "Yarichin Bitch Club": {
    "tracks": 2,
-   "how": "похожее",
-   "slug": "yarichinbitch_bu",
-   "name": "Yarichin☆Bitch-bu",
-   "year": 2018,
-   "season": "Summer",
-   "themes": [
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Touch you",
-     "artists": [
-      "Shiritsu Morimori Gakuen Seishun♡Boys"
-     ]
-    }
-   ]
+   "slug": null,
+   "near": "Yarichin☆Bitch-bu",
+   "score": 0.53
   },
   "Golden Kamuy 4th Season": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "golden_kamuy_4th_season",
    "name": "Golden Kamuy 4th Season",
    "year": 2022,
@@ -9702,6 +10218,7 @@
   "Kuroko no Basket 2nd Season": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "kuroko_no_basket_2nd_season",
    "name": "Kuroko no Basket 2nd Season",
    "year": 2013,
@@ -9740,6 +10257,7 @@
   "Golden Kamuy 2nd Season": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "golden_kamuy_2nd_season",
    "name": "Golden Kamuy 2nd Season",
    "year": 2018,
@@ -9764,6 +10282,7 @@
   "Mobile Suit Gundam Unicorn": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "mobile_suit_gundam_unicorn",
    "name": "Mobile Suit Gundam Unicorn",
    "year": 2010,
@@ -9822,63 +10341,14 @@
   },
   "SAO Alicization 2nd Season": {
    "tracks": 2,
-   "how": "похожее",
-   "slug": "sword_art_online_alicization_war_of_underworld",
-   "name": "Sword Art Online: Alicization - War of Underworld",
-   "year": 2019,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Resolution",
-     "artists": [
-      "Haruka Tomatsu"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "unlasting",
-     "artists": [
-      "LiSA"
-     ]
-    }
-   ]
-  },
-  "OST, Arcane: League of Legends": {
-   "tracks": 2,
-   "how": "похожее",
-   "slug": "gensou_sangokushi_tengen_reishinki",
-   "name": "Gensou Sangokushi: Tengen Reishinki",
-   "year": 2022,
-   "season": "Winter",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "ENISHI",
-     "artists": [
-      "Machico"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Uso",
-     "artists": [
-      "LACCO TOWER"
-     ]
-    }
-   ]
+   "slug": null,
+   "near": "Sword Art Online: Alicization - War of Underworld",
+   "score": 0.53
   },
   "91 Days": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "91_days",
    "name": "91 Days",
    "year": 2016,
@@ -9902,7 +10372,8 @@
   },
   "Heavenly Delusion": {
    "tracks": 2,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "tengoku_daimakyou",
    "name": "Tengoku Daimakyou",
    "year": 2023,
@@ -9938,8 +10409,9 @@
    ]
   },
   "Hunter x Hunter (2011)": {
-   "tracks": 2,
-   "how": "похожее",
+   "tracks": 3,
+   "how": "точно",
+   "score": 1,
    "slug": "hunter_x_hunter_2011",
    "name": "Hunter x Hunter",
    "year": 2011,
@@ -10001,6 +10473,7 @@
   "Spy x Family": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "spy_x_family",
    "name": "Spy x Family",
    "year": 2022,
@@ -10025,6 +10498,7 @@
   "Boku no Hero Academia 7th Season": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "boku_no_hero_academia_7th_season",
    "name": "Boku no Hero Academia 7th Season",
    "year": 2024,
@@ -10061,8 +10535,9 @@
    ]
   },
   "Sword Art Online": {
-   "tracks": 2,
+   "tracks": 8,
    "how": "точно",
+   "score": 1,
    "slug": "sword_art_online",
    "name": "Sword Art Online",
    "year": 2012,
@@ -10098,482 +10573,10 @@
     }
    ]
   },
-  "OST, Naruto: Shippuuden": {
-   "tracks": 2,
-   "how": "похожее",
-   "slug": "naruto_shippuuden",
-   "name": "Naruto: Shippuuden",
-   "year": 2007,
-   "season": "Winter",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": 1,
-     "title": "Hero's Come Back",
-     "artists": []
-    },
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "distance",
-     "artists": []
-    },
-    {
-     "t": "OP",
-     "s": "OP3",
-     "seq": 3,
-     "title": "Blue Bird",
-     "artists": [
-      "Ikimonogakari"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP4",
-     "seq": 4,
-     "title": "CLOSER",
-     "artists": []
-    },
-    {
-     "t": "OP",
-     "s": "OP5",
-     "seq": 5,
-     "title": "Hotaru no Hikari",
-     "artists": [
-      "Ikimonogakari"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP6",
-     "seq": 6,
-     "title": "Sign",
-     "artists": [
-      "FLOW"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP7",
-     "seq": 7,
-     "title": "Toumei Datta Sekai",
-     "artists": []
-    },
-    {
-     "t": "OP",
-     "s": "OP8",
-     "seq": 8,
-     "title": "Diver",
-     "artists": [
-      "NICO Touches the Walls"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP9",
-     "seq": 9,
-     "title": "Lovers",
-     "artists": []
-    },
-    {
-     "t": "OP",
-     "s": "OP10",
-     "seq": 10,
-     "title": "newsong",
-     "artists": [
-      "tacica"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP11",
-     "seq": 11,
-     "title": "Totsugeki Rock",
-     "artists": []
-    },
-    {
-     "t": "OP",
-     "s": "OP12",
-     "seq": 12,
-     "title": "Moshimo",
-     "artists": []
-    },
-    {
-     "t": "OP",
-     "s": "OP13",
-     "seq": 13,
-     "title": "Niwaka Ame Nimo Makezu",
-     "artists": [
-      "NICO Touches the Walls"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP14",
-     "seq": 14,
-     "title": "Tsuki no Ookisa",
-     "artists": [
-      "Nogizaka46"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP15",
-     "seq": 15,
-     "title": "Guren",
-     "artists": [
-      "DOES"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP16",
-     "seq": 16,
-     "title": "Silhouette",
-     "artists": [
-      "KANA-BOON"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP17",
-     "seq": 17,
-     "title": "Kaze",
-     "artists": [
-      "Yamazaru"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP18",
-     "seq": 18,
-     "title": "LINE",
-     "artists": [
-      "Sukima Switch"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP19",
-     "seq": 19,
-     "title": "Blood Circulator",
-     "artists": [
-      "Asian Kung-Fu Generation"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP20",
-     "seq": 20,
-     "title": "Kara no Kokoro",
-     "artists": [
-      "Anly"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Nagareboshi ~Shooting Star~",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Michi ~ To You All",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED3",
-     "seq": 3,
-     "title": "Kimi Monogatari",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED4",
-     "seq": 4,
-     "title": "Mezamero! Yasei",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED5",
-     "seq": 5,
-     "title": "Sunao Na Niji",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED6",
-     "seq": 6,
-     "title": "Broken Youth",
-     "artists": [
-      "NICO Touches the Walls"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED7",
-     "seq": 7,
-     "title": "Long Kiss Good Bye",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED8",
-     "seq": 8,
-     "title": "Bacchikoi!!!",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED9",
-     "seq": 9,
-     "title": "Shinkokyuu",
-     "artists": [
-      "SUPER BEAVER"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED10",
-     "seq": 10,
-     "title": "My Answer",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED11",
-     "seq": 11,
-     "title": "Omae Dattanda",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED12",
-     "seq": 12,
-     "title": "For You",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED13",
-     "seq": 13,
-     "title": "Jitensha",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED14",
-     "seq": 14,
-     "title": "Utakata Hanabi",
-     "artists": [
-      "Nagi Yanagi",
-      "supercell"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED15",
-     "seq": 15,
-     "title": "U Can Do It!",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED16",
-     "seq": 16,
-     "title": "Mayonaka No Orchestra",
-     "artists": [
-      "Aqua Timez"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED17",
-     "seq": 17,
-     "title": "FREEDOM",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED18",
-     "seq": 18,
-     "title": "Yokubou o Sakebe!!!",
-     "artists": [
-      "OKAMOTO'S"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED19",
-     "seq": 19,
-     "title": "Place to Try",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED20",
-     "seq": 20,
-     "title": "By My Side",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED21",
-     "seq": 21,
-     "title": "Cascade",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED22",
-     "seq": 22,
-     "title": "Kono Koe Karashite",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED23",
-     "seq": 23,
-     "title": "Mother",
-     "artists": [
-      "MUCC"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED24",
-     "seq": 24,
-     "title": "Sayonara Memory",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED25",
-     "seq": 25,
-     "title": "I Can Hear",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED26",
-     "seq": 26,
-     "title": "Yume o Daite ~Hajimari no Kurisoroodo~",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED27",
-     "seq": 27,
-     "title": "Black Night Town",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED28",
-     "seq": 28,
-     "title": "Niji",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED29",
-     "seq": 29,
-     "title": "FLAME",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED30",
-     "seq": 30,
-     "title": "Never Change feat.Lyu:Lyu",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED31",
-     "seq": 31,
-     "title": "Dame Dame da",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED32",
-     "seq": 32,
-     "title": "Spinning World",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED33",
-     "seq": 33,
-     "title": "Kotoba no Iranai Yakusoku",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED34",
-     "seq": 34,
-     "title": "Niji no Sora",
-     "artists": [
-      "FLOW"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED35",
-     "seq": 35,
-     "title": "Trouble Maker",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED36",
-     "seq": 36,
-     "title": "Sonna Kimi, Konna Boku",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED37",
-     "seq": 37,
-     "title": "Ao no Lullaby",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED38",
-     "seq": 38,
-     "title": "Pino to Ameri",
-     "artists": [
-      "Huwie Ishizaki"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED39",
-     "seq": 39,
-     "title": "Tabidachi no Uta",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED40",
-     "seq": 40,
-     "title": "Zetsu Zetsu",
-     "artists": []
-    }
-   ]
-  },
   "Great Teacher Onizuka": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "great_teacher_onizuka",
    "name": "Great Teacher Onizuka",
    "year": 1999,
@@ -10618,46 +10621,14 @@
   },
   "ReZero 3rd Season": {
    "tracks": 2,
-   "how": "похожее",
-   "slug": "starmyu_3rd_season",
-   "name": "Starmyu 3rd Season",
-   "year": 2019,
-   "season": "Summer",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "DREAM TOGETHER",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "On Stage",
-     "artists": [
-      "Natsuki Hanae"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Warera, Ayanagi Gakuen Kao Kai ~NEXT STAGE Ver.~",
-     "artists": [
-      "Yuuma Uchida",
-      "Natsuki Hanae",
-      "Nobuhiko Okamoto",
-      "Nobunaga Shimazaki",
-      "Yoshitsugu Matsuoka"
-     ]
-    }
-   ]
+   "slug": null,
+   "near": "Kuroko no Basket 3rd Season",
+   "score": 0.56
   },
   "Shingeki no Kyojin: The Final Season Part 2": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "shingeki_no_kyojin_the_final_season_part_2",
    "name": "Shingeki no Kyojin: The Final Season Part 2",
    "year": 2022,
@@ -10682,6 +10653,7 @@
   "One Punch Man": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "one_punch_man",
    "name": "One Punch Man",
    "year": 2015,
@@ -10713,6 +10685,7 @@
   "Tokyo Ghoul:re": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "tokyo_ghoulre",
    "name": "Tokyo Ghoul:re",
    "year": 2018,
@@ -10737,6 +10710,7 @@
   "Houseki no Kuni": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "houseki_no_kuni",
    "name": "Houseki no Kuni",
    "year": 2017,
@@ -10772,55 +10746,10 @@
     }
    ]
   },
-  "OST, Gurren Lagann": {
-   "tracks": 2,
-   "how": "похожее",
-   "slug": "tengen_toppa_gurren_lagann",
-   "name": "Tengen Toppa Gurren Lagann",
-   "year": 2007,
-   "season": "Spring",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Sorairo Days",
-     "artists": [
-      "Shouko Nakagawa"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "UNDERGROUND",
-     "artists": [
-      "HIGH VOLTAGE"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "happily ever after",
-     "artists": [
-      "Shouko Nakagawa"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED3",
-     "seq": 3,
-     "title": "Minna no Peace",
-     "artists": [
-      "Afromania"
-     ]
-    }
-   ]
-  },
   "Fire Force": {
    "tracks": 2,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "enen_no_shouboutai",
    "name": "Enen no Shouboutai",
    "year": 2019,
@@ -10864,502 +10793,10 @@
     }
    ]
   },
-  "OST, Samurai Champloo": {
-   "tracks": 2,
-   "how": "похожее",
-   "slug": "samurai_champloo",
-   "name": "Samurai Champloo",
-   "year": 2004,
-   "season": "Spring",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Battlecry",
-     "artists": [
-      "Shing02"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Shiki no Uta",
-     "artists": [
-      "MINMI"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Who's Theme",
-     "artists": [
-      "MINMI"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED3",
-     "seq": 3,
-     "title": "YOU",
-     "artists": [
-      "kazami"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED4",
-     "seq": 4,
-     "title": "FLY [SMALL CIRCLE OF FRIENDS]",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED5",
-     "seq": 5,
-     "title": "San Francisco",
-     "artists": []
-    }
-   ]
-  },
-  "3 OST Bleach": {
-   "tracks": 2,
-   "how": "похожее",
-   "slug": "bleach",
-   "name": "BLEACH",
-   "year": 2004,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": 1,
-     "title": "*~Asterisk",
-     "artists": [
-      "Orange Range"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "D-tecnolife",
-     "artists": [
-      "UVERworld"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP3",
-     "seq": 3,
-     "title": "Ichirin no Hana",
-     "artists": [
-      "HIGH and MIGHTY COLOR"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP4",
-     "seq": 4,
-     "title": "Tonight, Tonight, Tonight",
-     "artists": [
-      "BEAT CRUSADERS"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP5",
-     "seq": 5,
-     "title": "Rolling Star",
-     "artists": [
-      "Yui"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP6",
-     "seq": 6,
-     "title": "ALONES",
-     "artists": [
-      "Aqua Timez"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP7",
-     "seq": 7,
-     "title": "After Dark",
-     "artists": [
-      "Asian Kung-Fu Generation"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP8",
-     "seq": 8,
-     "title": "CHU-BURA",
-     "artists": [
-      "KELUN"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP9",
-     "seq": 9,
-     "title": "Velonica",
-     "artists": [
-      "Aqua Timez"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP10",
-     "seq": 10,
-     "title": "Shoujo S",
-     "artists": [
-      "SCANDAL"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP11",
-     "seq": 11,
-     "title": "Anima Rossa",
-     "artists": [
-      "Porno Graffitti"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP12",
-     "seq": 12,
-     "title": "chAngE",
-     "artists": [
-      "miwa"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP13",
-     "seq": 13,
-     "title": "Ranbu no Melody",
-     "artists": [
-      "SID"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP14",
-     "seq": 14,
-     "title": "BLUE",
-     "artists": [
-      "ViViD"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP15",
-     "seq": 15,
-     "title": "HARUKAZE",
-     "artists": [
-      "SCANDAL"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Life is Like a Boat",
-     "artists": [
-      "Rie fu"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Thank You!!",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED3",
-     "seq": 3,
-     "title": "Houkiboshi",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED4",
-     "seq": 4,
-     "title": "Happy People",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED5",
-     "seq": 5,
-     "title": "Life",
-     "artists": [
-      "Yui"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED6",
-     "seq": 6,
-     "title": "My Pace",
-     "artists": [
-      "SunSet Swish"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED7",
-     "seq": 7,
-     "title": "Hanabi",
-     "artists": [
-      "Ikimonogakari"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED8",
-     "seq": 8,
-     "title": "MOVIN!!",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED9",
-     "seq": 9,
-     "title": "Baby It's You",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED10",
-     "seq": 10,
-     "title": "Sakura Biyori",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED11",
-     "seq": 11,
-     "title": "Tsumasaki",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED12",
-     "seq": 12,
-     "title": "Daidai",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED13",
-     "seq": 13,
-     "title": "Tane wo Maku Hibi",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED14",
-     "seq": 14,
-     "title": "Kansha",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED15",
-     "seq": 15,
-     "title": "Orange",
-     "artists": [
-      "Lil`B"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED16",
-     "seq": 16,
-     "title": "Gallop",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED17",
-     "seq": 17,
-     "title": "Hitohira no Hanabira",
-     "artists": [
-      "STEREOPONY"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED18",
-     "seq": 18,
-     "title": "Sky Chord ~Otona ni Naru Kimi he~",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED19",
-     "seq": 19,
-     "title": "Kimi wo Mamotte, Kimi wo Aishite",
-     "artists": [
-      "Sambomaster"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED20",
-     "seq": 20,
-     "title": "Mad Surfer",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED21",
-     "seq": 21,
-     "title": "Sakurabito",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED22",
-     "seq": 22,
-     "title": "Tabidatsu Kimi e",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED23",
-     "seq": 23,
-     "title": "Stay Beautiful",
-     "artists": [
-      "Diggy-MO`"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED24",
-     "seq": 24,
-     "title": "Echoes",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED25",
-     "seq": 25,
-     "title": "Last Moment",
-     "artists": [
-      "SPYAIR"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED26",
-     "seq": 26,
-     "title": "Song for...",
-     "artists": [
-      "ROOKiEZ is PUNK'D"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED27",
-     "seq": 27,
-     "title": "Aoi Tori",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED28",
-     "seq": 28,
-     "title": "Haruka Kanata",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED29",
-     "seq": 29,
-     "title": "Re:pray",
-     "artists": [
-      "Aimer"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED30",
-     "seq": 30,
-     "title": "Mask",
-     "artists": [
-      "Aqua Timez"
-     ]
-    }
-   ]
-  },
-  "OST, Higurashi no Naku Koro ni Kai": {
-   "tracks": 2,
-   "how": "похожее",
-   "slug": "higurashi_no_naku_koro_ni_kira",
-   "name": "Higurashi no Naku Koro ni Kira",
-   "year": 2011,
-   "season": "Summer",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Happy! Lucky! Dochy!",
-     "artists": [
-      "Yui Horie",
-      "Yukari Tamura"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Zendaimimon☆Miracle Change",
-     "artists": [
-      "Mai Nakahara"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Tenshinranman☆Miracle Change",
-     "artists": [
-      "Yukari Tamura"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED3",
-     "seq": 3,
-     "title": "Ishindenshin☆Miracle Change",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED4",
-     "seq": 4,
-     "title": "Yuki Rinrin☆Miracle Change",
-     "artists": [
-      "Yui Horie"
-     ]
-    }
-   ]
-  },
   "Overlord": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "overlord",
    "name": "Overlord",
    "year": 2015,
@@ -11384,6 +10821,7 @@
   "Bucchigiri?!": {
    "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "bucchigiri",
    "name": "Bucchigiri?!",
    "year": 2024,
@@ -11408,6 +10846,7 @@
   "Aware! Meisaku-kun": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "aware_meisaku_kun",
    "name": "Aware! Meisaku-kun",
    "year": 2016,
@@ -11481,6 +10920,7 @@
   "Bubuki Buranki": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "bubuki_buranki",
    "name": "Bubuki Buranki",
    "year": 2016,
@@ -11504,7 +10944,8 @@
   },
   "Smoking Behind the Supermarket with You": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "super_no_ura_de_yani_suu_futari",
    "name": "Super no Ura de Yani Suu Futari",
    "year": 2026,
@@ -11551,6 +10992,7 @@
   "Mobile Suit Gundam 00": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "mobile_suit_gundam_00",
    "name": "Mobile Suit Gundam 00",
    "year": 2007,
@@ -11588,28 +11030,29 @@
   },
   "Saga of Tanya the Evil II": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "youjo_senki_movie",
-   "name": "Youjo Senki Movie",
-   "year": 2019,
-   "season": "Winter",
+   "how": "точно",
+   "score": 1,
+   "slug": "youjo_senki_ii",
+   "name": "Youjo Senki II",
+   "year": 2026,
+   "season": "Summer",
    "themes": [
     {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Los! Los! Los!",
+     "t": "OP",
+     "s": "OP1",
+     "seq": null,
+     "title": "Why? RED induction",
      "artists": [
-      "Aoi Yuuki"
+      "MYTH & ROID"
      ]
     },
     {
      "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Remembrance",
+     "s": "ED1",
+     "seq": null,
+     "title": "Weiter! Weiter!",
      "artists": [
-      "MYTH & ROID"
+      "Aoi Yuuki"
      ]
     }
    ]
@@ -11617,6 +11060,7 @@
   "El Cazador de la Bruja": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "el_cazador_de_la_bruja",
    "name": "El Cazador de la Bruja",
    "year": 2007,
@@ -11634,6 +11078,7 @@
   "Darker than Black: Kuro no Keiyakusha": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "darker_than_black_kuro_no_keiyakusha",
    "name": "Darker than Black: Kuro no Keiyakusha",
    "year": 2007,
@@ -11671,7 +11116,8 @@
   },
   "The Seven Deadly Sins: Imperial Wrath of the Gods": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "nanatsu_no_taizai_kamigami_no_gekirin",
    "name": "Nanatsu no Taizai: Kamigami no Gekirin",
    "year": 2019,
@@ -11715,7 +11161,8 @@
   },
   "Pretty Soldier Sailor Moon: Sailor Stars": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "bishoujo_senshi_sailor_moon_sailor_stars",
    "name": "Bishoujo Senshi Sailor Moon: Sailor Stars",
    "year": 1996,
@@ -11746,7 +11193,8 @@
   },
   "Koukaku Kidoutai": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "ghost_in_the_shell",
    "name": "Ghost in the Shell",
    "year": 1995,
@@ -11770,7 +11218,8 @@
   },
   "Tokyo Revengers: Christmas Showdown": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "tokyo_revengers_seiya_kessen_hen",
    "name": "Tokyo Revengers: Seiya Kessen-hen",
    "year": 2023,
@@ -11798,26 +11247,14 @@
   },
   "Mermaid Melody: Pichi Pichi Pitch": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "my_melody_kuromi",
-   "name": "My Melody & Kuromi",
-   "year": 2025,
-   "season": "Summer",
-   "themes": [
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Kawaii",
-     "artists": [
-      "LE SSERAFIM"
-     ]
-    }
-   ]
+   "slug": null,
+   "near": "Mermaid Forest",
+   "score": 0.45
   },
   "Sailor Moon R: The Movie - The Promise of the Rose": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "bishoujo_senshi_sailor_moon_r_the_movie",
    "name": "Bishoujo Senshi Sailor Moon R: The Movie",
    "year": 1993,
@@ -11843,7 +11280,8 @@
   },
   "Magical Sempai": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "tejina_senpai",
    "name": "Tejina-senpai",
    "year": 2019,
@@ -11871,7 +11309,8 @@
   },
   "Tomorrow's Joe 2": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "ashita_no_joe_2",
    "name": "Ashita no Joe 2",
    "year": 1980,
@@ -11909,7 +11348,8 @@
   },
   "The Great Jahy Will Not Be Defeated!": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "jahy_sama_wa_kujikenai",
    "name": "Jahy-sama wa Kujikenai!",
    "year": 2021,
@@ -11953,35 +11393,14 @@
   },
   "Dragon Raja II: The Mourner's Eyes": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "11eyes",
-   "name": "11eyes",
-   "year": 2009,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Arrival of Tears",
-     "artists": [
-      "Ayane"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Sequentia",
-     "artists": [
-      "Asriel"
-     ]
-    }
-   ]
+   "slug": null,
+   "near": "Dragon Ball",
+   "score": 0.34
   },
   "ChaoS;Child": {
-   "tracks": 1,
+   "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "chaoschild",
    "name": "ChäoS;Child",
    "year": 2017,
@@ -12005,7 +11424,8 @@
   },
   "Baki the Grappler": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "grappler_baki",
    "name": "Grappler Baki",
    "year": 2001,
@@ -12033,7 +11453,8 @@
   },
   "Though I Am an Inept Villainess": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "futsutsuka_na_akujo_de_wa_gozaimasu_ga_suuguu_chouso_torikae_den",
    "name": "Futsutsuka na Akujo de wa Gozaimasu ga: Suuguu Chouso Torikae Den",
    "year": 2026,
@@ -12062,6 +11483,7 @@
   "Carnival Phantasm": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "carnival_phantasm",
    "name": "Carnival Phantasm",
    "year": 2011,
@@ -12093,6 +11515,7 @@
   "Bishoujo Senshi Sailor Moon S": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "bishoujo_senshi_sailor_moon_s",
    "name": "Bishoujo Senshi Sailor Moon S",
    "year": 1994,
@@ -12123,7 +11546,8 @@
   },
   "Chainsmoker Cat": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "yani_neko",
    "name": "Yani Neko",
    "year": 2026,
@@ -12151,7 +11575,8 @@
   },
   "Berserk 2016": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "berserk_2016",
    "name": "Berserk",
    "year": 2016,
@@ -12191,7 +11616,8 @@
   },
   "The Case Study of Vanitas": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "vanitas_no_karte",
    "name": "Vanitas no Karte",
    "year": 2021,
@@ -12220,6 +11646,7 @@
   "Highschool of the Dead": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "highschool_of_the_dead",
    "name": "Highschool of the Dead",
    "year": 2010,
@@ -12320,7 +11747,8 @@
   },
   "Eren the Southpaw": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "hidarikiki_no_eren",
    "name": "Hidarikiki no Eren",
    "year": 2026,
@@ -12349,7 +11777,8 @@
   },
   "Darker than Black: Gemini of the Meteor": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "darker_than_black_ryuusei_no_gemini",
    "name": "Darker than Black: Ryuusei no Gemini",
    "year": 2009,
@@ -12377,7 +11806,8 @@
   },
   "Witch Hat Atelier": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "tongari_boushi_no_atelier",
    "name": "Tongari Boushi no Atelier",
    "year": 2026,
@@ -12424,7 +11854,8 @@
   },
   "Is the Order a Rabbit?": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "gochuumon_wa_usagi_desu_ka",
    "name": "Gochuumon wa Usagi Desu ka?",
    "year": 2014,
@@ -12472,6 +11903,7 @@
   "Dorohedoro Season 2": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "dorohedoro_season_2",
    "name": "Dorohedoro Season 2",
    "year": 2026,
@@ -12495,7 +11927,8 @@
   },
   "I've Been Killing Slimes for 300 Years and Maxed Out My Level": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "slime_taoshite_300_nen_shiranai_uchi_ni_level_max_ni_nattemashita",
    "name": "Slime Taoshite 300-nen, Shiranai Uchi ni Level Max ni Nattemashita",
    "year": 2021,
@@ -12523,7 +11956,8 @@
   },
   "Irina: The Vampire Cosmonaut": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "tsuki_to_laika_to_nosferatu",
    "name": "Tsuki to Laika to Nosferatu",
    "year": 2021,
@@ -12554,124 +11988,26 @@
   },
   "Scissor Seven: Xuanwu Kingdom Chapter": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "wu_liuqi_zhi_zui_qiang_fa_xing_shi",
-   "name": "Wu Liuqi Zhi Zui Qiang Fa Xing Shi",
-   "year": 2019,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Yu Jue Gao Xia",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Wo Xiang He Ni Yiqi Qu Haibian",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Lian Bei Tai Do Bu Shi",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED3",
-     "seq": 3,
-     "title": "Ding Dang De Lian",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED4",
-     "seq": 4,
-     "title": "Xuanwu Beizhuang",
-     "artists": []
-    }
-   ]
+   "slug": null,
+   "near": "Cike Wu Liuqi",
+   "score": 0.57
   },
   "Open Your Mind": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "your_forma",
-   "name": "Your Forma",
-   "year": 2025,
-   "season": "Spring",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "GRIDOUT",
-     "artists": [
-      "yama"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Neo-Luddite",
-     "artists": [
-      "9Lana"
-     ]
-    }
-   ]
+   "slug": null,
+   "near": "Kimi no Na wa.",
+   "score": 0.53
   },
   "Baki-dou: The Invincible Samurai": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "baki",
-   "name": "Baki",
-   "year": 2018,
-   "season": "Spring",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": 1,
-     "title": "BEASTFUL",
-     "artists": [
-      "GRANRODEO"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "The Gong of Knockout",
-     "artists": [
-      "Fear, and Loathing in Las Vegas"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "RESOLVE",
-     "artists": [
-      "Azusa Tadokoro"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "BEAUTIFUL BEAST",
-     "artists": []
-    }
-   ]
+   "slug": null,
+   "near": "Baki",
+   "score": 0.5
   },
   "The Warrior Princess and the Barbaric King": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "hime_kishi_wa_barbaroi_no_yome",
    "name": "Hime Kishi wa Barbaroi no Yome",
    "year": 2026,
@@ -12700,6 +12036,7 @@
   "Un-Go": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "un_go",
    "name": "UN-GO",
    "year": 2011,
@@ -12723,7 +12060,8 @@
   },
   "Spy Classroom Season 2": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "spy_kyoushitsu_2nd_season",
    "name": "Spy Kyoushitsu 2nd Season",
    "year": 2023,
@@ -12788,6 +12126,7 @@
   "Haikyuu!! Second Season": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "haikyuu_second_season",
    "name": "Haikyuu!! Second Season",
    "year": 2015,
@@ -12826,6 +12165,7 @@
   "Working'!!": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "working_2011",
    "name": "Working'!!",
    "year": 2011,
@@ -12849,7 +12189,8 @@
   },
   "Battle Doll Angelic Layer": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "kidou_tenshi_angelic_layer",
    "name": "Kidou Tenshi Angelic Layer",
    "year": 2001,
@@ -12881,6 +12222,7 @@
   "Ghost in the Shell: Stand Alone Complex - Solid State Society": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "ghost_in_the_shell_stand_alone_complex_solid_state_society",
    "name": "Ghost in the Shell: Stand Alone Complex - Solid State Society",
    "year": 2006,
@@ -12905,6 +12247,7 @@
   "Sakamoto Days": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "sakamoto_days",
    "name": "Sakamoto Days",
    "year": 2025,
@@ -12936,6 +12279,7 @@
   "Sakamoto desu ga?": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "sakamoto_desu_ga",
    "name": "Sakamoto desu ga?",
    "year": 2016,
@@ -12959,26 +12303,14 @@
   },
   "The Garden of Sinners Chapter 2: A Study in Murder - Part 1": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "kara_no_kyoukai_2_satsujin_kousatsu_zen",
-   "name": "Kara no Kyoukai 2: Satsujin Kousatsu (Zen)",
-   "year": 2007,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Kimi ga Hikari ni Kaete Iku",
-     "artists": [
-      "Kalafina"
-     ]
-    }
-   ]
+   "slug": null,
+   "near": "Kara no Kyoukai 2: Satsujin Kousatsu (Zen)",
+   "score": 0.56
   },
   "The Vision of Escaflowne": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "tenkuu_no_escaflowne",
    "name": "Tenkuu no Escaflowne",
    "year": 1996,
@@ -13004,7 +12336,8 @@
   },
   "Zombieland Saga Revenge": {
    "tracks": 1,
-   "how": "поиском",
+   "how": "точно",
+   "score": 1,
    "slug": "zombieland_saga_revenge",
    "name": "Zombieland Saga: Revenge",
    "year": 2021,
@@ -13093,7 +12426,8 @@
   },
   "Revolutionary Girl Utena": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "shoujo_kakumei_utena",
    "name": "Shoujo Kakumei Utena",
    "year": 1997,
@@ -13136,6 +12470,7 @@
   "Hyouka": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "hyouka",
    "name": "Hyouka",
    "year": 2012,
@@ -13173,7 +12508,8 @@
   },
   "Macross Frontier": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "macross_f",
    "name": "Macross F",
    "year": 2008,
@@ -13320,7 +12656,8 @@
   },
   "Puella Magi Madoka Magica the Movie Part 1: Beginnings": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "похоже",
+   "score": 0.7,
    "slug": "mahou_shoujo_madokamagica_hajimari_no_monogatari",
    "name": "Mahou Shoujo Madoka★Magica: Hajimari no Monogatari",
    "year": 2012,
@@ -13349,6 +12686,7 @@
   "Monochrome Factor": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "monochrome_factor",
    "name": "Monochrome Factor",
    "year": 2008,
@@ -13379,7 +12717,8 @@
   },
   "The Helpful Fox Senko-san": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "sewayaki_kitsune_no_senko_san",
    "name": "Sewayaki Kitsune no Senko-san",
    "year": 2019,
@@ -13408,7 +12747,8 @@
   },
   "Mikagura School Suite": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "mikagura_gakuen_kumikyoku",
    "name": "Mikagura Gakuen Kumikyoku",
    "year": 2015,
@@ -13462,8 +12802,9 @@
    ]
   },
   "Dorohedoro": {
-   "tracks": 1,
+   "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "dorohedoro",
    "name": "Dorohedoro",
    "year": 2020,
@@ -13523,6 +12864,7 @@
   "Deep Insanity: The Lost Child": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "deep_insanity_the_lost_child",
    "name": "Deep Insanity: The Lost Child",
    "year": 2021,
@@ -13546,7 +12888,8 @@
   },
   "Welcome to Demon School! Iruma-kun Season 4": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "mairimashita_irumakun_4",
    "name": "Mairimashita! Iruma-kun 4",
    "year": 2026,
@@ -13583,7 +12926,8 @@
   },
   "Berserk: The Golden Age Arc": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "похоже",
+   "score": 0.86,
    "slug": "berserk_ougon_jidai_hen_iii_kourin",
    "name": "Berserk: Ougon Jidai-hen III - Kourin",
    "year": 2013,
@@ -13616,29 +12960,30 @@
   },
   "Hell's Paradise Season 2": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "jigokuraku_2nd_season",
-   "name": "Jigokuraku 2nd Season",
-   "year": 2026,
-   "season": "Winter",
+   "how": "похоже",
+   "score": 0.72,
+   "slug": "jigokuraku",
+   "name": "Jigokuraku",
+   "year": 2023,
+   "season": "Spring",
    "themes": [
     {
      "t": "OP",
      "s": "OP1",
      "seq": null,
-     "title": "Kasukana Hana",
+     "title": "W●RK",
      "artists": [
-      "Tatsuya Kitani",
-      "BABYMETAL"
+      "millennium parade",
+      "Ringo Shiina"
      ]
     },
     {
      "t": "ED",
      "s": "ED1",
      "seq": null,
-     "title": "PERSONAL",
+     "title": "Kamihitoe",
      "artists": [
-      "Ziyoou-vachi"
+      "Uru"
      ]
     }
    ]
@@ -13646,6 +12991,7 @@
   "Owarimonogatari": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "owarimonogatari",
    "name": "Owarimonogatari",
    "year": 2015,
@@ -13691,6 +13037,7 @@
   "Liar Game": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "liar_game",
    "name": "LIAR GAME",
    "year": 2026,
@@ -13728,7 +13075,8 @@
   },
   "I May Be a Guild Receptionist, But I'll Solo Any Boss to Clock Out on Time": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "похоже",
+   "score": 0.91,
    "slug": "guild_no_uketsukejou_desu_ga_zangyou_wa_iya_nanode_boss_wo_solo_toubatsu_shiyou_to_omoimasu",
    "name": "Guild no Uketsukejou desu ga, Zangyou wa Iya nanode Boss wo Solo Toubatsu Shiyou to Omoimasu",
    "year": 2025,
@@ -13756,46 +13104,29 @@
   },
   "My Hero Academia: You're Next": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "boku_no_hero_academia_5th_season",
-   "name": "Boku no Hero Academia 5th Season",
-   "year": 2021,
+   "how": "похоже",
+   "score": 0.63,
+   "slug": "boku_no_hero_academia",
+   "name": "Boku no Hero Academia",
+   "year": 2016,
    "season": "Spring",
    "themes": [
     {
      "t": "OP",
      "s": "OP1",
-     "seq": 1,
-     "title": "No.1",
+     "seq": null,
+     "title": "The Day",
      "artists": [
-      "DISH//"
+      "Porno Graffitti"
      ]
     },
     {
      "t": "ED",
      "s": "ED1",
-     "seq": 1,
-     "title": "Ashiato",
+     "seq": null,
+     "title": "HEROES",
      "artists": [
-      "the peggies"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "Merry-Go-Round",
-     "artists": [
-      "MAN WITH A MISSION"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Uso ja Nai",
-     "artists": [
-      "Soushi Sakiyama"
+      "Brian the Sun"
      ]
     }
    ]
@@ -13803,6 +13134,7 @@
   "Date A Live II": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "date_a_live_ii",
    "name": "Date A Live II",
    "year": 2014,
@@ -13834,6 +13166,7 @@
   "Snowball Earth": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "snowball_earth",
    "name": "Snowball Earth",
    "year": 2026,
@@ -13857,7 +13190,8 @@
   },
   "The Heroic Legend of Arslan: Dust Storm Dance": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "arslan_senki_tv_fuujin_ranbu",
    "name": "Arslan Senki (TV): Fuujin Ranbu",
    "year": 2016,
@@ -13885,7 +13219,8 @@
   },
   "Digimon Universe App Monsters": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "digimon_universe_appli_monsters",
    "name": "Digimon Universe: Appli Monsters",
    "year": 2016,
@@ -13940,6 +13275,7 @@
   "Helck": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "helck",
    "name": "Helck",
    "year": 2023,
@@ -13977,7 +13313,8 @@
   },
   "Daemons of the Shadow Realm": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "yomi_no_tsugai",
    "name": "Yomi no Tsugai",
    "year": 2026,
@@ -14023,26 +13360,14 @@
   },
   "The Garden of Sinners Chapter 6: Oblivion Recording": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "kara_no_kyoukai_1_fukan_fuukei",
-   "name": "Kara no Kyoukai 1: Fukan Fuukei",
-   "year": 2007,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "oblivious",
-     "artists": [
-      "Kalafina"
-     ]
-    }
-   ]
+   "slug": null,
+   "near": "Kara no Kyoukai 1: Fukan Fuukei",
+   "score": 0.51
   },
   "Shingeki no Kyojin Season 2": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "shingeki_no_kyojin_season_2",
    "name": "Shingeki no Kyojin Season 2",
    "year": 2017,
@@ -14066,31 +13391,14 @@
   },
   "Cosmic Princess Kaguya!": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "detatoko_princess",
-   "name": "Detatoko Princess",
-   "year": 1997,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Chocolat au Lait",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Tenshi no Oheso",
-     "artists": []
-    }
-   ]
+   "slug": null,
+   "near": "Shamanic Princess",
+   "score": 0.53
   },
   "Digimon Universe: Appli Monsters": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "digimon_universe_appli_monsters",
    "name": "Digimon Universe: Appli Monsters",
    "year": 2016,
@@ -14142,26 +13450,14 @@
   },
   "One Piece Movie 08: Episode of Alabasta - The Desert Princess and the Pirates": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "one_piece_movie_7_karakuri_jou_no_mecha_kyohei",
-   "name": "One Piece Movie 7: Karakuri-jou no Mecha Kyohei",
-   "year": 2006,
-   "season": "Winter",
-   "themes": [
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Sayaendou",
-     "artists": [
-      "NEWS"
-     ]
-    }
-   ]
+   "slug": null,
+   "near": "One Piece",
+   "score": 0.4
   },
   "Legend of the Galactic Heroes: Die Neue These - Stellar War": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "ginga_eiyuu_densetsu_die_neue_these_seiran",
    "name": "Ginga Eiyuu Densetsu: Die Neue These - Seiran",
    "year": 2019,
@@ -14192,6 +13488,7 @@
   "Wolf's Rain": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "wolfs_rain",
    "name": "Wolf's Rain",
    "year": 2003,
@@ -14222,7 +13519,8 @@
   },
   "Juuni Taisen: Zodiac War": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "похоже",
+   "score": 0.76,
    "slug": "juuni_taisen",
    "name": "Juuni Taisen",
    "year": 2017,
@@ -14248,62 +13546,43 @@
   },
   "Sky Blue Utility": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "souten_no_ken_regenesis_2nd_season",
-   "name": "Souten no Ken: Regenesis 2nd Season",
-   "year": 2018,
-   "season": "Fall",
+   "how": "похоже",
+   "score": 0.72,
+   "slug": "soukyuu_no_fafner_dead_aggressor",
+   "name": "Soukyuu no Fafner: Dead Aggressor",
+   "year": 2004,
+   "season": "Summer",
    "themes": [
     {
      "t": "OP",
      "s": "OP1",
      "seq": null,
-     "title": "Soul Seeker",
-     "artists": []
+     "title": "Shangri-La",
+     "artists": [
+      "angela"
+     ]
     },
     {
      "t": "ED",
      "s": "ED1",
-     "seq": null,
-     "title": "Kono Sora wo Subete Kimi ni",
-     "artists": []
+     "seq": 1,
+     "title": "Separation",
+     "artists": [
+      "angela"
+     ]
     }
    ]
   },
   "Kamen Rider Eins with Girls Remix": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "tojima_rider",
-   "name": "Toujima Tanzaburou wa Kamen Rider ni Naritai",
-   "year": 2025,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Wanna be",
-     "artists": [
-      "TeddyLoid",
-      "Shigeru Matsuzaki",
-      "TOPHAMHAT-KYO"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "One More Time",
-     "artists": [
-      "TeddyLoid",
-      "Ryoji Tokito"
-     ]
-    }
-   ]
+   "slug": null,
+   "near": "Monster Musume no Iru Nichijou",
+   "score": 0.4
   },
   "The World's Finest Assassin Gets Reincarnated in Another World as an Aristocrat": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "sekai_saikou_no_ansatsusha_isekai_kizoku_ni_tensei_suru",
    "name": "Sekai Saikou no Ansatsusha, Isekai Kizoku ni Tensei suru",
    "year": 2021,
@@ -14340,7 +13619,8 @@
   },
   "Excel Saga": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "heppoko_jikken_animation_excelsaga",
    "name": "Heppoko Jikken Animation Excel♥Saga",
    "year": 1999,
@@ -14371,7 +13651,8 @@
   },
   "JoJo's Bizarre Adventure Part 7: Steel Ball Run": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "похоже",
+   "score": 0.84,
    "slug": "jojo_no_kimyou_na_bouken_part_7_steel_ball_run",
    "name": "JoJo no Kimyou na Bouken Part 7: Steel Ball Run",
    "year": 2026,
@@ -14389,6 +13670,7 @@
   "Date A Live": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "date_a_live",
    "name": "Date A Live",
    "year": 2013,
@@ -14433,11 +13715,14 @@
   },
   "Ты единственная, кто любит Великого Меня?!": {
    "tracks": 1,
-   "slug": null
+   "slug": null,
+   "near": "",
+   "score": 0
   },
   "Samurai Champloo": {
-   "tracks": 1,
+   "tracks": 3,
    "how": "точно",
+   "score": 1,
    "slug": "samurai_champloo",
    "name": "Samurai Champloo",
    "year": 2004,
@@ -14489,7 +13774,8 @@
   },
   "Dropkick On My Devil!! X": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "jashin_chan_dropkick_x",
    "name": "Jashin-chan Dropkick X",
    "year": 2022,
@@ -14529,7 +13815,8 @@
   },
   "Baki: The Great Raitai Tournament Saga": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "baki_2nd_season",
    "name": "Baki 2nd Season",
    "year": 2020,
@@ -14555,7 +13842,8 @@
   },
   "The Kubikiri Cycle": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "похоже",
+   "score": 0.73,
    "slug": "kubikiri_cycle_aoiro_savant_to_zaregototsukai",
    "name": "Kubikiri Cycle: Aoiro Savant to Zaregototsukai",
    "year": 2016,
@@ -14584,6 +13872,7 @@
   "Nukitashi the Animation": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "nukitashi_the_animation",
    "name": "Nukitashi the Animation",
    "year": 2025,
@@ -14608,6 +13897,7 @@
   "Servamp": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "servamp",
    "name": "Servamp",
    "year": 2016,
@@ -14631,7 +13921,8 @@
   },
   "Tojima Tanzaburo Wants to Be a Masked Rider": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "похоже",
+   "score": 0.7,
    "slug": "tojima_rider",
    "name": "Toujima Tanzaburou wa Kamen Rider ni Naritai",
    "year": 2025,
@@ -14662,7 +13953,8 @@
   },
   "Beyond the Boundary: I'll Be Here - Future": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "kyoukai_no_kanata_movie_ill_be_here_mirai_hen",
    "name": "Kyoukai no Kanata Movie: I'll Be Here - Mirai-hen",
    "year": 2015,
@@ -14682,6 +13974,7 @@
   "Claymore": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "claymore",
    "name": "Claymore",
    "year": 2007,
@@ -14705,95 +13998,20 @@
   },
   "Pokémon Scarlet & Violet": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "scarlet_nexus",
-   "name": "Scarlet Nexus",
-   "year": 2021,
-   "season": "Summer",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": 1,
-     "title": "Red Criminal",
-     "artists": [
-      "THE ORAL CIGARETTES"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Fire",
-     "artists": [
-      "Yamato(.S)"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "MACHINEGUN",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Stranger",
-     "artists": []
-    }
-   ]
+   "slug": null,
+   "near": "Pokemon XY",
+   "score": 0.53
   },
   "The 3rd Super Robot Wars Alpha: To the End of the Galaxy": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "super_robot_taisen_og_the_inspector",
-   "name": "Super Robot Taisen OG: The Inspector",
-   "year": 2010,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": 1,
-     "title": "MAXON",
-     "artists": [
-      "JAM Project"
-     ]
-    },
-    {
-     "t": "OP",
-     "s": "OP2",
-     "seq": 2,
-     "title": "Ryuusei Lovers",
-     "artists": [
-      "JAM Project"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": 1,
-     "title": "Bokura no Jiyuu",
-     "artists": [
-      "Aki Misato"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Saigo no Tabi",
-     "artists": [
-      "Aki Misato"
-     ]
-    }
-   ]
+   "slug": null,
+   "near": "Super Robot Taisen OG: The Inspector",
+   "score": 0.49
   },
   "Welcome to Demon School! Iruma-kun Season 3": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "mairimashita_iruma_kun_3rd_season",
    "name": "Mairimashita! Iruma-kun 3rd Season",
    "year": 2022,
@@ -14831,6 +14049,7 @@
   "Devilman: Crybaby": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "devilman_crybaby",
    "name": "Devilman: Crybaby",
    "year": 2018,
@@ -14854,7 +14073,8 @@
   },
   "Dekin no Mogura: The Earthbound Mole": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "dekin_no_mogura",
    "name": "Dekin no Mogura",
    "year": 2025,
@@ -14883,7 +14103,8 @@
   },
   "Hinomaru Sumo": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "hinomaru_zumou",
    "name": "Hinomaru Zumou",
    "year": 2018,
@@ -14923,7 +14144,8 @@
   },
   "Hellsing Ultimate": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "похоже",
+   "score": 0.75,
    "slug": "hellsing",
    "name": "Hellsing",
    "year": 2001,
@@ -14951,7 +14173,8 @@
   },
   "Arknights: Prelude to Dawn": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "arknights_reimei_zensou",
    "name": "Arknights: Reimei Zensou",
    "year": 2022,
@@ -14979,7 +14202,8 @@
   },
   "Read or Die": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "rod_ova",
    "name": "R.O.D OVA",
    "year": 2001,
@@ -14995,8 +14219,9 @@
    ]
   },
   "FLCL": {
-   "tracks": 1,
+   "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "flcl",
    "name": "FLCL",
    "year": 2000,
@@ -15013,7 +14238,8 @@
   },
   "Food for the Soul": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "hibi_wa_sugiredo_meshi_umashi",
    "name": "Hibi wa Sugiredo Meshi Umashi",
    "year": 2025,
@@ -15042,6 +14268,7 @@
   "Strike the Blood": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "strike_the_blood",
    "name": "Strike the Blood",
    "year": 2013,
@@ -15079,7 +14306,8 @@
   },
   "Welcome to Demon School! Iruma-kun 2nd Season": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "mairimashita_iruma_kun_2nd_season",
    "name": "Mairimashita! Iruma-kun 2nd Season",
    "year": 2021,
@@ -15113,6 +14341,7 @@
   "Date A Live V": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "date_a_live_v",
    "name": "Date A Live V",
    "year": 2024,
@@ -15137,6 +14366,7 @@
   "Samurai 7": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "samurai_7",
    "name": "Samurai 7",
    "year": 2004,
@@ -15167,31 +14397,14 @@
   },
   "Historical Secret Stories Historia": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "himegoto",
-   "name": "Himegoto",
-   "year": 2014,
-   "season": "Summer",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Troublemaker",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Make-up!",
-     "artists": []
-    }
-   ]
+   "slug": null,
+   "near": "Himegoto",
+   "score": 0.41
   },
   "Shakugan no Shana III (Final)": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "shakugan_no_shana_iii_final",
    "name": "Shakugan no Shana III (Final)",
    "year": 2011,
@@ -15243,7 +14456,8 @@
   },
   "The Darwin Incident": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "darwin_jihen",
    "name": "Darwin Jihen",
    "year": 2026,
@@ -15272,6 +14486,7 @@
   "Last Exile": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "last_exile",
    "name": "Last Exile",
    "year": 2003,
@@ -15295,7 +14510,8 @@
   },
   "Skip and Loafer": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "skip_to_loafer",
    "name": "Skip to Loafer",
    "year": 2023,
@@ -15323,7 +14539,8 @@
   },
   "Redo of Healer": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "kaifuku_jutsushi_no_yarinaoshi",
    "name": "Kaifuku Jutsushi no Yarinaoshi",
    "year": 2021,
@@ -15352,6 +14569,7 @@
   "No Guns Life": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "no_guns_life",
    "name": "No Guns Life",
    "year": 2019,
@@ -15375,7 +14593,8 @@
   },
   "Attack on Titan Season 2": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "shingeki_no_kyojin_season_2",
    "name": "Shingeki no Kyojin Season 2",
    "year": 2017,
@@ -15402,8 +14621,9 @@
    ]
   },
   "JoJo's Bizarre Adventure: Golden Wind": {
-   "tracks": 1,
-   "how": "похожее",
+   "tracks": 2,
+   "how": "точно",
+   "score": 1,
    "slug": "jojo_no_kimyou_na_bouken_part_5_ougon_no_kaze",
    "name": "JoJo no Kimyou na Bouken Part 5: Ougon no Kaze",
    "year": 2018,
@@ -15442,8 +14662,9 @@
    ]
   },
   "Made in Abyss": {
-   "tracks": 1,
+   "tracks": 7,
    "how": "точно",
+   "score": 1,
    "slug": "made_in_abyss",
    "name": "Made in Abyss",
    "year": 2017,
@@ -15488,7 +14709,8 @@
   },
   "Danganronpa 3: The End of Hope's Peak High School - Hope Arc": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "похоже",
+   "score": 0.96,
    "slug": "danganronpa_3_the_end_of_kibougamine_gakuen_zetsubou_hen",
    "name": "Danganronpa 3: The End of Kibougamine Gakuen - Zetsubou-hen",
    "year": 2016,
@@ -15516,7 +14738,8 @@
   },
   "The Angel Next Door Spoils Me Rotten": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "otonari_no_tenshi_sama_ni_itsunomanika_dame_ningen_ni_sareteita_ken",
    "name": "Otonari no Tenshi-sama ni Itsunomanika Dame Ningen ni Sareteita Ken",
    "year": 2023,
@@ -15562,31 +14785,14 @@
   },
   "Dragon Raja -The Blazing Dawn-": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "honoo_no_tenkousei",
-   "name": "Honoo no Tenkousei",
-   "year": 1991,
-   "season": "Spring",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Honoo no Tenkousei",
-     "artists": []
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Yumemiru Kimochi ~Dreaming Heart~",
-     "artists": []
-    }
-   ]
+   "slug": null,
+   "near": "Strange Dawn",
+   "score": 0.45
   },
   "Fafner in the Azure: Dead Aggressor": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "soukyuu_no_fafner_dead_aggressor",
    "name": "Soukyuu no Fafner: Dead Aggressor",
    "year": 2004,
@@ -15615,6 +14821,7 @@
   "Re:Monster": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "remonster",
    "name": "Re:Monster",
    "year": 2024,
@@ -15638,7 +14845,8 @@
   },
   "In the Clear Moonlit Dusk": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "uruwashi_no_yoi_no_tsuki",
    "name": "Uruwashi no Yoi no Tsuki",
    "year": 2026,
@@ -15666,24 +14874,14 @@
   },
   "Kono Aozora ni Yakusoku o": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "gantzo",
-   "name": "Gantz:O",
-   "year": 2016,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Ningen Video",
-     "artists": []
-    }
-   ]
+   "slug": null,
+   "near": "The Big O",
+   "score": 0.45
   },
   "Chibi Maruko-chan": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "chibi_maruko_chan",
    "name": "Chibi Maruko-chan",
    "year": 1990,
@@ -15714,7 +14912,8 @@
   },
   "Jujutsu Kaisen: Hidden Inventory": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "похоже",
+   "score": 0.67,
    "slug": "jujutsu_kaisen",
    "name": "Jujutsu Kaisen",
    "year": 2020,
@@ -15760,24 +14959,46 @@
   },
   "GiriGiri Love": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "love_kome_we_love_rice",
-   "name": "Love Kome: We Love Rice",
-   "year": 2017,
+   "how": "похоже",
+   "score": 0.66,
+   "slug": "love_hina",
+   "name": "Love Hina",
+   "year": 2000,
    "season": "Spring",
    "themes": [
     {
+     "t": "OP",
+     "s": "OP1",
+     "seq": null,
+     "title": "Sakura Saku",
+     "artists": [
+      "Megumi Hayashibara"
+     ]
+    },
+    {
      "t": "ED",
      "s": "ED1",
-     "seq": null,
-     "title": "Ranman Hikou: ~Love Rice ver.~",
-     "artists": []
+     "seq": 1,
+     "title": "Kimi Sae Ireba",
+     "artists": [
+      "Megumi Hayashibara"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED2",
+     "seq": 2,
+     "title": "Hajimari wa Kokokara",
+     "artists": [
+      "Megumi Hayashibara"
+     ]
     }
    ]
   },
   "Danganronpa: The Animation": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "danganronpa_kibou_no_gakuen_to_zetsubou_no_koukousei_the_animation",
    "name": "Danganronpa: Kibou no Gakuen to Zetsubou no Koukousei The Animation",
    "year": 2013,
@@ -15818,6 +15039,7 @@
   "Mobile Suit Gundam: The Witch from Mercury": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "mobile_suit_gundam_the_witch_from_mercury",
    "name": "Mobile Suit Gundam: The Witch from Mercury",
    "year": 2022,
@@ -15841,7 +15063,8 @@
   },
   "Fire Force Season 3 Part 2": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "enen_no_shouboutai_san_no_shou_part_2",
    "name": "Enen no Shouboutai: San no Shou Part 2",
    "year": 2026,
@@ -15888,7 +15111,8 @@
   },
   "Secrets of the Silent Witch": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "silent_witch_chinmoku_no_majo_no_kakushigoto",
    "name": "Silent Witch: Chinmoku no Majo no Kakushigoto",
    "year": 2025,
@@ -15916,7 +15140,8 @@
   },
   "Golden Kamuy Final Season": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "golden_kamuy_saishuushou",
    "name": "Golden Kamuy: Saishuushou",
    "year": 2026,
@@ -15945,7 +15170,8 @@
   },
   "Blood Blockade Battlefront & Beyond": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "kekkai_sensen_beyond",
    "name": "Kekkai Sensen & Beyond",
    "year": 2017,
@@ -15974,7 +15200,8 @@
   },
   "My Hero Academia: Vigilantes": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "vigilante_boku_no_hero_academia_illegals",
    "name": "Vigilante: Boku no Hero Academia Illegals",
    "year": 2025,
@@ -16002,7 +15229,8 @@
   },
   "The Seven Deadly Sins: Four Knights of the Apocalypse": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "nanatsu_no_taizai_mokushiroku_no_yonkishi",
    "name": "Nanatsu no Taizai: Mokushiroku no Yonkishi",
    "year": 2023,
@@ -16048,44 +15276,55 @@
   },
   "Frieren: Beyond Journey's End Season 2": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "sousou_no_frieren_2nd_season",
-   "name": "Sousou no Frieren 2nd Season",
-   "year": 2026,
-   "season": "Winter",
+   "how": "похоже",
+   "score": 0.8,
+   "slug": "sousou_no_frieren",
+   "name": "Sousou no Frieren",
+   "year": 2023,
+   "season": "Fall",
    "themes": [
     {
      "t": "OP",
      "s": "OP1",
-     "seq": null,
-     "title": "lulu.",
+     "seq": 1,
+     "title": "Yuusha",
      "artists": [
-      "Mrs. GREEN APPLE"
+      "YOASOBI"
      ]
     },
     {
      "t": "ED",
      "s": "ED1",
      "seq": 1,
-     "title": "The Story of Us",
+     "title": "Anytime Anywhere",
      "artists": [
       "milet"
      ]
     },
     {
      "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Trace",
+     "s": "ED1-TV",
+     "seq": null,
+     "title": "bliss",
      "artists": [
       "milet"
+     ]
+    },
+    {
+     "t": "OP",
+     "s": "OP2",
+     "seq": 2,
+     "title": "Haru",
+     "artists": [
+      "Yorushika"
      ]
     }
    ]
   },
   "Rurouni Kenshin: Kyoto Disturbance": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "rurouni_kenshin_meiji_kenkaku_romantan_kyoto_douran",
    "name": "Rurouni Kenshin: Meiji Kenkaku Romantan - Kyoto Douran",
    "year": 2024,
@@ -16133,7 +15372,8 @@
   },
   "Tenjho Tenge": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "tenjou_tenge",
    "name": "Tenjou Tenge",
    "year": 2004,
@@ -16157,7 +15397,8 @@
   },
   "Blue Exorcist: Kyoto Saga": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "ao_no_exorcist_kyoto_fujouou_hen",
    "name": "Ao no Exorcist: Kyoto Fujouou-hen",
    "year": 2017,
@@ -16184,6 +15425,7 @@
   "Ark IX": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "ark_ix",
    "name": "Ark IX",
    "year": 2013,
@@ -16200,7 +15442,8 @@
   },
   "Sasaki and Peeps": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "sasaki_to_pii_chan",
    "name": "Sasaki to Pii-chan",
    "year": 2024,
@@ -16229,6 +15472,7 @@
   "Love Live! School Idol Project": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "love_live_school_idol_project",
    "name": "Love Live! School Idol Project",
    "year": 2013,
@@ -16309,6 +15553,7 @@
   "Lycoris Recoil": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "lycoris_recoil",
    "name": "Lycoris Recoil",
    "year": 2022,
@@ -16333,6 +15578,7 @@
   "Ninja Kamui": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "ninja_kamui",
    "name": "Ninja Kamui",
    "year": 2024,
@@ -16377,7 +15623,8 @@
   },
   "Blue Box": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "ao_no_hako",
    "name": "Ao no Hako",
    "year": 2024,
@@ -16423,7 +15670,8 @@
   },
   "Record of Ragnarok III": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "похоже",
+   "score": 0.66,
    "slug": "shuumatsu_no_walkure",
    "name": "Shuumatsu no Walkure",
    "year": 2021,
@@ -16447,7 +15695,8 @@
   },
   "The Rising of the Shield Hero Season 4": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "tate_no_yuusha_no_nariagari_season_4",
    "name": "Tate no Yuusha no Nariagari Season 4",
    "year": 2025,
@@ -16475,7 +15724,8 @@
   },
   "The Rising of the Shield Hero Season 3": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "tate_no_yuusha_no_nariagari_season_3",
    "name": "Tate no Yuusha no Nariagari Season 3",
    "year": 2023,
@@ -16512,7 +15762,8 @@
   },
   "The Rising of the Shield Hero Season 2": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "tate_no_yuusha_no_nariagari_season_2",
    "name": "Tate no Yuusha no Nariagari Season 2",
    "year": 2022,
@@ -16540,35 +15791,14 @@
   },
   "The Beast Tamer Who Got Kicked Out From His Party Meets a Cat Girl From the Superior Race": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "saikyou_tank_no_meikyuu_kouryaku_tairyoku_9999_no_rare_skill_mochi_tank_yuusha_party_wo_tsuihou_sareru",
-   "name": "Saikyou Tank no Meikyuu Kouryaku: Tairyoku 9999 no Rare Skill-mochi Tank, Yuusha Party wo Tsuihou sareru",
-   "year": 2024,
-   "season": "Winter",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Brave",
-     "artists": [
-      "Ireisu"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Yume no Naka de",
-     "artists": [
-      "Ireisu"
-     ]
-    }
-   ]
+   "slug": null,
+   "near": "Party kara Tsuihou sareta Sono Chiyushi, Jitsu wa Saikyou ni Tsuki",
+   "score": 0.28
   },
   "The 100 Girlfriends Who Really, Really, Really, Really, Really Love You": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "kimi_no_koto_ga_dai_dai_dai_dai_daisuki_na_100nin_no_kanojo",
    "name": "Kimi no Koto ga Dai Dai Dai Dai Daisuki na 100-nin no Kanojo",
    "year": 2023,
@@ -16609,7 +15839,8 @@
   },
   "My Senpai Is Annoying": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "senpai_ga_uzai_kouhai_no_hanashi",
    "name": "Senpai ga Uzai Kouhai no Hanashi",
    "year": 2021,
@@ -16637,8 +15868,9 @@
    ]
   },
   "Mob Psycho 100 III": {
-   "tracks": 1,
+   "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "mob_psycho_100_iii",
    "name": "Mob Psycho 100 III",
    "year": 2022,
@@ -16669,11 +15901,12 @@
   },
   "Overlord: The Dark Hero": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "overlord_ple_ple_pleiades",
-   "name": "Overlord: Ple Ple Pleiades",
-   "year": 2016,
-   "season": "Fall",
+   "how": "похоже",
+   "score": 0.6,
+   "slug": "overlord",
+   "name": "Overlord",
+   "year": 2015,
+   "season": "Summer",
    "themes": [
     {
      "t": "OP",
@@ -16698,6 +15931,7 @@
   "Love Live! School Idol Project 2nd Season": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "love_live_school_idol_project_2nd_season",
    "name": "Love Live! School Idol Project 2nd Season",
    "year": 2014,
@@ -16792,6 +16026,7 @@
   "Digimon Beatbreak": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "digimon_beatbreak",
    "name": "Digimon Beatbreak",
    "year": 2025,
@@ -16836,38 +16071,14 @@
   },
   "Variable Geo Neo": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "neo_angelique_abyss",
-   "name": "Neo Angelique Abyss",
-   "year": 2008,
-   "season": "Spring",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "JOY TO THE WORLD",
-     "artists": [
-      "Daisuke Ono",
-      "Hiroki Takahashi",
-      "Tooru Ookawa",
-      "Masaya Onosaka"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Aiai Gasa",
-     "artists": [
-      "Tegomass"
-     ]
-    }
-   ]
+   "slug": null,
+   "near": "Shinzou Ningen Casshern",
+   "score": 0.48
   },
   "The Asterisk War": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "gakusen_toshi_asterisk",
    "name": "Gakusen Toshi Asterisk",
    "year": 2015,
@@ -16895,7 +16106,8 @@
   },
   "Mob Psycho 100 2nd Season": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "mob_psycho_100_ii",
    "name": "Mob Psycho 100 II",
    "year": 2019,
@@ -16951,7 +16163,8 @@
   },
   "Destiny of the Shrine Maiden": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "kannazuki_no_miko",
    "name": "Kannazuki no Miko",
    "year": 2004,
@@ -16979,7 +16192,8 @@
   },
   "The Eminence in Shadow Season 2": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "kage_no_jitsuryokusha_ni_naritakute_2nd_season",
    "name": "Kage no Jitsuryokusha ni Naritakute! 2nd Season",
    "year": 2023,
@@ -17061,7 +16275,8 @@
   },
   "Rock Is a Lady's Modesty": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "похоже",
+   "score": 0.66,
    "slug": "rock_wa_lady_no_tashinami_deshite",
    "name": "Rock wa Lady no Tashinami deshite",
    "year": 2025,
@@ -17090,6 +16305,7 @@
   "Mob Psycho 100": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "mob_psycho_100",
    "name": "Mob Psycho 100",
    "year": 2016,
@@ -17128,6 +16344,7 @@
   "Mobile Suit Gundam: The Witch from Mercury Season 2": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "mobile_suit_gundam_the_witch_from_mercury_season_2",
    "name": "Mobile Suit Gundam: The Witch from Mercury Season 2",
    "year": 2023,
@@ -17159,6 +16376,7 @@
   "Gnosia": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "gnosia",
    "name": "Gnosia",
    "year": 2025,
@@ -17182,7 +16400,8 @@
   },
   "Black Butler: Book of Circus": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "kuroshitsuji_book_of_circus",
    "name": "Kuroshitsuji: Book of Circus",
    "year": 2014,
@@ -17209,6 +16428,7 @@
   "Golden Time": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "golden_time",
    "name": "Golden Time",
    "year": 2013,
@@ -17246,7 +16466,8 @@
   },
   "Laid-Back Camp": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "yuru_camp",
    "name": "Yuru Camp△",
    "year": 2018,
@@ -17274,31 +16495,36 @@
   },
   "Black Butler": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "kuroshitsuji_ii",
-   "name": "Kuroshitsuji II",
-   "year": 2010,
-   "season": "Summer",
+   "how": "точно",
+   "score": 1,
+   "slug": "kuroshitsuji",
+   "name": "Kuroshitsuji",
+   "year": 2008,
+   "season": "Fall",
    "themes": [
     {
      "t": "OP",
      "s": "OP1",
      "seq": null,
-     "title": "SHIVER",
-     "artists": []
+     "title": "Monokuro No Kiss",
+     "artists": [
+      "SID"
+     ]
     },
     {
      "t": "ED",
      "s": "ED1",
      "seq": 1,
-     "title": "Bird",
-     "artists": []
+     "title": "I'm ALIVE!",
+     "artists": [
+      "BECCA"
+     ]
     },
     {
      "t": "ED",
      "s": "ED2",
      "seq": 2,
-     "title": "Kagayaku Sora no Shijima ni wa",
+     "title": "Lacrimosa",
      "artists": [
       "Kalafina"
      ]
@@ -17307,38 +16533,14 @@
   },
   "Confession Executive Committee ~Love Series~": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "youjo_shachou",
-   "name": "Youjo Shachou",
-   "year": 2021,
-   "season": "Winter",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Susume! Mujina Company",
-     "artists": [
-      "Sumire Uesaka",
-      "Hisako Kanemoto",
-      "Rina Hidaka"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Kaisha ni Kaerou!",
-     "artists": [
-      "Hisako Kanemoto",
-      "Kotori Koiwai"
-     ]
-    }
-   ]
+   "slug": null,
+   "near": "Love Kome: We Love Rice",
+   "score": 0.39
   },
   "Dragon Ball Z": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "dragon_ball_z",
    "name": "Dragon Ball Z",
    "year": 1989,
@@ -17376,35 +16578,14 @@
   },
   "My Instant Death Ability Is So Overpowered, No One in This Other World Stands a Chance Against Me!": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "sokushi_cheat_ga_saikyou_sugite_isekai_no_yatsura_ga_marude_aite_ni_naranai_n_desu_ga",
-   "name": "Sokushi Cheat ga Saikyou sugite, Isekai no Yatsura ga Marude Aite ni Naranai n desu ga.",
-   "year": 2024,
-   "season": "Winter",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Killer Bars",
-     "artists": [
-      "Hilcrhyme"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Haze",
-     "artists": [
-      "Anna Suzuki"
-     ]
-    }
-   ]
+   "slug": null,
+   "near": "Sokushi Cheat ga Saikyou sugite, Isekai no Yatsura ga Marude Aite ni Naranai n desu ga.",
+   "score": 0.44
   },
   "Yu-Gi-Oh! ARC-V": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "yugioh_arc_v",
    "name": "Yu☆Gi☆Oh! ARC-V",
    "year": 2014,
@@ -17511,31 +16692,34 @@
   },
   "Shinjuku Seven": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "city_hunter_movie_shinjuku_private_eyes",
-   "name": "City Hunter Movie: Shinjuku Private Eyes",
-   "year": 2019,
-   "season": "Winter",
+   "how": "похоже",
+   "score": 0.66,
+   "slug": "samurai_7",
+   "name": "Samurai 7",
+   "year": 2004,
+   "season": "Summer",
    "themes": [
     {
      "t": "OP",
      "s": "OP1",
      "seq": null,
-     "title": "Mr. Cool",
-     "artists": []
+     "title": "UNLIMITED",
+     "artists": [
+      "Aikawa Nanase"
+     ]
     },
     {
      "t": "ED",
      "s": "ED1",
-     "seq": 1,
-     "title": "Get Wild",
+     "seq": null,
+     "title": "Fuhen",
      "artists": []
     },
     {
-     "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "STILL LOVE HER (Ushinawareta Fuukei)",
+     "t": "OP",
+     "s": "OP1-Animax",
+     "seq": null,
+     "title": "UNLIMITED",
      "artists": []
     }
    ]
@@ -17543,6 +16727,7 @@
   "Dragon Ball": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "dragon_ball",
    "name": "Dragon Ball",
    "year": 1986,
@@ -17580,7 +16765,8 @@
   },
   "Laid-Back Camp Season 2": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "yuru_camp_season_2",
    "name": "Yuru Camp△ Season 2",
    "year": 2021,
@@ -17608,7 +16794,8 @@
   },
   "The Heroic Legend of Arslan": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "arslan_senki_tv",
    "name": "Arslan Senki (TV)",
    "year": 2015,
@@ -17654,7 +16841,8 @@
   },
   "Nisekoi: False Love": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "nisekoi",
    "name": "Nisekoi",
    "year": 2014,
@@ -17759,6 +16947,7 @@
   "Ping Pong The Animation": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "ping_pong_the_animation",
    "name": "Ping Pong The Animation",
    "year": 2014,
@@ -17789,7 +16978,8 @@
   },
   "Ninja Vs. Gokudo": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "ninja_to_gokudou",
    "name": "Ninja to Gokudou",
    "year": 2025,
@@ -17826,35 +17016,14 @@
   },
   "Higanbana no Saku Yoru ni": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "yoru_no_yatterman",
-   "name": "Yoru no Yatterman",
-   "year": 2015,
-   "season": "Winter",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Kyokugen Dreamer",
-     "artists": [
-      "SCREEN mode"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Jounetsu CONTINUE",
-     "artists": [
-      "Sphere"
-     ]
-    }
-   ]
+   "slug": null,
+   "near": "Yoru no Yatterman",
+   "score": 0.53
   },
   "My Gift Lvl 9999 Unlimited Gacha: Backstabbed in a Backwater Dungeon, I'm Out for Revenge!": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "mugen_gacha",
    "name": "Shinjiteita Nakama-tachi ni Dungeon Okuchi de Korosarekaketa ga Gift \"Mugen Gacha\" de Level 9999 no Nakama-tachi wo Te ni Irete Moto Party Member to Sekai ni Fukushuu & \"Zamaa!\" Shimasu!",
    "year": 2025,
@@ -17882,7 +17051,8 @@
   },
   "Beck: Mongolian Chop Squad": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "beck",
    "name": "Beck",
    "year": 2004,
@@ -17924,7 +17094,8 @@
   },
   "Dragon Ball Z: Resurrection 'F'": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "похоже",
+   "score": 0.71,
    "slug": "dragon_ball_z",
    "name": "Dragon Ball Z",
    "year": 1989,
@@ -17969,6 +17140,7 @@
   "Texhnolyze": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "texhnolyze",
    "name": "Texhnolyze",
    "year": 2003,
@@ -18000,6 +17172,7 @@
   "Cat's Eye": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "cats_eye",
    "name": "Cat's Eye",
    "year": 1983,
@@ -18037,7 +17210,8 @@
   },
   "xxxHOLiC: Kei": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "похоже",
+   "score": 0.75,
    "slug": "xxxholic",
    "name": "xxxHOLiC",
    "year": 2006,
@@ -18072,7 +17246,8 @@
   },
   "Onmyo Kaiten Re:Birth Verse:": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "onmyou_kaiten_rebirth",
    "name": "Onmyou Kaiten Re:Birth",
    "year": 2025,
@@ -18100,11 +17275,14 @@
   },
   "Дневник будущего": {
    "tracks": 1,
-   "slug": null
+   "slug": null,
+   "near": "",
+   "score": 0
   },
   "Engage Kiss": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "engage_kiss",
    "name": "Engage Kiss",
    "year": 2022,
@@ -18128,7 +17306,8 @@
   },
   "Attack on Titan Season 3": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "shingeki_no_kyojin_season_3",
    "name": "Shingeki no Kyojin Season 3",
    "year": 2018,
@@ -18158,6 +17337,7 @@
   "Your Forma": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "your_forma",
    "name": "Your Forma",
    "year": 2025,
@@ -18181,35 +17361,14 @@
   },
   "Rock Is a Lady's Modest": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "rock_wa_lady_no_tashinami_deshite",
-   "name": "Rock wa Lady no Tashinami deshite",
-   "year": 2025,
-   "season": "Spring",
-   "themes": [
-    {
-     "t": "OP",
-     "s": "OP1",
-     "seq": null,
-     "title": "Ready to Rock",
-     "artists": [
-      "BAND-MAID"
-     ]
-    },
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Yume ja Nai nara Nannano sa",
-     "artists": [
-      "Little Glee Monster"
-     ]
-    }
-   ]
+   "slug": null,
+   "near": "Rock wa Lady no Tashinami deshite",
+   "score": 0.48
   },
   "Sleepy Princess in the Demon Castle": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "maoujou_de_oyasumi",
    "name": "Maoujou de Oyasumi",
    "year": 2020,
@@ -18237,7 +17396,8 @@
   },
   "Beyond the Boundary": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "kyoukai_no_kanata",
    "name": "Kyoukai no Kanata",
    "year": 2013,
@@ -18265,7 +17425,8 @@
   },
   "Endo and Kobayashi Live! The Latest on Tsundere Villainess Lieselotte": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "tsundere_akuyaku_reijou_liselotte_to_jikkyou_no_endou_kun_to_kaisetsu_no_kobayashi_san",
    "name": "Tsundere Akuyaku Reijou Liselotte to Jikkyou no Endou-kun to Kaisetsu no Kobayashi-san",
    "year": 2023,
@@ -18293,7 +17454,8 @@
   },
   "The Apothecary Diaries Season 2": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "kusuriya_no_hitorigoto_2nd_season",
    "name": "Kusuriya no Hitorigoto 2nd Season",
    "year": 2025,
@@ -18339,7 +17501,8 @@
   },
   "If Her Flag Breaks": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "kanojo_ga_flag_wo_oraretara",
    "name": "Kanojo ga Flag wo Oraretara",
    "year": 2014,
@@ -18370,17 +17533,36 @@
   },
   "Mushoku Tensei: Jobless Reincarnation": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "mushoku_tensei_ii_isekai_ittara_honki_dasu_shugo_jutsushi_fitz",
-   "name": "Mushoku Tensei II: Isekai Ittara Honki Dasu: Shugo Jutsushi Fitz",
-   "year": 2023,
-   "season": "Summer",
+   "how": "точно",
+   "score": 1,
+   "slug": "mushoku_tensei_isekai_ittara_honki_dasu",
+   "name": "Mushoku Tensei: Isekai Ittara Honki Dasu",
+   "year": 2021,
+   "season": "Winter",
    "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": 1,
+     "title": "Tabibito no Uta",
+     "artists": [
+      "Yuiko Oohara"
+     ]
+    },
     {
      "t": "ED",
      "s": "ED1",
      "seq": null,
-     "title": "Clover",
+     "title": "Only",
+     "artists": [
+      "Yuiko Oohara"
+     ]
+    },
+    {
+     "t": "OP",
+     "s": "OP2",
+     "seq": 2,
+     "title": "Mezame no Uta",
      "artists": [
       "Yuiko Oohara"
      ]
@@ -18389,7 +17571,8 @@
   },
   "Hokkaido Gals Are Super Adorable!": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "dosanko_gal_wa_namara_menkoi",
    "name": "Dosanko Gal wa Namara Menkoi",
    "year": 2024,
@@ -18417,7 +17600,8 @@
   },
   "May I Ask for One Final Thing?": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "saigo_ni_hitotsu_dake_onegai_shitemo_yoroshii_deshou_ka",
    "name": "Saigo ni Hitotsu dake Onegai shitemo Yoroshii deshou ka",
    "year": 2025,
@@ -18447,6 +17631,7 @@
   "Nanbaka": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "nanbaka",
    "name": "Nanbaka",
    "year": 2016,
@@ -18470,7 +17655,8 @@
   },
   "Wolf’s Rain": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "похоже",
+   "score": 0.66,
    "slug": "wolfs_rain",
    "name": "Wolf's Rain",
    "year": 2003,
@@ -18505,7 +17691,8 @@
   },
   "The Millionaire Detective – Balance: UNLIMITED": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "fugou_keiji_balanceunlimited",
    "name": "Fugou Keiji: Balance:Unlimited",
    "year": 2020,
@@ -18531,7 +17718,8 @@
   },
   "Hanma Baki: Son of Ogre 2nd Season": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "похоже",
+   "score": 0.76,
    "slug": "hanma_baki_son_of_ogre",
    "name": "Hanma Baki: Son of Ogre",
    "year": 2021,
@@ -18557,7 +17745,8 @@
   },
   "Sound of the Sky": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "so_ra_no_wo_to",
    "name": "So Ra No Wo To",
    "year": 2010,
@@ -18584,8 +17773,9 @@
    ]
   },
   "Ghost in the Shell: Stand Alone Complex": {
-   "tracks": 1,
+   "tracks": 2,
    "how": "точно",
+   "score": 1,
    "slug": "ghost_in_the_shell_stand_alone_complex",
    "name": "Ghost in the Shell: Stand Alone Complex",
    "year": 2002,
@@ -18623,7 +17813,8 @@
   },
   "Even Given the Worthless 'Appraiser' Class, I'm Actually the Strongest": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "похоже",
+   "score": 0.66,
    "slug": "fuguushoku_kanteishi_ga_jitsu_wa_saikyou_datta",
    "name": "Fuguushoku \"Kanteishi\" ga Jitsu wa Saikyou Datta",
    "year": 2025,
@@ -18651,7 +17842,8 @@
   },
   "My-Hime": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "mai_hime",
    "name": "Mai-HiME",
    "year": 2004,
@@ -18670,7 +17862,8 @@
   },
   "The Junji Ito Collection": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "ito_junji_collection",
    "name": "Ito Junji: Collection",
    "year": 2018,
@@ -18696,7 +17889,8 @@
   },
   "Betrothed to My Sister's Ex": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "zutaboro_reijou_wa_ane_no_moto_konyakusha_ni_dekiai_sareru",
    "name": "Zutaboro Reijou wa Ane no Moto Konyakusha ni Dekiai sareru",
    "year": 2025,
@@ -18725,6 +17919,7 @@
   "Aho Girl": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "aho_girl",
    "name": "Aho Girl",
    "year": 2017,
@@ -18748,7 +17943,8 @@
   },
   "Ascendance of a Bookworm Season 3": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "honzuki_no_gekokujou_shisho_ni_naru_tame_ni_wa_shudan_wo_erandeiraremasen_3rd_season",
    "name": "Honzuki no Gekokujou: Shisho ni Naru Tame ni wa Shudan wo Erandeiraremasen 3rd Season",
    "year": 2022,
@@ -18776,7 +17972,8 @@
   },
   "Kabaneri of the Iron Fortress": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "koutetsujou_no_kabaneri",
    "name": "Koutetsujou no Kabaneri",
    "year": 2016,
@@ -18815,6 +18012,7 @@
   "Needless": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "needless",
    "name": "Needless",
    "year": 2009,
@@ -18852,7 +18050,8 @@
   },
   "Call of the Night": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "yofukashi_no_uta",
    "name": "Yofukashi no Uta",
    "year": 2022,
@@ -18881,6 +18080,7 @@
   "High Card Season 2": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "high_card_season_2",
    "name": "High Card Season 2",
    "year": 2024,
@@ -18904,11 +18104,12 @@
   },
   "Overlord: The Undead King": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "overlord_ple_ple_pleiades",
-   "name": "Overlord: Ple Ple Pleiades",
-   "year": 2016,
-   "season": "Fall",
+   "how": "похоже",
+   "score": 0.6,
+   "slug": "overlord",
+   "name": "Overlord",
+   "year": 2015,
+   "season": "Summer",
    "themes": [
     {
      "t": "OP",
@@ -18932,7 +18133,8 @@
   },
   "Kaiju No. 8 Season 2": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "kaijuu_8_gou_2nd_season",
    "name": "Kaijuu 8-gou 2nd Season",
    "year": 2025,
@@ -18960,12 +18162,22 @@
   },
   "Saga of Tanya the Evil: The Movie": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "youjo_senki_movie",
-   "name": "Youjo Senki Movie",
-   "year": 2019,
+   "how": "точно",
+   "score": 1,
+   "slug": "youjo_senki",
+   "name": "Youjo Senki",
+   "year": 2017,
    "season": "Winter",
    "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": null,
+     "title": "JINGO JUNGLE",
+     "artists": [
+      "MYTH & ROID"
+     ]
+    },
     {
      "t": "ED",
      "s": "ED1",
@@ -18979,9 +18191,9 @@
      "t": "ED",
      "s": "ED2",
      "seq": 2,
-     "title": "Remembrance",
+     "title": "Sensen no Realism",
      "artists": [
-      "MYTH & ROID"
+      "Mako Niina"
      ]
     }
    ]
@@ -18989,6 +18201,7 @@
   "Noir": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "noir",
    "name": "Noir",
    "year": 2001,
@@ -19013,6 +18226,7 @@
   "Isekai Cheat Magician": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "isekai_cheat_magician",
    "name": "Isekai Cheat Magician",
    "year": 2019,
@@ -19036,7 +18250,8 @@
   },
   "Shoshimin: How to Become Ordinary Season 2": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "shoushimin_series_2nd_season",
    "name": "Shoushimin Series 2nd Season",
    "year": 2025,
@@ -19064,7 +18279,8 @@
   },
   "Reborn as a Vending Machine, I Now Wander the Dungeon Season 2": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "jidou_hanbaiki_ni_umarekawatta_ore_wa_meikyuu_wo_samayou_2nd_season",
    "name": "Jidou Hanbaiki ni Umarekawatta Ore wa Meikyuu wo Samayou 2nd Season",
    "year": 2025,
@@ -19092,28 +18308,42 @@
   },
   "My-Otome": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "mai_otome_zwei",
-   "name": "Mai-Otome Zwei",
-   "year": 2006,
+   "how": "точно",
+   "score": 1,
+   "slug": "mai_otome",
+   "name": "Mai-Otome",
+   "year": 2005,
    "season": "Fall",
    "themes": [
     {
+     "t": "OP",
+     "s": "OP1",
+     "seq": 1,
+     "title": "Dream Wing",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP2",
+     "seq": 2,
+     "title": "Crystal Energy",
+     "artists": []
+    },
+    {
      "t": "ED",
-     "s": "ED4",
-     "seq": 4,
-     "title": "Otome wa DO MY BEST desho? 2007 ver.",
+     "s": "ED1",
+     "seq": null,
+     "title": "Otome wa DO MY BEST deshou?",
      "artists": [
-      "Mai Nakahara",
-      "Ami Koshimizu",
-      "Saeko Chiba"
+      "Ami Koshimizu"
      ]
     }
    ]
   },
   "Mobile Suit Gundam GQuuuuuuX - Beginning -": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "похоже",
+   "score": 0.86,
    "slug": "kidou_senshi_gundam_gquuuuuux",
    "name": "Kidou Senshi Gundam: GQuuuuuuX",
    "year": 2025,
@@ -19159,7 +18389,8 @@
   },
   "Fire Force Season 3": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "enen_no_shouboutai_san_no_shou",
    "name": "Enen no Shouboutai: San no Shou",
    "year": 2025,
@@ -19187,7 +18418,8 @@
   },
   "The Daily Life of a Middle-Aged Online Shopper in Another World": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "around_40_otoko_no_isekai_tsuuhan",
    "name": "Around 40 Otoko no Isekai Tsuuhan",
    "year": 2025,
@@ -19216,6 +18448,7 @@
   "Dead Mount Death Play": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "dead_mount_death_play",
    "name": "Dead Mount Death Play",
    "year": 2023,
@@ -19240,6 +18473,7 @@
   "Ninja Slayer From Animation": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "ninja_slayer_from_animation",
    "name": "Ninja Slayer from Animation",
    "year": 2015,
@@ -19432,6 +18666,7 @@
   "Megalo Box": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "megalo_box",
    "name": "Megalo Box",
    "year": 2018,
@@ -19455,26 +18690,14 @@
   },
   "Clevatess: The King of Devil Beasts, The Baby and the Brave of Undead": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "the_king_of_fighters_another_day",
-   "name": "The King of Fighters: Another Day",
-   "year": 2005,
-   "season": "Fall",
-   "themes": [
-    {
-     "t": "ED",
-     "s": "ED1",
-     "seq": null,
-     "title": "Regret",
-     "artists": [
-      "Dakota Star"
-     ]
-    }
-   ]
+   "slug": null,
+   "near": "Niehime to Kemono no Ou",
+   "score": 0.39
   },
   "Welcome to the N.H.K.": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "nhk_ni_youkoso",
    "name": "NHK ni Youkoso!",
    "year": 2006,
@@ -19518,7 +18741,8 @@
   },
   "Cautious Hero: The Hero Is Overpowered but Overly Cautious": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "shinchou_yuusha_kono_yuusha_ga_ore_tueee_kuse_ni_shinchou_sugiru",
    "name": "Shinchou Yuusha: Kono Yuusha ga Ore Tueee Kuse ni Shinchou Sugiru",
    "year": 2019,
@@ -19556,6 +18780,7 @@
   "Boku no Hero Academia 6th Season": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "boku_no_hero_academia_6th_season",
    "name": "Boku no Hero Academia 6th Season",
    "year": 2022,
@@ -19593,7 +18818,8 @@
   },
   "Detectives These Days Are Crazy!": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "mattaku_saikin_no_tantei_to_kitara",
    "name": "Mattaku Saikin no Tantei to Kitara",
    "year": 2025,
@@ -19623,6 +18849,7 @@
   "Dr. Stone: New World Part 2": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "dr_stone_new_world_part_2",
    "name": "Dr. Stone: New World Part 2",
    "year": 2023,
@@ -19646,46 +18873,157 @@
   },
   "Haikyu!! Second Season": {
    "tracks": 1,
-   "how": "похожее",
-   "slug": "haikyuu_second_season",
-   "name": "Haikyuu!! Second Season",
-   "year": 2015,
-   "season": "Fall",
+   "how": "похоже",
+   "score": 0.72,
+   "slug": "monogatari_series_second_season",
+   "name": "Monogatari Series: Second Season",
+   "year": 2013,
+   "season": "Summer",
    "themes": [
     {
      "t": "OP",
      "s": "OP1",
      "seq": 1,
-     "title": "I'm A Believer",
+     "title": "chocolate insomnia",
      "artists": [
-      "SPYAIR"
+      "Yui Horie"
      ]
     },
     {
      "t": "OP",
      "s": "OP2",
      "seq": 2,
-     "title": "Fly High!!",
+     "title": "happy bite",
      "artists": [
-      "BURNOUT SYNDROMES"
+      "Emiri Katou"
+     ]
+    },
+    {
+     "t": "OP",
+     "s": "OP3",
+     "seq": 3,
+     "title": "Mousou♡Express",
+     "artists": [
+      "Kana Hanazawa"
+     ]
+    },
+    {
+     "t": "OP",
+     "s": "OP4",
+     "seq": 4,
+     "title": "Kogarashi Sentiment",
+     "artists": [
+      "Chiwa Saitou",
+      "Shinichirou Miki"
      ]
     },
     {
      "t": "ED",
      "s": "ED1",
      "seq": 1,
-     "title": "Climber",
+     "title": "Ai wo Utae",
      "artists": [
-      "Galileo Galilei"
+      "Luna Haruna"
      ]
     },
     {
      "t": "ED",
-     "s": "ED2",
-     "seq": 2,
-     "title": "Hatsunetsu",
+     "s": "ED3",
+     "seq": 3,
+     "title": "Sono Koe wo Oboeteru",
      "artists": [
-      "tacica"
+      "Marina Kawano"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED4",
+     "seq": 4,
+     "title": "snowdrop",
+     "artists": [
+      "Luna Haruna",
+      "Marina Kawano"
+     ]
+    },
+    {
+     "t": "OP",
+     "s": "OP1-BD",
+     "seq": 1,
+     "title": "chocolate insomnia",
+     "artists": [
+      "Yui Horie"
+     ]
+    },
+    {
+     "t": "OP",
+     "s": "OP2-BD",
+     "seq": 2,
+     "title": "happy bite",
+     "artists": [
+      "Emiri Katou"
+     ]
+    },
+    {
+     "t": "OP",
+     "s": "OP3-BD",
+     "seq": 3,
+     "title": "Mousou♡Express",
+     "artists": [
+      "Kana Hanazawa"
+     ]
+    },
+    {
+     "t": "OP",
+     "s": "OP4-BD",
+     "seq": 4,
+     "title": "white lies",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP5-BD",
+     "seq": 5,
+     "title": "fast love",
+     "artists": [
+      "Chiwa Saitou"
+     ]
+    },
+    {
+     "t": "OP",
+     "s": "OP6-BD",
+     "seq": 6,
+     "title": "Kogarashi Sentiment",
+     "artists": [
+      "Chiwa Saitou",
+      "Shinichirou Miki"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED1-BD",
+     "seq": 1,
+     "title": "Ai wo Utae",
+     "artists": [
+      "Luna Haruna"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED2-BD",
+     "seq": 2,
+     "title": "Sono Koe wo Oboeteru",
+     "artists": [
+      "Marina Kawano"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED3-BD",
+     "seq": 3,
+     "title": "snowdrop",
+     "artists": [
+      "Luna Haruna",
+      "Marina Kawano"
      ]
     }
    ]
@@ -19693,6 +19031,7 @@
   "Gleipnir": {
    "tracks": 1,
    "how": "точно",
+   "score": 1,
    "slug": "gleipnir",
    "name": "Gleipnir",
    "year": 2020,
@@ -19716,7 +19055,8 @@
   },
   "Dragon Ball Super: Broly": {
    "tracks": 1,
-   "how": "похожее",
+   "how": "точно",
+   "score": 1,
    "slug": "dragon_ball_super_movie_broly",
    "name": "Dragon Ball Super Movie: Broly",
    "year": 2018,
@@ -20308,6 +19648,793 @@
      "artists": [
       "Shiyui"
      ]
+    }
+   ]
+  },
+  "Hunter x Hunter 2011": {
+   "tracks": 10,
+   "how": "точно",
+   "score": 1,
+   "slug": "hunter_x_hunter_2011",
+   "name": "Hunter x Hunter",
+   "year": 2011,
+   "season": "Fall",
+   "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": null,
+     "title": "departure!",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": 1,
+     "title": "Just Awake",
+     "artists": [
+      "Fear, and Loathing in Las Vegas"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED2",
+     "seq": 2,
+     "title": "Hunting for Your Dream.",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED3",
+     "seq": 3,
+     "title": "REASON",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED4",
+     "seq": 4,
+     "title": "Nagareboshi Kirari",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED5",
+     "seq": 5,
+     "title": "Hyoriittai",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED6",
+     "seq": 6,
+     "title": "Hyoriittai -second version-",
+     "artists": []
+    }
+   ]
+  },
+  "Hellsing": {
+   "tracks": 3,
+   "how": "точно",
+   "score": 1,
+   "slug": "hellsing",
+   "name": "Hellsing",
+   "year": 2001,
+   "season": "Fall",
+   "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": null,
+     "title": "Logos Naki World",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": null,
+     "title": "Shine",
+     "artists": []
+    }
+   ]
+  },
+  "Gurren Lagann": {
+   "tracks": 3,
+   "how": "точно",
+   "score": 1,
+   "slug": "tengen_toppa_gurren_lagann",
+   "name": "Tengen Toppa Gurren Lagann",
+   "year": 2007,
+   "season": "Spring",
+   "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": null,
+     "title": "Sorairo Days",
+     "artists": [
+      "Shouko Nakagawa"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": 1,
+     "title": "UNDERGROUND",
+     "artists": [
+      "HIGH VOLTAGE"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED2",
+     "seq": 2,
+     "title": "happily ever after",
+     "artists": [
+      "Shouko Nakagawa"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED3",
+     "seq": 3,
+     "title": "Minna no Peace",
+     "artists": [
+      "Afromania"
+     ]
+    }
+   ]
+  },
+  "Kenpuu Denki Berserk": {
+   "tracks": 2,
+   "how": "точно",
+   "score": 1,
+   "slug": "berserk",
+   "name": "Berserk",
+   "year": 1997,
+   "season": "Fall",
+   "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": null,
+     "title": "Tell Me Why",
+     "artists": [
+      "PENPALS"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": null,
+     "title": "Waiting So Long",
+     "artists": [
+      "Silver Fins"
+     ]
+    }
+   ]
+  },
+  "Boku no Hero Academia": {
+   "tracks": 2,
+   "how": "точно",
+   "score": 1,
+   "slug": "boku_no_hero_academia",
+   "name": "Boku no Hero Academia",
+   "year": 2016,
+   "season": "Spring",
+   "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": null,
+     "title": "The Day",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": null,
+     "title": "HEROES",
+     "artists": []
+    }
+   ]
+  },
+  "Bleach: Thousand-Year Blood War Part 2": {
+   "tracks": 2,
+   "how": "похоже",
+   "score": 0.8,
+   "slug": "bleach_sennen_kessenhen",
+   "name": "BLEACH: Sennen Kessen-hen",
+   "year": 2022,
+   "season": "Fall",
+   "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": null,
+     "title": "Scar",
+     "artists": [
+      "Tatsuya Kitani"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED2",
+     "seq": 2,
+     "title": "Saihate",
+     "artists": [
+      "SennaRin"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": 1,
+     "title": "Rapport",
+     "artists": [
+      "Tatsuya Kitani"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED3",
+     "seq": 3,
+     "title": "Number One - Bankai",
+     "artists": [
+      "Hazel Fernandes"
+     ]
+    }
+   ]
+  },
+  "Nichijou": {
+   "tracks": 2,
+   "how": "точно",
+   "score": 1,
+   "slug": "nichijou",
+   "name": "Nichijou",
+   "year": 2011,
+   "season": "Spring",
+   "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": 1,
+     "title": "Hyadain no Kakakata☆Kataomoi - C",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP2",
+     "seq": 2,
+     "title": "Hyadain no Joujou Yuujou",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": 1,
+     "title": "Zzz",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED2",
+     "seq": 2,
+     "title": "Tsubasa wo Kudasai",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED3",
+     "seq": 3,
+     "title": "Kikyuu ni Notte Dokomademo",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED4",
+     "seq": 4,
+     "title": "My Ballad",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED5",
+     "seq": 5,
+     "title": "Kaijuu no Ballad",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED6",
+     "seq": 6,
+     "title": "Green Green",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED7",
+     "seq": 7,
+     "title": "Yasei no Uma",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED8",
+     "seq": 8,
+     "title": "Ano Subarashii Ai o Mou Ichido",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED9",
+     "seq": 9,
+     "title": "Sudachi no Uta",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED10",
+     "seq": 10,
+     "title": "Aogeba Toutoshi",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED11",
+     "seq": 11,
+     "title": "Sora ga Konna ni Aoi to wa",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED12",
+     "seq": 12,
+     "title": "Yuuki Hitotsu wo Tomo ni Shite",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED13",
+     "seq": 13,
+     "title": "Let's search for Tomorrow",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED14",
+     "seq": 14,
+     "title": "Tabidachi no Hi ni",
+     "artists": []
+    }
+   ]
+  },
+  "Re:Zero. Жизнь с нуля в альтернативном мире": {
+   "tracks": 2,
+   "slug": null,
+   "near": "Re:Zero kara Hajimeru Isekai Seikatsu",
+   "score": 0.31
+  },
+  "Shiki": {
+   "tracks": 2,
+   "how": "точно",
+   "score": 1,
+   "slug": "shiki",
+   "name": "Shiki",
+   "year": 2010,
+   "season": "Summer",
+   "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": 1,
+     "title": "Kuchizuke",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP2",
+     "seq": 2,
+     "title": "Calendula Requiem",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": 1,
+     "title": "Walk no Yakusoku",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED2",
+     "seq": 2,
+     "title": "Gekka Reijin",
+     "artists": []
+    }
+   ]
+  },
+  "Blood+": {
+   "tracks": 2,
+   "how": "точно",
+   "score": 1,
+   "slug": "blood",
+   "name": "Blood+",
+   "year": 2005,
+   "season": "Fall",
+   "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": 1,
+     "title": "Aozora no Namida",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP2",
+     "seq": 2,
+     "title": "SEASON'S CALL",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP3",
+     "seq": 3,
+     "title": "Colors of the Heart",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP4",
+     "seq": 4,
+     "title": "Raion",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": 1,
+     "title": "Kataritsugu koto",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED2",
+     "seq": 2,
+     "title": "CRY NO MORE",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED3",
+     "seq": 3,
+     "title": "This Love",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED4",
+     "seq": 4,
+     "title": "Brand New Map",
+     "artists": []
+    }
+   ]
+  },
+  "Higurashi no naku koro ni": {
+   "tracks": 2,
+   "how": "точно",
+   "score": 1,
+   "slug": "higurashi_no_naku_koro_ni",
+   "name": "Higurashi no Naku Koro ni",
+   "year": 2006,
+   "season": "Spring",
+   "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": null,
+     "title": "Higurashi no Naku Koro ni",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": null,
+     "title": "Why, or why not",
+     "artists": []
+    }
+   ]
+  },
+  "Solo Leveling": {
+   "tracks": 2,
+   "how": "точно",
+   "score": 1,
+   "slug": "ore_dake_level_up_na_ken",
+   "name": "Ore dake Level Up na Ken",
+   "year": 2024,
+   "season": "Winter",
+   "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": null,
+     "title": "LEveL",
+     "artists": [
+      "TOMORROW X TOGETHER",
+      "SawanoHiroyuki[nZk]"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": null,
+     "title": "request",
+     "artists": [
+      "krage"
+     ]
+    },
+    {
+     "t": "OP",
+     "s": "OP1-TV",
+     "seq": null,
+     "title": "LEveL",
+     "artists": [
+      "TOMORROW X TOGETHER",
+      "SawanoHiroyuki[nZk]"
+     ]
+    }
+   ]
+  },
+  "The Guyver: Bio-Booster Armor": {
+   "tracks": 2,
+   "how": "точно",
+   "score": 1,
+   "slug": "kyoushoku_soukou_guyver",
+   "name": "Kyoushoku Soukou Guyver",
+   "year": 1989,
+   "season": "Summer",
+   "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": null,
+     "title": "Bio Boosted Armor Guyver",
+     "artists": []
+    }
+   ]
+  },
+  "86 Eighty-Six": {
+   "tracks": 2,
+   "how": "точно",
+   "score": 1,
+   "slug": "86_2nd_season",
+   "name": "86 2nd Season",
+   "year": 2021,
+   "season": "Fall",
+   "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": null,
+     "title": "Kyoukaisen",
+     "artists": [
+      "amazarashi"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": 1,
+     "title": "Alchemilla",
+     "artists": [
+      "Regal Lily"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED2",
+     "seq": 2,
+     "title": "Avid",
+     "artists": [
+      "SawanoHiroyuki[nZk]",
+      "Mizuki"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED3",
+     "seq": 3,
+     "title": "LilaS",
+     "artists": [
+      "SawanoHiroyuki[nZk]",
+      "Honoka Takahashi"
+     ]
+    }
+   ]
+  },
+  "Toaru Kagaku no Railgun": {
+   "tracks": 2,
+   "how": "точно",
+   "score": 1,
+   "slug": "toaru_kagaku_no_railgun",
+   "name": "Toaru Kagaku no Railgun",
+   "year": 2009,
+   "season": "Fall",
+   "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": 1,
+     "title": "only my railgun",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP2",
+     "seq": 2,
+     "title": "LEVEL 5 -judgelight-",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": 1,
+     "title": "Dear My Friend -Mada Minu Mirai he-",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED2",
+     "seq": 2,
+     "title": "Smile -You and Me-",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED3",
+     "seq": 3,
+     "title": "Real Force",
+     "artists": []
+    }
+   ]
+  },
+  "Blood Blockade Battlefront": {
+   "tracks": 2,
+   "how": "точно",
+   "score": 1,
+   "slug": "kekkai_sensen",
+   "name": "Kekkai Sensen",
+   "year": 2015,
+   "season": "Spring",
+   "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": null,
+     "title": "Hello, world!",
+     "artists": [
+      "BUMP OF CHICKEN"
+     ]
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": null,
+     "title": "Sugar Song to Bitter Step",
+     "artists": [
+      "UNISON SQUARE GARDEN"
+     ]
+    }
+   ]
+  },
+  "Shingeki no Kyojin Season 3 Part 2": {
+   "tracks": 2,
+   "how": "точно",
+   "score": 1,
+   "slug": "shingeki_no_kyojin_season_3_part_2",
+   "name": "Shingeki no Kyojin Season 3 Part 2",
+   "year": 2019,
+   "season": "Spring",
+   "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": null,
+     "title": "Shoukei to Shikabane no Michi",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": null,
+     "title": "Name of Love",
+     "artists": []
+    }
+   ]
+  },
+  "Mekakucity Actors": {
+   "tracks": 2,
+   "how": "точно",
+   "score": 1,
+   "slug": "mekakucity_actors",
+   "name": "Mekakucity Actors",
+   "year": 2014,
+   "season": "Spring",
+   "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": 1,
+     "title": "daze",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP2",
+     "seq": 2,
+     "title": "Headphone Actor",
+     "artists": []
+    },
+    {
+     "t": "OP",
+     "s": "OP3",
+     "seq": 3,
+     "title": "Ayano no Koufuku Riron",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": 1,
+     "title": "days",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED2",
+     "seq": 2,
+     "title": "Yuukei Yesterday",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED3",
+     "seq": 3,
+     "title": "Lost Time Memory",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED4",
+     "seq": 4,
+     "title": "Summertime Record",
+     "artists": []
+    }
+   ]
+  },
+  "Higurashi no Naku Koro ni Kai": {
+   "tracks": 2,
+   "how": "точно",
+   "score": 1,
+   "slug": "higurashi_no_naku_koro_ni_kai",
+   "name": "Higurashi no Naku Koro ni Kai",
+   "year": 2007,
+   "season": "Summer",
+   "themes": [
+    {
+     "t": "OP",
+     "s": "OP1",
+     "seq": null,
+     "title": "Naraku no Hana",
+     "artists": []
+    },
+    {
+     "t": "ED",
+     "s": "ED1",
+     "seq": null,
+     "title": "Taishou.a",
+     "artists": []
     }
    ]
   }
