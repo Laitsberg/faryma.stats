@@ -165,6 +165,8 @@ function parseSource(what) {
   t = t.replace(/^\s*from\s+(?=["«])/i, '');   // «From "Wicked"»
   // «19 OST of Asuna, Sword Art Online» — сначала о ком, потом откуда
   t = t.replace(/^\s*(?:\d+\s+)?(?:OST|Theme)\s+of\s+[^,;]{1,40}[,;]\s*/i, '');
+  // «Belphegor OST, Katekyou Hitman Reborn!» — имя героя перед пометкой
+  t = t.replace(/^\s*[^;:,\]]{1,24}\s+OST\s*[,;]\s*/i, '');
   t = t.replace(/^\s*(?:OST|VN)\s+(?=[A-ZА-Я0-9])/, '');
   t = t.replace(/^\s*ep\.?\s*\d+(?:\s*(?:[-–]|and)\s*\d+)?\s+(?=[A-ZА-Я0-9])/i, '');
   // номер трека перед пометкой: «3 OST Bleach», «26 OP One Piece»

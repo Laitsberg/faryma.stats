@@ -209,18 +209,19 @@ function scoreNames(query, names) {
   let d = 0;
   for (const c of cs) d = Math.max(d, dice(q.words, c.words));
 
-  if (!cs.some(c => c.season === q.season))
-    // кандидат объявляет сезон старше нужного — почти наверняка мимо;
-    // не объявляет вовсе — может быть и сиквелом без номера
-    d *= cs.some(c => c.season > q.season) ? 0.45 : 0.7;
-  if (!cs.some(c => c.part === q.part)) d *= 0.6;
+  // Сезон должен сойтись. Раньше «кандидат без номера» отделывался
+  // мягким штрафом — и «Sword Art Online 2» находило первый сезон,
+  // «Bakuman. 2nd Season» — просто «Bakuman.». Список тем первого
+  // сезона под заголовком второго хуже, чем честное «не нашлось».
+  if (!cs.some(c => c.season === q.season)) d *= 0.45;
+  if (!cs.some(c => c.part === q.part)) d *= 0.45;
   return d;
 }
 
 const MIN_SCORE = +val('--min-score', 0.6);
 /* Версия сопоставлялки. Когда правила сравнения меняются, старым
    записям верить нельзя — при --recheck они спрашиваются заново. */
-const MATCHER_V = 3;
+const MATCHER_V = 4;
 
 async function search(q) {
   const j = await get(`/search?q=${encodeURIComponent(q)}&fields[search]=anime&include[anime]=animesynonyms`);
