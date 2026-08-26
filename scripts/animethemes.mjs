@@ -6,6 +6,12 @@
    ЕЩЁ НЕ разносили, нужен внешний список: что у тайтла вообще есть.
    animethemes.moe — открытая база сообщества, ключ не нужен.
 
+   Название тайтла сначала опознаём через Шикимори: он понимает и
+   русские написания, и вольные, а отдаёт номер MyAnimeList. По этому
+   номеру animethemes находит тайтл точно — число с числом, без
+   сравнения текста. Если Шикимори тайтла не знает, остаётся запасной
+   путь: поиск по имени с порогом похожести.
+
    Складывает в data/themes.json по одной записи на источник:
    какой тайтл нашёлся и какие у него темы (OP1, ED2, …).
 
@@ -53,6 +59,29 @@ async function get(p, attempt = 0) {
   }
   if (!res.ok) return null;
   return res.json();
+}
+
+/* ---------- Шикимори ----------
+   Отдаёт и английское имя, и русское, и номер MAL (это и есть его id).
+   Просит представляться — User-Agent тот же, что и для animethemes. */
+const SHIKI = process.env.SHIKI_API || 'https://shikimori.one/api';
+
+async function shikiSearch(q, attempt = 0) {
+  let res;
+  try {
+    res = await fetch(`${SHIKI}/animes?limit=8&search=${encodeURIComponent(q)}`,
+      { headers: { 'User-Agent': UA, Accept: 'application/json' } });
+  } catch (e) {
+    if (attempt < 3) { await sleep(1500 * (attempt + 1)); return shikiSearch(q, attempt + 1); }
+    return [];
+  }
+  if (res.status === 429 || res.status === 503) {
+    if (attempt < 5) { await sleep(3000 * (attempt + 1)); return shikiSearch(q, attempt + 1); }
+    return [];
+  }
+  if (!res.ok) return [];
+  const j = await res.json().catch(() => null);
+  return Array.isArray(j) ? j : [];
 }
 
 /* ---------- разбор берём из кода сайта ---------- */
@@ -163,17 +192,20 @@ function nameScore(q, name) {
    Английские названия у animethemes лежат именно в синонимах, поэтому
    «Your Lie in April» и находит «Shigatsu wa Kimi no Uso». */
 function score(query, cand) {
+  return scoreNames(query, [cand.name, ...(cand.animesynonyms || []).map(x => x.text)]);
+}
+
+function scoreNames(query, names) {
   const q = pull(query);
-  const names = [cand.name, ...(cand.animesynonyms || []).map(x => x.text)].filter(Boolean);
   let best = 0;
-  for (const n of names) best = Math.max(best, nameScore(q, n));
+  for (const n of names.filter(Boolean)) best = Math.max(best, nameScore(q, n));
   return best;
 }
 
 const MIN_SCORE = +val('--min-score', 0.6);
 /* Версия сопоставлялки. Когда правила сравнения меняются, старым
    записям верить нельзя — при --recheck они спрашиваются заново. */
-const MATCHER_V = 2;
+const MATCHER_V = 3;
 
 async function search(q) {
   const j = await get(`/search?q=${encodeURIComponent(q)}&fields[search]=anime&include[anime]=animesynonyms`);
@@ -201,8 +233,36 @@ function best(query, list) {
   return hit ? { hit, s: best.score } : null;
 }
 
+/* Тайтл по номеру MyAnimeList. Здесь уже никакой похожести —
+   у animethemes для каждого тайтла записаны ссылки на внешние базы. */
+async function byMal(id) {
+  const j = await get(`/anime?filter[has]=resources&filter[site]=MyAnimeList` +
+    `&filter[external_id]=${id}&include=animethemes.song.artists&page[size]=1`);
+  return j?.anime?.[0] || null;
+}
+
+/* Опознаём название через Шикимори: он знает русские написания
+   («Ванпанчмен») и вольные, а сравнивать даёт сразу два имени. */
+async function viaShikimori(name) {
+  const list = await shikiSearch(name);
+  if (!list.length) return null;
+  let hit = null, top = 0;
+  for (const c of list) {
+    const s = scoreNames(name, [c.name, c.russian]);
+    if (s > top) { top = s; hit = c; }
+  }
+  if (!hit || top < MIN_SCORE) return null;
+  await sleep(DELAY);
+  const a = await byMal(hit.id);
+  return a ? { a, how: 'по номеру MAL', score: +top.toFixed(2), mal: hit.id, shiki: hit.name } : null;
+}
+
 async function findAnime(name) {
   const inc = 'include=animethemes.song.artists';
+
+  const viaShiki = await viaShikimori(name);
+  if (viaShiki) return viaShiki;
+  await sleep(DELAY);
 
   // 1. точное имя
   const j = await get(`/anime?filter[name]=${encodeURIComponent(name)}&${inc}&page[size]=1`);
@@ -258,6 +318,29 @@ if (has('--probe')) {
     console.log('\n--- ' + p);
     const j = await get(p);
     console.log(JSON.stringify(j, null, 1).slice(0, 1600));
+    await sleep(DELAY);
+  }
+  process.exit(0);
+}
+
+/* --tryshiki «имя|имя» — посмотреть, что отвечает Шикимори и находится
+   ли этот номер у animethemes */
+if (has('--tryshiki')) {
+  for (const name of val('--tryshiki', '').split('|')) {
+    if (!name.trim()) continue;
+    const list = await shikiSearch(name);
+    console.log(`\n${name}`);
+    if (!list.length) { console.log('  Шикимори ничего не знает'); await sleep(DELAY); continue; }
+    const rated = list.map(c => [scoreNames(name, [c.name, c.russian]), c])
+      .sort((a, b) => b[0] - a[0]);
+    for (const [sc, c] of rated.slice(0, 4))
+      console.log(`  ${sc.toFixed(2)}  ${c.name}  /  ${c.russian}  [${c.kind} ${c.aired_on || ''}] id=${c.id}`);
+    const [top, hit] = rated[0];
+    if (top >= MIN_SCORE) {
+      await sleep(DELAY);
+      const a = await byMal(hit.id);
+      console.log('  → у animethemes: ' + (a ? `${a.name}, тем ${(a.animethemes || []).length}` : 'нет такого номера'));
+    } else console.log('  → ниже порога, пойдём поиском по имени');
     await sleep(DELAY);
   }
   process.exit(0);
@@ -328,7 +411,8 @@ for (const s of todo) {
   try {
     const r = await findAnime(s.name);
     if (r && r.a) {
-      cache[s.name] = { tracks: s.n, v: MATCHER_V, how: r.how, score: r.score, ...pack(r.a) };
+      cache[s.name] = { tracks: s.n, v: MATCHER_V, how: r.how, score: r.score,
+                        mal: r.mal || null, ...pack(r.a) };
       found++; themes += cache[s.name].themes.length;
     } else {
       cache[s.name] = { tracks: s.n, v: MATCHER_V, slug: null,
