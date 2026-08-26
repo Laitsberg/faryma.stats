@@ -255,8 +255,11 @@ async function byMal(id) {
   return j?.anime?.[0] || null;
 }
 
-/* Опознаём название через Шикимори: он знает русские написания
-   («Ванпанчмен») и вольные, а сравнивать даёт сразу два имени. */
+/* Запасной путь — Шикимори. У него в имени только ромадзи, английского
+   названия нет вовсе, зато есть русское: «Ванпанчмен», «Дандадан»,
+   «Дневник будущего». Такие источники у нас есть (19 штук), и по
+   animethemes они не находятся никак. Шикимори отдаёт номер MAL, а по
+   номеру animethemes находит тайтл точно. */
 async function viaShikimori(name) {
   const list = await shikiSearch(name);
   if (!list.length) return null;
@@ -274,15 +277,13 @@ async function viaShikimori(name) {
 async function findAnime(name) {
   const inc = 'include=animethemes.song.artists';
 
-  const viaShiki = await viaShikimori(name);
-  if (viaShiki) return viaShiki;
-  await sleep(DELAY);
-
   // 1. точное имя
   const j = await get(`/anime?filter[name]=${encodeURIComponent(name)}&${inc}&page[size]=1`);
   if (j?.anime?.[0]) return { a: j.anime[0], how: 'точно', score: 1 };
 
-  // 2. общий поиск, при неудаче — по названию без номера сезона
+  // 2. общий поиск, при неудаче — по названию без номера сезона.
+  //    Английские названия у animethemes лежат в синонимах, а в архиве
+  //    пишут именно по-английски, так что это основной путь.
   await sleep(DELAY);
   let r = best(name, await search(name));
   const base = baseName(name);
@@ -291,13 +292,20 @@ async function findAnime(name) {
     const r2 = best(name, await search(base));
     if (r2 && (!r || r2.s > r.s)) r = r2;
   }
-  if (!r) return null;
-  if (r.s < MIN_SCORE) return { miss: true, best: r.s, name: r.hit.name };
 
+  if (r && r.s >= MIN_SCORE) {
+    await sleep(DELAY);
+    const full = await get(`/anime/${encodeURIComponent(r.hit.slug)}?${inc}`);
+    if (full?.anime)
+      return { a: full.anime, how: r.s >= 0.99 ? 'точно' : 'похоже', score: +r.s.toFixed(2) };
+  }
+
+  // 3. не набрали порог — спрашиваем Шикимори
   await sleep(DELAY);
-  const full = await get(`/anime/${encodeURIComponent(r.hit.slug)}?${inc}`);
-  if (!full?.anime) return null;
-  return { a: full.anime, how: r.s >= 0.99 ? 'точно' : 'похоже', score: +r.s.toFixed(2) };
+  const viaShiki = await viaShikimori(name);
+  if (viaShiki) return viaShiki;
+
+  return r ? { miss: true, best: r.s, name: r.hit.name } : null;
 }
 
 function pack(a) {
