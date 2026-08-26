@@ -182,7 +182,7 @@ function showUser(name) {
    («Boku no Hero Academia 3rd Season»), поэтому собираем их обратно
    по общей части названия. */
 const KINDS = ['опенинг', 'эндинг', 'вставка', 'OST'];
-const KIND_TITLE = { 'опенинг': 'Заставки', 'эндинг': 'Концовки',
+const KIND_TITLE = { 'опенинг': 'Опенинги', 'эндинг': 'Эндинги',
                      'вставка': 'Вставки', 'OST': 'Саундтрек', '': 'Остальное' };
 
 function showSource(name) {
