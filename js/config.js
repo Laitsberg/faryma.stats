@@ -29,6 +29,7 @@ const HISTORY_JSONL = "data/history.jsonl";
 /* Страны артистов, собранные скриптом scripts/countries.mjs */
 const COUNTRIES_JSON = "data/countries.json";
 const THEMES_JSON = "data/themes.json";
+const VIDEOS_JSON = "data/videos.json";
 
 /* Что не аниме, хотя и попало в аниме-разделы таблицы.
    Каталог опенингов и эндингов берётся из animethemes — базы японской

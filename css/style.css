@@ -589,3 +589,13 @@ a.pf-tag-l:hover{border-color:var(--brand);color:var(--ink)}
   letter-spacing:.08em;color:var(--brand-hi);margin-right:8px}
 .th-no{font-family:var(--m);font-size:11px;color:var(--dim)}
 .th-list .th-miss .pf-t{color:var(--dim)}
+
+/* ссылки на разборы вселенной с канала */
+.pf-vids{display:flex;flex-direction:column;gap:1px}
+.pf-vid{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:baseline;
+  padding:9px 10px;background:var(--panel2);border:1px solid var(--line);border-radius:2px;
+  text-decoration:none;color:var(--ink);transition:border-color .12s,background .12s}
+.pf-vid:hover{border-color:var(--brand);background:#24242a}
+.pf-vi{color:var(--brand);font-size:11px}
+.pf-vt{font-size:14px;line-height:1.35;overflow-wrap:anywhere}
+.pf-vd{font-family:var(--m);font-size:11px;color:var(--dim);white-space:nowrap}

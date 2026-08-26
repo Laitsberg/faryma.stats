@@ -327,7 +327,39 @@ function showSource(name) {
           аниме ? 'сезон' : 'часть', аниме ? 'сезона' : 'части', аниме ? 'сезонов' : 'частей') +
         ' во вселенной'
       : '',
-    kpiBlock(kpi) + kindRow + body);
+    kpiBlock(kpi) + kindRow + videoBlock(base) + body);
+}
+
+/* Разборы целой вселенной с ютуб-канала. Ключевые слова — в
+   js/aliases.js; ищем по вхождению, длинные ключи раньше коротких,
+   чтобы «НАРУТО ШИППУДЕН» не путался с «НАРУТО». */
+function videoBlock(base) {
+  if (!VIDEOS.length || typeof VIDEO_UNIVERSE !== 'object') return '';
+  const ключи = Object.keys(VIDEO_UNIVERSE).sort((a, b) => b.length - a.length);
+  const свои = VIDEOS.filter(v => {
+    const t = (v.title || '').toUpperCase();
+    const k = ключи.find(k => t.includes(k));
+    // «Heroes of Might and Magic V» — та же франшиза, что и IV: римская
+    // цифра считается частью, поэтому сравниваем по базе, а не целиком
+    return k && sourceParts(VIDEO_UNIVERSE[k]).base === base;
+  });
+  if (!свои.length) return '';
+
+  // собраны от свежих к старым, а части идут по порядку — разворачиваем
+  const дв = n => String(n).padStart(2, '0');
+  const время = s => !s ? ''
+    : s >= 3600 ? Math.floor(s / 3600) + ':' + дв(Math.floor(s % 3600 / 60)) + ':' + дв(s % 60)
+                : Math.floor(s / 60) + ':' + дв(s % 60);
+  return `<h3 class="pf-h">` +
+    (свои.length > 1 ? 'Разборы этой вселенной на канале' : 'Разбор этой вселенной на канале') +
+    `</h3><div class="pf-vids">` +
+    [...свои].reverse().map(v =>
+      `<a class="pf-vid" href="https://www.youtube.com/watch?v=${esc(v.id)}"
+          target="_blank" rel="noopener noreferrer">
+         <span class="pf-vi">▶</span>
+         <span class="pf-vt">${esc(v.title)}</span>
+         <span class="pf-vd">${esc(время(v.sec))}</span>
+       </a>`).join('') + `</div>`;
 }
 
 /* ---------- профиль стрима ---------- */

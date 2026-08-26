@@ -15,6 +15,7 @@ let NAME_ALIAS = new Map();    // «Sawano Hiroyuki» → «Hiroyuki Sawano»
 let OFFSCALE = [];             // оценки, которых нет на шкале — «ГЕ-НЯ-АЛЬНО» и прочее
 let SOURCE_NAMES = new Map();  // ключ → показываемое написание вселенной
 let THEMES = {};               // вселенная → все её опенинги и эндинги, из data/themes.json
+let VIDEOS = [];               // ролики с канала, из data/videos.json
 
 /* Ключ имени с учётом склейки перестановок */
 const canonKey = k => NAME_ALIAS.get(k) || k;
@@ -47,6 +48,16 @@ function load() {
       THEMES = (j && j.sources) || {};
       BY_SLUG = null;
       // карточка могла открыться раньше, чем приехал каталог
+      if (ROWS.length && location.hash.startsWith('#source=')) routeProfile();
+    })
+    .catch(() => {});
+
+  // ролики с канала — тоже необязательны: без них в карточке просто
+  // не будет ссылок на полный разбор вселенной
+  fetch(VIDEOS_JSON)
+    .then(r => r.ok ? r.json() : null)
+    .then(j => {
+      VIDEOS = (j && j.videos) || [];
       if (ROWS.length && location.hash.startsWith('#source=')) routeProfile();
     })
     .catch(() => {});

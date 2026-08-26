@@ -36,6 +36,9 @@ function собрать() {
     try {
       out = execFileSync('yt-dlp', [
         '--flat-playlist', '--skip-download', '--ignore-errors',
+        // без этого ютуб отдаёт переводы названий: раннер сидит с
+        // английской локалью, и половина списка приезжает по-английски
+        '--extractor-args', 'youtube:lang=ru',
         '--print', '%(id)s\t%(title)s\t%(duration)s\t%(view_count)s',
         url
       ], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });

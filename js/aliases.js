@@ -72,6 +72,12 @@ const SOURCE_ALIAS = {
   'Genshin Impact 4.6':                'Genshin Impact',
 
   /* --- одно название, разное написание --- */
+  'Heroes of Might & Magic V':         'Heroes of Might and Magic V',
+  'Heroes Of Might And Magic IV':      'Heroes of Might and Magic IV',
+  'Heroes of Might and Magic 3':       'Heroes of Might and Magic III',
+  'Naruto: Shippuden':                 'Naruto: Shippuuden',
+  'Honkai Impact 3':                   'Honkai Impact 3rd',
+  'Demon Slayer':                      'Demon Slayer: Kimetsu no Yaiba',
   'Wolf’s Rain':                       "Wolf's Rain",
   'Hunter x Hunter (2011)':            'Hunter x Hunter 2011',
   'Berserk (2016)':                    'Berserk 2016',
@@ -84,4 +90,48 @@ const SOURCE_ALIAS = {
   // так сезоны встают под общую франшизу «Haikyu!!»
   'Haikyuu!! Second Season':           'Haikyu!! 2nd Season',
   'Haikyu!! Second Season':            'Haikyu!! 2nd Season'
+};
+
+/* ============================================================
+   РАЗБОРЫ ЦЕЛЫХ ТАЙТЛОВ НА КАНАЛЕ
+   ------------------------------------------------------------
+   Кроме стримов композитор выпускает ролики про целую вселенную:
+   «опенинги БЛИЧ», «темы городов из ГЕРОЕВ 5», «весь саундтрек
+   Silksong». Такой ролик — прямое продолжение карточки, и ссылку на
+   него хочется видеть рядом.
+
+   Слева — слово из названия ролика, справа — вселенная в архиве.
+   Совпадение ищется по вхождению, без учёта регистра, и сначала
+   пробуются длинные ключи: «НАРУТО ШИППУДЕН» раньше, чем «НАРУТО».
+   Поэтому новые части («часть 4») подхватятся сами, дописывать
+   ничего не придётся.
+
+   Список роликов собирает scripts/videos.mjs в data/videos.json.
+   ============================================================ */
+
+const VIDEO_UNIVERSE = {
+  'ONE PIECE':            'One Piece',
+  'БЛИЧ':                 'Bleach',
+  'BLEACH':               'Bleach',
+  'НАРУТО ШИППУДЕН':      'Naruto: Shippuuden',
+  'NARUTO SHIPPUDEN':     'Naruto: Shippuuden',
+  'НАРУТО':               'Naruto',
+  'NARUTO':               'Naruto',
+  'АТАКИ ТИТАНОВ':        'Shingeki no Kyojin',
+  'ATTACK ON TITAN':      'Shingeki no Kyojin',
+  'JOJO':                 "JoJo's Bizarre Adventure",
+  'DEMON SLAYER':         'Demon Slayer: Kimetsu no Yaiba',
+  'ГЕРОЕВ 3':             'Heroes of Might and Magic III',
+  'HEROES 3':             'Heroes of Might and Magic III',
+  'HOMM3':                'Heroes of Might and Magic III',
+  'ГЕРОЕВ 4':             'Heroes of Might and Magic IV',
+  'HEROES 4':             'Heroes of Might and Magic IV',
+  'ГЕРОЕВ 5':             'Heroes of Might and Magic V',
+  'HEROES 5':             'Heroes of Might and Magic V',
+  'HOMM5':                'Heroes of Might and Magic V',
+  'GENSHIN':              'Genshin Impact',
+  'SILKSONG':             'Hollow Knight: Silksong',
+  'GUILTY GEAR STRIVE':   'Guilty Gear Strive',
+  'ENDLESS LEGEND 2':     'Endless Legend II',
+  'HONKAI STAR RAIL':     'Honkai: Star Rail'
 };
