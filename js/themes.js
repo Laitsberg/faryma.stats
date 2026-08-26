@@ -28,10 +28,19 @@ const tkey = s => String(s || '').toLowerCase()
 const foldWord = w => w.replace(/ou/g, 'o').replace(/(\p{L})\1+/gu, '$1');
 const tfold = s => tkey(s).split(' ').map(foldWord).join(' ');
 
+/* Японские числительные пишут и цифрой, и словом: «Hawatari 2-Oku
+   Centi» и «HAWATARI NIOKU CENTI» — одна песня (2億 читается «нioku»).
+   Сравниваем ещё и слитно, заменив цифры на чтения: пробелы в таких
+   названиях тоже расставляют кто как. */
+const JP_NUM = { 0:'zero', 1:'ichi', 2:'ni', 3:'san', 4:'yon', 5:'go',
+                 6:'roku', 7:'nana', 8:'hachi', 9:'kyu', 10:'ju' };
+const glue = s => tfold(s).split(' ').map(w => JP_NUM[w] ?? w).join('');
+
 function sameTitle(a, b) {
   const x = tfold(a), y = tfold(b);
   if (!x || !y) return false;
   if (x === y) return true;
+  if (glue(a) && glue(a) === glue(b)) return true;
   if (x.length > 4 && y.length > 4 && (x.includes(y) || y.includes(x))) return true;
   const A = new Set(x.split(' ')), B = new Set(y.split(' '));
   let n = 0; for (const w of A) if (B.has(w)) n++;
