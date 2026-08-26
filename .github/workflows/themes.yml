@@ -9,6 +9,10 @@ on:
         description: 'Сколько тайтлов спросить за прогон'
         required: false
         default: '1200'
+      args:
+        description: 'Дополнительные флаги (--probe, --q "…", --recheck)'
+        required: false
+        default: ''
       retry_missing:
         description: 'Переспросить ненайденных'
         type: boolean
@@ -28,12 +32,14 @@ jobs:
           node-version: '22'
 
       - name: Собрать каталог опенингов и эндингов
+        env:
+          IN_ARGS:  ${{ github.event.inputs.args }}
+          IN_LIMIT: ${{ github.event.inputs.limit }}
+          IN_RETRY: ${{ github.event.inputs.retry_missing }}
         run: |
           EXTRA=""
-          if [ "${{ github.event.inputs.retry_missing }}" = "true" ]; then
-            EXTRA="--retry-missing"
-          fi
-          node scripts/animethemes.mjs --limit "${{ github.event.inputs.limit || '1200' }}" \
+          if [ "$IN_RETRY" = "true" ]; then EXTRA="--retry-missing"; fi
+          node scripts/animethemes.mjs $IN_ARGS --limit "${IN_LIMIT:-1200}" \
             --max-minutes 30 $EXTRA
 
       - name: Закоммитить каталог

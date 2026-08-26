@@ -131,9 +131,16 @@ function pack(a) {
 
 /* ---------- главное ---------- */
 if (has('--probe')) {
-  for (const p of ['/anime?filter[name]=Chainsaw%20Man&include=animethemes.song.artists&page[size]=1']) {
+  const q = val('--q', 'Your Lie in April');
+  for (const p of [
+    `/animesynonym?filter[text]=${encodeURIComponent(q)}&include=anime`,
+    `/anime?filter[name]=${encodeURIComponent(q)}&include=animesynonyms&page[size]=2`,
+    `/search?q=${encodeURIComponent(q)}&fields[search]=anime&include[anime]=animesynonyms`
+  ]) {
+    console.log('\n=== ' + p);
     const j = await get(p);
-    console.log(JSON.stringify(j?.anime?.[0]?.animethemes?.slice(0, 3), null, 1));
+    console.log(JSON.stringify(j, null, 1).slice(0, 2500));
+    await sleep(DELAY);
   }
   process.exit(0);
 }
