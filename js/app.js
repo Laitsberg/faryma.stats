@@ -372,6 +372,10 @@ function initNav() {
 /* ---------- поиск ---------- */
 const SEARCH_LIMIT = 300;
 
+/* Метка сводного пункта в фильтре оценок. В подписи ступени такого
+   двоеточия быть не может, так что спутать значения нельзя. */
+const TIER_OPT = 'ступень:';
+
 function renderSearch() {
   const q  = $('q').value.trim().toLowerCase();
   const fr = $('fRate').value;
@@ -381,7 +385,9 @@ function renderSearch() {
 
   let rows = cur();
   if (q)  rows = rows.filter(r => r.search.includes(q));
-  if (fr) rows = rows.filter(r => r.rate.label === fr);
+  if (fr) rows = fr.startsWith(TIER_OPT)
+    ? rows.filter(r => r.rate.tier === fr.slice(TIER_OPT.length))
+    : rows.filter(r => r.rate.label === fr);
   if (fu) rows = rows.filter(r => r.userParts.includes(fu));
   if (fo) rows = rows.filter(r => r.origin === fo);
   if (fg) rows = rows.filter(r => r.genres.includes(fg));
@@ -436,9 +442,19 @@ function renderSearch() {
 
 /* ---------- управление ---------- */
 function initControls() {
+  // Перед точными оценками ступени — пункт «вся ступень целиком».
+  // Просили в чате: чтобы найти всё гениальное, приходилось трижды
+  // менять фильтр — «гениально», «гениально-», «гениально - -», — и
+  // сводить глазами. Теперь это один пункт. Ступени с единственным
+  // вариантом сводного пункта не получают: ему нечего объединять.
   const rs = $('fRate');
-  SCALE_ORDER.filter(l => ROWS.some(r => r.rate.label === l))
-    .forEach(l => rs.add(new Option(l, l)));
+  TIERS.forEach(t => {
+    const точные = t.mods.map(m => t.key + modLabel(m))
+      .filter(l => ROWS.some(r => r.rate.label === l));
+    if (!точные.length) return;
+    if (точные.length > 1) rs.add(new Option(`все «${t.key}»`, TIER_OPT + t.key));
+    точные.forEach(l => rs.add(new Option(l, l)));
+  });
 
   const us = $('fUser');
   [...group(ROWS, r => r.userParts.length ? r.userParts : null)]
