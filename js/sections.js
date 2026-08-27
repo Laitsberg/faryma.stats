@@ -95,11 +95,19 @@ function renderKpis(rows) {
 function renderScale(rows = ROWS) {
   const m = group(rows, r => r.rate.label);
 
-  // «Чистое гениально» — без плюсов и минусов. Число живое: цифра в
-  // тексте не должна разойтись с цифрой в шапке.
-  const чистых = (m.get('гениально') || []).length;
-  $('pureNote').textContent =
-    num(чистых) + ' ' + plural(чистых, 'раз', 'раза', 'раз') + ' за всю историю';
+  // Числа живые: цифра в тексте не должна разойтись с цифрой в шапке.
+  // И «за всю историю» врать не должно — под фильтром по году период
+  // другой, так что подпись меняется вместе с ним.
+  const когда = FILTER.year ? `в ${FILTER.year}-м` : 'за всю историю';
+  const разы = n => num(n) + ' ' + plural(n, 'раз', 'раза', 'раз') + ' ' + когда;
+
+  // «Чистое гениально» — без плюсов и минусов.
+  $('pureNote').textContent = разы((m.get('гениально') || []).length);
+
+  // «Гениально+» — плюс сверх потолка шкалы.
+  $('plusNote').textContent = разы(
+    [...m].filter(([l]) => l.startsWith('гениально+'))
+          .reduce((s, [, rs]) => s + rs.length, 0));
 
   const labels = SCALE_ORDER.filter(l => m.has(l));
   hbar('cScale',
