@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-27T05:09:28.127Z",
+ "generated": "2026-08-27T15:14:54.983Z",
  "artists": {
   "7": {
    "name": "7",
@@ -41472,6 +41472,22 @@
    "score": 100,
    "mbid": "3573ecd1-739b-4bf4-85e3-bcbcad20f431",
    "mbName": "Nornis"
+  },
+  "noto mamiko": {
+   "name": "Noto Mamiko",
+   "tracks": 2,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "f5978263-2351-4e39-9464-8d24bdad9b67",
+   "mbName": "能登麻美子"
+  },
+  "yasuharu takanashi & hiromi mizutani": {
+   "name": "Yasuharu Takanashi & Hiromi Mizutani",
+   "tracks": 1,
+   "country": null,
+   "score": 0
   }
  },
  "source": "MusicBrainz",
