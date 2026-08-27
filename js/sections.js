@@ -104,11 +104,6 @@ function renderScale(rows = ROWS) {
   // «Чистое гениально» — без плюсов и минусов.
   $('pureNote').textContent = разы((m.get('гениально') || []).length);
 
-  // «Гениально+» — плюс сверх потолка шкалы.
-  $('plusNote').textContent = разы(
-    [...m].filter(([l]) => l.startsWith('гениально+'))
-          .reduce((s, [, rs]) => s + rs.length, 0));
-
   const labels = SCALE_ORDER.filter(l => m.has(l));
   hbar('cScale',
     labels.map(l => ({ k: l, v: m.get(l).length })),
