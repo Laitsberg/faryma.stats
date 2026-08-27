@@ -45,7 +45,13 @@ function load() {
     .then(j => {
       COUNTRIES = (j && j.artists) || {};
       // страны нужны не только своему разделу, но и номинациям заказчиков
-      if (ROWS.length) { applyCountries(); renderCountries(cur()); renderFans(byYear()); }
+      if (ROWS.length) {
+        applyCountries();
+        fillCountryFilter();
+        renderCountries(cur());
+        renderFans(byYear());
+        renderSearch();
+      }
     })
     .catch(() => {});
 
@@ -247,6 +253,26 @@ function applyCountries() {
   });
 }
 
+/* Список стран в поиске. Живёт отдельно от остальных фильтров, потому
+   что страны приезжают своим файлом и могут прийти позже таблицы: тогда
+   при первом заполнении у всех разносов country ещё null, и список надо
+   собрать заново. Выбранное значение при этом сохраняем — иначе фильтр
+   сбрасывался бы сам собой через секунду после клика.
+
+   Порог в 5 разносов: у страны с одним-двумя исполнителями фильтр
+   показывает почти пустой список, а сам перечень раздувается вдвое. */
+function fillCountryFilter() {
+  const sel = $('fCountry');
+  if (!sel) return;
+  const было = sel.value;
+  while (sel.options.length > 1) sel.remove(1);
+  [...group(ROWS, r => r.country || null)]
+    .filter(([, rs]) => rs.length >= 5)
+    .sort((a, b) => b[1].length - a[1].length)
+    .forEach(([c, rs]) => sel.add(new Option(`${c} (${rs.length})`, c)));
+  if (было && [...sel.options].some(o => o.value === было)) sel.value = было;
+}
+
 /* ---------- отрисовка ---------- */
 function render() {
   const rows = cur();       // ступень и год
@@ -382,6 +408,7 @@ function renderSearch() {
   const fu = $('fUser').value;
   const fo = $('fOrigin').value;
   const fg = $('fGenre').value;
+  const fc = $('fCountry').value;
 
   let rows = cur();
   if (q)  rows = rows.filter(r => r.search.includes(q));
@@ -391,6 +418,7 @@ function renderSearch() {
   if (fu) rows = rows.filter(r => r.userParts.includes(fu));
   if (fo) rows = rows.filter(r => r.origin === fo);
   if (fg) rows = rows.filter(r => r.genres.includes(fg));
+  if (fc) rows = rows.filter(r => r.country === fc);
 
   $('searchCount').textContent = `найдено ${num(rows.length)}` +
     (rows.length > SEARCH_LIMIT ? ` · показаны первые ${SEARCH_LIMIT}` : '');
@@ -473,11 +501,13 @@ function initControls() {
     .sort((a, b) => b[1].length - a[1].length)
     .forEach(([g, rs]) => gg.add(new Option(`${g} (${rs.length})`, g)));
 
+  fillCountryFilter();
+
   // Только 'input'. У текстового поля 'change' срабатывает при потере
   // фокуса — то есть ровно в тот момент, когда пользователь кликает
   // куда-то ещё, например по заголовку таблицы. Лишняя перерисовка
   // съедала этот клик. Списки 'input' тоже отправляют.
-  ['q', 'fRate', 'fUser', 'fOrigin', 'fGenre'].forEach(id =>
+  ['q', 'fRate', 'fUser', 'fOrigin', 'fGenre', 'fCountry'].forEach(id =>
     $(id).addEventListener('input', renderSearch));
   const сбросить = () => { FILTER.tier = null; FILTER.year = null; render(); };
   $('reset').onclick = сбросить;
