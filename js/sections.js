@@ -335,20 +335,78 @@ function pairCharts(idN, idAvg, items, limit) {
 
 /* ---------- менял ли он мнение ----------
    Повтор помечен прямо в названии: «(ПОВТОР: СТРИМ №113; 1 трек от
-   Hantrik)». По номеру стрима и номеру трека находим исходный разнос
-   и сравниваем оценки. Совпало 27 пар из 35 помеченных: у остальных
-   ссылка ведёт в стрим, которого в архиве нет. */
+   Hantrik)». Раньше по этой пометке и искали: трек с таким номером на
+   таком стриме — и всё, без проверки.
+
+   Номеру стрима в пометке верить нельзя. Архив начинается со СТРИМА №0,
+   а пометки часто считают эфиры с единицы: «стрим №1» в них означает
+   самый первый, то есть №0. Из-за этого сайт вытаскивал чужой трек и
+   уверенно писал, что ему когда-то поставили другую оценку: у «TK from
+   Ling Tosite Sigure — Signal» в графе «было» стояло «хорошечно-» от
+   «Kai Rosenkranz — The Final Melody». Так врали пять пар из двадцати
+   семи показанных.
+
+   Теперь пометка — только подсказка, а решает совпадение самого трека.
+   Кандидатов ищем среди разносов, которые были раньше этого, и берём
+   лучшего по сумме признаков; порог отсекает случаи, где опознавать
+   нечего. Название весит больше всего: именно оно отвечает на вопрос
+   «тот ли это трек», а стрим и номер лишь помогают выбрать между двумя
+   одинаковыми.
+
+   Часть повторов так и остаётся без пары, и это честно: их пометки
+   ссылаются на стримы №3, №4 и №5, а в таблице у этих трёх эфиров не
+   проставлено ни одной оценки. Пока их не заполнят, сравнивать не с чем. */
+const REPEAT_RE = /ПОВТОР:\s*(?:стрим\s*№?\s*(\d+(?:[.,]\d+)?)|(\d+(?:[.,]\d+)?)\s*стрим)\s*[;,]\s*(\d+)\s*трек(?:\s*от\s*"*([^;")\]]*))?/i;
+
+const repNorm = s => String(s || '').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+
+/* Тот же трек? Названия пишут по-разному — «Big Shot» и «Big Shot
+   (Deltarune Chapter 2)», «again» и «Again», — поэтому сравниваем без
+   регистра и знаков, и засчитываем вхождение одного в другое. */
+function sameTrackName(a, b) {
+  const A = repNorm(a.title), B = repNorm(b.title);
+  if (!A || !B) return false;
+  return A === B || A.includes(B) || B.includes(A);
+}
+
+/* Тот же заказчик? В пометке он записан одним именем, а в строке их
+   может быть несколько: «Madao; Oldfanmusic». Хватает совпадения с
+   любым из них. */
+function sameOrderer(row, who) {
+  const k = userKey(who || '');
+  return !!k && (row.userParts || []).some(u => userKey(u) === k);
+}
+
 /* Повтором считаем второй разнос: он и должен попасть в выбранный год.
    Исходный ищем по всему архиву — он вполне мог быть годом раньше, и
    отбрасывать пару из-за этого было бы неверно. */
 function repeatPairs(rows = ROWS) {
-  const RE = /ПОВТОР:\s*СТРИМ\s*№\s*(\d+)\s*;\s*(\d+)\s*трек/i;
   const out = [];
   rows.forEach(r => {
-    const m = (r.full || '').match(RE);
+    const m = (r.full || '').match(REPEAT_RE);
     if (!m) return;
-    const src = ROWS.find(x => x.streamNum === +m[1] && x.pos === +m[2]);
-    if (!src || src === r) return;
+    const stream = parseFloat(String(m[1] || m[2]).replace(',', '.'));
+    const pos = +m[3], who = (m[4] || '').trim();
+
+    let src = null, best = 0;
+    ROWS.forEach(x => {
+      if (x === r) return;
+      // раньше по времени: в таблице свежие стримы сверху, поэтому
+      // больший индекс — это более ранний разнос
+      const раньше = x.date && r.date ? x.date < r.date : x.i > r.i;
+      if (!раньше) return;
+      let b = 0;
+      if (sameTrackName(x, r)) b += 5;
+      if (sameOrderer(x, who)) b += 3;
+      if (x.pos === pos) b += 3;
+      if (x.streamNum === stream) b += 4;
+      else if (Math.abs((x.streamNum ?? -99) - stream) <= 1) b += 2;
+      if (b > best) { best = b; src = x; }
+    });
+
+    // 8 баллов — это либо совпавшее название плюс ещё один признак,
+    // либо место и заказчик разом. Меньше — уже гадание.
+    if (!src || best < 8) return;
     out.push({ src, again: r, d: r.rate.score - src.rate.score,
                days: src.date && r.date ? Math.round((r.date - src.date) / 864e5) : null });
   });
@@ -426,7 +484,7 @@ function renderOffscale() {
       <div class="off-r">${esc(o.raw)}</div>
       <div class="off-t">${name}</div>
       <div class="off-d">${esc(when)}` +
-      (o.streamNum ? ` <a class="pf-link nowrap" href="#stream=${o.streamNum}" data-stream="${o.streamNum}">стрим №${o.streamNum}</a>` : '') +
+      (o.streamNum != null ? ` <a class="pf-link nowrap" href="#stream=${o.streamNum}" data-stream="${o.streamNum}">стрим №${o.streamNum}</a>` : '') +
       `${link}</div>
     </div>`;
   }).join('');
