@@ -238,10 +238,14 @@ function renderUsers(rows) {
 /* ---------- 05. какие бывают заказчики ----------
    Идея подсмотрена в «Итогах 2025», которые собрал один из зрителей:
    таблица «кто сколько принёс» говорит только про объём, а самое
-   интересное в заказчиках — их вкус. Считается по всем разносам, а не
-   по отфильтрованным: это характеристика человека, а не оценки. */
-function renderFans() {
-  const g = group(ROWS, r => r.userParts.length ? r.userParts : null);
+   интересное в заказчиках — их вкус.
+
+   Фильтр по ступени сюда не доходит: это характеристика человека, а не
+   оценки. А вот год доходит — и должен. Без него номинации замерзают за
+   теми, кто на стримы давно не ходит: их рекорд уже никому не побить,
+   потому что новых треков они не приносят. */
+function renderFans(rows = ROWS) {
+  const g = group(rows, r => r.userParts.length ? r.userParts : null);
   const users = [...g].map(([k, rs]) => ({ k, name: USER_NAMES.get(k) || k, rs, n: rs.length }))
                       .filter(u => u.n >= MIN_N.fan);
 
@@ -299,7 +303,7 @@ function renderFans() {
 
   /* Альянсы: кто носит треки вдвоём */
   const пары = new Map();
-  ROWS.forEach(r => {
+  rows.forEach(r => {
     if (r.userParts.length < 2) return;
     const k = [...r.userParts].sort().join('\u0000');
     пары.set(k, (пары.get(k) || 0) + 1);

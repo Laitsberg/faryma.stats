@@ -45,7 +45,7 @@ function load() {
     .then(j => {
       COUNTRIES = (j && j.artists) || {};
       // страны нужны не только своему разделу, но и номинациям заказчиков
-      if (ROWS.length) { applyCountries(); renderCountries(cur()); renderFans(); }
+      if (ROWS.length) { applyCountries(); renderCountries(cur()); renderFans(byYear()); }
     })
     .catch(() => {});
 
@@ -261,7 +261,7 @@ function render() {
   renderRepeats(year);
   renderArtists(rows);
   renderUsers(rows);
-  renderFans();
+  renderFans(year);
   renderGenres(rows);
   renderOrigin(rows);
   renderUniverses(rows);
