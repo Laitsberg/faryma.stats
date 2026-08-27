@@ -599,3 +599,22 @@ a.pf-tag-l:hover{border-color:var(--brand);color:var(--ink)}
 .pf-vi{color:var(--brand);font-size:11px}
 .pf-vt{font-size:14px;line-height:1.35;overflow-wrap:anywhere}
 .pf-vd{font-family:var(--m);font-size:11px;color:var(--dim);white-space:nowrap}
+
+/* вторая ось фильтра: годы. Живут в пульте под шкалой и в плавающем
+   дубле — там же, где ступени, чтобы искать не пришлось */
+.years{display:flex;align-items:center;gap:6px;flex-wrap:wrap;
+  padding:10px 16px;border-top:1px solid var(--line)}
+@media(max-width:560px){ .years{padding:10px 12px} }
+.years-t{font-family:var(--m);font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--dim);margin-right:4px}
+.yr{font-family:var(--m);font-size:12px;color:var(--dim);background:var(--panel2);
+  border:1px solid var(--line);border-radius:2px;padding:0 11px;min-height:var(--tap);
+  cursor:pointer;display:inline-flex;align-items:center;gap:7px;
+  transition:border-color .12s,color .12s,background .12s}
+.yr:hover{color:var(--ink);border-color:var(--brand)}
+.yr.on{background:#26262C;color:var(--ink);border-color:var(--brand)}
+.yr b{font-weight:600;color:var(--brand-hi)}
+.yr.on b{color:var(--brand)}
+/* в плавающем дубле год — такая же плашка, как ступень */
+.dock-years{margin-top:4px}
+.chip.yr-chip b{margin-left:5px}

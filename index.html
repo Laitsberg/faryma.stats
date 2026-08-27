@@ -51,8 +51,9 @@
  <div id="app" style="display:none">
 
   <div class="desk">
-   <div class="desk-hd"><h2>Шкала</h2><span>нажми на ступень — отфильтруется вся страница</span></div>
+   <div class="desk-hd"><h2>Шкала</h2><span>нажми на ступень или год — отфильтруется вся страница</span></div>
    <div class="ladder" id="ladder"></div>
+   <div class="years" id="years" hidden></div>
    <div class="deskfoot">
      <span id="filterState">фильтр не задан</span>
      <button id="reset">сбросить</button>
@@ -65,6 +66,7 @@
    <div class="dock-in">
     <span class="dock-t">шкала</span>
     <div class="dock-chips" id="dockChips"></div>
+    <div class="dock-chips dock-years" id="dockYears" hidden></div>
     <button id="dockReset" class="dock-reset" hidden>сбросить</button>
    </div>
   </div>
@@ -166,7 +168,7 @@
   </section>
   <section>
    <div class="shd"><span class="ch">09</span><h2>Какие бывают заказчики</h2></div>
-   <p class="note">Таблица выше говорит только про объём, а самое интересное в человеке — его вкус. Кто-то возит одну Японию, кто-то не повторяется ни разу, кто-то носит только из игр. Считается по всем разносам от пяти треков и не зависит от фильтра сверху: это характеристика человека, а не оценки.</p>
+   <p class="note">Таблица выше говорит только про объём, а самое интересное в человеке — его вкус. Кто-то возит одну Японию, кто-то не повторяется ни разу, кто-то носит только из игр. Считается по всем разносам от пяти треков и не зависит от фильтров сверху: это характеристика человека, а не оценки.</p>
    <div class="fans" id="fans"></div>
   </section>
   <section>

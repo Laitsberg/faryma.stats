@@ -4,7 +4,7 @@
    ============================================================ */
 
 let ROWS = [];                 // все разносы с распознанной оценкой
-let FILTER = { tier: null };   // выбранная ступень шкалы
+let FILTER = { tier: null, year: null };   // ступень шкалы и год
 let ARTIST_NAMES = new Map();  // ключ → показываемое написание
 let PART_NAMES = new Map();    // то же для участников, включая тех, кто только в feat.
 let USER_NAMES = new Map();
@@ -20,7 +20,16 @@ let VIDEOS = [];               // ролики с канала, из data/videos
 /* Ключ имени с учётом склейки перестановок */
 const canonKey = k => NAME_ALIAS.get(k) || k;
 
-const cur = () => FILTER.tier ? ROWS.filter(r => r.rate.tier === FILTER.tier) : ROWS;
+/* Две оси одного фильтра: ступень отвечает на «какие оценки», год —
+   на «когда». byYear() нужен отдельно: разделы вроде «Рекордов» и
+   «Ритма стримов» ступень никогда не учитывали (рекорд среди одних
+   «гениально» — это уже не рекорд), а год им к лицу. */
+const inYear = r => !FILTER.year || (r.date && r.date.getFullYear() === FILTER.year);
+const byYear = () => FILTER.year ? ROWS.filter(inYear) : ROWS;
+const cur = () => {
+  const rows = byYear();
+  return FILTER.tier ? rows.filter(r => r.rate.tier === FILTER.tier) : rows;
+};
 
 /* ---------- загрузка ---------- */
 function load() {
@@ -240,14 +249,16 @@ function applyCountries() {
 
 /* ---------- отрисовка ---------- */
 function render() {
-  const rows = cur();
-  renderLadder();
-  renderDock();
-  renderRecords();
+  const rows = cur();       // ступень и год
+  const year = byYear();    // только год
+  renderLadder(year);
+  renderDock(year);
+  renderYears();
+  renderRecords(year);
   renderKpis(rows);
-  renderScale();
-  renderTrend();
-  renderRepeats();
+  renderScale(year);
+  renderTrend(year);
+  renderRepeats(year);
   renderArtists(rows);
   renderUsers(rows);
   renderFans();
@@ -259,13 +270,16 @@ function render() {
   renderTags(rows);
   renderPlatforms(rows);
   renderDuration(rows);
-  renderStreams();
+  renderStreams(year);
   renderCountries(rows);
   renderOffscale();
   renderSearch();
   markScrollables();
+  const что = [];
+  if (FILTER.tier) что.push('ступень «' + FILTER.tier + '»');
+  if (FILTER.year) что.push(FILTER.year + ' год');
   $('filterState').textContent =
-    FILTER.tier ? ('показаны только: ' + FILTER.tier) : 'фильтр не задан';
+    что.length ? 'показаны только: ' + что.join(', ') : 'фильтр не задан';
 }
 
 /* Дубль фильтра появляется, когда пульт ушёл вверх, и прячется,
@@ -449,8 +463,9 @@ function initControls() {
   // съедала этот клик. Списки 'input' тоже отправляют.
   ['q', 'fRate', 'fUser', 'fOrigin', 'fGenre'].forEach(id =>
     $(id).addEventListener('input', renderSearch));
-  $('reset').onclick = () => { FILTER.tier = null; render(); };
-  $('dockReset').onclick = () => { FILTER.tier = null; render(); };
+  const сбросить = () => { FILTER.tier = null; FILTER.year = null; render(); };
+  $('reset').onclick = сбросить;
+  $('dockReset').onclick = сбросить;
   initDock();
 }
 

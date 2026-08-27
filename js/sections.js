@@ -5,8 +5,8 @@
    ============================================================ */
 
 /* ---------- пульт: ступени шкалы ---------- */
-function renderLadder() {
-  const m = group(ROWS, r => r.rate.tier);
+function renderLadder(rows = ROWS) {
+  const m = group(rows, r => r.rate.tier);
   const max = Math.max(...TIERS.map(t => (m.get(t.key) || []).length));
   $('ladder').innerHTML = TIERS.map(t => {
     const n = (m.get(t.key) || []).length;
@@ -27,8 +27,8 @@ function renderLadder() {
    Те же ступени, что в пульте, но компактно. Показывается только
    когда сам пульт уехал за верхнюю границу экрана — им занимается
    наблюдатель в initDock(). */
-function renderDock() {
-  const m = group(ROWS, r => r.rate.tier);
+function renderDock(rows = ROWS) {
+  const m = group(rows, r => r.rate.tier);
   $('dockChips').innerHTML = TIERS.map(t => {
     const n = (m.get(t.key) || []).length;
     const on = FILTER.tier === t.key;
@@ -40,7 +40,37 @@ function renderDock() {
     FILTER.tier = FILTER.tier === b.dataset.t ? null : b.dataset.t;
     render();
   });
-  $('dockReset').hidden = !FILTER.tier;
+  $('dockReset').hidden = !FILTER.tier && !FILTER.year;
+}
+
+/* ---------- пульт: годы ----------
+   Вторая ось фильтра. Кнопка «весь архив» — то же, что снятый фильтр:
+   так виднее, что год вообще можно выбрать, чем если бы отмена
+   пряталась в повторном клике по активному году. */
+function renderYears() {
+  const годы = [...new Set(ROWS.filter(r => r.date).map(r => r.date.getFullYear()))]
+    .sort((a, b) => a - b);
+  const места = [$('years'), $('dockYears')].filter(Boolean);
+  if (годы.length < 2) { места.forEach(el => el.hidden = true); return; }
+
+  const счёт = new Map(годы.map(y =>
+    [y, ROWS.filter(r => r.date && r.date.getFullYear() === y).length]));
+
+  const кнопки = (cls) =>
+    `<button class="${cls}${FILTER.year ? '' : ' on'}" data-y="">весь архив` +
+    `<b>${num(ROWS.length)}</b></button>` +
+    годы.map(y => `<button class="${cls}${FILTER.year === y ? ' on' : ''}" data-y="${y}">` +
+      `${y}<b>${num(счёт.get(y))}</b></button>`).join('');
+
+  места.forEach(el => {
+    el.hidden = false;
+    el.innerHTML = (el.id === 'years' ? '<span class="years-t">год</span>' : '') +
+      кнопки(el.id === 'years' ? 'yr' : 'chip yr-chip');
+    el.querySelectorAll('button').forEach(b => b.onclick = () => {
+      FILTER.year = b.dataset.y ? +b.dataset.y : null;
+      render();
+    });
+  });
 }
 
 /* ---------- метрики ---------- */
@@ -62,8 +92,8 @@ function renderKpis(rows) {
 }
 
 /* ---------- 01. распределение по шкале ---------- */
-function renderScale() {
-  const m = group(ROWS, r => r.rate.label);
+function renderScale(rows = ROWS) {
+  const m = group(rows, r => r.rate.label);
 
   // «Чистое гениально» — без плюсов и минусов. Число живое: цифра в
   // тексте не должна разойтись с цифрой в шапке.
@@ -85,8 +115,8 @@ function renderScale() {
    дат в таблице нет. Даты есть — стримы отбиты строками
    «СТРИМ №271 (22.08.26)», и каждый трек наследует дату своего стрима.
    Теперь ось настоящая, и видно не только «стал ли добрее», но и когда. */
-function renderTrend() {
-  const seq = ROWS.filter(r => r.date).sort((a, b) => a.date - b.date || a.i - b.i);
+function renderTrend(rows = ROWS) {
+  const seq = rows.filter(r => r.date).sort((a, b) => a.date - b.date || a.i - b.i);
   if (seq.length < 200) { renderTrendByOrder(); return; }
 
   const W = 150, pts = [];
@@ -123,9 +153,12 @@ function renderTrend() {
   });
   const first = seq[0].date, last = seq[seq.length - 1].date;
   const fmt = d => d.toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' });
+  // Эфиров столько, сколько их в показанном срезе: при фильтре по году
+  // «273 эфира» рядом с датами одного года выглядело ложью.
+  const эфиров = new Set(seq.map(r => r.streamNum).filter(n => n != null)).size;
   $('trendNote').textContent =
-    `Охвачен путь от ${fmt(first)} до ${fmt(last)} — ${num(STREAMS.length)} ` +
-    plural(STREAMS.length, 'эфир', 'эфира', 'эфиров') + '.';
+    `Охвачен путь от ${fmt(first)} до ${fmt(last)} — ${num(эфиров)} ` +
+    plural(эфиров, 'эфир', 'эфира', 'эфиров') + '.';
 }
 
 /* Запасной вариант, если дат вдруг не окажется */
@@ -298,10 +331,13 @@ function pairCharts(idN, idAvg, items, limit) {
    Hantrik)». По номеру стрима и номеру трека находим исходный разнос
    и сравниваем оценки. Совпало 27 пар из 35 помеченных: у остальных
    ссылка ведёт в стрим, которого в архиве нет. */
-function repeatPairs() {
+/* Повтором считаем второй разнос: он и должен попасть в выбранный год.
+   Исходный ищем по всему архиву — он вполне мог быть годом раньше, и
+   отбрасывать пару из-за этого было бы неверно. */
+function repeatPairs(rows = ROWS) {
   const RE = /ПОВТОР:\s*СТРИМ\s*№\s*(\d+)\s*;\s*(\d+)\s*трек/i;
   const out = [];
-  ROWS.forEach(r => {
+  rows.forEach(r => {
     const m = (r.full || '').match(RE);
     if (!m) return;
     const src = ROWS.find(x => x.streamNum === +m[1] && x.pos === +m[2]);
@@ -312,8 +348,8 @@ function repeatPairs() {
   return out;
 }
 
-function renderRepeats() {
-  const pairs = repeatPairs();
+function renderRepeats(rows = ROWS) {
+  const pairs = repeatPairs(rows);
   if (pairs.length < 5) { $('secRepeat').style.display = 'none'; return; }
   $('secRepeat').style.display = '';
 
@@ -362,13 +398,18 @@ function renderUniverses(rows) {
    Раз в сто разносов композитор выдаёт что-то своё вместо ступени.
    В статистику это не пустить, но и терять жалко. */
 function renderOffscale() {
-  if (!OFFSCALE.length) { $('secOff').style.display = 'none'; return; }
+  // год фильтруем и здесь: у этих строк ступени нет, но дата есть
+  const список = FILTER.year
+    ? OFFSCALE.filter(o => o.date && o.date.getFullYear() === FILTER.year)
+    : OFFSCALE;
+  if (!список.length) { $('secOff').style.display = 'none'; return; }
   $('secOff').style.display = '';
   $('offNote').textContent =
-    `${num(OFFSCALE.length)} ` + plural(OFFSCALE.length, 'раз', 'раза', 'раз') +
-    ` за всю историю архива. В графики они не идут: ступени у них нет.`;
+    `${num(список.length)} ` + plural(список.length, 'раз', 'раза', 'раз') +
+    (FILTER.year ? ` за ${FILTER.year} год.` : ' за всю историю архива.') +
+    ` В графики они не идут: ступени у них нет.`;
 
-  $('offList').innerHTML = [...OFFSCALE].reverse().map(o => {
+  $('offList').innerHTML = [...список].reverse().map(o => {
     const name = (o.artist ? artistNames(o.artist) + ' — ' : '') + esc(o.title);
     const link = o.moment
       ? ` <a class="mom" href="${esc(o.moment)}" target="_blank" rel="noopener noreferrer">▶ разнос</a>`
@@ -511,11 +552,12 @@ function renderDuration(rows) {
 }
 
 /* ---------- 12. ритм стримов ----------
-   Считается по всем стримам, а не по отфильтрованным строкам: это
-   характеристика эфиров, а не оценок, и фильтр по ступени её не меняет. */
-function renderStreams() {
+   Считается по строкам, а не по всем стримам: при фильтре по году
+   должны остаться эфиры этого года. Фильтр по ступени сюда не доходит
+   — это характеристика эфиров, а не оценок. */
+function renderStreams(rows = ROWS) {
   const counts = new Map();
-  ROWS.forEach(r => {
+  rows.forEach(r => {
     if (r.streamNum == null) return;
     counts.set(r.streamNum, (counts.get(r.streamNum) || 0) + 1);
   });
@@ -555,7 +597,7 @@ function renderStreams() {
   const total = [...counts.values()];
   const med = [...total].sort((a, b) => a - b)[Math.floor(total.length / 2)];
   $('streamNote').textContent =
-    `Всего ${num(STREAMS.length)} ` + plural(STREAMS.length, 'эфир', 'эфира', 'эфиров') +
+    `Всего ${num(pts.length)} ` + plural(pts.length, 'эфир', 'эфира', 'эфиров') +
     `, в среднем ${med} ` + plural(med, 'трек', 'трека', 'треков') +
     ` за раз, рекорд — ${Math.max(...total)}.`;
 }
@@ -563,7 +605,7 @@ function renderStreams() {
 /* ---------- 03. рекорды ----------
    Считаются по всему архиву, а не по отфильтрованным строкам: рекорд
    на то и рекорд, что он один на всю историю. */
-function renderRecords() {
+function renderRecords(rows = ROWS) {
   const fmtDate = d => d
     ? d.toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' })
     : '';
@@ -581,7 +623,7 @@ function renderRecords() {
      тайм-коды не отличают долгий разнос от разноса, после которого
      композитор ушёл на перерыв, так что «рекорд» всегда упирался
      в верхнюю отсечку и означал не разнос, а паузу. */
-  const dur = ROWS.filter(r => r.dur != null).sort((a, b) => a.dur - b.dur);
+  const dur = rows.filter(r => r.dur != null).sort((a, b) => a.dur - b.dur);
   if (dur.length) {
     const b = dur[0];
     push(mins(b.dur) + ' мин', 'самый короткий разнос', track(b),
@@ -590,7 +632,7 @@ function renderRecords() {
 
   /* стримы: считаем средний балл и длину */
   const byStream = new Map();
-  ROWS.forEach(r => {
+  rows.forEach(r => {
     if (r.streamNum == null) return;
     if (!byStream.has(r.streamNum)) byStream.set(r.streamNum, []);
     byStream.get(r.streamNum).push(r);
@@ -630,7 +672,7 @@ function renderRecords() {
   /* серии по хронологии */
   // внутри эфира порядок задаёт номер трека, а не тайм-код: в таблице
   // тайм-коды местами разъезжаются, а нумерация идёт подряд
-  const chron = ROWS.filter(r => r.date)
+  const chron = rows.filter(r => r.date)
     .sort((a, b) => a.date - b.date || a.streamNum - b.streamNum || (a.pos ?? 0) - (b.pos ?? 0));
 
   let run = 0, runTier = null, bestRun = 0, bestTier = null, bestAt = null;
