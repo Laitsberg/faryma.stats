@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-27T15:14:54.983Z",
+ "generated": "2026-08-28T08:52:42.860Z",
  "artists": {
   "7": {
    "name": "7",
@@ -691,9 +691,10 @@
   },
   "margenta": {
    "name": "Margenta",
-   "tracks": 9,
+   "tracks": 13,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "e505a105-2baa-4c64-a5ec-babe0fdeb3e6",
    "mbName": "Margenta"
@@ -710,9 +711,10 @@
   },
   "udio ai": {
    "name": "Udio Ai",
-   "tracks": 9,
+   "tracks": 10,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "a02b947d-75f1-4434-b4f9-2c260ce98ace",
    "mbName": "Udio AI"
@@ -770,6 +772,7 @@
    "tracks": 8,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "210f8030-fe53-4f7d-9405-aaea1051f732",
    "mbName": "Lind Erebros"
@@ -849,9 +852,10 @@
   },
   "mori calliope": {
    "name": "Mori Calliope",
-   "tracks": 8,
+   "tracks": 12,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "8a9d0b90-951e-4ab8-b2dc-9d3618af3d28",
    "mbName": "Mori Calliope"
@@ -936,8 +940,9 @@
    "tracks": 7,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
-   "mbid": "4d357a9f-8c60-4ab8-8ebc-f6fab056edd9",
+   "mbid": "4b3aa2f6-bda1-4f80-8481-e4dda582d6fc",
    "mbName": "СЕРЕГА ПИРАТ"
   },
   "kotoko": {
@@ -1602,7 +1607,7 @@
   },
   "sān-z & hoyo-mix": {
    "name": "Sān-Z & HOYO-MiX",
-   "tracks": 5,
+   "tracks": 17,
    "country": null,
    "score": 0
   },
@@ -2114,6 +2119,7 @@
    "tracks": 4,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "7535c96e-1430-49a5-ae73-bfc25de56387",
    "mbName": "Elisa Rosselli"
@@ -2163,9 +2169,10 @@
   },
   "radiant records": {
    "name": "Radiant Records",
-   "tracks": 4,
+   "tracks": 5,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "71bb80fa-1031-4e5b-87d9-b33a6f00a8c5",
    "mbName": "Radiant Records"
@@ -2263,6 +2270,7 @@
    "tracks": 4,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "d6543037-8b74-4c36-ba88-80828cd491e4",
    "mbName": "Onsa Media"
@@ -2297,9 +2305,10 @@
   },
   "hikaru utada": {
    "name": "Hikaru Utada",
-   "tracks": 4,
+   "tracks": 5,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "a15dd07b-0112-44e8-9904-592e57dfd069",
    "mbName": "[Hikaru Utada’s son]"
@@ -2317,12 +2326,13 @@
   },
   "kanye west": {
    "name": "Kanye West",
-   "tracks": 4,
-   "country": null,
-   "area": null,
+   "tracks": 6,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
    "score": 100,
-   "mbid": "0eb17834-1d29-47ef-a422-9dc68d73c5e4",
-   "mbName": "Kanye West Tribute Band"
+   "mbid": "164f0d73-1234-4e2c-8743-d77bf2191051",
+   "mbName": "Ye"
   },
   "u2": {
    "name": "U2",
@@ -2529,6 +2539,7 @@
    "tracks": 3,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "0d59ceda-36f2-4950-a83d-c677ce14e35c",
    "mbName": "Ludicin"
@@ -2556,6 +2567,7 @@
    "tracks": 3,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "2d3794a4-0a8d-4494-9578-52c3e6a18395",
    "mbName": "Nyxen"
@@ -2929,9 +2941,10 @@
   },
   "jackie-o": {
    "name": "Jackie-O",
-   "tracks": 3,
+   "tracks": 5,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "2207187d-beb8-4fee-9010-12fa034e9749",
    "mbName": "Jackie ‘O’"
@@ -3122,6 +3135,7 @@
    "tracks": 3,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "212f9e51-5423-4729-8bfc-f9668c4c6291",
    "mbName": "Dante and Hema the Maids"
@@ -3140,6 +3154,7 @@
    "tracks": 3,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "ee81ca2d-2e6d-49cf-87bd-b3c3ad0dda9a",
    "mbName": "HaruWei"
@@ -3202,7 +3217,7 @@
   },
   "alex moukala": {
    "name": "Alex Moukala",
-   "tracks": 3,
+   "tracks": 4,
    "country": null,
    "area": "Milano",
    "areaId": "d793f202-faf0-4de8-83e2-9ddfca54a35f",
@@ -3222,11 +3237,12 @@
   "yoshino": {
    "name": "Yoshino",
    "tracks": 3,
-   "country": null,
-   "area": null,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
    "score": 100,
-   "mbid": "da717871-5e37-4ddb-8441-844d5e096840",
-   "mbName": "Yoshino"
+   "mbid": "ad0feecf-9cec-4033-81b9-e58056287a29",
+   "mbName": "Yoshino Yoshikawa"
   },
   "inabakumori feat. kaai yuki": {
    "name": "Inabakumori feat. Kaai Yuki",
@@ -3366,6 +3382,7 @@
    "tracks": 3,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "599e5ea3-2848-45d2-a574-b6e98c5e36ba",
    "mbName": "Tanri"
@@ -3537,12 +3554,13 @@
   },
   "kaf": {
    "name": "KAF",
-   "tracks": 3,
-   "country": null,
-   "area": null,
+   "tracks": 4,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
    "score": 100,
-   "mbid": "8a6892d4-2087-4244-a668-a7151464558d",
-   "mbName": "Kaf"
+   "mbid": "47ba70a2-d040-4265-bf52-86b9ef28c2c9",
+   "mbName": "花譜"
   },
   "alt-j": {
    "name": "alt-J",
@@ -3619,7 +3637,7 @@
   },
   "league of legends music": {
    "name": "League of Legends Music",
-   "tracks": 3,
+   "tracks": 4,
    "country": null,
    "score": 0
   },
@@ -3634,11 +3652,12 @@
   },
   "sayuri": {
    "name": "Sayuri",
-   "tracks": 3,
-   "country": null,
-   "area": null,
+   "tracks": 4,
+   "country": "DE",
+   "area": "Germany",
+   "areaId": "85752fda-13c4-31a3-bee5-0e5cb1f51dad",
    "score": 100,
-   "mbid": "b53175f3-ca56-4084-80c4-879a671f3cc6",
+   "mbid": "cdb57b54-a663-44b3-9746-4d15507eeeb7",
    "mbName": "Sayuri"
   },
   "thomas bergersen": {
@@ -3739,6 +3758,7 @@
    "tracks": 2,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "dc68e03a-94fb-452e-8339-883d244361ae",
    "mbName": "Dysmn"
@@ -3945,6 +3965,7 @@
    "tracks": 2,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "343ede59-8d84-424a-9c25-e54802522d5b",
    "mbName": "CAGMO"
@@ -4170,7 +4191,7 @@
   },
   "wada kouji": {
    "name": "Wada Kouji",
-   "tracks": 2,
+   "tracks": 3,
    "country": null,
    "score": 0
   },
@@ -4275,15 +4296,16 @@
   },
   "deep-ex-sense & лжедмитрий iv": {
    "name": "DEEP-EX-SENSE & Лжедмитрий IV",
-   "tracks": 2,
+   "tracks": 3,
    "country": null,
    "score": 0
   },
   "ninomae ina'nis": {
    "name": "Ninomae Ina'nis",
-   "tracks": 2,
+   "tracks": 4,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "4ca9110a-8313-455f-9ddf-ee26d6db028a",
    "mbName": "Ninomae Ina’nis"
@@ -4291,11 +4313,12 @@
   "walkure": {
    "name": "Walkure",
    "tracks": 2,
-   "country": null,
-   "area": null,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
    "score": 100,
-   "mbid": "aa66001a-90a3-4a10-acf1-8ece4dd7fff3",
-   "mbName": "Walküre"
+   "mbid": "eec83a8c-4698-43d6-a62c-abed00e7e6b5",
+   "mbName": "ワルキューレ"
   },
   "hakos baelz": {
    "name": "Hakos Baelz",
@@ -4353,6 +4376,7 @@
    "tracks": 2,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "c75f2c5f-0988-4b93-a830-19ff125a6be7",
    "mbName": "UBEL"
@@ -4622,6 +4646,7 @@
    "tracks": 2,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "76a879a8-2a95-45cf-895f-ab7d0cf6f9a6",
    "mbName": "Improver"
@@ -4676,6 +4701,7 @@
    "tracks": 2,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "2b953920-05a3-45b2-a407-9dac3fed7161",
    "mbName": "Obadiah Brown-Beach"
@@ -4889,6 +4915,7 @@
    "tracks": 2,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "d9d12893-2ea3-466c-a0bd-1ffee1b5d86d",
    "mbName": "Jase"
@@ -4898,6 +4925,7 @@
    "tracks": 2,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "1507d9fb-092e-4af5-b759-cd80973c45d6",
    "mbName": "НЕ ЗАПОМИНАЙ"
@@ -4958,6 +4986,7 @@
    "tracks": 2,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "f70c6805-efda-4895-ab89-13063fdd4840",
    "mbName": "LUDOMUSIC"
@@ -4974,11 +5003,12 @@
   "the black eyed peas": {
    "name": "The Black Eyed Peas",
    "tracks": 2,
-   "country": null,
-   "area": null,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
    "score": 100,
-   "mbid": "20bf92d9-484e-4e7b-a2fe-e69e4f933321",
-   "mbName": "The Black-Eyed Peas"
+   "mbid": "d5be5333-4171-427e-8e12-732087c6b78e",
+   "mbName": "Black Eyed Peas"
   },
   "bts": {
    "name": "BTS",
@@ -5079,12 +5109,13 @@
   "the butcher sisters": {
    "name": "The Butcher Sisters",
    "tracks": 2,
-   "country": null,
+   "country": "DE",
    "area": "Mannheim",
    "areaId": "b07271ff-75a4-4dbd-96ee-6386cf3c5fab",
    "score": 100,
    "mbid": "15f7af3e-6908-4998-9bf1-6a6ebd7bd84a",
-   "mbName": "The Butcher Sisters"
+   "mbName": "The Butcher Sisters",
+   "viaArea": true
   },
   "otyken": {
    "name": "OTYKEN",
@@ -5138,6 +5169,7 @@
    "tracks": 2,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "a1d22c9b-4fd3-4db3-a9af-3b87e951bfb9",
    "mbName": "Jam Jam"
@@ -5329,6 +5361,7 @@
    "tracks": 2,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "87faac80-c049-4681-93a1-8d525dae4c51",
    "mbName": "Stervell"
@@ -5371,6 +5404,7 @@
    "tracks": 2,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "fea213d5-95b6-4272-bdb6-d454926f620d",
    "mbName": "Xolidayboy"
@@ -5591,12 +5625,13 @@
   },
   "rosu": {
    "name": "Rosu",
-   "tracks": 2,
+   "tracks": 3,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
-   "mbid": "9f03c6ea-7d51-4a5d-a07c-fadab7e5c355",
-   "mbName": "Roșu și negru"
+   "mbid": "ff0dae91-7b66-4986-8b7b-595e340c2935",
+   "mbName": "ロス"
   },
   "lena raine": {
    "name": "Lena Raine",
@@ -5612,6 +5647,7 @@
    "tracks": 2,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "b0aec959-8b6b-40e5-b04c-d9b959317152",
    "mbName": "Foreground Eclipse"
@@ -6088,11 +6124,12 @@
   "issey": {
    "name": "issey",
    "tracks": 2,
-   "country": null,
-   "area": null,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
    "score": 100,
-   "mbid": "bdacc9b7-ce05-4625-9ae4-c96e58ebbb3e",
-   "mbName": "issey"
+   "mbid": "53236ada-5827-4a8e-bf53-6130c738b7d8",
+   "mbName": "弌誠"
   },
   "diablo swing orchestra": {
    "name": "Diablo Swing Orchestra",
@@ -6388,11 +6425,12 @@
   "jules conroy": {
    "name": "Jules Conroy",
    "tracks": 2,
-   "country": null,
-   "area": null,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
    "score": 100,
-   "mbid": "f97d416b-893f-4393-a3e0-737be752bbda",
-   "mbName": "Jules Conroy"
+   "mbid": "fb8c57df-bce5-4eeb-b49c-e225f3e1aff0",
+   "mbName": "Julian M. Conroy"
   },
   "sleep token": {
    "name": "Sleep Token",
@@ -6577,6 +6615,7 @@
    "tracks": 2,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "d2909486-c753-42fe-a42c-df68aea1a5b5",
    "mbName": "Игорь Вихорьков"
@@ -6634,6 +6673,7 @@
    "tracks": 2,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "0ccf6e3f-f482-4b33-9a98-cb920f3899b6",
    "mbName": "Dmitry V. Silantyev"
@@ -6964,6 +7004,7 @@
    "tracks": 2,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "69921167-401b-4603-9015-65ae206cbc20",
    "mbName": "Insane Cherry"
@@ -7155,9 +7196,10 @@
   },
   "harmony team": {
    "name": "Harmony Team",
-   "tracks": 2,
+   "tracks": 3,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "e47cc534-3e73-4b9c-b067-cfd31dfb1362",
    "mbName": "Harmony Team"
@@ -7242,6 +7284,7 @@
    "tracks": 2,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "73ea5542-3640-4c3a-8dc6-b80350775500",
    "mbName": "Alexey Kotlyar"
@@ -7285,6 +7328,7 @@
    "tracks": 2,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "620506d6-ab63-44b5-bacf-c74212bf98af",
    "mbName": "Peter Alex Newton"
@@ -7578,6 +7622,7 @@
    "tracks": 1,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "d514a213-0999-498e-881c-8a69cd9026d4",
    "mbName": "Sam Westphalen"
@@ -7722,6 +7767,7 @@
    "tracks": 1,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "8a49e33b-9fa1-4dd4-8b62-1643791d19ae",
    "mbName": "Isaak Wolf"
@@ -7763,9 +7809,10 @@
   },
   "shiori novella": {
    "name": "Shiori Novella",
-   "tracks": 1,
+   "tracks": 3,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "5e86861b-5e1e-4b2e-97eb-9705484c4bfe",
    "mbName": "Shiori Novella"
@@ -7823,6 +7870,7 @@
    "tracks": 1,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "7d7a4a15-5376-4f87-8100-27ba05bfb331",
    "mbName": "Seiryu"
@@ -7993,6 +8041,7 @@
    "tracks": 1,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "9be0d3a8-53ed-4309-baef-da6178cd55ce",
    "mbName": "Alfa Bell"
@@ -8089,6 +8138,7 @@
    "tracks": 1,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "301f1596-3768-40ff-954e-d5eb7a4a1798",
    "mbName": "ALN"
@@ -8327,9 +8377,10 @@
   },
   "elizabeth rose bloodflame": {
    "name": "Elizabeth Rose Bloodflame",
-   "tracks": 1,
+   "tracks": 3,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "9e3ad220-7d46-4066-86ed-3028ea3de728",
    "mbName": "Elizabeth Rose Bloodflame"
@@ -8381,6 +8432,7 @@
    "tracks": 1,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "05abbcfe-0a69-4e73-8ad8-b35fbcf9b5ca",
    "mbName": "Capistrano"
@@ -8607,6 +8659,7 @@
    "tracks": 1,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "8db929d9-b08d-4207-b4d2-d1095ca8b3b7",
    "mbName": "FrostBorne"
@@ -8640,6 +8693,7 @@
    "tracks": 1,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "6c1f6416-b5a8-4b9b-8386-ba4f4dc5d9e7",
    "mbName": "Carla Vallet"
@@ -8677,9 +8731,10 @@
   },
   "ekcle": {
    "name": "Ekcle",
-   "tracks": 1,
+   "tracks": 2,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "34f4c0fb-acb3-4c85-8ac8-b66b4d0f8302",
    "mbName": "Ekcle"
@@ -8980,6 +9035,7 @@
    "tracks": 1,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "9b3b10e9-8072-4542-a119-dbe5c7eb5a32",
    "mbName": "LOREN & MASH"
@@ -9132,6 +9188,7 @@
    "tracks": 1,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "4ee92a80-578e-487a-ac9f-f952a730687c",
    "mbName": "Punishing Gray Raven"
@@ -9528,6 +9585,7 @@
    "tracks": 1,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "6b1fad32-9f1f-49bb-b863-c261db34067d",
    "mbName": "ТУРБОПАЦАНЫ"
@@ -9553,11 +9611,13 @@
   "film symphony orchestra": {
    "name": "Film Symphony Orchestra",
    "tracks": 1,
-   "country": null,
-   "area": null,
+   "country": "AU",
+   "area": "Melbourne",
+   "areaId": "b4e9352c-8edf-4911-8fa3-e852afa30501",
    "score": 100,
-   "mbid": "9d6878cc-ca37-4325-8ce5-6a52a3369360",
-   "mbName": "Film Symphony Orchestra"
+   "mbid": "9a004141-41f6-4a8b-9fb5-9425834d0293",
+   "mbName": "Melbourne Film Symphony Orchestra",
+   "viaArea": true
   },
   "avantasia": {
    "name": "Avantasia",
@@ -9623,12 +9683,13 @@
   "natewantstobattle": {
    "name": "NateWantsToBattle",
    "tracks": 1,
-   "country": null,
+   "country": "US",
    "area": "Richmond",
    "areaId": "afaa40c1-2e11-4a9b-9a33-ff0603e3e312",
    "score": 100,
    "mbid": "2918ce08-196e-408b-b3cb-4ccbefe62c3a",
-   "mbName": "NateWantsToBattle"
+   "mbName": "NateWantsToBattle",
+   "viaArea": true
   },
   "seraphine noir & alexandra rotmann feat. mauricesax & .akshay": {
    "name": "SERAPHINE NOIR & Alexandra Rotmann feat. Mauricesax & .akshay",
@@ -9641,6 +9702,7 @@
    "tracks": 1,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "90239381-27de-4d35-b08a-90964294f103",
    "mbName": "Yuriy Leontiev"
@@ -9811,6 +9873,7 @@
    "tracks": 1,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "86665003-6e2a-4d71-9f2b-92e47ce57e0e",
    "mbName": "Dan Vasc"
@@ -10139,6 +10202,7 @@
    "tracks": 1,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "9482bacc-dc6b-4d57-bab1-d7024dc86849",
    "mbName": "MARIA KON"
@@ -10227,6 +10291,7 @@
    "tracks": 1,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "10c6ce60-25ac-4264-9fe1-d71ba36de928",
    "mbName": "Xaki"
@@ -10309,6 +10374,7 @@
    "tracks": 1,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "aefcfd66-4b63-4c31-9599-64ab9e80eaeb",
    "mbName": "Eric Shumaker"
@@ -10430,6 +10496,7 @@
    "tracks": 1,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "15926156-b498-4725-963d-b1e749385d49",
    "mbName": "Ярослав Баярунас"
@@ -10488,6 +10555,7 @@
    "tracks": 1,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "f2debb71-052c-40fb-90c9-36b8fa2627d7",
    "mbName": "Valve Studio Orchestra"
@@ -10724,6 +10792,7 @@
    "tracks": 1,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "5f281d05-c3c3-4d3d-8613-5a435d0dca7b",
    "mbName": "Omadhaun"
@@ -10813,6 +10882,7 @@
    "tracks": 1,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "62e4d845-5a9f-462f-a909-8e480dd3c1b8",
    "mbName": "Saja Boys"
@@ -10831,6 +10901,7 @@
    "tracks": 1,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "972044eb-6881-4078-a4a6-dc0ef8aa62cf",
    "mbName": "Dreyma"
@@ -10868,12 +10939,13 @@
   "tropkillaz": {
    "name": "Tropkillaz",
    "tracks": 1,
-   "country": null,
+   "country": "BR",
    "area": "São Paulo",
    "areaId": "204dd468-f79e-475d-94a7-64e417246439",
    "score": 100,
    "mbid": "b2152f2d-c2c6-46fa-b3cf-44055c2c86af",
-   "mbName": "Tropkillaz"
+   "mbName": "Tropkillaz",
+   "viaArea": true
   },
   "mike reagan": {
    "name": "Mike Reagan",
@@ -11067,6 +11139,7 @@
    "tracks": 1,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "07b84877-af15-45e6-b451-b2257ad82869",
    "mbName": "Marmok"
@@ -11193,18 +11266,20 @@
   "sofia isella": {
    "name": "SOFIA ISELLA",
    "tracks": 1,
-   "country": null,
+   "country": "AU",
    "area": "Queensland",
    "areaId": "c1e9cc93-f223-470d-b9e1-653709de68c3",
    "score": 100,
    "mbid": "65d52cca-0cc8-4ebf-aabc-473da2e4458f",
-   "mbName": "SOFIA ISELLA"
+   "mbName": "SOFIA ISELLA",
+   "viaArea": true
   },
   "alexander panos": {
    "name": "Alexander Panos",
    "tracks": 1,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "94667401-84cb-4731-8731-13e47d88fb0d",
    "mbName": "Alexander Panos"
@@ -11307,6 +11382,7 @@
    "tracks": 1,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "f69b0161-4c19-4e2d-9ff6-d14d55042b56",
    "mbName": "Maddie Ashman"
@@ -11453,7 +11529,7 @@
   },
   "yuko natsuyoshi & saori hayami": {
    "name": "Yuko Natsuyoshi & Saori Hayami",
-   "tracks": 1,
+   "tracks": 2,
    "country": null,
    "score": 0
   },
@@ -11674,6 +11750,7 @@
    "tracks": 1,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "c82572f8-88c2-47a9-b92a-ddd5dde24a46",
    "mbName": "TPCX"
@@ -11806,6 +11883,7 @@
    "tracks": 1,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "5f4494f0-8285-45eb-a6c1-4fbcb1f859bb",
    "mbName": "dabbackwood"
@@ -11958,6 +12036,7 @@
    "tracks": 1,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "d826032f-9d31-41a7-bd3c-d2afe03c1039",
    "mbName": "Philippe Charron"
@@ -11965,11 +12044,13 @@
   "acontrari": {
    "name": "AContrari",
    "tracks": 1,
-   "country": null,
-   "area": null,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
    "score": 100,
    "mbid": "f5525754-9d97-4336-b8fe-02a0650399ee",
-   "mbName": "AContrari"
+   "mbName": "AContrari",
+   "viaArea": true
   },
   "константин пенчковский": {
    "name": "Константин Пенчковский",
@@ -12035,6 +12116,7 @@
    "tracks": 1,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "4e61b8d0-5931-46b9-af1a-7784211bd14d",
    "mbName": "Meredith Bull"
@@ -12120,6 +12202,7 @@
    "tracks": 1,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "b528e04c-142c-4e64-9963-4570305304a6",
    "mbName": "Aimee B"
@@ -12217,8 +12300,9 @@
   "pavel lipski": {
    "name": "Pavel Lipski",
    "tracks": 1,
-   "country": null,
-   "area": null,
+   "country": "KH",
+   "area": "Cambodia",
+   "areaId": "ee26e886-87f5-33a2-8e8e-f9591490426d",
    "score": 100,
    "mbid": "581bb553-3adc-4633-9645-c40967c30658",
    "mbName": "Pavel Lipski"
@@ -12359,9 +12443,10 @@
   },
   "dialogue+": {
    "name": "DIALOGUE+",
-   "tracks": 1,
+   "tracks": 2,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "314e1c25-dde7-4e4d-b2f4-0a7b9f7c56dc",
    "mbName": "[dialogue]"
@@ -12423,12 +12508,13 @@
   "annabelle dinda": {
    "name": "Annabelle Dinda",
    "tracks": 1,
-   "country": null,
+   "country": "US",
    "area": "Philadelphia",
    "areaId": "0eeb01c2-6e31-46ad-96b8-319749f731d2",
    "score": 100,
    "mbid": "832db740-2d24-492b-b73a-a5f4829edddf",
-   "mbName": "Annabelle Dinda"
+   "mbName": "Annabelle Dinda",
+   "viaArea": true
   },
   "tokyo gegegay": {
    "name": "Tokyo Gegegay",
@@ -12563,6 +12649,7 @@
    "tracks": 1,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "50579699-2508-49cc-9983-413a474952da",
    "mbName": "Saikoro"
@@ -12655,6 +12742,7 @@
    "tracks": 1,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "6f3621ab-8ced-473b-b47c-9b79d59f7c43",
    "mbName": "Spinefish"
@@ -13550,13 +13638,14 @@
    "score": 0
   },
   "mizuki": {
-   "name": "Mizuki",
-   "tracks": 1,
-   "country": null,
-   "area": null,
+   "name": "mizuki",
+   "tracks": 8,
+   "country": "TW",
+   "area": "Taiwan",
+   "areaId": "41637cec-9a4f-389c-86d2-fc6abf3357b5",
    "score": 100,
-   "mbid": "7ff88168-194e-4cec-aa2f-c2205da1ef12",
-   "mbName": "Mizuki"
+   "mbid": "a5fe3221-e617-43b5-90e3-43208c7a4e12",
+   "mbName": "浠Mizuki"
   },
   "dj blyatman & russian village boys": {
    "name": "DJ Blyatman & Russian Village Boys",
@@ -13831,7 +13920,7 @@
   },
   "azumi takahashi": {
    "name": "Azumi Takahashi",
-   "tracks": 1,
+   "tracks": 4,
    "country": null,
    "area": null,
    "areaId": null,
@@ -14431,9 +14520,10 @@
   },
   "fuwamoco": {
    "name": "FUWAMOCO",
-   "tracks": 1,
+   "tracks": 4,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "9f84ad99-86da-4a27-9480-69ebe0f7e3f0",
    "mbName": "FUWAMOCO"
@@ -14580,7 +14670,7 @@
   },
   "futakuchi mana": {
    "name": "Futakuchi Mana",
-   "tracks": 1,
+   "tracks": 2,
    "country": null,
    "area": null,
    "areaId": null,
@@ -15667,9 +15757,10 @@
   },
   "koseki bijou": {
    "name": "Koseki Bijou",
-   "tracks": 1,
+   "tracks": 3,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "f7f5dc79-36a6-4e9d-a7cd-2b81a151c9fd",
    "mbName": "Koseki Bijou"
@@ -17994,9 +18085,10 @@
   },
   "asper x": {
    "name": "Asper X",
-   "tracks": 1,
+   "tracks": 2,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "c29ae88d-3ac2-4f36-802e-7af375ef82f7",
    "mbName": "Asper X"
@@ -22873,7 +22965,7 @@
   },
   "ancord": {
    "name": "Ancord",
-   "tracks": 1,
+   "tracks": 2,
    "country": null,
    "score": 0
   },
@@ -26328,9 +26420,10 @@
   },
   "royal scandal": {
    "name": "Royal Scandal",
-   "tracks": 1,
+   "tracks": 4,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "48b79327-ecd5-4166-96b2-ce37a805f25f",
    "mbName": "Royal Scandal"
@@ -26787,7 +26880,7 @@
   },
   "ito kashitaro": {
    "name": "Ito Kashitaro",
-   "tracks": 1,
+   "tracks": 2,
    "country": null,
    "score": 0
   },
@@ -27277,9 +27370,10 @@
   },
   "u-topia": {
    "name": "U-TOPIA",
-   "tracks": 1,
+   "tracks": 2,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "f39c74e7-5cd9-4ee4-a781-9f2ed35f5b12",
    "mbName": "U-topia"
@@ -27728,9 +27822,10 @@
   },
   "league of legends": {
    "name": "League of Legends",
-   "tracks": 1,
+   "tracks": 4,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "c68d3821-4222-4de4-acc3-a838f477433b",
    "mbName": "League of Legends"
@@ -28490,9 +28585,10 @@
   },
   "little v.": {
    "name": "Little V.",
-   "tracks": 1,
+   "tracks": 2,
    "country": null,
    "area": "Calgary",
+   "areaId": "f88bfae6-8a35-4bed-bd37-8ea16ba2b9c6",
    "score": 100,
    "mbid": "a60e6aba-08e1-4945-9acf-f53b248f2daa",
    "mbName": "Little V"
@@ -28523,9 +28619,10 @@
   },
   "nerissa ravencroft": {
    "name": "Nerissa Ravencroft",
-   "tracks": 1,
+   "tracks": 3,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "fc44f253-a08a-4a2e-942d-6242c55378e0",
    "mbName": "Nerissa Ravencroft"
@@ -28730,9 +28827,13 @@
   },
   "hanatan": {
    "name": "Hanatan",
-   "tracks": 1,
-   "country": null,
-   "score": 0
+   "tracks": 2,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "d53eb473-7906-47a4-b2cd-33d18b06a0ac",
+   "mbName": "YURiCa/花たん"
   },
   "павел воля": {
    "name": "Павел Воля",
@@ -29272,10 +29373,14 @@
    "mbName": "Low Roar"
   },
   "cosmo@bousou-p": {
-   "name": "CosMo@Bousou-P",
-   "tracks": 1,
-   "country": null,
-   "score": 0
+   "name": "cosMo@Bousou-P",
+   "tracks": 3,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "eceb2a11-fa7e-496e-9adf-a540810d932b",
+   "mbName": "cosMo@暴走P"
   },
   "aperture science psychoacoustic laboratories": {
    "name": "Aperture Science Psychoacoustic Laboratories",
@@ -29390,9 +29495,13 @@
   },
   "taisei iwasaki": {
    "name": "Taisei Iwasaki",
-   "tracks": 1,
-   "country": null,
-   "score": 0
+   "tracks": 2,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "92a06ec7-5064-4210-b2ee-2eb50a501755",
+   "mbName": "岩崎太整"
   },
   "clint mansell feat. kronos quartet and mogwai": {
    "name": "Clint Mansell feat. Kronos Quartet and Mogwai",
@@ -29651,9 +29760,13 @@
   },
   "ito kanako": {
    "name": "Ito Kanako",
-   "tracks": 1,
-   "country": null,
-   "score": 0
+   "tracks": 2,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "eee65fbc-ead0-4c01-b385-a6f563c418d3",
+   "mbName": "いとうかなこ"
   },
   "shikao suga": {
    "name": "Shikao Suga",
@@ -29714,7 +29827,7 @@
   },
   "александр зилков": {
    "name": "Александр Зилков",
-   "tracks": 1,
+   "tracks": 2,
    "country": null,
    "score": 0
   },
@@ -31094,9 +31207,10 @@
   },
   "gawr gura": {
    "name": "Gawr Gura",
-   "tracks": 1,
+   "tracks": 3,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "d9eee634-11fa-41f8-bfd9-4040a14a7fa5",
    "mbName": "Gawr Gura"
@@ -31175,9 +31289,13 @@
   },
   "kanon69": {
    "name": "KANON69",
-   "tracks": 1,
-   "country": null,
-   "score": 0
+   "tracks": 3,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "29656379-2bf5-477c-8649-c3f124bb1699",
+   "mbName": "奏音69"
   },
   "monoral": {
    "name": "Monoral",
@@ -31523,9 +31641,10 @@
   },
   "xhz official": {
    "name": "XHz Official",
-   "tracks": 1,
+   "tracks": 4,
    "country": null,
    "area": null,
+   "areaId": null,
    "score": 100,
    "mbid": "2ea43f7a-d3ce-4507-b526-320c8b7c85cd",
    "mbName": "XHz Official"
@@ -31871,9 +31990,13 @@
   },
   "kagamine len": {
    "name": "Kagamine Len",
-   "tracks": 1,
+   "tracks": 5,
    "country": null,
-   "score": 0
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "45999eb0-e665-4ab0-a809-0d6cd54ffe25",
+   "mbName": "鏡音レン"
   },
   "dmitriy ivankov": {
    "name": "Dmitriy Ivankov",
@@ -31901,18 +32024,23 @@
   },
   "hatsune miku": {
    "name": "Hatsune Miku",
-   "tracks": 1,
-   "country": null,
-   "area": null,
+   "tracks": 61,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
    "score": 100,
-   "mbid": "0d068e41-8cd0-44aa-af39-b4e11528a08d",
-   "mbName": "Bootleg Hatsune Miku"
+   "mbid": "130d679a-9a92-4373-8348-0800b6b93a30",
+   "mbName": "初音ミク"
   },
   "masayuki suzuki": {
    "name": "Masayuki Suzuki",
-   "tracks": 1,
-   "country": null,
-   "score": 0
+   "tracks": 4,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "30f851bb-dba3-4e9b-811c-5f27f595c86a",
+   "mbName": "鈴木雅之"
   },
   "vylet pony feat. namii": {
    "name": "Vylet Pony feat. Namii",
@@ -32276,9 +32404,13 @@
   },
   "kei ogura": {
    "name": "Kei Ogura",
-   "tracks": 1,
-   "country": null,
-   "score": 0
+   "tracks": 2,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "91da4975-d809-407b-b467-ca2b499ecfbd",
+   "mbName": "小椋佳"
   },
   "sopor aeternus": {
    "name": "SOPOR AETERNUS",
@@ -33224,9 +33356,13 @@
   },
   "monster siren records": {
    "name": "Monster Siren Records",
-   "tracks": 1,
-   "country": null,
-   "score": 0
+   "tracks": 2,
+   "country": "CN",
+   "area": "China",
+   "areaId": "7c81bb69-a99b-3487-b6d4-0f76d7a29ca0",
+   "score": 100,
+   "mbid": "9cec613d-596c-4ac7-bbc3-aafce1301aa8",
+   "mbName": "塞壬唱片-MSR"
   },
   "димаш кудайберген": {
    "name": "Димаш Кудайберген",
@@ -34106,7 +34242,7 @@
   },
   "kasane teto": {
    "name": "Kasane Teto",
-   "tracks": 12,
+   "tracks": 13,
    "country": null,
    "area": null,
    "areaId": null,
@@ -36114,12 +36250,13 @@
   "sorrow": {
    "name": "Sorrow",
    "tracks": 1,
-   "country": null,
+   "country": "SE",
    "area": "Uppsala",
    "areaId": "4955495c-004d-4c7f-ba17-d9df26388cd0",
    "score": 100,
    "mbid": "683634ba-bf04-404d-b243-3c8dece10926",
-   "mbName": "Sorrow"
+   "mbName": "Sorrow",
+   "viaArea": true
   },
   "fururi": {
    "name": "Fururi",
@@ -41725,6 +41862,19 @@
   "261962ea-d8c2-4eaf-a80c-f14376ffadb0": "US",
   "ec2f31c1-5493-473a-a368-b1a4de1ca4db": "JP",
   "e2dbccef-b210-4a6d-bba6-70c65889bfee": "US",
-  "3e80aaa7-9b71-450f-8147-0ecf101d8f1a": "US"
+  "3e80aaa7-9b71-450f-8147-0ecf101d8f1a": "US",
+  "b07271ff-75a4-4dbd-96ee-6386cf3c5fab": "DE",
+  "09936ede-4dcc-4794-a1e7-83d3af37bf4e": "AU",
+  "b4e9352c-8edf-4911-8fa3-e852afa30501": "AU",
+  "02e01cf9-b0ed-4286-ac6d-16989f92ced6": "US",
+  "afaa40c1-2e11-4a9b-9a33-ff0603e3e312": "US",
+  "204dd468-f79e-475d-94a7-64e417246439": "BR",
+  "c1e9cc93-f223-470d-b9e1-653709de68c3": "AU",
+  "8402526a-eb34-4429-9227-7794cbc59c37": "SE",
+  "bdc8ad90-9438-4b11-a514-257f3f4c5f5e": "SE",
+  "4955495c-004d-4c7f-ba17-d9df26388cd0": "SE",
+  "75d8fdcf-03e9-43d9-9399-131b8e118b0b": "US",
+  "2818e858-23fc-4aa1-a63e-434b44da6b5c": "US",
+  "0eeb01c2-6e31-46ad-96b8-319749f731d2": "US"
  }
 }
