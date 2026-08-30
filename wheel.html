@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Колесо — композитор разносит</title>
+<meta name="description" content="Колесо для розыгрышей на стриме: имена из чата, из архива разносов или свои. Повторы дают больше шансов.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Golos+Text:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="theme-color" content="#0D0D0F">
+<meta property="og:title" content="Колесо — композитор разносит">
+<meta property="og:description" content="Колесо для розыгрышей на стриме: имена из чата, из архива разносов или свои.">
+<meta property="og:type" content="website">
+</head>
+<body>
+
+<header>
+ <div class="wrap head">
+  <div class="eyebrow"><a class="back" href="./">← к статистике</a></div>
+  <h1>Колесо <em>судьбы</em></h1>
+  <p class="sub">Для благотворительных стримов: кто выпал — того трек и слушаем. Имена можно вписать руками, вставить списком или взять прямо из архива разносов. Повтор имени в списке даёт больше шансов — как в таблице.</p>
+ </div>
+</header>
+
+<div class="wrap wheel-page">
+
+ <div class="wheel-main">
+  <div class="wheel-box">
+   <canvas id="wheel" width="900" height="900" aria-label="Колесо с именами"></canvas>
+   <div class="wheel-pin" aria-hidden="true"></div>
+   <button class="wheel-go" id="spin" type="button">Крутить</button>
+  </div>
+
+  <div class="wheel-out" id="out" hidden>
+   <div class="wheel-out-k">выпал</div>
+   <div class="wheel-out-n" id="winner">—</div>
+   <div class="wheel-out-b">
+    <button class="chip" id="drop" type="button">Убрать из колеса</button>
+    <button class="chip" id="again" type="button">Крутить ещё</button>
+   </div>
+  </div>
+
+  <div class="wheel-log" id="log" hidden>
+   <h3 class="pf-h">Кто уже выпадал</h3>
+   <ol class="wheel-log-list" id="logList"></ol>
+  </div>
+ </div>
+
+ <aside class="wheel-side">
+  <div class="card">
+   <div class="wheel-hd">
+    <h2>Участники</h2>
+    <span class="wheel-n" id="count">0</span>
+   </div>
+   <p class="cap" id="dupNote"></p>
+   <textarea id="names" class="wheel-names" spellcheck="false"
+     placeholder="Одно имя в строке.&#10;Чтобы дать кому-то больше шансов — впишите его несколько раз."></textarea>
+   <div class="wheel-btns">
+    <button class="chip" id="shuffle" type="button">Перемешать</button>
+    <button class="chip" id="clear" type="button">Очистить</button>
+    <button class="chip" id="restore" type="button" hidden>Вернуть выбывших</button>
+   </div>
+  </div>
+
+  <div class="card">
+   <h2 class="wheel-h2">Взять из архива</h2>
+   <p class="cap">Заказчики, которые приносили треки. Список подтянется из той же таблицы, что и вся статистика.</p>
+   <div class="wheel-btns">
+    <select id="src">
+     <option value="year">кто приносил в этом году</option>
+     <option value="all">все заказчики</option>
+     <option value="regular">кто принёс хотя бы 5 треков</option>
+     <option value="never">кому ещё ни разу не выпадало «гениально»</option>
+    </select>
+    <button class="chip" id="load" type="button">Подставить</button>
+   </div>
+   <p class="cap" id="loadNote"></p>
+  </div>
+
+  <div class="card">
+   <h2 class="wheel-h2">Из чата стрима</h2>
+   <p class="cap" id="chatNote">Собрать тех, кто писал в чат за последний час. Работает, только когда идёт эфир.</p>
+   <div class="wheel-btns">
+    <button class="chip" id="chat" type="button">Взять из чата</button>
+   </div>
+  </div>
+ </aside>
+
+</div>
+
+<footer><div class="wrap">
+ <p class="cap">Неофициальный фанатский проект. <a href="./">Статистика архива</a> · <a href="https://twitch.tv/farymacomposer" target="_blank" rel="noopener noreferrer">Твич композитора</a></p>
+</div></footer>
+
+<script src="vendor/papaparse.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/aliases.js"></script>
+<script src="js/parse.js"></script>
+<script src="js/wheel.js"></script>
+</body>
+</html>

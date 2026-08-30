@@ -662,3 +662,56 @@ a.pf-tag-l:hover{border-color:var(--brand);color:var(--ink)}
 .pf-almost .al{background:var(--panel2,var(--panel))}
 .al-more{color:var(--dim);font-style:italic}
 .pf-note{color:var(--dim);font-size:12.5px;margin:0 0 9px}
+
+/* ============================================================
+   КОЛЕСО СУДЬБЫ (wheel.html)
+   ============================================================ */
+.wheel-page{display:grid;gap:20px;align-items:start;padding-bottom:60px}
+@media(min-width:1000px){.wheel-page{grid-template-columns:1fr 360px}}
+
+.wheel-main{display:flex;flex-direction:column;gap:18px;min-width:0}
+.wheel-box{position:relative;width:100%;max-width:640px;margin:0 auto;aspect-ratio:1}
+.wheel-box canvas{width:100%;height:100%;display:block;
+  filter:drop-shadow(0 8px 30px rgba(0,0,0,.5))}
+
+/* Указатель справа: колесо крутится к нему, угол 0 — это «три часа» */
+.wheel-pin{position:absolute;top:50%;right:-6px;transform:translateY(-50%);
+  width:0;height:0;border-top:15px solid transparent;border-bottom:15px solid transparent;
+  border-right:26px solid var(--brand);
+  filter:drop-shadow(0 2px 4px rgba(0,0,0,.6))}
+
+.wheel-go{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:23%;height:23%;border-radius:50%;border:2px solid var(--line);
+  background:var(--bg);color:var(--ink);cursor:pointer;
+  font-family:var(--m);font-size:13px;letter-spacing:.06em;text-transform:uppercase;
+  transition:border-color .15s,color .15s}
+.wheel-go:hover:not(:disabled){border-color:var(--brand);color:var(--brand-hi)}
+.wheel-go:disabled{opacity:.45;cursor:default}
+.wheel-go:focus-visible{outline:2px solid var(--brand);outline-offset:3px}
+
+.wheel-out{border:1px solid var(--brand);border-radius:3px;background:var(--panel);
+  padding:16px 18px;text-align:center}
+.wheel-out-k{font-family:var(--m);font-size:10px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--brand)}
+.wheel-out-n{font-family:var(--d);font-weight:600;font-size:clamp(22px,5vw,38px);
+  line-height:1.15;margin:8px 0 14px;overflow-wrap:anywhere}
+.wheel-out-b{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+
+.wheel-log{border:1px solid var(--line);border-radius:3px;background:var(--panel);padding:14px 16px}
+.wheel-log-list{margin:0;padding-left:22px;color:var(--dim);font-size:14px;
+  display:grid;gap:4px;max-height:220px;overflow:auto}
+.wheel-log-list li{overflow-wrap:anywhere}
+
+.wheel-side{display:flex;flex-direction:column;gap:14px;min-width:0}
+.wheel-hd{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.wheel-hd h2,.wheel-h2{font-family:var(--d);font-size:16px;font-weight:600;margin:0 0 4px}
+.wheel-n{font-family:var(--m);font-size:20px;color:var(--brand-hi);
+  font-variant-numeric:tabular-nums}
+.wheel-names{width:100%;min-height:230px;resize:vertical;margin:10px 0;
+  background:var(--bg);border:1px solid var(--line);border-radius:2px;
+  color:var(--ink);font-family:var(--m);font-size:13px;line-height:1.6;padding:10px 12px}
+.wheel-names:focus{outline:none;border-color:var(--brand)}
+.wheel-btns{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.wheel-btns select{flex:1;min-width:180px}
+.back{color:var(--dim);text-decoration:none;border-bottom:1px solid transparent}
+.back:hover{color:var(--brand-hi);border-color:currentColor}
