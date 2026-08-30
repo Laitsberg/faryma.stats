@@ -459,6 +459,51 @@ function renderUniverses(rows) {
     summarize(rows, r => r.source || null, MIN_N.source), 16);
 }
 
+/* ---------- что было на последнем эфире ----------
+   Зашёл на сайт — и сразу видно, что архив живой и чем закончился
+   вчерашний стрим. Одна строка: номер, дата, сколько треков, средний
+   балл и лучший трек.
+
+   Эфир считается состоявшимся, когда в таблице появилась ссылка на
+   запись. Пока её нет, там стоит «СКОРО»: строку заводят заранее и
+   заполняют по ходу разбора. Отчитываться по ней нельзя — в стриме
+   №273 было шесть оценок из семнадцати треков, и «средний 5.00»
+   сказал бы неправду о вечере, который ещё идёт. Про такой эфир
+   упоминаем отдельно, а числа берём с последнего завершённого. */
+function renderFresh() {
+  const el = $('fresh');
+  const готовые = STREAMS.filter(s => s.vod &&
+    ROWS.some(r => r.streamNum === s.num)).map(s => s.num);
+  if (!готовые.length) { el.hidden = true; return; }
+
+  const номер = Math.max(...готовые);
+  const rows = ROWS.filter(r => r.streamNum === номер);
+  if (!rows.length) { el.hidden = true; return; }
+  el.hidden = false;
+
+  // эфир, который прямо сейчас разбирают: номер больше, записи ещё нет
+  const идёт = STREAMS.filter(s => !s.vod && s.num > номер)
+    .sort((a, b) => b.num - a.num)[0];
+
+  const st = STREAMS.find(s => s.num === номер);
+  const дата = st?.date ? st.date.toLocaleDateString('ru-RU',
+    { day: 'numeric', month: 'long' }) : '';
+  const балл = avg(rows.map(r => r.rate.score));
+  const лучший = [...rows].sort((a, b) =>
+    SCALE_ORDER.indexOf(a.rate.label) - SCALE_ORDER.indexOf(b.rate.label))[0];
+
+  el.innerHTML =
+    `<span class="fr-k">последний эфир</span>` +
+    `<span><a class="pf-link" href="#stream=${номер}" data-stream="${номер}">стрим №${номер}</a>` +
+    (дата ? `, ${esc(дата)}` : '') + `</span>` +
+    `<span class="fr-n"><b>${num(rows.length)}</b> ` +
+      plural(rows.length, 'трек', 'трека', 'треков') +
+      ` · средний <b>${f2(балл)}</b></span>` +
+    (лучший ? `<span>лучшее: ${artistNames(лучший.artist)} — <b>${esc(лучший.title)}</b> ` +
+      `${ratePill(лучший.rate.label)}</span>` : '') +
+    (идёт ? `<span class="fr-live">стрим №${идёт.num} уже разбирают</span>` : '');
+}
+
 /* ---------- почти собрали ----------
    Раздел появляется, только когда каталог доехал: без него сказать,
    чего не хватает, нечем. */

@@ -287,6 +287,7 @@ function fillCountryFilter() {
 function render() {
   const rows = cur();       // ступень и год
   const year = byYear();    // только год
+  renderFresh();            // всегда по всему архиву: это про свежесть
   renderLadder(year);
   renderDock(year);
   renderYears();
@@ -353,13 +354,22 @@ function initNav() {
     title: h.querySelector('h2')?.textContent.trim() || ''
   })).filter(x => x.el);
 
-  panel.innerHTML =
-    `<button class="nv-item nv-top" data-i="-1"><b>↑</b><span>В начало</span></button>` +
-    items.map((x, i) =>
-      `<button class="nv-item" data-i="${i}"><b>${esc(x.num)}</b><span>${esc(x.title)}</span></button>`
-    ).join('');
+  /* Список собирается заново при каждом открытии. Часть разделов
+     появляется позже страницы или прячется вовсе: «Почти собрали» ждёт
+     каталог, «Оценки вне шкалы» и «Менял ли он мнение» пропадают под
+     фильтром по году. Собранный один раз список звал бы к пустому
+     месту. */
+  const нарисовать = () => {
+    panel.innerHTML =
+      `<button class="nv-item nv-top" data-i="-1"><b>↑</b><span>В начало</span></button>` +
+      items.map((x, i) => x.el.offsetParent === null ? '' :
+        `<button class="nv-item" data-i="${i}"><b>${esc(x.num)}</b><span>${esc(x.title)}</span></button>`
+      ).join('');
+  };
+  нарисовать();
 
   const open = v => {
+    if (v) нарисовать();
     panel.hidden = !v;
     nav.classList.toggle('on', v);
     btn.setAttribute('aria-expanded', v ? 'true' : 'false');

@@ -646,3 +646,15 @@ a.pf-tag-l:hover{border-color:var(--brand);color:var(--ink)}
 .al-m span{overflow-wrap:anywhere}
 .al-s{font-family:var(--m);font-size:10px;color:var(--brand);
   letter-spacing:.06em;margin-right:6px}
+
+/* Свежесть: что было на последнем эфире. Одна строка, чтобы не
+   отодвигать поиск, и переносится на узком экране. */
+.fresh{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;
+  border:1px solid var(--line);border-left:2px solid var(--brand);
+  border-radius:3px;background:var(--panel);padding:10px 13px;margin:0 0 14px;
+  font-size:13px;color:var(--dim)}
+.fresh b{color:var(--ink);font-weight:600}
+.fresh .fr-k{font-family:var(--m);font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--brand);flex:none}
+.fresh .fr-n{font-variant-numeric:tabular-nums}
+.fresh .fr-live{color:var(--brand-hi);font-family:var(--m);font-size:11px}

@@ -298,3 +298,46 @@ test('ссылки из «Почти собрали» открывают кар�
   await page.goto(srv.base + '/index.html', { waitUntil: 'networkidle' });
   await page.waitForFunction(() => typeof ROWS !== 'undefined' && ROWS.length > 0);
 });
+
+test('полоса свежести показывает завершённый эфир, а не идущий', async () => {
+  const итог = await page.evaluate(() => {
+    const готовые = STREAMS.filter(s => s.vod && ROWS.some(r => r.streamNum === s.num))
+      .map(s => s.num);
+    const n = Math.max(...готовые);
+    const rows = ROWS.filter(r => r.streamNum === n);
+    const текст = document.getElementById('fresh').textContent;
+    return {
+      виден: !document.getElementById('fresh').hidden,
+      номерВПолосе: +(текст.match(/стрим №(\d+)/) || [])[1],
+      ожидаемый: n,
+      треков: rows.length,
+      вПолосе: +(текст.match(/(\d+)\s+трек/) || [])[1],
+      // у показанного эфира обязана быть ссылка на запись
+      сЗаписью: !!STREAMS.find(s => s.num === n)?.vod
+    };
+  });
+  assert.equal(итог.виден, true);
+  assert.equal(итог.номерВПолосе, итог.ожидаемый);
+  assert.equal(итог.вПолосе, итог.треков);
+  assert.equal(итог.сЗаписью, true);
+});
+
+test('навигация не зовёт в скрытые разделы', async () => {
+  const итог = await page.evaluate(async () => {
+    document.getElementById('secAlmost').style.display = 'none';
+    document.getElementById('nvBtn').click();     // открыть
+    await new Promise(r => setTimeout(r, 100));
+    const скрытый = [...document.querySelectorAll('#nvPanel .nv-item span')]
+      .some(s => s.textContent === 'Почти собрали');
+    document.getElementById('secAlmost').style.display = '';
+    document.getElementById('nvBtn').click();     // закрыть
+    document.getElementById('nvBtn').click();     // открыть заново
+    await new Promise(r => setTimeout(r, 100));
+    const видимый = [...document.querySelectorAll('#nvPanel .nv-item span')]
+      .some(s => s.textContent === 'Почти собрали');
+    document.getElementById('nvBtn').click();
+    return { скрытый, видимый };
+  });
+  assert.equal(итог.скрытый, false, 'скрытый раздел остался в навигации');
+  assert.equal(итог.видимый, true, 'видимый раздел пропал из навигации');
+});
