@@ -198,13 +198,28 @@ test('отбор попадает в адрес и открывается по �
     q: document.getElementById('q').value,
     rate: document.getElementById('fRate').value,
     year: FILTER.year,
-    найдено: document.getElementById('searchCount').textContent
+    найдено: document.getElementById('searchCount').textContent,
+    // и страница должна открыться на самом поиске: иначе человек видит
+    // шапку сайта и решает, что ссылка не сработала
+    поискСверху: Math.round(document.getElementById('secSearch').getBoundingClientRect().top)
   }));
   await p2.close();
   assert.equal(восстановлено.q, 'unravel');
   assert.equal(восстановлено.rate, 'ступень:гениально');
   assert.equal(восстановлено.year, 2025);
   assert.match(восстановлено.найдено, /найдено/);
+  assert.ok(Math.abs(восстановлено.поискСверху) < 60,
+    `поиск оказался в ${восстановлено.поискСверху}px от верха`);
+});
+
+test('без отбора страница остаётся на шапке', async () => {
+  const p2 = await brw.newPage({ viewport: { width: 1440, height: 900 } });
+  await p2.goto(srv.base + '/index.html', { waitUntil: 'networkidle' });
+  await p2.waitForFunction(() => typeof ROWS !== 'undefined' && ROWS.length > 0);
+  await p2.waitForTimeout(700);
+  const прокрутка = await p2.evaluate(() => Math.round(scrollY));
+  await p2.close();
+  assert.equal(прокрутка, 0, 'страница уехала вниз без причины');
 });
 
 test('страна из ссылки доживает до приезда списка стран', async () => {

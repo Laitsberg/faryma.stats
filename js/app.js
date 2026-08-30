@@ -210,12 +210,12 @@ function build(raw) {
   $('app').style.display = '';
   applyCountries();
   initControls();
-  const поСсылке = отборИзАдреса();
+  отборИзАдреса();
   render();
 
   // Пришли по ссылке с отбором — покажем сам отбор, а не шапку сайта.
   // Если в адресе ещё и карточка, ею займётся routeProfile.
-  if (поСсылке && !location.hash)
+  if (ПРИШЛИ_С_ОТБОРОМ && !location.hash)
     requestAnimationFrame(() => $('secSearch').scrollIntoView({ block: 'start' }));
   else if (location.hash) requestAnimationFrame(якорьРаздела);
   initGame();
@@ -457,6 +457,12 @@ const URL_FIELDS = [
    стран, и страна из ссылки пропадала. Применённое вычёркиваем, чтобы
    повторный вызов не возвращал то, что человек только что сбросил. */
 const ОТБОР_ИЗ_ССЫЛКИ = new URLSearchParams(location.search);
+/* Пришли ли мы по ссылке с отбором. Запоминаем один раз: применённые
+   ключи из ОТБОР_ИЗ_ССЫЛКИ вычёркиваются по ходу, и спрашивать её об
+   этом позже бессмысленно. Из-за этого ссылка вида /?q=unravel
+   отрабатывала наполовину: фильтр применялся, а страница оставалась
+   на шапке — человек видел главную и решал, что ссылка не работает. */
+const ПРИШЛИ_С_ОТБОРОМ = [...ОТБОР_ИЗ_ССЫЛКИ.keys()].length > 0;
 
 function отборВАдрес() {
   const p = new URLSearchParams();
@@ -500,6 +506,7 @@ function отборИзАдреса() {
   if (ступень && TIERS.some(t => t.key === ступень)) { FILTER.tier = ступень; p.delete('tier'); }
   return было;
 }
+
 
 /* ---------- поиск ---------- */
 const SEARCH_LIMIT = 300;
