@@ -175,6 +175,10 @@ function build(raw) {
       spId:    link ? spotifyId(link.url)   : '',
       yaId:    link ? yandexTrack(link.url) : '',
       search: (w.full + ' ' + user).toLowerCase(),
+      // то же без пробелов и знаков: «KICK BACK» и «KICKBACK» — одна
+      // песня, и спросить могут любым из двух способов. Считаем один
+      // раз здесь: делать это на каждую букву в поле поиска дорого
+      searchFlat: (w.full + ' ' + user).toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ''),
       parts: w.artist ? participants(w.artist, soloKeys).map(x => canonKey(nameKey(x))) : [],
       streamNum: stream ? stream.num : null,
       date: stream ? stream.date : null,
@@ -498,7 +502,16 @@ function renderSearch() {
   const fc = $('fCountry').value;
 
   let rows = cur();
-  if (q)  rows = rows.filter(r => r.search.includes(q));
+  if (q) {
+    // Короткие запросы ищем как есть: «ost» без пробелов совпал бы
+    // с половиной архива. Длинные — ещё и в сжатом виде, чтобы
+    // «kick back» находил «KICKBACK». Так же устроен поиск у бота
+    // в чате, и ссылка из его ответа ведёт к тому же результату.
+    const плоский = q.replace(/[^\p{L}\p{N}]+/gu, '');
+    rows = плоский.length >= 4
+      ? rows.filter(r => r.search.includes(q) || r.searchFlat.includes(плоский))
+      : rows.filter(r => r.search.includes(q));
+  }
   if (fr) rows = fr.startsWith(TIER_OPT)
     ? rows.filter(r => r.rate.tier === fr.slice(TIER_OPT.length))
     : rows.filter(r => r.rate.label === fr);

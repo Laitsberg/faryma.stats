@@ -382,3 +382,23 @@ test('в карточке заказчика видно, чего не хват�
   await page.goto(srv.base + '/index.html', { waitUntil: 'networkidle' });
   await page.waitForFunction(() => typeof ROWS !== 'undefined' && ROWS.length > 0);
 });
+
+test('поиск на сайте и в чате находят одно и то же', async () => {
+  const итог = await page.evaluate(() => {
+    const найти = q => {
+      document.getElementById('q').value = q;
+      document.getElementById('fRate').value = '';
+      renderSearch();
+      return +(document.getElementById('searchCount').textContent
+        .match(/найдено\s+([\d\s  ]+)/) || [])[1].replace(/\D/g, '');
+    };
+    const через = найти('kick back');
+    const слитно = найти('kickback');
+    найти('');
+    return { через, слитно };
+  });
+  // «KICK BACK» и «KICKBACK» — одна песня; бот в чате отвечает на оба
+  // запроса одинаково, и ссылка из его ответа должна вести к тому же
+  assert.ok(итог.через >= 2, `«kick back» нашёл ${итог.через}`);
+  assert.equal(итог.через, итог.слитно, 'пробел в запросе меняет результат');
+});
