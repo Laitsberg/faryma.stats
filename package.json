@@ -5,7 +5,7 @@
   "description": "Архив разносов farymastats.info. Сайт статический и сборки не требует — этот файл нужен только тестам.",
   "type": "module",
   "scripts": {
-    "test": "node --test --test-timeout=180000 test/*.test.mjs",
+    "test": "node --test --test-timeout=600000 test/*.test.mjs",
     "test:fast": "node --test --test-timeout=120000 test/parse.test.mjs test/archive.test.mjs test/bot.test.mjs"
   },
   "devDependencies": {

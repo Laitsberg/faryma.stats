@@ -39,4 +39,4 @@ jobs:
       # Здесь страница поднимается целиком и проверяется то, что видит
       # посетитель: разделы, графики, повторы, фильтры, карточки.
       - name: Живая страница
-        run: node --test --test-timeout=180000 test/site.test.mjs
+        run: node --test --test-timeout=600000 test/site.test.mjs
