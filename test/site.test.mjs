@@ -174,3 +174,88 @@ test('страница не разъезжается по ширине', async (
     assert.equal(шире, false, `на ${w}px страница едет вбок`);
   }
 });
+
+test('отбор попадает в адрес и открывается по ссылке', async () => {
+  // выставляем отбор руками и смотрим, что он оказался в адресе
+  const адрес = await page.evaluate(() => {
+    document.getElementById('q').value = 'unravel';
+    document.getElementById('fRate').value = 'ступень:гениально';
+    FILTER.year = 2025;
+    render();
+    return location.search;
+  });
+  assert.match(адрес, /q=unravel/);
+  assert.match(адрес, /rate=/);
+  assert.match(адрес, /year=2025/);
+
+  // теперь открываем этот адрес заново — отбор должен восстановиться
+  const p2 = await brw.newPage({ viewport: { width: 1440, height: 1000 } });
+  await p2.goto(srv.base + '/index.html' + адрес, { waitUntil: 'networkidle' });
+  await p2.waitForFunction(() => typeof ROWS !== 'undefined' && ROWS.length > 0,
+    null, { timeout: 30000 });
+  await p2.waitForTimeout(600);
+  const восстановлено = await p2.evaluate(() => ({
+    q: document.getElementById('q').value,
+    rate: document.getElementById('fRate').value,
+    year: FILTER.year,
+    найдено: document.getElementById('searchCount').textContent
+  }));
+  await p2.close();
+  assert.equal(восстановлено.q, 'unravel');
+  assert.equal(восстановлено.rate, 'ступень:гениально');
+  assert.equal(восстановлено.year, 2025);
+  assert.match(восстановлено.найдено, /найдено/);
+});
+
+test('страна из ссылки доживает до приезда списка стран', async () => {
+  // Список стран собирается позже таблицы. Если бы отбор применялся
+  // только один раз, страна из ссылки молча терялась бы.
+  const страна = await page.evaluate(() =>
+    document.querySelector('#fCountry option:nth-child(2)').value);
+  const p2 = await brw.newPage({ viewport: { width: 1440, height: 1000 } });
+  await p2.goto(`${srv.base}/index.html?country=${encodeURIComponent(страна)}`,
+    { waitUntil: 'networkidle' });
+  await p2.waitForFunction(() => typeof ROWS !== 'undefined' && ROWS.some(r => r.country),
+    null, { timeout: 30000 });
+  await p2.waitForTimeout(600);
+  const [выбрано, видно, вданных] = await p2.evaluate(c => [
+    document.getElementById('fCountry').value,
+    document.getElementById('searchCount').textContent,
+    ROWS.filter(r => r.country === c).length
+  ], страна);
+  await p2.close();
+  assert.equal(выбрано, страна);
+  assert.equal(+видно.match(/найдено\s+([\d\s  ]+)/)[1].replace(/\D/g, ''), вданных);
+});
+
+test('сброс очищает и отбор, и адрес', async () => {
+  const после = await page.evaluate(() => {
+    document.getElementById('q').value = 'test';
+    document.getElementById('fRate').value = 'гениально';
+    FILTER.year = 2024; render();
+    document.getElementById('reset').click();
+    return { search: location.search, q: document.getElementById('q').value,
+             rate: document.getElementById('fRate').value, year: FILTER.year };
+  });
+  assert.equal(после.search, '');
+  assert.equal(после.q, '');
+  assert.equal(после.rate, '');
+  assert.equal(после.year, null);
+});
+
+test('карточка поверх отбора не съедает отбор', async () => {
+  const итог = await page.evaluate(async () => {
+    document.getElementById('q').value = 'unravel'; renderSearch();
+    const был = location.search;
+    location.hash = 'stream=100';
+    await new Promise(r => setTimeout(r, 400));
+    const сКарточкой = location.search;
+    closeProfile();
+    await new Promise(r => setTimeout(r, 400));
+    return { был, сКарточкой, после: location.search,
+             q: document.getElementById('q').value };
+  });
+  assert.equal(итог.сКарточкой, итог.был, 'отбор пропал при открытии карточки');
+  assert.equal(итог.после, итог.был, 'отбор пропал при закрытии карточки');
+  assert.equal(итог.q, 'unravel');
+});

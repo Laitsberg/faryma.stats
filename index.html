@@ -73,7 +73,7 @@
 
   <div class="kpis" id="kpis"></div>
 
-  <section>
+  <section id="secSearch">
    <div class="shd"><span class="ch">01</span><h2>Поиск по архиву</h2></div>
    <p class="note">Прежде чем нести трек — проверь, не разносили ли его. Ищет по исполнителю, названию трека, заказчику, а ещё по игре или аниме: набери «genshin» или «durarara». Название трека ведёт на площадку, откуда его приносили, кнопка «разнос» — на запись с нужной минуты. А по имени исполнителя, заказчика, вселенной или по номеру стрима открывается карточка: все разносы разом.</p>
    <div class="search">
@@ -87,7 +87,10 @@
    <div class="card">
     <div class="sortbar"></div>
     <div class="scroll"><table id="tSearch"></table></div>
-    <div class="cap" id="searchCount" style="margin:10px 0 0"></div>
+    <div class="searchfoot">
+     <div class="cap" id="searchCount"></div>
+     <button class="sharelink" id="shareSearch" type="button" hidden>скопировать ссылку на этот отбор</button>
+    </div>
    </div>
   </section>
   <section>

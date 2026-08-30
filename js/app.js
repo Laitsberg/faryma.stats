@@ -203,7 +203,13 @@ function build(raw) {
   $('app').style.display = '';
   applyCountries();
   initControls();
+  const поСсылке = отборИзАдреса();
   render();
+
+  // Пришли по ссылке с отбором — покажем сам отбор, а не шапку сайта.
+  // Если в адресе ещё и карточка, ею займётся routeProfile.
+  if (поСсылке && !location.hash)
+    requestAnimationFrame(() => $('secSearch').scrollIntoView({ block: 'start' }));
   initGame();
   initProfile();
   initNav();
@@ -271,6 +277,7 @@ function fillCountryFilter() {
     .sort((a, b) => b[1].length - a[1].length)
     .forEach(([c, rs]) => sel.add(new Option(`${c} (${rs.length})`, c)));
   if (было && [...sel.options].some(o => o.value === было)) sel.value = было;
+  else отборИзАдреса();   // страна из ссылки: к первой сборке списка ещё не было
 }
 
 /* ---------- отрисовка ---------- */
@@ -395,6 +402,72 @@ function initNav() {
   }, { threshold: 0 }).observe(head);
 }
 
+/* ---------- отбор в адресе ----------
+   Раньше фильтры жили только в браузере: кинуть в чат ссылку «все
+   гениально из Японии за 2026-й» было нельзя, приходилось объяснять
+   словами, что нажать.
+
+   Живут они в строке запроса, а не в хэше. Хэш занят карточками
+   (#artist=…, #user=…, #stream=…), и подмешивать туда отбор значило бы
+   ломать кнопку «назад». А строка запроса статическому сайту ничего не
+   стоит: сервер её просто не замечает, отдаёт ту же страницу, а
+   разбирает всё уже сама страница. Заодно карточку можно открыть
+   поверх отбора, и после её закрытия отбор останется на месте. */
+const URL_FIELDS = [
+  ['q', 'q'], ['rate', 'fRate'], ['user', 'fUser'],
+  ['origin', 'fOrigin'], ['genre', 'fGenre'], ['country', 'fCountry']
+];
+
+/* Отбор из ссылки читаем один раз, при загрузке страницы. Дальше адрес
+   переписываем мы сами, и перечитывать оттуда уже нечего: первая же
+   отрисовка поиска затирала строку запроса раньше, чем приезжал список
+   стран, и страна из ссылки пропадала. Применённое вычёркиваем, чтобы
+   повторный вызов не возвращал то, что человек только что сбросил. */
+const ОТБОР_ИЗ_ССЫЛКИ = new URLSearchParams(location.search);
+
+function отборВАдрес() {
+  const p = new URLSearchParams();
+  for (const [ключ, id] of URL_FIELDS) {
+    const v = ($(id)?.value || '').trim();
+    if (v) p.set(ключ, v);
+  }
+  if (FILTER.year) p.set('year', FILTER.year);
+  if (FILTER.tier) p.set('tier', FILTER.tier);
+
+  const строка = p.toString();
+  const адрес = location.pathname + (строка ? '?' + строка : '') + location.hash;
+  // replaceState, а не push: набор строки в поиске не должен плодить
+  // десяток шагов истории на каждую букву
+  if (адрес !== location.pathname + location.search + location.hash)
+    history.replaceState(history.state, '', адрес);
+
+  const кнопка = $('shareSearch');
+  if (кнопка) кнопка.hidden = !строка;
+}
+
+/* Применяет отбор из адреса. Вызывается дважды: при сборке и после
+   того, как приехали страны, — их список к первому разу ещё пуст, и
+   выбрать в нём страну невозможно. Повторный вызов ничего не портит. */
+function отборИзАдреса() {
+  const p = ОТБОР_ИЗ_ССЫЛКИ;
+  const было = [...p.keys()].length > 0;
+  for (const [ключ, id] of URL_FIELDS) {
+    const v = p.get(ключ);
+    const el = $(id);
+    if (v == null || !el) continue;
+    // значения из ссылки чужие: в список выбора ставим только то,
+    // что в нём действительно есть
+    if (el.tagName === 'SELECT' && ![...el.options].some(o => o.value === v)) continue;
+    el.value = v;
+    p.delete(ключ);
+  }
+  const год = +p.get('year');
+  if (год) { FILTER.year = год; p.delete('year'); }
+  const ступень = p.get('tier');
+  if (ступень && TIERS.some(t => t.key === ступень)) { FILTER.tier = ступень; p.delete('tier'); }
+  return было;
+}
+
 /* ---------- поиск ---------- */
 const SEARCH_LIMIT = 300;
 
@@ -422,6 +495,7 @@ function renderSearch() {
 
   $('searchCount').textContent = `найдено ${num(rows.length)}` +
     (rows.length > SEARCH_LIMIT ? ` · показаны первые ${SEARCH_LIMIT}` : '');
+  отборВАдрес();
 
   // Обрезкой занимается table(): она сортирует весь набор и только
   // потом берёт первые SEARCH_LIMIT. Иначе сортировка по колонке
@@ -509,7 +583,27 @@ function initControls() {
   // съедала этот клик. Списки 'input' тоже отправляют.
   ['q', 'fRate', 'fUser', 'fOrigin', 'fGenre', 'fCountry'].forEach(id =>
     $(id).addEventListener('input', renderSearch));
-  const сбросить = () => { FILTER.tier = null; FILTER.year = null; render(); };
+  const сбросить = () => {
+    FILTER.tier = null; FILTER.year = null;
+    [...ОТБОР_ИЗ_ССЫЛКИ.keys()].forEach(k => ОТБОР_ИЗ_ССЫЛКИ.delete(k));
+    for (const [, id] of URL_FIELDS) { const el = $(id); if (el) el.value = ''; }
+    render();
+  };
+
+  // «скопировать ссылку»: на телефоне выделять адресную строку неудобно
+  $('shareSearch').onclick = async e => {
+    const кнопка = e.currentTarget;
+    const было = кнопка.textContent;
+    try {
+      await navigator.clipboard.writeText(location.href);
+      кнопка.textContent = 'ссылка скопирована';
+    } catch {
+      // без разрешения на буфер обмена — хотя бы выделим адрес
+      кнопка.textContent = 'скопируйте адрес страницы';
+    }
+    кнопка.classList.add('ok');
+    setTimeout(() => { кнопка.textContent = было; кнопка.classList.remove('ok'); }, 2000);
+  };
   $('reset').onclick = сбросить;
   $('dockReset').onclick = сбросить;
   initDock();

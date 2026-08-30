@@ -618,3 +618,15 @@ a.pf-tag-l:hover{border-color:var(--brand);color:var(--ink)}
 /* в плавающем дубле год — такая же плашка, как ступень */
 .dock-years{margin-top:4px}
 .chip.yr-chip b{margin-left:5px}
+
+/* Подвал поиска: счётчик найденного и кнопка «поделиться отбором».
+   На узком экране кнопка уходит под счётчик, а не жмётся к нему. */
+.searchfoot{display:flex;flex-wrap:wrap;align-items:center;gap:10px;
+  justify-content:space-between;margin:10px 0 0}
+.sharelink{background:none;border:1px solid var(--line);border-radius:2px;
+  color:var(--dim);font-family:var(--m);font-size:11px;
+  padding:0 10px;min-height:30px;cursor:pointer;white-space:nowrap;
+  transition:border-color .12s,color .12s}
+.sharelink:hover{color:var(--ink);border-color:var(--brand)}
+.sharelink:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.sharelink.ok{color:var(--brand-hi);border-color:var(--brand)}
