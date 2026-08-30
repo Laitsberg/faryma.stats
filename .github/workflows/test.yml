@@ -36,7 +36,9 @@ jobs:
           npm install --no-audit --no-fund
           npx playwright install --with-deps chromium
 
-      # Здесь страница поднимается целиком и проверяется то, что видит
-      # посетитель: разделы, графики, повторы, фильтры, карточки.
-      - name: Живая страница
-        run: node --test --test-timeout=600000 test/site.test.mjs
+      # Здесь страницы поднимаются целиком и проверяется то, что видит
+      # посетитель: разделы, графики, повторы, фильтры, карточки, колесо.
+      # По одному файлу за раз: три Chromium разом душат раннер, и он
+      # падает на пустом месте.
+      - name: Живые страницы
+        run: node --test --test-concurrency=1 --test-timeout=600000 test/site.test.mjs test/wheel.test.mjs test/chat-wheel.test.mjs
