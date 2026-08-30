@@ -1,0 +1,176 @@
+/* ============================================================
+   ЖИВАЯ СТРАНИЦА
+   ------------------------------------------------------------
+   Здесь проверяется ровно то, что видит посетитель: страница
+   поднимается целиком, со всеми словарями имён, разделами и
+   графиками. Чистые тесты парсера этого не достают — сегодняшняя
+   ошибка с повторами жила именно в связке данных и раздела.
+   ============================================================ */
+
+import { test, before, after } from 'node:test';
+import assert from 'node:assert/strict';
+import { startServer, browser } from './helpers.mjs';
+
+let srv, brw, page;
+const ошибки = [];
+
+/* «найдено 517 · показаны первые 300» — нужно только первое число */
+const НАЙДЕНО = `window.найдено = () => {
+  const m = document.getElementById('searchCount').textContent.match(/найдено\\s+([\\d\\s\u00a0\u202f]+)/);
+  return m ? +m[1].replace(/\\D/g, '') : NaN;
+};`;
+
+before(async () => {
+  srv = await startServer();
+  brw = await browser();
+  page = await brw.newPage({ viewport: { width: 1440, height: 1000 } });
+  page.on('pageerror', e => ошибки.push('падение: ' + e.message));
+  // сетевые не считаем: в песочнице закрыт доступ к шрифтам Google
+  page.on('console', m => { if (m.type() === 'error' && !/net::|Failed to load resource/.test(m.text()))
+    ошибки.push('консоль: ' + m.text()); });
+  await page.goto(srv.base + '/index.html', { waitUntil: 'networkidle' });
+  await page.waitForSelector('#app', { state: 'visible', timeout: 30000 });
+  // ROWS объявлена через let: такие переменные видны как имя, но
+  // свойством window не становятся — window.ROWS всегда undefined
+  await page.waitForFunction(() => typeof ROWS !== 'undefined' && ROWS.length > 0,
+    null, { timeout: 30000 });
+  // страны и каталог приезжают отдельными файлами
+  await page.waitForFunction(() => ROWS.some(r => r.country), null, { timeout: 30000 });
+  await page.evaluate(НАЙДЕНО);
+});
+
+after(async () => { await brw?.close(); srv?.server.close(); });
+
+test('страница поднимается без ошибок', () => {
+  assert.deepEqual(ошибки, []);
+});
+
+test('в шапке живые числа', async () => {
+  const stamp = await page.$eval('.stamp', e => e.textContent.replace(/\s+/g, ' '));
+  assert.match(stamp, /разносов в архиве: [\d\s ]{4,}/);
+  assert.match(stamp, /обновлено \d+ \S+ \d{4}/);
+});
+
+test('все разделы на месте и не пустые', async () => {
+  const пустые = await page.$$eval('section', ns => ns
+    .filter(n => getComputedStyle(n).display !== 'none')
+    .filter(n => n.textContent.replace(/\s+/g, '').length < 40)
+    .map(n => n.querySelector('h2')?.textContent || n.id));
+  assert.deepEqual(пустые, [], 'раздел показан, но пуст');
+  const всего = await page.$$eval('section', ns => ns.length);
+  assert.ok(всего >= 18, `разделов всего ${всего}`);
+});
+
+test('графики действительно нарисованы', async () => {
+  const плохие = await page.evaluate(() => [...document.querySelectorAll('canvas')]
+    .filter(c => c.offsetParent !== null)              // только видимые
+    .filter(c => { const ch = Chart.getChart(c);
+      return !ch || !ch.data.datasets.some(d => d.data.length); })
+    .map(c => c.id));
+  assert.deepEqual(плохие, [], 'график пуст');
+});
+
+test('каждая пара повторов — один и тот же трек', async () => {
+  // Сайт брал из пометки номер стрима и номер трека и подставлял то,
+  // что лежит на этом месте, без проверки. Пометки считают эфиры
+  // с единицы, а архив — с нуля, и в графе «было» оказывалась оценка
+  // чужого трека. Эта проверка — про то, чтобы такое не вернулось.
+  const пары = await page.evaluate(() => {
+    const n = s => String(s || '').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+    const похоже = (x, y) => { const a = n(x), b = n(y);
+      return !!a && !!b && (a === b || a.includes(b) || b.includes(a)); };
+    return repeatPairs().map(p => {
+      // Совпасть должно название ИЛИ исполнитель. Обоих сразу требовать
+      // нельзя: в архиве есть законные пары, где второй раз принесли
+      // другую версию — кавер «What's up, people?!» и оригинал,
+      // «Криминальная Россия» в главной теме и в вариации. А вот когда
+      // не сходится ни то ни другое — это подставленный чужой трек.
+      return { совпало: похоже(p.src.title, p.again.title) ||
+                        похоже(p.src.artist, p.again.artist),
+               было: p.src.rate?.label, стало: p.again.rate?.label,
+               что: `${p.again.artist} — ${p.again.title}`,
+               нашли: `${p.src.artist} — ${p.src.title} (№${p.src.streamNum})` };
+    });
+  });
+  assert.ok(пары.length >= 25, `пар всего ${пары.length}`);
+  assert.deepEqual(пары.filter(p => !p.совпало), [], 'в паре разные треки');
+  assert.deepEqual(пары.filter(p => !p.было || !p.стало), [], 'у пары нет оценки');
+});
+
+test('ссылки на эфиры ведут в существующие эфиры', async () => {
+  const битые = await page.evaluate(() => {
+    const есть = new Set(ROWS.map(r => r.streamNum));
+    return [...document.querySelectorAll('a[href^="#stream="]')]
+      .map(a => +a.getAttribute('href').slice(8))
+      .filter(n => !есть.has(n));
+  });
+  assert.deepEqual([...new Set(битые)], [], 'ссылка ведёт в эфир, которого нет');
+});
+
+test('фильтр по ступени считает то же, что и данные', async () => {
+  for (const tier of ['гениально', 'кринж-контент']) {
+    const [видно, вданных] = await page.evaluate(async t => {
+      document.getElementById('fRate').value = 'ступень:' + t;
+      renderSearch();
+      return [найдено(), ROWS.filter(r => r.rate.tier === t).length];
+    }, tier);
+    assert.equal(видно, вданных, `ступень «${tier}»`);
+  }
+});
+
+test('фильтр по стране считает то же, что и данные', async () => {
+  const пара = await page.evaluate(() => {
+    const c = document.querySelector('#fCountry option:nth-child(2)').value;
+    document.getElementById('fRate').value = '';
+    document.getElementById('fCountry').value = c;
+    renderSearch();
+    return [c, найдено(), ROWS.filter(r => r.country === c).length];
+  });
+  assert.equal(пара[1], пара[2], `страна «${пара[0]}»`);
+});
+
+test('фильтр по году складывается со ступенью', async () => {
+  const got = await page.evaluate(() => {
+    document.getElementById('fCountry').value = '';
+    document.getElementById('fRate').value = 'ступень:атлична';
+    FILTER.year = 2025; render(); renderSearch();
+    const n = найдено();
+    const real = ROWS.filter(r => r.rate.tier === 'атлична' && r.date?.getFullYear() === 2025).length;
+    FILTER.year = null; document.getElementById('fRate').value = ''; render(); renderSearch();
+    return [n, real];
+  });
+  assert.equal(got[0], got[1]);
+});
+
+test('карточки открываются', async () => {
+  const адреса = await page.evaluate(() => {
+    const top = (get) => [...ROWS].map(get).filter(Boolean)[0];
+    return {
+      artist: top(r => r.artistKey),
+      user:   top(r => r.userParts[0]),
+      source: top(r => r.source),
+      stream: 0            // самый первый эфир: ноль когда-то терялся
+    };
+  });
+  for (const [вид, знач] of Object.entries(адреса)) {
+    await page.goto(`${srv.base}/index.html#${вид}=${encodeURIComponent(знач)}`,
+      { waitUntil: 'networkidle' });
+    await page.waitForFunction(() => typeof ROWS !== 'undefined' && ROWS.length > 0);
+    await page.waitForTimeout(400);
+    const открыта = await page.$eval('#profile', e => !e.hidden);
+    assert.ok(открыта, `карточка #${вид}=${знач} не открылась`);
+  }
+  await page.goto(srv.base + '/index.html', { waitUntil: 'networkidle' });
+});
+
+test('страница не разъезжается по ширине', async () => {
+  for (const w of [320, 390, 768, 1440]) {
+    const p = await brw.newPage({ viewport: { width: w, height: 900 } });
+    await p.goto(srv.base + '/index.html', { waitUntil: 'networkidle' });
+    await p.waitForFunction(() => typeof ROWS !== 'undefined' && ROWS.length > 0, null, { timeout: 30000 });
+    const шире = await p.evaluate(() => document.documentElement.scrollWidth >
+                                        document.documentElement.clientWidth + 1);
+    await p.close();
+    assert.equal(шире, false, `на ${w}px страница едет вбок`);
+  }
+});

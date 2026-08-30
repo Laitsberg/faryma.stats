@@ -1,0 +1,38 @@
+name: Проверки
+
+# Гоняются при каждой правке кода и данных. Смысл простой: три ошибки,
+# которые дошли до зрителей, нашли зрители, а не мы. Пусть дальше их
+# находит эта задача — до того, как правка попадёт на сайт.
+on:
+  push:
+    branches: ['**']
+    paths-ignore: ['**.md', 'og/**']
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  проверки:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # Быстрые проверки идут первыми и без единой зависимости: парсер
+      # оценок и правила архива. Полсекунды — и половина ошибок отсеяна.
+      - name: Парсер и архив
+        run: npm run test:fast
+
+      - name: Поставить браузер
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+
+      # Здесь страница поднимается целиком и проверяется то, что видит
+      # посетитель: разделы, графики, повторы, фильтры, карточки.
+      - name: Живая страница
+        run: node --test --test-timeout=180000 test/site.test.mjs
