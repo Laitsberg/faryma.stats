@@ -26,6 +26,11 @@ const SHEET_URL =
    Из последней строки берётся дата последнего обновления архива. */
 const HISTORY_JSONL = "data/history.jsonl";
 
+/* Адрес ответчика для чата: он же отдаёт колесу список тех, кто
+   сейчас пишет в чат стрима. Пусто — кнопка «взять из чата» на
+   колесе честно скажет, что сбор не подключён. */
+const CHAT_URL = "https://farymastats-production.up.railway.app/chatters";
+
 /* Страны артистов, собранные скриптом scripts/countries.mjs */
 const COUNTRIES_JSON = "data/countries.json";
 const THEMES_JSON = "data/themes.json";

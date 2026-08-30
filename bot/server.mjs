@@ -19,6 +19,7 @@
 import http from 'node:http';
 import vm from 'node:vm';
 import { pathToFileURL } from 'node:url';
+import * as чат from './chat.mjs';
 
 const PORT = process.env.PORT || 3000;
 const BASE = (process.env.BASE || 'https://farymastats.info').replace(/\/+$/, '');
@@ -318,10 +319,25 @@ const server = http.createServer(async (req, res) => {
 
     if (u.pathname === '/health') {
       const a = await архив();
+      const c = чат.состояние();
       return отдать(`ок, разносов ${a.rows.length}` +
         `, каталог ${a.каталог ? 'на месте' : 'не подъехал'}` +
+        `, чат #${c.канал} ${c.подключены ? 'слушаем' : 'молчит'} (${c.человек} чел.)` +
         `, обновлено ${new Date(a.when).toISOString()}`);
     }
+    /* Кто сейчас в чате — для колеса на сайте. Отдаём JSON, а не
+       строку: это единственный адрес, который читает не Moobot, а
+       страница. */
+    if (u.pathname === '/chatters') {
+      const тело = JSON.stringify({ ...чат.состояние(), chatters: чат.чатеры() });
+      res.writeHead(200, {
+        'content-type': 'application/json; charset=utf-8',
+        'cache-control': 'no-store',
+        'access-control-allow-origin': '*'
+      });
+      return res.end(тело);
+    }
+
     if (u.pathname === '/almost') return отдать(чтоПринести(await архив()));
     if (u.pathname === '/track') return отдать(искатьТрек(await архив(), q));
     if (u.pathname === '/user')  return отдать(искатьЗаказчика(await архив(), q));
@@ -330,6 +346,7 @@ const server = http.createServer(async (req, res) => {
       '/track?q=название — приносили ли трек\n' +
       '/user?q=ник — статистика заказчика\n' +
       '/almost — вселенная, которой не хватает опенинга\n' +
+      '/chatters — кто писал в чат за последний час (JSON)\n' +
       '/health — жив ли\n' + BASE);
 
     отдать('нет такой команды', 404);
@@ -345,6 +362,7 @@ const server = http.createServer(async (req, res) => {
 if (import.meta.url === pathToFileURL(process.argv[1] || '').href) {
   server.listen(PORT, () => {
     console.log(`ответчик слушает порт ${PORT}, данные берёт с ${BASE}`);
+    чат.начать();
     архив().then(a => console.log(`архив загружен: ${a.rows.length} разносов`))
            .catch(e => console.error('первая загрузка не удалась:', e.message));
   });

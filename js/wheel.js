@@ -271,16 +271,26 @@ async function изАрхива() {
 
 /* ---------- из чата ---------- */
 
+/* Адрес сбора чата. Обычно берётся из config.js, но его можно
+   перебить через window.CHAT_URL — так проверки натравливают колесо
+   на свой сервис, не трогая настройки сайта. */
+function адресЧата() {
+  if (typeof window !== 'undefined' && typeof window.CHAT_URL === 'string' && window.CHAT_URL)
+    return window.CHAT_URL;
+  return typeof CHAT_URL === 'string' ? CHAT_URL : '';
+}
+
 async function изЧата() {
   const где = $('chatNote');
-  if (typeof CHAT_URL !== 'string' || !CHAT_URL) {
+  const адрес = адресЧата();
+  if (!адрес) {
     где.textContent = 'Сбор из чата пока не подключён. Список можно вставить руками — ' +
       'например, из своего колеса.';
     return;
   }
   где.textContent = 'спрашиваю чат…';
   try {
-    const r = await fetch(CHAT_URL, { cache: 'no-store' });
+    const r = await fetch(адрес, { cache: 'no-store' });
     if (!r.ok) throw new Error('чат ответил ' + r.status);
     const j = await r.json();
     const ники = (j.chatters || []).filter(Boolean);
