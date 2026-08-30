@@ -118,6 +118,31 @@ test('пустое колесо не даёт себя крутить', async ()
   assert.equal(await page.$eval('#count', e => e.textContent), '0');
 });
 
+test('длительность вращения слушается', async () => {
+  await page.fill('#names', ['Аня', 'Боря', 'Вова', 'Гриша', 'Дима'].join('\n'));
+  await page.waitForTimeout(300);
+
+  for (const сек of [3, 10]) {
+    await page.click(`#spinTime [data-sec="${сек}"]`);
+    const t0 = Date.now();
+    await page.click('#spin');
+    await page.waitForFunction(() => !document.getElementById('out').hidden,
+      null, { timeout: 40000 });
+    const прошло = (Date.now() - t0) / 1000;
+    // допуск щедрый: браузер в проверке не обязан рисовать кадры вовремя
+    assert.ok(прошло >= сек - 0.5 && прошло <= сек + 3,
+      `выбрано ${сек} с, а крутилось ${прошло.toFixed(1)} с`);
+  }
+});
+
+test('выбранная длительность переживает перезагрузку', async () => {
+  await page.click('#spinTime [data-sec="15"]');
+  await page.reload({ waitUntil: 'networkidle' });
+  await page.waitForTimeout(600);
+  assert.equal(await page.$eval('#spinTime .chip.on', e => e.textContent), '15 с');
+  await page.click('#spinTime [data-sec="6"]');    // вернём обычную
+});
+
 test('страница не разъезжается по ширине', async () => {
   for (const w of [320, 390, 768, 1440]) {
     const p2 = await brw.newPage({ viewport: { width: w, height: 900 } });

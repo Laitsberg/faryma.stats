@@ -715,3 +715,8 @@ a.pf-tag-l:hover{border-color:var(--brand);color:var(--ink)}
 .wheel-btns select{flex:1;min-width:180px}
 .back{color:var(--dim);text-decoration:none;border-bottom:1px solid transparent}
 .back:hover{color:var(--brand-hi);border-color:currentColor}
+.wheel-check{display:flex;align-items:center;gap:8px;margin-top:10px;
+  color:var(--dim);font-size:13px;cursor:pointer}
+.wheel-check input{accent-color:var(--brand);width:16px;height:16px;cursor:pointer}
+.wheel-check:hover span{color:var(--ink)}
+.chip.on{border-color:var(--brand);color:var(--brand-hi);background:var(--panel2)}
