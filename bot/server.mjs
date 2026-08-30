@@ -40,12 +40,14 @@ async function достать(путь) {
 }
 
 async function собрать() {
-  const [papaSrc, cfg, aliases, parse, csv] = await Promise.all([
+  const [papaSrc, cfg, aliases, parse, themesJs, csv, themesJson] = await Promise.all([
     достать('vendor/papaparse.min.js'),
     достать('js/config.js'),
     достать('js/aliases.js'),
     достать('js/parse.js'),
-    достать('data.csv')
+    достать('js/themes.js'),
+    достать('data.csv'),
+    достать('data/themes.json').catch(() => null)   // каталог не обязателен
   ]);
 
   const песочница = { module: { exports: {} }, exports: {}, window: {}, global: {}, console, URL };
@@ -76,6 +78,11 @@ async function собрать() {
       user: кто,
       streamNum: stream ? stream.num : null,
       date: stream ? stream.date : null,
+      // ниже — то, что нужно каталогу опенингов: он сверяет вселенную,
+      // вид темы (опенинг/эндинг) и участников
+      source: ctx.parseSource(r['Что']),
+      kind: ctx.sourceKind(r['Что']),
+      parts: w.artist ? ctx.participants(w.artist, new Set()) : [],
       // по этому полю и ищем: исполнитель, название, заказчик
       искать: (w.full + ' ' + кто).toLowerCase(),
       // то же без пробелов и знаков: «KICK BACK» и «KICKBACK» —
@@ -91,7 +98,24 @@ async function собрать() {
   });
 
   if (rows.length < 1000) throw new Error(`в архиве всего ${rows.length} строк — похоже, скачалось не то`);
-  return { rows, users, when: Date.now(), ctx };
+
+  /* Каталог опенингов и эндингов. Его код (js/themes.js) написан для
+     страницы и берёт ROWS и THEMES из глобальных переменных — кладём
+     их в тот же контекст, и функции работают как есть. Своей копии
+     сопоставления тут снова нет: считает та же themeMatch, что и сайт. */
+  let каталог = false;
+  if (themesJson) {
+    try {
+      ctx.ROWS = rows;
+      ctx.THEMES = JSON.parse(themesJson).sources || {};
+      vm.runInContext(themesJs, ctx, { filename: 'themes.js' });
+      каталог = Object.keys(ctx.THEMES).length > 0;
+    } catch (e) {
+      console.error('каталог не поднялся:', e.message);
+    }
+  }
+
+  return { rows, users, каталог, when: Date.now(), ctx };
 }
 
 async function архив() {
@@ -204,6 +228,27 @@ function искатьЗаказчика(a, запрос) {
     `Место в зачёте: ${место} из ${все.length}`);
 }
 
+/* Чего не хватает вселенным — то же, что раздел «Почти собрали» на
+   сайте, но по одной случайной вселенной за раз. Повод для чата:
+   «Re:Zero, шесть из восьми, не хватает двух». */
+function чтоПринести(a) {
+  if (!a.каталог) return `Каталог опенингов сейчас недоступен. Что уже приносили: ${BASE}`;
+
+  const почти = vm.runInContext('almostDone(2)', a.ctx);
+  if (!почти || !почти.length)
+    return `Всё собрано! Ну или каталог отдыхает. ${BASE}`;
+
+  // берём случайную из первой двадцатки: там самые обжитые вселенные,
+  // и каждый раз выпадает новая — иначе команда надоест за три вызова
+  const верх = почти.slice(0, 20);
+  const x = верх[Math.floor(Math.random() * верх.length)];
+  const чего = x.нехватает.map(t => `${t.title} (${t.s || t.t})`).join(', ');
+
+  return обрезать(
+    `${x.name}: разнесли ${x.got} из ${x.всего}. Не хватает: ${чего}. ` +
+    `Ещё варианты: ${BASE}/#secAlmost`);
+}
+
 function vmConst(ctx, имя) { return vm.runInContext(имя, ctx); }
 
 function склон(n, од, дв, мн) {
@@ -237,14 +282,18 @@ const server = http.createServer(async (req, res) => {
 
     if (u.pathname === '/health') {
       const a = await архив();
-      return отдать(`ок, разносов ${a.rows.length}, обновлено ${new Date(a.when).toISOString()}`);
+      return отдать(`ок, разносов ${a.rows.length}` +
+        `, каталог ${a.каталог ? 'на месте' : 'не подъехал'}` +
+        `, обновлено ${new Date(a.when).toISOString()}`);
     }
+    if (u.pathname === '/almost') return отдать(чтоПринести(await архив()));
     if (u.pathname === '/track') return отдать(искатьТрек(await архив(), q));
     if (u.pathname === '/user')  return отдать(искатьЗаказчика(await архив(), q));
     if (u.pathname === '/') return отдать(
       'Ответчик для чата стрима.\n' +
       '/track?q=название — приносили ли трек\n' +
       '/user?q=ник — статистика заказчика\n' +
+      '/almost — вселенная, которой не хватает опенинга\n' +
       '/health — жив ли\n' + BASE);
 
     отдать('нет такой команды', 404);
@@ -265,4 +314,4 @@ if (import.meta.url === pathToFileURL(process.argv[1] || '').href) {
   });
 }
 
-export { собрать, искатьТрек, искатьЗаказчика, server };
+export { собрать, искатьТрек, искатьЗаказчика, чтоПринести, server };
