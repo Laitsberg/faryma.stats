@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-29T17:12:39.888Z",
+ "generated": "2026-08-30T09:57:19.790Z",
  "artists": {
   "7": {
    "name": "7",
@@ -41667,6 +41667,56 @@
    "score": 100,
    "mbid": "bf4e8a29-d227-4bf4-b07a-7f7c8cf72a9e",
    "mbName": "Cold Night for Alligators"
+  },
+  "burzum": {
+   "name": "Burzum",
+   "tracks": 2,
+   "country": "NO",
+   "area": "Norway",
+   "areaId": "6743d351-6f37-3049-9724-5041161fff4d",
+   "score": 100,
+   "mbid": "49cd96a6-42c3-44f6-ba2a-cd9301046b96",
+   "mbName": "Burzum"
+  },
+  "tomori kusunoki": {
+   "name": "Tomori Kusunoki",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "e9de2ef8-8b65-41dd-8836-7539548053c7",
+   "mbName": "楠木ともり"
+  },
+  "машина времени": {
+   "name": "Машина Времени",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "1b67ca7b-3da9-4607-a5aa-93ed56034924",
+   "mbName": "Машина времени"
+  },
+  "soala": {
+   "name": "Soala",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "bc5d733f-a670-4642-8bd0-e387d04c6b28",
+   "mbName": "Soala"
+  },
+  "shallm": {
+   "name": "shallm",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "b2fd9492-24aa-4561-afc1-436b8a7b4fe5",
+   "mbName": "shallm"
   }
  },
  "source": "MusicBrainz",
