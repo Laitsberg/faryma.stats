@@ -341,3 +341,44 @@ test('навигация не зовёт в скрытые разделы', asyn
   assert.equal(итог.скрытый, false, 'скрытый раздел остался в навигации');
   assert.equal(итог.видимый, true, 'видимый раздел пропал из навигации');
 });
+
+test('в карточке заказчика видно, чего не хватает в его вселенных', async () => {
+  const кто = await page.evaluate(() => {
+    const по = new Map();
+    ROWS.forEach(r => {
+      if (!r.source || !THEMES[r.source]?.slug) return;
+      r.userParts.forEach(u => по.set(u, (по.get(u) || 0) + 1));
+    });
+    return [...по].sort((a, b) => b[1] - a[1])[0][0];
+  });
+  await page.goto(`${srv.base}/index.html#user=${encodeURIComponent(кто)}`,
+    { waitUntil: 'networkidle' });
+  await page.waitForFunction(() => typeof THEMES !== 'undefined' && Object.keys(THEMES).length > 0);
+  await page.waitForTimeout(700);
+
+  const итог = await page.evaluate(кто => {
+    const карточки = [...document.querySelectorAll('#profile .pf-almost .al')];
+    const rows = ROWS.filter(r => r.userParts.includes(кто));
+    const свои = new Set(rows.map(r => r.source).filter(Boolean));
+    const данные = missingFor(rows);
+    return {
+      карточек: карточки.length,
+      // каждый показанный тайтл должен быть из его вселенных
+      чужие: данные.filter(x => !свои.has(x.наше)).map(x => x.name),
+      // и в каждом обязаны остаться пробелы
+      безПробелов: данные.filter(x => x.нет < 1).length,
+      // числа те же, что в карточке вселенной
+      расхождения: данные.slice(0, 6).map(x => {
+        const m = themeMatch(THEMES[x.наше]);
+        return m.got === x.got && m.list.length === x.всего ? null : x.name;
+      }).filter(Boolean)
+    };
+  }, кто);
+  assert.ok(итог.карточек > 0 && итог.карточек <= 6, `карточек ${итог.карточек}`);
+  assert.deepEqual(итог.чужие, [], 'показан тайтл, который он не приносил');
+  assert.equal(итог.безПробелов, 0, 'показан тайтл без пробелов');
+  assert.deepEqual(итог.расхождения, [], 'числа разошлись с карточкой вселенной');
+
+  await page.goto(srv.base + '/index.html', { waitUntil: 'networkidle' });
+  await page.waitForFunction(() => typeof ROWS !== 'undefined' && ROWS.length > 0);
+});

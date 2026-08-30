@@ -219,3 +219,28 @@ function fullyDone(мин = 3) {
   }
   return n;
 }
+
+/* ---------- чего не хватает в его вселенных ----------
+   То же, что раздел «Почти собрали», но про одного человека: вот
+   тайтлы, из которых ты уже приносил, и вот чего оттуда ещё не
+   слышали. Порог мягче общего — здесь важно не «почти собрали», а
+   «твоя территория», поэтому берём всё, где остались пробелы. */
+function missingFor(rows, предел = 3) {
+  const видели = new Set();
+  const out = [];
+  for (const src of new Set(rows.map(r => r.source).filter(Boolean))) {
+    const h = THEMES[src];
+    if (!h || !h.slug || !h.themes || !h.themes.length || видели.has(h.slug)) continue;
+    видели.add(h.slug);
+
+    const { list, done, got } = themeMatch(h);
+    const нехватает = list.filter((_, i) => !done[i]);
+    if (!нехватает.length) continue;
+    out.push({ name: h.name, наше: src, got, всего: list.length,
+               нет: нехватает.length, нехватает: нехватает.slice(0, предел),
+               // сколько этот человек сам принёс из тайтла
+               своих: rows.filter(r => r.source === src).length });
+  }
+  // сначала то, во что человек вложился сам, потом — где осталось меньше
+  return out.sort((a, b) => b.своих - a.своих || a.нет - b.нет || b.got - a.got);
+}

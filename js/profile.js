@@ -225,10 +225,32 @@ function showUser(name) {
       `</div>`
     : '';
 
+  // Чего не хватает в его вселенных. Каталог покрывает треть
+  // заказчиков — у остальных блока просто не будет, и это честнее,
+  // чем показывать пустоту.
+  const пробелы = typeof missingFor === 'function' ? missingFor(rows) : [];
+  const пробелыHtml = пробелы.length
+    ? `<h3 class="pf-h">Чего ещё не приносили из его вселенных</h3>` +
+      `<p class="pf-note">По каталогу опенингов и эндингов. Показаны ` +
+      `${пробелы.length > 6 ? 'шесть тайтлов, в которые он вложился больше всего' : 'все его тайтлы с пробелами'}.</p>` +
+      `<div class="almost pf-almost">` +
+      пробелы.slice(0, 6).map(x => `<div class="al">
+        <div class="al-h">
+          <a class="al-n pf-link" href="#source=${encodeURIComponent(x.наше)}" data-source="${esc(x.наше)}">${esc(x.name)}</a>
+          <span class="al-c"><b>${num(x.got)}</b> из ${num(x.всего)}</span>
+        </div>
+        <div class="al-m">${x.нехватает.map(t =>
+          `<span><i class="al-s">${esc(t.s || THEME_KIND[t.t] || t.t)}</i>${esc(t.title)}</span>`).join('')}
+          ${x.нет > x.нехватает.length
+            ? `<span class="al-more">и ещё ${num(x.нет - x.нехватает.length)}</span>` : ''}</div>
+      </div>`).join('') + `</div>`
+    : '';
+
   openProfile(shown, span,
     kpiBlock(kpi) +
     tierBars(rows) + favHtml +
     franchiseTags(rows, 'Треки из') +
+    пробелыHtml +
     `<h3 class="pf-h">Все разносы</h3>` +
     trackList([...rows].sort((x, y) => (y.date || 0) - (x.date || 0)),
       { showArtist: true, showStream: true }));
