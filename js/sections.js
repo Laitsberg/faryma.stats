@@ -459,6 +459,43 @@ function renderUniverses(rows) {
     summarize(rows, r => r.source || null, MIN_N.source), 16);
 }
 
+/* ---------- почти собрали ----------
+   Раздел появляется, только когда каталог доехал: без него сказать,
+   чего не хватает, нечем. */
+const ALMOST_SHOW = 24;
+
+function renderAlmost() {
+  const sec = $('secAlmost');
+  if (!Object.keys(THEMES || {}).length) { sec.style.display = 'none'; return; }
+
+  const список = almostDone(2);
+  if (!список.length) { sec.style.display = 'none'; return; }
+  sec.style.display = '';
+
+  const один = список.filter(x => x.нет === 1).length;
+  const целых = fullyDone();
+  $('almostNote').textContent =
+    `Одного не хватает ${num(один)} ` + plural(один, 'вселенной', 'вселенным', 'вселенным') +
+    `, двух — ещё ${num(список.length - один)}; ` +
+    `${num(целых)} ` + plural(целых, 'вселенная уже собрана', 'вселенные уже собраны', 'вселенных уже собрано') +
+    ' целиком. Тайтлы с одним-двумя опенингами тут не считаются: собрать их — не достижение.' +
+    (список.length > ALMOST_SHOW
+      ? ` Ниже — первые ${num(ALMOST_SHOW)}, самые обжитые.` : '');
+
+  $('almostList').innerHTML = список.slice(0, ALMOST_SHOW).map(x => {
+    const чего = x.нехватает.map(t =>
+      `<span><i class="al-s">${esc(t.s || THEME_KIND[t.t] || t.t)}</i>${esc(t.title)}` +
+      (t.artists && t.artists.length ? ' — ' + esc(t.artists.join(', ')) : '') + `</span>`).join('');
+    return `<div class="al">
+      <div class="al-h">
+        <a class="al-n pf-link" href="#source=${encodeURIComponent(x.наше)}" data-source="${esc(x.наше)}">${esc(x.name)}</a>
+        <span class="al-c"><b>${num(x.got)}</b> из ${num(x.всего)}</span>
+      </div>
+      <div class="al-m">${чего}</div>
+    </div>`;
+  }).join('');
+}
+
 /* ---------- оценки вне шкалы ----------
    Раз в сто разносов композитор выдаёт что-то своё вместо ступени.
    В статистику это не пустить, но и терять жалко. */

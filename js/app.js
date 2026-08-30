@@ -62,6 +62,9 @@ function load() {
     .then(j => {
       THEMES = (j && j.sources) || {};
       BY_SLUG = null;
+      // без каталога раздел «Почти собрали» скрыт — теперь есть чем его
+      // наполнить
+      if (ROWS.length) renderAlmost();
       // карточка могла открыться раньше, чем приехал каталог
       if (ROWS.length && location.hash.startsWith('#source=')) routeProfile();
     })
@@ -305,6 +308,7 @@ function render() {
   renderDuration(rows);
   renderStreams(year);
   renderCountries(rows);
+  renderAlmost();
   renderOffscale();
   renderSearch();
   markScrollables();

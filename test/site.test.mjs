@@ -259,3 +259,42 @@ test('карточка поверх отбора не съедает отбор'
   assert.equal(итог.после, итог.был, 'отбор пропал при закрытии карточки');
   assert.equal(итог.q, 'unravel');
 });
+
+test('«Почти собрали» показывает то же, что и карточка вселенной', async () => {
+  const итог = await page.evaluate(() => {
+    const список = almostDone(2);
+    // числа в разделе обязаны совпадать с тем, что покажет карточка:
+    // считает их одна и та же функция, и это надо удержать
+    const расхождения = список.slice(0, 10).map(x => {
+      const m = themeMatch(THEMES[x.наше]);
+      return (m.got === x.got && m.list.length === x.всего) ? null
+        : `${x.name}: раздел ${x.got}/${x.всего}, карточка ${m.got}/${m.list.length}`;
+    }).filter(Boolean);
+    return {
+      всего: список.length,
+      расхождения,
+      карточек: document.querySelectorAll('#almostList .al').length,
+      // недостающих ровно столько, сколько обещано
+      счётСходится: список.every(x => x.нехватает.length === x.нет && x.нет >= 1 && x.нет <= 2),
+      мелочь: список.filter(x => x.всего < 3).length,
+      нетронутые: список.filter(x => x.got === 0).length
+    };
+  });
+  assert.deepEqual(итог.расхождения, []);
+  assert.ok(итог.всего >= 20, `вселенных в разделе ${итог.всего}`);
+  assert.ok(итог.карточек > 0 && итог.карточек <= 24);
+  assert.equal(итог.счётСходится, true, 'список недостающих не сходится со счётчиком');
+  assert.equal(итог.мелочь, 0, 'тайтл с двумя темами попал в «почти собрали»');
+  assert.equal(итог.нетронутые, 0, 'нетронутый тайтл попал в «почти собрали»');
+});
+
+test('ссылки из «Почти собрали» открывают карточку вселенной', async () => {
+  const имя = await page.$eval('#almostList .al a[data-source]', a => a.dataset.source);
+  await page.goto(`${srv.base}/index.html#source=${encodeURIComponent(имя)}`,
+    { waitUntil: 'networkidle' });
+  await page.waitForFunction(() => typeof ROWS !== 'undefined' && ROWS.length > 0);
+  await page.waitForTimeout(600);
+  assert.ok(await page.$eval('#profile', e => !e.hidden), `карточка «${имя}» не открылась`);
+  await page.goto(srv.base + '/index.html', { waitUntil: 'networkidle' });
+  await page.waitForFunction(() => typeof ROWS !== 'undefined' && ROWS.length > 0);
+});
