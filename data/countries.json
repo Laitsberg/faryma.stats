@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-30T09:57:19.790Z",
+ "generated": "2026-08-30T17:34:42.843Z",
  "artists": {
   "7": {
    "name": "7",
@@ -41717,6 +41717,53 @@
    "score": 100,
    "mbid": "b2fd9492-24aa-4561-afc1-436b8a7b4fe5",
    "mbName": "shallm"
+  },
+  "madeon": {
+   "name": "Madeon",
+   "tracks": 2,
+   "country": "FR",
+   "area": "France",
+   "areaId": "08310658-51eb-3801-80de-5a0739207115",
+   "score": 100,
+   "mbid": "fa1de503-aba7-41fa-a1ed-371b3e87a717",
+   "mbName": "Madeon"
+  },
+  "the cardigans": {
+   "name": "The Cardigans",
+   "tracks": 1,
+   "country": "SE",
+   "area": "Sweden",
+   "areaId": "23d10872-f5ae-3f0c-bf55-332788a16ecb",
+   "score": 100,
+   "mbid": "3e55d51d-687f-4a9d-af96-2fabccf802e5",
+   "mbName": "The Cardigans"
+  },
+  "jamie paige": {
+   "name": "Jamie Paige",
+   "tracks": 1,
+   "country": "US",
+   "area": "Houston",
+   "areaId": "c920948b-83e3-40b7-8fe9-9ab5abaac55b",
+   "score": 100,
+   "mbid": "de2c3324-30c6-45f7-9136-08a5bb66bc2c",
+   "mbName": "Jamie Paige",
+   "viaArea": true
+  },
+  "hiyo": {
+   "name": "Hiyo",
+   "tracks": 1,
+   "country": "BE",
+   "area": "Belgium",
+   "areaId": "5b8a5ee5-0bb3-34cf-9a75-c27c44e341fc",
+   "score": 100,
+   "mbid": "d9374845-ae46-4f43-8c6d-4121c6b35ccd",
+   "mbName": "Hiyo"
+  },
+  "роман ефанов": {
+   "name": "Роман Ефанов",
+   "tracks": 1,
+   "country": null,
+   "score": 0
   }
  },
  "source": "MusicBrainz",
@@ -41967,6 +42014,8 @@
   "4955495c-004d-4c7f-ba17-d9df26388cd0": "SE",
   "75d8fdcf-03e9-43d9-9399-131b8e118b0b": "US",
   "2818e858-23fc-4aa1-a63e-434b44da6b5c": "US",
-  "0eeb01c2-6e31-46ad-96b8-319749f731d2": "US"
+  "0eeb01c2-6e31-46ad-96b8-319749f731d2": "US",
+  "206f1f44-9380-48cc-bf6c-772585ef1e74": "US",
+  "c920948b-83e3-40b7-8fe9-9ab5abaac55b": "US"
  }
 }
