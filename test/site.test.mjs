@@ -299,27 +299,50 @@ test('ссылки из «Почти собрали» открывают кар�
   await page.waitForFunction(() => typeof ROWS !== 'undefined' && ROWS.length > 0);
 });
 
-test('полоса свежести показывает завершённый эфир, а не идущий', async () => {
+test('полоса свежести показывает самый последний эфир', async () => {
   const итог = await page.evaluate(() => {
-    const готовые = STREAMS.filter(s => s.vod && ROWS.some(r => r.streamNum === s.num))
-      .map(s => s.num);
-    const n = Math.max(...готовые);
-    const rows = ROWS.filter(r => r.streamNum === n);
+    const сТреками = STREAMS.filter(s => ROWS.some(r => r.streamNum === s.num));
+    const st = сТреками.reduce((a, b) => b.num > a.num ? b : a);
+    const rows = ROWS.filter(r => r.streamNum === st.num);
     const текст = document.getElementById('fresh').textContent;
     return {
       виден: !document.getElementById('fresh').hidden,
       номерВПолосе: +(текст.match(/стрим №(\d+)/) || [])[1],
-      ожидаемый: n,
+      ожидаемый: st.num,
       треков: rows.length,
       вПолосе: +(текст.match(/(\d+)\s+трек/) || [])[1],
-      // у показанного эфира обязана быть ссылка на запись
-      сЗаписью: !!STREAMS.find(s => s.num === n)?.vod
+      сЗаписью: !!st.vod,
+      // у эфира без записи среднего балла быть не должно: таблицу
+      // ещё заполняют, и число соврало бы
+      естьСредний: /средний/.test(текст),
+      естьПометка: /вносят в таблицу/.test(текст)
     };
   });
   assert.equal(итог.виден, true);
-  assert.equal(итог.номерВПолосе, итог.ожидаемый);
+  assert.equal(итог.номерВПолосе, итог.ожидаемый, 'показан не последний эфир');
   assert.equal(итог.вПолосе, итог.треков);
-  assert.equal(итог.сЗаписью, true);
+  if (итог.сЗаписью) {
+    assert.equal(итог.естьСредний, true, 'у разобранного эфира нет среднего балла');
+  } else {
+    assert.equal(итог.естьСредний, false, 'средний балл по недозаполненному эфиру');
+    assert.equal(итог.естьПометка, true, 'не сказано, что разбор ещё вносят');
+  }
+});
+
+test('якорь раздела в адресе прокручивает к разделу', async () => {
+  // ссылка из чата ведёт на farymastats.info/#secAlmost — раздел
+  // появляется позже страницы, и браузер сам к нему не возвращается
+  for (const id of ['secAlmost', 'secOff']) {
+    const p2 = await brw.newPage({ viewport: { width: 1440, height: 900 } });
+    await p2.goto(`${srv.base}/index.html#${id}`, { waitUntil: 'networkidle' });
+    await p2.waitForFunction(() => typeof THEMES !== 'undefined' &&
+      Object.keys(THEMES).length > 0, null, { timeout: 30000 });
+    await p2.waitForTimeout(900);
+    const верх = await p2.evaluate(i =>
+      Math.round(document.getElementById(i).getBoundingClientRect().top), id);
+    await p2.close();
+    assert.ok(Math.abs(верх) < 60, `#${id}: раздел оказался в ${верх}px от верха`);
+  }
 });
 
 test('навигация не зовёт в скрытые разделы', async () => {

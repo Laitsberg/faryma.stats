@@ -64,7 +64,7 @@ function load() {
       BY_SLUG = null;
       // без каталога раздел «Почти собрали» скрыт — теперь есть чем его
       // наполнить
-      if (ROWS.length) renderAlmost();
+      if (ROWS.length) { renderAlmost(); якорьРаздела(); }
       // карточка могла открыться раньше, чем приехал каталог
       if (ROWS.length && location.hash.startsWith('#source=')) routeProfile();
     })
@@ -217,6 +217,7 @@ function build(raw) {
   // Если в адресе ещё и карточка, ею займётся routeProfile.
   if (поСсылке && !location.hash)
     requestAnimationFrame(() => $('secSearch').scrollIntoView({ block: 'start' }));
+  else if (location.hash) requestAnimationFrame(якорьРаздела);
   initGame();
   initProfile();
   initNav();
@@ -418,6 +419,20 @@ function initNav() {
     nav.hidden = e.isIntersecting;
     if (e.isIntersecting) open(false);
   }, { threshold: 0 }).observe(head);
+}
+
+/* Якорь раздела в адресе: farymastats.info/#secAlmost. Браузер сам к
+   нему не прокрутит: разделы появляются позже страницы — каталог и
+   страны приезжают отдельными файлами, — а к тому времени про якорь
+   он уже забыл. Поэтому прокручиваем сами, и заново, когда раздел
+   наконец появился. */
+function якорьРаздела() {
+  const id = location.hash.slice(1);
+  if (!id || !/^[A-Za-z][\w-]*$/.test(id)) return false;
+  const el = document.getElementById(id);
+  if (!el || el.tagName !== 'SECTION' || el.offsetParent === null) return false;
+  el.scrollIntoView({ block: 'start' });
+  return true;
 }
 
 /* ---------- отбор в адресе ----------

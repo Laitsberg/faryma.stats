@@ -464,44 +464,50 @@ function renderUniverses(rows) {
    вчерашний стрим. Одна строка: номер, дата, сколько треков, средний
    балл и лучший трек.
 
-   Эфир считается состоявшимся, когда в таблице появилась ссылка на
-   запись. Пока её нет, там стоит «СКОРО»: строку заводят заранее и
-   заполняют по ходу разбора. Отчитываться по ней нельзя — в стриме
-   №273 было шесть оценок из семнадцати треков, и «средний 5.00»
-   сказал бы неправду о вечере, который ещё идёт. Про такой эфир
-   упоминаем отдельно, а числа берём с последнего завершённого. */
+   Эфир показываем последний по номеру — тот, что был вчера, а не
+   последний полностью разобранный. Раньше полоса брала последний
+   с записью и показывала позавчерашнюю дату, хотя стрим был накануне.
+
+   Но свежий эфир и разобранный — разные вещи. Признак готовности —
+   ссылка на запись; пока её нет, в таблице стоит «СКОРО», а строки
+   заполняются по ходу. У такого эфира не показываем ни средний балл,
+   ни лучшее: по шести внесённым трекам из тридцати это было бы
+   неправдой. Только номер, дата и сколько успели внести. */
 function renderFresh() {
   const el = $('fresh');
-  const готовые = STREAMS.filter(s => s.vod &&
-    ROWS.some(r => r.streamNum === s.num)).map(s => s.num);
-  if (!готовые.length) { el.hidden = true; return; }
+  const сТреками = STREAMS.filter(s => ROWS.some(r => r.streamNum === s.num));
+  if (!сТреками.length) { el.hidden = true; return; }
 
-  const номер = Math.max(...готовые);
-  const rows = ROWS.filter(r => r.streamNum === номер);
-  if (!rows.length) { el.hidden = true; return; }
+  const st = сТреками.reduce((a, b) => b.num > a.num ? b : a);
+  const rows = ROWS.filter(r => r.streamNum === st.num);
   el.hidden = false;
 
-  // эфир, который прямо сейчас разбирают: номер больше, записи ещё нет
-  const идёт = STREAMS.filter(s => !s.vod && s.num > номер)
-    .sort((a, b) => b.num - a.num)[0];
-
-  const st = STREAMS.find(s => s.num === номер);
-  const дата = st?.date ? st.date.toLocaleDateString('ru-RU',
+  const дата = st.date ? st.date.toLocaleDateString('ru-RU',
     { day: 'numeric', month: 'long' }) : '';
+  const шапка =
+    `<span class="fr-k">последний эфир</span>` +
+    `<span><a class="pf-link" href="#stream=${st.num}" data-stream="${st.num}">стрим №${st.num}</a>` +
+    (дата ? `, ${esc(дата)}` : '') + `</span>`;
+
+  if (!st.vod) {
+    // запись ещё не выложена — значит таблицу только заполняют
+    el.innerHTML = шапка +
+      `<span class="fr-n">внесено <b>${num(rows.length)}</b> ` +
+        plural(rows.length, 'трек', 'трека', 'треков') + `</span>` +
+      `<span class="fr-live">разбор ещё вносят в таблицу</span>`;
+    return;
+  }
+
   const балл = avg(rows.map(r => r.rate.score));
   const лучший = [...rows].sort((a, b) =>
     SCALE_ORDER.indexOf(a.rate.label) - SCALE_ORDER.indexOf(b.rate.label))[0];
 
-  el.innerHTML =
-    `<span class="fr-k">последний эфир</span>` +
-    `<span><a class="pf-link" href="#stream=${номер}" data-stream="${номер}">стрим №${номер}</a>` +
-    (дата ? `, ${esc(дата)}` : '') + `</span>` +
+  el.innerHTML = шапка +
     `<span class="fr-n"><b>${num(rows.length)}</b> ` +
       plural(rows.length, 'трек', 'трека', 'треков') +
       ` · средний <b>${f2(балл)}</b></span>` +
     (лучший ? `<span>лучшее: ${artistNames(лучший.artist)} — <b>${esc(лучший.title)}</b> ` +
-      `${ratePill(лучший.rate.label)}</span>` : '') +
-    (идёт ? `<span class="fr-live">стрим №${идёт.num} уже разбирают</span>` : '');
+      `${ratePill(лучший.rate.label)}</span>` : '');
 }
 
 /* ---------- почти собрали ----------

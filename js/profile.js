@@ -54,7 +54,13 @@ function goBack() {
 
 function routeProfile() {
   const m = location.hash.match(/^#(artist|user|source|stream)=(.*)$/);
-  if (!m) { pfStack = []; hideProfile(); return; }
+  if (!m) {
+    pfStack = [];
+    hideProfile();
+    // не карточка — может быть якорь раздела: #secAlmost и подобные
+    if (typeof якорьРаздела === 'function') якорьРаздела();
+    return;
+  }
 
   // Назад нажали в браузере, а не у нас: хэш совпал с вершиной стопки,
   // значит этот шаг уже пройден и запоминать его повторно не надо.
