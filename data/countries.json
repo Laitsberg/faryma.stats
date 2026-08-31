@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-30T17:34:42.843Z",
+ "generated": "2026-08-31T10:51:30.739Z",
  "artists": {
   "7": {
    "name": "7",
@@ -41761,6 +41761,80 @@
   },
   "роман ефанов": {
    "name": "Роман Ефанов",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "forsaken news ru": {
+   "name": "Forsaken News RU",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "hiyo & роман ефанов": {
+   "name": "Hiyo & Роман Ефанов",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "jim carrey": {
+   "name": "Jim Carrey",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "f7e7acc2-b61c-4e8c-80fd-ab354bf856e8",
+   "mbName": "Jim Carrey"
+  },
+  "a tergo lupi": {
+   "name": "A Tergo Lupi",
+   "tracks": 1,
+   "country": "IT",
+   "area": "Italy",
+   "areaId": "c6500277-9a3d-349b-bf30-41afdbf42add",
+   "score": 100,
+   "mbid": "bbe7a840-7289-42e3-8d35-5e74e864b046",
+   "mbName": "A Tergo Lupi"
+  },
+  "eleanor forte": {
+   "name": "Eleanor Forte",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "ba29307d-6362-4f8f-ac1e-a27201fdb217",
+   "mbName": "Eleanor Forte Lite"
+  },
+  "serebro": {
+   "name": "SEREBRO",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "765dc449-9ab0-4a8e-aaba-463f992d2a13",
+   "mbName": "SEREBRO"
+  },
+  "the meto": {
+   "name": "The Meto",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "saidian": {
+   "name": "Saidian",
+   "tracks": 1,
+   "country": "DE",
+   "area": "Germany",
+   "areaId": "85752fda-13c4-31a3-bee5-0e5cb1f51dad",
+   "score": 100,
+   "mbid": "51a9a6b7-5d0a-4b9a-af65-57ee6f1aefc3",
+   "mbName": "Saidian"
+  },
+  "игорь куликов & roro ai‬": {
+   "name": "Игорь Куликов & Roro Ai‬",
    "tracks": 1,
    "country": null,
    "score": 0
