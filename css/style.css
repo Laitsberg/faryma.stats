@@ -9,7 +9,14 @@
      отдан данным. На тёплом фоне янтарные столбцы спорили с подложкой.
      --dim подобран так, чтобы контраст к фону был около 7:1 — прежний
      #8C837A давал 4:1, и подписи почти не читались с телефона. */
-  --bg:#0D0D0F; --panel:#17171A; --panel2:#1F1F23; --line:#2C2C31;
+  /* Фон ушёл глубже, чем был (#0D0D0F): по нему стелется свечение, и на
+     прежнем, более светлом, оно читалось грязным пятном, а не светом. */
+  --bg:#07070A; --panel:#17171A; --panel2:#1F1F23; --line:#2C2C31;
+  /* Стекло — для верхних блоков: полупрозрачная подложка поверх свечения.
+     Размытие только у них: backdrop-filter дорог, а графиков на странице
+     двадцать один, и размывать под каждым — верный способ уронить
+     прокрутку на телефоне. */
+  --glass:rgba(23,23,26,.72); --glass-line:rgba(160,160,168,.18);
   --amber:#F0A02A; --peak:#E5484D; --patch:#4CC3C9; --dim:#A0A0A8;
   --ink:#F2F2F4;
   /* Фирменный оранжевый — снят пипеткой с логотипа композитора:
@@ -25,6 +32,16 @@
 
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
+
+/* Свечение живёт на отдельном закреплённом слое, а не в фоне body.
+   На body градиент растянулся бы на всю высоту страницы — а она под
+   тридцать тысяч пикселей, — и вместо света вышла бы ровная муть.
+   Закреплённый слой всегда одного размера с окном и не двигается
+   при прокрутке. */
+body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(1150px 660px at 18% -4%, rgba(242,102,15,.22), transparent 63%),
+    radial-gradient(820px 480px at 94% 6%, rgba(76,195,201,.11), transparent 60%)}
 body{
   background:var(--bg); color:var(--ink); font-family:var(--b);
   font-size:15px; line-height:1.55; -webkit-font-smoothing:antialiased;
@@ -35,30 +52,52 @@ a{color:var(--brand-hi)}
 @media(max-width:560px){ .wrap{padding:0 14px} }
 
 /* ---------- шапка ---------- */
-header{border-bottom:1px solid var(--line);
-  background:linear-gradient(180deg,#131316 0%,var(--bg) 100%);
+/* Звуковая волна за заголовком — единственная картинка на странице и
+   единственная отсылка к тому, чем композитор занимается. Лежит в фоне
+   как SVG, поэтому не тянет за собой ни файла, ни запроса. */
+header{position:relative;border-bottom:1px solid var(--line);
+  background:linear-gradient(180deg,rgba(19,19,22,.55) 0%,transparent 78%);
   border-top:3px solid transparent;
-  border-image:linear-gradient(90deg,var(--brand-lo),var(--brand),var(--brand-hi)) 1}
+  border-image:linear-gradient(90deg,var(--brand-lo),var(--brand),var(--brand-hi)) 1;
+  overflow:hidden}
+/* Волна идёт под текстом, а не сквозь него: занимает нижнюю полосу
+   шапки, там где кончается подзаголовок. */
+header::after{content:'';position:absolute;left:0;right:0;bottom:-52px;height:120px;
+  pointer-events:none;opacity:.34;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 200' preserveAspectRatio='none'%3E%3Cpath d='M0 100 Q 60 40 120 100 T 240 100 T 360 100 T 480 100 T 600 100 T 720 100 T 840 100 T 960 100 T 1080 100 T 1200 100 T 1320 100 T 1440 100' fill='none' stroke='%23F2660F' stroke-width='1.5' opacity='.55'/%3E%3Cpath d='M0 100 Q 40 150 80 100 T 160 100 T 240 100 T 320 100 T 400 100 T 480 100 T 560 100 T 640 100 T 720 100 T 800 100 T 880 100 T 960 100 T 1040 100 T 1120 100 T 1200 100 T 1280 100 T 1360 100 T 1440 100' fill='none' stroke='%234CC3C9' stroke-width='1' opacity='.3'/%3E%3C/svg%3E") no-repeat center/100% 100%}
+@media(prefers-reduced-motion:no-preference){
+  header::after{animation:волна 26s linear infinite}
+}
+@keyframes волна{from{background-position-x:0}to{background-position-x:-1440px}}
+/* Шапка по центру — так она и была задумана в выбранном направлении:
+   заголовок держит экран один, без соседей по строке. Ниже страница
+   снова левая, и это нормально: центр здесь работает как титульный
+   разворот, а не как способ верстать всё подряд. */
+.head{position:relative;z-index:1;text-align:center}
+.head .sub{margin-left:auto;margin-right:auto}
 /* Только сверху и снизу: сокращённая запись padding обнуляла бы боковые
    отступы, унаследованные от .wrap, и текст шапки прилипал к краю экрана. */
-.head{padding-top:38px;padding-bottom:30px}
-@media(max-width:560px){ .head{padding-top:24px;padding-bottom:20px} }
+.head{padding-top:52px;padding-bottom:42px}
+@media(max-width:560px){ .head{padding-top:28px;padding-bottom:26px} }
 .eyebrow{font-family:var(--m);font-size:11px;letter-spacing:.22em;
   color:var(--dim);text-transform:uppercase}
-h1{font-family:var(--d);font-weight:800;font-size:clamp(28px,5.4vw,52px);
-  line-height:1.02;margin:12px 0 6px;letter-spacing:-.02em}
+h1{font-family:var(--d);font-weight:800;font-size:clamp(32px,6.4vw,68px);
+  line-height:.98;margin:14px 0 8px;letter-spacing:-.035em;
+  text-shadow:0 0 60px rgba(242,102,15,.28)}
 h1 em{font-style:normal;color:var(--brand)}
-.sub{color:var(--dim);max-width:56ch;margin:0}
-.stamp{font-family:var(--m);font-size:11px;color:var(--dim);margin-top:14px}
+.sub{color:var(--dim);max-width:52ch;margin:0;font-size:16px}
+.stamp{font-family:var(--m);font-size:11px;color:var(--dim);margin-top:18px}
 .stamp b{color:var(--brand-hi);font-weight:600}
 
 /* ---------- пульт (шкала-фильтр) ---------- */
-.desk{margin:26px 0 6px;border:1px solid var(--line);border-radius:3px;
-  background:var(--panel);overflow:hidden}
+.desk{margin:26px 0 6px;border:1px solid var(--glass-line);border-radius:12px;
+  background:var(--glass);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  overflow:hidden}
 .desk-hd{display:flex;justify-content:space-between;align-items:baseline;
   gap:16px;flex-wrap:wrap;                     /* ← без gap заголовок слипался с подсказкой */
-  padding:12px 16px;border-bottom:1px solid var(--line);background:var(--panel2)}
-.desk-hd h2{font-family:var(--d);font-size:13px;font-weight:600;margin:0;letter-spacing:.04em}
+  padding:14px 18px;border-bottom:1px solid var(--glass-line);
+  background:rgba(31,31,35,.5)}
+.desk-hd h2{font-family:var(--d);font-size:15px;font-weight:600;margin:0;letter-spacing:-.01em}
 .desk-hd span{font-family:var(--m);font-size:11px;color:var(--dim)}
 @media(max-width:560px){
   .desk-hd{gap:4px}
@@ -71,19 +110,22 @@ h1 em{font-style:normal;color:var(--brand)}
   background:none;width:100%;text-align:left;color:inherit;font:inherit;
   transition:background .12s}
 @media(max-width:560px){ .rung{grid-template-columns:110px 1fr 48px;gap:8px;padding:0 12px} }
-.rung:hover{background:#212126}
-.rung.on{background:#26262C}
+.rung{border-radius:6px}
+.rung:hover{background:rgba(38,38,44,.55)}
+.rung.on{background:rgba(46,46,54,.75)}
 .rung .nm{font-family:var(--m);font-size:12px;color:var(--dim);letter-spacing:.02em}
 @media(max-width:560px){ .rung .nm{font-size:11px} }
 .rung.on .nm{color:var(--ink)}
-.rung .track{height:13px;background:#0F0F12;border:1px solid #26262C;
-  position:relative;border-radius:1px}
-.rung .fill{position:absolute;top:1px;bottom:1px;left:1px;border-radius:1px;
-  min-width:3px}                               /* ← иначе «кринж-контент» (55 шт.) исчезал */
+/* Дорожка и заливка стали выше и мягче: на светящемся фоне тонкая
+   полоска в один пиксель терялась. */
+.rung .track{height:20px;background:rgba(15,15,18,.85);border:1px solid rgba(160,160,168,.12);
+  position:relative;border-radius:3px;overflow:hidden}
+.rung .fill{position:absolute;top:0;bottom:0;left:0;border-radius:2px;
+  min-width:4px}                               /* ← иначе «кринж-контент» (55 шт.) исчезал */
 .rung .val{font-family:var(--m);font-size:12px;text-align:right;color:var(--dim)}
 .rung.on .val{color:var(--brand-hi)}
 
-.deskfoot{padding:8px 16px;border-top:1px solid var(--line);font-family:var(--m);
+.deskfoot{padding:10px 18px;border-top:1px solid var(--glass-line);font-family:var(--m);
   font-size:11px;color:var(--dim);display:flex;justify-content:space-between;
   align-items:center;gap:12px;flex-wrap:wrap;min-height:var(--tap)}
 .deskfoot button{background:none;border:1px solid var(--line);color:var(--dim);
@@ -92,9 +134,10 @@ h1 em{font-style:normal;color:var(--brand)}
 
 /* ---------- метрики ---------- */
 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-  gap:1px;background:var(--line);border:1px solid var(--line);margin:26px 0}
+  gap:1px;background:var(--glass-line);border:1px solid var(--glass-line);
+  border-radius:12px;overflow:hidden;margin:26px 0}
 @media(max-width:560px){ .kpis{grid-template-columns:1fr 1fr} }
-.kpi{background:var(--panel);padding:16px 18px}
+.kpi{background:var(--glass);padding:18px 20px}
 @media(max-width:560px){ .kpi{padding:13px 14px} }
 .kpi .n{font-family:var(--d);font-size:clamp(22px,5vw,30px);font-weight:800;
   line-height:1;letter-spacing:-.02em}
@@ -649,13 +692,21 @@ a.pf-tag-l:hover{border-color:var(--brand);color:var(--ink)}
 
 /* Свежесть: что было на последнем эфире. Одна строка, чтобы не
    отодвигать поиск, и переносится на узком экране. */
-.fresh{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;
-  border:1px solid var(--line);border-left:2px solid var(--brand);
-  border-radius:3px;background:var(--panel);padding:10px 13px;margin:0 0 14px;
-  font-size:13px;color:var(--dim)}
+.fresh{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;
+  border:1px solid var(--glass-line);border-radius:10px;
+  background:var(--glass);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  padding:12px 16px;margin:0 0 16px;font-size:13px;color:var(--dim)}
 .fresh b{color:var(--ink);font-weight:600}
-.fresh .fr-k{font-family:var(--m);font-size:10px;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--brand);flex:none}
+/* Метка состояния — светящаяся точка в пилюле. Свечение здесь несёт
+   смысл: это единственное место страницы, где что-то происходит прямо
+   сейчас. */
+.fresh .fr-k{display:flex;align-items:center;gap:8px;flex:none;
+  font-family:var(--m);font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--brand-hi);
+  border:1px solid rgba(242,102,15,.45);border-radius:999px;
+  background:rgba(242,102,15,.07);padding:6px 12px}
+.fresh .fr-k::before{content:'';width:7px;height:7px;border-radius:50%;
+  background:var(--brand);flex:none;box-shadow:0 0 10px 2px rgba(242,102,15,.9)}
 .fresh .fr-n{font-variant-numeric:tabular-nums}
 .fresh .fr-live{color:var(--brand-hi);font-family:var(--m);font-size:11px}
 .pf-almost{grid-template-columns:repeat(auto-fill,minmax(230px,1fr));margin:0 0 4px}
