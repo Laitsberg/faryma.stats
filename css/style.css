@@ -770,8 +770,17 @@ a.pf-tag-l:hover{border-color:var(--brand);color:var(--ink)}
    Карточка тянется на всю высоту левой колонки, а лишнее место
    забирает список треков: иначе рядом с высоким пультом оставалась
    дыра в половину экрана. */
-.last{display:flex;flex-direction:column;gap:14px}
-@media(min-width:901px){ .last{height:100%} }
+.last{display:flex;flex-direction:column;gap:14px;position:relative}
+/* Тень у нижнего края: значит, список продолжается. Класс ставит
+   и снимает отметитьХвост(), когда докрутили до низа. */
+.last::after{content:'';position:absolute;left:1px;right:1px;bottom:1px;height:42px;
+  pointer-events:none;opacity:0;transition:opacity .18s;
+  border-radius:0 0 var(--r) var(--r);
+  background:linear-gradient(180deg,rgba(19,19,22,0),#131316)}
+.last.more::after{opacity:1}
+/* На телефоне список не прокручивается, а обрезан по строке —
+   затемнять нечего. */
+@media(max-width:900px){ .last::after{content:none} }
 .last h3{font-family:var(--d);font-size:15px;font-weight:600;margin:0}
 .last-n{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
 .last-n a{font-family:var(--d);font-weight:600;font-size:clamp(30px,4.4vw,44px);
@@ -789,8 +798,10 @@ a.pf-tag-l:hover{border-color:var(--brand);color:var(--ink)}
   text-transform:uppercase;color:var(--dim);
   border-top:1px solid var(--glass-line);padding-top:14px;margin-bottom:-4px}
 /* min-height:0 обязателен: без него flex-элемент не даёт себе сжаться
-   ниже содержимого, и вместо прокрутки список распирает карточку. */
-.last-list{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;
+   ниже содержимого, и вместо прокрутки список распирает карточку.
+   overscroll-behavior не трогаем: докрутив список до конца, колесо
+   должно продолжить прокручивать страницу, а не упереться. */
+.last-list{flex:1;min-height:0;overflow-y:auto;
   margin-right:-6px;padding-right:6px}
 /* На телефоне прокрутки внутри прокрутки нет: список обрезан по
    восьмой строке (столько же в LAST_SHOW), дальше — ссылка в

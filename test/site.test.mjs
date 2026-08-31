@@ -59,6 +59,51 @@ test('цифр в табло ровно шесть', async () => {
   assert.equal(n, 6, 'изменилось число цифр — поправь grid-template-columns у .kpis');
 });
 
+test('колонки первого экрана одной высоты', async () => {
+  // Пустота рядом с короткой колонкой вылезала дважды: сперва под
+  // карточкой эфира, потом под пультом. Проверяем оба случая — с
+  // коротким списком и с раздутым до сорока треков.
+  const шир = await brw.newPage({ viewport: { width: 1440, height: 1000 } });
+  try {
+    await шир.goto(srv.base + '/index.html', { waitUntil: 'networkidle' });
+    await шир.waitForFunction(() => typeof ROWS !== 'undefined' && ROWS.length > 0);
+    const мерить = () => шир.evaluate(() => ({
+      пульт: Math.round(document.querySelector('.desk').getBoundingClientRect().height),
+      карточка: Math.round(document.getElementById('fresh').getBoundingClientRect().height)
+    }));
+    const было = await мерить();
+    assert.ok(Math.abs(было.пульт - было.карточка) <= 1,
+      `колонки разной высоты: пульт ${было.пульт}, карточка ${было.карточка}`);
+
+    // раздуваем последний эфир: список должен уйти в прокрутку,
+    // а карточка — остаться ростом с пульт
+    const стало = await шир.evaluate(() => {
+      const st = STREAMS.filter(s => ROWS.some(r => r.streamNum === s.num))
+        .reduce((a, b) => b.num > a.num ? b : a);
+      const свои = ROWS.filter(r => r.streamNum === st.num);
+      for (let i = свои.length; i < 40; i++) {
+        const к = { ...свои[i % свои.length] };
+        к.pos = i + 1; к.title = 'проверочный трек ' + (i + 1);
+        ROWS.push(к);
+      }
+      renderFresh();
+      const л = document.querySelector('.last-list');
+      return {
+        пульт: Math.round(document.querySelector('.desk').getBoundingClientRect().height),
+        карточка: Math.round(document.getElementById('fresh').getBoundingClientRect().height),
+        строк: document.querySelectorAll('.last-row').length,
+        прокрутка: л.scrollHeight > л.clientHeight + 8,
+        хвостВиден: document.getElementById('fresh').classList.contains('more')
+      };
+    });
+    assert.equal(стало.строк, 40, 'список показал не все треки');
+    assert.ok(Math.abs(стало.пульт - стало.карточка) <= 1,
+      `на длинном списке колонки разъехались: ${стало.пульт} и ${стало.карточка}`);
+    assert.equal(стало.прокрутка, true, 'длинный список не ушёл в прокрутку');
+    assert.equal(стало.хвостВиден, true, 'список прокручивается, а тени у края нет');
+  } finally { await шир.close(); }
+});
+
 test('на телефоне список последнего эфира обрезан честно', async () => {
   // Сколько строк видно, решает CSS (.last-row:nth-child(n+9)), а
   // сколько обещает ссылка — JS (LAST_SHOW). Разъедутся — тут упадёт.
