@@ -51,6 +51,42 @@ test('в шапке живые числа', async () => {
   assert.match(stamp, /обновлено \d+ \S+ \d{4}/);
 });
 
+test('цифр в табло ровно шесть', async () => {
+  // Число колонок в .kpis задано явно (6 / 3 / 2), чтобы на средней
+  // ширине последняя цифра не уезжала на свою строку рядом с пустой
+  // ячейкой. Если цифр станет другое число — поправить и сетку.
+  const n = await page.$$eval('#kpis .kpi', ns => ns.length);
+  assert.equal(n, 6, 'изменилось число цифр — поправь grid-template-columns у .kpis');
+});
+
+test('на телефоне список последнего эфира обрезан честно', async () => {
+  // Сколько строк видно, решает CSS (.last-row:nth-child(n+9)), а
+  // сколько обещает ссылка — JS (LAST_SHOW). Разъедутся — тут упадёт.
+  const узкий = await brw.newPage({ viewport: { width: 390, height: 844 } });
+  try {
+    await узкий.goto(srv.base + '/index.html', { waitUntil: 'networkidle' });
+    await узкий.waitForFunction(() => typeof ROWS !== 'undefined' && ROWS.length > 0);
+    const итог = await узкий.evaluate(() => {
+      const строки = [...document.querySelectorAll('#fresh .last-row')];
+      const видно = строки.filter(n => getComputedStyle(n).display !== 'none').length;
+      const ещё = document.querySelector('#fresh .last-more');
+      return {
+        всего: строки.length, видно,
+        ссылкаВидна: !!ещё && getComputedStyle(ещё).display !== 'none',
+        вСсылке: ещё ? +(ещё.textContent.match(/ещё\s+(\d+)/) || [])[1] : null
+      };
+    });
+    assert.ok(итог.всего > 0, 'список последнего эфира пуст');
+    assert.equal(итог.видно, Math.min(итог.всего, 8), 'видно не столько строк, сколько обещано');
+    if (итог.всего > итог.видно) {
+      assert.equal(итог.ссылкаВидна, true, 'строки спрятаны, а ссылки на остальные нет');
+      assert.equal(итог.вСсылке, итог.всего - итог.видно, 'в ссылке не то число треков');
+    } else {
+      assert.equal(итог.ссылкаВидна, false, 'ссылка есть, а прятать нечего');
+    }
+  } finally { await узкий.close(); }
+});
+
 test('все разделы на месте и не пустые', async () => {
   const пустые = await page.$$eval('section', ns => ns
     .filter(n => getComputedStyle(n).display !== 'none')
@@ -322,8 +358,6 @@ test('карточка последнего эфира не врёт', async () 
     const карточка = document.getElementById('fresh');
     const метка = document.getElementById('liveTag');
     const текст = карточка.textContent + ' ' + метка.textContent;
-    // номер стрима, по которому показано «лучшее»
-    const лучшийИз = карточка.querySelector('.last-best')?.dataset.bestStream;
     return {
       картВидна: !карточка.hidden,
       меткаВидна: !метка.hidden,
@@ -341,9 +375,9 @@ test('карточка последнего эфира не врёт', async () 
       // ещё заполняют, и число соврало бы
       естьСредний: /средний балл/.test(карточка.textContent),
       естьПометка: /таблицу ещё заполняют/.test(метка.textContent),
-      лучшийИз: лучшийИз ? +лучшийИз : null,
-      естьЛучшее: !!карточка.querySelector('.last-best'),
-      сЗаписьюНомера: сТреками.filter(s => s.vod).map(s => s.num),
+      строкСписка: карточка.querySelectorAll('.last-row').length,
+      сОценкой: [...карточка.querySelectorAll('.last-row')]
+        .filter(n => n.querySelector('.pill')).length,
       текст
     };
   });
@@ -363,13 +397,10 @@ test('карточка последнего эфира не врёт', async () 
     'страница утверждает то, чего сайт не знает');
   // «лучшее» считается только по эфиру, у которого есть запись:
   // по недозаполненной таблице лучший трек меняется каждый день
-  if (итог.естьЛучшее) {
-    assert.ok(итог.сЗаписьюНомера.includes(итог.лучшийИз),
-      'лучшее показано по эфиру без записи');
-  } else {
-    assert.equal(итог.сЗаписьюНомера.length, 0,
-      'в архиве есть разобранный эфир, а лучшее не показано');
-  }
+  // список — это перечисление внесённых строк, а не вывод по ним:
+  // в нём должен быть весь эфир и у каждой строки своя оценка
+  assert.equal(итог.строкСписка, итог.треков, 'в списке не все треки эфира');
+  assert.equal(итог.сОценкой, итог.треков, 'у строки списка нет оценки');
 });
 
 test('якорь раздела в адресе прокручивает к разделу', async () => {

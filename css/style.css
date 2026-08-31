@@ -175,11 +175,16 @@ h1 em{font-style:normal;color:var(--brand)}
 
 /* ---------- метрики ---------- */
 /* Строка цифр стоит первой на странице и читается как табло:
-   числа по центру ячейки и крупнее, чем были. */
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+   числа по центру ячейки и крупнее, чем были.
+   Число колонок задано явно, а не auto-fit: цифр ровно шесть
+   (см. renderKpis), и 6 / 3 / 2 делят их без остатка. С auto-fit
+   на промежуточной ширине помещалось пять, а шестая уезжала на
+   свою строку и рядом зияла пустая ячейка. */
+.kpis{display:grid;grid-template-columns:repeat(6,1fr);
   gap:1px;background:var(--glass-line);border:1px solid var(--glass-line);
   border-radius:var(--r);overflow:hidden;margin:0 0 20px}
-@media(max-width:560px){ .kpis{grid-template-columns:1fr 1fr} }
+@media(max-width:1080px){ .kpis{grid-template-columns:repeat(3,1fr)} }
+@media(max-width:560px){ .kpis{grid-template-columns:repeat(2,1fr)} }
 .kpi{background:var(--glass);padding:22px 14px;text-align:center}
 @media(max-width:560px){ .kpi{padding:14px 10px} }
 .kpi .n{font-family:var(--d);font-size:clamp(22px,3.1vw,34px);font-weight:800;
@@ -761,9 +766,12 @@ a.pf-tag-l:hover{border-color:var(--brand);color:var(--ink)}
   letter-spacing:.06em;margin-right:6px}
 
 /* Последний эфир — правая колонка первого экрана. Раньше это была
-   узкая полоса под шапкой; в ней не помещалось ничего, кроме номера,
-   и лучший трек эфира было некуда девать. */
-.last{display:flex;flex-direction:column;gap:16px}
+   узкая полоса под шапкой; в ней не помещалось ничего, кроме номера.
+   Карточка тянется на всю высоту левой колонки, а лишнее место
+   забирает список треков: иначе рядом с высоким пультом оставалась
+   дыра в половину экрана. */
+.last{display:flex;flex-direction:column;gap:14px}
+@media(min-width:901px){ .last{height:100%} }
 .last h3{font-family:var(--d);font-size:15px;font-weight:600;margin:0}
 .last-n{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
 .last-n a{font-family:var(--d);font-weight:600;font-size:clamp(30px,4.4vw,44px);
@@ -777,14 +785,42 @@ a.pf-tag-l:hover{border-color:var(--brand);color:var(--ink)}
 .last-st b.hi{color:var(--brand-hi)}
 .last-st span{display:block;font-family:var(--m);font-size:10px;letter-spacing:.14em;
   text-transform:uppercase;color:var(--dim);margin-top:6px}
-.last-best{border-top:1px solid var(--glass-line);padding-top:16px}
 .last-k{font-family:var(--m);font-size:10px;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--dim);margin-bottom:11px}
-.last-t{display:flex;align-items:baseline;justify-content:space-between;gap:10px;
-  flex-wrap:wrap;font-size:15px;line-height:1.4}
-.last-t>span{min-width:0}
-.last-t .pill{flex:none}
-.last-t b{color:var(--brand-hi);font-weight:600;overflow-wrap:anywhere}
+  text-transform:uppercase;color:var(--dim);
+  border-top:1px solid var(--glass-line);padding-top:14px;margin-bottom:-4px}
+/* min-height:0 обязателен: без него flex-элемент не даёт себе сжаться
+   ниже содержимого, и вместо прокрутки список распирает карточку. */
+.last-list{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;
+  margin-right:-6px;padding-right:6px}
+/* На телефоне прокрутки внутри прокрутки нет: список обрезан по
+   восьмой строке (столько же в LAST_SHOW), дальше — ссылка в
+   карточку стрима. Обрезанная посреди строки прокрутка выглядела
+   сломанной вёрсткой. */
+@media(max-width:900px){
+  .last-list{overflow:visible}
+  .last-row:nth-child(n+9){display:none}
+  .last-row:nth-child(8){border-bottom:0}
+}
+.last-list::-webkit-scrollbar{width:7px}
+.last-list::-webkit-scrollbar-thumb{background:rgba(160,160,168,.22);border-radius:4px}
+.last-row{display:grid;grid-template-columns:22px 1fr auto;align-items:baseline;
+  gap:10px;padding:8px 0;border-bottom:1px solid rgba(160,160,168,.10);font-size:14px}
+.last-row:last-child{border-bottom:0}
+.last-row i{font-family:var(--m);font-size:11px;font-style:normal;color:var(--dim);
+  text-align:right;font-variant-numeric:tabular-nums}
+.last-row>span{min-width:0;overflow-wrap:anywhere;line-height:1.4}
+/* Название — обычным цветом: восемь строк подряд золотом превращали
+   список в сплошное пятно. Цвет тут несёт оценка, она справа. */
+.last-row b{color:var(--ink);font-weight:600}
+.last-row .pill{flex:none;white-space:nowrap}
+/* Виден только на узком экране: на широком список прокручивается
+   и показывает всё сам. */
+.last-more{display:none;font-family:var(--m);font-size:11px;color:var(--brand-hi);
+  text-decoration:none;padding-top:12px;border-top:1px solid var(--glass-line)}
+.last-more:hover{color:var(--brand)}
+/* Отдельным блоком и ниже по файлу: правило с той же силой,
+   стоящее выше, проигрывало бы объявлению display:none. */
+@media(max-width:900px){ .last-more{display:block} }
 
 .pf-almost{grid-template-columns:repeat(auto-fill,minmax(230px,1fr));margin:0 0 4px}
 .pf-almost .al{background:var(--panel2,var(--panel))}
