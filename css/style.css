@@ -87,10 +87,29 @@ header::after{content:'';position:absolute;left:0;right:0;bottom:0;height:118px;
    разворот, а не как способ верстать всё подряд. */
 .head{position:relative;z-index:1;text-align:center}
 .head .sub{margin-left:auto;margin-right:auto}
+/* Верхняя строка шапки разъезжается по краям: подпись слева,
+   метка последнего эфира справа. На телефоне метка уходит под
+   подпись — рядом им не хватает ширины. */
+.topbar{display:flex;align-items:center;justify-content:space-between;
+  gap:14px;flex-wrap:wrap;text-align:left}
+@media(max-width:640px){ .topbar{justify-content:center;text-align:center} }
+/* Метка — та же пилюля со светящейся точкой, что была в полосе
+   свежести: она переехала сюда, в строку с подписью. */
+.livetag{display:flex;align-items:center;gap:9px;flex:none;
+  font-family:var(--m);font-size:11px;color:var(--brand-hi);
+  border:1px solid rgba(242,102,15,.45);border-radius:999px;
+  background:rgba(242,102,15,.07);padding:7px 13px}
+.livetag[hidden]{display:none}
+.livetag::before{content:'';width:7px;height:7px;border-radius:50%;flex:none;
+  background:var(--brand);box-shadow:0 0 10px 2px rgba(242,102,15,.9)}
+@media(max-width:400px){ .livetag{font-size:10px;padding:6px 10px} }
 /* Только сверху и снизу: сокращённая запись padding обнуляла бы боковые
    отступы, унаследованные от .wrap, и текст шапки прилипал к краю экрана. */
-.head{padding-top:52px;padding-bottom:42px}
-@media(max-width:560px){ .head{padding-top:28px;padding-bottom:26px} }
+.head{padding-top:24px;padding-bottom:46px}
+@media(max-width:560px){ .head{padding-top:18px;padding-bottom:30px} }
+/* Заголовок отбит от верхней строки: он держит экран один. */
+.head h1{margin-top:58px}
+@media(max-width:560px){ .head h1{margin-top:30px} }
 .eyebrow{font-family:var(--m);font-size:11px;letter-spacing:.22em;
   color:var(--dim);text-transform:uppercase}
 h1{font-family:var(--d);font-weight:800;font-size:clamp(32px,6.4vw,68px);
@@ -98,11 +117,21 @@ h1{font-family:var(--d);font-weight:800;font-size:clamp(32px,6.4vw,68px);
   text-shadow:0 0 60px rgba(242,102,15,.28)}
 h1 em{font-style:normal;color:var(--brand)}
 .sub{color:var(--dim);max-width:52ch;margin:0;font-size:16px}
-.stamp{font-family:var(--m);font-size:11px;color:var(--dim);margin-top:18px}
+/* Строчка про источник переехала в подвал: наверху она перебивала
+   заголовок мелким техническим текстом, а нужна она тем, кто
+   дочитал и хочет проверить, откуда цифры. */
+.stamp{font-family:var(--m);font-size:11px;color:var(--dim);margin:22px 0 0}
 .stamp b{color:var(--brand-hi);font-weight:600}
 
-/* ---------- пульт (шкала-фильтр) ---------- */
-.desk{margin:26px 0 6px;border:1px solid var(--glass-line);border-radius:var(--r);
+/* ---------- первый экран: пульт и последний эфир ---------- */
+/* Ниже 900 колонки не помещаются: у шкалы шесть ступеней с числами,
+   и в половине узкого экрана дорожки становятся обрубками. */
+.firstrow{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start;
+  margin:0 0 6px}
+.firstrow>*{min-width:0}
+@media(max-width:900px){ .firstrow{grid-template-columns:1fr} }
+
+.desk{margin:0;border:1px solid var(--glass-line);border-radius:var(--r);
   background:var(--glass);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
   overflow:hidden}
 .desk-hd{display:flex;justify-content:space-between;align-items:baseline;
@@ -145,16 +174,18 @@ h1 em{font-style:normal;color:var(--brand)}
 .deskfoot button:hover{color:var(--brand-hi);border-color:var(--brand)}
 
 /* ---------- метрики ---------- */
+/* Строка цифр стоит первой на странице и читается как табло:
+   числа по центру ячейки и крупнее, чем были. */
 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
   gap:1px;background:var(--glass-line);border:1px solid var(--glass-line);
-  border-radius:var(--r);overflow:hidden;margin:26px 0}
+  border-radius:var(--r);overflow:hidden;margin:0 0 20px}
 @media(max-width:560px){ .kpis{grid-template-columns:1fr 1fr} }
-.kpi{background:var(--glass);padding:18px 20px}
-@media(max-width:560px){ .kpi{padding:13px 14px} }
-.kpi .n{font-family:var(--d);font-size:clamp(22px,5vw,30px);font-weight:800;
-  line-height:1;letter-spacing:-.02em}
+.kpi{background:var(--glass);padding:22px 14px;text-align:center}
+@media(max-width:560px){ .kpi{padding:14px 10px} }
+.kpi .n{font-family:var(--d);font-size:clamp(22px,3.1vw,34px);font-weight:800;
+  line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
 .kpi .l{font-family:var(--m);font-size:10px;letter-spacing:.14em;color:var(--dim);
-  text-transform:uppercase;margin-top:7px}
+  text-transform:uppercase;margin-top:9px;line-height:1.35}
 
 /* ---------- секции ---------- */
 /* Разделов на странице двадцать один, и раньше все они выглядели
@@ -729,25 +760,32 @@ a.pf-tag-l:hover{border-color:var(--brand);color:var(--ink)}
 .al-s{font-family:var(--m);font-size:10px;color:var(--brand);
   letter-spacing:.06em;margin-right:6px}
 
-/* Свежесть: что было на последнем эфире. Одна строка, чтобы не
-   отодвигать поиск, и переносится на узком экране. */
-.fresh{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;
-  border:1px solid var(--glass-line);border-radius:var(--r);
-  background:var(--glass);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
-  padding:12px 16px;margin:0 0 16px;font-size:13px;color:var(--dim)}
-.fresh b{color:var(--ink);font-weight:600}
-/* Метка состояния — светящаяся точка в пилюле. Свечение здесь несёт
-   смысл: это единственное место страницы, где что-то происходит прямо
-   сейчас. */
-.fresh .fr-k{display:flex;align-items:center;gap:8px;flex:none;
-  font-family:var(--m);font-size:10px;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--brand-hi);
-  border:1px solid rgba(242,102,15,.45);border-radius:999px;
-  background:rgba(242,102,15,.07);padding:6px 12px}
-.fresh .fr-k::before{content:'';width:7px;height:7px;border-radius:50%;
-  background:var(--brand);flex:none;box-shadow:0 0 10px 2px rgba(242,102,15,.9)}
-.fresh .fr-n{font-variant-numeric:tabular-nums}
-.fresh .fr-live{color:var(--brand-hi);font-family:var(--m);font-size:11px}
+/* Последний эфир — правая колонка первого экрана. Раньше это была
+   узкая полоса под шапкой; в ней не помещалось ничего, кроме номера,
+   и лучший трек эфира было некуда девать. */
+.last{display:flex;flex-direction:column;gap:16px}
+.last h3{font-family:var(--d);font-size:15px;font-weight:600;margin:0}
+.last-n{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.last-n a{font-family:var(--d);font-weight:600;font-size:clamp(30px,4.4vw,44px);
+  line-height:1;letter-spacing:-.03em;color:var(--brand);
+  text-decoration:none;border-bottom:0}
+.last-n a:hover{color:var(--brand-hi)}
+.last-n span{color:var(--dim);font-size:15px}
+.last-st{display:flex;gap:28px;flex-wrap:wrap}
+.last-st b{display:block;font-family:var(--m);font-size:24px;font-weight:400;
+  line-height:1;font-variant-numeric:tabular-nums}
+.last-st b.hi{color:var(--brand-hi)}
+.last-st span{display:block;font-family:var(--m);font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--dim);margin-top:6px}
+.last-best{border-top:1px solid var(--glass-line);padding-top:16px}
+.last-k{font-family:var(--m);font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--dim);margin-bottom:11px}
+.last-t{display:flex;align-items:baseline;justify-content:space-between;gap:10px;
+  flex-wrap:wrap;font-size:15px;line-height:1.4}
+.last-t>span{min-width:0}
+.last-t .pill{flex:none}
+.last-t b{color:var(--brand-hi);font-weight:600;overflow-wrap:anywhere}
+
 .pf-almost{grid-template-columns:repeat(auto-fill,minmax(230px,1fr));margin:0 0 4px}
 .pf-almost .al{background:var(--panel2,var(--panel))}
 .al-more{color:var(--dim);font-style:italic}

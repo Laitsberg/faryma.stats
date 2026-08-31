@@ -480,40 +480,65 @@ function renderUniverses(rows) {
    хотя эфир кончился накануне, а модератор просто проставляет
    тайм-коды. Про то, чего не знаешь, лучше молчать. */
 function renderFresh() {
-  const el = $('fresh');
+  const el = $('fresh'), метка = $('liveTag');
   const сТреками = STREAMS.filter(s => ROWS.some(r => r.streamNum === s.num));
-  if (!сТреками.length) { el.hidden = true; return; }
+  if (!сТреками.length) { el.hidden = true; метка.hidden = true; return; }
 
   const st = сТреками.reduce((a, b) => b.num > a.num ? b : a);
   const rows = ROWS.filter(r => r.streamNum === st.num);
-  el.hidden = false;
-
   const дата = st.date ? st.date.toLocaleDateString('ru-RU',
     { day: 'numeric', month: 'long' }) : '';
-  const шапка =
-    `<span class="fr-k">последний эфир</span>` +
-    `<span><a class="pf-link" href="#stream=${st.num}" data-stream="${st.num}">стрим №${st.num}</a>` +
-    (дата ? `, ${esc(дата)}` : '') + `</span>`;
 
-  if (!st.vod) {
-    // запись ещё не выложена — значит таблицу только заполняют
-    el.innerHTML = шапка +
-      `<span class="fr-n">внесено <b>${num(rows.length)}</b> ` +
-        plural(rows.length, 'трек', 'трека', 'треков') + `</span>` +
-      `<span class="fr-live">таблицу ещё заполняют</span>`;
-    return;
-  }
+  /* Метка в шапке. Про сам эфир сайт утверждать не вправе — идёт он
+     или кончился, отсюда не видно. Зато видно, что записи ещё нет,
+     а значит таблицу дозаполняют. */
+  метка.hidden = false;
+  метка.innerHTML = `<span>стрим №${st.num}</span>` +
+    (st.vod
+      ? (дата ? ` · <span>${esc(дата)}</span>` : '')
+      : ' · <span>таблицу ещё заполняют</span>');
 
-  const балл = avg(rows.map(r => r.rate.score));
-  const лучший = [...rows].sort((a, b) =>
-    SCALE_ORDER.indexOf(a.rate.label) - SCALE_ORDER.indexOf(b.rate.label))[0];
+  el.hidden = false;
 
-  el.innerHTML = шапка +
-    `<span class="fr-n"><b>${num(rows.length)}</b> ` +
-      plural(rows.length, 'трек', 'трека', 'треков') +
-      ` · средний <b>${f2(балл)}</b></span>` +
-    (лучший ? `<span>лучшее: ${artistNames(лучший.artist)} — <b>${esc(лучший.title)}</b> ` +
-      `${ratePill(лучший.rate.label)}</span>` : '');
+  const балл = st.vod ? avg(rows.map(r => r.rate.score)) : null;
+  const пара = (знач, подпись, ярко) =>
+    `<div><b${ярко ? ' class="hi"' : ''}>${знач}</b><span>${esc(подпись)}</span></div>`;
+
+  /* Лучшее показываем по последнему эфиру, у которого есть запись.
+     Пока таблицу заполняют, «лучшее» по недобранным строкам — это
+     лучшее из восьми, а не с эфира, и завтра оно поменяется. */
+  const разобран = сТреками.filter(s => s.vod)
+    .reduce((a, b) => !a || b.num > a.num ? b : a, null);
+  const строки = разобран ? ROWS.filter(r => r.streamNum === разобран.num) : [];
+  const лучший = строки.length
+    ? [...строки].sort((a, b) =>
+        SCALE_ORDER.indexOf(a.rate.label) - SCALE_ORDER.indexOf(b.rate.label))[0]
+    : null;
+
+  el.innerHTML =
+    `<h3>Последний эфир</h3>` +
+    `<div class="last-n">` +
+      `<a class="pf-link" href="#stream=${st.num}" data-stream="${st.num}">№${st.num}</a>` +
+      (дата ? `<span>${esc(дата)}</span>` : '') +
+    `</div>` +
+    `<div class="last-st">` +
+      пара(num(rows.length), 'внесено ' + plural(rows.length, 'трек', 'трека', 'треков')) +
+      (st.vod ? пара(f2(балл), 'средний балл', true)
+              : пара('нет', 'записи пока', true)) +
+    `</div>` +
+    (лучший
+      // Номер эфира записан в атрибут, а не только в текст: формулировка
+      // меняется («на этом эфире» / «на стриме №272»), а проверке нужно
+      // знать наверняка, по какому эфиру посчитано лучшее.
+      ? `<div class="last-best" data-best-stream="${разобран.num}">` +
+          `<div class="last-k">лучшее ` +
+            (разобран.num === st.num ? 'на этом эфире'
+              : `на стриме №${разобран.num} — последнем с записью`) + `</div>` +
+          `<div class="last-t">` +
+            `<span>${artistNames(лучший.artist)} — <b>${esc(лучший.title)}</b></span>` +
+            ratePill(лучший.rate.label) + `</div>` +
+        `</div>`
+      : '');
 }
 
 /* ---------- почти собрали ----------
