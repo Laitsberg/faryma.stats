@@ -130,7 +130,9 @@ function нарисовать(подсветить = -1) {
   ctx.clearRect(0, 0, c.width, c.height);
 
   if (!ИМЕНА.length) {
-    ctx.fillStyle = '#1F1F23';
+    // Фон страницы стал глубже, и прежний #1F1F23 читался светлым
+    // пятном — пустое колесо тянуло на себя весь взгляд.
+    ctx.fillStyle = '#141418';
     ctx.beginPath(); ctx.arc(R, R, R - 6, 0, Math.PI * 2); ctx.fill();
     ctx.fillStyle = '#7C7583';
     ctx.font = '28px "Golos Text", sans-serif';
@@ -159,7 +161,7 @@ function нарисовать(подсветить = -1) {
     ctx.fill();
 
     if (ИМЕНА.length <= 200) {
-      ctx.strokeStyle = 'rgba(13,13,15,.35)';
+      ctx.strokeStyle = 'rgba(7,7,10,.35)';
       ctx.lineWidth = 1;
       ctx.stroke();
     }
@@ -168,7 +170,7 @@ function нарисовать(подсветить = -1) {
       ctx.save();
       ctx.translate(R, R);
       ctx.rotate(от + шаг / 2);
-      ctx.fillStyle = i === подсветить ? '#0D0D0F' : '#140A02';
+      ctx.fillStyle = i === подсветить ? '#07070A' : '#140A02';
       ctx.font = `600 ${Math.max(12, Math.min(22, 620 / ИМЕНА.length + 11))}px "Golos Text", sans-serif`;
       ctx.textAlign = 'right';
       ctx.textBaseline = 'middle';
@@ -180,8 +182,8 @@ function нарисовать(подсветить = -1) {
 
   // втулка
   ctx.beginPath(); ctx.arc(R, R, R * 0.12, 0, Math.PI * 2);
-  ctx.fillStyle = '#0D0D0F'; ctx.fill();
-  ctx.strokeStyle = '#2C2C31'; ctx.lineWidth = 3; ctx.stroke();
+  ctx.fillStyle = '#07070A'; ctx.fill();
+  ctx.strokeStyle = '#3A3A42'; ctx.lineWidth = 3; ctx.stroke();
 }
 
 /* ---------- вращение ---------- */

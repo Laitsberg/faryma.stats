@@ -579,15 +579,20 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 50px;
 .pf{position:fixed;inset:0;z-index:60;display:flex;align-items:flex-end;justify-content:center}
 .pf[hidden]{display:none}
 .pf-back{position:absolute;inset:0;background:rgba(6,6,8,.72);backdrop-filter:blur(3px)}
+/* Окно карточки непрозрачное намеренно: под ним лежит вся страница,
+   и сквозь стекло читались бы чужие строки. Стеклянными оставлены
+   только грани и тень — чтобы окно отрывалось от фона. */
 .pf-win{position:relative;width:100%;max-width:860px;max-height:92vh;
   display:flex;flex-direction:column;background:var(--panel);
-  border:1px solid var(--line);border-bottom:0;border-radius:4px 4px 0 0}
+  border:1px solid var(--glass-line);border-bottom:0;
+  border-radius:var(--r) var(--r) 0 0;box-shadow:0 -18px 60px rgba(0,0,0,.6)}
 @media(min-width:760px){
   .pf{align-items:center}
-  .pf-win{max-height:86vh;border-bottom:1px solid var(--line);border-radius:4px}
+  .pf-win{max-height:86vh;border-bottom:1px solid var(--glass-line);
+    border-radius:var(--r);box-shadow:0 24px 70px rgba(0,0,0,.6)}
 }
 .pf-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;
-  padding:16px 18px 14px;border-bottom:1px solid var(--line);background:var(--panel2)}
+  padding:16px 18px 14px;border-bottom:1px solid var(--glass-line);background:var(--panel2)}
 .pf-head h2{font-family:var(--d);font-size:clamp(17px,3vw,23px);font-weight:600;
   margin:0;letter-spacing:-.01em;overflow-wrap:anywhere}
 .pf-sub{font-family:var(--m);font-size:11px;color:var(--dim);margin-top:5px}
@@ -604,7 +609,8 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 50px;
 /* Ровно четыре метрики, поэтому колонки задаём числом, а не auto-fit:
    на телефоне auto-fit укладывал три в ряд и оставлял две пустые клетки. */
 .pf-kpi{display:grid;grid-template-columns:repeat(4,1fr);
-  gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:16px}
+  gap:1px;background:var(--glass-line);border:1px solid var(--glass-line);
+  border-radius:var(--r);overflow:hidden;margin-bottom:16px}
 @media(max-width:700px){ .pf-kpi{grid-template-columns:1fr 1fr} }
 .pf-kpi>div{background:var(--panel);padding:11px 13px;display:flex;flex-direction:column;gap:4px}
 .pf-kpi b{font-family:var(--d);font-size:19px;font-weight:800;letter-spacing:-.02em;
@@ -625,7 +631,7 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 50px;
   color:var(--dim);font-weight:400;margin:20px 0 9px}
 .pf-list{display:flex;flex-direction:column}
 .pf-row{display:grid;grid-template-columns:1fr auto;gap:4px 12px;
-  padding:9px 0;border-bottom:1px solid #232328}
+  padding:9px 0;border-bottom:1px solid rgba(160,160,168,.10)}
 .pf-row:last-child{border-bottom:0}
 .pf-t{font-size:14px;line-height:1.4;overflow-wrap:anywhere}
 .pf-r{text-align:right}
@@ -638,7 +644,7 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 50px;
 .pf-vod{margin:0 0 14px;font-size:14px}
 /* карточка вселенной: сезон — заголовок, внутри типы треков */
 .pf-season{display:flex;align-items:baseline;justify-content:space-between;gap:12px;
-  border-bottom:1px solid var(--line);padding-bottom:7px;margin-top:24px;
+  border-bottom:1px solid var(--glass-line);padding-bottom:7px;margin-top:24px;
   color:var(--ink);font-family:var(--b);font-size:14px;font-weight:600;
   letter-spacing:0;text-transform:none}
 .pf-season span{font-family:var(--m);font-size:11px;color:var(--dim);flex:none}
@@ -765,7 +771,7 @@ a.pf-tag-l:hover{border-color:var(--brand);color:var(--ink)}
   filter:drop-shadow(0 2px 4px rgba(0,0,0,.6))}
 
 .wheel-go{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
-  width:23%;height:23%;border-radius:50%;border:2px solid var(--line);
+  width:23%;height:23%;border-radius:50%;border:2px solid var(--glass-line);
   background:var(--bg);color:var(--ink);cursor:pointer;
   font-family:var(--m);font-size:13px;letter-spacing:.06em;text-transform:uppercase;
   transition:border-color .15s,color .15s}
@@ -773,15 +779,18 @@ a.pf-tag-l:hover{border-color:var(--brand);color:var(--ink)}
 .wheel-go:disabled{opacity:.45;cursor:default}
 .wheel-go:focus-visible{outline:2px solid var(--brand);outline-offset:3px}
 
-.wheel-out{border:1px solid var(--brand);border-radius:3px;background:var(--panel);
-  padding:16px 18px;text-align:center}
+/* Табло с выпавшим именем — единственное место страницы колеса, где
+   что-то произошло, поэтому светится оно, а не рамки вокруг. */
+.wheel-out{border:1px solid var(--brand);border-radius:var(--r);background:var(--glass);
+  box-shadow:0 0 44px rgba(242,102,15,.18);padding:16px 18px;text-align:center}
 .wheel-out-k{font-family:var(--m);font-size:10px;letter-spacing:.16em;
   text-transform:uppercase;color:var(--brand)}
 .wheel-out-n{font-family:var(--d);font-weight:600;font-size:clamp(22px,5vw,38px);
   line-height:1.15;margin:8px 0 14px;overflow-wrap:anywhere}
 .wheel-out-b{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
 
-.wheel-log{border:1px solid var(--line);border-radius:3px;background:var(--panel);padding:14px 16px}
+.wheel-log{border:1px solid var(--glass-line);border-radius:var(--r);
+  background:var(--glass);padding:14px 16px}
 .wheel-log-list{margin:0;padding-left:22px;color:var(--dim);font-size:14px;
   display:grid;gap:4px;max-height:220px;overflow:auto}
 .wheel-log-list li{overflow-wrap:anywhere}
@@ -792,7 +801,7 @@ a.pf-tag-l:hover{border-color:var(--brand);color:var(--ink)}
 .wheel-n{font-family:var(--m);font-size:20px;color:var(--brand-hi);
   font-variant-numeric:tabular-nums}
 .wheel-names{width:100%;min-height:230px;resize:vertical;margin:10px 0;
-  background:var(--bg);border:1px solid var(--line);border-radius:2px;
+  background:rgba(7,7,10,.6);border:1px solid var(--glass-line);border-radius:2px;
   color:var(--ink);font-family:var(--m);font-size:13px;line-height:1.6;padding:10px 12px}
 .wheel-names:focus{outline:none;border-color:var(--brand)}
 .wheel-btns{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
