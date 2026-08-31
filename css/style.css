@@ -28,6 +28,9 @@
   --b:'Golos Text',system-ui,-apple-system,sans-serif;
   --m:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
   --tap:44px;               /* минимальная цель для пальца */
+  /* Один радиус на все панели. В макете он маленький намеренно:
+     «Эфир» — про пульт и приборы, а не про мягкие плитки. */
+  --r:4px;
 }
 
 *{box-sizing:border-box}
@@ -90,7 +93,7 @@ h1 em{font-style:normal;color:var(--brand)}
 .stamp b{color:var(--brand-hi);font-weight:600}
 
 /* ---------- пульт (шкала-фильтр) ---------- */
-.desk{margin:26px 0 6px;border:1px solid var(--glass-line);border-radius:12px;
+.desk{margin:26px 0 6px;border:1px solid var(--glass-line);border-radius:var(--r);
   background:var(--glass);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
   overflow:hidden}
 .desk-hd{display:flex;justify-content:space-between;align-items:baseline;
@@ -118,9 +121,9 @@ h1 em{font-style:normal;color:var(--brand)}
 .rung.on .nm{color:var(--ink)}
 /* Дорожка и заливка стали выше и мягче: на светящемся фоне тонкая
    полоска в один пиксель терялась. */
-.rung .track{height:20px;background:rgba(15,15,18,.85);border:1px solid rgba(160,160,168,.12);
-  position:relative;border-radius:3px;overflow:hidden}
-.rung .fill{position:absolute;top:0;bottom:0;left:0;border-radius:2px;
+.rung .track{height:22px;background:rgba(15,15,18,.85);border:1px solid rgba(160,160,168,.12);
+  position:relative;border-radius:2px;overflow:hidden}
+.rung .fill{position:absolute;top:0;bottom:0;left:0;border-radius:1px;
   min-width:4px}                               /* ← иначе «кринж-контент» (55 шт.) исчезал */
 .rung .val{font-family:var(--m);font-size:12px;text-align:right;color:var(--dim)}
 .rung.on .val{color:var(--brand-hi)}
@@ -135,7 +138,7 @@ h1 em{font-style:normal;color:var(--brand)}
 /* ---------- метрики ---------- */
 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
   gap:1px;background:var(--glass-line);border:1px solid var(--glass-line);
-  border-radius:12px;overflow:hidden;margin:26px 0}
+  border-radius:var(--r);overflow:hidden;margin:26px 0}
 @media(max-width:560px){ .kpis{grid-template-columns:1fr 1fr} }
 .kpi{background:var(--glass);padding:18px 20px}
 @media(max-width:560px){ .kpi{padding:13px 14px} }
@@ -156,10 +159,14 @@ section{margin:44px 0}
 /* без min-width:0 колонка растягивается под самое длинное слово внутри */
 .grid2>*{min-width:0}
 @media(max-width:820px){ .grid2{grid-template-columns:1fr} }
-.card{background:var(--panel);border:1px solid var(--line);border-radius:3px;
-  padding:14px 16px 18px}
+/* Карточка — та же полупрозрачная подложка, что у верхних блоков, но без
+   размытия: карточек на странице больше двадцати, и backdrop-filter под
+   каждой заметно роняет прокрутку на телефоне. Прозрачности достаточно —
+   вверху страницы карточка ловит свечение, ниже читается ровной панелью. */
+.card{background:var(--glass);border:1px solid var(--glass-line);border-radius:var(--r);
+  padding:16px 18px 18px}
 @media(max-width:560px){ .card{padding:12px 12px 14px} }
-.card h3{font-family:var(--b);font-size:13px;font-weight:600;margin:0 0 2px;color:var(--ink);
+.card h3{font-family:var(--b);font-size:14px;font-weight:600;margin:0 0 2px;color:var(--ink);
   overflow-wrap:anywhere}
 .card .cap{font-family:var(--m);font-size:11px;color:var(--dim);margin-bottom:12px}
 
@@ -168,7 +175,7 @@ section{margin:44px 0}
 .fans>*{min-width:0}
 .card.fan{padding:13px 15px 14px}
 .fan-row{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
-  padding:7px 0;border-bottom:1px solid #232328;font-size:13px}
+  padding:7px 0;border-bottom:1px solid rgba(160,160,168,.10);font-size:13px}
 .fan-row:last-child{border-bottom:0}
 .fan-n{min-width:0;overflow-wrap:anywhere}
 .fan-v{font-family:var(--m);font-size:11px;color:var(--dim);text-align:right;
@@ -200,12 +207,14 @@ th{font-family:var(--m);font-size:10px;letter-spacing:.12em;text-transform:upper
      своей рамки: иначе к середине уже не понять, где какая колонка.
      Линия снизу нарисована тенью, а не border: при border-collapse
      рамка у прилипшей ячейки не едет вместе с ней и пропадает. */
-  position:sticky;top:0;z-index:2;background:var(--panel);
-  box-shadow:inset 0 -1px 0 var(--line)}
+  /* Подложка непрозрачная и своим цветом: подложка карточки теперь
+     полупрозрачная, и сквозь прилипшую строку просвечивали бы данные. */
+  position:sticky;top:0;z-index:2;background:#15151A;
+  box-shadow:inset 0 -1px 0 var(--glass-line)}
 th:hover{color:var(--brand-hi)}
 th.num,td.num{text-align:right}
-td{padding:9px 10px;border-bottom:1px solid #232328;vertical-align:top}
-tr:hover td{background:#1E1E23}
+td{padding:9px 10px;border-bottom:1px solid rgba(160,160,168,.10);vertical-align:top}
+tr:hover td{background:rgba(160,160,168,.07)}
 td.mono{font-family:var(--m);font-size:12px}
 /* Таблицы длиннее экрана прокручиваются внутри себя. Без подсказки
    нижняя строка выглядит просто обрезанной пополам — будто сломалась
@@ -215,10 +224,10 @@ td.mono{font-family:var(--m);font-size:12px}
 .scroll-wrap{position:relative}
 .scroll-wrap::after{content:'';position:absolute;left:0;right:0;bottom:0;height:46px;
   pointer-events:none;opacity:0;transition:opacity .18s;
-  background:linear-gradient(180deg,rgba(23,23,26,0),var(--panel))}
+  background:linear-gradient(180deg,rgba(21,21,26,0),#15151A)}
 .scroll-wrap.more::after{opacity:1}
 .scroll::-webkit-scrollbar{width:9px}
-.scroll::-webkit-scrollbar-thumb{background:#2C2C31;border-radius:5px}
+.scroll::-webkit-scrollbar-thumb{background:rgba(160,160,168,.22);border-radius:5px}
 .pill{display:inline-block;font-family:var(--m);font-size:10px;padding:2px 7px;
   border-radius:2px;border:1px solid currentColor;white-space:nowrap}
 .tlink{color:var(--brand-hi);text-decoration:none;border-bottom:1px solid rgba(245,155,20,.35)}
@@ -279,9 +288,13 @@ td.mono{font-family:var(--m);font-size:12px}
 }
 
 /* ---------- поиск ---------- */
-.search{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+/* Строка поиска — такая же панель, как карточки, а поля внутри неё
+   утоплены: тёмнее подложки. Так видно, куда именно писать. */
+.search{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;
+  border:1px solid var(--glass-line);border-radius:var(--r);
+  background:var(--glass);padding:10px}
 .search input,.search select{
-  background:var(--panel2);border:1px solid var(--line);color:var(--ink);
+  background:rgba(7,7,10,.6);border:1px solid transparent;color:var(--ink);
   font-family:var(--b);font-size:16px;         /* 16px — иначе iOS зумит страницу при фокусе */
   padding:10px 11px;border-radius:2px;min-height:var(--tap)}
 .search input{flex:1;min-width:200px}
@@ -297,7 +310,7 @@ td.mono{font-family:var(--m);font-size:12px}
 }
 
 @media(max-width:700px){
-  .search{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .search{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px}
   .search input{grid-column:1 / -1;min-width:0}
   .search select{min-width:0}
 }
@@ -693,7 +706,7 @@ a.pf-tag-l:hover{border-color:var(--brand);color:var(--ink)}
 /* Свежесть: что было на последнем эфире. Одна строка, чтобы не
    отодвигать поиск, и переносится на узком экране. */
 .fresh{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;
-  border:1px solid var(--glass-line);border-radius:10px;
+  border:1px solid var(--glass-line);border-radius:var(--r);
   background:var(--glass);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
   padding:12px 16px;margin:0 0 16px;font-size:13px;color:var(--dim)}
 .fresh b{color:var(--ink);font-weight:600}
