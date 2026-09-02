@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-31T10:51:30.739Z",
+ "generated": "2026-09-02T17:12:37.548Z",
  "artists": {
   "7": {
    "name": "7",
@@ -41838,6 +41838,34 @@
    "tracks": 1,
    "country": null,
    "score": 0
+  },
+  "татьяна шабельникова & гарри бардин & марк айзикович & михаил боярский": {
+   "name": "Татьяна Шабельникова & Гарри Бардин & Марк Айзикович & Михаил Боярский",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "suno ai": {
+   "name": "Suno AI",
+   "tracks": 1,
+   "country": "US",
+   "area": "Cambridge",
+   "areaId": "ff1b74fd-054b-4136-b948-bb88fe55d93f",
+   "score": 100,
+   "mbid": "ab5c6089-ae7e-442a-9b82-25cb158ac741",
+   "mbName": "Suno AI",
+   "viaArea": true
+  },
+  "blind channel": {
+   "name": "Blind Channel",
+   "tracks": 1,
+   "country": "FI",
+   "area": "Oulu",
+   "areaId": "637f0e8d-eed1-4190-aac7-4376c84cd232",
+   "score": 100,
+   "mbid": "84cae50d-bdab-4597-89a3-0ebb06ca2247",
+   "mbName": "Blind Channel",
+   "viaArea": true
   }
  },
  "source": "MusicBrainz",
@@ -42090,6 +42118,11 @@
   "2818e858-23fc-4aa1-a63e-434b44da6b5c": "US",
   "0eeb01c2-6e31-46ad-96b8-319749f731d2": "US",
   "206f1f44-9380-48cc-bf6c-772585ef1e74": "US",
-  "c920948b-83e3-40b7-8fe9-9ab5abaac55b": "US"
+  "c920948b-83e3-40b7-8fe9-9ab5abaac55b": "US",
+  "bfb21323-f541-4a37-9760-4eea88e73740": "US",
+  "ff1b74fd-054b-4136-b948-bb88fe55d93f": "US",
+  "6a264f94-6ff1-30b1-9a81-41f7bfabd616": "FI",
+  "56788d4b-6aed-4596-9517-fad494e33344": "FI",
+  "637f0e8d-eed1-4190-aac7-4376c84cd232": "FI"
  }
 }
