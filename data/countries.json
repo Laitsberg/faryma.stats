@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-02T17:12:37.548Z",
+ "generated": "2026-09-03T04:09:24.831Z",
  "artists": {
   "7": {
    "name": "7",
@@ -41866,6 +41866,26 @@
    "mbid": "84cae50d-bdab-4597-89a3-0ebb06ca2247",
    "mbName": "Blind Channel",
    "viaArea": true
+  },
+  "normandie": {
+   "name": "Normandie",
+   "tracks": 1,
+   "country": "SE",
+   "area": "Sweden",
+   "areaId": "23d10872-f5ae-3f0c-bf55-332788a16ecb",
+   "score": 100,
+   "mbid": "358ce2ad-c1f2-44a3-98ee-dc754a68aa24",
+   "mbName": "Normandie"
+  },
+  "alexei zakharov": {
+   "name": "Alexei Zakharov",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "cfca9a21-1549-47dd-95b9-240ff42a9078",
+   "mbName": "Alexei Zakharov"
   }
  },
  "source": "MusicBrainz",
