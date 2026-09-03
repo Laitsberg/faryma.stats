@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-03T04:09:24.831Z",
+ "generated": "2026-09-03T17:04:25.248Z",
  "artists": {
   "7": {
    "name": "7",
@@ -41886,6 +41886,58 @@
    "score": 100,
    "mbid": "cfca9a21-1549-47dd-95b9-240ff42a9078",
    "mbName": "Alexei Zakharov"
+  },
+  "oxt & myth & roid": {
+   "name": "OxT & MYTH & ROID",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "aaron lazar": {
+   "name": "Aaron Lazar",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "78de4941-0f4a-472b-b34f-4b5da165c679",
+   "mbName": "Aaron Lazar"
+  },
+  "dan wallace": {
+   "name": "Dan Wallace",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "bfd9f477-96ae-425f-9520-c77fc2920536",
+   "mbName": "Dan Wallace"
+  },
+  "михаил шуфутинский": {
+   "name": "Михаил Шуфутинский",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "c5fbd2a7-574b-47f9-b3c8-14dfcabf283d",
+   "mbName": "Михаил Шуфутинский"
+  },
+  "azusa tadokoro": {
+   "name": "Azusa Tadokoro",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "1d4a8417-b4cf-472b-9ade-d5e92f5f3256",
+   "mbName": "田所あずさ"
+  },
+  "татьяна шабельникова, гарри бардин, марк айзикович & михаил боярский": {
+   "name": "Татьяна Шабельникова, Гарри Бардин, Марк Айзикович & Михаил Боярский",
+   "tracks": 1,
+   "country": null,
+   "score": 0
   }
  },
  "source": "MusicBrainz",
