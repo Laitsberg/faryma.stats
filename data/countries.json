@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-03T17:04:25.248Z",
+ "generated": "2026-09-04T08:50:40.893Z",
  "artists": {
   "7": {
    "name": "7",
@@ -41935,6 +41935,44 @@
   },
   "татьяна шабельникова, гарри бардин, марк айзикович & михаил боярский": {
    "name": "Татьяна Шабельникова, Гарри Бардин, Марк Айзикович & Михаил Боярский",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "jamal k": {
+   "name": "Jamal K",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "manfred minnich & manfred minnich strings": {
+   "name": "Manfred Minnich & Manfred Minnich Strings",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "howl be quiet": {
+   "name": "HOWL BE QUIET",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "3ae10334-86ea-4bec-9da4-2eeca3f07fac",
+   "mbName": "HOWL BE QUIET"
+  },
+  "tenacious d": {
+   "name": "Tenacious D",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "148ddea2-6839-4354-8e2c-5dfadf136b7f",
+   "mbName": "Tenacious D"
+  },
+  "plamenev & iwantsummer": {
+   "name": "Plamenev & Iwantsummer",
    "tracks": 1,
    "country": null,
    "score": 0
