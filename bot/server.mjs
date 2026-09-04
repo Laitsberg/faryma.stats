@@ -20,6 +20,7 @@ import http from 'node:http';
 import vm from 'node:vm';
 import { pathToFileURL } from 'node:url';
 import * as чат from './chat.mjs';
+import * as оч from './queue.mjs';
 
 const PORT = process.env.PORT || 3000;
 const BASE = (process.env.BASE || 'https://farymastats.info').replace(/\/+$/, '');
@@ -338,6 +339,25 @@ const server = http.createServer(async (req, res) => {
       return res.end(тело);
     }
 
+    /* Очередь на ближайший стрим — для страницы сайта, поэтому JSON.
+       Цены сюда не приезжают: их выбрасывает разбор в queue.mjs. */
+    if (u.pathname === '/queue' || u.pathname === '/queue/debug') {
+      const отчёт = u.pathname.endsWith('/debug');
+      let тело, код = 200;
+      try {
+        тело = JSON.stringify(отчёт ? await оч.разведка(BASE) : await оч.очередь(BASE));
+      } catch (e) {
+        код = 503;
+        тело = JSON.stringify({ беда: e.message });
+      }
+      res.writeHead(код, {
+        'content-type': 'application/json; charset=utf-8',
+        'cache-control': 'no-store',
+        'access-control-allow-origin': '*'
+      });
+      return res.end(тело);
+    }
+
     if (u.pathname === '/almost') return отдать(чтоПринести(await архив()));
     if (u.pathname === '/track') return отдать(искатьТрек(await архив(), q));
     if (u.pathname === '/user')  return отдать(искатьЗаказчика(await архив(), q));
@@ -347,6 +367,8 @@ const server = http.createServer(async (req, res) => {
       '/user?q=ник — статистика заказчика\n' +
       '/almost — вселенная, которой не хватает опенинга\n' +
       '/chatters — кто писал в чат за последний час (JSON)\n' +
+      '/queue — очередь на ближайший стрим (JSON, без цен)\n' +
+      '/queue/debug — что бот увидел в листе очереди\n' +
       '/health — жив ли\n' + BASE);
 
     отдать('нет такой команды', 404);
