@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Очередь — композитор разносит</title>
+<meta name="description" content="Что уже принесли на ближайший стрим: донаты, заказы и долги в том порядке, в каком они стоят в таблице.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Golos+Text:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="theme-color" content="#0D0D0F">
+<meta property="og:title" content="Очередь — композитор разносит">
+<meta property="og:description" content="Что уже принесли на ближайший стрим: донаты, заказы и долги.">
+<meta property="og:type" content="website">
+</head>
+<body>
+
+<header>
+ <div class="wrap head">
+  <div class="topbar">
+   <div class="eyebrow"><a class="back" href="./">← к статистике</a></div>
+   <div class="livetag" id="streamTag" hidden></div>
+  </div>
+  <h1>Очередь <em>на разнос</em></h1>
+  <p class="sub">Что уже принесли на ближайший стрим. Список тот же, что в таблице, и в том же порядке — страница просто читает его и раскрашивает. Обновляется сама, пока открыта.</p>
+ </div>
+</header>
+
+<div class="wrap">
+ <div id="qBoot" class="loading">Читаю очередь…</div>
+
+ <div id="qApp" hidden>
+  <div class="kpis k4" id="qKpis"></div>
+
+  <div class="desk">
+   <div class="desk-hd"><h2>Что в очереди</h2><span>нажми на вид — останется только он</span></div>
+   <div class="ladder" id="qLadder"></div>
+   <div class="deskfoot">
+    <span id="qState">показаны все</span>
+    <button id="qReset">сбросить</button>
+   </div>
+  </div>
+
+  <section>
+   <div class="shd"><span class="ch">01</span><h2>Список</h2></div>
+   <p class="note">Порядок — как в таблице сверху вниз. Номер слева — место в этом списке, а не место в разборе: разбирают не подряд, а по очереди типов, о ней ниже.</p>
+   <div class="card">
+    <div class="scroll-wrap">
+     <div class="scroll">
+      <table class="fixed" id="qTable">
+       <thead><tr>
+        <th class="num">№</th><th>Вид</th><th>Трек</th><th>Кто принёс</th><th>Заметка</th>
+       </tr></thead>
+       <tbody id="qRows"></tbody>
+      </table>
+     </div>
+    </div>
+    <div class="searchfoot"><span id="qCount">—</span></div>
+   </div>
+  </section>
+
+  <section>
+   <div class="shd"><span class="ch">02</span><h2>В каком порядке разбирают</h2></div>
+   <p class="note">Два разных распорядка — какой сегодня, знают на стриме, сайт этого знать не может. Поэтому здесь они просто как справка, без «твой трек будет N-м».</p>
+   <div class="grid2">
+    <div class="card">
+     <h3>Обычный стрим</h3>
+     <div class="cap">суббота, иногда среда</div>
+     <p class="q-order">Донат → долг ×8 → донат → долг ×7 → донат → долг ×6 → и так далее</p>
+    </div>
+    <div class="card">
+     <h3>Долговой стрим</h3>
+     <div class="cap">обычно четверг</div>
+     <p class="q-order">Долг ×8 → долг ×7 → долг ×6 → … и снова с ×8</p>
+    </div>
+   </div>
+  </section>
+ </div>
+
+ <div id="qErr" class="loading" hidden>
+  <p class="err" id="qErrText"></p>
+ </div>
+</div>
+
+<footer><div class="wrap">
+ <p class="fnote">Неофициальный фанатский проект. <a href="./">Статистика архива</a> · <a href="wheel.html">Колесо судьбы</a> · <a href="https://twitch.tv/farymacomposer" target="_blank" rel="noopener noreferrer">Твич композитора</a></p>
+</div></footer>
+
+<script src="js/config.js"></script>
+<script src="js/aliases.js"></script>
+<script src="js/parse.js"></script>
+<script src="js/util.js"></script>
+<script src="js/queue.js"></script>
+</body>
+</html>

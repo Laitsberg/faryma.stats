@@ -30,6 +30,10 @@ const HISTORY_JSONL = "data/history.jsonl";
    сейчас пишет в чат стрима. Пусто — кнопка «взять из чата» на
    колесе честно скажет, что сбор не подключён. */
 const CHAT_URL = "https://farymastats-production.up.railway.app/chatters";
+/* Очередь на ближайший стрим. Читается через того же бота, а не у
+   Гугла напрямую: браузеру он выгрузку с чужого домена не отдаст,
+   а бот держит её минуту и обновляет сам. */
+const QUEUE_URL = "https://farymastats-production.up.railway.app/queue";
 
 /* Страны артистов, собранные скриптом scripts/countries.mjs */
 const COUNTRIES_JSON = "data/countries.json";
