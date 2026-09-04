@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-04T12:09:12.297Z",
+ "generated": "2026-09-04T16:53:37.662Z",
  "artists": {
   "7": {
    "name": "7",
@@ -41986,6 +41986,37 @@
    "score": 100,
    "mbid": "1db3c041-5199-40de-902f-fb7b40eaa5f4",
    "mbName": "Wilbert Roget, II"
+  },
+  "saint snow": {
+   "name": "Saint Snow",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "9d6ec9c1-e59e-46f2-a37b-80a43c769dd4",
+   "mbName": "Saint Snow"
+  },
+  "betcover!!": {
+   "name": "betcover!!",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "99ef6a0e-b94e-481d-8034-bb8fb8f984cd",
+   "mbName": "betcover!!"
+  },
+  "iwantsummer": {
+   "name": "Iwantsummer",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Sankt-Peterburg",
+   "areaId": "808e1ef8-5390-4300-a615-c4df977cc349",
+   "score": 100,
+   "mbid": "7d9236d8-9b68-4cc0-aea8-e7c288275c53",
+   "mbName": "iwantsummer",
+   "viaArea": true
   }
  },
  "source": "MusicBrainz",
