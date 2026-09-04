@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-04T08:50:40.893Z",
+ "generated": "2026-09-04T12:09:12.297Z",
  "artists": {
   "7": {
    "name": "7",
@@ -41976,6 +41976,16 @@
    "tracks": 1,
    "country": null,
    "score": 0
+  },
+  "wilbert roget, ii": {
+   "name": "Wilbert Roget, II",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "1db3c041-5199-40de-902f-fb7b40eaa5f4",
+   "mbName": "Wilbert Roget, II"
   }
  },
  "source": "MusicBrainz",
