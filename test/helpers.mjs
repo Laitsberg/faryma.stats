@@ -95,6 +95,19 @@ export async function startServer() {
   return { server, base: `http://127.0.0.1:${server.address().port}` };
 }
 
+/* Дать вёрстке улечься перед замером.
+
+   Ширину меряем в устоявшемся состоянии, а не в первый попавшийся
+   миг: графиков на странице два десятка, и пока Chart.js подгоняет
+   холсты под свои рамки, страница на кадр-другой бывает шире окна.
+   Один раз проверка на этом и споткнулась — при том, что глазами
+   такой промельк не виден и «сломано» не означает. */
+export async function осесть(стр, мс = 250) {
+  await стр.evaluate(() => new Promise(ok =>
+    requestAnimationFrame(() => requestAnimationFrame(ok))));
+  await стр.waitForTimeout(мс);
+}
+
 /* Playwright лежит по-разному: в песочнице глобально, в сборке — рядом */
 export async function browser() {
   let pw;

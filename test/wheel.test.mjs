@@ -9,7 +9,7 @@
 
 import { test, before, after } from 'node:test';
 import assert from 'node:assert/strict';
-import { startServer, browser } from './helpers.mjs';
+import { startServer, browser, осесть } from './helpers.mjs';
 
 let srv, brw, page;
 const ошибки = [];
@@ -148,7 +148,7 @@ test('страница не разъезжается по ширине', async (
     const p2 = await brw.newPage({ viewport: { width: w, height: 900 } });
     await p2.goto(srv.base + '/wheel.html', { waitUntil: 'networkidle' });
     await p2.fill('#names', ['kumashisan', 'Svd_bb', 'Мишура', 'DzenDish'].join('\n'));
-    await p2.waitForTimeout(400);
+    await осесть(p2, 400);
     const шире = await p2.evaluate(() =>
       document.documentElement.scrollWidth > document.documentElement.clientWidth + 1);
     await p2.close();

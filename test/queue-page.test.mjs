@@ -12,7 +12,7 @@
 
 import { test, before, after } from 'node:test';
 import assert from 'node:assert/strict';
-import { startServer, browser } from './helpers.mjs';
+import { startServer, browser, осесть } from './helpers.mjs';
 
 const ВИДЫ = [['донат', 4], ['заказ', 28], ['повтор', 1], ['долг ×9', 9],
   ['долг ×8', 22], ['долг ×7', 16], ['долг ×6', 2], ['долг ×5', 10],
@@ -147,6 +147,7 @@ test('страница не разъезжается по ширине', async (
         status: 200, contentType: 'application/json; charset=utf-8', body: ОТВЕТ }));
       await стр.goto(srv.base + '/queue.html', { waitUntil: 'networkidle' });
       await стр.waitForSelector('#qApp:not([hidden])');
+      await осесть(стр);
       const вбок = await стр.evaluate(() =>
         document.documentElement.scrollWidth > window.innerWidth + 1);
       assert.equal(вбок, false, `на ширине ${w} страница едет вбок`);
