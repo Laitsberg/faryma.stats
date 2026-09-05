@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-04T16:53:37.662Z",
+ "generated": "2026-09-05T08:21:36.790Z",
  "artists": {
   "7": {
    "name": "7",
@@ -42017,6 +42017,43 @@
    "mbid": "7d9236d8-9b68-4cc0-aea8-e7c288275c53",
    "mbName": "iwantsummer",
    "viaArea": true
+  },
+  "aki toyosaki": {
+   "name": "Aki Toyosaki",
+   "tracks": 3,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "45314aaf-7e56-463c-9ded-e9abbfcb998e",
+   "mbName": "豊崎愛生"
+  },
+  "matt king": {
+   "name": "Matt King",
+   "tracks": 1,
+   "country": "CA",
+   "area": "Toronto",
+   "areaId": "74b24e62-d2fe-42d2-9d96-31f2da756c77",
+   "score": 100,
+   "mbid": "7dc92e59-26a7-478e-bbf5-0a085141aea2",
+   "mbName": "Matt King",
+   "viaArea": true
+  },
+  "cise starr": {
+   "name": "Cise Starr",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "e09bfd0b-2118-4bf4-bd4e-1d5e245e6d02",
+   "mbName": "Cise Star"
+  },
+  "uzuho": {
+   "name": "uzuho",
+   "tracks": 1,
+   "country": null,
+   "score": 0
   }
  },
  "source": "MusicBrainz",
