@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-05T08:21:36.790Z",
+ "generated": "2026-09-06T08:40:41.082Z",
  "artists": {
   "7": {
    "name": "7",
@@ -42054,6 +42054,124 @@
    "tracks": 1,
    "country": null,
    "score": 0
+  },
+  "eluveitie": {
+   "name": "Eluveitie",
+   "tracks": 2,
+   "country": "CH",
+   "area": "Switzerland",
+   "areaId": "1333ff06-8e3d-3c8e-9f3a-13a2a38b41df",
+   "score": 100,
+   "mbid": "8000598a-5edb-401c-8e6d-36b167feaf38",
+   "mbName": "Eluveitie"
+  },
+  "jinja": {
+   "name": "Jinja",
+   "tracks": 1,
+   "country": "DE",
+   "area": "Germany",
+   "areaId": "85752fda-13c4-31a3-bee5-0e5cb1f51dad",
+   "score": 100,
+   "mbid": "9fefea78-d9ba-4fa9-b628-7937c7c8dbc0",
+   "mbName": "Jinja"
+  },
+  "al bano & romina power": {
+   "name": "Al Bano & Romina Power",
+   "tracks": 1,
+   "country": "IT",
+   "area": "Italy",
+   "areaId": "c6500277-9a3d-349b-bf30-41afdbf42add",
+   "score": 100,
+   "mbid": "fd80cb81-89bb-4c1f-a981-afa559d364d4",
+   "mbName": "Al Bano & Romina Power"
+  },
+  "lonown & asenssia": {
+   "name": "LONOWN & Asenssia",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "toshiko fujita": {
+   "name": "Toshiko Fujita",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "240ce78b-ebfb-4de4-a4c2-cb21ae071288",
+   "mbName": "藤田淑子"
+  },
+  "bt": {
+   "name": "BT",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "88e2147d-0332-46f6-85b2-b5f463ba957b",
+   "mbName": "BT"
+  },
+  "pas tasta": {
+   "name": "PAS TASTA",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "7a15b5b3-04f7-489b-8311-d8e5cf3de178",
+   "mbName": "PAS TASTA"
+  },
+  "eriko hashimoto": {
+   "name": "Eriko Hashimoto",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "4d5cbaf6-c308-4b83-aa0d-ba634ae3071a",
+   "mbName": "橋本絵莉子"
+  },
+  "saxson": {
+   "name": "Saxson",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "8502cd93-38c9-4c5f-a119-ed7abb8c4505",
+   "mbName": "Saxson"
+  },
+  "yasuharu takanashi & yaiba": {
+   "name": "Yasuharu Takanashi & YAIBA",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "jon lajoie": {
+   "name": "Jon Lajoie",
+   "tracks": 1,
+   "country": "CA",
+   "area": "Canada",
+   "areaId": "71bbafaa-e825-3e15-8ca9-017dcad1748b",
+   "score": 100,
+   "mbid": "f5408d6d-08cc-4000-b9b8-b9888e94d972",
+   "mbName": "Jon Lajoie"
+  },
+  "nao sato & colin & caroline": {
+   "name": "Nao Sato & Colin & Caroline",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "the roop": {
+   "name": "The Roop",
+   "tracks": 1,
+   "country": "LT",
+   "area": "Lithuania",
+   "areaId": "0785dc14-96af-3dc4-bde4-dcdfc2e2d0d6",
+   "score": 100,
+   "mbid": "052bd081-aa6a-4c1f-ab25-7bbb660ad225",
+   "mbName": "THE ROOP"
   }
  },
  "source": "MusicBrainz",
