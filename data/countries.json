@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-07T09:20:30.696Z",
+ "generated": "2026-09-08T08:52:38.305Z",
  "artists": {
   "7": {
    "name": "7",
@@ -42182,6 +42182,18 @@
    "score": 100,
    "mbid": "40859b69-c5f0-4ee2-a351-64ce1e799c96",
    "mbName": "天城サリー"
+  },
+  "starlightdaryl & ironmouse & wunder riku": {
+   "name": "StarlightDaryl & Ironmouse & WUNDER RiKU",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "йоперный театр & fizica": {
+   "name": "ЙОПЕРНЫЙ ТЕАТР & FIZICA",
+   "tracks": 1,
+   "country": null,
+   "score": 0
   }
  },
  "source": "MusicBrainz",
