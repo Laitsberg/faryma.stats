@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-08T08:52:38.305Z",
+ "generated": "2026-09-08T12:10:15.994Z",
  "artists": {
   "7": {
    "name": "7",
@@ -42194,6 +42194,16 @@
    "tracks": 1,
    "country": null,
    "score": 0
+  },
+  "стинт": {
+   "name": "СТИНТ",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "50612c18-a613-4a30-a46b-dbe7772535e3",
+   "mbName": "СТИНТ"
   }
  },
  "source": "MusicBrainz",
