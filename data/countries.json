@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-08T12:10:15.994Z",
+ "generated": "2026-09-08T17:17:21.510Z",
  "artists": {
   "7": {
    "name": "7",
@@ -42204,6 +42204,46 @@
    "score": 100,
    "mbid": "50612c18-a613-4a30-a46b-dbe7772535e3",
    "mbName": "СТИНТ"
+  },
+  "cobie smulders": {
+   "name": "Cobie Smulders",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "f16e156c-25b4-4793-a61f-8b76e7c42123",
+   "mbName": "Cobie Smulders"
+  },
+  "debra zeer": {
+   "name": "Debra Zeer",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "4a0a4994-95c5-4687-a2fd-49bb3779e90f",
+   "mbName": "Debra Zeer"
+  },
+  "mega shinnosuke": {
+   "name": "Mega Shinnosuke",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "3af93304-773b-4826-bced-f05119c56159",
+   "mbName": "Mega Shinnosuke"
+  },
+  "azalea": {
+   "name": "AZALEA",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "1d2fcc17-0ef0-4d0f-9468-ec7415cc4eaf",
+   "mbName": "AZALEA"
   }
  },
  "source": "MusicBrainz",
