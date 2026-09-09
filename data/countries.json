@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-08T17:17:21.510Z",
+ "generated": "2026-09-09T08:58:12.108Z",
  "artists": {
   "7": {
    "name": "7",
@@ -42244,6 +42244,33 @@
    "score": 100,
    "mbid": "1d2fcc17-0ef0-4d0f-9468-ec7415cc4eaf",
    "mbName": "AZALEA"
+  },
+  "finishing move inc.": {
+   "name": "Finishing Move Inc.",
+   "tracks": 1,
+   "country": "US",
+   "area": "Los Angeles",
+   "areaId": "1f40c6e1-47ba-4e35-996f-fe6ee5840e62",
+   "score": 100,
+   "mbid": "1e3cd315-62c7-431d-a07b-1af4409a56f3",
+   "mbName": "Finishing Move Inc.",
+   "viaArea": true
+  },
+  "vivanz eden": {
+   "name": "Vivanz Eden",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "70f613ec-cde1-4c15-8bff-7311830673bb",
+   "mbName": "Vivanz Eden"
+  },
+  "unreflected delusions": {
+   "name": "Unreflected Delusions",
+   "tracks": 1,
+   "country": null,
+   "score": 0
   }
  },
  "source": "MusicBrainz",
