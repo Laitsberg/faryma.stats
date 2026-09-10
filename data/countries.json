@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-09T08:58:12.108Z",
+ "generated": "2026-09-10T17:01:47.712Z",
  "artists": {
   "7": {
    "name": "7",
@@ -42271,6 +42271,27 @@
    "tracks": 1,
    "country": null,
    "score": 0
+  },
+  "tallah": {
+   "name": "Tallah",
+   "tracks": 1,
+   "country": "US",
+   "area": "Pennsylvania",
+   "areaId": "75d8fdcf-03e9-43d9-9399-131b8e118b0b",
+   "score": 100,
+   "mbid": "7ebe5a09-b727-4528-9987-d810de4c2620",
+   "mbName": "Tallah",
+   "viaArea": true
+  },
+  "кубанский казачий хор": {
+   "name": "Кубанский Казачий хор",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "0e74b52a-625f-4a47-bd68-c6faa64a707c",
+   "mbName": "Кубанский казачий хор"
   }
  },
  "source": "MusicBrainz",
