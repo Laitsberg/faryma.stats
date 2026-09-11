@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-10T17:01:47.712Z",
+ "generated": "2026-09-11T08:55:47.899Z",
  "artists": {
   "7": {
    "name": "7",
@@ -42292,6 +42292,100 @@
    "score": 100,
    "mbid": "0e74b52a-625f-4a47-bd68-c6faa64a707c",
    "mbName": "Кубанский казачий хор"
+  },
+  "wada koji": {
+   "name": "Wada Koji",
+   "tracks": 2,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "ceae2c02-fe1e-4bf1-b613-c1887a08ecb8",
+   "mbName": "和田光司"
+  },
+  "егор крид": {
+   "name": "Егор Крид",
+   "tracks": 2,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "47308bb0-d2a5-4ea1-b89e-f4b97015def8",
+   "mbName": "Егор Крид"
+  },
+  "всего лишь 2 парня": {
+   "name": "Всего Лишь 2 Парня",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "кристина корвин": {
+   "name": "Кристина Корвин",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "blanka": {
+   "name": "Blanka",
+   "tracks": 1,
+   "country": "DE",
+   "area": "Berlin",
+   "areaId": "c9ac1239-e832-41bc-9930-e252a1fd1105",
+   "score": 100,
+   "mbid": "77657b37-c376-4d67-891b-5c7f82050336",
+   "mbName": "BLANKA",
+   "viaArea": true
+  },
+  "fäaschtbänkler": {
+   "name": "Fäaschtbänkler",
+   "tracks": 1,
+   "country": "CH",
+   "area": "Sankt Gallen",
+   "areaId": "83811e81-c6de-42a5-8b28-231fbd545cc9",
+   "score": 100,
+   "mbid": "cf55320e-01cd-4982-bc51-b0fa7d9d9532",
+   "mbName": "Fäaschtbänkler",
+   "viaArea": true
+  },
+  "span": {
+   "name": "Span",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "68c6926c-03e0-4afc-9f54-2190b2c8d468",
+   "mbName": "Steeleye Span"
+  },
+  "christina milian": {
+   "name": "Christina Milian",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "78e98e0e-f873-4e5e-b4b7-88b7293fd713",
+   "mbName": "Christina Milian"
+  },
+  "9mice": {
+   "name": "9mice",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "81f79003-33e3-4633-b0ca-b5da61edfec2",
+   "mbName": "9mice"
+  },
+  "тёмный принц": {
+   "name": "тёмный принц",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "4b38cc58-8150-43bc-a11d-ef0d68dff997",
+   "mbName": "тёмный принц"
   }
  },
  "source": "MusicBrainz",
@@ -42549,6 +42643,8 @@
   "ff1b74fd-054b-4136-b948-bb88fe55d93f": "US",
   "6a264f94-6ff1-30b1-9a81-41f7bfabd616": "FI",
   "56788d4b-6aed-4596-9517-fad494e33344": "FI",
-  "637f0e8d-eed1-4190-aac7-4376c84cd232": "FI"
+  "637f0e8d-eed1-4190-aac7-4376c84cd232": "FI",
+  "1333ff06-8e3d-3c8e-9f3a-13a2a38b41df": "CH",
+  "83811e81-c6de-42a5-8b28-231fbd545cc9": "CH"
  }
 }
