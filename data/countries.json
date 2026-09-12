@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-11T08:55:47.899Z",
+ "generated": "2026-09-12T16:21:44.284Z",
  "artists": {
   "7": {
    "name": "7",
@@ -42386,6 +42386,12 @@
    "score": 100,
    "mbid": "4b38cc58-8150-43bc-a11d-ef0d68dff997",
    "mbName": "тёмный принц"
+  },
+  "hatsune miku, kagamine rin & kaito": {
+   "name": "Hatsune Miku, Kagamine Rin & KAITO",
+   "tracks": 1,
+   "country": null,
+   "score": 0
   }
  },
  "source": "MusicBrainz",
