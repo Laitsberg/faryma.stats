@@ -71,7 +71,7 @@ const ПОРОГ = 84;
 
 /* Версия правил совпадения. Растёт, когда меняется логика отбора:
    по ней --recheck понимает, кого стоит переспросить заново. */
-const ВЕРСИЯ = 3;
+const ВЕРСИЯ = 4;
 
 const ГОД_ОТ = 1900;
 const ГОД_ДО = new Date().getFullYear() + 1;
@@ -284,6 +284,7 @@ async function spGet(path, attempt = 0) {
 }
 
 const годАльбома = a => годИз(a && a.release_date);
+const сборник = a => (a && a.album_type) === 'compilation';
 
 /* По одному треку за запрос. Пачками по 50 было бы девятнадцать
    запросов вместо девятисот, но /tracks?ids= это приложение получает
@@ -354,20 +355,28 @@ async function spПоиском(t) {
      чуть меньше шансов увидеть самое раннее издание, но поиск и так
      сортирует по релевантности, и оригинал обычно в первой десятке. */
   const j = await spGet('/search?type=track&limit=10&q=' + encodeURIComponent(q));
-  const свои = [];
+  const все = [];
   for (const tr of j.tracks?.items || []) {
     const { score, как } = уверенностьSp(tr, t.artist, t.title);
     const year = годАльбома(tr.album);
-    if (score >= ПОРОГ && year) свои.push({ tr, score, как, year });
+    if (score >= ПОРОГ && year) все.push({ tr, score, как, year, сб: сборник(tr.album) });
   }
-  if (!свои.length) return { year: null, score: 0, v: ВЕРСИЯ };
+  if (!все.length) return { year: null, score: 0, v: ВЕРСИЯ };
+
+  /* Сборники из выбора самого раннего исключаем. Даты на них врут в
+     обе стороны: у ELO «Tightrope» и «Shangri-La» с альбома 1976 года
+     нашёлся сборник, датированный 1972-м, и правило «бери самое
+     раннее» послушно испортило верный год. Если кроме сборников нет
+     ничего — берём что есть, лучше приблизительно, чем никак. */
+  const свои = все.some(x => !x.сб) ? все.filter(x => !x.сб) : все;
   const ранняя = свои.reduce((a, b) => (b.year < a.year ? b : a));
   const лучшая = свои.reduce((a, b) => (b.score > a.score ? b : a));
   return {
     year: ранняя.year, score: лучшая.score, как: 'поиск:' + ранняя.как, v: ВЕРСИЯ,
     sid: ранняя.tr.id, spTitle: ранняя.tr.name,
     spArtist: (ранняя.tr.artists || []).map(a => a.name).join(', '),
-    spAlbum: ранняя.tr.album?.name || null, вариантов: свои.length
+    spAlbum: ранняя.tr.album?.name || null,
+    spТип: ранняя.tr.album?.album_type || null, вариантов: свои.length
   };
 }
 
