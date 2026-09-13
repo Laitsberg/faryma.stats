@@ -29,6 +29,11 @@ on:
         type: boolean
         required: false
         default: false
+      recheck:
+        description: 'Переспросить найденных по прежним правилам совпадения'
+        type: boolean
+        required: false
+        default: false
 
 concurrency:
   group: years-musicbrainz
@@ -51,9 +56,11 @@ jobs:
           IN_LIMIT: ${{ github.event.inputs.limit }}
           IN_MINUTES: ${{ github.event.inputs.minutes }}
           IN_RETRY: ${{ github.event.inputs.retry_missing }}
+          IN_RECHECK: ${{ github.event.inputs.recheck }}
         run: |
           EXTRA=""
           if [ "$IN_RETRY" = "true" ]; then EXTRA="--retry-missing"; fi
+          if [ "$IN_RECHECK" = "true" ]; then EXTRA="$EXTRA --recheck"; fi
           # --max-minutes держит прогон в рамках job'а: скрипт
           # останавливается сам, и накопленное успевает закоммититься.
           node scripts/years.mjs --limit "${IN_LIMIT:-2000}" --max-minutes "${IN_MINUTES:-60}" $EXTRA

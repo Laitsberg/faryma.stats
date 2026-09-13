@@ -14,6 +14,8 @@
      node scripts/years.mjs                  докачать новых
      node scripts/years.mjs --limit 50       только 50 штук
      node scripts/years.mjs --retry-missing  переспросить ненайденных
+     node scripts/years.mjs --recheck        переспросить после починки
+                                             правил совпадения
      node scripts/years.mjs --min-tracks 2   пропустить одноразовых
      node scripts/years.mjs --max-minutes 50 остановиться по времени
 
@@ -38,6 +40,8 @@ const OUT_PATH = argVal('--out', path.join(ROOT, 'data', 'years.json'));
 const LIMIT = +argVal('--limit', Infinity);
 const MIN_TRACKS = +argVal('--min-tracks', 1);
 const RETRY_MISSING = hasFlag('--retry-missing');
+/* Переспросить тех, чей ответ получен по прежним правилам совпадения */
+const RECHECK = hasFlag('--recheck');
 /* Ограничение по времени: скрипт должен остановиться сам, чтобы
    воркфлоу успел закоммитить накопленное, а не был убит по таймауту. */
 const MAX_MS = +argVal('--max-minutes', Infinity) * 60000;
@@ -51,6 +55,10 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
    исполнитель в кредите»; страница показывает год от 90, так что
    пограничные ответы в кэш попадают, но на витрину не выходят. */
 const ПОРОГ = 84;
+
+/* Версия правил совпадения. Растёт, когда меняется логика отбора:
+   по ней --recheck понимает, кого стоит переспросить заново. */
+const ВЕРСИЯ = 2;
 
 const ГОД_ОТ = 1900;
 const ГОД_ДО = new Date().getFullYear() + 1;
@@ -127,8 +135,9 @@ function годЗаписи(rec) {
    считаем сами: точно совпало название и исполнитель — 100, исполнитель
    совпал частично (feat., сокращение) — 92, иначе ответ ненадёжный. */
 function уверенность(rec, artist, title) {
+  const нет = { score: 0, как: '' };
   const тВопрос = срав(title), тОтвет = срав(rec.title);
-  if (!тВопрос || !тОтвет) return 0;
+  if (!тВопрос || !тОтвет) return нет;
   /* Точное совпадение — лучший случай. Но у одной из сторон бывает
      хвост, которого нет у другой: в архиве «Kaze ni Nare», в
      MusicBrainz «Kaze ni Nare - Live Edition». Короткие названия так
@@ -136,18 +145,33 @@ function уверенность(rec, artist, title) {
   const точно = тОтвет === тВопрос;
   const краем = !точно && Math.min(тОтвет.length, тВопрос.length) >= 8 &&
                 (тОтвет.startsWith(тВопрос) || тВопрос.startsWith(тОтвет));
-  if (!точно && !краем) return 0;
-  const скидка = точно ? 0 : 8;
 
   const аВопрос = срав(artist);
   const кредиты = (rec['artist-credit'] || []).map(c => срав(c.name || c.artist?.name));
   const целиком = срав((rec['artist-credit'] || [])
     .map(c => (c.name || c.artist?.name || '') + (c.joinphrase || '')).join(''));
 
-  if (кредиты.includes(аВопрос) || целиком === аВопрос) return 100 - скидка;
-  if (кредиты.some(k => k && (k.includes(аВопрос) || аВопрос.includes(k)))) return 92 - скидка;
-  if (целиком.includes(аВопрос) || аВопрос.includes(целиком)) return 92 - скидка;
-  return 60;
+  const исполнитель =
+    (кредиты.includes(аВопрос) || целиком === аВопрос) ? 100
+    : кредиты.some(k => k && (k.includes(аВопрос) || аВопрос.includes(k))) ? 92
+    : (целиком.includes(аВопрос) || аВопрос.includes(целиком)) ? 92
+    : 0;
+  if (!исполнитель) return нет;
+
+  if (точно) return { score: исполнитель, как: 'название' };
+  if (краем)  return { score: исполнитель - 8, как: 'хвост' };
+
+  /* Название не совпало буквой в букву — и это норма для японских
+     песен: в архиве ромадзи («Usseewa»), а в MusicBrainz оригинал
+     («うっせぇわ»). Раньше такие записи выбрасывались, и у песни
+     оставалась одна-единственная запись с латинским названием —
+     обычно свежая. Так «Usseewa» 2020 года и получила 2025-й.
+     Название мы уже задали в самом запросе, поиск умеет искать по
+     псевдонимам, так что высокий балл MusicBrainz при точно
+     совпавшем исполнителе — достаточное основание. */
+  if ((rec.score ?? 0) >= 95 && исполнитель === 100)
+    return { score: 91, как: 'псевдоним' };
+  return нет;
 }
 
 async function fetchYear(artist, title, attempt = 0) {
@@ -174,10 +198,10 @@ async function fetchYear(artist, title, attempt = 0) {
 
   const j = await res.json();
   const свои = (j.recordings || [])
-    .map(r => ({ rec: r, score: уверенность(r, artist, title), year: годЗаписи(r) }))
+    .map(r => ({ rec: r, ...уверенность(r, artist, title), year: годЗаписи(r) }))
     .filter(x => x.score >= ПОРОГ && x.year);
 
-  if (!свои.length) return { year: null, score: 0 };
+  if (!свои.length) return { year: null, score: 0, v: ВЕРСИЯ };
 
   /* Год песни — самый ранний среди записей этого же исполнителя с этим
      же названием. Иначе у ремастера 1998 года стоял бы 2019-й, а у
@@ -187,6 +211,8 @@ async function fetchYear(artist, title, attempt = 0) {
   return {
     year: ранняя.year,
     score: лучшая.score,
+    как: ранняя.как,
+    v: ВЕРСИЯ,
     mbid: ранняя.rec.id || null,
     mbTitle: ранняя.rec.title || null,
     mbArtist: (ранняя.rec['artist-credit'] || []).map(c => c.name || c.artist?.name).join(', ') || null,
@@ -254,6 +280,7 @@ const todo = tracks.filter(t => {
   const hit = cache.tracks[t.key];
   if (!hit) return true;
   if (RETRY_MISSING && !hit.year) return true;
+  if (RECHECK && (hit.v ?? 1) < ВЕРСИЯ) return true;
   return false;
 }).slice(0, LIMIT);
 
