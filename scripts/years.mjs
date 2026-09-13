@@ -1,0 +1,277 @@
+#!/usr/bin/env node
+/* ============================================================
+   ГОДА ВЫПУСКА ТРЕКОВ ИЗ MUSICBRAINZ
+   ------------------------------------------------------------
+   Сосед countries.mjs, только спрашивает не про исполнителя, а про
+   саму песню: у записи в MusicBrainz есть дата первого выпуска.
+   Результат копится в data/years.json.
+
+   Прогон долгий: MusicBrainz разрешает один запрос в секунду, а
+   уникальных песен в архиве около шести тысяч — это часа два.
+   Поэтому кэш дописывается по ходу: прервалось — запусти снова,
+   продолжит с того же места. Уже известных не переспрашивает.
+
+     node scripts/years.mjs                  докачать новых
+     node scripts/years.mjs --limit 50       только 50 штук
+     node scripts/years.mjs --retry-missing  переспросить ненайденных
+     node scripts/years.mjs --min-tracks 2   пропустить одноразовых
+     node scripts/years.mjs --max-minutes 50 остановиться по времени
+
+   ============================================================ */
+
+import fs from 'node:fs';
+import path from 'node:path';
+import vm from 'node:vm';
+import { fileURLToPath } from 'node:url';
+
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+
+const ARGS = process.argv.slice(2);
+const argVal = (name, def) => {
+  const i = ARGS.indexOf(name);
+  return i >= 0 && ARGS[i + 1] ? ARGS[i + 1] : def;
+};
+const hasFlag = name => ARGS.includes(name);
+
+const CSV_PATH = argVal('--csv', path.join(ROOT, 'data.csv'));
+const OUT_PATH = argVal('--out', path.join(ROOT, 'data', 'years.json'));
+const LIMIT = +argVal('--limit', Infinity);
+const MIN_TRACKS = +argVal('--min-tracks', 1);
+const RETRY_MISSING = hasFlag('--retry-missing');
+/* Ограничение по времени: скрипт должен остановиться сам, чтобы
+   воркфлоу успел закоммитить накопленное, а не был убит по таймауту. */
+const MAX_MS = +argVal('--max-minutes', Infinity) * 60000;
+const API_ROOT = process.env.MB_API || 'https://musicbrainz.org/ws/2';
+
+const UA = 'faryma-stats/1.0 ( https://github.com/Laitsberg/faryma.stats )';
+const DELAY_MS = +(process.env.MB_DELAY || 1100);
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+const ГОД_ОТ = 1900;
+const ГОД_ДО = new Date().getFullYear() + 1;
+
+/* ---------- разбор строк берём из того же кода, что и сайт ---------- */
+function loadSiteCode() {
+  const ctx = vm.createContext({ console, URL });
+  for (const f of ['js/config.js', 'js/aliases.js', 'js/parse.js']) {
+    vm.runInContext(fs.readFileSync(path.join(ROOT, f), 'utf8'), ctx, { filename: f });
+  }
+  return ctx;
+}
+
+/* ---------- ключ песни ----------
+   Скобки в конце названия — это про конкретную запись, а не про
+   песню: «Usseewa (Live)», «Usseewa (THE FIRST TAKE)» и просто
+   «Usseewa» вышли в один год. Схлопываем их в один ключ — и запрос
+   один, и в кэше не три строчки вместо одной.
+   ВАЖНО: ровно эта же функция живёт в baza-trekov.html. Разойдутся —
+   страница перестанет находить года. */
+function чистоеНазвание(title) {
+  return String(title || '')
+    .replace(/\([^()]*\)/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+function ключГода(nameKey, artist, title) {
+  return nameKey(artist) + '|' + nameKey(чистоеНазвание(title));
+}
+
+/* ---------- имя и название для запроса ----------
+   «feat.» сбивает поиск: MusicBrainz ищет одного артиста, а не
+   связку. Амперсанд не трогаем — «MYTH & ROID» настоящее имя. */
+function queryName(name) {
+  return name
+    .replace(/\s+(feat\.?|ft\.?|featuring|vs\.?|x)\s+.*$/i, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+/* Люценовские спецсимволы в кавычках всё равно ломают разбор запроса */
+const экран = s => String(s).replace(/["\\]/g, ' ').replace(/\s+/g, ' ').trim();
+
+/* Для сравнения: только буквы и цифры, регистр не важен. «Kick Back»
+   и «KICKBACK» — одно название, «Ussewa» и «Usseewa» — уже нет. */
+const срав = s => String(s || '').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, '');
+
+function годИз(s) {
+  const m = String(s || '').match(/^(\d{4})/);
+  if (!m) return null;
+  const y = +m[1];
+  return y >= ГОД_ОТ && y <= ГОД_ДО ? y : null;
+}
+
+/* Год записи: у самой записи, а если его нет — самый ранний по
+   выпускам, в которые она попала. */
+function годЗаписи(rec) {
+  const года = [];
+  const свой = годИз(rec['first-release-date']);
+  if (свой) года.push(свой);
+  for (const rel of rec.releases || []) {
+    /* Обе даты, а не первая попавшаяся: у выпуска стоит год издания
+       (сборник 2001-го), а у группы выпусков — год, когда песня
+       вышла впервые (1998-й). Нужен самый ранний. */
+    const издание = годИз(rel.date);
+    const впервые = годИз(rel['release-group']?.['first-release-date']);
+    if (издание) года.push(издание);
+    if (впервые) года.push(впервые);
+  }
+  return года.length ? Math.min(...года) : null;
+}
+
+/* ---------- насколько ответ похож на то, что спрашивали ----------
+   MusicBrainz почти всем кандидатам ставит 100, поэтому уверенность
+   считаем сами: точно совпало название и исполнитель — 100, исполнитель
+   совпал частично (feat., сокращение) — 92, иначе ответ ненадёжный. */
+function уверенность(rec, artist, title) {
+  const тВопрос = срав(title), тОтвет = срав(rec.title);
+  if (!тВопрос || тОтвет !== тВопрос) return 0;
+
+  const аВопрос = срав(artist);
+  const кредиты = (rec['artist-credit'] || []).map(c => срав(c.name || c.artist?.name));
+  const целиком = срав((rec['artist-credit'] || [])
+    .map(c => (c.name || c.artist?.name || '') + (c.joinphrase || '')).join(''));
+
+  if (кредиты.includes(аВопрос) || целиком === аВопрос) return 100;
+  if (кредиты.some(k => k && (k.includes(аВопрос) || аВопрос.includes(k)))) return 92;
+  if (целиком.includes(аВопрос) || аВопрос.includes(целиком)) return 92;
+  return 60;
+}
+
+async function fetchYear(artist, title, attempt = 0) {
+  const q = `artist:"${экран(queryName(artist))}" AND recording:"${экран(title)}"`;
+  const url = `${API_ROOT}/recording/?query=${encodeURIComponent(q)}&fmt=json&limit=25`;
+  let res;
+  try {
+    res = await fetch(url, { headers: { 'User-Agent': UA, 'Accept': 'application/json' } });
+  } catch (e) {
+    if (attempt < 3) { await sleep(2000 * (attempt + 1)); return fetchYear(artist, title, attempt + 1); }
+    throw e;
+  }
+  if (res.status === 503 || res.status === 429) {
+    if (attempt < 5) { await sleep(3000 * (attempt + 1)); return fetchYear(artist, title, attempt + 1); }
+    throw new Error('MusicBrainz не отвечает: ' + res.status);
+  }
+  if (!res.ok) throw new Error(`HTTP ${res.status} для «${artist} — ${title}»`);
+
+  const j = await res.json();
+  const свои = (j.recordings || [])
+    .map(r => ({ rec: r, score: уверенность(r, artist, title), year: годЗаписи(r) }))
+    .filter(x => x.score >= 90 && x.year);
+
+  if (!свои.length) return { year: null, score: 0 };
+
+  /* Год песни — самый ранний среди записей этого же исполнителя с этим
+     же названием. Иначе у ремастера 1998 года стоял бы 2019-й, а у
+     сингла, попавшего потом в сборник, — год сборника. */
+  const ранняя = свои.reduce((a, b) => (b.year < a.year ? b : a));
+  const лучшая = свои.reduce((a, b) => (b.score > a.score ? b : a));
+  return {
+    year: ранняя.year,
+    score: лучшая.score,
+    mbid: ранняя.rec.id || null,
+    mbTitle: ранняя.rec.title || null,
+    mbArtist: (ранняя.rec['artist-credit'] || []).map(c => c.name || c.artist?.name).join(', ') || null,
+    // сколько записей этой песни MusicBrainz знает — видно, разнобой ли это
+    записей: свои.length
+  };
+}
+
+/* ---------- сбор песен из архива ---------- */
+function createRequire() {
+  const src = fs.readFileSync(path.join(ROOT, 'vendor', 'papaparse.min.js'), 'utf8');
+  const sandbox = { module: { exports: {} }, exports: {}, window: {}, global: {} };
+  vm.createContext(sandbox);
+  vm.runInContext(src, sandbox);
+  return sandbox.module.exports?.parse ? sandbox.module.exports
+       : sandbox.Papa || sandbox.window.Papa;
+}
+
+function collectTracks(ctx) {
+  const Papa = createRequire();
+  const rows = Papa.parse(fs.readFileSync(CSV_PATH, 'utf8'),
+    { header: true, skipEmptyLines: 'greedy' }).data;
+
+  const counts = new Map();
+  rows.forEach(r => {
+    if (!ctx.parseRate(r['Оценка'])) return;          // только разнесённые
+    const { artist, title } = ctx.parseWhat(r['Что']);
+    if (!artist || !title) return;                    // без имени спрашивать нечего
+    const чистое = чистоеНазвание(title);
+    if (!чистое) return;
+    const key = ключГода(ctx.nameKey, artist, title);
+    const было = counts.get(key);
+    if (было) было.n++;
+    else counts.set(key, { key, artist, title: чистое, n: 1 });
+  });
+
+  return [...counts.values()]
+    .filter(t => t.n >= MIN_TRACKS)
+    .sort((a, b) => b.n - a.n);                        // частых спрашиваем первыми
+}
+
+/* ---------- кэш ---------- */
+function loadCache() {
+  try {
+    const j = JSON.parse(fs.readFileSync(OUT_PATH, 'utf8'));
+    return j.tracks && typeof j.tracks === 'object' ? j : { tracks: {} };
+  } catch { return { tracks: {} }; }
+}
+
+function saveCache(cache, stats) {
+  cache.generated = new Date().toISOString();
+  cache.source = 'MusicBrainz';
+  cache.note = 'year — самый ранний выпуск записи; score — наша уверенность в совпадении, 0–100';
+  fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });
+  fs.writeFileSync(OUT_PATH, JSON.stringify(cache, null, 1) + '\n');
+  if (stats) console.log(`  … сохранено, известно ${Object.keys(cache.tracks).length}`);
+}
+
+/* ---------- главное ---------- */
+const ctx = loadSiteCode();
+const tracks = collectTracks(ctx);
+const cache = loadCache();
+
+const todo = tracks.filter(t => {
+  const hit = cache.tracks[t.key];
+  if (!hit) return true;
+  if (RETRY_MISSING && !hit.year) return true;
+  return false;
+}).slice(0, LIMIT);
+
+console.log(`песен в архиве: ${tracks.length}`);
+console.log(`уже в кэше:     ${Object.keys(cache.tracks).length}`);
+console.log(`спросить:       ${todo.length}`);
+if (!todo.length) { console.log('нечего докачивать'); process.exit(0); }
+
+console.log(`примерно ${Math.round(todo.length * DELAY_MS / 60000)} мин при одном запросе в секунду\n`);
+
+const startedAt = Date.now();
+let done = 0, found = 0, failed = 0, ranOut = false;
+for (const t of todo) {
+  if (Date.now() - startedAt > MAX_MS) {
+    ranOut = true;
+    console.log(`\nвремя вышло (${Math.round(MAX_MS / 60000)} мин), останавливаюсь на ${done}/${todo.length}`);
+    break;
+  }
+  try {
+    const r = await fetchYear(t.artist, t.title);
+    cache.tracks[t.key] = { artist: t.artist, title: t.title, разносов: t.n, ...r };
+    if (r.year) found++;
+  } catch (e) {
+    console.error(`  ! ${t.artist} — ${t.title}: ${e.message}`);
+    failed++;
+    if (failed > 20) { console.error('слишком много ошибок подряд, останавливаюсь'); break; }
+  }
+  done++;
+  if (done % 25 === 0) {
+    console.log(`${done}/${todo.length} · с годом ${found}`);
+    saveCache(cache, true);
+  }
+  await sleep(DELAY_MS);
+}
+
+saveCache(cache);
+const сГодом = Object.values(cache.tracks).filter(x => x.year).length;
+console.log(`\nготово: спрошено ${done}, год нашёлся у ${found}`);
+console.log(`всего в кэше ${Object.keys(cache.tracks).length}, из них с годом ${сГодом}`);
+const left = tracks.length - Object.keys(cache.tracks).length;
+if (ranOut || left > 0) console.log(`осталось спросить ${left} — следующий запуск продолжит`);

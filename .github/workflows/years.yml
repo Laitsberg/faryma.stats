@@ -1,0 +1,81 @@
+name: Года выпуска треков
+
+# Докачивает года выпуска из MusicBrainz в data/years.json.
+#
+# Отдельным воркфлоу, а не шагом в «Обновить архив», по времени: там на
+# весь job отведено 100 минут, из которых 80 уже забирают страны. Песен
+# в архиве около шести с половиной тысяч, лимит MusicBrainz — один
+# запрос в секунду, то есть полный первый проход это часа два. Кэш
+# пишется по ходу, поэтому прогон можно рвать на куски: следующий
+# запуск продолжит с того же места.
+#
+# Ночью раз в сутки — за пару ночей архив разберётся целиком, дальше
+# спрашивать придётся только про новые треки, а их за день десятки.
+on:
+  schedule:
+    - cron: '43 22 * * *'      # 01:43 по Москве — когда «Обновить архив» не бегает
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'Сколько песен спросить за прогон (1 запрос в секунду)'
+        required: false
+        default: '2000'
+      minutes:
+        description: 'Сколько минут спрашивать'
+        required: false
+        default: '60'
+      retry_missing:
+        description: 'Переспросить те, у которых год не нашёлся'
+        type: boolean
+        required: false
+        default: false
+
+concurrency:
+  group: years-musicbrainz
+  cancel-in-progress: false
+
+jobs:
+  years:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Спросить года у MusicBrainz
+        env:
+          IN_LIMIT: ${{ github.event.inputs.limit }}
+          IN_MINUTES: ${{ github.event.inputs.minutes }}
+          IN_RETRY: ${{ github.event.inputs.retry_missing }}
+        run: |
+          EXTRA=""
+          if [ "$IN_RETRY" = "true" ]; then EXTRA="--retry-missing"; fi
+          # --max-minutes держит прогон в рамках job'а: скрипт
+          # останавливается сам, и накопленное успевает закоммититься.
+          node scripts/years.mjs --limit "${IN_LIMIT:-2000}" --max-minutes "${IN_MINUTES:-60}" $EXTRA
+
+      - name: Закоммитить года
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/years.json
+          if git diff --staged --quiet; then echo "изменений нет"; exit 0; fi
+          ЗНАЮ=$(node -e "
+            const d=require('./data/years.json');
+            const v=Object.values(d.tracks||{});
+            process.stdout.write(v.filter(x=>x.year).length+' из '+v.length);
+          ")
+          git commit -m "Года выпуска из MusicBrainz: $ЗНАЮ"
+          # Пока шёл прогон, в main мог прилететь ночной архив — переносим
+          # поверх: наш коммит трогает только data/years.json.
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin main && git push && exit 0
+            echo "попытка $i не прошла, жду"
+            sleep $((i * 5))
+          done
+          echo "не удалось запушить за 5 попыток"
+          exit 1
