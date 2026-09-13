@@ -392,7 +392,17 @@ async function spПрощупать() {
     ['поиск',                '/search?type=track&limit=1&q=' + encodeURIComponent('Ado Usseewa')],
     ['поиск с market',       '/search?type=track&limit=1&market=SE&q=' + encodeURIComponent('Ado Usseewa')],
     ['альбом',               '/albums/4aawyAB9vmqN3uQ7FjRGTy'],
-    ['исполнитель',          '/artists/4k1ELeJKT1ISyDv8JivPpB']
+    ['исполнитель',          '/artists/4k1ELeJKT1ISyDv8JivPpB'],
+    /* Какой размер выдачи поиска нам вообще позволен: с limit=50
+       прилетает «Invalid limit», с limit=1 всё хорошо. Нужна граница,
+       а не догадка — чем больше версий песни в ответе, тем надёжнее
+       выбирается самый ранний альбом. */
+    ['поиск limit=50',       '/search?type=track&limit=50&q=' + encodeURIComponent('Ado Usseewa')],
+    ['поиск limit=20',       '/search?type=track&limit=20&q=' + encodeURIComponent('Ado Usseewa')],
+    ['поиск limit=10',       '/search?type=track&limit=10&q=' + encodeURIComponent('Ado Usseewa')],
+    ['поиск limit=5',        '/search?type=track&limit=5&q='  + encodeURIComponent('Ado Usseewa')],
+    ['поиск q=track:artist:', '/search?type=track&limit=5&q=' +
+      encodeURIComponent('track:"Usseewa" artist:"Ado"')]
   ];
   for (const [имя, path] of пробы) {
     const res = await fetch(SP_API + path, { headers: { Authorization: 'Bearer ' + SP_TOKEN } });
