@@ -20,21 +20,28 @@ name: Года выпуска треков
 # SPOTIFY_CLIENT_ID и SPOTIFY_CLIENT_SECRET (бесплатное приложение на
 # developer.spotify.com). Без них шаг сам скажет, чего не хватает.
 #
-# РАСПИСАНИЕ ПОКА ВЫКЛЮЧЕНО: сначала разведочный прогон на сотне-другой
-# треков и проверка качества, потом уже ночной автомат.
+# Расписание частое и заходы короткие — так вышло из-за лимита
+# Spotify. Он не «притормози», а «окно закрыто»: получив за раз слишком
+# много запросов, он отвечает 429 с Retry-After в час с лишним, и
+# пересиживать это внутри прогона бессмысленно. Поэтому скрипт при
+# длинном Retry-After заканчивается сам, коммитит собранное, а следующий
+# заход через три часа продолжает с того же места. Первичный обход
+# шести с половиной тысяч песен так занимает пару суток; когда он
+# закончится, частоту можно вернуть к разу в сутки — новых треков за
+# день десятки.
 on:
-  # schedule:
-  #   - cron: '43 22 * * *'    # 01:43 по Москве
+  schedule:
+    - cron: '17 */3 * * *'     # каждые три часа
   workflow_dispatch:
     inputs:
       limit:
-        description: 'Сколько песен спросить за прогон (1 запрос в секунду)'
+        description: 'Сколько песен спросить за прогон'
         required: false
-        default: '2000'
+        default: '1500'
       minutes:
         description: 'Сколько минут спрашивать'
         required: false
-        default: '60'
+        default: '25'
       retry_missing:
         description: 'Переспросить те, у которых год не нашёлся'
         type: boolean
@@ -42,6 +49,11 @@ on:
         default: false
       recheck:
         description: 'Переспросить найденных по прежним правилам совпадения'
+        type: boolean
+        required: false
+        default: false
+      сверять:
+        description: 'Сверять год по ссылке ещё и поиском (вдвое больше запросов)'
         type: boolean
         required: false
         default: false
@@ -64,7 +76,7 @@ concurrency:
 jobs:
   years:
     runs-on: ubuntu-latest
-    timeout-minutes: 75
+    timeout-minutes: 35
     permissions:
       contents: write
     steps:
@@ -81,6 +93,7 @@ jobs:
           IN_RECHECK: ${{ github.event.inputs.recheck }}
           IN_SOURCE: ${{ github.event.inputs.source }}
           IN_PROBE: ${{ github.event.inputs.probe }}
+          IN_СВЕРЯТЬ: ${{ github.event.inputs.сверять }}
           SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
         run: |
@@ -88,10 +101,11 @@ jobs:
           if [ "$IN_RETRY" = "true" ]; then EXTRA="--retry-missing"; fi
           if [ "$IN_RECHECK" = "true" ]; then EXTRA="$EXTRA --recheck"; fi
           if [ "$IN_PROBE" = "true" ]; then EXTRA="$EXTRA --probe"; fi
+          if [ "$IN_СВЕРЯТЬ" = "true" ]; then EXTRA="$EXTRA --сверять"; fi
           # --max-minutes держит прогон в рамках job'а: скрипт
           # останавливается сам, и накопленное успевает закоммититься.
           node scripts/years.mjs --source "${IN_SOURCE:-spotify}" \
-            --limit "${IN_LIMIT:-2000}" --max-minutes "${IN_MINUTES:-60}" $EXTRA
+            --limit "${IN_LIMIT:-1500}" --max-minutes "${IN_MINUTES:-25}" $EXTRA
 
       # if: always() — чтобы накопленное коммитилось даже если шаг выше
       # упал на середине. Час запросов дороже, чем аккуратный выход.

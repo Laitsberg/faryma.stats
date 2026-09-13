@@ -46,6 +46,11 @@ const RECHECK = hasFlag('--recheck');
    тела. Нужен, когда Spotify отвечает голым «Forbidden» и по нему не
    отличить недостающую галочку в приложении от чего-то другого. */
 const PROBE = hasFlag('--probe');
+/* Сверять ли год по ссылке ещё и поиском. Ловит переиздания (Breathe
+   2012 → 1997), но удваивает число запросов, а лимит Spotify мы уже
+   один раз выбрали досуха. На первичный обход — выключено, потом
+   отдельным проходом. */
+const СВЕРЯТЬ = hasFlag('--сверять');
 /* Ограничение по времени: скрипт должен остановиться сам, чтобы
    воркфлоу успел закоммитить накопленное, а не был убит по таймауту. */
 const MAX_MS = +argVal('--max-minutes', Infinity) * 60000;
@@ -58,7 +63,7 @@ const API_ROOT = process.env.MB_API || 'https://musicbrainz.org/ws/2';
 const SOURCE = argVal('--source', process.env.SPOTIFY_CLIENT_ID ? 'spotify' : 'musicbrainz');
 const SP_API = process.env.SP_API || 'https://api.spotify.com/v1';
 const SP_TOKEN_URL = process.env.SP_TOKEN_URL || 'https://accounts.spotify.com/api/token';
-const SP_DELAY = +(process.env.SP_DELAY || 200);
+const SP_DELAY = +(process.env.SP_DELAY || 400);
 
 const UA = 'faryma-stats/1.0 ( https://github.com/Laitsberg/faryma.stats )';
 const DELAY_MS = +(process.env.MB_DELAY || 1100);
@@ -239,6 +244,8 @@ async function fetchYear(artist, title, attempt = 0) {
    ============================================================ */
 
 let SP_TOKEN = null;
+/* Сколько секунд Spotify велел не приходить. Ноль — окно открыто. */
+let ЗАКРЫТО = 0;
 
 async function spToken() {
   const id = process.env.SPOTIFY_CLIENT_ID, secret = process.env.SPOTIFY_CLIENT_SECRET;
@@ -279,15 +286,20 @@ async function spGet(path, attempt = 0) {
     throw new Error(`Spotify не ответил за 15 с на ${path.slice(0, 60)}`);
   }
   if (res.status === 401 && attempt < 2) { SP_TOKEN = null; return spGet(path, attempt + 1); }
-  if (res.status === 429 && attempt < 3) {
-    /* Retry-After у Spotify бывает в сотни секунд. Ждать столько
-       трижды — это полчаса впустую, поэтому ограничиваем минутой:
-       не дождались — пусть прогон честно остановится и закоммитит
-       то, что успел, а следующий продолжит. */
+  if (res.status === 429) {
+    /* Retry-After у Spotify — не «притормози», а «окно закрыто до
+       такого-то часа»: он присылал 4445 секунд и отсчитывал их вниз,
+       сколько ни переспрашивай. Прошлый прогон полчаса бился в
+       закрытую дверь и сделал двадцать треков. Короткую паузу
+       пережидаем, длинную — нет: поднимаем флаг, и прогон честно
+       заканчивается, закоммитив накопленное. */
     const просят = +res.headers.get('retry-after') || 2;
-    const пауза = Math.min(просят, 60) * 1000 + 500;
-    console.log(`  … Spotify просит подождать ${просят} с, жду ${Math.round(пауза / 1000)}`);
-    await sleep(пауза);
+    if (просят > 90 || attempt >= 2) {
+      ЗАКРЫТО = просят;
+      throw new Error(`Spotify закрыл окно на ${просят} с — дальше ждать бессмысленно`);
+    }
+    console.log(`  … Spotify просит подождать ${просят} с`);
+    await sleep(просят * 1000 + 500);
     return spGet(path, attempt + 1);
   }
   if (!res.ok) {
@@ -315,8 +327,9 @@ async function spПоСсылкам(список, cache, закрыто, started
   for (const t of список) {
     // Тот же сторож, что и в поиске: раньше его тут не было, и
     // --max-minutes на этот проход просто не действовал.
-    if (Date.now() - startedAt > maxMs) {
-      console.log(`\nвремя вышло, останавливаю проход по ссылкам на ${сделано}/${список.length}`);
+    if (ЗАКРЫТО || Date.now() - startedAt > maxMs) {
+      console.log(`\nостанавливаю проход по ссылкам на ${сделано}/${список.length}` +
+                  (ЗАКРЫТО ? ` — Spotify закрыл окно на ${ЗАКРЫТО} с` : ' — время вышло'));
       break;
     }
     let tr = null;
@@ -335,7 +348,7 @@ async function spПоСсылкам(список, cache, закрыто, started
        Kigeki (Live At Zepp DiverCity, 2022)». Поэтому спрашиваем ещё
        и поиском и берём то, что раньше. */
     let поиском = null;
-    if (tr) {
+    if (tr && СВЕРЯТЬ) {
       await sleep(SP_DELAY);
       поиском = await spПоиском(t).catch(() => null);
     }
@@ -570,6 +583,11 @@ if (остальные.length) {
 }
 
 for (const t of остальные) {
+  if (ЗАКРЫТО) {
+    ranOut = true;
+    console.log(`\nSpotify закрыл окно на ${ЗАКРЫТО} с — останавливаюсь на ${done}/${todo.length}`);
+    break;
+  }
   if (Date.now() - startedAt > MAX_MS) {
     ranOut = true;
     console.log(`\nвремя вышло (${Math.round(MAX_MS / 60000)} мин), останавливаюсь на ${done}/${todo.length}`);
