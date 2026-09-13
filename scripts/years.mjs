@@ -285,30 +285,44 @@ async function spGet(path, attempt = 0) {
 
 const годАльбома = a => годИз(a && a.release_date);
 
-/* Пачками по 50: у 934 треков архива ссылка ведёт прямо на запись, и
-   это девятнадцать запросов вместо девятисот тридцати четырёх. Год тут
-   не угадан — это релиз, на который ссылается сама таблица. */
+/* По одному треку за запрос. Пачками по 50 было бы девятнадцать
+   запросов вместо девятисот, но /tracks?ids= это приложение получает
+   403 Forbidden — проверено пробой: одиночный трек, поиск, альбом и
+   исполнитель отдаются, групповая выборка нет. По одному выходит
+   пара минут на всё, так что переживём.
+
+   Год тут не угадан: это релиз, на который ссылается сама таблица. */
 async function spПоСсылкам(список, cache) {
-  let найдено = 0;
-  for (let i = 0; i < список.length; i += 50) {
-    const кусок = список.slice(i, i + 50);
-    const j = await spGet('/tracks?ids=' + кусок.map(t => t.sid).join(','));
-    (j.tracks || []).forEach((tr, n) => {
-      const t = кусок[n];
-      const year = tr && годАльбома(tr.album);
+  let найдено = 0, сделано = 0;
+  for (const t of список) {
+    let tr = null;
+    try {
+      tr = await spGet('/tracks/' + t.sid);
+    } catch (e) {
+      // Битая или устаревшая ссылка не должна ронять весь прогон:
+      // такой трек просто уйдёт в поиск наравне с остальными.
+      console.error(`  ! ${t.artist} — ${t.title}: ${e.message}`);
+    }
+    const year = tr && годАльбома(tr.album);
+    if (tr) {
       cache.tracks[t.key] = {
         artist: t.artist, title: t.title, разносов: t.n,
         year: year || null, score: year ? 100 : 0, как: 'ссылка', v: ВЕРСИЯ,
-        sid: t.sid, spTitle: tr?.name || null,
-        spArtist: (tr?.artists || []).map(a => a.name).join(', ') || null,
-        spAlbum: tr?.album?.name || null
+        sid: t.sid, spTitle: tr.name || null,
+        spArtist: (tr.artists || []).map(a => a.name).join(', ') || null,
+        spAlbum: tr.album?.name || null
       };
       if (year) найдено++;
-    });
-    console.log(`ссылки ${Math.min(i + 50, список.length)}/${список.length} · с годом ${найдено}`);
-    saveCache(cache, false);
+    }
+    сделано++;
+    if (сделано % 50 === 0) {
+      console.log(`ссылки ${сделано}/${список.length} · с годом ${найдено}`);
+      saveCache(cache, false);
+    }
     await sleep(SP_DELAY);
   }
+  console.log(`ссылки ${сделано}/${список.length} · с годом ${найдено}`);
+  saveCache(cache, false);
   return найдено;
 }
 
