@@ -292,7 +292,7 @@ const годАльбома = a => годИз(a && a.release_date);
    пара минут на всё, так что переживём.
 
    Год тут не угадан: это релиз, на который ссылается сама таблица. */
-async function spПоСсылкам(список, cache) {
+async function spПоСсылкам(список, cache, закрыто) {
   let найдено = 0, сделано = 0;
   for (const t of список) {
     let tr = null;
@@ -330,7 +330,7 @@ async function spПоСсылкам(список, cache) {
         spAlbum: tr.album?.name || null,
         годСсылки: годСсылки || null, годПоиска: (поиском && поиском.year) || null
       };
-      if (year) найдено++;
+      if (year) { найдено++; закрыто.add(t.key); }
     }
     сделано++;
     if (сделано % 50 === 0) {
@@ -515,18 +515,23 @@ let done = 0, found = 0, failed = 0, ranOut = false;
 
 /* Сначала — те, у кого в таблице есть ссылка на Spotify: пачками по
    пятьдесят, без поиска и без риска промахнуться мимо песни. */
+/* Что уже закрыл проход по ссылкам — по нему и решаем, кого отдавать
+   поиску. Раньше здесь стояло «у кого в кэше ещё нет года», и это
+   рушило --recheck: запись с годом и ссылкой не попадала ни в один
+   проход, переспросить её было нельзя. Список todo и так собран из
+   тех, кого спрашивать надо. */
+const сделано = new Set();
 if (SOURCE === 'spotify') {
-  const поСсылке = todo.filter(t => t.sid && !cache.tracks[t.key]?.year);
+  const поСсылке = todo.filter(t => t.sid);
   if (поСсылке.length) {
-    console.log(`\nпо ссылкам из таблицы: ${поСсылке.length} (${Math.ceil(поСсылке.length / 50)} запросов)`);
-    found += await spПоСсылкам(поСсылке, cache);
-    done += поСсылке.length;
+    console.log(`\nпо ссылкам из таблицы: ${поСсылке.length}`);
+    found += await spПоСсылкам(поСсылке, cache, сделано);
+    done += сделано.size;
   }
 }
 
-const остальные = SOURCE === 'spotify'
-  ? todo.filter(t => !t.sid || !cache.tracks[t.key]?.year)
-  : todo;
+// Кого ссылка не закрыла — в поиск наравне с бесссылочными.
+const остальные = todo.filter(t => !сделано.has(t.key));
 const шаг = SOURCE === 'spotify' ? SP_DELAY : DELAY_MS;
 if (остальные.length) {
   console.log(`\nпоиском: ${остальные.length}, примерно ${Math.max(1, Math.round(остальные.length * шаг / 60000))} мин\n`);
