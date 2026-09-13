@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-12T16:21:44.284Z",
+ "generated": "2026-09-13T09:34:06.134Z",
  "artists": {
   "7": {
    "name": "7",
@@ -42392,6 +42392,108 @@
    "tracks": 1,
    "country": null,
    "score": 0
+  },
+  "tarantula & yuri kasahara": {
+   "name": "Tarantula & Yuri Kasahara",
+   "tracks": 2,
+   "country": null,
+   "score": 0
+  },
+  "/kerbal, blanked & mehdead": {
+   "name": "/kerbal, BLANKED & MehDead",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "tofubeats & tadashi machida": {
+   "name": "tofubeats & Tadashi Machida",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "floating points, pharoah sanders & london symphony orchestra": {
+   "name": "Floating Points, Pharoah Sanders & London Symphony Orchestra",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "lost to the void": {
+   "name": "Lost to the Void",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "julian zidarevich": {
+   "name": "Julian Zidarevich",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "michael sembello": {
+   "name": "Michael Sembello",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "fcde7037-181e-437f-9417-60a38958c0fa",
+   "mbName": "Michael Sembello"
+  },
+  "stigmata": {
+   "name": "Stigmata",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "f5fbb9b8-1fcc-4a60-850f-18ae88b5d4cc",
+   "mbName": "Stigmata"
+  },
+  "deathpact": {
+   "name": "Deathpact",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "e931a3e9-483f-4b65-a277-fbf4153d884a",
+   "mbName": "Deathpact"
+  },
+  "sunstroke project & olia tira": {
+   "name": "Sunstroke Project & Olia Tira",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "василий богатырев": {
+   "name": "Василий Богатырев",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "f18b4f4e-ec4b-4c65-80bd-a410f255b7b4",
+   "mbName": "Василий Богатырёв"
+  },
+  "deicide": {
+   "name": "Deicide",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "0bd96fa4-9835-49b0-a1f2-7421e6a79dfa",
+   "mbName": "Deicide"
+  },
+  "bloodhound gang": {
+   "name": "Bloodhound Gang",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "b2dbfc09-b332-408b-a235-1850e41971c5",
+   "mbName": "Bloodhound Gang"
   }
  },
  "source": "MusicBrainz",
