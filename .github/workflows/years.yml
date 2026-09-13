@@ -58,18 +58,24 @@ jobs:
           # останавливается сам, и накопленное успевает закоммититься.
           node scripts/years.mjs --limit "${IN_LIMIT:-2000}" --max-minutes "${IN_MINUTES:-60}" $EXTRA
 
+      # if: always() — чтобы накопленное коммитилось даже если шаг выше
+      # упал на середине. Час запросов дороже, чем аккуратный выход.
       - name: Закоммитить года
+        if: always()
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/years.json
           if git diff --staged --quiet; then echo "изменений нет"; exit 0; fi
-          ЗНАЮ=$(node -e "
+          # Имя переменной только латиницей: bash кириллицу за имя не
+          # держит и валит шаг с «command not found» — на этом уже
+          # потерялся один часовой прогон.
+          FOUND=$(node -e "
             const d=require('./data/years.json');
             const v=Object.values(d.tracks||{});
             process.stdout.write(v.filter(x=>x.year).length+' из '+v.length);
-          ")
-          git commit -m "Года выпуска из MusicBrainz: $ЗНАЮ"
+          " || echo "порция")
+          git commit -m "Года выпуска из MusicBrainz: $FOUND"
           # Пока шёл прогон, в main мог прилететь ночной архив — переносим
           # поверх: наш коммит трогает только data/years.json.
           for i in 1 2 3 4 5; do

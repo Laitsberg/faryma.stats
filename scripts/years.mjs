@@ -47,6 +47,11 @@ const UA = 'faryma-stats/1.0 ( https://github.com/Laitsberg/faryma.stats )';
 const DELAY_MS = +(process.env.MB_DELAY || 1100);
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
+/* Ниже этого совпадению не верим. 84 — это «название с хвостом плюс
+   исполнитель в кредите»; страница показывает год от 90, так что
+   пограничные ответы в кэш попадают, но на витрину не выходят. */
+const ПОРОГ = 84;
+
 const ГОД_ОТ = 1900;
 const ГОД_ДО = new Date().getFullYear() + 1;
 
@@ -123,21 +128,36 @@ function годЗаписи(rec) {
    совпал частично (feat., сокращение) — 92, иначе ответ ненадёжный. */
 function уверенность(rec, artist, title) {
   const тВопрос = срав(title), тОтвет = срав(rec.title);
-  if (!тВопрос || тОтвет !== тВопрос) return 0;
+  if (!тВопрос || !тОтвет) return 0;
+  /* Точное совпадение — лучший случай. Но у одной из сторон бывает
+     хвост, которого нет у другой: в архиве «Kaze ni Nare», в
+     MusicBrainz «Kaze ni Nare - Live Edition». Короткие названия так
+     сравнивать нельзя: «Go» найдётся внутри «Gone» и «Golden». */
+  const точно = тОтвет === тВопрос;
+  const краем = !точно && Math.min(тОтвет.length, тВопрос.length) >= 8 &&
+                (тОтвет.startsWith(тВопрос) || тВопрос.startsWith(тОтвет));
+  if (!точно && !краем) return 0;
+  const скидка = точно ? 0 : 8;
 
   const аВопрос = срав(artist);
   const кредиты = (rec['artist-credit'] || []).map(c => срав(c.name || c.artist?.name));
   const целиком = срав((rec['artist-credit'] || [])
     .map(c => (c.name || c.artist?.name || '') + (c.joinphrase || '')).join(''));
 
-  if (кредиты.includes(аВопрос) || целиком === аВопрос) return 100;
-  if (кредиты.some(k => k && (k.includes(аВопрос) || аВопрос.includes(k)))) return 92;
-  if (целиком.includes(аВопрос) || аВопрос.includes(целиком)) return 92;
+  if (кредиты.includes(аВопрос) || целиком === аВопрос) return 100 - скидка;
+  if (кредиты.some(k => k && (k.includes(аВопрос) || аВопрос.includes(k)))) return 92 - скидка;
+  if (целиком.includes(аВопрос) || аВопрос.includes(целиком)) return 92 - скидка;
   return 60;
 }
 
 async function fetchYear(artist, title, attempt = 0) {
-  const q = `artist:"${экран(queryName(artist))}" AND recording:"${экран(title)}"`;
+  /* Ищем имя тремя полями сразу. artist — это подпись под записью
+     целиком («Ado feat. Кто-то»), artistname и creditname — отдельные
+     участники. У countries.mjs та же беда решена псевдонимами: в
+     MusicBrainz японцы записаны иероглифами, а латиница лежит рядом. */
+  const имя = экран(queryName(artist));
+  const q = `recording:"${экран(title)}" AND (artist:"${имя}"` +
+            ` OR artistname:"${имя}" OR creditname:"${имя}")`;
   const url = `${API_ROOT}/recording/?query=${encodeURIComponent(q)}&fmt=json&limit=25`;
   let res;
   try {
@@ -155,7 +175,7 @@ async function fetchYear(artist, title, attempt = 0) {
   const j = await res.json();
   const свои = (j.recordings || [])
     .map(r => ({ rec: r, score: уверенность(r, artist, title), year: годЗаписи(r) }))
-    .filter(x => x.score >= 90 && x.year);
+    .filter(x => x.score >= ПОРОГ && x.year);
 
   if (!свои.length) return { year: null, score: 0 };
 
@@ -245,6 +265,7 @@ if (!todo.length) { console.log('нечего докачивать'); process.ex
 console.log(`примерно ${Math.round(todo.length * DELAY_MS / 60000)} мин при одном запросе в секунду\n`);
 
 const startedAt = Date.now();
+const промахи = [];
 let done = 0, found = 0, failed = 0, ranOut = false;
 for (const t of todo) {
   if (Date.now() - startedAt > MAX_MS) {
@@ -256,6 +277,7 @@ for (const t of todo) {
     const r = await fetchYear(t.artist, t.title);
     cache.tracks[t.key] = { artist: t.artist, title: t.title, разносов: t.n, ...r };
     if (r.year) found++;
+    else if (промахи.length < 40) промахи.push(`${t.artist} — ${t.title}`);
   } catch (e) {
     console.error(`  ! ${t.artist} — ${t.title}: ${e.message}`);
     failed++;
@@ -270,6 +292,11 @@ for (const t of todo) {
 }
 
 saveCache(cache);
+if (промахи.length) {
+  console.log(`\nне нашлось (первые ${промахи.length}) — по ним и видно, что чинить:`);
+  промахи.forEach(x => console.log('  ·', x));
+}
+
 const сГодом = Object.values(cache.tracks).filter(x => x.year).length;
 console.log(`\nготово: спрошено ${done}, год нашёлся у ${found}`);
 console.log(`всего в кэше ${Object.keys(cache.tracks).length}, из них с годом ${сГодом}`);
