@@ -58,7 +58,7 @@ const API_ROOT = process.env.MB_API || 'https://musicbrainz.org/ws/2';
 const SOURCE = argVal('--source', process.env.SPOTIFY_CLIENT_ID ? 'spotify' : 'musicbrainz');
 const SP_API = process.env.SP_API || 'https://api.spotify.com/v1';
 const SP_TOKEN_URL = process.env.SP_TOKEN_URL || 'https://accounts.spotify.com/api/token';
-const SP_DELAY = +(process.env.SP_DELAY || 120);
+const SP_DELAY = +(process.env.SP_DELAY || 200);
 
 const UA = 'faryma-stats/1.0 ( https://github.com/Laitsberg/faryma.stats )';
 const DELAY_MS = +(process.env.MB_DELAY || 1100);
@@ -265,11 +265,28 @@ async function spToken() {
    говорит сам, гадать не нужно. 401 значит, что часовой токен истёк. */
 async function spGet(path, attempt = 0) {
   if (!SP_TOKEN) await spToken();
-  const res = await fetch(SP_API + path, { headers: { Authorization: 'Bearer ' + SP_TOKEN } });
+  /* Таймаут обязателен: без него подвисшее соединение останавливает
+     весь прогон намертво — один такой запрос съел девятнадцать минут
+     при бюджете в десять и не дал ничего закоммитить. */
+  let res;
+  try {
+    res = await fetch(SP_API + path, {
+      headers: { Authorization: 'Bearer ' + SP_TOKEN },
+      signal: AbortSignal.timeout(15000)
+    });
+  } catch (e) {
+    if (attempt < 2) { await sleep(1000 * (attempt + 1)); return spGet(path, attempt + 1); }
+    throw new Error(`Spotify не ответил за 15 с на ${path.slice(0, 60)}`);
+  }
   if (res.status === 401 && attempt < 2) { SP_TOKEN = null; return spGet(path, attempt + 1); }
-  if (res.status === 429 && attempt < 5) {
-    const пауза = (+res.headers.get('retry-after') || 2) * 1000 + 500;
-    console.log(`  … Spotify просит подождать ${Math.round(пауза / 1000)} с`);
+  if (res.status === 429 && attempt < 3) {
+    /* Retry-After у Spotify бывает в сотни секунд. Ждать столько
+       трижды — это полчаса впустую, поэтому ограничиваем минутой:
+       не дождались — пусть прогон честно остановится и закоммитит
+       то, что успел, а следующий продолжит. */
+    const просят = +res.headers.get('retry-after') || 2;
+    const пауза = Math.min(просят, 60) * 1000 + 500;
+    console.log(`  … Spotify просит подождать ${просят} с, жду ${Math.round(пауза / 1000)}`);
     await sleep(пауза);
     return spGet(path, attempt + 1);
   }
@@ -293,9 +310,15 @@ const сборник = a => (a && a.album_type) === 'compilation';
    пара минут на всё, так что переживём.
 
    Год тут не угадан: это релиз, на который ссылается сама таблица. */
-async function spПоСсылкам(список, cache, закрыто) {
+async function spПоСсылкам(список, cache, закрыто, startedAt, maxMs) {
   let найдено = 0, сделано = 0;
   for (const t of список) {
+    // Тот же сторож, что и в поиске: раньше его тут не было, и
+    // --max-minutes на этот проход просто не действовал.
+    if (Date.now() - startedAt > maxMs) {
+      console.log(`\nвремя вышло, останавливаю проход по ссылкам на ${сделано}/${список.length}`);
+      break;
+    }
     let tr = null;
     try {
       tr = await spGet('/tracks/' + t.sid);
@@ -534,7 +557,7 @@ if (SOURCE === 'spotify') {
   const поСсылке = todo.filter(t => t.sid);
   if (поСсылке.length) {
     console.log(`\nпо ссылкам из таблицы: ${поСсылке.length}`);
-    found += await spПоСсылкам(поСсылке, cache, сделано);
+    found += await spПоСсылкам(поСсылке, cache, сделано, startedAt, MAX_MS);
     done += сделано.size;
   }
 }
