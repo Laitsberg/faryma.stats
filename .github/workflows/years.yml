@@ -90,6 +90,8 @@ jobs:
       # упал на середине. Час запросов дороже, чем аккуратный выход.
       - name: Закоммитить года
         if: always()
+        env:
+          IN_SOURCE: ${{ github.event.inputs.source }}
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -103,7 +105,7 @@ jobs:
             const v=Object.values(d.tracks||{});
             process.stdout.write(v.filter(x=>x.year).length+' из '+v.length);
           " || echo "порция")
-          git commit -m "Года выпуска из MusicBrainz: $FOUND"
+          git commit -m "Года выпуска (${IN_SOURCE:-spotify}): $FOUND"
           # Пока шёл прогон, в main мог прилететь ночной архив — переносим
           # поверх: наш коммит трогает только data/years.json.
           for i in 1 2 3 4 5; do
