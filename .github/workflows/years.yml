@@ -12,13 +12,16 @@ name: Года выпуска треков
 # Ночью раз в сутки — за пару ночей архив разберётся целиком, дальше
 # спрашивать придётся только про новые треки, а их за день десятки.
 #
-# РАСПИСАНИЕ ВЫКЛЮЧЕНО. Пробные прогоны показали, что совпадение по
-# названию годится только для латиницы: у японских песен в архиве
-# ромадзи, а в MusicBrainz оригинал, и поиск по ромадзи их не находит.
-# В живых остаётся единственная запись с латинским названием — обычно
-# свежее переиздание, и год выходит неверный: у «Ado — Usseewa» 2025-й
-# вместо 2020-го. Пока отбор не переделан, ночной прогон только
-# набивал бы файл кривыми годами. Запустить руками по-прежнему можно.
+# Источник по умолчанию — Spotify: у 934 треков ссылка в таблице ведёт
+# прямо на запись (19 запросов пачками по 50, без всякого угадывания),
+# а поиск понимает ромадзи — то, на чём сломался MusicBrainz: там по
+# запросу «Usseewa» японская «うっせぇわ» не находится вовсе, и год
+# выходил 2025-й вместо 2020-го. Нужны секреты репозитория
+# SPOTIFY_CLIENT_ID и SPOTIFY_CLIENT_SECRET (бесплатное приложение на
+# developer.spotify.com). Без них шаг сам скажет, чего не хватает.
+#
+# РАСПИСАНИЕ ПОКА ВЫКЛЮЧЕНО: сначала разведочный прогон на сотне-другой
+# треков и проверка качества, потом уже ночной автомат.
 on:
   # schedule:
   #   - cron: '43 22 * * *'    # 01:43 по Москве
@@ -42,6 +45,12 @@ on:
         type: boolean
         required: false
         default: false
+      source:
+        description: 'Откуда брать года'
+        type: choice
+        required: false
+        default: spotify
+        options: [spotify, musicbrainz]
 
 concurrency:
   group: years-musicbrainz
@@ -59,19 +68,23 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Спросить года у MusicBrainz
+      - name: Спросить года
         env:
           IN_LIMIT: ${{ github.event.inputs.limit }}
           IN_MINUTES: ${{ github.event.inputs.minutes }}
           IN_RETRY: ${{ github.event.inputs.retry_missing }}
           IN_RECHECK: ${{ github.event.inputs.recheck }}
+          IN_SOURCE: ${{ github.event.inputs.source }}
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
         run: |
           EXTRA=""
           if [ "$IN_RETRY" = "true" ]; then EXTRA="--retry-missing"; fi
           if [ "$IN_RECHECK" = "true" ]; then EXTRA="$EXTRA --recheck"; fi
           # --max-minutes держит прогон в рамках job'а: скрипт
           # останавливается сам, и накопленное успевает закоммититься.
-          node scripts/years.mjs --limit "${IN_LIMIT:-2000}" --max-minutes "${IN_MINUTES:-60}" $EXTRA
+          node scripts/years.mjs --source "${IN_SOURCE:-spotify}" \
+            --limit "${IN_LIMIT:-2000}" --max-minutes "${IN_MINUTES:-60}" $EXTRA
 
       # if: always() — чтобы накопленное коммитилось даже если шаг выше
       # упал на середине. Час запросов дороже, чем аккуратный выход.

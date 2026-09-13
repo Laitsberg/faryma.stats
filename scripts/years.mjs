@@ -47,6 +47,15 @@ const RECHECK = hasFlag('--recheck');
 const MAX_MS = +argVal('--max-minutes', Infinity) * 60000;
 const API_ROOT = process.env.MB_API || 'https://musicbrainz.org/ws/2';
 
+/* Источник дат. Spotify лучше во всём, что важно этому архиву: у 934
+   треков ссылка ведёт прямо на запись, и год берётся без угадывания, а
+   поиск понимает ромадзи — то, на чём MusicBrainz и сломался. Нужен
+   бесплатный ключ приложения: SPOTIFY_CLIENT_ID и SPOTIFY_CLIENT_SECRET. */
+const SOURCE = argVal('--source', process.env.SPOTIFY_CLIENT_ID ? 'spotify' : 'musicbrainz');
+const SP_API = process.env.SP_API || 'https://api.spotify.com/v1';
+const SP_TOKEN_URL = process.env.SP_TOKEN_URL || 'https://accounts.spotify.com/api/token';
+const SP_DELAY = +(process.env.SP_DELAY || 120);
+
 const UA = 'faryma-stats/1.0 ( https://github.com/Laitsberg/faryma.stats )';
 const DELAY_MS = +(process.env.MB_DELAY || 1100);
 const sleep = ms => new Promise(r => setTimeout(r, ms));
@@ -221,6 +230,123 @@ async function fetchYear(artist, title, attempt = 0) {
   };
 }
 
+/* ============================================================
+   SPOTIFY
+   ============================================================ */
+
+let SP_TOKEN = null;
+
+async function spToken() {
+  const id = process.env.SPOTIFY_CLIENT_ID, secret = process.env.SPOTIFY_CLIENT_SECRET;
+  if (!id || !secret) {
+    throw new Error('нет SPOTIFY_CLIENT_ID / SPOTIFY_CLIENT_SECRET — ключ приложения Spotify обязателен');
+  }
+  const res = await fetch(SP_TOKEN_URL, {
+    method: 'POST',
+    headers: {
+      'Authorization': 'Basic ' + Buffer.from(id + ':' + secret).toString('base64'),
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    body: 'grant_type=client_credentials'
+  });
+  if (!res.ok) throw new Error(`Spotify не выдал токен: HTTP ${res.status}`);
+  SP_TOKEN = (await res.json()).access_token;
+  return SP_TOKEN;
+}
+
+/* 429 у Spotify приходит с Retry-After — сколько именно ждать он
+   говорит сам, гадать не нужно. 401 значит, что часовой токен истёк. */
+async function spGet(path, attempt = 0) {
+  if (!SP_TOKEN) await spToken();
+  const res = await fetch(SP_API + path, { headers: { Authorization: 'Bearer ' + SP_TOKEN } });
+  if (res.status === 401 && attempt < 2) { SP_TOKEN = null; return spGet(path, attempt + 1); }
+  if (res.status === 429 && attempt < 5) {
+    const пауза = (+res.headers.get('retry-after') || 2) * 1000 + 500;
+    console.log(`  … Spotify просит подождать ${Math.round(пауза / 1000)} с`);
+    await sleep(пауза);
+    return spGet(path, attempt + 1);
+  }
+  if (!res.ok) throw new Error(`Spotify HTTP ${res.status} на ${path.slice(0, 60)}`);
+  return res.json();
+}
+
+const годАльбома = a => годИз(a && a.release_date);
+
+/* Пачками по 50: у 934 треков архива ссылка ведёт прямо на запись, и
+   это девятнадцать запросов вместо девятисот тридцати четырёх. Год тут
+   не угадан — это релиз, на который ссылается сама таблица. */
+async function spПоСсылкам(список, cache) {
+  let найдено = 0;
+  for (let i = 0; i < список.length; i += 50) {
+    const кусок = список.slice(i, i + 50);
+    const j = await spGet('/tracks?ids=' + кусок.map(t => t.sid).join(','));
+    (j.tracks || []).forEach((tr, n) => {
+      const t = кусок[n];
+      const year = tr && годАльбома(tr.album);
+      cache.tracks[t.key] = {
+        artist: t.artist, title: t.title, разносов: t.n,
+        year: year || null, score: year ? 100 : 0, как: 'ссылка', v: ВЕРСИЯ,
+        sid: t.sid, spTitle: tr?.name || null,
+        spArtist: (tr?.artists || []).map(a => a.name).join(', ') || null,
+        spAlbum: tr?.album?.name || null
+      };
+      if (year) найдено++;
+    });
+    console.log(`ссылки ${Math.min(i + 50, список.length)}/${список.length} · с годом ${найдено}`);
+    saveCache(cache, false);
+    await sleep(SP_DELAY);
+  }
+  return найдено;
+}
+
+/* Для остальных — поиск. Берём самый ранний альбом среди версий этой
+   же песни у этого же исполнителя: так сингл 2020 года побеждает
+   сборник 2025-го, на котором он потом оказался. */
+async function spПоиском(t) {
+  const q = `track:"${t.title.replace(/"/g, ' ')}" artist:"${queryName(t.artist).replace(/"/g, ' ')}"`;
+  const j = await spGet('/search?type=track&limit=50&q=' + encodeURIComponent(q));
+  const свои = [];
+  for (const tr of j.tracks?.items || []) {
+    const { score, как } = уверенностьSp(tr, t.artist, t.title);
+    const year = годАльбома(tr.album);
+    if (score >= ПОРОГ && year) свои.push({ tr, score, как, year });
+  }
+  if (!свои.length) return { year: null, score: 0, v: ВЕРСИЯ };
+  const ранняя = свои.reduce((a, b) => (b.year < a.year ? b : a));
+  const лучшая = свои.reduce((a, b) => (b.score > a.score ? b : a));
+  return {
+    year: ранняя.year, score: лучшая.score, как: 'поиск:' + ранняя.как, v: ВЕРСИЯ,
+    sid: ранняя.tr.id, spTitle: ранняя.tr.name,
+    spArtist: (ранняя.tr.artists || []).map(a => a.name).join(', '),
+    spAlbum: ранняя.tr.album?.name || null, вариантов: свои.length
+  };
+}
+
+/* Та же мера, что и для MusicBrainz, только поля другие. Отдельная
+   функция, а не общая: у Spotify исполнители лежат плоским списком, а
+   пути «псевдоним» тут не нужно — их поиск ромадзи понимает сам. */
+function уверенностьSp(tr, artist, title) {
+  const нет = { score: 0, как: '' };
+  const тВопрос = срав(title), тОтвет = срав(tr.name);
+  if (!тВопрос || !тОтвет) return нет;
+  const точно = тОтвет === тВопрос;
+  const краем = !точно && Math.min(тОтвет.length, тВопрос.length) >= 8 &&
+                (тОтвет.startsWith(тВопрос) || тВопрос.startsWith(тОтвет));
+  if (!точно && !краем) return нет;
+
+  const аВопрос = срав(artist);
+  const имена = (tr.artists || []).map(a => срав(a.name));
+  const целиком = имена.join('');
+  const исполнитель =
+    имена.includes(аВопрос) || целиком === аВопрос ? 100
+    : имена.some(k => k && (k.includes(аВопрос) || аВопрос.includes(k))) ? 92
+    : целиком.includes(аВопрос) || аВопрос.includes(целиком) ? 92
+    : 0;
+  if (!исполнитель) return нет;
+  return точно ? { score: исполнитель, как: 'название' }
+               : { score: исполнитель - 8, как: 'хвост' };
+}
+
 /* ---------- сбор песен из архива ---------- */
 function createRequire() {
   const src = fs.readFileSync(path.join(ROOT, 'vendor', 'papaparse.min.js'), 'utf8');
@@ -244,9 +370,12 @@ function collectTracks(ctx) {
     const чистое = чистоеНазвание(title);
     if (!чистое) return;
     const key = ключГода(ctx.nameKey, artist, title);
+    // Ссылка лежит то в «Где», то в следующем столбце — смотрим оба.
+    const sid = (Object.values(r).join(' ')
+      .match(/open\.spotify\.com\/track\/([A-Za-z0-9]+)/) || [])[1] || null;
     const было = counts.get(key);
-    if (было) было.n++;
-    else counts.set(key, { key, artist, title: чистое, n: 1 });
+    if (было) { было.n++; if (!было.sid && sid) было.sid = sid; }
+    else counts.set(key, { key, artist, title: чистое, n: 1, sid });
   });
 
   return [...counts.values()]
@@ -289,19 +418,39 @@ console.log(`уже в кэше:     ${Object.keys(cache.tracks).length}`);
 console.log(`спросить:       ${todo.length}`);
 if (!todo.length) { console.log('нечего докачивать'); process.exit(0); }
 
-console.log(`примерно ${Math.round(todo.length * DELAY_MS / 60000)} мин при одном запросе в секунду\n`);
+console.log(`источник:       ${SOURCE}`);
 
 const startedAt = Date.now();
 const промахи = [];
 let done = 0, found = 0, failed = 0, ranOut = false;
-for (const t of todo) {
+
+/* Сначала — те, у кого в таблице есть ссылка на Spotify: пачками по
+   пятьдесят, без поиска и без риска промахнуться мимо песни. */
+if (SOURCE === 'spotify') {
+  const поСсылке = todo.filter(t => t.sid && !cache.tracks[t.key]?.year);
+  if (поСсылке.length) {
+    console.log(`\nпо ссылкам из таблицы: ${поСсылке.length} (${Math.ceil(поСсылке.length / 50)} запросов)`);
+    found += await spПоСсылкам(поСсылке, cache);
+    done += поСсылке.length;
+  }
+}
+
+const остальные = SOURCE === 'spotify'
+  ? todo.filter(t => !t.sid || !cache.tracks[t.key]?.year)
+  : todo;
+const шаг = SOURCE === 'spotify' ? SP_DELAY : DELAY_MS;
+if (остальные.length) {
+  console.log(`\nпоиском: ${остальные.length}, примерно ${Math.max(1, Math.round(остальные.length * шаг / 60000))} мин\n`);
+}
+
+for (const t of остальные) {
   if (Date.now() - startedAt > MAX_MS) {
     ranOut = true;
     console.log(`\nвремя вышло (${Math.round(MAX_MS / 60000)} мин), останавливаюсь на ${done}/${todo.length}`);
     break;
   }
   try {
-    const r = await fetchYear(t.artist, t.title);
+    const r = SOURCE === 'spotify' ? await spПоиском(t) : await fetchYear(t.artist, t.title);
     cache.tracks[t.key] = { artist: t.artist, title: t.title, разносов: t.n, ...r };
     if (r.year) found++;
     else if (промахи.length < 40) промахи.push(`${t.artist} — ${t.title}`);
@@ -315,7 +464,7 @@ for (const t of todo) {
     console.log(`${done}/${todo.length} · с годом ${found}`);
     saveCache(cache, true);
   }
-  await sleep(DELAY_MS);
+  await sleep(шаг);
 }
 
 saveCache(cache);
