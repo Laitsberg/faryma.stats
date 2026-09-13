@@ -249,7 +249,10 @@ async function spToken() {
     },
     body: 'grant_type=client_credentials'
   });
-  if (!res.ok) throw new Error(`Spotify не выдал токен: HTTP ${res.status}`);
+  if (!res.ok) {
+    const тело = await res.text().catch(() => '');
+    throw new Error(`Spotify не выдал токен: HTTP ${res.status}` + (тело ? ` — ${тело.slice(0, 300)}` : ''));
+  }
   SP_TOKEN = (await res.json()).access_token;
   return SP_TOKEN;
 }
@@ -266,7 +269,13 @@ async function spGet(path, attempt = 0) {
     await sleep(пауза);
     return spGet(path, attempt + 1);
   }
-  if (!res.ok) throw new Error(`Spotify HTTP ${res.status} на ${path.slice(0, 60)}`);
+  if (!res.ok) {
+    /* Тело ответа Spotify обычно объясняет причину словами — без него
+       403 неотличим от «не та галочка при создании приложения». */
+    const тело = await res.text().catch(() => '');
+    throw new Error(`Spotify HTTP ${res.status} на ${path.slice(0, 60)}` +
+                    (тело ? ` — ${тело.slice(0, 300)}` : ''));
+  }
   return res.json();
 }
 
