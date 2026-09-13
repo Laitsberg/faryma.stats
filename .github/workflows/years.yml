@@ -45,6 +45,11 @@ on:
         type: boolean
         required: false
         default: false
+      probe:
+        description: 'Только пощупать API и показать ответы (ничего не пишет)'
+        type: boolean
+        required: false
+        default: false
       source:
         description: 'Откуда брать года'
         type: choice
@@ -75,12 +80,14 @@ jobs:
           IN_RETRY: ${{ github.event.inputs.retry_missing }}
           IN_RECHECK: ${{ github.event.inputs.recheck }}
           IN_SOURCE: ${{ github.event.inputs.source }}
+          IN_PROBE: ${{ github.event.inputs.probe }}
           SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
         run: |
           EXTRA=""
           if [ "$IN_RETRY" = "true" ]; then EXTRA="--retry-missing"; fi
           if [ "$IN_RECHECK" = "true" ]; then EXTRA="$EXTRA --recheck"; fi
+          if [ "$IN_PROBE" = "true" ]; then EXTRA="$EXTRA --probe"; fi
           # --max-minutes держит прогон в рамках job'а: скрипт
           # останавливается сам, и накопленное успевает закоммититься.
           node scripts/years.mjs --source "${IN_SOURCE:-spotify}" \

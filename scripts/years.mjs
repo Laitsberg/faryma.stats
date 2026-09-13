@@ -42,6 +42,10 @@ const MIN_TRACKS = +argVal('--min-tracks', 1);
 const RETRY_MISSING = hasFlag('--retry-missing');
 /* Переспросить тех, чей ответ получен по прежним правилам совпадения */
 const RECHECK = hasFlag('--recheck');
+/* Пощупать API и выйти: несколько мелких запросов с печатью кода и
+   тела. Нужен, когда Spotify отвечает голым «Forbidden» и по нему не
+   отличить недостающую галочку в приложении от чего-то другого. */
+const PROBE = hasFlag('--probe');
 /* Ограничение по времени: скрипт должен остановиться сам, чтобы
    воркфлоу успел закоммитить накопленное, а не был убит по таймауту. */
 const MAX_MS = +argVal('--max-minutes', Infinity) * 60000;
@@ -356,6 +360,34 @@ function уверенностьSp(tr, artist, title) {
                : { score: исполнитель - 8, как: 'хвост' };
 }
 
+/* Разведка: спрашиваем по одному и печатаем, что ответили. Ничего не
+   пишем и никуда не сохраняем. */
+async function spПрощупать() {
+  const id = '1Mwm3pnsBiZvErRoxfEFbJ';          // трек из архива
+  console.log('ключ:', process.env.SPOTIFY_CLIENT_ID
+    ? `есть, ${process.env.SPOTIFY_CLIENT_ID.length} символов` : 'НЕТ');
+  try {
+    await spToken();
+    console.log('токен: получен,', SP_TOKEN.length, 'символов');
+  } catch (e) { console.log('токен: НЕ получен —', e.message); return; }
+
+  const пробы = [
+    ['один трек',            `/tracks/${id}`],
+    ['один трек с market',   `/tracks/${id}?market=SE`],
+    ['пачка из двух',        `/tracks?ids=${id},6z4p9s72H2RYiAEMiGb89M`],
+    ['поиск',                '/search?type=track&limit=1&q=' + encodeURIComponent('Ado Usseewa')],
+    ['поиск с market',       '/search?type=track&limit=1&market=SE&q=' + encodeURIComponent('Ado Usseewa')],
+    ['альбом',               '/albums/4aawyAB9vmqN3uQ7FjRGTy'],
+    ['исполнитель',          '/artists/4k1ELeJKT1ISyDv8JivPpB']
+  ];
+  for (const [имя, path] of пробы) {
+    const res = await fetch(SP_API + path, { headers: { Authorization: 'Bearer ' + SP_TOKEN } });
+    const тело = await res.text().catch(() => '');
+    console.log(`${имя.padEnd(20)} ${res.status}  ${тело.slice(0, 160).replace(/\s+/g, ' ')}`);
+    await sleep(300);
+  }
+}
+
 /* ---------- сбор песен из архива ---------- */
 function createRequire() {
   const src = fs.readFileSync(path.join(ROOT, 'vendor', 'papaparse.min.js'), 'utf8');
@@ -410,6 +442,8 @@ function saveCache(cache, stats) {
 }
 
 /* ---------- главное ---------- */
+if (PROBE) { await spПрощупать(); process.exit(0); }
+
 const ctx = loadSiteCode();
 const tracks = collectTracks(ctx);
 const cache = loadCache();
