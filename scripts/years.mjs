@@ -303,14 +303,32 @@ async function spПоСсылкам(список, cache) {
       // такой трек просто уйдёт в поиск наравне с остальными.
       console.error(`  ! ${t.artist} — ${t.title}: ${e.message}`);
     }
-    const year = tr && годАльбома(tr.album);
+    const годСсылки = tr && годАльбома(tr.album);
+
+    /* Ссылка сама по себе год не решает: в таблице она порой ведёт на
+       концертник или сборник, вышедший много позже песни. У «Ado —
+       Basket Worm» так получился 2026-й с альбома «Ado 1st Live
+       Kigeki (Live At Zepp DiverCity, 2022)». Поэтому спрашиваем ещё
+       и поиском и берём то, что раньше. */
+    let поиском = null;
     if (tr) {
+      await sleep(SP_DELAY);
+      поиском = await spПоиском(t).catch(() => null);
+    }
+    const года = [годСсылки, поиском && поиском.year].filter(Boolean);
+    const year = года.length ? Math.min(...года) : null;
+
+    if (tr) {
+      const как = !годСсылки ? 'поиск'
+                : (поиском && поиском.year && поиском.year < годСсылки) ? 'ссылка→поиск'
+                : 'ссылка';
       cache.tracks[t.key] = {
         artist: t.artist, title: t.title, разносов: t.n,
-        year: year || null, score: year ? 100 : 0, как: 'ссылка', v: ВЕРСИЯ,
+        year, score: year ? 100 : 0, как, v: ВЕРСИЯ,
         sid: t.sid, spTitle: tr.name || null,
         spArtist: (tr.artists || []).map(a => a.name).join(', ') || null,
-        spAlbum: tr.album?.name || null
+        spAlbum: tr.album?.name || null,
+        годСсылки: годСсылки || null, годПоиска: (поиском && поиском.year) || null
       };
       if (year) найдено++;
     }
@@ -331,7 +349,11 @@ async function spПоСсылкам(список, cache) {
    сборник 2025-го, на котором он потом оказался. */
 async function spПоиском(t) {
   const q = `track:"${t.title.replace(/"/g, ' ')}" artist:"${queryName(t.artist).replace(/"/g, ' ')}"`;
-  const j = await spGet('/search?type=track&limit=50&q=' + encodeURIComponent(q));
+  /* limit=10 — потолок этого приложения: пробой проверено, что 20 и 50
+     отвергаются с «Invalid limit», а 10 отдаётся. Меньше кандидатов —
+     чуть меньше шансов увидеть самое раннее издание, но поиск и так
+     сортирует по релевантности, и оригинал обычно в первой десятке. */
+  const j = await spGet('/search?type=track&limit=10&q=' + encodeURIComponent(q));
   const свои = [];
   for (const tr of j.tracks?.items || []) {
     const { score, как } = уверенностьSp(tr, t.artist, t.title);
