@@ -6,6 +6,8 @@
    "разносов": 4,
    "year": 2025,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "3e3ef101-c515-4af8-87cf-246020a15305",
    "mbTitle": "Usseewa",
    "mbArtist": "Ado",
@@ -16,7 +18,8 @@
    "title": "Darken",
    "разносов": 3,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "ado|elf": {
    "artist": "Ado",
@@ -24,6 +27,8 @@
    "разносов": 3,
    "year": 2025,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "ffc53ff2-5438-4909-805a-f1fd19f0b077",
    "mbTitle": "Elf",
    "mbArtist": "Ado",
@@ -34,28 +39,32 @@
    "title": "Hungry Nicole",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "ado|basket worm": {
    "artist": "Ado",
    "title": "Basket Worm",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "yutaka yamada|das zweite kapitel": {
    "artist": "Yutaka Yamada",
    "title": "Das zweite Kapitel",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "dadaroma|oboreru sakana": {
    "artist": "DADAROMA",
    "title": "Oboreru Sakana",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "native construct|chromatic aberration": {
    "artist": "Native Construct",
@@ -63,6 +72,8 @@
    "разносов": 2,
    "year": 2015,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "d5be4608-7538-4595-925f-8712625d624d",
    "mbTitle": "Chromatic Aberration",
    "mbArtist": "Native Construct",
@@ -74,10 +85,12 @@
    "разносов": 2,
    "year": 1996,
    "score": 100,
-   "mbid": "80236ad3-9596-4174-b9e6-cd07eff3b352",
+   "как": "название",
+   "v": 2,
+   "mbid": "bc780f33-fe52-453a-bc21-95da77039f4c",
    "mbTitle": "Breathe",
    "mbArtist": "The Prodigy",
-   "записей": 24
+   "записей": 23
   },
   "noisestorm|crab rave": {
    "artist": "Noisestorm",
@@ -85,6 +98,8 @@
    "разносов": 2,
    "year": 2018,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "3b16ff8b-00b2-4472-9968-8a9f6b28b4cc",
    "mbTitle": "Crab Rave",
    "mbArtist": "Noisestorm",
@@ -95,7 +110,8 @@
    "title": "-ERROR",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "uverworld|odd future": {
    "artist": "UVERworld",
@@ -103,6 +119,8 @@
    "разносов": 2,
    "year": 2018,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "9c93a9d4-6ebd-476a-85de-8edc2d0584e5",
    "mbTitle": "ODD FUTURE",
    "mbArtist": "UVERworld",
@@ -114,6 +132,8 @@
    "разносов": 2,
    "year": 2003,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "464c0040-d8c7-4855-9b3d-9102dd477675",
    "mbTitle": "The Only",
    "mbArtist": "Static‐X",
@@ -124,7 +144,8 @@
    "title": "Dramaturgy",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "stromae|alors on danse": {
    "artist": "Stromae",
@@ -132,6 +153,8 @@
    "разносов": 2,
    "year": 2009,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "0a6c5cce-044d-45ab-898d-b8a2c13f69f7",
    "mbTitle": "Alors on danse",
    "mbArtist": "Stromae",
@@ -143,6 +166,8 @@
    "разносов": 2,
    "year": 2025,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "63ab938b-8c92-46b8-9db9-ef4ddcb0ad32",
    "mbTitle": "Headbutt",
    "mbArtist": "Igorrr",
@@ -154,6 +179,8 @@
    "разносов": 2,
    "year": 2010,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "78063cc4-abef-4994-9513-8b5d0208aa6c",
    "mbTitle": "Тёмный учитель",
    "mbArtist": "Король и Шут",
@@ -165,6 +192,8 @@
    "разносов": 2,
    "year": 2025,
    "score": 92,
+   "как": "хвост",
+   "v": 2,
    "mbid": "1e81075f-27a1-45b6-98c3-78e0dd77576f",
    "mbTitle": "Sakura Biyori and Time Machine with Hatsune Miku",
    "mbArtist": "Ado, Hatsune Miku",
@@ -175,28 +204,37 @@
    "title": "Recollect",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "ado|crime and punishment": {
    "artist": "Ado",
    "title": "Crime And Punishment",
    "разносов": 2,
-   "year": null,
-   "score": 0
+   "year": 2022,
+   "score": 91,
+   "как": "псевдоним",
+   "v": 2,
+   "mbid": "c3a16298-3a9a-48e6-8f0f-4dfd03873e36",
+   "mbTitle": "”罪と罰 / Crime & Punishment\" 歌いました",
+   "mbArtist": "Ado",
+   "записей": 1
   },
   "hoyo-mix & aurora|nod-krai": {
    "artist": "HOYO-MiX & AURORA",
    "title": "Nod-Krai",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "go sakabe|rhapsody": {
    "artist": "Go Sakabe",
    "title": "Rhapsody",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "john williams|cantina band": {
    "artist": "John Williams",
@@ -204,6 +242,8 @@
    "разносов": 2,
    "year": 1977,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "8c79be75-1e72-41bc-a670-7ed974a2df34",
    "mbTitle": "Cantina Band",
    "mbArtist": "London Symphony Orchestra, John Williams",
@@ -214,21 +254,24 @@
    "title": "Дорога во мрак",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "ado|aiaia": {
    "artist": "Ado",
    "title": "AiAiA",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "ado|vivarium": {
    "artist": "Ado",
    "title": "Vivarium",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "yasunori mitsuda|corridors of time": {
    "artist": "Yasunori Mitsuda",
@@ -236,6 +279,8 @@
    "разносов": 2,
    "year": 2017,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "315eeac5-0893-4959-9836-3d2b8b147ee0",
    "mbTitle": "Corridors of Time",
    "mbArtist": "Yasunori Mitsuda",
@@ -246,7 +291,8 @@
    "title": "IRIS OUT",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "slaughter to prevail|behelit": {
    "artist": "Slaughter to Prevail",
@@ -254,6 +300,8 @@
    "разносов": 2,
    "year": 2024,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "6654d2ee-cb7a-4488-9a11-62a01465866e",
    "mbTitle": "Behelit",
    "mbArtist": "Slaughter to Prevail",
@@ -264,7 +312,8 @@
    "title": "Black Catcher",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "arnaud roy feat. jean-noël godard|saiadha's song": {
    "artist": "Arnaud Roy feat. Jean-Noël Godard",
@@ -272,6 +321,8 @@
    "разносов": 2,
    "year": 2025,
    "score": 92,
+   "как": "название",
+   "v": 2,
    "mbid": "f94a6492-a70d-4348-90a2-cd0cc4bb0059",
    "mbTitle": "Saiadha’s Song",
    "mbArtist": "Arnaud Roy",
@@ -283,6 +334,8 @@
    "разносов": 2,
    "year": 2025,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "b0391b89-6fa2-47b1-9750-675a23be9c80",
    "mbTitle": "The Starfall",
    "mbArtist": "Arnaud Roy",
@@ -293,7 +346,8 @@
    "title": "Blood and Guts",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "игорь корнелюк|город, которого нет": {
    "artist": "Игорь Корнелюк",
@@ -301,6 +355,8 @@
    "разносов": 2,
    "year": 2001,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "2e5c1946-278d-42e4-b2fd-d48b6c3d5196",
    "mbTitle": "Город, которого нет",
    "mbArtist": "Игорь Корнелюк",
@@ -311,14 +367,16 @@
    "title": "SURVIVOR",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "keiichi okabe|the final song ~ black song white scales": {
    "artist": "Keiichi Okabe",
    "title": "The Final Song ~ Black Song White Scales",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "the chemical brothers feat. q-tip|galvanize": {
    "artist": "The Chemical Brothers feat. Q-Tip",
@@ -326,6 +384,8 @@
    "разносов": 2,
    "year": 2004,
    "score": 92,
+   "как": "название",
+   "v": 2,
    "mbid": "bac8e50d-d899-4518-9268-b2a8b384eb92",
    "mbTitle": "Galvanize",
    "mbArtist": "The Chemical Brothers",
@@ -337,6 +397,8 @@
    "разносов": 2,
    "year": 2010,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "117fc6a8-ab52-43ed-9865-3c3e1c7aca77",
    "mbTitle": "Dancing Mad",
    "mbArtist": "Nobuo Uematsu",
@@ -347,14 +409,16 @@
    "title": "Погоня",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "tommy heavenly6|papermoon": {
    "artist": "Tommy heavenly6",
    "title": "Papermoon",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "toby fox|big shot": {
    "artist": "Toby Fox",
@@ -362,10 +426,12 @@
    "разносов": 2,
    "year": 2021,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "6b1ae96d-1ee1-433e-bafd-74e6cf1c4484",
    "mbTitle": "BIG SHOT",
    "mbArtist": "Toby Fox",
-   "записей": 3
+   "записей": 4
   },
   "9lana|balalaika": {
    "artist": "9Lana",
@@ -373,6 +439,8 @@
    "разносов": 2,
    "year": 2024,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "d8ca4ab3-05b7-445d-806b-d134c6187092",
    "mbTitle": "BALALAIKA",
    "mbArtist": "9Lana",
@@ -384,6 +452,8 @@
    "разносов": 2,
    "year": 2025,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "389be41d-f4cb-41ef-a0ca-bb5bb35076da",
    "mbTitle": "RuLe",
    "mbArtist": "Ado",
@@ -393,9 +463,11 @@
    "artist": "Umberto Tozzi",
    "title": "Ti amo",
    "разносов": 2,
-   "year": 1977,
+   "year": 1980,
    "score": 100,
-   "mbid": "dd53805d-94a2-4fa0-930b-4c4e45285af3",
+   "как": "название",
+   "v": 2,
+   "mbid": "d450d8d6-b829-41bc-bd3b-c15876d6a286",
    "mbTitle": "Ti amo",
    "mbArtist": "Umberto Tozzi",
    "записей": 24
@@ -405,18 +477,21 @@
    "title": "We Are!",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "queen|bohemian rhapsody": {
    "artist": "Queen",
    "title": "Bohemian Rhapsody",
    "разносов": 2,
-   "year": 1985,
+   "year": 1976,
    "score": 100,
-   "mbid": "5c5e6e29-a48c-4050-a0f8-898e0a92ef0b",
+   "как": "название",
+   "v": 2,
+   "mbid": "5e45ef6c-1920-4949-b8fb-2347e1b33c0d",
    "mbTitle": "Bohemian Rhapsody",
    "mbArtist": "Queen",
-   "записей": 17
+   "записей": 18
   },
   "alex moukala|amalgamaniac": {
    "artist": "Alex Moukala",
@@ -424,6 +499,8 @@
    "разносов": 2,
    "year": 2023,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "962c9648-fa34-4122-b3e5-e2b9647baf04",
    "mbTitle": "Amalgamaniac",
    "mbArtist": "Alex Moukala",
@@ -434,14 +511,16 @@
    "title": "Kimi no Taion",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "игорь назарук|криминальная россия": {
    "artist": "Игорь Назарук",
    "title": "Криминальная Россия",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "m2u|nightmare": {
    "artist": "M2U",
@@ -449,6 +528,8 @@
    "разносов": 2,
    "year": 2007,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "9735095c-859c-47fe-a4b0-6c9a8ba83f44",
    "mbTitle": "Nightmare",
    "mbArtist": "M2U",
@@ -460,7 +541,9 @@
    "разносов": 2,
    "year": 2020,
    "score": 100,
-   "mbid": "c5ee07e5-6f79-4240-bae9-1a143f3e9a39",
+   "как": "название",
+   "v": 2,
+   "mbid": "a7f43514-7b1b-4241-a2af-458cbf2e750f",
    "mbTitle": "Lisrim",
    "mbArtist": "onoken",
    "записей": 2
@@ -471,17 +554,20 @@
    "разносов": 2,
    "year": 2020,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "1b2922fb-5fbe-48be-b531-62f644cb348d",
    "mbTitle": "ANIMA",
    "mbArtist": "ReoNa",
-   "записей": 8
+   "записей": 9
   },
   "тот самый|человек-яйца": {
    "artist": "Тот Самый",
    "title": "Человек-яйца",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "barry manilow|can't smile without you": {
    "artist": "Barry Manilow",
@@ -489,6 +575,8 @@
    "разносов": 2,
    "year": 1978,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "b96f1da4-7d33-441a-b36c-806a497d1fa5",
    "mbTitle": "Can’t Smile Without You",
    "mbArtist": "Barry Manilow",
@@ -500,7 +588,9 @@
    "разносов": 2,
    "year": 2018,
    "score": 100,
-   "mbid": "55d3cdeb-07de-429b-b693-0c2ef15e17db",
+   "как": "название",
+   "v": 2,
+   "mbid": "ff3b4441-bc4f-4c0f-8ef2-34f1d32923ff",
    "mbTitle": "Beautiful World",
    "mbArtist": "XX:me",
    "записей": 4
@@ -511,6 +601,8 @@
    "разносов": 2,
    "year": 2015,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "ac2cdb9d-1882-4a12-99b1-1447daf37416",
    "mbTitle": "War of Hearts",
    "mbArtist": "Ruelle",
@@ -522,6 +614,8 @@
    "разносов": 2,
    "year": 1976,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "3b286fbf-0dc9-45b8-bf4a-5036ac72526d",
    "mbTitle": "Somebody to Love",
    "mbArtist": "Queen",
@@ -533,6 +627,8 @@
    "разносов": 2,
    "year": 2025,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "f0454b8b-1338-4f99-af47-d1e7e47609e1",
    "mbTitle": "Show",
    "mbArtist": "Ado",
@@ -544,6 +640,8 @@
    "разносов": 2,
    "year": 2025,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "e86641bc-1d83-4a31-ae0f-a2b3e56310e6",
    "mbTitle": "Aishite Aishite Aishite",
    "mbArtist": "Ado",
@@ -554,7 +652,8 @@
    "title": "Where the Wind Blows",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "ado|unravel": {
    "artist": "Ado",
@@ -562,6 +661,8 @@
    "разносов": 2,
    "year": 2023,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "bb79fcf0-056e-498c-8688-b918d57d02a1",
    "mbTitle": "unravel",
    "mbArtist": "Ado",
@@ -573,6 +674,8 @@
    "разносов": 2,
    "year": 2023,
    "score": 92,
+   "как": "название",
+   "v": 2,
    "mbid": "9bfd7f6b-6c86-4709-9c9c-9ba1dbf2ab6a",
    "mbTitle": "Da Capo",
    "mbArtist": "HOYO‐MiX",
@@ -584,6 +687,8 @@
    "разносов": 2,
    "year": 2025,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "6b3020ab-d160-41a5-9fd4-366834b8ac63",
    "mbTitle": "CASANOVA POSSE",
    "mbArtist": "ALI",
@@ -595,6 +700,8 @@
    "разносов": 2,
    "year": 2008,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "45a001b3-7c7c-41b7-97c2-39d368b8351b",
    "mbTitle": "Snuff",
    "mbArtist": "Slipknot",
@@ -605,7 +712,8 @@
    "title": "Zetsubou Billy",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "hoyo-mix feat. sa dingding|dual-ego": {
    "artist": "HOYO-MiX feat. Sa Dingding",
@@ -613,6 +721,8 @@
    "разносов": 2,
    "year": 2019,
    "score": 92,
+   "как": "название",
+   "v": 2,
    "mbid": "d6faa220-2d68-4841-9f3e-e98776150778",
    "mbTitle": "Dual-Ego",
    "mbArtist": "HOYO-MiX, 萨顶顶",
@@ -623,7 +733,8 @@
    "title": "Control's Wishes",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "modjo|lady": {
    "artist": "Modjo",
@@ -631,17 +742,20 @@
    "разносов": 2,
    "year": 2000,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "f5a8c231-62fa-4dbd-bb99-82b6cbc84934",
    "mbTitle": "Lady",
    "mbArtist": "Modjo",
-   "записей": 10
+   "записей": 20
   },
   "yasunori mitsuda|fort dragonia": {
    "artist": "Yasunori Mitsuda",
    "title": "Fort Dragonia",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "oxt|hollow hunger": {
    "artist": "OxT",
@@ -649,6 +763,8 @@
    "разносов": 2,
    "year": 2022,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "9375c705-cdc1-4ebe-8a2d-e989ee8a4721",
    "mbTitle": "HOLLOW HUNGER",
    "mbArtist": "OxT",
@@ -660,6 +776,8 @@
    "разносов": 2,
    "year": 2013,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "97721ed1-dc11-47d4-88d9-829dd0b012b7",
    "mbTitle": "True Sorry",
    "mbArtist": "Ibrahim Maalouf",
@@ -671,6 +789,8 @@
    "разносов": 2,
    "year": 2023,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "b86c2ce6-21e2-43c2-9989-d1050e94fce1",
    "mbTitle": "Watch the World Burn",
    "mbArtist": "Falling in Reverse",
@@ -681,21 +801,29 @@
    "title": "Signal",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "shinsei kamattechan|my war": {
    "artist": "Shinsei kamattechan",
    "title": "My War",
    "разносов": 2,
-   "year": null,
-   "score": 0
+   "year": 2020,
+   "score": 91,
+   "как": "псевдоним",
+   "v": 2,
+   "mbid": "113e2d24-6f53-438c-8774-052644ca6413",
+   "mbTitle": "My War (僕の戦争)",
+   "mbArtist": "Shinsei Kamattechan",
+   "записей": 1
   },
   "tk from ling tosite sigure|first death": {
    "artist": "TK from Ling tosite sigure",
    "title": "first death",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "65daysofstatic|radio protector": {
    "artist": "65daysofstatic",
@@ -703,6 +831,8 @@
    "разносов": 2,
    "year": 2001,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "9ef7d362-b99d-4508-887d-252fb85be448",
    "mbTitle": "Radio Protector",
    "mbArtist": "65daysofstatic",
@@ -714,7 +844,9 @@
    "разносов": 2,
    "year": 2023,
    "score": 100,
-   "mbid": "8d032874-9c7c-44f9-9abf-70c34bbdfcf5",
+   "как": "название",
+   "v": 2,
+   "mbid": "d1f278cc-9adf-4a60-9a8f-5bc3fe1c917a",
    "mbTitle": "SPECIALZ",
    "mbArtist": "King Gnu",
    "записей": 5
@@ -724,14 +856,16 @@
    "title": "Continued Story",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "six lounge|without any words": {
    "artist": "SIX LOUNGE",
    "title": "Without any words",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "yui|again": {
    "artist": "YUI",
@@ -739,17 +873,20 @@
    "разносов": 2,
    "year": 2009,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "96eb3014-3dfe-43dc-8adb-1b72450fffa3",
    "mbTitle": "again",
    "mbArtist": "YUI",
-   "записей": 6
+   "записей": 8
   },
   "unison square garden|chaos ga kiwamaru": {
    "artist": "UNISON SQUARE GARDEN",
    "title": "Chaos ga Kiwamaru",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "ado|backlight": {
    "artist": "Ado",
@@ -757,6 +894,8 @@
    "разносов": 2,
    "year": 2025,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "3c9aa87a-2a38-4e11-8a85-3f2c9e6472d7",
    "mbTitle": "Backlight",
    "mbArtist": "Ado",
@@ -767,7 +906,8 @@
    "title": "Uta",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "creepy nuts|bling-bang-bang-born": {
    "artist": "Creepy Nuts",
@@ -775,6 +915,8 @@
    "разносов": 2,
    "year": 2024,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "6f92c637-dec2-4899-b0bc-aea55255dfb2",
    "mbTitle": "Bling‐Bang‐Bang‐Born",
    "mbArtist": "Creepy Nuts",
@@ -785,7 +927,8 @@
    "title": "Libera Me From Hell",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "piotr musiał|the city must survive": {
    "artist": "Piotr Musiał",
@@ -793,6 +936,8 @@
    "разносов": 2,
    "year": 2018,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "d5cbae4e-9bf4-494f-91ba-51cd8392356a",
    "mbTitle": "The City Must Survive",
    "mbArtist": "Piotr Musiał",
@@ -803,7 +948,8 @@
    "title": "Sword of Destiny",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "london grammar|non believer": {
    "artist": "London Grammar",
@@ -811,6 +957,8 @@
    "разносов": 2,
    "year": 2017,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "876fe76d-6bd5-43e3-bc9f-84c6ad67962c",
    "mbTitle": "Non Believer",
    "mbArtist": "London Grammar",
@@ -821,35 +969,45 @@
    "title": "Clavar La Espada",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "minami|kawaki wo ameku": {
    "artist": "Minami",
    "title": "Kawaki wo Ameku",
    "разносов": 2,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "masayoshi soken|heavensward": {
    "artist": "Masayoshi Soken",
    "title": "Heavensward",
    "разносов": 1,
-   "year": null,
-   "score": 0
+   "year": 2019,
+   "score": 91,
+   "как": "псевдоним",
+   "v": 2,
+   "mbid": "9a30ef2f-9422-49b1-8059-d3bea1cca795",
+   "mbTitle": "FINAL FANTASY XIV: Heros (from Heavensward)",
+   "mbArtist": "Masayoshi Soken",
+   "записей": 1
   },
   "mitchie m feat. hatsune miku, kagamine rin & kaito|ring no seraph": {
    "artist": "Mitchie M feat. Hatsune Miku, Kagamine Rin & KAITO",
    "title": "Ring no Seraph",
    "разносов": 1,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "mori calliope & elizabeth rose bloodflame|libera me from hell": {
    "artist": "Mori Calliope & Elizabeth Rose Bloodflame",
    "title": "Libera Me From Hell",
    "разносов": 1,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "kalafina|eden": {
    "artist": "Kalafina",
@@ -857,17 +1015,20 @@
    "разносов": 1,
    "year": 2011,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "102ea1c5-0910-48ac-9d2a-3705e1cf091b",
    "mbTitle": "Eden",
    "mbArtist": "Kalafina",
-   "записей": 1
+   "записей": 2
   },
   "/kerbal, blanked & mehdead|ex mashup": {
    "artist": "/kerbal, BLANKED & MehDead",
    "title": "Ex Mashup",
    "разносов": 1,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "tofubeats & tadashi machida|theme for two": {
    "artist": "tofubeats & Tadashi Machida",
@@ -875,6 +1036,8 @@
    "разносов": 1,
    "year": 2026,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "c315ee17-51aa-4749-814f-ff0fb9d2692f",
    "mbTitle": "Theme For Two",
    "mbArtist": "tofubeats, Tadashi Machida",
@@ -885,7 +1048,8 @@
    "title": "Days -Aijou to Nichijou-",
    "разносов": 1,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "ghost|square hammer": {
    "artist": "Ghost",
@@ -893,6 +1057,8 @@
    "разносов": 1,
    "year": 2016,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "dc8ecac2-32d1-4390-93dc-11ede6117b36",
    "mbTitle": "Square Hammer",
    "mbArtist": "Ghost",
@@ -903,21 +1069,24 @@
    "title": "Mahoutsukai no Nikki",
    "разносов": 1,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "floating points, pharoah sanders & london symphony orchestra|movement 6": {
    "artist": "Floating Points, Pharoah Sanders & London Symphony Orchestra",
    "title": "Movement 6",
    "разносов": 1,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "lost to the void feat. julian zidarevich|?": {
    "artist": "Lost to the Void feat. Julian Zidarevich",
    "title": "?",
    "разносов": 1,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "michael sembello|maniac": {
    "artist": "Michael Sembello",
@@ -925,10 +1094,12 @@
    "разносов": 1,
    "year": 1983,
    "score": 100,
-   "mbid": "e9adfd77-75fa-4696-a9f7-3c785e448005",
+   "как": "название",
+   "v": 2,
+   "mbid": "b50e06c7-e360-444e-968c-2e7f7d18be48",
    "mbTitle": "Maniac",
    "mbArtist": "Michael Sembello",
-   "записей": 25
+   "записей": 24
   },
   "a lot like birds|no nurture": {
    "artist": "A Lot Like Birds",
@@ -936,6 +1107,8 @@
    "разносов": 1,
    "year": 2013,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "a3f03bb0-ccb1-40d9-b703-d47d29f19086",
    "mbTitle": "No Nurture",
    "mbArtist": "A Lot Like Birds",
@@ -947,6 +1120,8 @@
    "разносов": 1,
    "year": 2007,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "8bb385f2-de4e-449b-a5ce-73cafc2ed8a4",
    "mbTitle": "Сентябрь",
    "mbArtist": "Stigmata",
@@ -958,6 +1133,8 @@
    "разносов": 1,
    "year": 2021,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "d656963b-4d31-4b1a-abfa-acf456b20812",
    "mbTitle": "SONG SIX",
    "mbArtist": "Deathpact",
@@ -969,9 +1146,11 @@
    "разносов": 1,
    "year": 2010,
    "score": 100,
-   "mbid": "c7ad3271-cba3-449a-8ce2-964d2bf0ceb2",
+   "как": "название",
+   "v": 2,
+   "mbid": "f0f1aaa1-44f4-47df-995a-2dd26fa9d6b8",
    "mbTitle": "Run Away",
-   "mbArtist": "SunStroke Project, Olia Tira",
+   "mbArtist": "Sunstroke Project, Olia Tira",
    "записей": 4
   },
   "scatman john|time": {
@@ -980,10 +1159,12 @@
    "разносов": 1,
    "year": 1995,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "b6a1f3f1-7be8-42ee-ba53-b4117055d3aa",
    "mbTitle": "Time",
    "mbArtist": "Scatman John",
-   "записей": 1
+   "записей": 4
   },
   "after dinner|ka-no-pu-su-no-ha-ko": {
    "artist": "After Dinner",
@@ -991,6 +1172,8 @@
    "разносов": 1,
    "year": 1989,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "a453b88f-71dd-45cf-bd91-f26e10eefbd0",
    "mbTitle": "KA‐NO‐PU‐SU‐NO‐HA‐KO",
    "mbArtist": "After Dinner",
@@ -1001,7 +1184,8 @@
    "title": "Три желания",
    "разносов": 1,
    "year": null,
-   "score": 0
+   "score": 0,
+   "v": 2
   },
   "taylor swift|all too well": {
    "artist": "Taylor Swift",
@@ -1009,6 +1193,8 @@
    "разносов": 1,
    "year": 2012,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "7fad175c-f7dd-4b1a-b338-d60bff61afce",
    "mbTitle": "All Too Well",
    "mbArtist": "Taylor Swift",
@@ -1020,6 +1206,8 @@
    "разносов": 1,
    "year": 1990,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "df201a64-3b52-4221-a380-b8db8f48f2cd",
    "mbTitle": "Sacrificial Suicide",
    "mbArtist": "Deicide",
@@ -1031,6 +1219,8 @@
    "разносов": 1,
    "year": 1999,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "a86cdc9d-e203-4277-8e9b-b22f3bad1004",
    "mbTitle": "Mope",
    "mbArtist": "Bloodhound Gang",
@@ -1042,13 +1232,421 @@
    "разносов": 1,
    "year": 2008,
    "score": 100,
+   "как": "название",
+   "v": 2,
    "mbid": "41b8d54c-1b65-4c05-aaa8-a43b90844d36",
    "mbTitle": "Коралловые небеса",
    "mbArtist": "Flëur",
    "записей": 1
+  },
+  "tallah|a primeval detachment": {
+   "artist": "Tallah",
+   "title": "A Primeval Detachment",
+   "разносов": 1,
+   "year": 2025,
+   "score": 100,
+   "как": "название",
+   "v": 2,
+   "mbid": "e08573f9-e40e-405f-95bc-35a1e1331611",
+   "mbTitle": "A primeval detachment",
+   "mbArtist": "Tallah",
+   "записей": 1
+  },
+  "кубанский казачий хор|узенький проулочек": {
+   "artist": "Кубанский Казачий хор",
+   "title": "Узенький проулочек",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 2
+  },
+  "всего лишь 2 парня feat. кристина корвин|чика на припеве": {
+   "artist": "Всего Лишь 2 Парня feat. Кристина Корвин",
+   "title": "ЧИКА НА ПРИПЕВЕ",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 2
+  },
+  "myth & roid|awake anew": {
+   "artist": "MYTH & ROID",
+   "title": "Awake Anew",
+   "разносов": 1,
+   "year": 2026,
+   "score": 100,
+   "как": "название",
+   "v": 2,
+   "mbid": "757ae83d-a060-47ab-bab2-0f8bf65e055f",
+   "mbTitle": "Awake Anew",
+   "mbArtist": "MYTH & ROID",
+   "записей": 1
+  },
+  "mori calliope|dead on arrival": {
+   "artist": "Mori Calliope",
+   "title": "Dead On Arrival",
+   "разносов": 1,
+   "year": 2022,
+   "score": 100,
+   "как": "название",
+   "v": 2,
+   "mbid": "c1f2bbe6-9c23-434c-965a-b64799224c8b",
+   "mbTitle": "Dead on Arrival",
+   "mbArtist": "Mori Calliope",
+   "записей": 1
+  },
+  "blanka|solo": {
+   "artist": "Blanka",
+   "title": "Solo",
+   "разносов": 1,
+   "year": 2022,
+   "score": 100,
+   "как": "название",
+   "v": 2,
+   "mbid": "c9036b7b-6f71-4359-ab91-cb0f3ea0d88c",
+   "mbTitle": "Solo",
+   "mbArtist": "Blanka",
+   "записей": 4
+  },
+  "minami|rude lose dance": {
+   "artist": "Minami",
+   "title": "Rude Lose Dance",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 2
+  },
+  "yasunori mitsuda|mount pyre": {
+   "artist": "Yasunori Mitsuda",
+   "title": "Mount Pyre",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 2
+  },
+  "wada koji|fire!!": {
+   "artist": "Wada Koji",
+   "title": "FIRE!!",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 2
+  },
+  "fäaschtbänkler|das letzte alphorn": {
+   "artist": "Fäaschtbänkler",
+   "title": "Das letzte Alphorn",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 2
+  },
+  "арктида|твой последний танец": {
+   "artist": "АрктидА",
+   "title": "Твой последний танец",
+   "разносов": 1,
+   "year": 2020,
+   "score": 100,
+   "как": "название",
+   "v": 2,
+   "mbid": "222deb83-0d82-43ce-b1aa-253b4793d83c",
+   "mbTitle": "Твой последний танец",
+   "mbArtist": "Арктида",
+   "записей": 2
+  },
+  "shankar mahadevan|shiv tandav stotram": {
+   "artist": "Shankar Mahadevan",
+   "title": "Shiv Tandav Stotram",
+   "разносов": 1,
+   "year": 2016,
+   "score": 100,
+   "как": "название",
+   "v": 2,
+   "mbid": "a326338d-5e76-4a40-88f3-3ef25f388e86",
+   "mbTitle": "Shiv Tandav Stotram",
+   "mbArtist": "Shankar Mahadevan",
+   "записей": 1
+  },
+  "yurina hirate|kill or kiss": {
+   "artist": "Yurina Hirate",
+   "title": "Kill or Kiss",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 2
+  },
+  "aim|my tomorrow": {
+   "artist": "AiM",
+   "title": "My Tomorrow",
+   "разносов": 1,
+   "year": 2001,
+   "score": 100,
+   "как": "название",
+   "v": 2,
+   "mbid": "2ea5cbf9-eb26-44da-8a22-b1ef8edb9415",
+   "mbTitle": "My Tomorrow",
+   "mbArtist": "AiM",
+   "записей": 3
+  },
+  "span|peaceful": {
+   "artist": "Span",
+   "title": "Peaceful",
+   "разносов": 1,
+   "year": 2004,
+   "score": 100,
+   "как": "название",
+   "v": 2,
+   "mbid": "fc018dab-b221-48c7-be4e-ea86c17667a4",
+   "mbTitle": "Peaceful",
+   "mbArtist": "Span",
+   "записей": 3
+  },
+  "егор крид|забудь меня": {
+   "artist": "Егор Крид",
+   "title": "Забудь меня",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 2
+  },
+  "christina milian|call me, beep me!": {
+   "artist": "Christina Milian",
+   "title": "Call Me, Beep Me!",
+   "разносов": 1,
+   "year": 2002,
+   "score": 100,
+   "как": "название",
+   "v": 2,
+   "mbid": "b408c71f-7d71-4799-8922-b3e1653f3534",
+   "mbTitle": "Call Me, Beep Me",
+   "mbArtist": "Christina Milian",
+   "записей": 3
+  },
+  "cobie smulders|let's go to the mall": {
+   "artist": "Cobie Smulders",
+   "title": "Let's Go to the Mall",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 2
+  },
+  "the moody blues|evening": {
+   "artist": "The Moody Blues",
+   "title": "Evening",
+   "разносов": 1,
+   "year": 2007,
+   "score": 100,
+   "как": "псевдоним",
+   "v": 2,
+   "mbid": "6940f253-839a-4418-b15e-0b5865c882b9",
+   "mbTitle": "Twilight Time (Evening)",
+   "mbArtist": "The Moody Blues",
+   "записей": 4
+  },
+  "teddyloid feat. debra zeer|d city rock": {
+   "artist": "TeddyLoid feat. Debra Zeer",
+   "title": "D City Rock",
+   "разносов": 1,
+   "year": 2010,
+   "score": 100,
+   "как": "название",
+   "v": 2,
+   "mbid": "315d7eb7-4406-4995-9ff7-c4b03486967f",
+   "mbTitle": "D City Rock",
+   "mbArtist": "TeddyLoid, Debra Zeer",
+   "записей": 2
+  },
+  "mega shinnosuke|unmei no kimi": {
+   "artist": "Mega Shinnosuke",
+   "title": "Unmei no Kimi",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 2
+  },
+  "azalea|galaxy hide and seek": {
+   "artist": "AZALEA",
+   "title": "GALAXY HidE and SeeK",
+   "разносов": 1,
+   "year": 2017,
+   "score": 100,
+   "как": "название",
+   "v": 2,
+   "mbid": "2fb19cc4-0dc8-4198-a039-d889f30e7ab5",
+   "mbTitle": "GALAXY HidE and SeeK",
+   "mbArtist": "AZALEA",
+   "записей": 5
+  },
+  "the brilliant green|spring gate": {
+   "artist": "The Brilliant Green",
+   "title": "Spring Gate",
+   "разносов": 1,
+   "year": 2010,
+   "score": 100,
+   "как": "название",
+   "v": 2,
+   "mbid": "3df0dde5-794f-416f-a9f4-21c52985fce8",
+   "mbTitle": "Spring Gate",
+   "mbArtist": "the brilliant green",
+   "записей": 2
+  },
+  "takanori arisawa|moon prism power make up!": {
+   "artist": "Takanori Arisawa",
+   "title": "Moon Prism Power Make Up!",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 2
+  },
+  "finishing move inc.|through the crimson tundra": {
+   "artist": "Finishing Move Inc.",
+   "title": "Through The Crimson Tundra",
+   "разносов": 1,
+   "year": 2026,
+   "score": 100,
+   "как": "название",
+   "v": 2,
+   "mbid": "613a9b4a-f9d5-42e5-8ff9-58812e5dd14d",
+   "mbTitle": "Through the Crimson Tundra",
+   "mbArtist": "Finishing Move Inc.",
+   "записей": 1
+  },
+  "vivanz eden|grape": {
+   "artist": "Vivanz Eden",
+   "title": "Grape",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 2
+  },
+  "unreflected delusions|разверзаю тьму": {
+   "artist": "Unreflected Delusions",
+   "title": "Разверзаю тьму",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 2
+  },
+  "eluveitie|a rose for epona": {
+   "artist": "Eluveitie",
+   "title": "A Rose for Epona",
+   "разносов": 1,
+   "year": 2011,
+   "score": 100,
+   "как": "название",
+   "v": 2,
+   "mbid": "66ddf8f7-9dea-4d56-95b2-8af288d60987",
+   "mbTitle": "A Rose for Epona",
+   "mbArtist": "Eluveitie",
+   "записей": 5
+  },
+  "myth & roid|cracked black": {
+   "artist": "MYTH & ROID",
+   "title": "Cracked Black",
+   "разносов": 1,
+   "year": 2020,
+   "score": 100,
+   "как": "название",
+   "v": 2,
+   "mbid": "8349721a-1d43-4bac-8bca-ca29a560cd5a",
+   "mbTitle": "Cracked Black",
+   "mbArtist": "MYTH & ROID",
+   "записей": 2
+  },
+  "jinja|lilith": {
+   "artist": "Jinja",
+   "title": "LILITH",
+   "разносов": 1,
+   "year": 2025,
+   "score": 100,
+   "как": "название",
+   "v": 2,
+   "mbid": "2f4ab577-cced-4ed5-ae9a-c15da6daa43a",
+   "mbTitle": "LILITH",
+   "mbArtist": "Jinja",
+   "записей": 1
+  },
+  "al bano & romina power|felicità": {
+   "artist": "Al Bano & Romina Power",
+   "title": "Felicità",
+   "разносов": 1,
+   "year": 1982,
+   "score": 100,
+   "как": "название",
+   "v": 2,
+   "mbid": "82d1513f-12a4-4d1d-929b-167c22cfd7f4",
+   "mbTitle": "Felicità",
+   "mbArtist": "Al Bano & Romina Power",
+   "записей": 21
+  },
+  "lonown & asenssia|addiction": {
+   "artist": "LONOWN & Asenssia",
+   "title": "addiction",
+   "разносов": 1,
+   "year": 2026,
+   "score": 100,
+   "как": "название",
+   "v": 2,
+   "mbid": "b0f28bfe-e227-4715-8ddf-08b58b909868",
+   "mbTitle": "addiction",
+   "mbArtist": "LONOWN, Asenssia",
+   "записей": 2
+  },
+  "mayu maeshima|foreshadow": {
+   "artist": "Mayu Maeshima",
+   "title": "Foreshadow",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 2
+  },
+  "aiobahn +81 feat. sally amaki|internet angel": {
+   "artist": "Aiobahn +81 feat. Sally Amaki",
+   "title": "INTERNET ANGEL",
+   "разносов": 1,
+   "year": 2022,
+   "score": 92,
+   "как": "название",
+   "v": 2,
+   "mbid": "66e1d0d4-46d6-4ae7-8b56-dc4884e8aada",
+   "mbTitle": "INTERNET ANGEL",
+   "mbArtist": "NEEDY GIRL OVERDOSE, Aiobahn +81",
+   "записей": 2
+  },
+  "toshiko fujita|yuuki wo tsubasa ni shite": {
+   "artist": "Toshiko Fujita",
+   "title": "Yuuki wo Tsubasa ni Shite",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 2
+  },
+  "flëur|мост над туманным заливом": {
+   "artist": "Flëur",
+   "title": "Мост над туманным заливом",
+   "разносов": 1,
+   "year": 2004,
+   "score": 100,
+   "как": "название",
+   "v": 2,
+   "mbid": "ffbaedc9-3ef2-494f-a60a-2961450c8a2a",
+   "mbTitle": "Мост над туманным заливом",
+   "mbArtist": "Flëur",
+   "записей": 1
+  },
+  "bt|all that makes us human continues": {
+   "artist": "BT",
+   "title": "All That Makes Us Human Continues",
+   "разносов": 1,
+   "year": 2006,
+   "score": 100,
+   "как": "название",
+   "v": 2,
+   "mbid": "7e665654-eeeb-4d22-9c78-577d95198099",
+   "mbTitle": "All That Makes Us Human Continues",
+   "mbArtist": "BT",
+   "записей": 3
   }
  },
  "source": "MusicBrainz",
  "note": "year — самый ранний выпуск записи; score — наша уверенность в совпадении, 0–100",
- "generated": "2026-09-13T13:40:50.640Z"
+ "generated": "2026-09-13T13:58:20.481Z"
 }
