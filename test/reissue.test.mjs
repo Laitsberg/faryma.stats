@@ -147,7 +147,15 @@ const ПОИСК = {
   }]
 };
 
-test('переиздание по ссылке сверяется поиском, обычный альбом — нет', async () => {
+/* Строка таблицы: «Что» и ссылка в «Где», оценка — чтобы разнос
+   вообще посчитали. Остальные столбцы сбору не нужны. */
+const строка = (n, что, sid) =>
+  `${n}) ${что},https://open.spotify.com/track/${sid},,,,,атлична,,,,`;
+const ШАПКА = 'Что,Где,Когда,Кто,Тип,Столбец 6,Оценка,Откуда,Тэги,Жанр,Фича';
+
+/* Поднять подставной Spotify, прогнать сбор, вернуть что получилось.
+   Кэш можно подложить заранее — так проверяется пересверка. */
+async function прогнать({ строки, флаги = [], кэш = null }) {
   const поиски = [];
   const srv = http.createServer((req, res) => {
     const u = new URL(req.url, 'http://localhost');
@@ -172,15 +180,12 @@ test('переиздание по ссылке сверяется поиском
 
   const дом = fs.mkdtempSync(path.join(os.tmpdir(), 'years-'));
   const csv = path.join(дом, 'a.csv'), вых = path.join(дом, 'years.json');
-  fs.writeFileSync(csv,
-    'Что,Где,Когда,Кто,Тип,Столбец 6,Оценка,Откуда,Тэги,Жанр,Фича\n' +
-    '1) Led Zeppelin — No Quarter,https://open.spotify.com/track/remaster,,,,,атлична,,,,\n' +
-    '2) Никто — Nothing Findable,https://open.spotify.com/track/concert,,,,,атлична,,,,\n' +
-    '3) Ado — Usseewa,https://open.spotify.com/track/plain,,,,,атлична,,,,\n');
+  fs.writeFileSync(csv, ШАПКА + '\n' + строки.join('\n') + '\n');
+  if (кэш) fs.writeFileSync(вых, JSON.stringify({ tracks: кэш }));
 
   /* spawn, а не execFile: с execFile дочерний процесс ждёт ответа от
      сервера, который живёт в этом же процессе, и оба стоят насмерть. */
-  const ch = spawn('node', ['scripts/years.mjs', '--csv', csv, '--out', вых], {
+  const ch = spawn('node', ['scripts/years.mjs', '--csv', csv, '--out', вых, ...флаги], {
     cwd: ROOT, stdio: 'ignore',
     env: { ...process.env, SPOTIFY_CLIENT_ID: 'x', SPOTIFY_CLIENT_SECRET: 'y',
            SP_API: `http://127.0.0.1:${порт}/v1`,
@@ -188,10 +193,18 @@ test('переиздание по ссылке сверяется поиском
   });
   const код = await new Promise(r => ch.on('exit', r));
   srv.close();
-  assert.equal(код, 0, 'сбор должен завершиться без ошибки');
-
-  const t = JSON.parse(fs.readFileSync(вых, 'utf8')).tracks;
+  const tracks = JSON.parse(fs.readFileSync(вых, 'utf8')).tracks;
   fs.rmSync(дом, { recursive: true, force: true });
+  return { код, tracks, поиски };
+}
+
+test('переиздание по ссылке сверяется поиском, обычный альбом — нет', async () => {
+  const { код, tracks: t, поиски } = await прогнать({ строки: [
+    строка(1, 'Led Zeppelin — No Quarter', 'remaster'),
+    строка(2, 'Никто — Nothing Findable', 'concert'),
+    строка(3, 'Ado — Usseewa', 'plain')
+  ] });
+  assert.equal(код, 0, 'сбор должен завершиться без ошибки');
 
   const зеп = t['led zeppelin|no quarter'];
   assert.equal(зеп.year, 1973, 'год берётся у оригинала, а не у ремастера');
@@ -211,4 +224,45 @@ test('переиздание по ссылке сверяется поиском
   assert.equal(ado.переиздание, undefined, 'обычный альбом переизданием не считается');
 
   assert.equal(поиски.length, 2, 'поиском сверяли только два переиздания из трёх треков');
+});
+
+/* Пересверка. Флаг --recheck-reissues должен взять ровно переиздания
+   из кэша — и никого больше. Сперва он работал «вдобавок к обычной
+   докачке», и на настоящем архиве оказался бесполезен: незнакомых
+   песен пять тысяч, они забрали весь лимит Spotify, а до переизданий
+   дело не дошло вовсе. */
+test('пересверка берёт только переиздания и не трогает остальных', async () => {
+  const кэш = {
+    'led zeppelin|no quarter': {
+      artist: 'Led Zeppelin', title: 'No Quarter', разносов: 1,
+      year: 2007, score: 100, как: 'ссылка', v: 6,
+      spTitle: 'No Quarter - Remaster', spAlbum: 'Mothership (Remastered)',
+      обложка: 'http://старая/картинка.jpg'
+    },
+    'ado|usseewa': {
+      artist: 'Ado', title: 'Usseewa', разносов: 1,
+      year: 2020, score: 100, как: 'ссылка', v: 6,
+      spTitle: 'Usseewa', spAlbum: 'Kyogen'
+    }
+  };
+  const { код, tracks: t, поиски } = await прогнать({
+    флаги: ['--recheck-reissues'],
+    кэш,
+    строки: [
+      строка(1, 'Led Zeppelin — No Quarter', 'remaster'),
+      строка(2, 'Ado — Usseewa', 'plain'),
+      // Этой песни в кэше нет вовсе. Целевой проход её брать не должен.
+      строка(3, 'Никто — Nothing Findable', 'concert')
+    ]
+  });
+  assert.equal(код, 0);
+
+  assert.equal(t['led zeppelin|no quarter'].year, 1973, 'ремастер пересверен');
+  assert.equal(t['led zeppelin|no quarter'].v, 7);
+  // Обычный трек остался как был, его версию не трогали.
+  assert.equal(t['ado|usseewa'].v, 6);
+  assert.equal(t['ado|usseewa'].year, 2020);
+  assert.equal(t['никто|nothing findable'], undefined,
+    'незнакомую песню целевой проход не докачивает');
+  assert.equal(поиски.length, 1, 'спросили ровно одно переиздание');
 });
