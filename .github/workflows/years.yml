@@ -52,7 +52,7 @@ on:
         type: boolean
         required: false
         default: false
-      сверять:
+      crosscheck:
         description: 'Сверять год по ссылке ещё и поиском (вдвое больше запросов)'
         type: boolean
         required: false
@@ -93,7 +93,7 @@ jobs:
           IN_RECHECK: ${{ github.event.inputs.recheck }}
           IN_SOURCE: ${{ github.event.inputs.source }}
           IN_PROBE: ${{ github.event.inputs.probe }}
-          IN_СВЕРЯТЬ: ${{ github.event.inputs.сверять }}
+          IN_CROSSCHECK: ${{ github.event.inputs.crosscheck }}
           SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
         run: |
@@ -101,7 +101,7 @@ jobs:
           if [ "$IN_RETRY" = "true" ]; then EXTRA="--retry-missing"; fi
           if [ "$IN_RECHECK" = "true" ]; then EXTRA="$EXTRA --recheck"; fi
           if [ "$IN_PROBE" = "true" ]; then EXTRA="$EXTRA --probe"; fi
-          if [ "$IN_СВЕРЯТЬ" = "true" ]; then EXTRA="$EXTRA --сверять"; fi
+          if [ "$IN_CROSSCHECK" = "true" ]; then EXTRA="$EXTRA --crosscheck"; fi
           # --max-minutes держит прогон в рамках job'а: скрипт
           # останавливается сам, и накопленное успевает закоммититься.
           node scripts/years.mjs --source "${IN_SOURCE:-spotify}" \

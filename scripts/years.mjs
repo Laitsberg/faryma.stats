@@ -14,6 +14,7 @@
      node scripts/years.mjs                  докачать новых
      node scripts/years.mjs --limit 50       только 50 штук
      node scripts/years.mjs --retry-missing  переспросить ненайденных
+     node scripts/years.mjs --crosscheck     сверять ссылку ещё и поиском
      node scripts/years.mjs --recheck        переспросить после починки
                                              правил совпадения
      node scripts/years.mjs --min-tracks 2   пропустить одноразовых
@@ -50,7 +51,7 @@ const PROBE = hasFlag('--probe');
    2012 → 1997), но удваивает число запросов, а лимит Spotify мы уже
    один раз выбрали досуха. На первичный обход — выключено, потом
    отдельным проходом. */
-const СВЕРЯТЬ = hasFlag('--сверять');
+const СВЕРЯТЬ = hasFlag('--crosscheck');
 /* Ограничение по времени: скрипт должен остановиться сам, чтобы
    воркфлоу успел закоммитить накопленное, а не был убит по таймауту. */
 const MAX_MS = +argVal('--max-minutes', Infinity) * 60000;
