@@ -77,7 +77,7 @@ const ПОРОГ = 84;
 
 /* Версия правил совпадения. Растёт, когда меняется логика отбора:
    по ней --recheck понимает, кого стоит переспросить заново. */
-const ВЕРСИЯ = 5;
+const ВЕРСИЯ = 6;
 
 const ГОД_ОТ = 1900;
 const ГОД_ДО = new Date().getFullYear() + 1;
@@ -319,6 +319,10 @@ const годАльбома = a => годИз(a && a.release_date);
    надо, а это важно: лимит Spotify мы уже выбирали досуха. Spotify
    отдаёт 640, 300 и 64; берём среднюю — карточка на витрине около
    двухсот пикселей, шестьсот сорок на телефоне только лишний трафик. */
+/* Длительность приходит там же, где год и обложка, — в секундах она
+   нужнее миллисекунд, страница показывает «3:45». */
+const длитИз = tr => (tr && tr.duration_ms) ? Math.round(tr.duration_ms / 1000) : null;
+
 const обложкаИз = a => {
   const и = (a && a.images) || [];
   return ((и.find(x => x.width === 300) || и[0] || {}).url) || null;
@@ -376,6 +380,8 @@ async function spПоСсылкам(список, cache, закрыто, started
         spArtist: (tr.artists || []).map(a => a.name).join(', ') || null,
         spAlbum: tr.album?.name || null,
         обложка: обложкаИз(tr.album) || (поиском && поиском.обложка) || null,
+        альбом: tr.album?.name || null,
+        длит: длитИз(tr) || (поиском && поиском.длит) || null,
         годСсылки: годСсылки || null, годПоиска: (поиском && поиском.year) || null
       };
       if (year) { найдено++; закрыто.add(t.key); }
@@ -426,6 +432,8 @@ async function spПоиском(t) {
     /* Обложку берём у самой похожей записи, а не у самой ранней: год
        нужен от оригинала, а картинка — от того, что вернее совпало. */
     обложка: обложкаИз(лучшая.tr.album) || обложкаИз(ранняя.tr.album),
+    альбом: лучшая.tr.album?.name || ранняя.tr.album?.name || null,
+    длит: длитИз(лучшая.tr) || длитИз(ранняя.tr),
     spТип: ранняя.tr.album?.album_type || null, вариантов: свои.length
   };
 }
@@ -550,8 +558,9 @@ function loadCache() {
 function saveCache(cache, stats) {
   cache.generated = new Date().toISOString();
   cache.source = 'MusicBrainz';
-  cache.note = 'year — самый ранний выпуск записи; обложка — картинка альбома 300×300 ' +
-               'из того же ответа Spotify; score — наша уверенность в совпадении, 0–100';
+  cache.note = 'year — самый ранний выпуск записи; обложка — картинка альбома 300×300; ' +
+               'альбом и длит (секунды) — оттуда же; ' +
+               'score — наша уверенность в совпадении, 0–100';
   fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });
   fs.writeFileSync(OUT_PATH, JSON.stringify(cache, null, 1) + '\n');
   if (stats) console.log(`  … сохранено, известно ${Object.keys(cache.tracks).length}`);
