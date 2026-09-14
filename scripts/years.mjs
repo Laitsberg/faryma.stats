@@ -475,6 +475,16 @@ async function spПрощупать() {
     const res = await fetch(SP_API + path, { headers: { Authorization: 'Bearer ' + SP_TOKEN } });
     const тело = await res.text().catch(() => '');
     console.log(`${имя.padEnd(20)} ${res.status}  ${тело.slice(0, 160).replace(/\s+/g, ' ')}`);
+    /* Отдельно про обложки: они лежат в том же ответе, что и год, и
+       если это так — картинки достаются даром, без единого лишнего
+       запроса. Проверяем, а не полагаемся на память. */
+    if (res.ok && /^(один трек$|поиск$)/.test(имя)) {
+      try {
+        const j = JSON.parse(тело);
+        const al = (j.album || j.tracks?.items?.[0]?.album) || {};
+        console.log(`   └ обложки: ${(al.images || []).map(i => i.width + 'x' + i.height).join(', ') || 'НЕТ'}`);
+      } catch { console.log('   └ обложки: разбор не удался'); }
+    }
     await sleep(300);
   }
 }
