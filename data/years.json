@@ -35502,9 +35502,27 @@
    "длит": 195,
    "годСсылки": 2024,
    "годПоиска": null
+  },
+  "green day|american idiot": {
+   "artist": "Green Day",
+   "title": "American Idiot",
+   "разносов": 1,
+   "year": 2004,
+   "score": 100,
+   "как": "поиск:название",
+   "v": 8,
+   "sid": "6nTiIhLmQ3FWhvrGafw2zj",
+   "spTitle": "American Idiot",
+   "spArtist": "Green Day",
+   "spAlbum": "American Idiot",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e0208a1b1e0674086d3f1995e1b",
+   "альбом": "American Idiot",
+   "длит": 176,
+   "spТип": "album",
+   "вариантов": 4
   }
  },
  "source": "MusicBrainz",
  "note": "year — самый ранний выпуск записи; обложка — картинка альбома 300×300; альбом и длит (секунды) — оттуда же; score — наша уверенность в совпадении, 0–100",
- "generated": "2026-09-15T14:59:29.917Z"
+ "generated": "2026-09-15T16:56:52.903Z"
 }
