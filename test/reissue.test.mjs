@@ -128,6 +128,13 @@ const ТРЕКИ = {
     album: { name: 'Концерт в никуда (Live At Nowhere)', album_type: 'album', release_date: '2024-01-01',
              images: [{ width: 300, url: 'http://картинка/live.jpg' }] }
   },
+  hits: {
+    id: 'hits', name: 'Danger Zone', duration_ms: 216000,
+    artists: [{ name: 'Kenny Loggins' }],
+    album: { name: 'Yesterday, Today, Tomorrow - The Greatest Hits Of Kenny Loggins',
+             album_type: 'album', release_date: '1997-01-01',
+             images: [{ width: 300, url: 'http://картинка/hits.jpg' }] }
+  },
   plain: {
     id: 'plain', name: 'Usseewa', duration_ms: 180000,
     artists: [{ name: 'Ado' }],
@@ -135,6 +142,16 @@ const ТРЕКИ = {
              images: [{ width: 300, url: 'http://картинка/kyogen.jpg' }] }
   }
 };
+
+/* Мусор для страниц выдачи: тот же исполнитель и название, но год
+   поздний. Имитирует то, чем Spotify на самом деле забивает первую
+   десятку у переизданной песни, — сборники и ремастеры. */
+const шум = (n, наз, исп, год) => ({
+  id: `шум${n}`, name: наз, duration_ms: 200000,
+  artists: [{ name: исп }],
+  album: { name: `Сборник ${n}`, album_type: 'album', release_date: `${год}-01-01`,
+           images: [{ width: 300, url: `http://картинка/шум${n}.jpg` }] }
+});
 
 /* Что отдаёт поиск. У концертника оригинала нет намеренно — это и есть
    случай «подтвердить нечем». */
@@ -144,7 +161,20 @@ const ПОИСК = {
     artists: [{ name: 'Led Zeppelin' }],
     album: { name: 'Houses Of The Holy', album_type: 'album', release_date: '1973-03-28',
              images: [{ width: 300, url: 'http://картинка/houses.jpg' }] }
-  }]
+  }],
+  /* Двадцать поздних изданий, и только двадцать первым — оригинал.
+     Ровно то, на чём споткнулась первая пересверка: в первой десятке
+     у «Danger Zone» одни сборники, а 1986-й до неё не доехал. */
+  'Danger Zone|Kenny Loggins': [
+    ...Array.from({ length: 20 }, (_, i) => шум(i, 'Danger Zone', 'Kenny Loggins', 1997 + (i % 20))),
+    {
+      id: 'dz-orig', name: 'Danger Zone', duration_ms: 216000,
+      artists: [{ name: 'Kenny Loggins' }],
+      album: { name: 'Top Gun (Original Motion Picture Soundtrack)', album_type: 'album',
+               release_date: '1986-05-13',
+               images: [{ width: 300, url: 'http://картинка/topgun.jpg' }] }
+    }
+  ]
 };
 
 /* Строка таблицы: «Что» и ссылка в «Где», оценка — чтобы разнос
@@ -168,10 +198,13 @@ async function прогнать({ строки, флаги = [], кэш = null }
     if (m) return res.end(JSON.stringify(ТРЕКИ[m[1]] || {}));
     if (u.pathname.endsWith('/search')) {
       const q = u.searchParams.get('q') || '';
-      поиски.push(q);
+      const offset = +(u.searchParams.get('offset') || 0);
+      поиски.push({ q, offset });
       const наз = (q.match(/track:"([^"]*)"/) || [])[1] || '';
       const исп = (q.match(/artist:"([^"]*)"/) || [])[1] || '';
-      return res.end(JSON.stringify({ tracks: { items: ПОИСК[`${наз}|${исп}`] || [] } }));
+      const все = ПОИСК[`${наз}|${исп}`] || [];
+      // Как настоящий Spotify: страницами по десять, от offset.
+      return res.end(JSON.stringify({ tracks: { items: все.slice(offset, offset + 10) } }));
     }
     res.statusCode = 404; res.end('{}');
   });
@@ -223,7 +256,8 @@ test('переиздание по ссылке сверяется поиском
   assert.equal(ado.year, 2020);
   assert.equal(ado.переиздание, undefined, 'обычный альбом переизданием не считается');
 
-  assert.equal(поиски.length, 2, 'поиском сверяли только два переиздания из трёх треков');
+  assert.equal(new Set(поиски.map(p => p.q)).size, 2,
+    'поиском сверяли только два переиздания из трёх треков');
 });
 
 /* Пересверка. Флаг --recheck-reissues должен взять ровно переиздания
@@ -258,11 +292,40 @@ test('пересверка берёт только переиздания и н�
   assert.equal(код, 0);
 
   assert.equal(t['led zeppelin|no quarter'].year, 1973, 'ремастер пересверен');
-  assert.equal(t['led zeppelin|no quarter'].v, 7);
+  /* Версию сверяем «стала новее», а не с числом: ВЕРСИЯ растёт при
+     каждой починке правил, и проверка с зашитой семёркой краснела бы
+     на ровном месте. */
+  assert.ok(t['led zeppelin|no quarter'].v > 6, 'у пересверенного версия правил новее');
   // Обычный трек остался как был, его версию не трогали.
-  assert.equal(t['ado|usseewa'].v, 6);
+  assert.equal(t['ado|usseewa'].v, 6, 'нетронутый остался на прежней версии');
   assert.equal(t['ado|usseewa'].year, 2020);
   assert.equal(t['никто|nothing findable'], undefined,
     'незнакомую песню целевой проход не докачивает');
-  assert.equal(поиски.length, 1, 'спросили ровно одно переиздание');
+  assert.equal(new Set(поиски.map(p => p.q)).size, 1, 'спросили ровно одно переиздание');
+});
+
+/* Глубина поиска. Первая пересверка на живых данных показала: у
+   переизданной песни первая десятка выдачи забита поздними изданиями,
+   и год оригинала в неё не попадает. «Kenny Loggins — Danger Zone» так
+   и остался 1997-м (год сборника хитов) вместо 1986-го. Поэтому для
+   подозрительных листаем три страницы, а для обычных — одну: лишние
+   запросы стоят лимита Spotify, а он жёсткий. */
+test('у подозрительной ссылки поиск листает вглубь и находит оригинал', async () => {
+  const { код, tracks: t, поиски } = await прогнать({ строки: [
+    строка(1, 'Kenny Loggins — Danger Zone', 'hits')
+  ] });
+  assert.equal(код, 0);
+  assert.equal(t['kenny loggins|danger zone'].year, 1986,
+    'оригинал лежал на третьей странице выдачи');
+  assert.equal(t['kenny loggins|danger zone'].как, 'ссылка→поиск');
+  assert.deepEqual(поиски.map(p => p.offset), [0, 10, 20],
+    'пролистали ровно три страницы');
+});
+
+test('у обычной ссылки вглубь не лезем — это лишние запросы', async () => {
+  const { код, поиски } = await прогнать({ строки: [
+    строка(1, 'Ado — Usseewa', 'plain')
+  ] });
+  assert.equal(код, 0);
+  assert.deepEqual(поиски, [], 'обычный альбом в поиск не идёт вовсе');
 });
