@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-13T09:34:06.134Z",
+ "generated": "2026-09-15T17:41:45.698Z",
  "artists": {
   "7": {
    "name": "7",
@@ -42494,6 +42494,53 @@
    "score": 100,
    "mbid": "b2dbfc09-b332-408b-a235-1850e41971c5",
    "mbName": "Bloodhound Gang"
+  },
+  "swami dayananda saraswati": {
+   "name": "Swami Dayananda Saraswati",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "tardigrade inferno": {
+   "name": "Tardigrade Inferno",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Sankt-Peterburg",
+   "areaId": "808e1ef8-5390-4300-a615-c4df977cc349",
+   "score": 100,
+   "mbid": "6d48c314-f342-455a-8c1b-84b631747ca5",
+   "mbName": "Tardigrade Inferno",
+   "viaArea": true
+  },
+  "gala": {
+   "name": "Gala",
+   "tracks": 1,
+   "country": "IT",
+   "area": "Italy",
+   "areaId": "c6500277-9a3d-349b-bf30-41afdbf42add",
+   "score": 100,
+   "mbid": "cd34e8ed-2f44-4031-849e-e56034b02cf9",
+   "mbName": "Gala"
+  },
+  "yu serizawa": {
+   "name": "Yu Serizawa",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "9152e0a3-c1e0-4cd9-bb9d-9c0a9b843ed7",
+   "mbName": "芹澤優"
+  },
+  "susan calloway": {
+   "name": "Susan Calloway",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "5b3074b5-b92f-499e-a83e-804628cdaacd",
+   "mbName": "Susan Calloway"
   }
  },
  "source": "MusicBrainz",
