@@ -45412,9 +45412,27 @@
    "year": null,
    "score": 0,
    "v": 8
+  },
+  "leo moracchioli|holding out for a hero": {
+   "artist": "Leo Moracchioli",
+   "title": "Holding Out for a Hero",
+   "разносов": 1,
+   "year": 2021,
+   "score": 84,
+   "как": "поиск:хвост",
+   "v": 8,
+   "sid": "1619OcytasePzhzXYbAhta",
+   "spTitle": "Holding Out for a Hero (Metal Version)",
+   "spArtist": "Leo",
+   "spAlbum": "Leo Metal, Vol. 36",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e029114d5de07f588986e186a0d",
+   "альбом": "Leo Metal, Vol. 36",
+   "длит": 256,
+   "spТип": "album",
+   "вариантов": 2
   }
  },
  "source": "MusicBrainz",
  "note": "year — самый ранний выпуск записи; обложка — картинка альбома 300×300; альбом и длит (секунды) — оттуда же; score — наша уверенность в совпадении, 0–100",
- "generated": "2026-09-16T12:38:19.807Z"
+ "generated": "2026-09-16T14:57:58.720Z"
 }
