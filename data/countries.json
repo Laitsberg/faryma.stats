@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-15T17:41:45.698Z",
+ "generated": "2026-09-16T09:18:18.381Z",
  "artists": {
   "7": {
    "name": "7",
@@ -42541,6 +42541,54 @@
    "score": 100,
    "mbid": "5b3074b5-b92f-499e-a83e-804628cdaacd",
    "mbName": "Susan Calloway"
+  },
+  "aswathaman sivan": {
+   "name": "Aswathaman Sivan",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "lakshmy ratheesh & radhika venugopal": {
+   "name": "Lakshmy Ratheesh & Radhika Venugopal",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "extreme": {
+   "name": "Extreme",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "0e6cc5e5-4f03-4993-a481-d70d0e354d9f",
+   "mbName": "Extreme"
+  },
+  "casey lee williams & lamar hall": {
+   "name": "Casey Lee Williams & Lamar Hall",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "wa!ter": {
+   "name": "Wa!ter",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "04d6e0bc-a20d-409b-83be-8587e5d0d954",
+   "mbName": "Wa!ter"
+  },
+  "polysics": {
+   "name": "POLYSICS",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "b7d567df-e26b-4da1-b29d-f903f0ff9bbc",
+   "mbName": "POLYSICS"
   }
  },
  "source": "MusicBrainz",
