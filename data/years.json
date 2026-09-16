@@ -45404,9 +45404,17 @@
    "длит": 157,
    "spТип": "single",
    "вариантов": 2
+  },
+  "yoshihisa hirano & hideki taniuchi|l's theme": {
+   "artist": "Yoshihisa Hirano & Hideki Taniuchi",
+   "title": "L's Theme",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
   }
  },
  "source": "MusicBrainz",
  "note": "year — самый ранний выпуск записи; обложка — картинка альбома 300×300; альбом и длит (секунды) — оттуда же; score — наша уверенность в совпадении, 0–100",
- "generated": "2026-09-16T11:29:10.344Z"
+ "generated": "2026-09-16T12:38:19.807Z"
 }
