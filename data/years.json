@@ -56092,9 +56092,27 @@
    "длит": 586,
    "годСсылки": 2018,
    "годПоиска": null
+  },
+  "the beatles|a day in the life": {
+   "artist": "The Beatles",
+   "title": "A Day in the Life",
+   "разносов": 1,
+   "year": 1967,
+   "score": 100,
+   "как": "поиск:хвост",
+   "v": 8,
+   "sid": "0hKRSZhUGEhKU6aNSPBACZ",
+   "spTitle": "A Day In The Life - Remastered 2009",
+   "spArtist": "The Beatles",
+   "spAlbum": "Sgt. Pepper's Lonely Hearts Club Band (Remastered)",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e02d6275471a517fc2399054f2c",
+   "альбом": "Sgt. Pepper's Lonely Hearts Club Band (Super Deluxe Edition)",
+   "длит": 323,
+   "spТип": "album",
+   "вариантов": 6
   }
  },
  "source": "MusicBrainz",
  "note": "year — самый ранний выпуск записи; обложка — картинка альбома 300×300; альбом и длит (секунды) — оттуда же; score — наша уверенность в совпадении, 0–100",
- "generated": "2026-09-17T17:39:50.716Z"
+ "generated": "2026-09-17T21:19:53.170Z"
 }
