@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-16T09:18:18.381Z",
+ "generated": "2026-09-17T17:39:29.408Z",
  "artists": {
   "7": {
    "name": "7",
@@ -42589,6 +42589,28 @@
    "score": 100,
    "mbid": "b7d567df-e26b-4da1-b29d-f903f0ff9bbc",
    "mbName": "POLYSICS"
+  },
+  "ryota komatsu & charlie kosei": {
+   "name": "Ryota Komatsu & Charlie Kosei",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "м. нахимович & к. маркевич": {
+   "name": "М. Нахимович & К. Маркевич",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "shoujobyou": {
+   "name": "Shoujobyou",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "3c6992df-27cb-4c2f-a244-506e67619c81",
+   "mbName": "少女病"
   }
  },
  "source": "MusicBrainz",
