@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-17T17:39:29.408Z",
+ "generated": "2026-09-18T09:00:36.826Z",
  "artists": {
   "7": {
    "name": "7",
@@ -42611,6 +42611,42 @@
    "score": 100,
    "mbid": "3c6992df-27cb-4c2f-a244-506e67619c81",
    "mbName": "少女病"
+  },
+  "shoujo byou": {
+   "name": "Shoujo Byou",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "3c6992df-27cb-4c2f-a244-506e67619c81",
+   "mbName": "少女病"
+  },
+  "hiroji miyamoto": {
+   "name": "Hiroji Miyamoto",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "15f27586-9157-4f6e-b469-557a414308b7",
+   "mbName": "宮本浩次"
+  },
+  "лирида": {
+   "name": "Лирида",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "63cbec05-0691-4db6-afe2-af6ee89df424",
+   "mbName": "лирида"
+  },
+  "jorge rivera-herrans, cast of epic: the musical, kira stone, anna lea, miguel veloso, armando julián & steven rodriguez": {
+   "name": "Jorge Rivera-Herrans, Cast of EPIC: The Musical, Kira Stone, Anna Lea, Miguel Veloso, Armando Julián & Steven Rodriguez",
+   "tracks": 1,
+   "country": null,
+   "score": 0
   }
  },
  "source": "MusicBrainz",
