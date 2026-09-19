@@ -76442,9 +76442,27 @@
    "длит": 200,
    "годСсылки": 2013,
    "годПоиска": null
+  },
+  "voiceplay feat. j.none|valhalla calling": {
+   "artist": "Voiceplay feat. J.None",
+   "title": "Valhalla Calling",
+   "разносов": 1,
+   "year": 2023,
+   "score": 92,
+   "как": "поиск:название",
+   "v": 8,
+   "sid": "6sNaEPgzs8VDHPCjFSy7lm",
+   "spTitle": "Valhalla Calling",
+   "spArtist": "VoicePlay, J.None",
+   "spAlbum": "Valhalla Calling",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e02a7aa122f58f2c954cefff4ef",
+   "альбом": "Lore",
+   "длит": 243,
+   "spТип": "single",
+   "вариантов": 2
   }
  },
  "source": "MusicBrainz",
  "note": "year — самый ранний выпуск записи; обложка — картинка альбома 300×300; альбом и длит (секунды) — оттуда же; score — наша уверенность в совпадении, 0–100",
- "generated": "2026-09-19T16:32:32.480Z"
+ "generated": "2026-09-19T20:37:17.688Z"
 }
