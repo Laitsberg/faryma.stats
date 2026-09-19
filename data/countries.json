@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-18T09:00:36.826Z",
+ "generated": "2026-09-19T16:32:17.433Z",
  "artists": {
   "7": {
    "name": "7",
@@ -42647,6 +42647,26 @@
    "tracks": 1,
    "country": null,
    "score": 0
+  },
+  "lucas nainemoutou": {
+   "name": "Lucas Nainemoutou",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "038c06bc-d085-4b8b-9090-408dee2488de",
+   "mbName": "Lucas Nainemoutou"
+  },
+  "ночные снайперы": {
+   "name": "Ночные Снайперы",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "01e10b31-ae0f-49a6-b4f4-5c3dcff9788a",
+   "mbName": "Ночные Снайперы"
   }
  },
  "source": "MusicBrainz",
