@@ -132,6 +132,91 @@ test('на телефоне список последнего эфира обр�
   } finally { await узкий.close(); }
 });
 
+test('найденное идёт от подходящего, а не по алфавиту', async () => {
+  // На «eve» исполнитель Eve был пятьдесят третьим: выше по алфавиту
+  // стояли чужие треки, где «eve» нашлось внутри ника заказчика.
+  const стр = await brw.newPage({ viewport: { width: 1440, height: 1000 } });
+  try {
+    await стр.goto(srv.base + '/index.html', { waitUntil: 'networkidle' });
+    await стр.waitForFunction(() => typeof ROWS !== 'undefined' && ROWS.length > 0);
+
+    const итог = await стр.evaluate(() => {
+      document.getElementById('q').value = 'eve';
+      render();
+      const т = document.getElementById('tSearch');
+      const строки = [...т.querySelectorAll('tbody tr')];
+      const имя = tr => tr.querySelector('td')?.textContent.trim().toLowerCase() || '';
+      return {
+        порядок: т.dataset.sort,
+        всегоСИменем: ROWS.filter(r => (r.artist || '').toLowerCase().includes('eve')).length,
+        местоСИменем: строки.findIndex(tr => имя(tr).includes('eve')) + 1,
+        подпись: document.getElementById('searchCount').textContent,
+        строк: строки.length
+      };
+    });
+
+    assert.equal(итог.порядок, 'rel', 'таблица сортируется не по точности');
+    assert.ok(итог.строк > 0, 'по «eve» ничего не нашлось');
+    if (итог.всегоСИменем) {
+      assert.ok(итог.местоСИменем > 0 && итог.местоСИменем <= 5,
+        `исполнитель с «eve» в имени на ${итог.местоСИменем}-м месте, а не в первой пятёрке`);
+    }
+    assert.match(итог.подпись, /сначала самые подходящие/,
+      'страница не говорит, в каком порядке показывает');
+
+    // Выбор колонки сильнее и держится, пока запрос тот же
+    const послеНажатия = await стр.evaluate(() => {
+      document.querySelector('#tSearch th[data-k="artist"]').click();
+      return document.getElementById('tSearch').dataset.sort;
+    });
+    assert.equal(послеНажатия, 'artist', 'нажатие на заголовок не переключило сортировку');
+
+    // А новый запрос снова открывается «сначала подходящее»
+    const послеЗапроса = await стр.evaluate(() => {
+      document.getElementById('q').value = 'unravel';
+      render();
+      return document.getElementById('tSearch').dataset.sort;
+    });
+    assert.equal(послеЗапроса, 'rel', 'новый запрос не вернул порядок по точности');
+
+    // Без запроса список снова алфавитный: так листают архив
+    const безЗапроса = await стр.evaluate(() => {
+      document.getElementById('q').value = '';
+      render();
+      return document.getElementById('tSearch').dataset.sort;
+    });
+    assert.equal(безЗапроса, 'artist', 'пустой поиск открылся не по алфавиту');
+  } finally { await стр.close(); }
+});
+
+test('на телефоне список сортировки называет настоящий порядок', async () => {
+  // Список предлагал только колонки таблицы, а порядок «сначала
+  // подходящие» колонкой не показан — и список уверял «исполнитель»,
+  // хотя сортировка была другая.
+  const узкий = await brw.newPage({ viewport: { width: 390, height: 844 } });
+  try {
+    await узкий.goto(srv.base + '/index.html', { waitUntil: 'networkidle' });
+    await узкий.waitForFunction(() => typeof ROWS !== 'undefined' && ROWS.length > 0);
+    const итог = await узкий.evaluate(() => {
+      document.getElementById('q').value = 'eve';
+      render();
+      const sel = document.querySelector('#secSearch .sortbar select');
+      return {
+        есть: !!sel,
+        выбрано: sel ? sel.options[sel.selectedIndex].textContent : '',
+        порядок: document.getElementById('tSearch').dataset.sort,
+        // скрытая колонка не должна вылезти в саму таблицу
+        колонок: document.querySelectorAll('#tSearch thead th').length
+      };
+    });
+    assert.equal(итог.есть, true, 'списка сортировки нет');
+    assert.equal(итог.порядок, 'rel');
+    assert.match(итог.выбрано, /подходящ/,
+      `список сортировки показывает «${итог.выбрано}», а сортировка идёт по точности`);
+    assert.equal(итог.колонок, 7, 'скрытая колонка попала в таблицу');
+  } finally { await узкий.close(); }
+});
+
 test('все разделы на месте и не пустые', async () => {
   const пустые = await page.$$eval('section', ns => ns
     .filter(n => getComputedStyle(n).display !== 'none')

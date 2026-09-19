@@ -165,22 +165,15 @@ function искатьТрек(a, запрос) {
   /* Сначала точность совпадения, и только потом свежесть. Без этого
      на «unravel» отвечало «Muse — Unravelling»: он был новее, а
      подстрока нашлась и там. Человек спрашивает про конкретный трек,
-     и точное попадание в название важнее всего остального. */
-  const точность = r => {
-    const t = (r.title || '').toLowerCase();
-    const a2 = (r.artist || '').toLowerCase();
-    const u = (r.user || '').toLowerCase();
-    const сж = x => x.replace(/[^\p{L}\p{N}]+/gu, '');
-    if (t === q || сж(t) === сжатый) return 0;
-    if (a2 === q || сж(a2) === сжатый) return 1;
-    if (t.startsWith(q)) return 2;
-    if (t.includes(q) || сж(t).includes(сжатый)) return 3;
-    if (a2.includes(q) || сж(a2).includes(сжатый)) return 4;
-    if (u.includes(q)) return 5;
-    return 6;
-  };
+     и точное попадание в название важнее всего остального.
+
+     Сама оценка живёт в js/parse.js — той же, что грузит страница.
+     Раньше здесь лежала своя копия, и сайт ранжировал иначе: ответ
+     бота и первая строка на сайте могли разойтись. */
+  const точность = a.ctx.searchRanker(q);
   const свежие = [...нашлись].sort((x, y) =>
-    точность(x) - точность(y) || (y.date || 0) - (x.date || 0));
+    точность(x.artist, x.title, x.user) - точность(y.artist, y.title, y.user)
+    || (y.date || 0) - (x.date || 0));
   const r = свежие[0];
   const кто = r.artist ? `${r.artist} — ${r.title}` : r.title;
 

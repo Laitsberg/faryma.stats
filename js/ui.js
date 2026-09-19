@@ -199,6 +199,12 @@ function table(elId, cols, rows, defaultSort, limit) {
 
   const sk = t.dataset.sort;
 
+  /* Колонка может быть скрытой: показывать её незачем, а сортировать
+     по ней нужно. Так устроен порядок «сначала подходящие» в поиске —
+     точность совпадения в таблице не показывают, но она решает, что
+     идёт первым, и на телефоне её надо назвать в списке сортировки. */
+  const видимые = cols.filter(c => !c.hidden);
+
   // Колонка может показывать одно, а сортироваться по другому. Оценка
   // выводится подписью («атлична - -»), но сравнивать её как текст
   // нельзя: по алфавиту «атлична» встаёт выше «хорошечно», хотя это
@@ -231,16 +237,16 @@ function table(elId, cols, rows, defaultSort, limit) {
   // содержимому: одно длинное название трека растягивает свою колонку,
   // таблица вылезает за рамку и внизу появляется горизонтальная
   // прокрутка, а правые колонки уезжают за край.
-  const widths = cols.every(c => c.w)
-    ? '<colgroup>' + cols.map(c => `<col style="width:${c.w}">`).join('') + '</colgroup>'
+  const widths = видимые.every(c => c.w)
+    ? '<colgroup>' + видимые.map(c => `<col style="width:${c.w}">`).join('') + '</colgroup>'
     : '';
   t.classList.toggle('fixed', !!widths);
 
-  const head = widths + '<thead><tr>' + cols.map(c =>
+  const head = widths + '<thead><tr>' + видимые.map(c =>
     `<th data-k="${esc(c.k)}" class="${c.num ? 'num' : ''}">${esc(c.t)}${
       sk === c.k ? (dir > 0 ? ' ↑' : ' ↓') : ''}</th>`).join('') + '</tr></thead>';
 
-  const body = '<tbody>' + shown.map(r => '<tr>' + cols.map(c => {
+  const body = '<tbody>' + shown.map(r => '<tr>' + видимые.map(c => {
     const val = c.f ? c.f(r) : esc(r[c.k]);
     const cls = [c.num ? 'num mono' : (c.mono ? 'mono' : ''), c.lead ? 'lead' : '',
       String(val).trim() === '' ? 'empty' : ''].filter(Boolean).join(' ');
