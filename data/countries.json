@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-19T16:32:17.433Z",
+ "generated": "2026-09-20T09:17:13.201Z",
  "artists": {
   "7": {
    "name": "7",
@@ -42667,6 +42667,125 @@
    "score": 100,
    "mbid": "01e10b31-ae0f-49a6-b4f4-5c3dcff9788a",
    "mbName": "Ночные Снайперы"
+  },
+  "black country, new road": {
+   "name": "Black Country, New Road",
+   "tracks": 2,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "e9403d9c-329b-4108-a26f-564159d441d9",
+   "mbName": "Black Country, New Road"
+  },
+  "the kebabs": {
+   "name": "THE KEBABS",
+   "tracks": 2,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "898f91a6-00ac-4606-b243-fc2aac894136",
+   "mbName": "The Kebabs"
+  },
+  "diao ye zong": {
+   "name": "Diao ye zong",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "731dbf08-10c3-4252-9f76-c3989719295c",
+   "mbName": "凋叶棕"
+  },
+  "meramipop": {
+   "name": "Meramipop",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "d20e048e-c234-4d95-8fa7-dc7e068526cf",
+   "mbName": "めらみぽっぷ"
+  },
+  "moeka koizumi": {
+   "name": "Moeka Koizumi",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "6c1bc1ac-6d03-4dc0-b356-788adb75f55d",
+   "mbName": "小泉萌香"
+  },
+  "zager & evans": {
+   "name": "Zager & Evans",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "8fda69dc-1c26-4a75-8097-f9f8ed210878",
+   "mbName": "Zager & Evans"
+  },
+  "cat & melody note": {
+   "name": "Cat & Melody Note",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "the primals": {
+   "name": "THE PRIMALS",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Tokyo",
+   "areaId": "8dc97297-ac95-4d33-82bc-e07fab26fb5f",
+   "score": 100,
+   "mbid": "9cdc07bc-e6a4-4281-aa9a-eb8f69931be1",
+   "mbName": "THE PRIMALS",
+   "viaArea": true
+  },
+  "casey lee williams & sandy lee casey": {
+   "name": "Casey Lee Williams & Sandy Lee Casey",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "team shanghai alice": {
+   "name": "Team Shanghai Alice",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "4774c88d-3c73-483a-a699-c248053f406c",
+   "mbName": "上海アリス幻樂団"
+  },
+  "bon iver": {
+   "name": "Bon Iver",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "437a0e49-c6ae-42f6-a6c1-84f25ed366bc",
+   "mbName": "Bon Iver"
+  },
+  "иосиф кобзон, эстрадно-симфонический оркестр всесоюзного радио и центрального телевидения & московский хор молодёжи и студентов": {
+   "name": "Иосиф Кобзон, Эстрадно-симфонический оркестр Всесоюзного радио и Центрального телевидения & Московский хор молодёжи и студентов",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "ikuo": {
+   "name": "IKUO",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "6b243d9f-7f03-4617-be06-641f124f5e82",
+   "mbName": "IKUO"
   }
  },
  "source": "MusicBrainz",
