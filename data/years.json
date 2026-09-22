@@ -96200,9 +96200,27 @@
    "year": null,
    "score": 0,
    "v": 8
+  },
+  "joe hisaishi|a journey": {
+   "artist": "Joe Hisaishi",
+   "title": "A Journey",
+   "разносов": 1,
+   "year": 2013,
+   "score": 92,
+   "как": "поиск:хвост",
+   "v": 8,
+   "sid": "0ICOEWQIcf1ffZgx9q0RKG",
+   "spTitle": "A Journey (A Parting)",
+   "spArtist": "Joe Hisaishi",
+   "spAlbum": "The Wind Rises Soundtrack",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e02c853c5a8535cc3dc394efc58",
+   "альбом": "The Wind Rises Soundtrack",
+   "длит": 78,
+   "spТип": "album",
+   "вариантов": 10
   }
  },
  "source": "MusicBrainz",
  "note": "year — самый ранний выпуск записи; обложка — картинка альбома 300×300; альбом и длит (секунды) — оттуда же; score — наша уверенность в совпадении, 0–100",
- "generated": "2026-09-22T09:18:25.482Z"
+ "generated": "2026-09-22T11:34:48.184Z"
 }
