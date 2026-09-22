@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-20T09:17:13.201Z",
+ "generated": "2026-09-22T17:39:26.514Z",
  "artists": {
   "7": {
    "name": "7",
@@ -42786,6 +42786,36 @@
    "score": 100,
    "mbid": "6b243d9f-7f03-4617-be06-641f124f5e82",
    "mbName": "IKUO"
+  },
+  "disasterpeace": {
+   "name": "Disasterpeace",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "8a562589-9650-45f6-ab82-332625c0bf2d",
+   "mbName": "Disasterpeace"
+  },
+  "секрет": {
+   "name": "Секрет",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "d67b79c0-a026-43ee-9e5f-68141ef31018",
+   "mbName": "Секрет"
+  },
+  "cryoshell": {
+   "name": "Cryoshell",
+   "tracks": 1,
+   "country": "DK",
+   "area": "Denmark",
+   "areaId": "4757b525-2a60-324a-b060-578765d2c993",
+   "score": 100,
+   "mbid": "45a4d876-b404-49ac-807a-a12597eb00a2",
+   "mbName": "Cryoshell"
   }
  },
  "source": "MusicBrainz",
