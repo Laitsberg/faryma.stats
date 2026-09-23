@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-22T17:39:26.514Z",
+ "generated": "2026-09-23T09:18:36.451Z",
  "artists": {
   "7": {
    "name": "7",
@@ -42816,6 +42816,37 @@
    "score": 100,
    "mbid": "45a4d876-b404-49ac-807a-a12597eb00a2",
    "mbName": "Cryoshell"
+  },
+  "halou": {
+   "name": "Halou",
+   "tracks": 1,
+   "country": "US",
+   "area": "San Francisco",
+   "areaId": "83f22bb6-4631-443c-bace-9fae8540362a",
+   "score": 100,
+   "mbid": "ead4fa2d-2ecc-47f6-8ad0-01d26683e7db",
+   "mbName": "Halou",
+   "viaArea": true
+  },
+  "mav-d": {
+   "name": "Mav-D",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "7f2f16f2-96f9-4486-829b-415f751daff9",
+   "mbName": "Mav-d"
+  },
+  "miyagi & andy panda": {
+   "name": "Miyagi & Andy Panda",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "0b7177a6-9833-47b5-879f-57cde4771102",
+   "mbName": "Miyagi & Эндшпиль"
   }
  },
  "source": "MusicBrainz",
@@ -43075,6 +43106,7 @@
   "56788d4b-6aed-4596-9517-fad494e33344": "FI",
   "637f0e8d-eed1-4190-aac7-4376c84cd232": "FI",
   "1333ff06-8e3d-3c8e-9f3a-13a2a38b41df": "CH",
-  "83811e81-c6de-42a5-8b28-231fbd545cc9": "CH"
+  "83811e81-c6de-42a5-8b28-231fbd545cc9": "CH",
+  "83f22bb6-4631-443c-bace-9fae8540362a": "US"
  }
 }
