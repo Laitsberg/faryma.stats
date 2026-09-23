@@ -97762,9 +97762,77 @@
    "длит": 338,
    "spТип": "album",
    "вариантов": 2
+  },
+  "halou|honeythief": {
+   "artist": "Halou",
+   "title": "Honeythief",
+   "разносов": 1,
+   "year": 2006,
+   "score": 100,
+   "как": "ссылка",
+   "v": 8,
+   "sid": "07dRAdbmVyeWbebhrfYLSk",
+   "spTitle": "Honeythief - 2026 re-master",
+   "spArtist": "Halou",
+   "spAlbum": "Wholeness & Separation (2026 re-master)",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e0230cdaa70fcf271e0bdcb4da5",
+   "альбом": "Wholeness & Separation (2026 re-master)",
+   "длит": 189,
+   "годСсылки": 2006,
+   "годПоиска": null
+  },
+  "mav-d feat. miyagi & andy panda|темнота": {
+   "artist": "Mav-D feat. Miyagi & Andy Panda",
+   "title": "Темнота",
+   "разносов": 1,
+   "year": 2021,
+   "score": 100,
+   "как": "ссылка",
+   "v": 8,
+   "sid": "2XS7koaGfNZQMBVl0J9MF2",
+   "spTitle": "Темнота",
+   "spArtist": "Mav-d, Miyagi & Andy Panda",
+   "spAlbum": "Темнота",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e02dd9fa895459f4f1aafb8bffa",
+   "альбом": "Темнота",
+   "длит": 237,
+   "годСсылки": 2021,
+   "годПоиска": null
+  },
+  "океан ельзи|як ніколи": {
+   "artist": "Океан Ельзи",
+   "title": "Як ніколи",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
+  },
+  "akiyuki morimoto|the legend descends - fatalis: world version": {
+   "artist": "Akiyuki Morimoto",
+   "title": "The Legend Descends - Fatalis: World Version",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
+  },
+  "akiyuki morimoto|limitless courage": {
+   "artist": "Akiyuki Morimoto",
+   "title": "Limitless Courage",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
+  },
+  "океан ельзи|не йди": {
+   "artist": "Океан Ельзи",
+   "title": "Не йди",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
   }
  },
  "source": "MusicBrainz",
  "note": "year — самый ранний выпуск записи; обложка — картинка альбома 300×300; альбом и длит (секунды) — оттуда же; score — наша уверенность в совпадении, 0–100",
- "generated": "2026-09-22T17:39:45.387Z"
+ "generated": "2026-09-23T09:18:57.150Z"
 }
