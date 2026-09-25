@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-23T09:18:36.451Z",
+ "generated": "2026-09-25T17:59:14.477Z",
  "artists": {
   "7": {
    "name": "7",
@@ -42847,6 +42847,37 @@
    "score": 100,
    "mbid": "0b7177a6-9833-47b5-879f-57cde4771102",
    "mbName": "Miyagi & Эндшпиль"
+  },
+  "tears of tragedy": {
+   "name": "TEARS OF TRAGEDY",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Tokyo",
+   "areaId": "8dc97297-ac95-4d33-82bc-e07fab26fb5f",
+   "score": 100,
+   "mbid": "4819106d-173b-4218-8d96-99c1aef3af28",
+   "mbName": "Tears of Tragedy",
+   "viaArea": true
+  },
+  "alisara arial": {
+   "name": "Alisara Arial",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "bafa0ca8-cd4c-45e1-b5ea-d0dbd5aa6d99",
+   "mbName": "Alisara Arial"
+  },
+  "kemu": {
+   "name": "kemu",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "3c4ba899-c856-4df3-8324-5ca7693084e0",
+   "mbName": "kemu"
   }
  },
  "source": "MusicBrainz",
