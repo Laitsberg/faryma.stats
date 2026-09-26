@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-25T17:59:14.477Z",
+ "generated": "2026-09-26T09:20:51.452Z",
  "artists": {
   "7": {
    "name": "7",
@@ -42878,6 +42878,62 @@
    "score": 100,
    "mbid": "3c4ba899-c856-4df3-8324-5ca7693084e0",
    "mbName": "kemu"
+  },
+  "bhvyrslf": {
+   "name": "bhvyrslf",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "ichiko": {
+   "name": "ICHIKO",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "f5477dbf-c1fa-4fba-9368-fa57cdc82372",
+   "mbName": "ICHIKO"
+  },
+  "hermeto pascoal": {
+   "name": "Hermeto Pascoal",
+   "tracks": 1,
+   "country": "BR",
+   "area": "Brazil",
+   "areaId": "f45b47f8-5796-386e-b172-6c31b009a5d8",
+   "score": 100,
+   "mbid": "c7a4c4a0-9544-44e3-87f2-5779d18b753f",
+   "mbName": "Hermeto Pascoal"
+  },
+  "hofmannita": {
+   "name": "HOFMANNITA",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "c20b8873-0cbe-496b-b22f-6f3f5fce6735",
+   "mbName": "HOFMANNITA"
+  },
+  "drippin so pretty": {
+   "name": "Drippin So Pretty",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "fe745135-b186-4e0c-bbd3-85701bd97389",
+   "mbName": "Drippin’ So Pretty"
+  },
+  "john": {
+   "name": "John",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "53b106e7-0cc6-42cc-ac95-ed8d30a3a98e",
+   "mbName": "John Williams"
   }
  },
  "source": "MusicBrainz",
