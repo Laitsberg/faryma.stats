@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-26T14:28:27.721Z",
+ "generated": "2026-09-26T17:15:10.440Z",
  "artists": {
   "7": {
    "name": "7",
@@ -42950,6 +42950,57 @@
    "score": 100,
    "mbid": "f7e9a3a2-3789-4915-a6f5-65e9598001b7",
    "mbName": "Maruja Retana"
+  },
+  "элизиум": {
+   "name": "Элизиум",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "1cd4f845-ff85-4828-b3e8-07aadba3d1d9",
+   "mbName": "Элизиум"
+  },
+  "черниковская хата": {
+   "name": "Черниковская Хата",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Ufa",
+   "areaId": "46f3c1de-24b7-4ced-bea5-c0e2b84d0598",
+   "score": 100,
+   "mbid": "207f47ac-9368-4c6b-b05a-e8ad4dcabeca",
+   "mbName": "Chernikovskaya Hata",
+   "viaArea": true
+  },
+  "jim latham": {
+   "name": "Jim Latham",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "d6aa8e32-4548-46af-bdd7-58caf3f89391",
+   "mbName": "Jim Latham"
+  },
+  "mimirobop": {
+   "name": "MimiRoboP",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "34be4be1-6f62-4a5f-ab01-828e8f83ab72",
+   "mbName": "耳ロボP"
+  },
+  "lil god dan": {
+   "name": "Lil God Dan",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "052ff78a-e1cc-41cd-a31b-740e0c0cb219",
+   "mbName": "Lil God Dan"
   }
  },
  "source": "MusicBrainz",
