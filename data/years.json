@@ -98150,9 +98150,87 @@
    "длит": 296,
    "spТип": "single",
    "вариантов": 2
+  },
+  "animals as leaders|the woven web": {
+   "artist": "Animals as Leaders",
+   "title": "The Woven Web",
+   "разносов": 1,
+   "year": 2014,
+   "score": 100,
+   "как": "ссылка",
+   "v": 8,
+   "sid": "4ZAvNQPnCaepj7fOeJF7a2",
+   "spTitle": "The Woven Web",
+   "spArtist": "Animals As Leaders",
+   "spAlbum": "The Joy of Motion",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e027ad8e1e32de2e57f75a88bbd",
+   "альбом": "The Joy of Motion",
+   "длит": 248,
+   "годСсылки": 2014,
+   "годПоиска": null
+  },
+  "элизиум|альпинист": {
+   "artist": "Элизиум",
+   "title": "Альпинист",
+   "разносов": 1,
+   "year": 2002,
+   "score": 100,
+   "как": "ссылка",
+   "v": 8,
+   "sid": "6TJdyk0lBjiO4d0SiEHuAH",
+   "spTitle": "Альпинист",
+   "spArtist": "Elysium",
+   "spAlbum": "Все острова!",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e0220379be9f68e881f5331edec",
+   "альбом": "Все острова!",
+   "длит": 143,
+   "годСсылки": 2002,
+   "годПоиска": null
+  },
+  "lil god dan|marceline": {
+   "artist": "Lil God Dan",
+   "title": "MARCELINE",
+   "разносов": 1,
+   "year": 2020,
+   "score": 100,
+   "как": "ссылка",
+   "v": 8,
+   "sid": "32M51qDJyL0bN3UQKl67Jw",
+   "spTitle": "MARCELINE",
+   "spArtist": "Lil God Dan",
+   "spAlbum": "MARCELINE",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e023b529d14d50a6d6296c9949e",
+   "альбом": "MARCELINE",
+   "длит": 155,
+   "годСсылки": 2020,
+   "годПоиска": null
+  },
+  "черниковская хата|белая ночь": {
+   "artist": "Черниковская Хата",
+   "title": "Белая ночь",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
+  },
+  "jim latham|men in black: the series intro": {
+   "artist": "Jim Latham",
+   "title": "Men In Black: The Series Intro",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
+  },
+  "mimirobop feat. kasane teto|mimi no aru robot no uta": {
+   "artist": "MimiRoboP feat. Kasane Teto",
+   "title": "Mimi no Aru Robot no Uta",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
   }
  },
  "source": "MusicBrainz",
  "note": "year — самый ранний выпуск записи; обложка — картинка альбома 300×300; альбом и длит (секунды) — оттуда же; score — наша уверенность в совпадении, 0–100",
- "generated": "2026-09-26T14:28:41.678Z"
+ "generated": "2026-09-26T17:15:26.638Z"
 }
