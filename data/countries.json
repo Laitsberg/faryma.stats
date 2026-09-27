@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-26T17:15:10.440Z",
+ "generated": "2026-09-27T10:00:41.275Z",
  "artists": {
   "7": {
    "name": "7",
@@ -43001,6 +43001,130 @@
    "score": 100,
    "mbid": "052ff78a-e1cc-41cd-a31b-740e0c0cb219",
    "mbName": "Lil God Dan"
+  },
+  "sandaru sathsara": {
+   "name": "Sandaru Sathsara",
+   "tracks": 3,
+   "country": "LK",
+   "area": "Sri Lanka",
+   "areaId": "6e2d562d-a754-3036-8484-7ac576606e27",
+   "score": 100,
+   "mbid": "eea8b140-44c8-4eee-90bd-7666352924fb",
+   "mbName": "Sandaru Sathsara"
+  },
+  "brandi carlile": {
+   "name": "Brandi Carlile",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "baf05baf-69fb-47dd-93c2-033536b8c385",
+   "mbName": "Brandi Carlile"
+  },
+  "ice cube": {
+   "name": "Ice Cube",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "1d11e2a1-4531-4d61-a8c7-7b5c6a608fd2",
+   "mbName": "Ice Cube"
+  },
+  "the strokes": {
+   "name": "The Strokes",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "f181961b-20f7-459e-89de-920ef03c7ed0",
+   "mbName": "The Strokes"
+  },
+  "chopil": {
+   "name": "Chopil",
+   "tracks": 1,
+   "country": "KR",
+   "area": "South Korea",
+   "areaId": "b9f7d640-46e8-313e-b158-ded6d18593b3",
+   "score": 100,
+   "mbid": "45c49ea8-830e-4aeb-a06a-793c179f7055",
+   "mbName": "Chopil"
+  },
+  "trooper salute": {
+   "name": "Trooper Salute",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "b083288e-5d83-429f-a4d7-b73c95d82d02",
+   "mbName": "Trooper Salute"
+  },
+  "lustmord": {
+   "name": "Lustmord",
+   "tracks": 1,
+   "country": "GB",
+   "area": "Wales",
+   "areaId": "8297708c-5743-47d6-a5ac-f40a41c49ad9",
+   "score": 100,
+   "mbid": "15f2bb82-bce4-44c9-863a-995ae9bde0b4",
+   "mbName": "Lustmord",
+   "viaArea": true
+  },
+  "billy's dilly's band": {
+   "name": "Billy's Dilly's Band",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "jayn": {
+   "name": "Jayn",
+   "tracks": 1,
+   "country": "KR",
+   "area": "South Korea",
+   "areaId": "b9f7d640-46e8-313e-b158-ded6d18593b3",
+   "score": 100,
+   "mbid": "5f89a5ea-b751-40a1-9802-049f8e539ed3",
+   "mbName": "JAYN LEE"
+  },
+  "super whatevr": {
+   "name": "Super Whatevr",
+   "tracks": 1,
+   "country": "US",
+   "area": "Costa Mesa",
+   "areaId": "398c6575-6e22-44f9-b93a-349c9f5c8889",
+   "score": 100,
+   "mbid": "1fa1111b-e1ca-47c5-82f9-ecbeffd7f32e",
+   "mbName": "Super Whatevr",
+   "viaArea": true
+  },
+  "alabama 3": {
+   "name": "Alabama 3",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "d2101821-81ce-4137-bd14-7ed09ecf5531",
+   "mbName": "Alabama 3"
+  },
+  "icreet": {
+   "name": "Icreet",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "hamlet minassian": {
+   "name": "Hamlet Minassian",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "d8f69f67-9f79-433b-a092-2f49b699da2c",
+   "mbName": "Hamlet Minassian"
   }
  },
  "source": "MusicBrainz",
@@ -43261,6 +43385,7 @@
   "637f0e8d-eed1-4190-aac7-4376c84cd232": "FI",
   "1333ff06-8e3d-3c8e-9f3a-13a2a38b41df": "CH",
   "83811e81-c6de-42a5-8b28-231fbd545cc9": "CH",
-  "83f22bb6-4631-443c-bace-9fae8540362a": "US"
+  "83f22bb6-4631-443c-bace-9fae8540362a": "US",
+  "398c6575-6e22-44f9-b93a-349c9f5c8889": "US"
  }
 }
