@@ -98612,9 +98612,27 @@
    "year": null,
    "score": 0,
    "v": 8
+  },
+  "satsumi matsuda|gold-recollection": {
+   "artist": "Satsumi Matsuda",
+   "title": "Gold-Recollection",
+   "разносов": 1,
+   "year": 2026,
+   "score": 100,
+   "как": "ссылка",
+   "v": 8,
+   "sid": "3RUxX7hD63Ln5QDmvTs9nJ",
+   "spTitle": "Gold-Recollection",
+   "spArtist": "ステイゴールド (CV. 松田颯水), ウマ娘 プリティーダービー",
+   "spAlbum": "『ウマ娘 プリティーダービー』WINNING LIVE 34",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e02bf23c958adcee25ec310eeea",
+   "альбом": "『ウマ娘 プリティーダービー』WINNING LIVE 34",
+   "длит": 292,
+   "годСсылки": 2026,
+   "годПоиска": null
   }
  },
  "source": "MusicBrainz",
  "note": "year — самый ранний выпуск записи; обложка — картинка альбома 300×300; альбом и длит (секунды) — оттуда же; score — наша уверенность в совпадении, 0–100",
- "generated": "2026-09-27T10:01:06.646Z"
+ "generated": "2026-09-29T16:30:38.942Z"
 }
