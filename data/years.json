@@ -98630,9 +98630,35 @@
    "длит": 292,
    "годСсылки": 2026,
    "годПоиска": null
+  },
+  "hozier & bear mccreary|blood upon the snow": {
+   "artist": "Hozier & Bear McCreary",
+   "title": "Blood Upon the Snow",
+   "разносов": 1,
+   "year": 2022,
+   "score": 92,
+   "как": "поиск:хвост",
+   "v": 8,
+   "sid": "5cgacDGTfR9sm4W03syTyX",
+   "spTitle": "Blood Upon the Snow (From \"God of War Ragnarök\" Soundtrack)",
+   "spArtist": "Hozier, Bear McCreary",
+   "spAlbum": "God of War Ragnarök (Original Soundtrack)",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e0214705b00168168d58c98b013",
+   "альбом": "God of War Ragnarök (Original Soundtrack)",
+   "длит": 272,
+   "spТип": "album",
+   "вариантов": 1
+  },
+  "хэ-ваще|новый мир": {
+   "artist": "Хэ-ваще",
+   "title": "Новый мир",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
   }
  },
  "source": "MusicBrainz",
  "note": "year — самый ранний выпуск записи; обложка — картинка альбома 300×300; альбом и длит (секунды) — оттуда же; score — наша уверенность в совпадении, 0–100",
- "generated": "2026-09-29T16:30:38.942Z"
+ "generated": "2026-09-29T18:04:03.206Z"
 }
