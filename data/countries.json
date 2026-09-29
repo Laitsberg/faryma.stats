@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-27T10:00:41.275Z",
+ "generated": "2026-09-29T16:30:20.763Z",
  "artists": {
   "7": {
    "name": "7",
@@ -43125,6 +43125,18 @@
    "score": 100,
    "mbid": "d8f69f67-9f79-433b-a092-2f49b699da2c",
    "mbName": "Hamlet Minassian"
+  },
+  "satsumi matsuda": {
+   "name": "Satsumi Matsuda",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "хэ-ваще": {
+   "name": "Хэ-ваще",
+   "tracks": 1,
+   "country": null,
+   "score": 0
   }
  },
  "source": "MusicBrainz",
