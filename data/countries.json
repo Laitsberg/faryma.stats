@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-29T16:30:20.763Z",
+ "generated": "2026-09-29T18:40:40.269Z",
  "artists": {
   "7": {
    "name": "7",
@@ -43137,6 +43137,42 @@
    "tracks": 1,
    "country": null,
    "score": 0
+  },
+  "dimie cat": {
+   "name": "Dimie Cat",
+   "tracks": 1,
+   "country": "FR",
+   "area": "France",
+   "areaId": "08310658-51eb-3801-80de-5a0739207115",
+   "score": 100,
+   "mbid": "9a90b6bd-7937-49a6-8f76-9a2c55844486",
+   "mbName": "Dimie Cat"
+  },
+  "receptor": {
+   "name": "Receptor",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "f62394c1-6feb-48bc-8dc8-5ec94b973f9e",
+   "mbName": "Receptor"
+  },
+  "yush! & soham pathak": {
+   "name": "Yush! & Soham Pathak",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "miwako chinone": {
+   "name": "Miwako Chinone",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "982791f4-cc98-45b3-ade8-d00aebe65131",
+   "mbName": "茅根美和子"
   }
  },
  "source": "MusicBrainz",
