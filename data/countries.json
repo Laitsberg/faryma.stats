@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-29T18:40:40.269Z",
+ "generated": "2026-09-30T10:29:16.678Z",
  "artists": {
   "7": {
    "name": "7",
@@ -43173,6 +43173,60 @@
    "score": 100,
    "mbid": "982791f4-cc98-45b3-ade8-d00aebe65131",
    "mbName": "茅根美和子"
+  },
+  "хз-ваще": {
+   "name": "Хз-ваще",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "receptor, yush! & soham pathak": {
+   "name": "Receptor, Yush! & Soham Pathak",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "stina nordenstam": {
+   "name": "Stina Nordenstam",
+   "tracks": 1,
+   "country": "SE",
+   "area": "Sweden",
+   "areaId": "23d10872-f5ae-3f0c-bf55-332788a16ecb",
+   "score": 100,
+   "mbid": "6ac47f31-3b2e-4f95-bef0-ce869af4ee98",
+   "mbName": "Stina Nordenstam"
+  },
+  "corey taylor & serj tankian": {
+   "name": "Corey Taylor & Serj Tankian",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "maruv & boosin": {
+   "name": "MARUV & Boosin",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "rob westwood": {
+   "name": "Rob Westwood",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "c489adbd-838e-460e-aec3-c575c9e318b0",
+   "mbName": "Rob Westwood"
+  },
+  "kosmonauci": {
+   "name": "Kosmonauci",
+   "tracks": 1,
+   "country": "PL",
+   "area": "Poland",
+   "areaId": "dd7f80c8-f017-3d01-8608-2a8c9c32b954",
+   "score": 100,
+   "mbid": "62db5460-7345-4c52-b57e-2d8555ec2c41",
+   "mbName": "Kosmonauci"
   }
  },
  "source": "MusicBrainz",
