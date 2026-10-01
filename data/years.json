@@ -98960,9 +98960,79 @@
    "длит": 169,
    "spТип": "album",
    "вариантов": 2
+  },
+  "dolores o'riordan|october": {
+   "artist": "Dolores O'Riordan",
+   "title": "October",
+   "разносов": 1,
+   "year": 2007,
+   "score": 100,
+   "как": "ссылка",
+   "v": 8,
+   "sid": "78bC3E398Djcciq0ZKtb5z",
+   "spTitle": "October",
+   "spArtist": "Dolores O'Riordan",
+   "spAlbum": "Are You Listening?",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e02e80d7b6a2a9ba196a910e4c8",
+   "альбом": "Are You Listening?",
+   "длит": 278,
+   "годСсылки": 2007,
+   "годПоиска": null
+  },
+  "april rain|my silent angel": {
+   "artist": "April Rain",
+   "title": "My Silent Angel",
+   "разносов": 1,
+   "year": 2013,
+   "score": 100,
+   "как": "поиск:название",
+   "v": 8,
+   "sid": "1vrNOxuEz4jwn3dC5M0Nob",
+   "spTitle": "My Silent Angel",
+   "spArtist": "April Rain",
+   "spAlbum": "Waiting for Sunrise",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e029ad2c354e86b9f1d354a25d7",
+   "альбом": "Waiting for Sunrise",
+   "длит": 297,
+   "spТип": "album",
+   "вариантов": 1
+  },
+  "mason b. fisher|life": {
+   "artist": "Mason B. Fisher",
+   "title": "Life",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
+  },
+  "jinsan kim|crow": {
+   "artist": "Jinsan Kim",
+   "title": "Crow",
+   "разносов": 1,
+   "year": 2022,
+   "score": 100,
+   "как": "поиск:название",
+   "v": 8,
+   "sid": "0Zrh6HgpJiWgvnIYzbPWbF",
+   "spTitle": "Crow",
+   "spArtist": " Jinsan Kim",
+   "spAlbum": "Crow",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e02e54369d24e274c8dbd83d8fa",
+   "альбом": "Crow",
+   "длит": 206,
+   "spТип": "single",
+   "вариантов": 1
+  },
+  "борис моисеев feat. николай трубач|голубая луна": {
+   "artist": "Борис Моисеев feat. Николай Трубач",
+   "title": "Голубая луна",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
   }
  },
  "source": "MusicBrainz",
  "note": "year — самый ранний выпуск записи; обложка — картинка альбома 300×300; альбом и длит (секунды) — оттуда же; score — наша уверенность в совпадении, 0–100",
- "generated": "2026-09-30T10:29:38.869Z"
+ "generated": "2026-10-01T17:01:44.022Z"
 }
