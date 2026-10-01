@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-01T17:01:21.293Z",
+ "generated": "2026-10-01T18:56:15.922Z",
  "artists": {
   "7": {
    "name": "7",
@@ -43283,6 +43283,62 @@
    "score": 100,
    "mbid": "13c10976-99f1-4cb4-8fbe-56067e91d865",
    "mbName": "Dolores O’Riordan"
+  },
+  "mana ogura": {
+   "name": "Mana Ogura",
+   "tracks": 2,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "04e3350a-1645-4f18-b965-290b69d6a70b",
+   "mbName": "小倉真奈"
+  },
+  "yuko komiyama": {
+   "name": "Yuko Komiyama",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "a71bc04f-0124-46b9-865b-e929fec37595",
+   "mbName": "小見山優子"
+  },
+  "lily white": {
+   "name": "lily white",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "d5259a7d-4d25-4c8e-8d87-e8e35e6d3dac",
+   "mbName": "lily white"
+  },
+  "suzuko mimori, riho iida, aina kusuda": {
+   "name": "Suzuko Mimori, Riho Iida, Aina Kusuda",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "whokilledxix": {
+   "name": "WHOKILLEDXIX",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "a8f890d7-2763-438e-8548-747c47e8e136",
+   "mbName": "WHOKILLEDXIX"
+  },
+  "far too loud": {
+   "name": "Far Too Loud",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "70a22c38-49d7-4284-ae16-86e3bfc814f5",
+   "mbName": "Far Too Loud"
   }
  },
  "source": "MusicBrainz",
