@@ -99146,9 +99146,62 @@
    "длит": 177,
    "spТип": "single",
    "вариантов": 2
+  },
+  "hayden pedigo|the happiest times i ever ignored": {
+   "artist": "Hayden Pedigo",
+   "title": "The Happiest Times I Ever Ignored",
+   "разносов": 1,
+   "year": 2023,
+   "score": 100,
+   "как": "ссылка→поиск",
+   "v": 8,
+   "sid": "127IljdPho48hbxH7mupbJ",
+   "spTitle": "The Happiest Times I Ever Ignored - Live",
+   "spArtist": "Hayden Pedigo",
+   "spAlbum": "Live in Amarillo, Texas",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e025ce31581322b6ad8a3e14e79",
+   "альбом": "Live in Amarillo, Texas",
+   "длит": 343,
+   "годСсылки": 2024,
+   "годПоиска": 2023,
+   "переиздание": true
+  },
+  "борис моисеев & николай трубач|голубая луна": {
+   "artist": "Борис Моисеев & Николай Трубач",
+   "title": "Голубая луна",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
+  },
+  "susumu hirasawa|白虎野の娘": {
+   "artist": "Susumu Hirasawa",
+   "title": "白虎野の娘",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
+  },
+  "the script feat. will.i.am|hall of fame": {
+   "artist": "The Script feat. will.i.am",
+   "title": "Hall of Fame",
+   "разносов": 1,
+   "year": 2012,
+   "score": 84,
+   "как": "поиск:хвост",
+   "v": 8,
+   "sid": "1X1DWw2pcNZ8zSub3uhlNz",
+   "spTitle": "Hall of Fame (feat. will.i.am)",
+   "spArtist": "The Script, will.i.am",
+   "spAlbum": "#3",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e0244287246ea331e6f7b0ef8a9",
+   "альбом": "#3",
+   "длит": 203,
+   "spТип": "album",
+   "вариантов": 5
   }
  },
  "source": "MusicBrainz",
  "note": "year — самый ранний выпуск записи; обложка — картинка альбома 300×300; альбом и длит (секунды) — оттуда же; score — наша уверенность в совпадении, 0–100",
- "generated": "2026-10-01T18:56:38.456Z"
+ "generated": "2026-10-02T10:30:30.663Z"
 }
