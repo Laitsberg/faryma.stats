@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-01T18:56:15.922Z",
+ "generated": "2026-10-02T10:30:11.491Z",
  "artists": {
   "7": {
    "name": "7",
@@ -43339,6 +43339,43 @@
    "score": 100,
    "mbid": "70a22c38-49d7-4284-ae16-86e3bfc814f5",
    "mbName": "Far Too Loud"
+  },
+  "борис моисеев & николай трубач": {
+   "name": "Борис Моисеев & Николай Трубач",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "hayden pedigo": {
+   "name": "Hayden Pedigo",
+   "tracks": 1,
+   "country": "US",
+   "area": "Amarillo",
+   "areaId": "c548af05-b00b-4015-a225-b0a9436c09dc",
+   "score": 100,
+   "mbid": "cdd492ca-4342-480d-afd8-45d133cb60d3",
+   "mbName": "Hayden Pedigo",
+   "viaArea": true
+  },
+  "the script": {
+   "name": "The Script",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "d51c8e82-04fa-4ba5-8f00-f5e4e85ba0db",
+   "mbName": "Flip the Script"
+  },
+  "will.i.am": {
+   "name": "will.i.am",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "d574c9bd-46f6-440a-8d6a-8412a283eeb1",
+   "mbName": "will.i.am"
   }
  },
  "source": "MusicBrainz",
@@ -43600,6 +43637,8 @@
   "1333ff06-8e3d-3c8e-9f3a-13a2a38b41df": "CH",
   "83811e81-c6de-42a5-8b28-231fbd545cc9": "CH",
   "83f22bb6-4631-443c-bace-9fae8540362a": "US",
-  "398c6575-6e22-44f9-b93a-349c9f5c8889": "US"
+  "398c6575-6e22-44f9-b93a-349c9f5c8889": "US",
+  "0baf31ef-5c9f-49b1-8b04-c5ca392bf341": "US",
+  "c548af05-b00b-4015-a225-b0a9436c09dc": "US"
  }
 }
