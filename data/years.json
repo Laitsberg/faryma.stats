@@ -99207,9 +99207,27 @@
    "year": null,
    "score": 0,
    "v": 8
+  },
+  "mana ogura|mukunaru wazawai": {
+   "artist": "Mana Ogura",
+   "title": "Mukunaru Wazawai",
+   "разносов": 1,
+   "year": 2025,
+   "score": 100,
+   "как": "ссылка",
+   "v": 8,
+   "sid": "5SM1q5MmiVGkhM8eOGTRtr",
+   "spTitle": "無垢なる禍",
+   "spArtist": "小倉真奈",
+   "spAlbum": "Monster Hunter Wilds Original Soundtrack",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e026adbb5454badba68ee26472d",
+   "альбом": "Monster Hunter Wilds Original Soundtrack",
+   "длит": 393,
+   "годСсылки": 2025,
+   "годПоиска": null
   }
  },
  "source": "MusicBrainz",
  "note": "year — самый ранний выпуск записи; обложка — картинка альбома 300×300; альбом и длит (секунды) — оттуда же; score — наша уверенность в совпадении, 0–100",
- "generated": "2026-10-02T13:54:51.055Z"
+ "generated": "2026-10-02T18:29:53.461Z"
 }
