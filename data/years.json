@@ -99199,9 +99199,17 @@
    "длит": 203,
    "spТип": "album",
    "вариантов": 5
+  },
+  "lily white feat. suzuko mimori, riho iida, aina kusuda|onaji hoshi ga mitai": {
+   "artist": "Lily white feat. Suzuko Mimori, Riho Iida, Aina Kusuda",
+   "title": "Onaji Hoshi ga Mitai",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
   }
  },
  "source": "MusicBrainz",
  "note": "year — самый ранний выпуск записи; обложка — картинка альбома 300×300; альбом и длит (секунды) — оттуда же; score — наша уверенность в совпадении, 0–100",
- "generated": "2026-10-02T10:30:30.663Z"
+ "generated": "2026-10-02T13:54:51.055Z"
 }
