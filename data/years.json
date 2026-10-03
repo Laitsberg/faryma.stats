@@ -99225,9 +99225,53 @@
    "длит": 393,
    "годСсылки": 2025,
    "годПоиска": null
+  },
+  "mana ogura|arrant calamity": {
+   "artist": "Mana Ogura",
+   "title": "Arrant Calamity",
+   "разносов": 1,
+   "year": 2025,
+   "score": 100,
+   "как": "ссылка",
+   "v": 8,
+   "sid": "5SM1q5MmiVGkhM8eOGTRtr",
+   "spTitle": "無垢なる禍",
+   "spArtist": "小倉真奈",
+   "spAlbum": "Monster Hunter Wilds Original Soundtrack",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e026adbb5454badba68ee26472d",
+   "альбом": "Monster Hunter Wilds Original Soundtrack",
+   "длит": 393,
+   "годСсылки": 2025,
+   "годПоиска": null
+  },
+  "mana ogura|justice breaks forth": {
+   "artist": "Mana Ogura",
+   "title": "Justice Breaks Forth",
+   "разносов": 1,
+   "year": 2025,
+   "score": 100,
+   "как": "ссылка",
+   "v": 8,
+   "sid": "0uhS2ipvqwxnGNg0yPRjjO",
+   "spTitle": "正義は綻びて",
+   "spArtist": "小倉真奈",
+   "spAlbum": "Monster Hunter Wilds Original Soundtrack",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e026adbb5454badba68ee26472d",
+   "альбом": "Monster Hunter Wilds Original Soundtrack",
+   "длит": 355,
+   "годСсылки": 2025,
+   "годПоиска": null
+  },
+  "susumu hirasawa|byakkoya no musume": {
+   "artist": "Susumu Hirasawa",
+   "title": "Byakkoya no Musume",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
   }
  },
  "source": "MusicBrainz",
  "note": "year — самый ранний выпуск записи; обложка — картинка альбома 300×300; альбом и длит (секунды) — оттуда же; score — наша уверенность в совпадении, 0–100",
- "generated": "2026-10-02T18:29:53.461Z"
+ "generated": "2026-10-03T09:52:09.302Z"
 }
