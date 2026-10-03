@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-02T10:30:11.491Z",
+ "generated": "2026-10-03T17:20:10.011Z",
  "artists": {
   "7": {
    "name": "7",
@@ -43376,6 +43376,26 @@
    "score": 100,
    "mbid": "d574c9bd-46f6-440a-8d6a-8412a283eeb1",
    "mbName": "will.i.am"
+  },
+  "revo": {
+   "name": "Revo",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "c7215a98-9782-47d7-9c2c-d174a5617183",
+   "mbName": "Revo"
+  },
+  "yello": {
+   "name": "Yello",
+   "tracks": 1,
+   "country": "CH",
+   "area": "Switzerland",
+   "areaId": "1333ff06-8e3d-3c8e-9f3a-13a2a38b41df",
+   "score": 100,
+   "mbid": "c616aef1-e21f-46f8-864f-b7bad96f41b2",
+   "mbName": "Yello"
   }
  },
  "source": "MusicBrainz",
