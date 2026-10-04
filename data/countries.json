@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-04T10:35:04.822Z",
+ "generated": "2026-10-04T17:37:59.965Z",
  "artists": {
   "7": {
    "name": "7",
@@ -43462,6 +43462,59 @@
    "mbid": "0dcd4b84-8c8d-4aab-92bb-2c59cba111ae",
    "mbName": "Prostitute",
    "viaArea": true
+  },
+  "pratanallis": {
+   "name": "Pratanallis",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Tokyo",
+   "areaId": "8dc97297-ac95-4d33-82bc-e07fab26fb5f",
+   "score": 100,
+   "mbid": "56bd1855-8777-482d-b713-49eafe095477",
+   "mbName": "Pratanallis",
+   "viaArea": true
+  },
+  "kyohko": {
+   "name": "Kyohko",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "1aef4b26-7ac6-4c2c-bb9a-fc6cab03ab09",
+   "mbName": "杏子"
+  },
+  "aqours": {
+   "name": "Aqours",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "b1c1b09e-7a43-4090-b69d-195af799dc65",
+   "mbName": "Aqours"
+  },
+  "nanaka suwa": {
+   "name": "Nanaka Suwa",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "maxbro": {
+   "name": "MAXBRO",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "marie miyake": {
+   "name": "Marie Miyake",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "49b0ed29-9849-411c-8a8f-37fc09168548",
+   "mbName": "三宅麻理恵"
   }
  },
  "source": "MusicBrainz",
