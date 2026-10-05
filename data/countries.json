@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-04T17:37:59.965Z",
+ "generated": "2026-10-05T11:28:53.192Z",
  "artists": {
   "7": {
    "name": "7",
@@ -43515,6 +43515,110 @@
    "score": 100,
    "mbid": "49b0ed29-9849-411c-8a8f-37fc09168548",
    "mbName": "三宅麻理恵"
+  },
+  "won": {
+   "name": "WON",
+   "tracks": 1,
+   "country": "DE",
+   "area": "Weiden",
+   "areaId": "f756efdf-0549-4b5b-80eb-9514796e0d51",
+   "score": 100,
+   "mbid": "d6dcf6b8-1722-4fd8-aae4-9c3f20a454fe",
+   "mbName": "WON",
+   "viaArea": true
+  },
+  "naim sadik": {
+   "name": "Naim Sadik",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "kihow": {
+   "name": "KIHOW",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "f2ec8866-3bad-48ff-b43f-4be823217c34",
+   "mbName": "KIHOW"
+  },
+  "max coveri": {
+   "name": "Max Coveri",
+   "tracks": 1,
+   "country": "IT",
+   "area": "Italy",
+   "areaId": "c6500277-9a3d-349b-bf30-41afdbf42add",
+   "score": 100,
+   "mbid": "1167fbcc-d46e-48d3-8341-555e8ca60d47",
+   "mbName": "Max Coveri"
+  },
+  "matt heafy": {
+   "name": "Matt Heafy",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "6aef178d-db24-4f6b-b0b7-e8e4d3a78d5a",
+   "mbName": "Matt Heafy"
+  },
+  "karl jenkins": {
+   "name": "Karl Jenkins",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "f5f54bdc-2163-41ef-a835-28a9a73dab67",
+   "mbName": "Karl Jenkins Ensemble"
+  },
+  "miriam stockley": {
+   "name": "Miriam Stockley",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "79817d41-9e0e-4cc0-8074-93075c9b2786",
+   "mbName": "Miriam Stockley"
+  },
+  "valve": {
+   "name": "Valve",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "b22f3ebb-c248-4956-965b-ff0e55f082b5",
+   "mbName": "Valve"
+  },
+  "dedublüman & aleyna tilki": {
+   "name": "Dedublüman & Aleyna Tilki",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "endevor": {
+   "name": "Endevor",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Samara",
+   "areaId": "afc021d0-d86e-4e4d-bace-c0c0c53c9580",
+   "score": 100,
+   "mbid": "8f72b2cf-3df4-4513-97c7-c7262f914558",
+   "mbName": "Endevor",
+   "viaArea": true
+  },
+  "maretu": {
+   "name": "MARETU",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "cda1d655-a98c-42ae-8de3-a0a78000741e",
+   "mbName": "MARETU"
   }
  },
  "source": "MusicBrainz",
@@ -43779,6 +43883,11 @@
   "398c6575-6e22-44f9-b93a-349c9f5c8889": "US",
   "0baf31ef-5c9f-49b1-8b04-c5ca392bf341": "US",
   "c548af05-b00b-4015-a225-b0a9436c09dc": "US",
-  "9cdacad1-4f13-4082-b426-549907deb759": "US"
+  "9cdacad1-4f13-4082-b426-549907deb759": "US",
+  "aa47eb3a-80b5-4837-a167-6d05a5f60714": "DE",
+  "996c6cb1-7512-4461-8e25-9cc5e4ac6b6e": "DE",
+  "f756efdf-0549-4b5b-80eb-9514796e0d51": "DE",
+  "a48bedb2-305a-4ca0-b549-30d0842a8808": "RU",
+  "afc021d0-d86e-4e4d-bace-c0c0c53c9580": "RU"
  }
 }
