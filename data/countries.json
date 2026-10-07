@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-07T17:24:58.009Z",
+ "generated": "2026-10-07T19:22:59.482Z",
  "artists": {
   "7": {
    "name": "7",
@@ -43649,6 +43649,26 @@
    "tracks": 1,
    "country": null,
    "score": 0
+  },
+  "parang": {
+   "name": "Parang",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "8475b2b4-2074-4ad2-b88b-599a2d7d28ea",
+   "mbName": "PaRang"
+  },
+  "daniel rossen": {
+   "name": "Daniel Rossen",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "39d64c18-3018-40b7-af86-b2f658a57b4d",
+   "mbName": "Daniel Rossen"
   }
  },
  "source": "MusicBrainz",
