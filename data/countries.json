@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-07T14:33:57.852Z",
+ "generated": "2026-10-07T17:24:58.009Z",
  "artists": {
   "7": {
    "name": "7",
@@ -43640,6 +43640,12 @@
   },
   "horga katnasucilar": {
    "name": "Horga Katnasucilar",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "riko sasaki": {
+   "name": "Riko Sasaki",
    "tracks": 1,
    "country": null,
    "score": 0
