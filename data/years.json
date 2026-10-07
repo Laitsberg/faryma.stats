@@ -100085,9 +100085,27 @@
    "длит": 320,
    "годСсылки": 1992,
    "годПоиска": null
+  },
+  "horga katnasucilar|tugan yagim": {
+   "artist": "Horga Katnasucilar",
+   "title": "Tugan yagim",
+   "разносов": 1,
+   "year": 1986,
+   "score": 100,
+   "как": "поиск:название",
+   "v": 8,
+   "sid": "2owM0fKy0tWe1JcquHqmE1",
+   "spTitle": "Tugan yagim",
+   "spArtist": "Horga Katnasucilar",
+   "spAlbum": "Ak Idil Buylari",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e02bf5bd9e7881a500c1030e54d",
+   "альбом": "Ak Idil Buylari",
+   "длит": 175,
+   "spТип": "album",
+   "вариантов": 1
   }
  },
  "source": "MusicBrainz",
  "note": "year — самый ранний выпуск записи; обложка — картинка альбома 300×300; альбом и длит (секунды) — оттуда же; score — наша уверенность в совпадении, 0–100",
- "generated": "2026-10-06T14:14:42.762Z"
+ "generated": "2026-10-07T14:34:22.745Z"
 }
