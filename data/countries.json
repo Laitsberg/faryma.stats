@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-08T17:23:39.325Z",
+ "generated": "2026-10-08T19:18:33.108Z",
  "artists": {
   "7": {
    "name": "7",
@@ -43739,6 +43739,85 @@
    "score": 100,
    "mbid": "8f7bf43e-2a13-431a-a274-19e28965fe07",
    "mbName": "Craig Armstrong"
+  },
+  "modest mouse": {
+   "name": "Modest Mouse",
+   "tracks": 1,
+   "country": "US",
+   "area": "Portland",
+   "areaId": "2b748d6e-bc1c-4434-9f7b-ecd6332bc557",
+   "score": 100,
+   "mbid": "a96ac800-bfcb-412a-8a63-0a98df600700",
+   "mbName": "Modest Mouse",
+   "viaArea": true
+  },
+  "love god beer trap": {
+   "name": "Love God Beer Trap",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "aeed2693-2a7d-47a7-bac7-c052ed2000f6",
+   "mbName": "Love God Beer Trap"
+  },
+  "unhelldiva": {
+   "name": "UnhellDivA",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "saki, gengen": {
+   "name": "Saki, GenGen",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "ashley tisdale": {
+   "name": "Ashley Tisdale",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "1fa14a96-c25c-4bb7-b94d-ff453519eab3",
+   "mbName": "Ashley Tisdale"
+  },
+  "olivia olson": {
+   "name": "Olivia Olson",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "a005866b-b423-4cec-a8f7-63543f35a65e",
+   "mbName": "Olivia Olson"
+  },
+  "bratishkin": {
+   "name": "bratishkin",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "3ec537a2-d6a4-49ce-ab71-1562a5485fb9",
+   "mbName": "bratishkin"
+  },
+  "macaroni empitsu": {
+   "name": "Macaroni Empitsu",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "c65f10b6-be99-4e3a-a010-2a11fd965780",
+   "mbName": "マカロニえんぴつ"
+  },
+  "peark kioudai": {
+   "name": "Peark Kioudai",
+   "tracks": 1,
+   "country": null,
+   "score": 0
   }
  },
  "source": "MusicBrainz",
