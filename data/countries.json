@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-07T19:22:59.482Z",
+ "generated": "2026-10-08T11:21:43.467Z",
  "artists": {
   "7": {
    "name": "7",
@@ -43669,6 +43669,16 @@
    "score": 100,
    "mbid": "39d64c18-3018-40b7-af86-b2f658a57b4d",
    "mbName": "Daniel Rossen"
+  },
+  "valve software": {
+   "name": "Valve Software",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "b22f3ebb-c248-4956-965b-ff0e55f082b5",
+   "mbName": "Valve"
   }
  },
  "source": "MusicBrainz",
