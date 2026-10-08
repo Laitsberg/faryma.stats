@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-08T11:21:43.467Z",
+ "generated": "2026-10-08T14:37:40.340Z",
  "artists": {
   "7": {
    "name": "7",
@@ -43679,6 +43679,16 @@
    "score": 100,
    "mbid": "b22f3ebb-c248-4956-965b-ff0e55f082b5",
    "mbName": "Valve"
+  },
+  "rico sasaki": {
+   "name": "Rico Sasaki",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "dcbe8eb6-8ceb-4215-a844-f16c39dd78f2",
+   "mbName": "佐々木李子"
   }
  },
  "source": "MusicBrainz",
