@@ -101025,9 +101025,27 @@
    "year": null,
    "score": 0,
    "v": 8
+  },
+  "mirar|når solen går ned": {
+   "artist": "Mirar",
+   "title": "Når Solen Går Ned",
+   "разносов": 1,
+   "year": 2026,
+   "score": 100,
+   "как": "ссылка",
+   "v": 8,
+   "sid": "2Zku5hueH90H3vLNlP93Js",
+   "spTitle": "Når Solen Går Ned",
+   "spArtist": "Mirar",
+   "spAlbum": "Gradus Ad Parnassum",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e02bf54a78ad205aa2b98e6a8ba",
+   "альбом": "Gradus Ad Parnassum",
+   "длит": 240,
+   "годСсылки": 2026,
+   "годПоиска": null
   }
  },
  "source": "MusicBrainz",
  "note": "year — самый ранний выпуск записи; обложка — картинка альбома 300×300; альбом и длит (секунды) — оттуда же; score — наша уверенность в совпадении, 0–100",
- "generated": "2026-10-10T13:47:35.508Z"
+ "generated": "2026-10-10T15:52:06.138Z"
 }
