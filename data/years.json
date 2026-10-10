@@ -100963,9 +100963,71 @@
    "длит": 452,
    "годСсылки": 2021,
    "годПоиска": null
+  },
+  "piotr musiał|for honor! for toussaint!": {
+   "artist": "Piotr Musiał",
+   "title": "For Honor! For Toussaint!",
+   "разносов": 1,
+   "year": 2016,
+   "score": 100,
+   "как": "ссылка",
+   "v": 8,
+   "sid": "7640vRpfdd91FKxl1lp7Pt",
+   "spTitle": "For Honor! For Toussaint!",
+   "spArtist": "Piotr Musiał",
+   "spAlbum": "The Witcher 3: Wild Hunt - Blood and Wine (Official Soundtrack)",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e0289c3692370b29d8fd4bab431",
+   "альбом": "The Witcher 3: Wild Hunt - Blood and Wine (Official Soundtrack)",
+   "длит": 125,
+   "годСсылки": 2016,
+   "годПоиска": null
+  },
+  "marcin przybyłowicz feat. percival schuttenbach|you're... immortal?": {
+   "artist": "Marcin Przybyłowicz feat. Percival Schuttenbach",
+   "title": "You're... Immortal?",
+   "разносов": 1,
+   "year": 2015,
+   "score": 100,
+   "как": "ссылка",
+   "v": 8,
+   "sid": "0cODRoSzlFqFY7jOFEFEGZ",
+   "spTitle": "You're... Immortal?",
+   "spArtist": "Marcin Przybyłowicz, Percival Schuttenbach",
+   "spAlbum": "The Witcher 3: Wild Hunt - Hearts Of Stone (Original Game Soundtrack)",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e0226a3ebdb4e994b45773488ed",
+   "альбом": "The Witcher 3: Wild Hunt - Hearts Of Stone (Original Game Soundtrack)",
+   "длит": 174,
+   "годСсылки": 2015,
+   "годПоиска": null
+  },
+  "marcin przybyłowicz|a gifted man brings gifts galore": {
+   "artist": "Marcin Przybyłowicz",
+   "title": "A Gifted Man Brings Gifts Galore",
+   "разносов": 1,
+   "year": 2015,
+   "score": 100,
+   "как": "поиск:название",
+   "v": 8,
+   "sid": "2TIjrhkXVtl9m0v5BRLy2M",
+   "spTitle": "A Gifted Man Brings Gifts Galore",
+   "spArtist": "Marcin Przybyłowicz",
+   "spAlbum": "The Witcher 3: Wild Hunt - Hearts Of Stone (Original Game Soundtrack)",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e0226a3ebdb4e994b45773488ed",
+   "альбом": "The Witcher 3: Wild Hunt - Hearts Of Stone (Original Game Soundtrack)",
+   "длит": 244,
+   "spТип": "album",
+   "вариантов": 2
+  },
+  "marcin przybyłowicz feat. percival schuttenbach|hunt or be hunted": {
+   "artist": "Marcin Przybyłowicz feat. Percival Schuttenbach",
+   "title": "Hunt or Be Hunted",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
   }
  },
  "source": "MusicBrainz",
  "note": "year — самый ранний выпуск записи; обложка — картинка альбома 300×300; альбом и длит (секунды) — оттуда же; score — наша уверенность в совпадении, 0–100",
- "generated": "2026-10-09T16:59:17.907Z"
+ "generated": "2026-10-10T13:47:35.508Z"
 }
