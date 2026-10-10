@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-10T13:47:20.746Z",
+ "generated": "2026-10-10T15:51:53.180Z",
  "artists": {
   "7": {
    "name": "7",
@@ -43856,6 +43856,16 @@
    "score": 100,
    "mbid": "c352d682-e665-499c-8cf7-11e7adbbc150",
    "mbName": "Percival Schuttenbach"
+  },
+  "mirar": {
+   "name": "Mirar",
+   "tracks": 1,
+   "country": "FR",
+   "area": "France",
+   "areaId": "08310658-51eb-3801-80de-5a0739207115",
+   "score": 100,
+   "mbid": "1c79c8c5-a91c-4450-8c43-22a3834798e4",
+   "mbName": "MIRAR"
   }
  },
  "source": "MusicBrainz",
