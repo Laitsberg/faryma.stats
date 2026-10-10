@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-09T11:19:25.079Z",
+ "generated": "2026-10-10T13:47:20.746Z",
  "artists": {
   "7": {
    "name": "7",
@@ -43846,6 +43846,16 @@
    "score": 100,
    "mbid": "23daedc7-25e4-43f2-a800-23c295091e64",
    "mbName": "パール兄弟"
+  },
+  "percival schuttenbach": {
+   "name": "Percival Schuttenbach",
+   "tracks": 2,
+   "country": "PL",
+   "area": "Poland",
+   "areaId": "dd7f80c8-f017-3d01-8608-2a8c9c32b954",
+   "score": 100,
+   "mbid": "c352d682-e665-499c-8cf7-11e7adbbc150",
+   "mbName": "Percival Schuttenbach"
   }
  },
  "source": "MusicBrainz",
