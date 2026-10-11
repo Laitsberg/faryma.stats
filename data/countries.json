@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-10T17:53:43.317Z",
+ "generated": "2026-10-11T10:49:19.527Z",
  "artists": {
   "7": {
    "name": "7",
@@ -43912,6 +43912,111 @@
    "tracks": 1,
    "country": null,
    "score": 0
+  },
+  "voskresenskii": {
+   "name": "Voskresenskii",
+   "tracks": 2,
+   "country": "BY",
+   "area": "Belarus",
+   "areaId": "660e3c48-b301-3c8c-9708-0f71d5d094d6",
+   "score": 100,
+   "mbid": "398a5d9c-19fc-40c7-b61b-5dd47ebf3135",
+   "mbName": "Voskresenskii"
+  },
+  "plastic tree": {
+   "name": "Plastic Tree",
+   "tracks": 2,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "4bd477e1-0144-4e2f-910a-829aa539b6b8",
+   "mbName": "Plastic Tree"
+  },
+  "tea": {
+   "name": "tea",
+   "tracks": 1,
+   "country": "CA",
+   "area": "Canada",
+   "areaId": "71bbafaa-e825-3e15-8ca9-017dcad1748b",
+   "score": 100,
+   "mbid": "7ebc552b-71b2-47b7-9dc8-31ef08e20aec",
+   "mbName": "The Tea Party"
+  },
+  "floex": {
+   "name": "Floex",
+   "tracks": 1,
+   "country": "CZ",
+   "area": "Czechia",
+   "areaId": "51d34c28-61bf-3d21-849f-7492672a9d44",
+   "score": 100,
+   "mbid": "24b70d13-85ab-410b-a044-2cca4600b1e1",
+   "mbName": "Floex"
+  },
+  "djs from mars": {
+   "name": "DJs From Mars",
+   "tracks": 1,
+   "country": "IT",
+   "area": "Italy",
+   "areaId": "c6500277-9a3d-349b-bf30-41afdbf42add",
+   "score": 100,
+   "mbid": "1d67b0cc-0a8b-44d3-8105-a8853af03f76",
+   "mbName": "DJs From Mars"
+  },
+  "david puentez": {
+   "name": "David Puentez",
+   "tracks": 1,
+   "country": "DE",
+   "area": "Köln",
+   "areaId": "b8a2776a-eedf-48ea-a6f3-1a9070f0b823",
+   "score": 100,
+   "mbid": "41f78e1f-84d9-4e95-bf62-3f203ab4b245",
+   "mbName": "David Puentez",
+   "viaArea": true
+  },
+  "baroness": {
+   "name": "Baroness",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "eeb41a1e-4326-4d04-8c47-0f564ceecd68",
+   "mbName": "Baroness"
+  },
+  "amy lee, courtney laplante": {
+   "name": "Amy Lee, Courtney LaPlante",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "полынь folk": {
+   "name": "Полынь Folk",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "певчая, lebedeva": {
+   "name": "ПЕВЧАЯ, Lebedeva",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "berlin": {
+   "name": "Berlin",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "5e645519-a175-4fe0-9a9b-eb9dc9f506b5",
+   "mbName": "Irving Berlin"
+  },
+  "oli sykes, courtney laplante": {
+   "name": "Oli Sykes, Courtney LaPlante",
+   "tracks": 1,
+   "country": null,
+   "score": 0
   }
  },
  "source": "MusicBrainz",
@@ -44181,6 +44286,7 @@
   "996c6cb1-7512-4461-8e25-9cc5e4ac6b6e": "DE",
   "f756efdf-0549-4b5b-80eb-9514796e0d51": "DE",
   "a48bedb2-305a-4ca0-b549-30d0842a8808": "RU",
-  "afc021d0-d86e-4e4d-bace-c0c0c53c9580": "RU"
+  "afc021d0-d86e-4e4d-bace-c0c0c53c9580": "RU",
+  "b8a2776a-eedf-48ea-a6f3-1a9070f0b823": "DE"
  }
 }
