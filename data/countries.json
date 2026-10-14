@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-12T11:58:11.893Z",
+ "generated": "2026-10-14T18:03:24.394Z",
  "artists": {
   "7": {
    "name": "7",
@@ -44041,6 +44041,52 @@
    "tracks": 1,
    "country": null,
    "score": 0
+  },
+  "portugal. the man": {
+   "name": "Portugal. The Man",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "3599a39e-4e10-4cb5-90d4-c8a015ebc73b",
+   "mbName": "Portugal. The Man"
+  },
+  "ashbury heights": {
+   "name": "Ashbury Heights",
+   "tracks": 1,
+   "country": "SE",
+   "area": "Sweden",
+   "areaId": "23d10872-f5ae-3f0c-bf55-332788a16ecb",
+   "score": 100,
+   "mbid": "2bfe4c84-c223-4671-a67b-a7d40fef20a3",
+   "mbName": "Ashbury Heights"
+  },
+  "run the jewels": {
+   "name": "Run the Jewels",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "a80c5dc5-b12e-4667-9f5a-b568961f3839",
+   "mbName": "Run the Jewels"
+  },
+  "плавериан": {
+   "name": "Плавериан",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "johan lindgren": {
+   "name": "Johan Lindgren",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "626d6703-6494-442e-9d5a-019d319133d3",
+   "mbName": "Johan Lindgren"
   }
  },
  "source": "MusicBrainz",
