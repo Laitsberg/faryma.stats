@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-15T07:27:42.510Z",
+ "generated": "2026-10-15T09:08:57.956Z",
  "artists": {
   "7": {
    "name": "7",
@@ -44093,6 +44093,67 @@
    "tracks": 1,
    "country": null,
    "score": 0
+  },
+  "the sus": {
+   "name": "The Sus",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "e6fac8d9-ca54-4bba-ab57-7bcfc9ecd0ee",
+   "mbName": "We The Sus Music"
+  },
+  "alstroemeria records": {
+   "name": "Alstroemeria Records",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Chiyoda",
+   "areaId": "f5cd9916-2a4e-4abf-a301-9525ef598436",
+   "score": 100,
+   "mbid": "85f20384-e7e8-44a8-9648-ca3eac18cbc7",
+   "mbName": "Alstroemeria Records",
+   "viaArea": true
+  },
+  "nomico": {
+   "name": "nomico",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "bc5024e2-7f77-4c10-991c-46906798e358",
+   "mbName": "のみこ"
+  },
+  "jonathan steingard": {
+   "name": "Jonathan Steingard",
+   "tracks": 1,
+   "country": "CA",
+   "area": "Canada",
+   "areaId": "71bbafaa-e825-3e15-8ca9-017dcad1748b",
+   "score": 100,
+   "mbid": "d5640f1b-cf1b-4371-9211-83e1efa7d7c3",
+   "mbName": "Jonathan Steingard"
+  },
+  "iosys": {
+   "name": "IOSYS",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "9a4cafe7-3349-404b-a268-780e911d1801",
+   "mbName": "IOSYS"
+  },
+  "miko": {
+   "name": "miko",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "b3e91a0c-54ad-433d-a381-1b364f8ab320",
+   "mbName": "miko"
   }
  },
  "source": "MusicBrainz",
@@ -44363,6 +44424,7 @@
   "f756efdf-0549-4b5b-80eb-9514796e0d51": "DE",
   "a48bedb2-305a-4ca0-b549-30d0842a8808": "RU",
   "afc021d0-d86e-4e4d-bace-c0c0c53c9580": "RU",
-  "b8a2776a-eedf-48ea-a6f3-1a9070f0b823": "DE"
+  "b8a2776a-eedf-48ea-a6f3-1a9070f0b823": "DE",
+  "f5cd9916-2a4e-4abf-a301-9525ef598436": "JP"
  }
 }
