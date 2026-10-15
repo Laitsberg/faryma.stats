@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-15T12:41:24.922Z",
+ "generated": "2026-10-15T17:48:02.718Z",
  "artists": {
   "7": {
    "name": "7",
@@ -44157,6 +44157,42 @@
   },
   "maceo, lil bub, delonte & snoop dogg": {
    "name": "Maceo, Lil BUB, Delonte & Snoop Dogg",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "geoffrey day": {
+   "name": "Geoffrey Day",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "472a8c1b-ffef-400a-b4b4-8d5741d3ca85",
+   "mbName": "Geoffrey Day"
+  },
+  "рубеж веков": {
+   "name": "Рубеж Веков",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "ff9d7b17-6642-47bd-bdef-62e89193d61b",
+   "mbName": "Рубеж Веков"
+  },
+  "takuma terashima": {
+   "name": "Takuma Terashima",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "bfefdd44-b700-4db3-94b2-37b4c24d5a39",
+   "mbName": "寺島拓篤"
+  },
+  "plawerian": {
+   "name": "Plawerian",
    "tracks": 1,
    "country": null,
    "score": 0
