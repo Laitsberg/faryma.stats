@@ -30,6 +30,12 @@ const URLS = process.env.SHEET_CSV_URL ? [process.env.SHEET_CSV_URL] : [
 const REQUIRED = ['Что', 'Оценка'];
 const MIN_KEEP = 0.9;    // новая выгрузка не может быть сильно короче старой
 
+/* Разбор строк-разделителей берём общий — тот же, что у сайта и бота.
+   Нужен, чтобы знать номер самого свежего стрима в выгрузке. */
+const ctx = vm.createContext({ console, URL });
+for (const f of ['js/config.js', 'js/aliases.js', 'js/parse.js'])
+  vm.runInContext(fs.readFileSync(path.join(ROOT, f), 'utf8'), ctx, { filename: f });
+
 function papa() {
   const sandbox = { module: { exports: {} }, exports: {}, window: {}, global: {} };
   vm.createContext(sandbox);
@@ -49,7 +55,17 @@ function inspect(text) {
   const rated = r.data.filter(x => (x['Оценка'] || '').trim()).length;
   if (rated < 100)
     return { ok: false, why: `всего ${rated} строк с оценкой — выгрузка выглядит обрезанной` };
-  return { ok: true, rows: r.data.length, rated, fields };
+
+  /* Номер самого свежего стрима. По нему видно, не подсунули ли нам
+     старую копию архива: все прочие проверки такую копию пропускают —
+     колонки на месте, длина та же, — и сайт тихо замирает на
+     позавчерашнем дне, ничем не выдавая беды. */
+  let стрим = 0;
+  for (const x of r.data) {
+    const st = ctx.parseStream(x['Что'], x['Где']);
+    if (st && st.num > стрим) стрим = st.num;
+  }
+  return { ok: true, rows: r.data.length, rated, fields, стрим };
 }
 
 let saved = null;
@@ -90,7 +106,18 @@ if (fs.existsSync(OUT)) {
     console.error('Ничего не перезаписываю. Если архив правда почистили, удали data.csv вручную.');
     process.exit(1);
   }
-  if (old.ok) console.log(`было с оценкой ${old.rated}, стало ${saved.rated} (+${saved.rated - old.rated})`);
+  /* Номер стрима назад не идёт. Если он упал — читаем не ту вкладку:
+     композитор может завести новый лист и спрятать старый, а экспорт
+     по номеру листа работает и для скрытых. Молча перезаписать архив
+     позавчерашней копией — худшее, что тут можно сделать. */
+  if (old.ok && old.стрим && saved.стрим && saved.стрим < old.стрим) {
+    console.error(`\nВ архиве был стрим №${old.стрим}, в выгрузке только №${saved.стрим}.`);
+    console.error('Похоже, SHEET_GID показывает на старую копию архива — проверь номер вкладки.');
+    console.error('Ничего не перезаписываю.');
+    process.exit(1);
+  }
+  if (old.ok) console.log(`было с оценкой ${old.rated}, стало ${saved.rated} (+${saved.rated - old.rated})` +
+    (saved.стрим ? `, свежий стрим №${saved.стрим}` : ''));
 }
 
 fs.writeFileSync(OUT, saved.text);

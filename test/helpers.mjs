@@ -60,6 +60,7 @@ export function buildRows(ctx, raw = readCsv()) {
         offscale.push({ raw: raw2, title: w.title, streamNum: stream ? stream.num : null });
       return;
     }
+    if (!String(r['Что'] || '').trim()) return;   // см. js/app.js: ещё не разнос
     rows.push({
       i, rate, pos: w.pos, artist: w.artist, title: w.title, full: w.full,
       user: (r['Кто'] || '').trim(),

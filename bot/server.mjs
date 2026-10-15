@@ -73,6 +73,7 @@ async function собрать() {
     if (st) { stream = st; return; }
     const rate = ctx.parseRate(r['Оценка']);
     if (!rate) return;
+    if (!String(r['Что'] || '').trim()) return;   // см. js/app.js: ещё не разнос
     const w = ctx.parseWhat(r['Что']);
     const кто = (r['Кто'] || '').trim();
     const строка = {
