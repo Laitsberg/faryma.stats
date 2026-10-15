@@ -101903,9 +101903,27 @@
    "year": null,
    "score": 0,
    "v": 8
+  },
+  "run the jewels feat. maceo, lil bub, delonte & snoop dogg|meowpurrdy": {
+   "artist": "Run the Jewels feat. Maceo, Lil BUB, Delonte & Snoop Dogg",
+   "title": "Meowpurrdy",
+   "разносов": 1,
+   "year": 2015,
+   "score": 84,
+   "как": "поиск:хвост",
+   "v": 8,
+   "sid": "24t6t143bO6egaf3hbLZmM",
+   "spTitle": "Meowpurrdy - El-P Remix",
+   "spArtist": "Run The Jewels, Lil Bub, Maceo, Delonte, Snoop Dogg",
+   "spAlbum": "Meow the Jewels",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e02f05e56135a319369e2191e04",
+   "альбом": "Meow the Jewels",
+   "длит": 227,
+   "spТип": "album",
+   "вариантов": 1
   }
  },
  "source": "MusicBrainz",
  "note": "year — самый ранний выпуск записи; обложка — картинка альбома 300×300; альбом и длит (секунды) — оттуда же; score — наша уверенность в совпадении, 0–100",
- "generated": "2026-10-15T07:28:05.095Z"
+ "generated": "2026-10-15T12:41:46.450Z"
 }
