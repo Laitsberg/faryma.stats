@@ -16,7 +16,21 @@ import { fileURLToPath } from 'node:url';
 import { обрезать } from './trim-csv.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const OUT = process.env.OUT || path.join(ROOT, 'data.csv');
+/* Файлов два, и у каждого свой читатель.
+
+   data.csv — то, что читает сайт статистики: только нужные ему
+   колонки. Его качает каждый посетитель, и лишнее в нём дорого.
+
+   data/full.csv — выгрузка целиком, со всеми колонками таблицы.
+   Нужен каталогу на официальном сайте композитора: там как раз и
+   живут «Три интересных факта», «О чём трек?» и прочее, чего
+   статистике не надо. Лежит рядом, чтобы каталогу не пришлось
+   ходить в Гугл-таблицу самому.
+
+   Оба пишутся из одной и той же загрузки: ходить за таблицей дважды
+   незачем, да и разъехаться они тогда не смогут. */
+const OUT  = process.env.OUT || path.join(ROOT, 'data.csv');
+const FULL = process.env.OUT_FULL || path.join(ROOT, 'data', 'full.csv');
 
 const SHEET_ID = process.env.SHEET_ID || '1yEUr29llt9L1zWavC4lxkyhd6UeIwrQuGsPon9fXt4A';
 const GID      = process.env.SHEET_GID || '957661826';   // «Уже разнесли (архив)»
@@ -101,7 +115,7 @@ for (const url of URLS) {
   console.log(`  оставлено колонок: ${п.fields.length} из ${v.fields.length}, ` +
     `${(text.length / 1048576).toFixed(2)} → ${(урезанный.length / 1048576).toFixed(2)} МБ`);
 
-  saved = { text: урезанный, ...п, url };
+  saved = { text: урезанный, полный: text, всегоКолонок: v.fields.length, ...п, url };
   break;
 }
 
@@ -138,4 +152,12 @@ if (fs.existsSync(OUT)) {
 }
 
 fs.writeFileSync(OUT, saved.text);
-console.log(`записано в ${path.relative(ROOT, OUT)}`);
+console.log(`записано в ${path.relative(ROOT, OUT)}` +
+  ` (${(Buffer.byteLength(saved.text) / 1048576).toFixed(2)} МБ)`);
+
+/* Полную выгрузку пишем только после того, как урезанная прошла все
+   проверки: если скачалась ерунда, пусть её не будет ни там, ни там. */
+fs.mkdirSync(path.dirname(FULL), { recursive: true });
+fs.writeFileSync(FULL, saved.полный);
+console.log(`записано в ${path.relative(ROOT, FULL)}` +
+  ` (${(Buffer.byteLength(saved.полный) / 1048576).toFixed(2)} МБ, колонок ${saved.всегоКолонок})`);

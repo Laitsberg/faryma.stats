@@ -65,7 +65,7 @@ test('свежая выгрузка записывается', async () => {
   const { s, адрес } = await сервер(архив(10));
   const дир = папка(), out = path.join(дир, 'data.csv');
   try {
-    const r = await запустить({ SHEET_CSV_URL: адрес, OUT: out });
+    const r = await запустить({ SHEET_CSV_URL: адрес, OUT: out, OUT_FULL: path.join(дир, 'full.csv') });
     assert.equal(r.код, 0, `скачиватель упал:\n${r.out}`);
     assert.ok(fs.existsSync(out), 'файл не записан');
     assert.match(r.out, /свежий стрим №10|строк/, 'нечего не сказал про выгрузку');
@@ -79,7 +79,7 @@ test('старая копия архива не перезаписывает с�
   fs.writeFileSync(out, архив(10));
   const { s, адрес } = await сервер(архив(7, 60));   // строк даже больше, а стрим старее
   try {
-    const r = await запустить({ SHEET_CSV_URL: адрес, OUT: out });
+    const r = await запустить({ SHEET_CSV_URL: адрес, OUT: out, OUT_FULL: path.join(дир, 'full.csv') });
     assert.equal(r.код, 1, `старую копию пропустили:\n${r.out}`);
     assert.match(r.out, /№10/, 'не сказал, какой стрим был');
     assert.match(r.out, /вкладк/i, 'не подсказал, что дело в номере вкладки');
@@ -96,7 +96,7 @@ test('тот же стрим не считается откатом', async () =
   fs.writeFileSync(out, архив(10));
   const { s, адрес } = await сервер(архив(10, 45));
   try {
-    const r = await запустить({ SHEET_CSV_URL: адрес, OUT: out });
+    const r = await запустить({ SHEET_CSV_URL: адрес, OUT: out, OUT_FULL: path.join(дир, 'full.csv') });
     assert.equal(r.код, 0, `обругал нормальную выгрузку:\n${r.out}`);
   } finally { s.close(); fs.rmSync(дир, { recursive: true, force: true }); }
 });
@@ -105,7 +105,7 @@ test('страница входа вместо выгрузки не прохо�
   const { s, адрес } = await сервер('<!DOCTYPE html><html><body>Войдите</body></html>');
   const дир = папка(), out = path.join(дир, 'data.csv');
   try {
-    const r = await запустить({ SHEET_CSV_URL: адрес, OUT: out });
+    const r = await запустить({ SHEET_CSV_URL: адрес, OUT: out, OUT_FULL: path.join(дир, 'full.csv') });
     assert.equal(r.код, 1, 'страницу входа приняли за архив');
     assert.equal(fs.existsSync(out), false, 'записали HTML вместо архива');
     assert.match(r.out, /доступ/i, 'не объяснил, в чём дело');
@@ -140,4 +140,50 @@ test('обрезка ничего не теряет', () => {
   // все нужные колонки на месте
   const поля = P.parse(урезанный, { header: true }).meta.fields;
   for (const k of KEEP) assert.ok(поля.includes(k), `потеряна нужная колонка «${k}»`);
+});
+
+test('полная выгрузка кладётся рядом, со всеми колонками', () => {
+  // Сайту статистики лишние колонки не нужны, а каталогу на официальном
+  // сайте композитора нужны именно они — поэтому файла два.
+  const P = papa();
+  const исходный = архив(5);
+  const урезанный = обрезать(исходный, P);
+  const колонок = x => (P.parse(x, { header: true }).meta.fields || []).length;
+  assert.ok(колонок(исходный) > колонок(урезанный),
+    'в подделке нет лишних колонок — проверять нечего');
+  assert.equal(колонок(урезанный), KEEP.length);
+});
+
+test('оба файла пишутся из одной загрузки', async () => {
+  const { s, адрес } = await сервер(архив(6));
+  const дир = папка(), out = path.join(дир, 'data.csv'), full = path.join(дир, 'full.csv');
+  try {
+    const r = await запустить({ SHEET_CSV_URL: адрес, OUT: out, OUT_FULL: full });
+    assert.equal(r.код, 0, `скачиватель упал:\n${r.out}`);
+    assert.ok(fs.existsSync(full), 'полная выгрузка не записана');
+
+    const P = papa();
+    const полный = fs.readFileSync(full, 'utf8');
+    const краткий = fs.readFileSync(out, 'utf8');
+    assert.ok(полный.includes('длинный пересказ'),
+      'в полной выгрузке нет колонки, ради которой она и нужна');
+    assert.ok(!краткий.includes('длинный пересказ'),
+      'лишняя колонка доехала до сайта статистики');
+
+    // разносы в обоих одни и те же: файлы из одной загрузки
+    const оценок = x => P.parse(x, { header: true, skipEmptyLines: 'greedy' })
+      .data.filter(д => (д['Оценка'] || '').trim()).length;
+    assert.equal(оценок(полный), оценок(краткий), 'файлы разошлись по числу разносов');
+  } finally { s.close(); fs.rmSync(дир, { recursive: true, force: true }); }
+});
+
+test('когда выгрузка плохая, не пишется ни один файл', async () => {
+  const { s, адрес } = await сервер('<!DOCTYPE html><html>Войдите</html>');
+  const дир = папка(), out = path.join(дир, 'data.csv'), full = path.join(дир, 'full.csv');
+  try {
+    const r = await запустить({ SHEET_CSV_URL: адрес, OUT: out, OUT_FULL: full });
+    assert.equal(r.код, 1);
+    assert.equal(fs.existsSync(out), false, 'записан урезанный файл из мусора');
+    assert.equal(fs.existsSync(full), false, 'записана полная выгрузка из мусора');
+  } finally { s.close(); fs.rmSync(дир, { recursive: true, force: true }); }
 });
