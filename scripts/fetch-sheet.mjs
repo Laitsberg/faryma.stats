@@ -18,7 +18,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = process.env.OUT || path.join(ROOT, 'data.csv');
 
 const SHEET_ID = process.env.SHEET_ID || '1yEUr29llt9L1zWavC4lxkyhd6UeIwrQuGsPon9fXt4A';
-const GID      = process.env.SHEET_GID || '1372192852';
+const GID      = process.env.SHEET_GID || '957661826';   // «Уже разнесли (архив)»
 
 /* Адреса пробуем по очереди: у разных способов публикации работает разное.
    Первый успешный и осмысленный ответ выигрывает. */
