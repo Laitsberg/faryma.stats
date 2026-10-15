@@ -13,6 +13,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
+import { обрезать } from './trim-csv.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = process.env.OUT || path.join(ROOT, 'data.csv');
@@ -28,6 +29,7 @@ const URLS = process.env.SHEET_CSV_URL ? [process.env.SHEET_CSV_URL] : [
 ];
 
 const REQUIRED = ['Что', 'Оценка'];
+
 const MIN_KEEP = 0.9;    // новая выгрузка не может быть сильно короче старой
 
 /* Разбор строк-разделителей берём общий — тот же, что у сайта и бота.
@@ -84,7 +86,22 @@ for (const url of URLS) {
   if (!v.ok) { console.log(`  ${v.why} — дальше`); reasons.push(`${short}: ${v.why}`); continue; }
 
   console.log(`  ок: строк ${v.rows}, с оценкой ${v.rated}`);
-  saved = { text, ...v, url };
+
+  /* Режем колонки сразу и тут же перепроверяем: разносов должно
+     остаться ровно столько же. Если обрезка что-то потеряла — лучше
+     упасть, чем записать обкусанный архив. */
+  const урезанный = обрезать(text, papa());
+  const п = inspect(урезанный);
+  if (!п.ok || п.rated !== v.rated) {
+    const что = п.ok ? `с оценкой было ${v.rated}, после обрезки ${п.rated}` : п.why;
+    console.log(`  обрезка колонок всё испортила: ${что} — дальше`);
+    reasons.push(`${short}: обрезка — ${что}`);
+    continue;
+  }
+  console.log(`  оставлено колонок: ${п.fields.length} из ${v.fields.length}, ` +
+    `${(text.length / 1048576).toFixed(2)} → ${(урезанный.length / 1048576).toFixed(2)} МБ`);
+
+  saved = { text: урезанный, ...п, url };
   break;
 }
 
