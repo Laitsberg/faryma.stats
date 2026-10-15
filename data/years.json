@@ -101939,9 +101939,103 @@
    "длит": 283,
    "spТип": "single",
    "вариантов": 1
+  },
+  "myth & roid|frozen rain": {
+   "artist": "MYTH & ROID",
+   "title": "Frozen Rain",
+   "разносов": 1,
+   "year": 2017,
+   "score": 100,
+   "как": "ссылка",
+   "v": 8,
+   "sid": "2ZapBCsQ5sWMNr9Tr1n8LX",
+   "spTitle": "Frozen Rain",
+   "spArtist": "MYTH & ROID",
+   "spAlbum": "TVアニメ「幼女戦記」オープニングテーマ「JINGO JUNGLE」",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e02b57af18fa686e77986a7efc6",
+   "альбом": "TVアニメ「幼女戦記」オープニングテーマ「JINGO JUNGLE」",
+   "длит": 230,
+   "годСсылки": 2017,
+   "годПоиска": null
+  },
+  "рубеж веков|кухонный космос": {
+   "artist": "Рубеж Веков",
+   "title": "Кухонный космос",
+   "разносов": 1,
+   "year": 2024,
+   "score": 100,
+   "как": "ссылка",
+   "v": 8,
+   "sid": "7K06WQqNi8bk0qr7MNEY93",
+   "spTitle": "Кухонный Космос",
+   "spArtist": "Рубеж Веков",
+   "spAlbum": "Кухонный космос",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e02b4f9187862f77a1c2e5ec5d9",
+   "альбом": "Кухонный космос",
+   "длит": 269,
+   "годСсылки": 2024,
+   "годПоиска": null
+  },
+  "johan lindgren|idle browsing": {
+   "artist": "Johan Lindgren",
+   "title": "Idle Browsing",
+   "разносов": 1,
+   "year": 2012,
+   "score": 100,
+   "как": "ссылка",
+   "v": 8,
+   "sid": "1xw0sDGjX2HZDYg9hWbuww",
+   "spTitle": "Idle Browsing",
+   "spArtist": "Paradox Interactive",
+   "spAlbum": "Magicka",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e0200992c34527b3caf905d4862",
+   "альбом": "Magicka",
+   "длит": 149,
+   "годСсылки": 2012,
+   "годПоиска": null
+  },
+  "geoffrey day|pt-1x12": {
+   "artist": "Geoffrey Day",
+   "title": "PT-1X12",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
+  },
+  "takuma terashima|nameless story": {
+   "artist": "Takuma Terashima",
+   "title": "Nameless Story",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
+  },
+  "kouji wada|innocent ~mujaki na mama de~": {
+   "artist": "Kouji Wada",
+   "title": "Innocent ~Mujaki na mama de~",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
+  },
+  "run the jewels feat. maceo, lil bub, delonte & snoop dogg|meowpurrdy + котик боня": {
+   "artist": "Run the Jewels feat. Maceo, Lil BUB, Delonte & Snoop Dogg",
+   "title": "Meowpurrdy + Котик Боня",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
+  },
+  "plawerian|takin' you down": {
+   "artist": "Plawerian",
+   "title": "Takin' You Down",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
   }
  },
  "source": "MusicBrainz",
  "note": "year — самый ранний выпуск записи; обложка — картинка альбома 300×300; альбом и длит (секунды) — оттуда же; score — наша уверенность в совпадении, 0–100",
- "generated": "2026-10-15T14:59:54.238Z"
+ "generated": "2026-10-15T17:48:25.307Z"
 }
