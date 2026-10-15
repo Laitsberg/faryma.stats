@@ -101921,9 +101921,27 @@
    "длит": 227,
    "spТип": "album",
    "вариантов": 1
+  },
+  "hoshimachi suisei|ghost": {
+   "artist": "Hoshimachi Suisei",
+   "title": "GHOST",
+   "разносов": 1,
+   "year": 2021,
+   "score": 100,
+   "как": "поиск:название",
+   "v": 8,
+   "sid": "6Ft1XuvNszzYKUzWYK67VR",
+   "spTitle": "GHOST",
+   "spArtist": "Hoshimachi Suisei",
+   "spAlbum": "GHOST",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e02194d7025ba5e17eeadd3a10f",
+   "альбом": "GHOST",
+   "длит": 283,
+   "spТип": "single",
+   "вариантов": 1
   }
  },
  "source": "MusicBrainz",
  "note": "year — самый ранний выпуск записи; обложка — картинка альбома 300×300; альбом и длит (секунды) — оттуда же; score — наша уверенность в совпадении, 0–100",
- "generated": "2026-10-15T12:41:46.450Z"
+ "generated": "2026-10-15T14:59:54.238Z"
 }
