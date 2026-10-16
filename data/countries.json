@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-16T09:01:38.629Z",
+ "generated": "2026-10-16T17:30:25.599Z",
  "artists": {
   "7": {
    "name": "7",
@@ -44247,6 +44247,40 @@
    "score": 100,
    "mbid": "cea4a3b8-c26c-4b61-a243-cf72555e2c71",
    "mbName": "Víkingur Ólafsson"
+  },
+  "machico & ikumi hasegawa & yui tsukada & sayaka kikuchi & kanoki sudo": {
+   "name": "Machico & Ikumi Hasegawa & Yui Tsukada & Sayaka Kikuchi & Kanoki Sudo",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "manaka iwami & shino shimoji & maria sashide & yuko natsuyoshi & kaya okuno & ayasa ito & miyu kubota": {
+   "name": "Manaka Iwami & Shino Shimoji & Maria Sashide & Yuko Natsuyoshi & Kaya Okuno & Ayasa Ito & Miyu Kubota",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "marika kono & sumire uesaka": {
+   "name": "Marika Kono & Sumire Uesaka",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "yuko natsuyoshi & kaya okuno & ayasa ito": {
+   "name": "Yuko Natsuyoshi & Kaya Okuno & Ayasa Ito",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "franz ferdinand": {
+   "name": "Franz Ferdinand",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "aa7a2827-f74b-473c-bd79-03d065835cf7",
+   "mbName": "Franz Ferdinand"
   }
  },
  "source": "MusicBrainz",
