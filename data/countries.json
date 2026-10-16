@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-15T17:48:02.718Z",
+ "generated": "2026-10-16T09:01:38.629Z",
  "artists": {
   "7": {
    "name": "7",
@@ -44196,6 +44196,57 @@
    "tracks": 1,
    "country": null,
    "score": 0
+  },
+  "geoffplaysguitar": {
+   "name": "GeoffPlaysGuitar",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "472a8c1b-ffef-400a-b4b4-8d5741d3ca85",
+   "mbName": "Geoffrey Day"
+  },
+  "mötley crüe": {
+   "name": "Mötley Crüe",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "26f07661-e115-471d-a930-206f5c89d17c",
+   "mbName": "Mötley Crüe"
+  },
+  "akari kito": {
+   "name": "Akari Kito",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "8ff612ba-0f69-4547-b5ae-c74a056758d9",
+   "mbName": "鬼頭明里"
+  },
+  "past self": {
+   "name": "past self",
+   "tracks": 1,
+   "country": "US",
+   "area": "Las Vegas",
+   "areaId": "cd22d0ba-c79b-45b3-a8e0-617b240df5f0",
+   "score": 100,
+   "mbid": "7416ac96-f665-4675-a78f-504dadc7b4f9",
+   "mbName": "past self",
+   "viaArea": true
+  },
+  "víkingur ólafsson": {
+   "name": "Víkingur Ólafsson",
+   "tracks": 1,
+   "country": "IS",
+   "area": "Iceland",
+   "areaId": "48802a32-075a-3805-a183-277c66047693",
+   "score": 100,
+   "mbid": "cea4a3b8-c26c-4b61-a243-cf72555e2c71",
+   "mbName": "Víkingur Ólafsson"
   }
  },
  "source": "MusicBrainz",
