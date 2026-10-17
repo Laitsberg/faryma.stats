@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-17T08:33:14.361Z",
+ "generated": "2026-10-17T16:29:15.293Z",
  "artists": {
   "7": {
    "name": "7",
@@ -44299,6 +44299,16 @@
    "tracks": 1,
    "country": null,
    "score": 0
+  },
+  "teach-in": {
+   "name": "Teach-In",
+   "tracks": 1,
+   "country": "NL",
+   "area": "Netherlands",
+   "areaId": "ef1b7cc0-cd26-36f4-8ea0-04d9623786c7",
+   "score": 100,
+   "mbid": "6fc64a28-b4f5-483e-a45d-f49151277a88",
+   "mbName": "Teach‐In"
   }
  },
  "source": "MusicBrainz",
