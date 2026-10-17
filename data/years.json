@@ -102607,9 +102607,45 @@
    "длит": 177,
    "годСсылки": 2023,
    "годПоиска": null
+  },
+  "masayoshi soken|forged in crimson": {
+   "artist": "Masayoshi Soken",
+   "title": "Forged in Crimson",
+   "разносов": 1,
+   "year": 2024,
+   "score": 100,
+   "как": "ссылка",
+   "v": 8,
+   "sid": "6zC8cnqGh3xXsZsMFKaIwX",
+   "spTitle": "Forged in Crimson",
+   "spArtist": "祖堅 正慶",
+   "spAlbum": "GROWING LIGHT: FINAL FANTASY XIV Original Soundtrack",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e028084388b33f0cd08688f80b0",
+   "альбом": "GROWING LIGHT: FINAL FANTASY XIV Original Soundtrack",
+   "длит": 378,
+   "годСсылки": 2024,
+   "годПоиска": null
+  },
+  "teach-in|i'm alone": {
+   "artist": "Teach-In",
+   "title": "I'm Alone",
+   "разносов": 1,
+   "year": 2017,
+   "score": 100,
+   "как": "поиск:название",
+   "v": 8,
+   "sid": "5PcwLXumKuVVtcYXy3HD1S",
+   "spTitle": "I'm Alone",
+   "spArtist": "Teach In",
+   "spAlbum": "The Best Of Teach In",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e0277d5f95e142906d3cc18a04a",
+   "альбом": "The Best Of Teach In",
+   "длит": 177,
+   "spТип": "compilation",
+   "вариантов": 1
   }
  },
  "source": "MusicBrainz",
  "note": "year — самый ранний выпуск записи; обложка — картинка альбома 300×300; альбом и длит (секунды) — оттуда же; score — наша уверенность в совпадении, 0–100",
- "generated": "2026-10-17T08:33:36.101Z"
+ "generated": "2026-10-17T16:29:33.120Z"
 }
