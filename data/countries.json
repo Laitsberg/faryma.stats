@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-17T16:29:15.293Z",
+ "generated": "2026-10-18T08:51:04.405Z",
  "artists": {
   "7": {
    "name": "7",
@@ -44309,6 +44309,109 @@
    "score": 100,
    "mbid": "6fc64a28-b4f5-483e-a45d-f49151277a88",
    "mbName": "Teach‐In"
+  },
+  "куок": {
+   "name": "КУОК",
+   "tracks": 2,
+   "country": "CZ",
+   "area": "Praha",
+   "areaId": "0a65a727-7465-4e6c-8b15-ed4d09e021ee",
+   "score": 100,
+   "mbid": "58f3c611-8831-4bcc-8b52-895116924f84",
+   "mbName": "КУОК",
+   "viaArea": true
+  },
+  "tame impala, sza & king gizzard & the lizard wizard": {
+   "name": "Tame Impala, SZA & King Gizzard & the Lizard Wizard",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "train": {
+   "name": "Train",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "1d0b2ed9-56a2-4792-a5a1-a47313fb24c4",
+   "mbName": "D‐Train"
+  },
+  "eselisha": {
+   "name": "ESELISHA",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "gemie": {
+   "name": "Gemie",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "fae928b8-b648-4647-9993-bda473e55272",
+   "mbName": "Gemie"
+  },
+  "hudson lee & false noise": {
+   "name": "Hudson Lee & False Noise",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "villian & madk1d": {
+   "name": "VILLIAN & madk1d",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "andrew garfield & vanessa hudgens": {
+   "name": "Andrew Garfield & Vanessa Hudgens",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "akira yamaoka & matthew clanton": {
+   "name": "Akira Yamaoka & Matthew Clanton",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "hoyo-mix & hanser": {
+   "name": "HOYO-MiX & Hanser",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "spark!!sound!!show!!": {
+   "name": "SPARK!!SOUND!!SHOW!!",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "9442e9db-f88b-4267-9a83-84550e62ddb0",
+   "mbName": "SPARK!!SOUND!!SHOW!!"
+  },
+  "interpol": {
+   "name": "Interpol",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "b23e8a63-8f47-4882-b55b-df2c92ef400e",
+   "mbName": "Interpol"
+  },
+  "jukio kallio": {
+   "name": "Jukio Kallio",
+   "tracks": 1,
+   "country": "FI",
+   "area": "Finland",
+   "areaId": "6a264f94-6ff1-30b1-9a81-41f7bfabd616",
+   "score": 100,
+   "mbid": "3caee508-608d-4d6b-96d4-cf8349d62f09",
+   "mbName": "Jukio Kallio"
   }
  },
  "source": "MusicBrainz",
@@ -44580,6 +44683,8 @@
   "a48bedb2-305a-4ca0-b549-30d0842a8808": "RU",
   "afc021d0-d86e-4e4d-bace-c0c0c53c9580": "RU",
   "b8a2776a-eedf-48ea-a6f3-1a9070f0b823": "DE",
-  "f5cd9916-2a4e-4abf-a301-9525ef598436": "JP"
+  "f5cd9916-2a4e-4abf-a301-9525ef598436": "JP",
+  "51d34c28-61bf-3d21-849f-7492672a9d44": "CZ",
+  "0a65a727-7465-4e6c-8b15-ed4d09e021ee": "CZ"
  }
 }
