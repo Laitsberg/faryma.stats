@@ -103046,9 +103046,17 @@
    "длит": 255,
    "spТип": "album",
    "вариантов": 2
+  },
+  "domitori san wave|night jungles": {
+   "artist": "Domitori San Wave",
+   "title": "Night Jungles",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
   }
  },
  "source": "MusicBrainz",
  "note": "year — самый ранний выпуск записи; обложка — картинка альбома 300×300; альбом и длит (секунды) — оттуда же; score — наша уверенность в совпадении, 0–100",
- "generated": "2026-10-18T08:51:32.384Z"
+ "generated": "2026-10-20T12:46:15.513Z"
 }
