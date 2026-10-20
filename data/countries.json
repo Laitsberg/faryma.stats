@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-18T08:51:04.405Z",
+ "generated": "2026-10-20T12:45:55.593Z",
  "artists": {
   "7": {
    "name": "7",
@@ -44412,6 +44412,12 @@
    "score": 100,
    "mbid": "3caee508-608d-4d6b-96d4-cf8349d62f09",
    "mbName": "Jukio Kallio"
+  },
+  "domitori san wave": {
+   "name": "Domitori San Wave",
+   "tracks": 1,
+   "country": null,
+   "score": 0
   }
  },
  "source": "MusicBrainz",
