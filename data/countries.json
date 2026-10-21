@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-20T12:45:55.593Z",
+ "generated": "2026-10-21T18:06:45.975Z",
  "artists": {
   "7": {
    "name": "7",
@@ -44415,6 +44415,48 @@
   },
   "domitori san wave": {
    "name": "Domitori San Wave",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "andrei pushkarev": {
+   "name": "Andrei Pushkarev",
+   "tracks": 1,
+   "country": "UA",
+   "area": "Ukraine",
+   "areaId": "904768d0-61ca-3c40-93ac-93adc36fef4b",
+   "score": 100,
+   "mbid": "146f3a8d-d943-4d56-bee3-59740d30ca70",
+   "mbName": "Andrei Pushkarev"
+  },
+  "miyeon, soyeon(i-dle), sophie powers & mimi webb": {
+   "name": "MIYEON, SOYEON(i-dle), Sophie Powers & Mimi Webb",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "zach beever": {
+   "name": "Zach Beever",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "a08cbbe8-0d78-422f-8e92-09d767e762d0",
+   "mbName": "Zach Beever"
+  },
+  "marina herlop": {
+   "name": "Marina Herlop",
+   "tracks": 1,
+   "country": "ES",
+   "area": "Spain",
+   "areaId": "471c46a7-afc5-31c4-923c-d0444f5053a4",
+   "score": 100,
+   "mbid": "a9cf7208-96ef-4b24-acfd-48f361b10f26",
+   "mbName": "Marina Herlop"
+  },
+  "technopop yuki synthesizer-chan": {
+   "name": "Technopop Yuki Synthesizer-chan",
    "tracks": 1,
    "country": null,
    "score": 0
