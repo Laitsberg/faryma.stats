@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-22T09:24:32.586Z",
+ "generated": "2026-10-22T18:02:14.687Z",
  "artists": {
   "7": {
    "name": "7",
@@ -44515,6 +44515,64 @@
   },
   "mark meadows & jack wolfe": {
    "name": "Mark Meadows & Jack Wolfe",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "kanako takatsuki": {
+   "name": "Kanako Takatsuki",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "0d5c9452-b71c-4d98-8596-0b19758a1c50",
+   "mbName": "高槻かなこ"
+  },
+  "dew": {
+   "name": "Dew",
+   "tracks": 1,
+   "country": "DE",
+   "area": "Germany",
+   "areaId": "85752fda-13c4-31a3-bee5-0e5cb1f51dad",
+   "score": 100,
+   "mbid": "7af98a1d-d993-44f7-9840-ab9530fc2d64",
+   "mbName": "Dew‐Scented"
+  },
+  "rufcone1": {
+   "name": "Rufcone1",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "kanskaart": {
+   "name": "Kanskaart",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "jonna jinton": {
+   "name": "Jonna Jinton",
+   "tracks": 1,
+   "country": "SE",
+   "area": "Sweden",
+   "areaId": "23d10872-f5ae-3f0c-bf55-332788a16ecb",
+   "score": 100,
+   "mbid": "70c5b5e2-f8c7-4e10-a376-798caf254198",
+   "mbName": "Jonna Jinton"
+  },
+  "la dispute": {
+   "name": "La Dispute",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "2ec89bcc-5bf9-4d2a-ac5e-44b7496d115a",
+   "mbName": "La Dispute"
+  },
+  "spevácky zbor apollo": {
+   "name": "Spevácky zbor APOLLO",
    "tracks": 1,
    "country": null,
    "score": 0
