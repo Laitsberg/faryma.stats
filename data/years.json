@@ -103571,9 +103571,35 @@
    "длит": 231,
    "spТип": "album",
    "вариантов": 2
+  },
+  "hoshimachi suisei|debutante ball": {
+   "artist": "Hoshimachi Suisei",
+   "title": "Debutante Ball",
+   "разносов": 1,
+   "year": 2023,
+   "score": 100,
+   "как": "ссылка",
+   "v": 8,
+   "sid": "0LsT2gBjRzFc8BSPBfVATh",
+   "spTitle": "デビュタントボール",
+   "spArtist": "Hoshimachi Suisei",
+   "spAlbum": "Specter",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e02d71845bf949eb9130ef61481",
+   "альбом": "Specter",
+   "длит": 349,
+   "годСсылки": 2023,
+   "годПоиска": null
+  },
+  "павел пламенев|песни и сказки смерти": {
+   "artist": "Павел Пламенев",
+   "title": "Песни и сказки Смерти",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
   }
  },
  "source": "MusicBrainz",
  "note": "year — самый ранний выпуск записи; обложка — картинка альбома 300×300; альбом и длит (секунды) — оттуда же; score — наша уверенность в совпадении, 0–100",
- "generated": "2026-10-22T09:24:56.736Z"
+ "generated": "2026-10-22T15:17:08.980Z"
 }
