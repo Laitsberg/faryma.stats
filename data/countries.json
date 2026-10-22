@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-21T18:06:45.975Z",
+ "generated": "2026-10-22T09:24:32.586Z",
  "artists": {
   "7": {
    "name": "7",
@@ -44457,6 +44457,64 @@
   },
   "technopop yuki synthesizer-chan": {
    "name": "Technopop Yuki Synthesizer-chan",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "jakub maciej jeżak": {
+   "name": "Jakub Maciej Jeżak",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "madmans esprit": {
+   "name": "Madmans Esprit",
+   "tracks": 1,
+   "country": "KR",
+   "area": "South Korea",
+   "areaId": "b9f7d640-46e8-313e-b158-ded6d18593b3",
+   "score": 100,
+   "mbid": "a1b3ec79-603f-4945-8270-c28cb68397e5",
+   "mbName": "Madmans Esprit"
+  },
+  "slint": {
+   "name": "Slint",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "2869c510-2679-4a3f-bf15-e5e8b49f2f28",
+   "mbName": "Slint"
+  },
+  "sunny day real estate": {
+   "name": "Sunny Day Real Estate",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "86b24e8f-a4d9-4c84-83ee-fde0d14ad9fa",
+   "mbName": "Sunny Day Real Estate"
+  },
+  "league of legends & djerv": {
+   "name": "League of Legends & Djerv",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "the wanted": {
+   "name": "The Wanted",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "f367c02c-e32f-493e-95a7-8b3f06fcff06",
+   "mbName": "The Wanted"
+  },
+  "mark meadows & jack wolfe": {
+   "name": "Mark Meadows & Jack Wolfe",
    "tracks": 1,
    "country": null,
    "score": 0
