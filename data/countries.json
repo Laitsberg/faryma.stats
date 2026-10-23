@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-22T18:02:14.687Z",
+ "generated": "2026-10-23T09:20:33.782Z",
  "artists": {
   "7": {
    "name": "7",
@@ -44576,6 +44576,27 @@
    "tracks": 1,
    "country": null,
    "score": 0
+  },
+  "saya gray": {
+   "name": "Saya Gray",
+   "tracks": 1,
+   "country": "CA",
+   "area": "Toronto",
+   "areaId": "74b24e62-d2fe-42d2-9d96-31f2da756c77",
+   "score": 100,
+   "mbid": "b949a783-214b-429d-a184-4e75c0f8be9c",
+   "mbName": "Saya Gray",
+   "viaArea": true
+  },
+  "jonathan freeman": {
+   "name": "Jonathan Freeman",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "86bdb2d4-f629-4a75-b893-6951b460c269",
+   "mbName": "Jonathan Freeman-Attwood"
   }
  },
  "source": "MusicBrainz",
