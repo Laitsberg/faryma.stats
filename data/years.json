@@ -103783,9 +103783,43 @@
    "длит": 178,
    "spТип": "single",
    "вариантов": 1
+  },
+  "sakamata chloe|nisemono ningen 40-gou": {
+   "artist": "Sakamata Chloe",
+   "title": "Nisemono Ningen 40-gou",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
+  },
+  "two feathers feat. serj tankian|no tomorrow": {
+   "artist": "Two Feathers feat. Serj Tankian",
+   "title": "No Tomorrow",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
+  },
+  "calum graham|phoenix rising": {
+   "artist": "Calum Graham",
+   "title": "Phoenix Rising",
+   "разносов": 1,
+   "year": 2013,
+   "score": 100,
+   "как": "поиск:название",
+   "v": 8,
+   "sid": "2GQE8BofXopuGhwoIu32rp",
+   "spTitle": "Phoenix Rising",
+   "spArtist": "Calum Graham",
+   "spAlbum": "Phoenix Rising",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e02fb4791e729b0499abb2f3504",
+   "альбом": "Tabula Rasa",
+   "длит": 269,
+   "spТип": "album",
+   "вариантов": 3
   }
  },
  "source": "MusicBrainz",
  "note": "year — самый ранний выпуск записи; обложка — картинка альбома 300×300; альбом и длит (секунды) — оттуда же; score — наша уверенность в совпадении, 0–100",
- "generated": "2026-10-23T09:20:59.694Z"
+ "generated": "2026-10-24T16:40:52.774Z"
 }
