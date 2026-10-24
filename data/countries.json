@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-23T09:20:33.782Z",
+ "generated": "2026-10-24T16:40:33.812Z",
  "artists": {
   "7": {
    "name": "7",
@@ -44597,6 +44597,16 @@
    "score": 100,
    "mbid": "86bdb2d4-f629-4a75-b893-6951b460c269",
    "mbName": "Jonathan Freeman-Attwood"
+  },
+  "calum graham": {
+   "name": "Calum Graham",
+   "tracks": 1,
+   "country": "CA",
+   "area": "Canada",
+   "areaId": "71bbafaa-e825-3e15-8ca9-017dcad1748b",
+   "score": 100,
+   "mbid": "e0aeda32-5819-49e8-aa98-63568cfbd4f8",
+   "mbName": "Calum Graham"
   }
  },
  "source": "MusicBrainz",
