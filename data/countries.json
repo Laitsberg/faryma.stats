@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-24T16:40:33.812Z",
+ "generated": "2026-10-25T09:10:01.693Z",
  "artists": {
   "7": {
    "name": "7",
@@ -44607,6 +44607,196 @@
    "score": 100,
    "mbid": "e0aeda32-5819-49e8-aa98-63568cfbd4f8",
    "mbName": "Calum Graham"
+  },
+  "heronwater": {
+   "name": "Heronwater",
+   "tracks": 4,
+   "country": "RU",
+   "area": "Kostroma",
+   "areaId": "3c8ab119-72a0-4132-935f-2b441f457137",
+   "score": 100,
+   "mbid": "f508e69f-c5e9-42e7-816a-fd3d687db2e0",
+   "mbName": "Heronwater",
+   "viaArea": true
+  },
+  "haruka shimotsuki": {
+   "name": "Haruka Shimotsuki",
+   "tracks": 2,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "5ccc8eae-7a89-4aa4-8919-a3cbad20e219",
+   "mbName": "霜月はるか"
+  },
+  "paon": {
+   "name": "PAON",
+   "tracks": 1,
+   "country": "BE",
+   "area": "Belgium",
+   "areaId": "5b8a5ee5-0bb3-34cf-9a75-c27c44e341fc",
+   "score": 100,
+   "mbid": "2381a569-1919-4e41-be22-367dc452e955",
+   "mbName": "PAON"
+  },
+  "guntor": {
+   "name": "guntor",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "nick drake": {
+   "name": "Nick Drake",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "99ea432a-e3d8-42cb-9d5e-db316a6a8458",
+   "mbName": "Nick Drake"
+  },
+  "midas fall": {
+   "name": "Midas Fall",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "1cae7427-4a3b-4629-aaac-f81204fe6abf",
+   "mbName": "Midas Fall"
+  },
+  "mid-air thief": {
+   "name": "Mid-Air Thief",
+   "tracks": 1,
+   "country": "KR",
+   "area": "South Korea",
+   "areaId": "b9f7d640-46e8-313e-b158-ded6d18593b3",
+   "score": 100,
+   "mbid": "09d6b33f-6bdf-4441-8334-200696ad98e0",
+   "mbName": "공중도둑"
+  },
+  "невидимка": {
+   "name": "невидимка",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "af1ea8f1-875d-4793-8fe4-bb05999a7810",
+   "mbName": "невиди́мка"
+  },
+  "charlie sheen": {
+   "name": "Charlie Sheen",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "45ae606d-cbdd-4f7f-b04f-b04456185686",
+   "mbName": "Black Masks and Charlie Sheen"
+  },
+  "pryapisme": {
+   "name": "Pryapisme",
+   "tracks": 1,
+   "country": "FR",
+   "area": "France",
+   "areaId": "08310658-51eb-3801-80de-5a0739207115",
+   "score": 100,
+   "mbid": "45b00e82-804d-43c2-ab4f-6afd65a482dc",
+   "mbName": "Pryapisme"
+  },
+  "rage": {
+   "name": "Rage",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "5aa6b20c-c088-423a-9c39-edd6bf85b9fa",
+   "mbName": "Rage"
+  },
+  "invaders wish & alterclad": {
+   "name": "Invaders WISH & Alterclad",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "kaneko lumi": {
+   "name": "Kaneko Lumi",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "53816f81-7f7c-4806-ac73-f75c845a6b30",
+   "mbName": "Kaneko Lumi"
+  },
+  "love solfege": {
+   "name": "love solfege",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "8d104649-ab08-4581-8854-5c103c385ad3",
+   "mbName": "love solfege"
+  },
+  "adys": {
+   "name": "AdyS",
+   "tracks": 1,
+   "country": "FR",
+   "area": "France",
+   "areaId": "08310658-51eb-3801-80de-5a0739207115",
+   "score": 100,
+   "mbid": "e3524831-af32-4c7b-b9a3-48c32217b79d",
+   "mbName": "AdyS"
+  },
+  "invaders wish & turbo": {
+   "name": "Invaders WISH & Turbo",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "jelly hoshiumi": {
+   "name": "Jelly Hoshiumi",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "9551a5ca-ee23-48e2-805e-19d61f473272",
+   "mbName": "Jelly Hoshiumi"
+  },
+  "ivri": {
+   "name": "ivri",
+   "tracks": 1,
+   "country": "US",
+   "area": "New York",
+   "areaId": "74e50e58-5deb-4b99-93a2-decbb365c07f",
+   "score": 100,
+   "mbid": "d5952849-0b94-4401-ba6f-81559f17f4b9",
+   "mbName": "ivri",
+   "viaArea": true
+  },
+  "silent civilian": {
+   "name": "Silent Civilian",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "6e5308d9-8981-423f-ba52-0e20211306a1",
+   "mbName": "Silent Civilian"
+  },
+  "cold in may": {
+   "name": "Cold In May",
+   "tracks": 1,
+   "country": null,
+   "area": "Minsk",
+   "areaId": "47323b71-af21-42f7-ae02-380b31ee1b94",
+   "score": 100,
+   "mbid": "5494327a-6e49-42e9-8e5d-2eadde15c14a",
+   "mbName": "Cold in May"
   }
  },
  "source": "MusicBrainz",
@@ -44880,6 +45070,8 @@
   "b8a2776a-eedf-48ea-a6f3-1a9070f0b823": "DE",
   "f5cd9916-2a4e-4abf-a301-9525ef598436": "JP",
   "51d34c28-61bf-3d21-849f-7492672a9d44": "CZ",
-  "0a65a727-7465-4e6c-8b15-ed4d09e021ee": "CZ"
+  "0a65a727-7465-4e6c-8b15-ed4d09e021ee": "CZ",
+  "3293f341-d81d-4026-ab9a-529efa244162": "RU",
+  "3c8ab119-72a0-4132-935f-2b441f457137": "RU"
  }
 }
