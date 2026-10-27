@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-25T09:10:01.693Z",
+ "generated": "2026-10-27T18:44:37.597Z",
  "artists": {
   "7": {
    "name": "7",
@@ -44797,6 +44797,65 @@
    "score": 100,
    "mbid": "5494327a-6e49-42e9-8e5d-2eadde15c14a",
    "mbName": "Cold in May"
+  },
+  "jubyphonic": {
+   "name": "JubyPhonic",
+   "tracks": 1,
+   "country": "US",
+   "area": "Houston",
+   "areaId": "c920948b-83e3-40b7-8fe9-9ab5abaac55b",
+   "score": 100,
+   "mbid": "60189e37-8be8-434f-9b23-b989e196a253",
+   "mbName": "JubyPhonic",
+   "viaArea": true
+  },
+  "40mp & yuko natsuyoshi": {
+   "name": "40mP & Yuko Natsuyoshi",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "wilco": {
+   "name": "Wilco",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "9e53f84d-ef44-4c16-9677-5fd4d78cbd7d",
+   "mbName": "Wilco"
+  },
+  "the pineapple thief": {
+   "name": "The Pineapple Thief",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "e8f55abb-a6d5-4e5f-81b4-14f9cc320519",
+   "mbName": "The Pineapple Thief"
+  },
+  "misato matsuoka": {
+   "name": "Misato Matsuoka",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "summoners 2+": {
+   "name": "SUMMONERS 2+",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "07160df9-9053-42f9-95e7-ec65fd857f11",
+   "mbName": "SUMMONERS 2+"
+  },
+  "ui & kasane teto": {
+   "name": "Ui & Kasane Teto",
+   "tracks": 1,
+   "country": null,
+   "score": 0
   }
  },
  "source": "MusicBrainz",
