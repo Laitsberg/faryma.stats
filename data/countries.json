@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-27T18:44:37.597Z",
+ "generated": "2026-10-28T10:34:41.233Z",
  "artists": {
   "7": {
    "name": "7",
@@ -44853,6 +44853,44 @@
   },
   "ui & kasane teto": {
    "name": "Ui & Kasane Teto",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "life on venus": {
+   "name": "Life On Venus",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "ca5d868f-67b6-42ff-ac16-3c3303130530",
+   "mbName": "Life on Venus"
+  },
+  "sheena easton & jesse corti": {
+   "name": "Sheena Easton & Jesse Corti",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "chemistry": {
+   "name": "CHEMISTRY",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "c8524763-e7d7-4225-8a9a-e7b64db5a1e2",
+   "mbName": "CHEMISTRY"
+  },
+  "george hearn & ernest borgnine": {
+   "name": "George Hearn & Ernest Borgnine",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "jesse corti & charlie sheen": {
+   "name": "Jesse Corti & Charlie Sheen",
    "tracks": 1,
    "country": null,
    "score": 0
