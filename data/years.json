@@ -104494,9 +104494,87 @@
    "year": null,
    "score": 0,
    "v": 8
+  },
+  "life on venus|rosetta": {
+   "artist": "Life On Venus",
+   "title": "Rosetta",
+   "разносов": 1,
+   "year": 2017,
+   "score": 100,
+   "как": "ссылка",
+   "v": 8,
+   "sid": "085QlXXKsGSb9cu4Z7cUgX",
+   "spTitle": "Rosetta",
+   "spArtist": "Life On Venus",
+   "spAlbum": "Encounters",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e02e48af5af58226dccf1208310",
+   "альбом": "Encounters",
+   "длит": 266,
+   "годСсылки": 2017,
+   "годПоиска": null
+  },
+  "tsukasa saitoh|the final battle": {
+   "artist": "Tsukasa Saitoh",
+   "title": "The Final Battle",
+   "разносов": 1,
+   "year": 2022,
+   "score": 100,
+   "как": "ссылка",
+   "v": 8,
+   "sid": "05CTZquJvcOZIyWlaOVBT0",
+   "spTitle": "The Final Battle",
+   "spArtist": "Tsukasa Saitoh",
+   "spAlbum": "ELDEN RING ORIGINAL SOUND TRACK",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e024cf5f1a605482e2aa10b5740",
+   "альбом": "ELDEN RING ORIGINAL SOUND TRACK",
+   "длит": 298,
+   "годСсылки": 2022,
+   "годПоиска": null
+  },
+  "sheena easton & jesse corti|i will always be with you": {
+   "artist": "Sheena Easton & Jesse Corti",
+   "title": "I Will Always Be With You",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
+  },
+  "chemistry|period": {
+   "artist": "CHEMISTRY",
+   "title": "Period",
+   "разносов": 1,
+   "year": 2010,
+   "score": 100,
+   "как": "поиск:название",
+   "v": 8,
+   "sid": "174pfne5bPXdttkebhA37K",
+   "spTitle": "Period",
+   "spArtist": "CHEMISTRY",
+   "spAlbum": "regeneration",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e02b33e2f35841c1b6edc33ae0f",
+   "альбом": "regeneration",
+   "длит": 215,
+   "spТип": "album",
+   "вариантов": 2
+  },
+  "george hearn & ernest borgnine|it feels so good to be bad": {
+   "artist": "George Hearn & Ernest Borgnine",
+   "title": "It Feels So Good to Be Bad",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
+  },
+  "jesse corti & charlie sheen|it's too heavenly here": {
+   "artist": "Jesse Corti & Charlie Sheen",
+   "title": "It's Too Heavenly Here",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
   }
  },
  "source": "MusicBrainz",
  "note": "year — самый ранний выпуск записи; обложка — картинка альбома 300×300; альбом и длит (секунды) — оттуда же; score — наша уверенность в совпадении, 0–100",
- "generated": "2026-10-27T18:45:06.097Z"
+ "generated": "2026-10-28T10:35:02.792Z"
 }
