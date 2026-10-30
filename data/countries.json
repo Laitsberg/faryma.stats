@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-28T10:34:41.233Z",
+ "generated": "2026-10-30T18:39:30.620Z",
  "artists": {
   "7": {
    "name": "7",
@@ -44894,6 +44894,33 @@
    "tracks": 1,
    "country": null,
    "score": 0
+  },
+  "моя дорогая": {
+   "name": "Моя дорогая",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "b6551be3-2f9d-45e0-93b8-3496874f8caa",
+   "mbName": "Моя дорогая"
+  },
+  "antropoceno & sonhos tomam conta": {
+   "name": "Antropoceno & sonhos tomam conta",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "paraskeva": {
+   "name": "Paraskeva",
+   "tracks": 1,
+   "country": "GB",
+   "area": "London",
+   "areaId": "f03d09b3-39dc-4083-afd6-159e3f0d462f",
+   "score": 100,
+   "mbid": "d12a33f7-c968-42b9-b76f-b0184332006f",
+   "mbName": "Kristina Paraskeva",
+   "viaArea": true
   }
  },
  "source": "MusicBrainz",
