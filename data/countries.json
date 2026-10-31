@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T13:41:26.026Z",
+ "generated": "2026-10-31T17:48:25.539Z",
  "artists": {
   "7": {
    "name": "7",
@@ -44980,6 +44980,36 @@
    "tracks": 1,
    "country": null,
    "score": 0
+  },
+  "the deku trio": {
+   "name": "The Deku Trio",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "5998d369-0f2f-48df-820e-94b4502ddc56",
+   "mbName": "The Deku Trio"
+  },
+  "capital cities": {
+   "name": "Capital Cities",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "119a2c67-e6d6-41cf-a58c-c51b75c80daa",
+   "mbName": "Capital Cities"
+  },
+  "kiryu": {
+   "name": "Kiryu",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "d8818460-c15e-4725-adc3-7a3dd5ca532c",
+   "mbName": "己龍"
   }
  },
  "source": "MusicBrainz",
