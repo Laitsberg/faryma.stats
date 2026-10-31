@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T10:23:31.566Z",
+ "generated": "2026-10-31T13:41:26.026Z",
  "artists": {
   "7": {
    "name": "7",
@@ -44971,6 +44971,12 @@
   },
   "ryan mccartan & barrett wilbert weed & michelle duffy": {
    "name": "Ryan McCartan & Barrett Wilbert Weed & Michelle Duffy",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "ryan mccartan, barrett wilbert weed & michelle duffy": {
+   "name": "Ryan McCartan, Barrett Wilbert Weed & Michelle Duffy",
    "tracks": 1,
    "country": null,
    "score": 0
