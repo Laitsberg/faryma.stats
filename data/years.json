@@ -104820,9 +104820,27 @@
    "year": null,
    "score": 0,
    "v": 8
+  },
+  "ryan mccartan, barrett wilbert weed & michelle duffy|meant to be yours": {
+   "artist": "Ryan McCartan, Barrett Wilbert Weed & Michelle Duffy",
+   "title": "Meant to Be Yours",
+   "разносов": 1,
+   "year": 2014,
+   "score": 100,
+   "как": "ссылка",
+   "v": 8,
+   "sid": "6YYeBYEpkiR84eCDNPBDoF",
+   "spTitle": "Meant to Be Yours",
+   "spArtist": "Ryan McCartan, Barrett Wilbert Weed, Michelle Duffy",
+   "spAlbum": "Heathers: The Musical (World Premiere Cast Recording)",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e02e674254dbae3a78e8aa9c94f",
+   "альбом": "Heathers: The Musical (World Premiere Cast Recording)",
+   "длит": 206,
+   "годСсылки": 2014,
+   "годПоиска": null
   }
  },
  "source": "MusicBrainz",
  "note": "year — самый ранний выпуск записи; обложка — картинка альбома 300×300; альбом и длит (секунды) — оттуда же; score — наша уверенность в совпадении, 0–100",
- "generated": "2026-10-31T10:23:50.957Z"
+ "generated": "2026-10-31T13:41:42.931Z"
 }
