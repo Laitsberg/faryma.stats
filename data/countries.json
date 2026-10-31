@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T18:39:30.620Z",
+ "generated": "2026-10-31T10:23:31.566Z",
  "artists": {
   "7": {
    "name": "7",
@@ -44921,6 +44921,59 @@
    "mbid": "d12a33f7-c968-42b9-b76f-b0184332006f",
    "mbName": "Kristina Paraskeva",
    "viaArea": true
+  },
+  "shuka saitou": {
+   "name": "Shuka Saitou",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "antropoceno": {
+   "name": "Antropoceno",
+   "tracks": 1,
+   "country": "BR",
+   "area": "Brazil",
+   "areaId": "f45b47f8-5796-386e-b172-6c31b009a5d8",
+   "score": 100,
+   "mbid": "cbd94651-eb1f-4160-9947-25b8c7d49d21",
+   "mbName": "Antropoceno"
+  },
+  "sonhos tomam conta": {
+   "name": "sonhos tomam conta",
+   "tracks": 1,
+   "country": "BR",
+   "area": "São Paulo",
+   "areaId": "33e0f86c-d709-448d-a484-d55778913af1",
+   "score": 100,
+   "mbid": "fb86f7c8-70d6-4da3-b851-5715eac20fa2",
+   "mbName": "sonhos tomam conta",
+   "viaArea": true
+  },
+  "47soul": {
+   "name": "47SOUL",
+   "tracks": 1,
+   "country": "JO",
+   "area": "Jordan",
+   "areaId": "2e40127e-0b8a-3a01-bfbc-58c7fcdba532",
+   "score": 100,
+   "mbid": "3bbc179b-cada-4022-a495-c1ee3566e033",
+   "mbName": "47SOUL"
+  },
+  "kan gao": {
+   "name": "Kan Gao",
+   "tracks": 1,
+   "country": null,
+   "area": "Markham",
+   "areaId": "d1a533d5-b9e4-4efa-9bc3-c5d72950d3e6",
+   "score": 100,
+   "mbid": "849677a1-4c2b-46f5-a2d4-f607c79da13b",
+   "mbName": "Kan Gao"
+  },
+  "ryan mccartan & barrett wilbert weed & michelle duffy": {
+   "name": "Ryan McCartan & Barrett Wilbert Weed & Michelle Duffy",
+   "tracks": 1,
+   "country": null,
+   "score": 0
   }
  },
  "source": "MusicBrainz",
@@ -45196,6 +45249,7 @@
   "51d34c28-61bf-3d21-849f-7492672a9d44": "CZ",
   "0a65a727-7465-4e6c-8b15-ed4d09e021ee": "CZ",
   "3293f341-d81d-4026-ab9a-529efa244162": "RU",
-  "3c8ab119-72a0-4132-935f-2b441f457137": "RU"
+  "3c8ab119-72a0-4132-935f-2b441f457137": "RU",
+  "33e0f86c-d709-448d-a484-d55778913af1": "BR"
  }
 }
