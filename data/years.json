@@ -105244,9 +105244,51 @@
    "year": null,
    "score": 0,
    "v": 8
+  },
+  "more more jump! feat. hanasato minori, kiritani haruka, momoi airi, hinomori shizuku & kagamine rin|happy halloween": {
+   "artist": "MORE MORE JUMP! feat. Hanasato Minori, Kiritani Haruka, Momoi Airi, Hinomori Shizuku & Kagamine Rin",
+   "title": "Happy Halloween",
+   "разносов": 1,
+   "year": 2024,
+   "score": 100,
+   "как": "ссылка",
+   "v": 8,
+   "sid": "4TnOaV6SsHuoZ3nnv42SBo",
+   "spTitle": "Happy Halloween (feat. 花里みのり&桐谷遥&桃井愛莉&日野森雫&鏡音リン)",
+   "spArtist": "MORE MORE JUMP!",
+   "spAlbum": "MORE MORE JUMP！ SEKAI ALBUM vol.2",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e024f680791c4b07572606079ec",
+   "альбом": "MORE MORE JUMP！ SEKAI ALBUM vol.2",
+   "длит": 246,
+   "годСсылки": 2024,
+   "годПоиска": null
+  },
+  "sumika|umm + котик боня, после перерыва": {
+   "artist": "sumika",
+   "title": "Umm + Котик Боня, после перерыва",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
+  },
+  "glenn stafford, jason hayes, tracy w. bush & derek duke|orc 1": {
+   "artist": "Glenn Stafford, Jason Hayes, Tracy W. Bush & Derek Duke",
+   "title": "Orc 1",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
+  },
+  "ashleigh ball, andrea libman & kazumi evans|bats": {
+   "artist": "Ashleigh Ball, Andrea Libman & Kazumi Evans",
+   "title": "Bats",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
   }
  },
  "source": "MusicBrainz",
  "note": "year — самый ранний выпуск записи; обложка — картинка альбома 300×300; альбом и длит (секунды) — оттуда же; score — наша уверенность в совпадении, 0–100",
- "generated": "2026-11-01T11:16:43.898Z"
+ "generated": "2026-11-02T12:24:32.969Z"
 }
