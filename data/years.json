@@ -105286,9 +105286,17 @@
    "year": null,
    "score": 0,
    "v": 8
+  },
+  "shuka saitou|papapa": {
+   "artist": "Shuka Saitou",
+   "title": "Papapa",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
   }
  },
  "source": "MusicBrainz",
  "note": "year — самый ранний выпуск записи; обложка — картинка альбома 300×300; альбом и длит (секунды) — оттуда же; score — наша уверенность в совпадении, 0–100",
- "generated": "2026-11-02T12:24:32.969Z"
+ "generated": "2026-11-03T17:50:06.975Z"
 }
