@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-02T12:24:02.933Z",
+ "generated": "2026-11-06T17:28:49.361Z",
  "artists": {
   "7": {
    "name": "7",
@@ -45092,6 +45092,22 @@
    "tracks": 1,
    "country": null,
    "score": 0
+  },
+  "daibakuhasin": {
+   "name": "Daibakuhasin",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "ноль": {
+   "name": "Ноль",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "6f843c79-e70f-4bb2-bd66-6f8f324df034",
+   "mbName": "Ноль"
   }
  },
  "source": "MusicBrainz",
