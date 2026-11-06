@@ -105294,9 +105294,43 @@
    "year": null,
    "score": 0,
    "v": 8
+  },
+  "daibakuhasin feat. hatsune miku & kasane teto|sonotabi": {
+   "artist": "Daibakuhasin feat. Hatsune Miku & Kasane Teto",
+   "title": "Sonotabi",
+   "разносов": 1,
+   "year": 2025,
+   "score": 84,
+   "как": "поиск:хвост",
+   "v": 8,
+   "sid": "6PC2ksloTjLVXh1VyKWhUZ",
+   "spTitle": "SONOTABI (feat. HATSUNE MIKU & KASANE TETO)",
+   "spArtist": "Daibakuhasin, Hatsune Miku, Kasane Teto",
+   "spAlbum": "SONOTABI (feat. HATSUNE MIKU & KASANE TETO)",
+   "обложка": "https://i.scdn.co/image/ab67616d00001e02078b1c8eb1b56ecaff4a4237",
+   "альбом": "SONOTABI (feat. HATSUNE MIKU & KASANE TETO)",
+   "длит": 250,
+   "spТип": "single",
+   "вариантов": 1
+  },
+  "ноль|иду, курю": {
+   "artist": "Ноль",
+   "title": "Иду, курю",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
+  },
+  "glenn stafford & jason hayes & tracy w. bush & derek duke|orc 2": {
+   "artist": "Glenn Stafford & Jason Hayes & Tracy W. Bush & Derek Duke",
+   "title": "Orc 2",
+   "разносов": 1,
+   "year": null,
+   "score": 0,
+   "v": 8
   }
  },
  "source": "MusicBrainz",
  "note": "year — самый ранний выпуск записи; обложка — картинка альбома 300×300; альбом и длит (секунды) — оттуда же; score — наша уверенность в совпадении, 0–100",
- "generated": "2026-11-03T17:50:06.975Z"
+ "generated": "2026-11-06T17:29:10.163Z"
 }
