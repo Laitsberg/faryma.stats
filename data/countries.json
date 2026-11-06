@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T17:28:49.361Z",
+ "generated": "2026-11-06T19:59:04.148Z",
  "artists": {
   "7": {
    "name": "7",
@@ -45108,6 +45108,87 @@
    "score": 100,
    "mbid": "6f843c79-e70f-4bb2-bd66-6f8f324df034",
    "mbName": "Ноль"
+  },
+  "halozy": {
+   "name": "Halozy",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "b8ee7e35-2c02-4f4e-8b14-ace3d64ac4ec",
+   "mbName": "Halozy"
+  },
+  "emaru": {
+   "name": "emaru",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "32c831d6-83ab-4980-9e58-88e99efeeaae",
+   "mbName": "emaru"
+  },
+  "adrianne lenker": {
+   "name": "Adrianne Lenker",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "763cb144-afdb-471e-bd86-d4f5b9b58641",
+   "mbName": "Adrianne Lenker"
+  },
+  "honningbarna": {
+   "name": "Honningbarna",
+   "tracks": 1,
+   "country": "NO",
+   "area": "Norway",
+   "areaId": "6743d351-6f37-3049-9724-5041161fff4d",
+   "score": 100,
+   "mbid": "90c74c83-5a3d-4416-add9-8130b014587b",
+   "mbName": "Honningbarna"
+  },
+  "yao": {
+   "name": "YAO",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "961c5afa-6598-464e-8f59-516ff8a3e2cf",
+   "mbName": "YAO"
+  },
+  "chico carlito": {
+   "name": "CHICO CARLITO",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "503b0813-6e52-457f-ab11-e0360e4d70a9",
+   "mbName": "CHICO CARLITO"
+  },
+  "ponyphonic": {
+   "name": "PonyPhonic",
+   "tracks": 1,
+   "country": "US",
+   "area": "Chandler",
+   "areaId": "5facd264-b2e8-4f71-9449-f6099ddbde47",
+   "score": 100,
+   "mbid": "beb84f9c-c6ac-4f04-8e5a-359b20e7dd78",
+   "mbName": "ponyphonic",
+   "viaArea": true
+  },
+  "аннушкаа": {
+   "name": "аннушкаа",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "4f3e33d9-7edd-44dd-a2ae-6664b39ec78e",
+   "mbName": "аннушкаа"
   }
  },
  "source": "MusicBrainz",
@@ -45384,6 +45465,8 @@
   "0a65a727-7465-4e6c-8b15-ed4d09e021ee": "CZ",
   "3293f341-d81d-4026-ab9a-529efa244162": "RU",
   "3c8ab119-72a0-4132-935f-2b441f457137": "RU",
-  "33e0f86c-d709-448d-a484-d55778913af1": "BR"
+  "33e0f86c-d709-448d-a484-d55778913af1": "BR",
+  "407eee39-0b13-4d48-8210-97b28e808a90": "US",
+  "5facd264-b2e8-4f71-9449-f6099ddbde47": "US"
  }
 }
