@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T11:03:25.073Z",
+ "generated": "2026-11-07T16:24:50.581Z",
  "artists": {
   "7": {
    "name": "7",
@@ -45192,6 +45192,22 @@
   },
   "christina ellis": {
    "name": "Christina Ellis",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "maon kurosaki": {
+   "name": "Maon Kurosaki",
+   "tracks": 2,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "7b8c4e81-9ec7-400f-abf5-7be8da80487b",
+   "mbName": "黒崎真音"
+  },
+  "iconiq the soundtrack orchestra": {
+   "name": "iconiQ The Soundtrack Orchestra",
    "tracks": 1,
    "country": null,
    "score": 0
