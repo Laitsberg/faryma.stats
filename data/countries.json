@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T16:39:08.854Z",
+ "generated": "2026-11-08T18:23:25.658Z",
  "artists": {
   "7": {
    "name": "7",
@@ -45351,6 +45351,32 @@
    "score": 100,
    "mbid": "1328ac84-a585-4e9e-8e04-358b241b8fba",
    "mbName": "Abyssphere"
+  },
+  "coconut dog": {
+   "name": "Coconut Dog",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "334edaab-d569-470b-b1b0-efca5a2e31f8",
+   "mbName": "Coconut Dog"
+  },
+  "hell jays": {
+   "name": "Hell Jays",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "михаил евдокимов": {
+   "name": "Михаил Евдокимов",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Russia",
+   "areaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+   "score": 100,
+   "mbid": "43766a65-06f2-4101-9edd-a823069524e7",
+   "mbName": "Михаил Евдокимов"
   }
  },
  "source": "MusicBrainz",
