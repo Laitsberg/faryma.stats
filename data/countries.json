@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T18:04:35.210Z",
+ "generated": "2026-11-08T11:16:23.333Z",
  "artists": {
   "7": {
    "name": "7",
@@ -45251,6 +45251,76 @@
    "score": 100,
    "mbid": "c311b0a3-5deb-43d4-9122-74a2127a2624",
    "mbName": "Miki Sato"
+  },
+  "gesaffelstein": {
+   "name": "Gesaffelstein",
+   "tracks": 1,
+   "country": "FR",
+   "area": "France",
+   "areaId": "08310658-51eb-3801-80de-5a0739207115",
+   "score": 100,
+   "mbid": "cc3e537d-ff34-423f-8cd6-635a80f4dba7",
+   "mbName": "Gesaffelstein"
+  },
+  "chris motionless": {
+   "name": "Chris Motionless",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "5eaf12c5-1f0a-4ca8-9c47-9628d27a704c",
+   "mbName": "Chris Motionless"
+  },
+  "otomachi una": {
+   "name": "Otomachi Una",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "2517c541-8c87-473a-945b-cd9e2466ecee",
+   "mbName": "音街ウナ"
+  },
+  "kow otani": {
+   "name": "Kow Otani",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "615e497a-340d-4efd-b191-73a22c280784",
+   "mbName": "大谷幸"
+  },
+  "время и стекло": {
+   "name": "Время и Стекло",
+   "tracks": 1,
+   "country": "UA",
+   "area": "Ukraine",
+   "areaId": "904768d0-61ca-3c40-93ac-93adc36fef4b",
+   "score": 100,
+   "mbid": "6846f6be-a7ae-4d6b-9697-ba126c97717e",
+   "mbName": "Время и Стекло"
+  },
+  "basshunter": {
+   "name": "Basshunter",
+   "tracks": 1,
+   "country": "SE",
+   "area": "Sweden",
+   "areaId": "23d10872-f5ae-3f0c-bf55-332788a16ecb",
+   "score": 100,
+   "mbid": "255e2420-5b02-452b-9771-0512ebe78090",
+   "mbName": "Basshunter"
+  },
+  "dina rae": {
+   "name": "Dina Rae",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "ccd46862-b51b-4872-8917-54a8baa7eea4",
+   "mbName": "Dina Rae"
   }
  },
  "source": "MusicBrainz",
