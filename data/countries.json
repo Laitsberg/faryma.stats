@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-09T23:01:17.598Z",
+ "generated": "2026-11-10T17:47:42.556Z",
  "artists": {
   "7": {
    "name": "7",
@@ -45421,6 +45421,68 @@
   },
   "onoken & owl*tree": {
    "name": "onoken & owl*tree",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "bryan teoh": {
+   "name": "Bryan Teoh",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "3f656f2c-bbb9-4641-aaf1-3e200c0b13ec",
+   "mbName": "Bryan Teoh"
+  },
+  "willow wilde": {
+   "name": "Willow Wilde",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "18eee5c8-c4e5-4ae9-9ae6-90583f14473d",
+   "mbName": "Willow Wilde"
+  },
+  "neil young": {
+   "name": "Neil Young",
+   "tracks": 1,
+   "country": "CA",
+   "area": "Canada",
+   "areaId": "71bbafaa-e825-3e15-8ca9-017dcad1748b",
+   "score": 100,
+   "mbid": "75167b8b-44e4-407b-9d35-effe87b223cf",
+   "mbName": "Neil Young"
+  },
+  "portraits of tracy": {
+   "name": "Portraits Of Tracy",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "a8743696-248b-4512-9176-d6666718db0c",
+   "mbName": "Portraits of Tracy"
+  },
+  "rina kawaguchi": {
+   "name": "Rina Kawaguchi",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "peter gabriel": {
+   "name": "Peter Gabriel",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "8e66ea2b-b57b-47d9-8df0-df4630aeb8e5",
+   "mbName": "Peter Gabriel"
+  },
+  "kerayra": {
+   "name": "Kerayra",
    "tracks": 1,
    "country": null,
    "score": 0
