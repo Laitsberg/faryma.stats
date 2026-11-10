@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-10T17:47:42.556Z",
+ "generated": "2026-11-10T20:29:34.988Z",
  "artists": {
   "7": {
    "name": "7",
@@ -45483,6 +45483,28 @@
   },
   "kerayra": {
    "name": "Kerayra",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "rebecca shoichet & nicole oliver & kazumi evans & britt mckillip": {
+   "name": "Rebecca Shoichet & Nicole Oliver & Kazumi Evans & Britt McKillip",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "giant claw": {
+   "name": "Giant Claw",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "e1805f59-cc0d-4f34-aebc-bf1f713d33e8",
+   "mbName": "Giant Claw"
+  },
+  "noteblock & akmigone": {
+   "name": "NoteBlock & Akmigone",
    "tracks": 1,
    "country": null,
    "score": 0
