@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11T17:52:55.998Z",
+ "generated": "2026-11-12T18:17:43.568Z",
  "artists": {
   "7": {
    "name": "7",
@@ -45511,6 +45511,52 @@
   },
   "rebecca shoichet, nicole oliver, kazumi evans & britt mckillip": {
    "name": "Rebecca Shoichet, Nicole Oliver, Kazumi Evans & Britt McKillip",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "ayunda risu": {
+   "name": "Ayunda Risu",
+   "tracks": 1,
+   "country": "ID",
+   "area": "Indonesia",
+   "areaId": "d3a68bd0-7419-3f99-a5bd-204d6e057089",
+   "score": 100,
+   "mbid": "515eb141-45cf-4611-ab62-3ee3ef0d8753",
+   "mbName": "Ayunda Risu"
+  },
+  "issei": {
+   "name": "Issei",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "ea884317-35f1-4acd-97e2-5f07bea3e345",
+   "mbName": "ISSEI"
+  },
+  "sora amamiya": {
+   "name": "Sora Amamiya",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "b7f02d15-1c58-458e-95fd-f2477f133095",
+   "mbName": "雨宮天"
+  },
+  "земляне": {
+   "name": "Земляне",
+   "tracks": 1,
+   "country": "SU",
+   "area": "Soviet Union",
+   "areaId": "32f90933-b4b4-3248-b98c-e573d5329f57",
+   "score": 100,
+   "mbid": "d2f23417-eec3-414d-a8a1-afec28b00f4c",
+   "mbName": "Земляне"
+  },
+  "princewhateverer & milkymomo": {
+   "name": "Princewhateverer & Milkymomo",
    "tracks": 1,
    "country": null,
    "score": 0
