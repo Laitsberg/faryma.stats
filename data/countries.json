@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-12T18:17:43.568Z",
+ "generated": "2026-11-12T20:54:14.493Z",
  "artists": {
   "7": {
    "name": "7",
@@ -45560,6 +45560,36 @@
    "tracks": 1,
    "country": null,
    "score": 0
+  },
+  "terry lin": {
+   "name": "Terry Lin",
+   "tracks": 1,
+   "country": "TW",
+   "area": "Taiwan",
+   "areaId": "41637cec-9a4f-389c-86d2-fc6abf3357b5",
+   "score": 100,
+   "mbid": "2896f37d-3f21-41d8-926e-e8c605e6b13c",
+   "mbName": "林志炫"
+  },
+  "sophus alf agerbæk-larsen": {
+   "name": "Sophus Alf Agerbæk-Larsen",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "e5c29ad5-fde6-43cf-9212-dd4d76f555e1",
+   "mbName": "Sophus Alf Agerbæk-Larsen"
+  },
+  "jared dines": {
+   "name": "Jared Dines",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "8aa329be-d939-4e94-bfba-6bc5368575e4",
+   "mbName": "Jared Dines"
   }
  },
  "source": "MusicBrainz",
