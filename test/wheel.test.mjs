@@ -78,6 +78,30 @@ test('колесо крутится и объявляет того, кто ес�
   assert.ok(имена.includes(выпал), `объявлен «${выпал}», которого нет в списке`);
 });
 
+test('лупа под стрелкой показывает того же, кого объявили', async () => {
+  /* На сотне имён подписи на колесе мелкие, и зритель следит за лупой.
+     Если она разойдётся с колесом хоть на сектор — в эфире покажут
+     одного, а объявят другого. Сто разных имён, чтобы сосед не мог
+     случайно совпасть. */
+  const имена = Array.from({ length: 100 }, (_, i) => 'ник' + i);
+  await page.fill('#names', имена.join('\n'));
+  await page.click('#spinTime [data-sec="3"]');
+  await page.waitForTimeout(300);
+  for (let раз = 0; раз < 3; раз++) {
+    await page.click('#spin');
+    await page.waitForFunction(() => !document.getElementById('out').hidden, null, { timeout: 25000 });
+    const { выпал, лупа } = await page.evaluate(() => ({
+      выпал: document.getElementById('winner').textContent,
+      лупа: document.querySelector('.wheel-zoom-row.on span')?.textContent
+    }));
+    assert.equal(лупа, выпал, `объявлен «${выпал}», а в лупе «${лупа}»`);
+  }
+  await page.click('#spinTime [data-sec="6"]');
+  await page.fill('#names', ['Аня', 'Боря', 'Вова', 'Гриша', 'Дима'].join('\n'));
+  await page.click('#spin');
+  await page.waitForFunction(() => !document.getElementById('out').hidden, null, { timeout: 25000 });
+});
+
 test('выпавшего можно убрать и вернуть', async () => {
   const было = +(await page.$eval('#count', e => e.textContent));
   await page.click('#drop');

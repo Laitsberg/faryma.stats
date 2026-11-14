@@ -20,20 +20,26 @@
 <body>
 
 <header>
- <div class="wrap head">
+ <div class="wrap wrap-wide head">
   <div class="eyebrow"><a class="back" href="./">← к статистике</a></div>
   <h1>Колесо <em>судьбы</em></h1>
   <p class="sub">Для благотворительных стримов: кто выпал — того трек и слушаем. Имена можно вписать руками, вставить списком или взять прямо из архива разносов. Повтор имени в списке даёт больше шансов — как в таблице.</p>
  </div>
 </header>
 
-<div class="wrap wheel-page">
+<div class="wrap wrap-wide wheel-page">
 
  <div class="wheel-main">
-  <div class="wheel-box">
-   <canvas id="wheel" width="900" height="900" aria-label="Колесо с именами"></canvas>
-   <div class="wheel-pin" aria-hidden="true"></div>
-   <button class="wheel-go" id="spin" type="button">Крутить</button>
+  <div class="wheel-stage">
+   <div class="wheel-box">
+    <canvas id="wheel" width="1400" height="1400" aria-label="Колесо с именами"></canvas>
+    <div class="wheel-pin" aria-hidden="true"></div>
+    <button class="wheel-go" id="spin" type="button">Крутить</button>
+   </div>
+   <div class="wheel-zoom" id="zoom" aria-hidden="true">
+    <div class="wheel-zoom-k">под стрелкой</div>
+    <div class="wheel-zoom-rows" id="zoomRows"></div>
+   </div>
   </div>
 
   <div class="wheel-out" id="out" hidden>
@@ -103,7 +109,7 @@
 
 </div>
 
-<footer><div class="wrap">
+<footer><div class="wrap wrap-wide">
  <p class="cap">Неофициальный фанатский проект. <a href="./">Статистика архива</a> · <a href="queue.html">Очередь</a> · <a href="https://twitch.tv/farymacomposer" target="_blank" rel="noopener noreferrer">Твич композитора</a></p>
 </div></footer>
 

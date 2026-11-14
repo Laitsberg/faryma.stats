@@ -117,66 +117,149 @@ function обновить({ изПоля = false } = {}) {
 
 /* ---------- отрисовка ---------- */
 
+/* Цвет сектора нужен и колесу, и лупе: полоска в лупе того же цвета,
+   что сектор, — по ней глаз и связывает строку с колесом. */
+function цветСектора(i) {
+  const цвет = ЦВЕТА[i % ЦВЕТА.length];
+  // на стыке круга последний сектор может совпасть с первым
+  return i === ИМЕНА.length - 1 && i > 0 && цвет === ЦВЕТА[0] ? ЦВЕТА[1] : цвет;
+}
+
 function нарисовать(подсветить = -1) {
   const c = $('wheel'), ctx = c.getContext('2d');
   const R = c.width / 2;
   ctx.clearRect(0, 0, c.width, c.height);
+  лупа(подсветить);
 
   if (!ИМЕНА.length) {
     // Фон страницы стал глубже, и прежний #1F1F23 читался светлым
     // пятном — пустое колесо тянуло на себя весь взгляд.
     ctx.fillStyle = '#141418';
-    ctx.beginPath(); ctx.arc(R, R, R - 6, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.arc(R, R, R - 8, 0, Math.PI * 2); ctx.fill();
     ctx.fillStyle = '#7C7583';
-    ctx.font = '28px "Golos Text", sans-serif';
+    ctx.font = '44px "Golos Text", sans-serif';
     ctx.textAlign = 'center';
     ctx.fillText('добавьте имена', R, R);
     return;
   }
 
-  const шаг = Math.PI * 2 / ИМЕНА.length;
-  // Подписи читаются, только пока секторов немного. На двухстах именах
-  // текст превращается в кашу — тогда показываем просто цвета, а имя
-  // победителя всё равно выводится крупно под колесом.
-  const сПодписями = ИМЕНА.length <= 60;
+  const N = ИМЕНА.length;
+  const шаг = Math.PI * 2 / N;
+
+  /* Шрифт не мельче МИН_ШРИФТ: раньше на сотне имён подписи сжимались
+     в нечитаемую крошку, а после шестидесяти пропадали вовсе. Теперь
+     размер держится, а если секторы уже строки — подписываем каждый
+     k-й, чтобы строки не налезали друг на друга. Остальные имена видно
+     в лупе справа: она и есть «зум» на то, что под стрелкой. */
+  /* Минимум считаем в экранных пикселях, а не в точках холста: холст
+     1400 точек, а на телефоне он ужат до ~360px, и «20» превращалось
+     там в пять пикселей каши. */
+  const масштаб = c.clientWidth ? c.clientWidth / c.width : 0.55;
+  const МИН_ШРИФТ = Math.max(20, 10 / масштаб), МАКС_ШРИФТ = Math.max(МИН_ШРИФТ, 34);
+  const шрифт = Math.max(МИН_ШРИФТ, Math.min(МАКС_ШРИФТ, 960 / N + 17));
+  const радиусТекста = R - 40;
+  // высота сектора у внешнего края — там, где кончается подпись
+  const высота = радиусТекста * шаг;
+  const через = Math.max(1, Math.ceil(шрифт * 1.1 / высота));
+
+  // расстояние по кругу: у последнего сектора сосед — первый
+  const врозь = (a, b) => { const d = Math.abs(a - b); return Math.min(d, N - d); };
+  const подписать = i => {
+    // выпавшего подписываем всегда, даже если его очередь пропускать,
+    // а соседей, на которых его подпись налезла бы, — нет
+    if (i === подсветить) return true;
+    if (подсветить >= 0 && врозь(i, подсветить) < через) return false;
+    // на стыке круга последний подписанный может прилечь к нулевому
+    return i % через === 0 && (i === 0 || N - i >= через);
+  };
 
   ИМЕНА.forEach((имя, i) => {
     const от = УГОЛ + i * шаг, до = от + шаг;
     ctx.beginPath();
     ctx.moveTo(R, R);
-    ctx.arc(R, R, R - 6, от, до);
+    ctx.arc(R, R, R - 8, от, до);
     ctx.closePath();
-
-    let цвет = ЦВЕТА[i % ЦВЕТА.length];
-    // на стыке круга последний сектор может совпасть с первым
-    if (i === ИМЕНА.length - 1 && цвет === ЦВЕТА[0]) цвет = ЦВЕТА[1];
-    ctx.fillStyle = i === подсветить ? '#FFFFFF' : цвет;
+    ctx.fillStyle = i === подсветить ? '#FFFFFF' : цветСектора(i);
     ctx.fill();
 
-    if (ИМЕНА.length <= 200) {
+    if (N <= 200) {
       ctx.strokeStyle = 'rgba(7,7,10,.35)';
-      ctx.lineWidth = 1;
+      ctx.lineWidth = 1.5;
       ctx.stroke();
     }
 
-    if (сПодписями) {
-      ctx.save();
-      ctx.translate(R, R);
-      ctx.rotate(от + шаг / 2);
-      ctx.fillStyle = i === подсветить ? '#07070A' : '#140A02';
-      ctx.font = `600 ${Math.max(12, Math.min(22, 620 / ИМЕНА.length + 11))}px "Golos Text", sans-serif`;
-      ctx.textAlign = 'right';
-      ctx.textBaseline = 'middle';
-      const текст = имя.length > 22 ? имя.slice(0, 21) + '…' : имя;
-      ctx.fillText(текст, R - 26, 0);
-      ctx.restore();
-    }
+    if (!подписать(i)) return;
+    ctx.save();
+    ctx.translate(R, R);
+    ctx.rotate(от + шаг / 2);
+    ctx.fillStyle = i === подсветить ? '#07070A' : '#140A02';
+    ctx.font = `600 ${шрифт}px "Golos Text", sans-serif`;
+    ctx.textAlign = 'right';
+    ctx.textBaseline = 'middle';
+    const текст = имя.length > 22 ? имя.slice(0, 21) + '…' : имя;
+    ctx.fillText(текст, радиусТекста, 0);
+    ctx.restore();
   });
 
   // втулка
   ctx.beginPath(); ctx.arc(R, R, R * 0.12, 0, Math.PI * 2);
   ctx.fillStyle = '#07070A'; ctx.fill();
-  ctx.strokeStyle = '#3A3A42'; ctx.lineWidth = 3; ctx.stroke();
+  ctx.strokeStyle = '#3A3A42'; ctx.lineWidth = 4; ctx.stroke();
+}
+
+/* ---------- лупа ---------- */
+
+/* Список рядом с указателем: сектор под стрелкой посередине и по пять
+   соседей сверху и снизу. На сотне имён колесо — это цветной круг,
+   и без лупы зритель не видит, к кому оно подбирается. Строки
+   сдвигаются плавно, вслед за колесом, а не перескакивают: иначе на
+   быстром вращении лупа мельтешит. */
+const ЛУПА_СОСЕДЕЙ = 5;
+const ЛУПА_СТРОКА = 30;    // px, как в .wheel-zoom-row
+let лупаСтроки = null;
+
+function лупа(подсветить = -1) {
+  const где = $('zoomRows');
+  if (!где) return;
+  // на строку больше с каждой стороны: крайняя въезжает, пока колесо крутится
+  const всего = ЛУПА_СОСЕДЕЙ + 1;
+  if (!лупаСтроки) {
+    лупаСтроки = [];
+    for (let k = -всего; k <= всего; k++) {
+      const el = document.createElement('div');
+      el.className = 'wheel-zoom-row';
+      el.innerHTML = '<i></i><span></span>';
+      где.appendChild(el);
+      лупаСтроки.push(el);
+    }
+  }
+
+  const N = ИМЕНА.length;
+  $('zoom').classList.toggle('is-empty', N < 2);
+  if (N < 2) { лупаСтроки.forEach(el => { el.style.visibility = 'hidden'; }); return; }
+
+  const шаг = Math.PI * 2 / N;
+  // указатель на угле 0; какая доля круга под ним, если считать в секторах
+  const под = ((((-УГОЛ) % (Math.PI * 2)) + Math.PI * 2) % (Math.PI * 2)) / шаг;
+  const текущий = Math.min(N - 1, Math.floor(под));
+  // на маленьком колесе соседи пошли бы по второму кругу и задвоились
+  const предел = Math.min(всего, Math.floor((N - 1) / 2));
+
+  лупаСтроки.forEach((el, n) => {
+    const k = n - всего;
+    if (Math.abs(k) > предел) { el.style.visibility = 'hidden'; return; }
+    const i = (((текущий + k) % N) + N) % N;
+    // в строках от центра; в покое — ровно по рамке: до первого
+    // вращения стрелка стоит на стыке секторов, и строка резалась пополам
+    const сдвиг = КРУТИМ ? текущий + k + 0.5 - под : k;
+    el.style.visibility = '';
+    el.style.transform = `translateY(${(сдвиг * ЛУПА_СТРОКА).toFixed(1)}px)`;
+    el.style.opacity = Math.max(0, 1 - Math.abs(сдвиг) / (ЛУПА_СОСЕДЕЙ + 1)).toFixed(2);
+    el.classList.toggle('on', k === 0);
+    el.classList.toggle('won', k === 0 && i === подсветить);
+    el.firstChild.style.background = цветСектора(i);
+    if (el.lastChild.textContent !== ИМЕНА[i]) el.lastChild.textContent = ИМЕНА[i];
+  });
 }
 
 /* ---------- вращение ---------- */
@@ -442,6 +525,13 @@ function старт() {
     нарисоватьВыбор();
     сохранитьНастройки();
   };
+
+  // размер шрифта зависит от того, какой ширины колесо на экране
+  let отложено = 0;
+  addEventListener('resize', () => {
+    cancelAnimationFrame(отложено);
+    отложено = requestAnimationFrame(() => { if (!КРУТИМ) нарисовать(); });
+  });
 
   addEventListener('keydown', e => {
     if (e.code === 'Space' && e.target === document.body) { e.preventDefault(); крутить(); }
