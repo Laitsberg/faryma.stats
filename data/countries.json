@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-12T20:54:14.493Z",
+ "generated": "2026-11-14T16:35:33.400Z",
  "artists": {
   "7": {
    "name": "7",
@@ -45590,6 +45590,27 @@
    "score": 100,
    "mbid": "8aa329be-d939-4e94-bfba-6bc5368575e4",
    "mbName": "Jared Dines"
+  },
+  "princewhateverer": {
+   "name": "Princewhateverer",
+   "tracks": 1,
+   "country": "GB",
+   "area": "Bexhill-on-Sea",
+   "areaId": "2ba0ea6a-2f38-495a-a6b3-9241ff674480",
+   "score": 100,
+   "mbid": "a28d94fb-569f-46bb-89dc-3c10ccece75a",
+   "mbName": "PrinceWhateverer",
+   "viaArea": true
+  },
+  "milkymomo": {
+   "name": "Milkymomo",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "fab53dcd-dff7-4085-81f4-dda7bbf04abf",
+   "mbName": "Milkymomo"
   }
  },
  "source": "MusicBrainz",
@@ -45870,6 +45891,8 @@
   "407eee39-0b13-4d48-8210-97b28e808a90": "US",
   "5facd264-b2e8-4f71-9449-f6099ddbde47": "US",
   "85cfb970-3954-432e-a9ba-658e097c9772": "RU",
-  "5fd94a22-dde4-4d39-836c-d4116d1c8da1": "RU"
+  "5fd94a22-dde4-4d39-836c-d4116d1c8da1": "RU",
+  "61b6a12e-4751-4fe3-b40d-ecb84f29736c": "GB",
+  "2ba0ea6a-2f38-495a-a6b3-9241ff674480": "GB"
  }
 }
