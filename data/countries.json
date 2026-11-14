@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-14T16:35:33.400Z",
+ "generated": "2026-11-14T18:45:53.257Z",
  "artists": {
   "7": {
    "name": "7",
@@ -45611,6 +45611,32 @@
    "score": 100,
    "mbid": "fab53dcd-dff7-4085-81f4-dda7bbf04abf",
    "mbName": "Milkymomo"
+  },
+  "sheryl crow": {
+   "name": "Sheryl Crow",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "80ccfede-c258-4575-a7ad-c982e9932e0f",
+   "mbName": "Sheryl Crow"
+  },
+  "dailylair": {
+   "name": "dailylair",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "64534ca6-f655-49ee-b691-62e7bcb61452",
+   "mbName": "dailylair"
+  },
+  "yoko kanno & seatbelts": {
+   "name": "Yoko Kanno & Seatbelts",
+   "tracks": 1,
+   "country": null,
+   "score": 0
   }
  },
  "source": "MusicBrainz",
