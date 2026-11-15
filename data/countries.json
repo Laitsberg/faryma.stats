@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-14T18:45:53.257Z",
+ "generated": "2026-11-15T11:57:19.546Z",
  "artists": {
   "7": {
    "name": "7",
@@ -45637,6 +45637,68 @@
    "tracks": 1,
    "country": null,
    "score": 0
+  },
+  "europe": {
+   "name": "Europe",
+   "tracks": 2,
+   "country": "SE",
+   "area": "Sweden",
+   "areaId": "23d10872-f5ae-3f0c-bf55-332788a16ecb",
+   "score": 100,
+   "mbid": "ccfe7a3c-1a45-4984-a8d0-644549cefe61",
+   "mbName": "Europe"
+  },
+  "kazumi evans & rebecca shoichet": {
+   "name": "Kazumi Evans & Rebecca Shoichet",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "kaori maeda": {
+   "name": "Kaori Maeda",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "9acc55a9-cf3d-4565-80a0-d78d1e9f822d",
+   "mbName": "前田佳織里"
+  },
+  "pipopipo": {
+   "name": "pipopipo",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "polaris": {
+   "name": "Polaris",
+   "tracks": 1,
+   "country": "BE",
+   "area": "Belgium",
+   "areaId": "5b8a5ee5-0bb3-34cf-9a75-c27c44e341fc",
+   "score": 100,
+   "mbid": "21593732-1a91-4521-a2c6-b68e88063dcc",
+   "mbName": "Polaris"
+  },
+  "jean-michel blais": {
+   "name": "Jean-Michel Blais",
+   "tracks": 1,
+   "country": "CA",
+   "area": "Canada",
+   "areaId": "71bbafaa-e825-3e15-8ca9-017dcad1748b",
+   "score": 100,
+   "mbid": "5422dfbd-a561-4c39-b642-e2f449d6c6b3",
+   "mbName": "Jean‐Michel Blais"
+  },
+  "bonnie tyler": {
+   "name": "Bonnie Tyler",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "0aa8294b-6332-4b65-b677-e3a1f8591d3b",
+   "mbName": "Bonnie Tyler"
   }
  },
  "source": "MusicBrainz",
