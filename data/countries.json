@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-17T16:55:24.870Z",
+ "generated": "2026-11-17T19:10:33.090Z",
  "artists": {
   "7": {
    "name": "7",
@@ -45735,6 +45735,64 @@
    "score": 100,
    "mbid": "447fd846-a683-46f2-aa9d-6e5fb45c6632",
    "mbName": "Grand Blanc"
+  },
+  "hiroaki tsutsumi": {
+   "name": "Hiroaki Tsutsumi",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "822da9a4-1776-40bc-8686-137b6490363d",
+   "mbName": "堤博明"
+  },
+  "мираж": {
+   "name": "Мираж",
+   "tracks": 1,
+   "country": "RU",
+   "area": "Moscow",
+   "areaId": "f310740c-ad62-48c0-839b-e86581b9f464",
+   "score": 100,
+   "mbid": "f1abe724-c26a-4ff4-bbf0-d28ed9f7740a",
+   "mbName": "Мираж",
+   "viaArea": true
+  },
+  "alice duport-percier": {
+   "name": "Alice Duport-Percier",
+   "tracks": 1,
+   "country": "FR",
+   "area": "France",
+   "areaId": "08310658-51eb-3801-80de-5a0739207115",
+   "score": 100,
+   "mbid": "1850311f-b87c-4178-b98b-1d61487511c9",
+   "mbName": "Alice Duport-Percier"
+  },
+  "kalandra": {
+   "name": "Kalandra",
+   "tracks": 1,
+   "country": "NO",
+   "area": "Oslo",
+   "areaId": "f80d529e-f242-46ef-a090-d193ed23075f",
+   "score": 100,
+   "mbid": "7c67fb96-7e24-4893-a020-fcc53a1f7814",
+   "mbName": "Kalandra",
+   "viaArea": true
+  },
+  "napi": {
+   "name": "napi",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "4c4f6e67-e816-492e-af03-2df9e3680754",
+   "mbName": "Napi"
+  },
+  "björk & peter stormare": {
+   "name": "Björk & Peter Stormare",
+   "tracks": 1,
+   "country": null,
+   "score": 0
   }
  },
  "source": "MusicBrainz",
