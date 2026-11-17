@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-17T19:10:33.090Z",
+ "generated": "2026-11-17T21:48:45.789Z",
  "artists": {
   "7": {
    "name": "7",
@@ -45793,6 +45793,16 @@
    "tracks": 1,
    "country": null,
    "score": 0
+  },
+  "marduk": {
+   "name": "Marduk",
+   "tracks": 1,
+   "country": "SE",
+   "area": "Sweden",
+   "areaId": "23d10872-f5ae-3f0c-bf55-332788a16ecb",
+   "score": 100,
+   "mbid": "b7dc7c76-53f1-49ac-8dc2-d469ed7f8e65",
+   "mbName": "Marduk"
   }
  },
  "source": "MusicBrainz",
