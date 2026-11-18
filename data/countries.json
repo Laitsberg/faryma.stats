@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-17T21:48:45.789Z",
+ "generated": "2026-11-18T13:01:34.499Z",
  "artists": {
   "7": {
    "name": "7",
@@ -45803,6 +45803,32 @@
    "score": 100,
    "mbid": "b7dc7c76-53f1-49ac-8dc2-d469ed7f8e65",
    "mbName": "Marduk"
+  },
+  "invaders wish & kira": {
+   "name": "Invaders WISH & KIRA",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "peter stormare": {
+   "name": "Peter Stormare",
+   "tracks": 1,
+   "country": "SE",
+   "area": "Sweden",
+   "areaId": "23d10872-f5ae-3f0c-bf55-332788a16ecb",
+   "score": 100,
+   "mbid": "ded2a9bb-ef2b-4c79-b494-2d3f2dba1794",
+   "mbName": "Peter Stormare"
+  },
+  "nikita zhulin": {
+   "name": "Nikita Zhulin",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "ac530eb2-b38b-4be5-abe5-7fc210f1d57c",
+   "mbName": "Nikita Zhulin"
   }
  },
  "source": "MusicBrainz",
