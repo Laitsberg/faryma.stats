@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-18T13:01:34.499Z",
+ "generated": "2026-11-18T16:29:48.147Z",
  "artists": {
   "7": {
    "name": "7",
@@ -45829,6 +45829,16 @@
    "score": 100,
    "mbid": "ac530eb2-b38b-4be5-abe5-7fc210f1d57c",
    "mbName": "Nikita Zhulin"
+  },
+  "amos roddy": {
+   "name": "Amos Roddy",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "0abc201d-150d-4ba8-a499-dffb4682ff06",
+   "mbName": "Amos Roddy"
   }
  },
  "source": "MusicBrainz",
