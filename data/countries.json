@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-18T16:29:48.147Z",
+ "generated": "2026-11-18T18:50:56.027Z",
  "artists": {
   "7": {
    "name": "7",
@@ -45839,6 +45839,68 @@
    "score": 100,
    "mbid": "0abc201d-150d-4ba8-a499-dffb4682ff06",
    "mbName": "Amos Roddy"
+  },
+  "shiro hamaguchi": {
+   "name": "Shiro Hamaguchi",
+   "tracks": 2,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "1a851e93-ef32-4569-927b-ccd39608ea34",
+   "mbName": "浜口史郎"
+  },
+  "uma musume pretty derby": {
+   "name": "Uma Musume Pretty Derby",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "e4eb715c-ebeb-4b26-845c-e1668be06e76",
+   "mbName": "ウマ娘 プリティーダービー"
+  },
+  "marika kouno & haruno inoue & yuuki takada & kotomi aihara & aimi tanaka & hikari kubota & ayaka ohnishi & hayami matsuda": {
+   "name": "Marika Kouno & Haruno Inoue & Yuuki Takada & Kotomi Aihara & Aimi Tanaka & Hikari Kubota & Ayaka Ohnishi & Hayami Matsuda",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "blackmore's night": {
+   "name": "Blackmore's Night",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "aeee5fe5-38f5-41bc-8ab8-9f9aa23e4f68",
+   "mbName": "Blackmore’s Night"
+  },
+  "riot games music": {
+   "name": "Riot Games Music",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "0976dbd8-e7fe-4161-9a49-58c57f7a7787",
+   "mbName": "Riot Games Music Team"
+  },
+  "driftmoon & andy blueman": {
+   "name": "Driftmoon & Andy Blueman",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "d-sharp": {
+   "name": "D-Sharp",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "e1332489-3690-4357-ae90-d9961ca3d365",
+   "mbName": "D-Sharp"
   }
  },
  "source": "MusicBrainz",
