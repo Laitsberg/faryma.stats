@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-18T18:50:56.027Z",
+ "generated": "2026-11-18T21:27:36.997Z",
  "artists": {
   "7": {
    "name": "7",
@@ -45901,6 +45901,16 @@
    "score": 100,
    "mbid": "e1332489-3690-4357-ae90-d9961ca3d365",
    "mbName": "D-Sharp"
+  },
+  "kousei": {
+   "name": "KOUSEI",
+   "tracks": 1,
+   "country": "KR",
+   "area": "South Korea",
+   "areaId": "b9f7d640-46e8-313e-b158-ded6d18593b3",
+   "score": 100,
+   "mbid": "1cf8f003-c172-401c-8cad-81866e75ac0c",
+   "mbName": "KOUSEI"
   }
  },
  "source": "MusicBrainz",
