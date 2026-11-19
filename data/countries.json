@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-18T21:27:36.997Z",
+ "generated": "2026-11-19T13:04:07.237Z",
  "artists": {
   "7": {
    "name": "7",
@@ -45911,6 +45911,12 @@
    "score": 100,
    "mbid": "1cf8f003-c172-401c-8cad-81866e75ac0c",
    "mbName": "KOUSEI"
+  },
+  "marika kouno, haruno inoue, yuuki takada, kotomi aihara, aimi tanaka, hikari kubota, ayaka onishi & satsumi matsuda": {
+   "name": "Marika Kouno, Haruno Inoue, Yuuki Takada, Kotomi Aihara, Aimi Tanaka, Hikari Kubota, Ayaka Onishi & Satsumi Matsuda",
+   "tracks": 1,
+   "country": null,
+   "score": 0
   }
  },
  "source": "MusicBrainz",
