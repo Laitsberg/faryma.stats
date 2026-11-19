@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-19T13:04:07.237Z",
+ "generated": "2026-11-19T16:36:48.154Z",
  "artists": {
   "7": {
    "name": "7",
@@ -45917,6 +45917,16 @@
    "tracks": 1,
    "country": null,
    "score": 0
+  },
+  "riot games music team": {
+   "name": "Riot Games Music Team",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "0976dbd8-e7fe-4161-9a49-58c57f7a7787",
+   "mbName": "Riot Games Music Team"
   }
  },
  "source": "MusicBrainz",
