@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-19T16:36:48.154Z",
+ "generated": "2026-11-21T17:29:20.874Z",
  "artists": {
   "7": {
    "name": "7",
@@ -45927,6 +45927,42 @@
    "score": 100,
    "mbid": "0976dbd8-e7fe-4161-9a49-58c57f7a7787",
    "mbName": "Riot Games Music Team"
+  },
+  "4everfreebrony & aviators & blackgryph0n & dbpony & luna jax & p1k & manta tsubasa & memj0123 & princewhateverer": {
+   "name": "4everfreebrony & Aviators & BlackGryph0n & Dbpony & Luna Jax & P1k & Manta Tsubasa & MemJ0123 & PrinceWhateverer",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "caisheng bo": {
+   "name": "Caisheng Bo",
+   "tracks": 1,
+   "country": "CN",
+   "area": "China",
+   "areaId": "7c81bb69-a99b-3487-b6d4-0f76d7a29ca0",
+   "score": 100,
+   "mbid": "9d360879-717d-4a3b-af65-05db3f490a53",
+   "mbName": "薄彩生"
+  },
+  "animadrop": {
+   "name": "Animadrop",
+   "tracks": 1,
+   "country": null,
+   "area": "Bonn",
+   "areaId": "b86b7e97-c4e2-4ec2-942b-5a6cd8eea1da",
+   "score": 100,
+   "mbid": "dade27ec-0f65-4ac0-bc1d-ad43dfcc013a",
+   "mbName": "Animadrop"
+  },
+  "noisia": {
+   "name": "Noisia",
+   "tracks": 1,
+   "country": "NL",
+   "area": "Netherlands",
+   "areaId": "ef1b7cc0-cd26-36f4-8ea0-04d9623786c7",
+   "score": 100,
+   "mbid": "ec22a32b-acab-432e-a88c-ffe6ae68fa16",
+   "mbName": "Noisia"
   }
  },
  "source": "MusicBrainz",
