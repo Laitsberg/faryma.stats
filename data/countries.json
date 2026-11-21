@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-21T17:29:20.874Z",
+ "generated": "2026-11-21T20:09:14.197Z",
  "artists": {
   "7": {
    "name": "7",
@@ -45963,6 +45963,78 @@
    "score": 100,
    "mbid": "ec22a32b-acab-432e-a88c-ffe6ae68fa16",
    "mbName": "Noisia"
+  },
+  "kyle gordon": {
+   "name": "Kyle Gordon",
+   "tracks": 1,
+   "country": "US",
+   "area": "New York",
+   "areaId": "74e50e58-5deb-4b99-93a2-decbb365c07f",
+   "score": 100,
+   "mbid": "a3968668-714a-480c-adc6-330fe100d083",
+   "mbName": "Kyle Gordon",
+   "viaArea": true
+  },
+  "10 year plan": {
+   "name": "10 Year Plan",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "34713261-30da-4ecd-9eba-5511ec6f0b22",
+   "mbName": "10 Year Plan"
+  },
+  "goreshit": {
+   "name": "goreshit",
+   "tracks": 1,
+   "country": "GB",
+   "area": "England",
+   "areaId": "9d5dd675-3cf4-4296-9e39-67865ebee758",
+   "score": 100,
+   "mbid": "eb0cf932-29f0-4e42-a866-2440b18dc182",
+   "mbName": "goreshit",
+   "viaArea": true
+  },
+  "eee gee": {
+   "name": "eee gee",
+   "tracks": 1,
+   "country": "DK",
+   "area": "Denmark",
+   "areaId": "4757b525-2a60-324a-b060-578765d2c993",
+   "score": 100,
+   "mbid": "7a28c7e6-c69d-4838-a273-a7f14fa62a51",
+   "mbName": "eee gee"
+  },
+  "másfél": {
+   "name": "Másfél",
+   "tracks": 1,
+   "country": "HU",
+   "area": "Hungary",
+   "areaId": "312bc5bb-7e43-3e63-81c6-b4d712b37b2c",
+   "score": 100,
+   "mbid": "8e8188f5-ce16-40a7-aaf8-87d7ba10152f",
+   "mbName": "Másfél"
+  },
+  "misekai": {
+   "name": "Misekai",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "4e6cea2f-d385-4181-a9e2-b8cf1fd2c8de",
+   "mbName": "ミセカイ"
+  },
+  "jeremy zuckerman": {
+   "name": "Jeremy Zuckerman",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "d5d5d7ab-66ed-438a-a35e-15b13687c4a6",
+   "mbName": "Jeremy Zuckerman"
   }
  },
  "source": "MusicBrainz",
