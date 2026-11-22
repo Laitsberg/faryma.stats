@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-21T20:09:14.197Z",
+ "generated": "2026-11-22T12:34:29.344Z",
  "artists": {
   "7": {
    "name": "7",
@@ -46035,6 +46035,17 @@
    "score": 100,
    "mbid": "d5d5d7ab-66ed-438a-a35e-15b13687c4a6",
    "mbName": "Jeremy Zuckerman"
+  },
+  "piss": {
+   "name": "PISS",
+   "tracks": 1,
+   "country": "CA",
+   "area": "Vancouver",
+   "areaId": "6ccc62d1-bdd8-4f08-8fae-bfaa5310e5ef",
+   "score": 100,
+   "mbid": "eda3c010-7950-47cf-acee-ef6dd4fdb7c7",
+   "mbName": "PISS",
+   "viaArea": true
   }
  },
  "source": "MusicBrainz",
