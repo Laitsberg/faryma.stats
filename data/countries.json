@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23T14:37:28.402Z",
+ "generated": "2026-11-24T18:56:40.962Z",
  "artists": {
   "7": {
    "name": "7",
@@ -46068,6 +46068,66 @@
    "tracks": 1,
    "country": null,
    "score": 0
+  },
+  "bear ghost": {
+   "name": "Bear Ghost",
+   "tracks": 1,
+   "country": null,
+   "area": "Phoenix",
+   "areaId": "7f1c8f3f-69a9-454a-8633-c3d3a628858b",
+   "score": 100,
+   "mbid": "ce41dd47-f5bd-46a8-9155-a1c20e3e8f7e",
+   "mbName": "Bear Ghost"
+  },
+  "dan e.t.": {
+   "name": "Dan E.T.",
+   "tracks": 1,
+   "country": null,
+   "area": null,
+   "areaId": null,
+   "score": 100,
+   "mbid": "a1720785-08ca-4460-b5a9-ca767571aff1",
+   "mbName": "Dan E.T."
+  },
+  "wyclef jean": {
+   "name": "Wyclef Jean",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "4f29ecd7-21a5-4c03-b9ba-d0cfe9488f8c",
+   "mbName": "Wyclef Jean"
+  },
+  "feint": {
+   "name": "Feint",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "e6e29ff5-b0e4-4985-a63f-e99d12b21728",
+   "mbName": "Feint"
+  },
+  "coma": {
+   "name": "CoMa",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "cd03ee03-deb6-4f9c-be24-970f34602de2",
+   "mbName": "Coma Cinema"
+  },
+  "meshuggah": {
+   "name": "Meshuggah",
+   "tracks": 1,
+   "country": "SE",
+   "area": "Sweden",
+   "areaId": "23d10872-f5ae-3f0c-bf55-332788a16ecb",
+   "score": 100,
+   "mbid": "cf8b3b8c-118e-4136-8d1d-c37091173413",
+   "mbName": "Meshuggah"
   }
  },
  "source": "MusicBrainz",
