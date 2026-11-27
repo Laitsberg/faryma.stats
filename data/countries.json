@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T18:56:40.962Z",
+ "generated": "2026-11-27T17:29:45.243Z",
  "artists": {
   "7": {
    "name": "7",
@@ -46128,6 +46128,16 @@
    "score": 100,
    "mbid": "cf8b3b8c-118e-4136-8d1d-c37091173413",
    "mbName": "Meshuggah"
+  },
+  "unione": {
+   "name": "UNIONE",
+   "tracks": 1,
+   "country": "JP",
+   "area": "Japan",
+   "areaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+   "score": 100,
+   "mbid": "c3ee689e-6fa5-432b-9e82-bbc8a67d0a14",
+   "mbName": "UNIONE"
   }
  },
  "source": "MusicBrainz",
