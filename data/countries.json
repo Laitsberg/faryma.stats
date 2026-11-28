@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T19:28:09.900Z",
+ "generated": "2026-11-28T12:58:43.894Z",
  "artists": {
   "7": {
    "name": "7",
@@ -46174,6 +46174,16 @@
    "score": 100,
    "mbid": "8b431ac6-0806-4e4a-9b6b-1734370fa890",
    "mbName": "Xiu Xiu"
+  },
+  "gioachino rossini": {
+   "name": "Gioachino Rossini",
+   "tracks": 1,
+   "country": "IT",
+   "area": "Italy",
+   "areaId": "c6500277-9a3d-349b-bf30-41afdbf42add",
+   "score": 100,
+   "mbid": "846be3c9-5f94-46ab-97b9-531335dd3658",
+   "mbName": "Gioachino Rossini"
   }
  },
  "source": "MusicBrainz",
