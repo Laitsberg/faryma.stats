@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-28T16:13:19.874Z",
+ "generated": "2026-11-28T18:14:37.219Z",
  "artists": {
   "7": {
    "name": "7",
@@ -46193,6 +46193,74 @@
   },
   "jenna warren, ana sani, aj bridel & maitreyi ramakrishnan": {
    "name": "Jenna Warren, Ana Sani, AJ Bridel & Maitreyi Ramakrishnan",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "dschinghis khan": {
+   "name": "Dschinghis Khan",
+   "tracks": 1,
+   "country": "DE",
+   "area": "Germany",
+   "areaId": "85752fda-13c4-31a3-bee5-0e5cb1f51dad",
+   "score": 100,
+   "mbid": "5898a370-5c9e-4924-97b1-c72b7e0452ca",
+   "mbName": "Dschinghis Khan"
+  },
+  "pet shop boys": {
+   "name": "Pet Shop Boys",
+   "tracks": 1,
+   "country": "GB",
+   "area": "United Kingdom",
+   "areaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+   "score": 100,
+   "mbid": "be540c02-7898-4b79-9acc-c8122c7d9e83",
+   "mbName": "Pet Shop Boys"
+  },
+  "vitos mc & johny jpr": {
+   "name": "Vitos MC & Johny JPR",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "alexander rybak": {
+   "name": "Alexander Rybak",
+   "tracks": 1,
+   "country": "NO",
+   "area": "Norway",
+   "areaId": "6743d351-6f37-3049-9724-5041161fff4d",
+   "score": 100,
+   "mbid": "1e69316c-14fa-42ba-88f2-06f6743632f7",
+   "mbName": "Alexander Rybak"
+  },
+  "type o negative": {
+   "name": "Type O Negative",
+   "tracks": 1,
+   "country": "US",
+   "area": "United States",
+   "areaId": "489ce91b-6658-3307-9877-795b68554c98",
+   "score": 100,
+   "mbid": "a63df8c3-28e4-41db-bac2-c6c6e8ff8f28",
+   "mbName": "Type O Negative"
+  },
+  "freedom call": {
+   "name": "Freedom Call",
+   "tracks": 1,
+   "country": "DE",
+   "area": "Germany",
+   "areaId": "85752fda-13c4-31a3-bee5-0e5cb1f51dad",
+   "score": 100,
+   "mbid": "d4310265-7415-4802-b4f3-4b762217efbb",
+   "mbName": "Freedom Call"
+  },
+  "ana sani, aj bridel & samantha bielanski": {
+   "name": "Ana Sani, AJ Bridel & Samantha Bielanski",
+   "tracks": 1,
+   "country": null,
+   "score": 0
+  },
+  "mikhailovsky theatre orchestra": {
+   "name": "Mikhailovsky Theatre Orchestra",
    "tracks": 1,
    "country": null,
    "score": 0
